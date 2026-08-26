@@ -25,7 +25,7 @@ Secara umum, proposal skripsi ini memiliki konsep yang **sangat menarik dan rele
 | **Format & Kelengkapan Awal** | ⚠️ *Perlu Perapian* | Hilangkan *Error! Bookmark not defined*, lengkapi *placeholder* & hapus balon komentar Word. |
 | **Bab I: Pendahuluan** | ⚠️ *Revisi Sedang* | Sinkronkan kata judul di latar belakang, perbaiki rumusan masalah vs metode uji, tetapkan istilah *mini game*. |
 | **Bab II: Tinjauan Pustaka** | 🚨 *Revisi Mayor* | Urutkan nomor pada Tabel 2.1 (saat ini meloncat-loncat), kembalikan rumus UAT yang hilang, bersihkan sitasi rusak. |
-| **Bab III: Metodologi & AI** | 🚨 *Revisi Mayor* | Ganti Flowchart Gambar 3.2 dengan Diagram Hierarki *Behavior Tree*, definisikan formula PanicLevel, sinkronkan 4 status NPC, dan lengkapi arsitektur scripting Roblox. |
+| **Bab III: Metodologi & AI** | 🚨 *Revisi Mayor* | Ganti Flowchart Gambar 3.2 dengan Diagram Hierarki *Behavior Tree*, definisikan formula `PanicLevel`, sinkronkan 4 status NPC, dan lengkapi arsitektur scripting Roblox. |
 | **Daftar Pustaka & Sitasi** | 🚨 *Revisi Mayor* | **Wajib beralih menggunakan Mendeley / Zotero** untuk mengeliminasi *ghost citations*, melengkapi metadata jurnal, dan format APA 7th otomatis. |
 
 ---
@@ -38,12 +38,12 @@ Secara umum, proposal skripsi ini memiliki konsep yang **sangat menarik dan rele
    * Pada Daftar Isi (hal. iv–v), Daftar Tabel (hal. vi), dan Daftar Gambar (hal. vii), masih banyak tautan rusak bertuliskan *Error! Bookmark not defined*.
    * **Solusi:** Di Microsoft Word, pastikan heading telah diatur dengan benar, lalu klik kanan pada Daftar Isi > pilih **Update Field** > **Update entire table**.
 2. **Lengkapi Template Kata Pengantar (Halaman iii):**
-   * Masih terdapat teks bawaan template: *Nama dan gelar akademik Dekan...*, *Nama Dosen Pembimbing...*, dan *Samarinda, ........... 2026*.
-   * Balon komentar Word (*Commented [1]: Menggunakan sapaan Bapak atau Ibu...*) ikut tercetak ke PDF. Hapus seluruh komentar Word sebelum ekspor final.
+   * Masih terdapat teks bawaan template: *`Nama dan gelar akademik Dekan...`*, *`Nama Dosen Pembimbing...`*, dan *`Samarinda, ........... 2026`*.
+   * Balon komentar Word (*`Commented [1]: Menggunakan sapaan Bapak atau Ibu...`*) ikut tercetak ke PDF. Hapus seluruh komentar Word sebelum ekspor final.
 3. **Halaman Pengesahan (Halaman ii):**
    * Lengkapi nama pembimbing I dan II beserta gelar dan tanggal pembahasan rapat.
 4. **Daftar Lampiran (Halaman viii):**
-   * Tertulis *Lampiran 1 contents 42*. Jika instrumen kuesioner belum dilampirkan, hapus sementara daftar lampiran atau cantumkan instrumen draft kuesioner di halaman belakang.
+   * Tertulis *`Lampiran 1 contents 42`*. Jika instrumen kuesioner belum dilampirkan, hapus sementara daftar lampiran atau cantumkan instrumen draft kuesioner di halaman belakang.
 
 ---
 
@@ -74,10 +74,10 @@ Secara umum, proposal skripsi ini memiliki konsep yang **sangat menarik dan rele
    * Pada naskah saat ini, nomor urut tabel tersusun: **1, 4, 5, 6, 10, 8, 2, 7, 3, 9**.
    * Ini kesalahan fatal yang menunjukkan tabel belum dirapikan setelah pemindahan data. **Urutkan kembali menjadi 1 sampai 10 secara berurutan.**
 2. **🚨 Rumus Analisis Data UAT Hilang (Subbab 2.9, Hal. 20):**
-   * Pada teks tertulis keterangan variabel $\bar{x}$, $\sum x$, dan $, namun objek rumus matematikanya kosong / tidak tercetak.
+   * Pada teks tertulis keterangan variabel $\bar{x}$, $\sum x$, dan $n$, namun objek rumus matematikanya kosong / tidak tercetak.
    * **Wajib Dilengkapi:** Tampilkan rumus perhitungan rata-rata skor Likert:
-     \bar{x} = \frac{\sum x}{n}
-     *(di mana $\bar{x}$ = skor rata-rata, $\sum x$ = jumlah skor responden, $ = total responden)*.
+     $$\bar{x} = \frac{\sum x}{n}$$
+     *(di mana $\bar{x}$ = skor rata-rata, $\sum x$ = jumlah skor responden, $n$ = total responden)*.
 3. **Salah Nomor Gambar pada Teks (Subbab 2.6.1, Hal. 15):**
    * Di teks tertulis: *"Gambar 2.6 menunjukkan struktur dasar Behavior Tree..."*, padahal label gambarnya adalah **Gambar 2.1**.
 4. **Paragraf Berulang pada Subbab 2.10 (Black Box Testing, Hal. 20):**
@@ -93,7 +93,7 @@ Secara umum, proposal skripsi ini memiliki konsep yang **sangat menarik dan rele
 * **Masalah:** Gambar 3.2 (hal. 27) saat ini adalah **Flowchart IF-ELSE bersyarat**, bukan diagram pohon hierarki *Behavior Tree*.
 * **Solusi Wajib:** Ganti Gambar 3.2 dengan diagram pohon hierarki *Behavior Tree* standar berikut:
 
-`mermaid
+```mermaid
 graph TD
     %% Styling Classes
     classDef rootStyle fill:#1A202C,stroke:#2D3748,stroke-width:2px,color:#fff,font-weight:bold;
@@ -148,32 +148,32 @@ graph TD
 
     SEQ4 --> COND4
     SEQ4 --> ACT4
-`
+```
 
 > **Logika Eksekusi (*Tick Evaluation*):**
 > Evaluasi dilakukan periodik dari kiri ke kanan:
-> 1. **Prioritas 1 (Bahaya Api Dekat):** Jika IsFireVeryNear == True, NPC langsung melakukan aksi Evacuate (menyelamatkan diri ke titik kumpul terdekat).
-> 2. **Prioritas 2 (Interaksi Pemain):** Jika pemain mengajak/berinteraksi (HasPlayerInteracted == True), NPC menjalankan FollowPlayer.
-> 3. **Prioritas 3 (Kepanikan Tinggi):** Jika kepanikan tinggi (IsPanicLevelHigh == True), NPC otomatis menjalankan Evacuate.
-> 4. **Prioritas 4 (Alarm Aktif):** Jika alarm aktif namun belum ada interaksi (IsAlarmActive == True), NPC menjalankan WaitForHelp.
-> 5. **Prioritas 5 (Fallback):** Jika semua kondisi di atas False, NPC berstatus Idle.
+> 1. **Prioritas 1 (Bahaya Api Dekat):** Jika `IsFireVeryNear == True`, NPC langsung melakukan aksi `Evacuate` (menyelamatkan diri ke titik kumpul terdekat).
+> 2. **Prioritas 2 (Interaksi Pemain):** Jika pemain mengajak/berinteraksi (`HasPlayerInteracted == True`), NPC menjalankan `FollowPlayer`.
+> 3. **Prioritas 3 (Kepanikan Tinggi):** Jika kepanikan tinggi (`IsPanicLevelHigh == True`), NPC otomatis menjalankan `Evacuate`.
+> 4. **Prioritas 4 (Alarm Aktif):** Jika alarm aktif namun belum ada interaksi (`IsAlarmActive == True`), NPC menjalankan `WaitForHelp`.
+> 5. **Prioritas 5 (Fallback):** Jika semua kondisi di atas False, NPC berstatus `Idle`.
 
 ---
 
-#### 🚨 2. Definisi & Aturan Variabel PanicLevel
-* **Masalah:** Di Tabel 3.4 dan Tabel 3.5 terdapat node IsPanicLevelHigh, tetapi tidak ada penjelasan mengenai bagaimana nilai kepanikan dihitung.
-* **Solusi Wajib:** Tambahkan penjelasan matematis/logika di Bab 3 mengenai pemicu status PanicLevel:
-  \text{IsPanicLevelHigh} = \begin{cases} \text{True}, & \text{jika } \text{FireDistance} \le 5\,\text{meter} \text{ atau } \text{SimulationTime} \le 60\,\text{detik} \\ \text{False}, & \text{lainnya} \end{cases}
+#### 🚨 2. Definisi & Aturan Variabel `PanicLevel`
+* **Masalah:** Di Tabel 3.4 dan Tabel 3.5 terdapat node `IsPanicLevelHigh`, tetapi tidak ada penjelasan mengenai bagaimana nilai kepanikan dihitung.
+* **Solusi Wajib:** Tambahkan penjelasan matematis/logika di Bab 3 mengenai pemicu status `PanicLevel`:
+  $$\text{IsPanicLevelHigh} = \begin{cases} \text{True}, & \text{jika } \text{FireDistance} \le 5\,\text{meter} \text{ atau } \text{SimulationTime} \le 60\,\text{detik} \\ \text{False}, & \text{lainnya} \end{cases}$$
 
 ---
 
 #### 3. Sinkronisasi Jumlah State Perilaku NPC (4 Status Konsisten)
 * Di Batasan Masalah (Bab 1) dan Tinjauan Pustaka (Bab 2), kamu menyebutkan *"enam (6) state perilaku"*.
 * Namun di Bab 3 (Tabel 3.3), kamu merancangnya menjadi **4 status**:
-  1. Idle
-  2. WaitForHelp
-  3. FollowPlayer
-  4. Evacuate
+  1. `Idle`
+  2. `WaitForHelp`
+  3. `FollowPlayer`
+  4. `Evacuate`
 * *Tindakan:* Sesuaikan seluruh naskah di Bab 1 dan Bab 2 agar konsisten menyatakan **4 status perilaku utama NPC**.
 
 ---
@@ -188,9 +188,9 @@ Perbaiki nomor referensi tabel pada paragraf penjelas yang salah ketik:
 
 #### 5. Tambahkan Spesifikasi Scripting Roblox Studio (Bahasa Luau)
 Tambahkan 1–2 paragraf pada Subbab 3.4 yang menjelaskan:
-1. **Server vs Client Architecture:** Seluruh logika evaluasi *Behavior Tree* dan perubahan state NPC dieksekusi di sisi **Server (Script)** agar posisi dan respons NPC tersinkronisasi antar-pemain.
-2. **Tick Rate & Optimasi Performa:** Evaluasi pohon keputusan (*tick*) dijalankan dengan interval waktu berkala (misal: setiap {,}2$ detik menggunakan 	ask.wait(0.2) di dalam perulangan while true do), bukan di setiap frame RunService.Heartbeat, demi mencegah *server lag*.
-3. **Pathfinding:** Pergerakan fisik NPC saat FollowPlayer dan Evacuate memanfaatkan layanan PathfindingService Roblox untuk menghindari rintangan statis maupun titik api dinamis.
+1. **Server vs Client Architecture:** Seluruh logika evaluasi *Behavior Tree* dan perubahan state NPC dieksekusi di sisi **Server (`Script`)** agar posisi dan respons NPC tersinkronisasi antar-pemain.
+2. **Tick Rate & Optimasi Performa:** Evaluasi pohon keputusan (*tick*) dijalankan dengan interval waktu berkala (misal: setiap $0{,}2$ detik menggunakan `task.wait(0.2)` di dalam perulangan `while true do`), bukan di setiap frame `RunService.Heartbeat`, demi mencegah *server lag*.
+3. **Pathfinding:** Pergerakan fisik NPC saat `FollowPlayer` dan `Evacuate` memanfaatkan layanan `PathfindingService` Roblox untuk menghindari rintangan statis maupun titik api dinamis.
 
 ---
 
@@ -198,7 +198,7 @@ Tambahkan 1–2 paragraf pada Subbab 3.4 yang menjelaskan:
 * Ganti titik-titik lokasi penelitian:
   - *Tempat pelaksanaan:* Gedung Baru Fakultas Teknik Universitas Mulawarman.
   - *Laboratorium analisis:* Laboratorium Rekayasa Perangkat Lunak / Laboratorium Informatika FT UNMUL.
-* Ganti label Tabel 3.x Jadwal Penelitian menjadi Tabel 3.9 Jadwal Penelitian dan lengkapi detail baris kegiatan yang masih bertanda titik-titik ….
+* Ganti label `Tabel 3.x Jadwal Penelitian` menjadi `Tabel 3.9 Jadwal Penelitian` dan lengkapi detail baris kegiatan yang masih bertanda titik-titik `…`.
 
 ---
 
@@ -211,7 +211,7 @@ Banyaknya kesalahan sitasi (sitasi hilang, *ghost citations*, dan metadata tidak
 **Mulai saat ini, kamu WAJIB menggunakan Reference Management Software (**Mendeley Reference Manager** atau **Zotero**)** yang diintegrasikan langsung dengan Microsoft Word:
 
 1. **Kenapa Harus Mendeley / Zotero?**
-   - **Otomasi 100% Sinkron:** Setiap kali kamu menyisipkan sitasi di naskah (Insert Citation), referensi tersebut akan otomatis muncul di Daftar Pustaka (Insert Bibliography). Tidak akan ada lagi istilah *ghost citation* atau sitasi yang tertinggal.
+   - **Otomasi 100% Sinkron:** Setiap kali kamu menyisipkan sitasi di naskah (`Insert Citation`), referensi tersebut akan otomatis muncul di Daftar Pustaka (`Insert Bibliography`). Tidak akan ada lagi istilah *ghost citation* atau sitasi yang tertinggal.
    - **Standarisasi Format APA 7th:** Software akan otomatis mengatur kapitalisasi judul (*sentence case*), format nama penulis (*et al.*), nama jurnal miring (*italic*), volume/nomor, dan link DOI standar.
    - **Bebas Human Error:** Metadata artikel (judul, penulis, tahun, penerbit) diambil langsung dari database jurnal resmi via DOI atau file PDF.
 
@@ -225,21 +225,21 @@ Banyaknya kesalahan sitasi (sitasi hilang, *ghost citations*, dan metadata tidak
 ---
 
 ### B. Daftar Sitasi di Naskah yang BELUM ADA di Daftar Pustaka (Wajib Diinput ke Mendeley/Zotero):
-1. **Aliyah et al., 2024** *(Bab 2, hal. 20)*
-2. **Wulandari Putri Bahmin et al., 2025** *(Bab 2, hal. 20)*
-3. **Hasugian, 2023** *(Bab 2, hal. 20)*
-4. **Global Web Index (GWI), 2024** *(Bab 1, hal. 1)*
-5. **Kemenkominfo (2022) & Kemenparekraf (2024)** *(Bab 1, hal. 1)* ➔ Masukkan dokumen/laporan resmi instansi pemerintah, bukan sekadar link berita portal media.
+1. **`Aliyah et al., 2024`** *(Bab 2, hal. 20)*
+2. **`Wulandari Putri Bahmin et al., 2025`** *(Bab 2, hal. 20)*
+3. **`Hasugian, 2023`** *(Bab 2, hal. 20)*
+4. **`Global Web Index (GWI), 2024`** *(Bab 1, hal. 1)*
+5. **`Kemenkominfo (2022)` & `Kemenparekraf (2024)`** *(Bab 1, hal. 1)* ➔ Masukkan dokumen/laporan resmi instansi pemerintah, bukan sekadar link berita portal media.
 
 ### C. Referensi di Daftar Pustaka yang TIDAK PERNAH DISITASI di Naskah (Wajib Dihapus):
-1. **Kemal Pasha, M., & Prabowo, A. (2025)** – Visual Novel Ren'Py (tidak relevan dengan skripsi ini).
-2. **Naufal, M. R., et al. (2024)** – Game Warik berbasis FSM (tidak disitasi di teks).
-3. **Simanjuntak, S. M., & Putra (2025)** – Analisis Usability SUS (Dhafin menggunakan UAT Likert, bukan SUS).
+1. **`Kemal Pasha, M., & Prabowo, A. (2025)`** – Visual Novel Ren'Py (tidak relevan dengan skripsi ini).
+2. **`Naufal, M. R., et al. (2024)`** – Game Warik berbasis FSM (tidak disitasi di teks).
+3. **`Simanjuntak, S. M., & Putra (2025)`** – Analisis Usability SUS (Dhafin menggunakan UAT Likert, bukan SUS).
 
 ### D. Data Sitasi yang Tidak Lengkap (Lengkapi Volume, Nomor, Halaman di Library):
-1. **Ardiansyah, R., Putra, Y., & Mashuri, C. (2024)** ➔ Nama jurnal, volume, dan nomor halaman belum ada.
-2. **Lonteng, A., et al. (2024)** ➔ Nama jurnal tidak dicantumkan lengkap.
-3. **Menora, T., et al. (2023)** ➔ Nama jurnal penerbit tidak dicantumkan.
+1. **`Ardiansyah, R., Putra, Y., & Mashuri, C. (2024)`** ➔ Nama jurnal, volume, dan nomor halaman belum ada.
+2. **`Lonteng, A., et al. (2024)`** ➔ Nama jurnal tidak dicantumkan lengkap.
+3. **`Menora, T., et al. (2023)`** ➔ Nama jurnal penerbit tidak dicantumkan.
 
 ---
 
@@ -250,7 +250,7 @@ Pelajari dan siapkan jawaban untuk pertanyaan kritis yang berpotensi diajukan do
 1. **"Mengapa memilih Behavior Tree dibanding Finite State Machine (FSM) yang lebih sederhana?"**  
    *Jawaban yang tepat:* *Behavior Tree* memiliki sifat modularitas tinggi dan evaluasi berbasis prioritas (*Selector & Sequence*). Jika ingin menambah perilaku baru (misal: NPC memadamkan api atau NPC pingsan), kita hanya perlu menambah sub-pohon tanpa harus mengubah seluruh matriks transisi state seperti pada FSM.
 2. **"Bagaimana cara NPC menghindari api saat menuju titik evakuasi di Roblox?"**  
-   *Jawaban yang tepat:* Pengambilan keputusan kapan harus evakuasi ditentukan oleh *Behavior Tree*, sedangkan kalkulasi rute fisik di lapangan dilakukan oleh PathfindingService Roblox dengan menambahkan *PathfindingModifier* berbobot tinggi (*cost penalty*) pada area yang terbakar.
+   *Jawaban yang tepat:* Pengambilan keputusan kapan harus evakuasi ditentukan oleh *Behavior Tree*, sedangkan kalkulasi rute fisik di lapangan dilakukan oleh `PathfindingService` Roblox dengan menambahkan *PathfindingModifier* berbobot tinggi (*cost penalty*) pada area yang terbakar.
 3. **"Dari mana penentuan nilai ambang batas PanicLevel pada NPC?"**  
    *Jawaban yang tepat:* Nilai ambang batas *PanicLevel* ditentukan secara deterministik berdasarkan radius deteksi bahaya api ($\le 5\text{ meter}$) dan sisa waktu simulasi ($\le 60\text{ detik}$), yang memicu NPC beralih dari status menunggu bantuan menjadi evakuasi mandiri.
 4. **"Mengapa pengujian edukasi ini menggunakan UAT Likert, bukan pre-test dan post-test?"**  
@@ -260,9 +260,9 @@ Pelajari dan siapkan jawaban untuk pertanyaan kritis yang berpotensi diajukan do
 
 ## ✅ 6. Lembar Checklist Tindak Lanjut Revisi Mahasiswa
 
-Beri tanda centang [v] jika perbaikan berikut telah selesai dikerjakan:
+Beri tanda centang `[v]` jika perbaikan berikut telah selesai dikerjakan:
 
-- [ ] Memperbarui Daftar Isi, Daftar Tabel, dan Daftar Gambar sehingga bebas dari Error! Bookmark not defined.
+- [ ] Memperbarui Daftar Isi, Daftar Tabel, dan Daftar Gambar sehingga bebas dari `Error! Bookmark not defined`.
 - [ ] Menghapus seluruh balon komentar Word dan mengisi nama pembimbing/dekan pada Kata Pengantar.
 - [ ] Menyamakan judul di Halaman Judul dengan paragraf penutup Latar Belakang (mencantumkan *Roblox*).
 - [ ] Menyesuaikan Rumusan Masalah 1 dan Tujuan Penelitian (mengganti kata *performa* dengan perancangan dan pengujian kesesuaian perilaku).
@@ -270,10 +270,10 @@ Beri tanda centang [v] jika perbaikan berikut telah selesai dikerjakan:
 - [ ] Menampilkan rumus perhitungan nilai rata-rata UAT ($\bar{x} = \frac{\sum x}{n}$) di Subbab 2.9.
 - [ ] Menghapus kalimat duplikasi pada Subbab 2.10 (Black Box Testing).
 - [ ] **MENGGANTI Gambar 3.2 dengan Diagram Hierarki Behavior Tree yang benar.**
-- [ ] Mendefinisikan formula dan aturan status PanicLevel di Bab 3.
-- [ ] Menyelaraskan jumlah status NPC di seluruh bab menjadi **4 status** (Idle, WaitForHelp, FollowPlayer, Evacuate).
+- [ ] Mendefinisikan formula dan aturan status `PanicLevel` di Bab 3.
+- [ ] Menyelaraskan jumlah status NPC di seluruh bab menjadi **4 status** (`Idle`, `WaitForHelp`, `FollowPlayer`, `Evacuate`).
 - [ ] Memperbaiki referensi penomoran tabel di narasi Bab 3 (Tabel 3.3, 3.4, 3.5).
-- [ ] Menambahkan penjelasan teknis Luau script (Server script, tick rate {,}2\text{s}$, PathfindingService).
+- [ ] Menambahkan penjelasan teknis Luau script (Server script, tick rate $0{,}2\text{s}$, `PathfindingService`).
 - [ ] Melengkapi isian Waktu, Tempat, dan Jadwal Penelitian (Tabel 3.9).
 - [ ] **MENGGUNAKAN REFERENCE MANAGER (Mendeley / Zotero)** untuk mengelola seluruh sitasi naskah dan meng-generate Daftar Pustaka secara otomatis (style APA 7th).
 - [ ] Memastikan tidak ada lagi sitasi tertinggal (*missing citations*) maupun referensi yang tidak pernah dikutip (*ghost references*).
