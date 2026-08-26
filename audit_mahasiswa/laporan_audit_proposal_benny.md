@@ -1,4 +1,4 @@
-# 📋 LAPORAN AUDIT & EVALUASI KELAYAKAN PROPOSAL SKRIPSI
+# 📋 LAPORAN AUDIT FORENSIK & EVALUASI KELAYAKAN PROPOSAL SKRIPSI
 
 **Kepada Mahasiswa:** Benny Hernanda Putra (NIM: 2009106066)  
 **Program Studi:** S1 Informatika, Fakultas Teknik, Universitas Mulawarman  
@@ -11,60 +11,76 @@
 
 ## ⚖️ 1. Resume Evaluasi Akademik (Apakah Pantas untuk S1 Informatika?)
 
-Secara umum, topik ini **PANTAS dan MEMENUHI STANDAR S1 INFORMATIKA**, karena mengombinasikan dua domain utama keilmuan komputer:
+Secara umum, topik ini **PANTAS dan MEMENUHI STANDAR S1 INFORMATIKA**, karena mengombinasikan dua pilar utama keilmuan komputer:
 1. **Artificial Intelligence / Computer Vision:** Penerapan deep learning *Convolutional Neural Network* (CNN) dengan arsitektur *MobileNetV2* dan teknik *Transfer Learning + Fine-Tuning*.
 2. **Mobile Software Engineering:** Integrasi model inferensi *Edge AI (On-Device Inference)* menggunakan *TensorFlow Lite* pada aplikasi mobile multiplatform *Flutter (Dart)*.
 
-### ⚠️ NAMUN, Terdapat 5 Masalah Kritis (*Red Flags*) yang Wajib Dibenahi:
-Jika draf ini diajukan apa adanya ke Seminar Proposal, **mahasiswa berisiko tinggi dibantai dan tidak diluluskan oleh dosen penguji** karena adanya indikasi plagiasi template naskah lain, ketergantungan 100% pada dataset skripsi terdahulu, dan inkonsistensi fitur aksesibilitas tunanetra.
+### ⚠️ NAMUN, Terdapat 7 Masalah Kritis (*Red Flags*) yang Wajib Dibenahi:
+Jika draf ini diajukan apa adanya ke Seminar Proposal, **mahasiswa berisiko tinggi dibantai dan tidak diluluskan oleh dosen penguji** karena adanya indikasi plagiasi template naskah lain, penyembunyian paper pembanding utama (*novelty clash*), ketergantungan 100% pada dataset lama, dan rumus matematika yang rusak.
 
 ---
 
-## 🚨 2. Temuan Kritis (*Red Flags*) pada Naskah Draf
+## 🚨 2. Temuan Kritis Forensik (*Red Flags*) pada Naskah Draf
 
-### 🚨 RED FLAG 1: Skandal Tabel Lampiran Copy-Paste Naskah Orang Lain (FATAL!)
+### 🚨 RED FLAG 1: *Novelty Clash* dengan Paper Yahya & Fauziah (2026) yang Disembunyikan di Bab II
+* **Temuan:** Di Bab I (hal. 2 / line 349) dan Daftar Pustaka No. 26, mahasiswa menyitir paper:  
+  > *Yahya, H., & Fauziah, E. (2026). "Implementasi CNN Transfer Learning MobileNetV2 untuk Klasifikasi Mata Uang Rupiah bagi Tunanetra". RIGGS: Journal of AI & Digital Business.*
+* **Masalah Fatal:** Judul paper tersebut **HAMPIR 100% IDENTIK** dengan judul skripsi Benny! Namun, di Bab II (Subbab 2.1 dan Tabel Perbedaan Penelitian), Benny **SENGAJA TIDAK MEMASUKKAN paper Yahya & Fauziah (2026)** ke dalam tinjauan pustaka dan matriks perbandingan, melainkan hanya membandingkan diri dengan skripsi Mawaddah (2023).
+* **Celah Penguji:** Dosen penguji akan menuduh mahasiswa melakukan *cherry-picking* referensi dan plagiasi topik/metode.
+* **Solusi Wajib:** Benny **wajib memasukkan paper Yahya & Fauziah (2026) ke dalam Tabel Perbandingan Bab II** dan menjelaskan dengan tegas apa diferensiasi/kebaruan (*novelty*) skripsinya (misal: pengujian *on-device inference latency* riil pada berbagai spek HP, dataset uang lecek/lusuh, atau integrasi TTS offline di Flutter).
+
+---
+
+### 🚨 RED FLAG 2: Skandal Tabel Lampiran Copy-Paste Naskah Orang Lain (FATAL!)
 * **Temuan:** Pada Lampiran 2 dan Lampiran 6 (hal. 32–33 / baris 1447–1481), terdapat tabel:
-  > *"Tabel Peringkat Hasil Pengujian Model pada Data Validasi: **YOLOv8-L, YOLOv8-S, YOLOv11-X, RT-DETR-L, YOLOv9-S, YOLOv10-N**..."*
+  > *"Tabel Peringkat Hasil Pengujian Model: **YOLOv8-L, YOLOv8-S, YOLOv11-X, RT-DETR-L, YOLOv9-S, YOLOv10-N**..."*
 * **Masalah Fatal:** Penelitian Benny adalah **Klasifikasi Citra MobileNetV2**, tetapi di lampirannya memuat data pengujian **Deteksi Objek YOLOv8, YOLOv11, dan RT-DETR**!
-* **Dampak:** Ini adalah bukti tak terbantahkan bahwa mahasiswa menyalin (*copy-paste*) template skripsi mahasiswa lain tanpa membaca dan menghapusnya. Jika terlihat penguji, naskah ini akan langsung dicap tidak beretika/asal salin.
-* **Tindakan:** Hapus seluruh tabel YOLO dan bersihkan panduan template Word pada Lampiran 1.
+* **Dampak:** Ini bukti tak terbantahkan bahwa mahasiswa menyalin (*copy-paste*) template naskah mahasiswa lain tanpa membaca/menghapusnya.
+* **Tindakan:** Hapus seluruh tabel YOLO dan bersihkan instruksi template Word pada Lampiran 1.
 
 ---
 
-### 🚨 RED FLAG 2: Ketergantungan 100% pada Dataset Skripsi Kakak Tingkat (Mawaddah, 2023)
-* **Temuan:** Pada Bab III Subbab 3.2 (hal. 22), mahasiswa menulis secara terbuka bahwa seluruh 5.600 citra uang diambil dari Google Drive milik **Rahmiatul Mawaddah (2023)**.
-* **Masalah:** Jika mahasiswa hanya mengambil dataset yang sudah rapi dari skripsi lama lalu melatih MobileNetV2 dan membungkusnya ke Flutter, kontribusi penelitian (*novelty*) dinilai **sangat rendah** (hanya memindah platform dari Web Flask ke Mobile Flutter).
+### 🚨 RED FLAG 3: Tinjauan Pustaka Bab II "Salah Sasaran" (Ketiadaan Literatur Uang Kertas)
+* **Temuan:** Di Subbab 2.1 (Penelitian Terkait), mahasiswa mereview 10 artikel tentang: *bumbu rempah, daun padi, penyakit mata, buah-buahan, korosi, daun kentang, batik, bunga, daun bawang merah, dan daun anggrek*.
+* **Masalah:** Dari 10 penelitian tersebut, **TIDAK ADA SATUPUN penelitian tentang klasifikasi uang kertas Rupiah yang direview di Subbab 2.1**, padahal di Daftar Pustaka ada paper Alfita (2022), Bahar (2023), Mawaddah (2023), dan Yahya (2026).
+* **Tindakan:** Ganti minimal 3–4 penelitian pertanian/bunga tersebut dengan penelitian terkait klasifikasi uang kertas Rupiah agar State-of-the-Art (SOTA) relevan.
+
+---
+
+### 🚨 RED FLAG 4: Ketergantungan 100% pada Dataset Skripsi Kakak Tingkat (Mawaddah, 2023)
+* **Temuan:** Pada Bab III Subbab 3.2 (hal. 22), mahasiswa menulis terang-terangan bahwa seluruh 5.600 citra uang diambil dari Google Drive skripsi **Rahmiatul Mawaddah (2023)**.
+* **Masalah:** Jika mahasiswa hanya melatih model dari dataset yang sudah matang dari skripsi lama, kontribusi penelitian dinilai sangat rendah (hanya memindahkan skrip model ke Flutter).
 * **Solusi Wajib:** 
-  1. Mahasiswa **WAJIB menambahkan dataset pengujian primer (*Real-world Testing Dataset*) mandiri** minimal 100–200 citra uang kertas yang diambil langsung menggunakan kamera smartphone.
+  1. Mahasiswa **WAJIB menambahkan dataset pengujian primer mandiri (*Real-world Testing Dataset*)** minimal 100–200 citra uang kertas yang diambil langsung menggunakan kamera smartphone.
   2. Data uji mandiri harus mencakup variasi kondisi nyata:
-     - Uang kertas kondisi normal, lusuh/lecek, dan terlipat.
-     - Variasi tingkat pencahayaan (redup/malam $\le 100\text{ lux}$, sedang/ruangan $\sim 300\text{ lux}$, terang/luar ruangan $\ge 1000\text{ lux}$).
-     - Variasi jarak kamera ($10\text{ cm}$, $20\text{ cm}$, $30\text{ cm}$) dan sudut kemiringan ($30^\circ$, $45^\circ$, tegak lurus $90^\circ$).
+     - Uang kertas kondisi baru, lusuh/lecek, dan terlipat.
+     - Variasi tingkat pencahayaan (redup $\le 100\text{ lux}$, ruangan $\sim 300\text{ lux}$, luar ruangan $\ge 1000\text{ lux}$).
+     - Variasi jarak kamera ($10\text{ cm}$, $20\text{ cm}$, $30\text{ cm}$) dan sudut kemiringan ($30^\circ$, $45^\circ$, $90^\circ$).
 
 ---
 
-### 🚨 RED FLAG 3: Paradoks Isu Tunanetra vs Ketiadaan Fitur Audio (Text-to-Speech)
-* **Temuan:** Di Latar Belakang (Bab 1), mahasiswa menjadikan kesulitan **penyandang tunanetra** sebagai urgensi utama masalah penelitian.
-* **Masalah Kritis:** Pada Bab 3 (Wireframe Gambar 3.4), aplikasi **hanya menampilkan teks nominal di layar HP tanpa ada fitur suara (Text-to-Speech / TTS) dan tanpa feedback getar (haptic)**!
-* **Dilema Penguji:** Penguji pasti akan bertanya: *"Bagaimana seorang tunanetra bisa mengetahui nominal uang jika aplikasi Anda hanya memunculkan tulisan di layar?"*
-* **Solusi Wajib:**
-  - Mahasiswa **WAJIB menambahkan fitur Text-to-Speech (TTS)** menggunakan package Flutter seperti `flutter_tts` agar saat model berhasil mengklasifikasikan uang, aplikasi otomatis membacakan nominal melalui suara (misal: *"Uang lima puluh ribu rupiah"*).
-  - Tambahkan feedback getar (`vibration`/`haptic_feedback`) saat kamera berhasil mendeteksi uang.
+### 🚨 RED FLAG 5: Asumsi Keliru Mengenai Augmentasi Citra (Bab 2 & Bab 3)
+* **Temuan:** Pada Subbab 2.11 (hal. 17) & Subbab 3.1 (hal. 21), mahasiswa menulis:  
+  > *"Dataset yang digunakan sudah memiliki variasi rotasi (0°, 90°, 180°, 270°)... sehingga **tidak dilakukan augmentasi tambahan**."*
+* **Kelemahan Ilmiah Computer Vision:** Di dunia nyata, pengguna tunanetra tidak memegang uang tepat pada sudut kelipatan $90^\circ$! Sudut pegangan bisa $15^\circ, 35^\circ, 65^\circ$, dan pencahayaan dinamis. Tanpa augmentasi acak (*Random Rotation, Zoom, Brightness/Contrast*), model akan mengalami *overfitting* dan akurasi akan anjlok saat diuji di dunia nyata.
+* **Solusi:** Wajib menerapkan *data augmentation* dinamis pada pipeline pelatihan TensorFlow/Keras.
 
 ---
 
-### 🚨 RED FLAG 4: Inkonsistensi Istilah Arsitektur (Flutter vs Android Native CameraX)
-* **Temuan:** Di Judul dan Bab 2 tertulis **Aplikasi Flutter (Dart)**, namun pada Daftar Gambar (hal. viii) dan Bab 3 Gambar 3.4 tertulis *"Wireframe Tampilan **CameraX**"*.
-* **Masalah:** CameraX adalah API library native Android (Jetpack Java/Kotlin), sedangkan Flutter menggunakan widget `CameraPreview` dari package `camera`.
-* **Tindakan:** Ganti penamaan *"Tampilan CameraX"* menjadi *"Tampilan Kamera (Camera Stream Preview)"* agar tidak rancu dengan native development.
+### 🚨 RED FLAG 6: Paradoks Isu Tunanetra vs Ketiadaan Fitur Audio (Text-to-Speech)
+* **Temuan:** Di Bab I, Benny menjual urgensi bahwa aplikasi ini dibuat untuk **membantu penyandang tunanetra**.
+* **Masalah:** Pada perancangan antarmuka (Wireframe Gambar 3.4), aplikasi **hanya menampilkan tulisan teks di layar HP tanpa ada suara (Text-to-Speech / TTS) dan tanpa feedback getar (haptic)**!
+* **Dilema Penguji:** *"Bagaimana tunanetra bisa melihat teks nominal di layar jika tidak ada suara?"*
+* **Solusi Wajib:** Mahasiswa **wajib mengintegrasikan package `flutter_tts`** sehingga setiap kali uang terklasifikasi, aplikasi otomatis membacakan nominal uang secara offline dalam bahasa Indonesia.
 
 ---
 
-### 🚨 RED FLAG 5: Metodologi Pengujian Model Terlalu Dangkal
-* **Temuan:** Bab 3 hanya memiliki 8 halaman. Pengujian hanya menyebutkan perhitungan *Confusion Matrix* pada data test split dan uji klik tombol *Black Box*.
-* **Solusi Wajib:** Tambahkan skenario pengujian komprehensif pada Bab 3:
-  1. **Pengujian Efisiensi Komputasi Mobile:** Ukur waktu inferensi (*inference latency* dalam milidetik) dan konsumsi memori (RAM) saat model .tflite dijalankan di smartphone.
-  2. **Pengujian Robustness Citra:** Tabel matriks akurasi pengenalan uang berdasarkan variasi kondisi (uang baru vs uang lusuh, jarak kamera, dan intensitas cahaya).
+### 🚨 RED FLAG 7: Font Simbol Persamaan Matematika Rusak Total (Bab 2)
+* **Temuan:** Pada Persamaan 2.2 s.d. 2.5 (hal. 18–19), teks formula matematika rusak menjadi karakter kotak/aksara asing non-standar:
+  - Accuracy (Persamaan 2.2): `୎୳୫୪ୟ୦ ୮୰ୣୢ୧୩ୱ୧...`
+  - Precision (Persamaan 2.3): `்௉ / (்௉ ା ி௉)`
+  - Recall (Persamaan 2.4): `்௉ / (்௉ ା ி)` *(huruf N hilang pada FN)*.
+* **Solusi:** Ketik ulang seluruh persamaan menggunakan fitur Equation Microsoft Word atau LaTeX yang bersih.
 
 ---
 
@@ -74,71 +90,73 @@ Jika draf ini diajukan apa adanya ke Seminar Proposal, **mahasiswa berisiko ting
 1. **Lengkapi Template Pengesahan & Kata Pengantar:**
    - Isi nama lengkap Dosen Pembimbing I dan II beserta NIP pada lembar Pengesahan (hal. iii).
    - Hapus instruksi template di Kata Pengantar (*`{Nama Dosen Gelar Lengkap}`*, *`{tgl pdd}`*, *`{Keluarga; boleh di No. 1...}`*).
-2. **Koreksi Halaman Ganda & Typo:**
-   - Pada halaman 2 dan 3 terdapat judul naskah yang berulang.
+2. **Koreksi Duplikasi Gambar 2.1:**
+   - Di Bab 2 terdapat dua label Gambar 2.1: Spesimen Uang (hal. 11) dan teks pemanggilan diagram hierarki AI (hal. 12).
 
 ---
 
 ### 📘 BAB I – Pendahuluan
 1. **Penyempurnaan Rumusan Masalah:**
    Perjelas aspek efisiensi komputasi on-device dan akurasi pada variasi kondisi fisik uang:
-   > *"1. Bagaimana merancang dan mengimplementasikan model CNN berbasis arsitektur MobileNetV2 dengan pendekatan transfer learning untuk klasifikasi 7 nominal uang kertas Rupiah?"*  
-   > *"2. Bagaimana mengintegrasikan model ke dalam aplikasi mobile Flutter menggunakan TensorFlow Lite yang dilengkapi output suara (Text-to-Speech) untuk kemudahan aksesibilitas?"*  
-   > *"3. Bagaimana performa akurasi, robustness (pada uang lusuh/pencahayaan variatif), dan waktu inferensi model saat dieksekusi langsung pada perangkat smartphone?"*
+   > *"1. Bagaimana merancang dan melatih model CNN berbasis arsitektur MobileNetV2 dengan transfer learning dan fine-tuning untuk klasifikasi 7 pecahan uang kertas Rupiah?"*  
+   > *"2. Bagaimana mengintegrasikan model .tflite ke dalam aplikasi Flutter yang dilengkapi fitur Text-to-Speech (TTS) untuk aksesibilitas tunanetra?"*  
+   > *"3. Bagaimana performa akurasi, waktu inferensi (latency ms), dan ketahanan model terhadap uang lusuh/lecek serta variasi pencahayaan saat dijalankan langsung pada smartphone?"*
 2. **Sinkronisasi Tujuan Penelitian:**
    Buat 3 butir tujuan penelitian yang menjawab 3 rumusan masalah di atas secara simetris.
 
 ---
 
 ### 📗 BAB II – Tinjauan Pustaka
-1. **Perbaikan Redaksi Subbab 2.1 Poin 1 (Boimau & Kaesmetan, 2024, hal. 6):**
-   - Terdapat terjemahan mesin (*machine translation*) yang aneh: *"nilai kemalangan sebesar 0,0769"* (menerjemahkan kata *loss* menjadi *kemalangan*) dan *"lapisan rahasia"* (menerjemahkan *hidden layer* menjadi *lapisan rahasia*).
-   - **Koreksi:** Ubah menjadi *"nilai training loss"* dan *"hidden layer / lapisan tersembunyi"*.
-2. **Tabel 2.1 (Matriks Perbedaan Penelitian Terkait):**
-   - Buat format tabel komparasi yang rapi (No, Peneliti/Tahun, Metode/Arsitektur, Dataset/Objek, Akurasi, Perbedaan dengan Penelitian Ini) agar *research gap* terlihat jelas.
-3. **Koreksi Rumus Matematika (Hal. 18):**
-   - Persamaan 2.4 (Recall) tertulis penyebut: $\frac{TP}{TP + F}$ (huruf N hilang pada FN). Koreksi menjadi:
-     $$\text{Recall} = \frac{TP}{TP + FN}$$
+1. **Perbaikan Terjemahan Mesin (Subbab 2.1 Poin 1, hal. 6):**
+   - Koreksi terjemahan aneh: *"nilai kemalangan 0,0769"* ➔ **"nilai training loss 0,0769"**; *"lapisan rahasia"* ➔ **"lapisan tersembunyi / hidden layer"**.
+2. **Hindari Sitasi Blog Web (Daftar Pustaka No. 9):**
+   - Sitasi `GeeksforGeeks (2026)` untuk konsep CNN tidak layak untuk skripsi S1. Ganti dengan buku teks resmi (*Goodfellow et al., 2016*).
 
 ---
 
 ### 📙 BAB III – Metodologi Penelitian
-1. **Arsitektur Pipeline On-Device AI:**
-   Gambarkan diagram alur data lengkap:  
-   $$\text{Camera Stream} \rightarrow \text{Resize } (224 \times 224) \rightarrow \text{Normalisasi Float32 } [-1, 1] \rightarrow \text{TFLite Interpreter} \rightarrow \text{Softmax Output} \rightarrow \text{TTS Audio}$$
-2. **Spesifikasi Model & Fine-Tuning:**
-   Tuliskan detail hyperparameter:
+1. **Lengkapi Detail Hyperparameter Training:**
+   Tuliskan spesifikasi konfigurasi model:
    - Base Model: `MobileNetV2` (Pretrained on ImageNet).
-   - Optimizer: `Adam` (Initial Learning Rate: $10^{-4}$, Fine-tuning LR: $10^{-5}$).
-   - Batch Size: `32` / `64`.
-   - Epoch: `50` dengan *Early Stopping* & *ModelCheckpoint*.
-3. **Fitur Text-to-Speech (TTS) & UI Flow:**
-   Tambahkan wireframe tampilan antarmuka saat tombol audio aktif dan pembacaan nominal otomatis.
+   - Input Shape: $224 \times 224 \times 3$.
+   - Dense Layer & Regularization: `GlobalAveragePooling2D`, `Dropout(0.2)`, `Dense(7, activation='softmax')`.
+   - Optimizer: `Adam` (Initial LR: $10^{-4}$, Fine-tuning LR: $10^{-5}$).
+   - Loss Function: `CategoricalCrossentropy`.
+   - Batch Size: `32` / `64`, Epoch: `50` (dengan *EarlyStopping* & *ModelCheckpoint*).
+2. **Koreksi Istilah Arsitektur (Flutter vs CameraX):**
+   - Ubah penamaan *"Wireframe Tampilan CameraX"* pada Gambar 3.4 menjadi *"Wireframe Tampilan Kamera (Camera Stream Preview)"*.
+3. **Pengujian Efisiensi Komputasi Mobile:**
+   - Tambahkan tabel skenario pengujian waktu inferensi (*latency* per frame dalam milidetik) dan konsumsi memori RAM saat model .tflite dijalankan di smartphone.
 
 ---
 
-## 🎯 4. Pertanyaan Ujian Seminar Proposal yang Wajib Disiapkan
+## 🎯 4. Pertanyaan Ujian Seminar Proposal yang Wajib Disiapkan Mahasiswa
 
-1. **"Kenapa memilih MobileNetV2 dibanding MobileNetV3 atau YOLOv8-Nano?"**  
+1. **"Apa perbedaan penelitian Anda dengan publikasi Yahya & Fauziah (2026) yang juga menggunakan MobileNetV2 untuk tunanetra?"**  
+   *Jawaban:* Penelitian kami berfokus pada integrasi on-device inference menggunakan Flutter & TFLite secara offline dengan modul Text-to-Speech mandiri, serta melakukan evaluasi ketahanan model terhadap variasi uang lecek/lusuh dan pencahayaan dinamis secara empiris.
+2. **"Kenapa memilih MobileNetV2 dibanding MobileNetV3 atau YOLOv8-Nano?"**  
    *Jawaban:* MobileNetV2 memiliki struktur *Inverted Residuals* dan *Linear Bottlenecks* yang sangat stabil, memiliki ukuran model yang ringkas ($\sim 8-14\text{ MB}$), serta didukung penuh oleh interpreter `tflite_flutter` tanpa dependensi runtime yang berat.
-2. **"Bagaimana model mengatasi masalah uang yang lusuh, terlipat, atau pencahayaan redup?"**  
-   *Jawaban:* Model dilatih dengan variasi rotasi dan augmentasi citra, serta diuji secara khusus (*stress test*) menggunakan dataset primer pada 3 variasi intensitas lux cahaya dan 3 kondisi fisik uang (baru, lusuh, terlipat).
-3. **"Apa bukti nyata aplikasi ini dapat digunakan oleh penyandang tunanetra?"**  
+3. **"Bagaimana model mengatasi masalah uang yang lusuh, terlipat, atau pencahayaan redup?"**  
+   *Jawaban:* Model dilatih dengan augmentasi citra acak (*random brightness & rotation*), serta diuji secara khusus (*stress test*) menggunakan dataset primer pada 3 variasi intensitas lux cahaya dan 3 kondisi fisik uang (baru, lusuh, terlipat).
+4. **"Apa bukti nyata aplikasi ini dapat digunakan oleh penyandang tunanetra?"**  
    *Jawaban:* Aplikasi mengintegrasikan modul *Text-to-Speech* (TTS) yang langsung mengonversi hasil klasifikasi tertinggi menjadi output suara bahasa Indonesia secara instan saat kamera diarahkan ke uang kertas.
 
 ---
 
-## ✅ 5. Lembar Checklist Tindak Lanjut Revisi
+## ✅ 5. Lembar Checklist Tindak Lanjut Revisi Mahasiswa
 
 - [ ] **MENGHAPUS Lampiran 2 dan 6 yang memuat tabel YOLOv8/v11/RT-DETR milik skripsi lain.**
-- [ ] Membersihkan seluruh teks instruksi template Word pada Kata Pengantar dan Halaman Pengesahan.
-- [ ] Mengoreksi istilah terjemahan mesin pada Bab II (*nilai kemalangan* $\rightarrow$ *loss value*, *lapisan rahasia* $\rightarrow$ *hidden layer*).
-- [ ] Memperbaiki rumus Recall pada Persamaan 2.4 ($TP / (TP + FN)$).
+- [ ] **Memasukkan paper Yahya & Fauziah (2026) ke dalam tinjauan pustaka Bab II dan matriks perbandingan State-of-the-Art.**
+- [ ] Mengganti 3–4 literatur non-relevan (daun bawang, bunga, dll.) di Bab 2 dengan penelitian klasifikasi uang Rupiah.
+- [ ] Memperbaiki seluruh font simbol matematika yang rusak pada Persamaan 2.2, 2.3, 2.4, dan 2.5.
+- [ ] Mengoreksi istilah terjemahan mesin (*nilai kemalangan* $\rightarrow$ *training loss*, *lapisan rahasia* $\rightarrow$ *hidden layer*).
+- [ ] Mengganti sitasi blog GeeksforGeeks dengan buku teks standar deep learning.
 - [ ] Mengubah istilah *"CameraX"* pada wireframe Bab III menjadi *"Camera Stream Preview (Flutter)"*.
 - [ ] **Menambahkan komitmen pengambilan Dataset Uji Primer Mandiri** (uang lusuh, variasi jarak, dan pencahayaan).
 - [ ] **Menambahkan fitur wajib Text-to-Speech (TTS) dan output suara nominal uang** untuk menjustifikasi target pengguna tunanetra.
-- [ ] Menambahkan skenario pengujian *inference latency* (ms) dan pengujian *robustness* pada Bab III.
+- [ ] Menerapkan *data augmentation* dinamis pada Bab III.
+- [ ] Menambahkan skenario pengujian *inference latency* (ms) dan konsumsi memori di smartphone pada Bab III.
 - [ ] Menggunakan Reference Manager (Mendeley / Zotero) untuk standarisasi Daftar Pustaka (APA 7th).
 
 ---
-*Laporan evaluasi ini disusun sebagai rekomendasi resmi dosen pembimbing agar draf proposal Benny Hernanda Putra disempurnakan sebelum diajukan ke Seminar Proposal.*
+*Laporan evaluasi forensik ini disusun sebagai rekomendasi resmi dosen pembimbing agar draf proposal Benny Hernanda Putra disempurnakan sebelum diajukan ke Seminar Proposal.*
