@@ -26,7 +26,7 @@ Secara umum, proposal skripsi ini memiliki konsep yang **sangat menarik dan rele
 | **Bab I: Pendahuluan** | ⚠️ *Revisi Sedang* | Sinkronkan kata judul di latar belakang, perbaiki rumusan masalah vs metode uji, tetapkan istilah *mini game*. |
 | **Bab II: Tinjauan Pustaka** | 🚨 *Revisi Mayor* | Urutkan nomor pada Tabel 2.1 (saat ini meloncat-loncat), kembalikan rumus UAT yang hilang, bersihkan sitasi rusak. |
 | **Bab III: Metodologi & AI** | 🚨 *Revisi Mayor* | Ganti Flowchart Gambar 3.2 dengan Diagram Hierarki *Behavior Tree*, definisikan formula PanicLevel, sinkronkan 4 status NPC, dan lengkapi arsitektur scripting Roblox. |
-| **Daftar Pustaka** | 🚨 *Revisi Mayor* | Hapus referensi yang tidak pernah disitasi (*ghost citations*), lengkapi sitasi yang belum ada di daftar pustaka, dan rapikan format APA 7th. |
+| **Daftar Pustaka & Sitasi** | 🚨 *Revisi Mayor* | **Wajib beralih menggunakan Mendeley / Zotero** untuk mengeliminasi *ghost citations*, melengkapi metadata jurnal, dan format APA 7th otomatis. |
 
 ---
 
@@ -202,30 +202,44 @@ Tambahkan 1–2 paragraf pada Subbab 3.4 yang menjelaskan:
 
 ---
 
-## 📚 4. Audit Silang Sitasi vs Daftar Pustaka (Cross-Reference Audit)
+## 📚 4. Audit Silang Sitasi, Daftar Pustaka & Panduan Reference Manager
 
-Setelah diaudit secara menyeluruh, ditemukan banyak ketidaksesuaian antara kutipan di naskah dengan entri di Daftar Pustaka:
+### 🛠️ A. REKOMENDASI UTAMA: Wajib Gunakan Mendeley atau Zotero!
 
-### A. Sitasi di Naskah yang BELUM ADA di Daftar Pustaka (Wajib Ditambahkan):
+Banyaknya kesalahan sitasi (sitasi hilang, *ghost citations*, dan metadata tidak lengkap) disebabkan oleh **pengetikan sitasi dan daftar pustaka secara manual**. 
+
+**Mulai saat ini, kamu WAJIB menggunakan Reference Management Software (**Mendeley Reference Manager** atau **Zotero**)** yang diintegrasikan langsung dengan Microsoft Word:
+
+1. **Kenapa Harus Mendeley / Zotero?**
+   - **Otomasi 100% Sinkron:** Setiap kali kamu menyisipkan sitasi di naskah (Insert Citation), referensi tersebut akan otomatis muncul di Daftar Pustaka (Insert Bibliography). Tidak akan ada lagi istilah *ghost citation* atau sitasi yang tertinggal.
+   - **Standarisasi Format APA 7th:** Software akan otomatis mengatur kapitalisasi judul (*sentence case*), format nama penulis (*et al.*), nama jurnal miring (*italic*), volume/nomor, dan link DOI standar.
+   - **Bebas Human Error:** Metadata artikel (judul, penulis, tahun, penerbit) diambil langsung dari database jurnal resmi via DOI atau file PDF.
+
+2. **Langkah Praktis Penggunaan:**
+   1. Unduh dan pasang **Mendeley Reference Manager** (atau **Zotero**) di laptop kamu.
+   2. Pasang plugin pengolah kata (**Mendeley Cite** untuk MS Word atau **Zotero Word Plugin**).
+   3. Masukkan seluruh artikel rujukan ke library Mendeley/Zotero menggunakan fitur *Import by DOI* / *Add PDF* / *Browser Web Importer*.
+   4. Hapus seluruh sitasi manual di naskah proposal kamu, lalu ganti dengan menyisipkannya melalui plugin (*Insert Citation*).
+   5. Klik *Insert Bibliography* di halaman Daftar Pustaka dan pilih style **American Psychological Association 7th edition (APA 7th)**.
+
+---
+
+### B. Daftar Sitasi di Naskah yang BELUM ADA di Daftar Pustaka (Wajib Diinput ke Mendeley/Zotero):
 1. **Aliyah et al., 2024** *(Bab 2, hal. 20)*
 2. **Wulandari Putri Bahmin et al., 2025** *(Bab 2, hal. 20)*
 3. **Hasugian, 2023** *(Bab 2, hal. 20)*
 4. **Global Web Index (GWI), 2024** *(Bab 1, hal. 1)*
-5. **Kemenkominfo (2022) & Kemenparekraf (2024)** *(Bab 1, hal. 1)* ➔ Masukkan sebagai dokumen resmi instansi pemerintah, bukan sekadar link berita media.
+5. **Kemenkominfo (2022) & Kemenparekraf (2024)** *(Bab 1, hal. 1)* ➔ Masukkan dokumen/laporan resmi instansi pemerintah, bukan sekadar link berita portal media.
 
-### B. Referensi di Daftar Pustaka yang TIDAK PERNAH DISITASI di Naskah (Wajib Dihapus / Disitir):
-1. **Kemal Pasha, M., & Prabowo, A. (2025)** – Visual Novel Ren'Py (tidak relevan dengan skripsi).
+### C. Referensi di Daftar Pustaka yang TIDAK PERNAH DISITASI di Naskah (Wajib Dihapus):
+1. **Kemal Pasha, M., & Prabowo, A. (2025)** – Visual Novel Ren'Py (tidak relevan dengan skripsi ini).
 2. **Naufal, M. R., et al. (2024)** – Game Warik berbasis FSM (tidak disitasi di teks).
 3. **Simanjuntak, S. M., & Putra (2025)** – Analisis Usability SUS (Dhafin menggunakan UAT Likert, bukan SUS).
 
-### C. Data Sitasi yang Tidak Lengkap (Lengkapi Volume, Nomor, Halaman):
+### D. Data Sitasi yang Tidak Lengkap (Lengkapi Volume, Nomor, Halaman di Library):
 1. **Ardiansyah, R., Putra, Y., & Mashuri, C. (2024)** ➔ Nama jurnal, volume, dan nomor halaman belum ada.
 2. **Lonteng, A., et al. (2024)** ➔ Nama jurnal tidak dicantumkan lengkap.
 3. **Menora, T., et al. (2023)** ➔ Nama jurnal penerbit tidak dicantumkan.
-
-### D. Format Standar APA Style 7th Edition:
-* Tulis judul artikel jurnal dalam bentuk ***Sentence case*** (hanya huruf awal kalimat yang kapital).
-* Standarisasi tautan DOI menggunakan huruf kecil: https://doi.org/....
 
 ---
 
@@ -261,8 +275,8 @@ Beri tanda centang [v] jika perbaikan berikut telah selesai dikerjakan:
 - [ ] Memperbaiki referensi penomoran tabel di narasi Bab 3 (Tabel 3.3, 3.4, 3.5).
 - [ ] Menambahkan penjelasan teknis Luau script (Server script, tick rate {,}2\text{s}$, PathfindingService).
 - [ ] Melengkapi isian Waktu, Tempat, dan Jadwal Penelitian (Tabel 3.9).
-- [ ] Melakukan sinkronisasi Daftar Pustaka (menambahkan sitasi yang hilang, menghapus *ghost references*, dan melengkapi metadata jurnal).
-- [ ] Mengubah kapitalisasi judul daftar pustaka ke format *sentence case* dan tautan https://doi.org.
+- [ ] **MENGGUNAKAN REFERENCE MANAGER (Mendeley / Zotero)** untuk mengelola seluruh sitasi naskah dan meng-generate Daftar Pustaka secara otomatis (style APA 7th).
+- [ ] Memastikan tidak ada lagi sitasi tertinggal (*missing citations*) maupun referensi yang tidak pernah dikutip (*ghost references*).
 
 ---
 *Laporan audit ini disusun sebagai panduan resmi bimbingan skripsi agar draf proposal siap dan matang untuk diajukan ke Seminar Proposal.*
