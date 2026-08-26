@@ -1,0 +1,2099 @@
+--- PAGE 1 ---
+ 
+ 
+ 
+ 
+ 
+PROPOSAL SKRIPSI 
+ 
+ANALISIS SEARCH ENGINE OPTIMIZATION (SEO) 
+PADA WEBSITE LINTASJEJARING.COM 
+ 
+ 
+ 
+ 
+ 
+Oleh: 
+ 
+AJI PANGESTU 
+2009106134 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+FAKULTAS TEKNIK 
+UNIVERSITAS MULAWARMAN 
+ 
+ 
+ 
+SAMARINDA 
+2026  
+
+
+--- PAGE 2 ---
+i 
+ 
+PROPOSAL SKRIPSI 
+ 
+Analisis Search Engine Optimization (SEO) pada Website 
+LINTASJEJARING.COM 
+HALAMAN JUDUL 
+ 
+ 
+ 
+Diajukan sebagai salah satu syarat untuk menyelesaikan pendidikan  
+pada Program Studi Strata 1 Informatika,  
+Fakultas Teknik, Universitas Mulawarman  
+ 
+ 
+ 
+Oleh: 
+ 
+AJI PANGESTU 
+2009106134 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+FAKULTAS TEKNIK 
+UNIVERSITAS MULAWARMAN 
+ 
+ 
+ 
+ 
+SAMARINDA 
+2026 
+ 
+ 
+ 
+
+
+--- PAGE 3 ---
+ii 
+ 
+PROPOSAL SKRIPSI 
+Analisis Search Engine Optimization (SEO) pada Website 
+LINTASJEJARING.COM 
+HALAMAN PENGESAHAN  
+ 
+ 
+Oleh: 
+AJI PANGESTU 
+2009106134 
+ 
+ 
+ 
+Telah dibahas dalam Rapat Dosen Pembimbing pada [tgl, bln, tahun] dan 
+dinyatakan memenuhi syarat sebagai Skripsi, dengan Dosen Pembimbing: 
+ 
+I. Anton Prafanto, S.Kom., MT. 
+II. Medi Taruk, S.Kom., M.Cs. 
+ 
+ 
+ 
+ 
+Koordinator Program Studi S1 Informatika, 
+Fakultas Teknik, Universitas Mulawarman, 
+ 
+ 
+ 
+Awang Harsa Kridalaksana, S.Kom., M.Kom. 
+NIP 19731229 200501 1 002  
+
+--- PAGE 4 ---
+iii 
+ 
+KATA PENGANTAR 
+Puji syukur kepada Allah SWT, Tuhan Yang Maha Esa sehingga dapat menyelesaikan 
+proposal skripsi dengan judul “ Analisis Search Engine Optimization (SEO) pada 
+Website LINTASJEJARING.COM ”. Proposal ini disusun sebagai salah satu tahapan 
+dalam menyelesaikan skripsi pada Fakultas Teknik, Universitas Mulawarman.  Oleh 
+karena itu, pada kesempatan ini kami ingin mengucapk an terima kasih kepada semua 
+pihak yang telah mendukung serta membantu saya selama proses penyusunan proposal 
+skripsi, kepada: 
+1. Orang tua dan Saudara-saudara saya atas do’a, bimbingan serta kasih sayangnya.  
+2. Nama dan gelar akademik lengkap Dekan selaku Dekan Fakultas Teknik, 
+Universitas Mulawarman. 
+3. Nama dan gelar akademik Koordinator Prodi selaku K Program Studi Informatika 
+4. Nama dan gelar akademik Dosen Pembimbing I selaku Pembimbing I yang selalu 
+memberikan arahan dan masukkan terhadap penelitian ini.  
+5. Nama dan gelar akademik Dosen Pembimbing II selaku Pembimbing II atas 
+masukkan terhadap penelitian ini  
+6. Nama dan gelar akademik Dosen Penguji I selaku Penguji I atas saran dan 
+masukkan terhadap penelitian ini.  
+7. Nama dan gelar akademik Dosen Penguji II selaku  Penguji II atas saran dan 
+masukkan terhadap penelitian ini.  
+8. Segenap Dosen Program Studi Informatika, yang telah memberikan ilmu 
+pengetahuan selama mengikuti perkuliahan.  
+9. Rekan-rekan seperjuangan yang terus memberikan dukungan semangat demi 
+terselesainya tugas ini. 
+Saya menyadari bahwa proposal skripsi ini tidak luput dari berbagai kekurangan. Oleh 
+karena itu, semua kritik dan saran yang bersifat memperbaiki demi kesempurnaan sangat 
+diharapkan. 
+Samarinda,.............................. 202 5 
+Penulis 
+
+--- PAGE 5 ---
+iv 
+ 
+DAFTAR ISI 
+ 
+halaman 
+ 
+HALAMAN JUDUL .......................................................................................................... i 
+HALAMAN PENGESAHAN  .......................................................................................... ii 
+KATA PENGANTAR...................................................................................................... iii 
+DAFTAR ISI ..................................................................................................................... iv 
+DAFTAR TABEL.............................................................................................................. v 
+DAFTAR GAMBAR ........................................................................................................ vi 
+DAFTAR LAMPIRAN ................................................................................................... vii 
+DAFTAR SINGKATAN ............................................................................................... viii 
+BAB I PENDAHULUAN ................................................................................................. 1 
+1.1 Latar Belakang................................ ................................ ................................ ......... 1 
+1.2 Rumusan Masalah ................................ ................................ ................................ ... 3 
+1.3 Batasan Masalah ................................ ................................ ................................ ..... 3 
+1.4 Tujuan Penelitian ................................ ................................ ................................ .... 4 
+1.5 Manfaat Penelitian ................................ ................................ ................................ .. 4 
+1.6 Kontribusi Penelitian ................................ ................................ ...............................  5 
+BAB II TINJAUAN PUSTAKA  ...................................................................................... 6 
+2.1 Penelitian Terkait ................................ ................................ ................................ .... 6 
+2.1.1 Analisis Gap Penelitian ......................................................................................... 11 
+2.2 Search Engine Optimization................................ ................................ ...................  13 
+2.3 SEO On-page ................................ ................................ ................................ ......... 14 
+2.4 Core Web Vitals ................................ ................................ ................................ .... 17 
+2.5 Website ................................ ................................ ................................ ................ 18 
+2.6 Lintasjejaring.com ................................ ................................ ................................ . 19 
+2.7 Ahrefs Webmaster Tools ................................ ................................ .......................  19 
+2.8 Google Search Console ................................ ................................ ..........................  20 
+2.9 Google Analytics................................ ................................ ................................ .... 21 
+2.10 SEO Off-page dan Backlink ................................ ................................ ....................  22 
+BAB III METODOLOGI PENELITIAN  .................................................................... 24 
+3.1 Tahapan Pelaksanaan Penelitian ................................ ................................ ........... 24 
+3.2  Pengumpulan Data ................................ ................................ ................................  26 
+3.2.1 Jenis dan Sumber Data .................................................................................... 26 
+3.2.2 Periode dan Frekuensi Pengumpulan Data  ....................................................... 27 
+3.2.3 Teknik Pengumpulan Data ............................................................................. 28 
+3.3 Perancangan Data ................................ ................................ ................................ . 28 
+3.4  Perancangan Proses/Algoritma ................................ ................................ ............. 32 
+3.5  Perancangan Pengujian ................................ ................................ .........................  33 
+3.5.1 Pendekatan Analisis .............................................................................................. 33 
+3.5.2 Sistem Penilaian (Scoring System) SEO On -page ....................................... 34 
+3.5.3 Analisis Tren Komparatif Antar Periode  ..................................................... 36 
+3.5.4 Uji Konsistensi Data ......................................................................................... 36 
+3.6  Waktu dan Tempat Penelitian ................................ ................................ ............... 36 
+DAFTAR PUSTAKA ...................................................................................................... 38 
+LAMPIRAN ..................................................................................................................... 40 
+
+--- PAGE 6 ---
+v 
+ 
+DAFTAR TABEL 
+ 
+Halaman 
+Tabel 2. 1 Perbedaan dengan Penelitian Sebelumnya  ........................................................ 9 
+Tabel 2. 2 Analisis Gap Penelitian  ..................................................................................... 11 
+Tabel 3. 1 Jadwal Pengambilan Data per Periode  ............................................................. 27 
+Tabel 3. 2 Perancangan Data Penelitian  ............................................................................ 28 
+Tabel 3. 3 Skala Penilaian per Indikator  ............................................................................ 34 
+Tabel 3. 4 Pengelompokan Indikator dan Bobot Kategori  ............................................... 34 
+Tabel 3. 5 Interpretasi Skor SEO Health  ........................................................................... 35 
+Tabel 3. 6 Jadwal Penelitian  ............................................................................................... 37 
+ 
+ 
+ 
+ 
+ 
+  
+
+--- PAGE 7 ---
+vi 
+ 
+DAFTAR GAMBAR 
+ 
+Halaman 
+Gambar 3. 1 Tahapan Penelitian ........................................................................................ 24 
+ 
+ 
+ 
+ 
+  
+
+--- PAGE 8 ---
+vii 
+ 
+DAFTAR LAMPIRAN 
+ 
+ 
+Halaman 
+Lampiran 1 halaman utama Ahrefs Webmaster Tools  ..................................................... 40 
+Lampiran 2 halaman utama Google Search Console  ........................................................ 40 
+Lampiran 3 halaman utama Google Analythics  ................................................................ 41 
+ 
+  
+
+--- PAGE 9 ---
+viii 
+ 
+DAFTAR SINGKATAN 
+ 
+SEO  = Search Engine Optimization  
+SERP = Search Engine Result Page 
+DA = Domain Autority 
+PA = Page Autority 
+CTR = Click Through Rate 
+CLS = Cumulative layout Shift 
+INP = Interaction To Next Paint 
+AWT = Ahrefs Webmaster Tool 
+DNS = Domain Name System 
+HTML = HyperText Markup Language  
+URL = Uniform Resource Locator 
+GSC = Google Search Console 
+GA4 = Google Analytic 4 
+ 
+ 
+
+--- PAGE 10 ---
+1 
+ 
+BAB I PENDAHULUAN 
+PENDAHULUAN 
+ 
+ 
+1.1 Latar Belakang 
+Perkembangan teknologi informasi dan komunikasi telah mengubah cara 
+masyarakat global mengakses informasi. Media daring saat ini menjadi pilar utama 
+distribusi berita, menggantikan dominasi media cetak dan televisi. Laporan We Are 
+Social & Meltwat er (2025) mencatat bahwa jumlah pengguna internet di Indonesia 212 
+juta orang, setara dengan tingkat penetrasi 74,6%  dari total populasi  (We Are Social & 
+Meltwater, 2025).  
+Perkembangan digital tersebut memicu p ertumbuhan pesat media online lokal di 
+berbagai daerah Indonesia, termasuk Kalimantan Timur. Media daring lokal tidak hanya 
+bersaing dengan media nasional, tetapi juga dengan platform internasional yang memiliki 
+infrastruktur digital lebih kuat. Persaingan  ini mewajibkan setiap portal berita daerah 
+untuk mampu menjaga relevansi dan kecepatan distribusi informasi agar tetap menjadi 
+pilihan utama bagi masyarakat. 
+Dalam lingkungan kompetisi tersebut, visibilitas di mesin pencari khususnya 
+Google menjadi faktor kunci. Mesin pencari merupakan pintu utama audiens menemukan 
+berita, di mana sekitar 68% lalu lintas web global berasal dari pencarian organik (Chaffey 
+& Ellis -Chadwick, 2022) . Strategi Search Engine Optimization (SEO) sangat penting 
+untuk meningkatkan peringkat  situs, trafik organik, dan mempertahankan eksistensi 
+media daring. 
+SEO secara umum dibagi menjadi dua kategori utama, yaitu SEO On-page dan SEO 
+Off-page. SEO On -page mencakup seluruh optimasi yang dilakukan langsung pada 
+elemen-elemen halaman situs, seperti struktur metadata ( title tag dan meta description ), 
+penggunaan heading tag  (H1–H6), kualitas konten, struktur URL, internal linking, serta 
+performa teknis halaman termasuk Core Web Vitals. Faktor-faktor ini sepenuhnya berada 
+dalam kendali pengelola situs sehingga dapat diukur, dievaluasi, dan diperbaiki secara 
+langsung. Berbeda dengan SEO Off -page yang bergantung pada faktor eksternal  seperti 
+
+--- PAGE 11 ---
+ 
+2 
+ 
+backlink dari situs lain, SEO On-page memberikan fondasi teknis yang menjadi prasyarat 
+utama sebelum strategi lain dapat bekerja efektif (Masruri & Nihayati, 2022) . 
+Penerapan SEO pada media daring bukan sekadar isu teknis, melainkan berkaitan 
+langsung dengan keberlangsungan redaksi. Penelitian pada portal berita Akurat.co 
+menunjukkan bahwa artikel yang dioptimasi SEO cenderung lebih diprioritaskan redaksi 
+untuk ditamp ilkan sebagai berita utama, menandakan bahwa praktik SEO turut 
+memengaruhi proses editorial (Adzhari et al., 2025) . Studi pada Kompas.com ju ga 
+menemukan bahwa optimasi on -page dan off -page yang konsisten berkontribusi pada 
+peringkat pencarian yang stabil untuk pemberitaannya (Marsha Awang Lisba Siella et al., 
+2024). 
+Pola serupa turut ditemukan pada media daring berskala regional. Studi pada Detik 
+Sulsel di Sulawesi Selatan menunjukkan penerapan optimasi kata kunci dan metadata 
+pada level redaksi regional (Melinda et al., 2023) , sementara studi pada Palpres.com di 
+Sumatra Selatan menemukan bahwa penerapan SEO yang belum menyeluruh khususnya 
+pada kepadatan kata kunci dan tautan sosial berkontribusi pada penurunan jumlah 
+pembaca (Pratama & Hasmaw ati, 2024). Pola ini mengindikasikan bahwa media daring 
+regional di berbagai wilayah Indonesia menghadapi tantangan serupa dalam penerapan 
+SEO yang konsisten, sebuah pola yang relevan untuk diperiksa lebih lanjut pada konteks 
+media daring regional Kalimantan Timur. 
+Salah satu media yang menghadapi tantangan tersebut adalah Lintasjejaring.com. 
+Walaupun memiliki konten yang relevan dengan isu -isu lokal Kalimantan Timur, situs 
+ini mengalami kesulitan mempertahankan peringkat organik secara konsisten. 
+Berdasarkan observasi awal menggunakan Ahrefs Webmaster Tools dan Google Search 
+Console, ditemukan sejumlah indikasi permasalahan teknis pada aspek on -page, antara 
+lain ketidakkonsistenan penulisan meta description , keberadaan halaman yang tidak 
+terindeks, serta  nilai Core Web Vitals yang belum memenuhi ambang batas yang 
+direkomendasikan Google. Keterbatasan sumber daya manusia dan teknologi membuat 
+praktik SEO sering dilakukan secara intuitif tanpa analisis kuantitatif yang komprehensif, 
+padahal metrik seperti k ecepatan halaman, kualitas struktur konten, dan kemampuan 
+indeks (indexability) merupakan indikator penting keberhasilan optimasi.  
+
+--- PAGE 12 ---
+ 
+3 
+ 
+Oleh sebab itu, penelitian ini mengangkat judul " Analisis Search Engine 
+Optimization (SEO) pada Website L intasjejaring.com". Fokus utama penelitian adalah 
+menganalisis kondisi penerapan SEO On -page situs secara menyeluruh menggunakan 
+Ahrefs Webmaster Tools, Google Search Console, dan Google Analytics, sekaligus 
+mengidentifikasi faktor -faktor teknis yang menghambat peningkatan  peringkat organik. 
+Data off-page seperti jumlah backlink dan referring domains  turut ditampilkan sebagai 
+data pendukung untuk memberikan gambaran otoritas domain secara keseluruhan. Hasil 
+analisis diharapkan dapat menjadi dasar rekomendasi strategis yang terukur bagi 
+pengelola Lintasjejaring.com untuk meningkatkan visibilitas dan persaingan di mesin 
+pencari Google. 
+1.2 Rumusan Masalah 
+Berdasarkan latar belakang penelitian, maka yang menjadi rumusan masalah dalam 
+penelitian ini adalah:  
+1. Bagaimana kondisi penera pan SEO O n-page pada website Lintasjejaring.com 
+dengan menggunakan Ahrefs Webmaster Tool, Google Search Console, dan 
+Google Analytics pada periode Juli 2026.  
+2. Apa saja permasalahan teknis SEO On-page pada website Lintasjejaring.com dan 
+sejauh mana permasalahan tersebut memengaruhi visibilitas trafik organik situs.  
+3. Rekomendasi apa yang dapat diberikan untuk meningkatkan performa  SEO O n-
+page website Lintasjejaring.com . 
+1.3 Batasan Masalah 
+Penelitian ini disusun berdasarkan data -data yang diperoleh. Mengingat luasnya 
+bidang yang dihadapi membuat penelitian ini harus dibatasi. Ruang lingkup masalah 
+dibatasi pada: 
+1. Penelitian ini hanya berfokus pada analisis dan evaluasi SEO On-page website 
+Lintasjejaring.com. Data Off-page mencakup jumlah Backlink dan Referring 
+Domains hanya ditampilkan sebagai data pendukung untuk memberikan konteks 
+otoritas domain dan tidak menjadi fokus utama penelitian.  
+2. Tools yang digunakan dalam penelitian ini  adalah Ahrefs Webmaster Tool, 
+Google Search Console dan Google Analytics.  
+
+--- PAGE 13 ---
+ 
+4 
+ 
+3. Periode pengambilan data dilakaukan pada bulan Juli  2026. 
+4. Objek penelitian adalah Lintasjejaring.com yang merupakan portal berita daring 
+lokal Kalimantan Timur. 
+1.4 Tujuan Penelitian 
+Tujuan yang ingin dicapai dalam penelitian ini adalah : 
+1. Mengidentifikasi dan menganalisis kondisi penerapan SEO On-page pada website 
+Lintasjejaring.com menggunakan Ahrefs Webmaster Tool, Google Search 
+Console, dan Google Analytics.  
+2. Merekomendasikan strategi berbasis data untuk meningkatkan performa SEO On-
+page dan visisbilitas Lintasjejaring.com di mesin pencari Google. 
+1.5 Manfaat Penelitian 
+Penelitian ini diharapkan dapat memberikan manfaat pada berbagai pihak, 
+khususnya: 
+1. Penulis 
+Menambah wawasan dan pengalaman praktis dalam menganalisis dan 
+mengevaluasi perfor ma SEO On -page sebuah website menggunakan tools yang diakui 
+secara profesional, yaitu Ahrefs Webmaster Tools, Google Search Console, dan Google 
+Analytics. 
+2. Mahasiswa 
+Penelitian ini dapat menjadi referensi bagi mahasiswa, khususnya di bidang 
+Informatika, dalam memahami metode analisis SEO On -page secara sistematis dan 
+berbasis data, serta cara pemanfaatan tools analitik digital untuk keperluan riset maupun 
+praktik. 
+3. Instansi/Lembaga/Perusahaan  
+Penelitian ini diharapkan dapat membantu pengelola Lintasjejaring.com dan media 
+daring lokal serupa untuk mengevaluasi kondisi teknis SEO On -page situs mereka, serta 
+memperoleh rekomendasi yang dapat diterapkan untuk meningkatkan peringkat organik 
+dan jumlah pengunjung di mesin pencari.  
+
+--- PAGE 14 ---
+ 
+5 
+ 
+1.6 Kontribusi Penelitian 
+Penelitian ini diharapkan dapat memberikan kontribusi dalam memperluas 
+pemahaman akademik dan praktis terkait penerapan analisis SEO On -page pada portal 
+berita daring lokal, khususnya di wilayah Kalimantan Timur. Secara akademik, penelitian 
+ini memperkaya literatur SEO berbahasa Indonesia dengan studi kasus yang spesifik pada 
+konteks media lokal dan menggunakan kombinasi tools Ahrefs Webmaster Tools, Google 
+Search Console, serta Google Analytics yang dapat diakses secara grati s sehingga 
+metodologi ini dapat direplikasi oleh peneliti lain dengan keterbatasan sumber daya 
+serupa. Secara praktis, hasil penelitian memberikan gambaran nyata mengenai kondisi 
+SEO On -page Lintasjejaring.com berikut rekomendasi terukur yang dapat langsung 
+ditindaklanjuti oleh pengelola situs. 
+
+--- PAGE 15 ---
+ 
+6 
+ 
+BAB II TINJ AUAN PUSTAKA 
+TINJAUAN PUSTAKA 
+ 
+2.1 Penelitian Terkait 
+Dalam rangka mendukung penelitian ini, maka dilakukan kajian dengan 
+mempelajari penelitian -penelitian terkait yang telah dilakukan sebelumnya. Daftar 
+penelitian terkait antara lain: 
+1. Metode yang digunakan: kuantitatif komparatif dengan sistem skor . Temuan 
+Penelitian : Penelitian ini bertujuan untuk menganalisis dan membandingkan 
+efektivitas dari dua strategi SEO dalam meningkatkan kinerja website kecantikan. 
+Metode yang digunakan adalah uji -T untuk menguji perbedaan signifikan antara  
+kedua strategi SEO ter sebut. Uji -T mwngindikasikan adanya perbedaan yang 
+signifikan antara kedua strategi SEO, dengan SEO On -page menunjukan skor yang 
+lebih tinggi dibandingkan dengan SEO Off -page (Apiani & Syifa, 2025) . 
+2. Metode yang digunakan:  metode crawl . Temuan Penelitian : Era Industri 4.0 
+telah membawa perubahan  besar pada berbagai bidang usaha dengan memadukan 
+teknologi informasi yang membuat sekat antara dunia nyata, maya, dan hayati 
+menjadi kabur. Banyak pengusaha di Indonesia dan seluruh dunia beralih ke situs 
+web untuk mengiklankan dan memperkenalkan produk karena efektivitas biaya, 
+kejelasan informasi, dan jangkauan yang lebih luas. Akan tetapi, ada kendala dalam 
+berlomba untuk jadi yang paling atas di halaman hasil pencarian, karena tidak 
+semua website bisa dapat tempat ini, yang akibatnya jumlah orang yang  datang ke 
+website jadi kurang maksimal (Putra et al., 2024). 
+3. Metode yang digunakan: pendekatan sistematis. Temuan Penelitian : Situs web 
+lembaga pendidikan punya andil besar dalam menyebarkan info ke calon 
+mahasiswa serta masyarakat luas, dan SEO jadi aspek krusial buat ningkatin daya 
+tampak serta kemudahan akses situs  di mesin pencari. Penelitian ini menggunakan 
+metode campuran buat nilai seberapa jitu strategi SEO yang udah diterapin, dengan 
+fokus pada optimasi keyword, konten, dan bangun tautan. Data utama didapat lewat 
+pengamatan langsung atas kinerja situs, sementara data pendukung didapat dari 
+kajian pustaka serta alat bantu analitik kayak Google Analytics serta Google Search 
+
+--- PAGE 16 ---
+ 
+7 
+ 
+Console. Penelitian ini memberikan rekomendasi agar terus meng optimalkan 
+konten situs secara rutin dapat meningkatkan tautan sama portal berita nasional 
+yang punya nama, demi jaga serta ningkatin performa SEO situs ke depannya  
+(Kurniawan et al., 2025). 
+4. Metode yang digunakan: kuantitatif deskriptif dengan GA dan GSC . Temuan 
+Penelitian : SEO On Page mampu mengoptimalisasikan konten website secara baik 
+dengan menggunakan teori SEO Friendly Content. Dalam mengoptimalisasikan 
+konten, tools Google Trends dan Google Keyword Planner digunakan untuk riset 
+kata kunci, kemudian dalam melakukan pengukuran trafik menggunakan tools 
+Google Analytics dan Google Search Console. Hasil penerapan SEO On Page pada 
+website blog rumahginjal.id dinilai mampu meningkatkan trafik situs secara organik 
+dalam kurun waktu 4 bulan. Hasil pengukuran sebelum optimasi pada Agustus 
+September 2022, dan setelah optimasi pada O ktober-November 2022, pageviews 
+meningkat 635% dari 3.485 ke 25.623, unique pageviews meningkat 373% dari 305 
+ke 1.444, clicks meningkat 600% dari 14 ke 98, impression meningkat 317% dari 
+1.971 ke 8.220, dan organic search meningkat 104% dari 48 ke 98  (Rizqi et al., 
+2023). 
+5. Metode yang digunakan: deskriptif kualitatif. Temuan Penelitian : bagaimana 
+penerapan SEO memengaruhi proses pemilihan topik dan penulisan berita di portal 
+berita Akurat.co, serta kaitannya dengan pembentukan agenda berita. Penelitian ini 
+menggunakan metode kualitatif deskriptif dengan teknik wawancara mendalam 
+kepada pimpinan redaksi, redaktur, dan penulis konten SEO. Hasil penelitian 
+menunjukkan bahwa SEO sangat memengaruhi proses kerja redaksi, terutama 
+dalam memilih topik berdasarkan tren pencarian seperti Google Trends. Judul 
+berita, struktur artikel, hingga sudut pandang penulisan disesuaikan agar lebih 
+ramah algoritma. Meski strategi ini berhasil meningkatkan jumlah pembaca, ada 
+kekhawatiran bahwa prinsip  jurnalisme bisa tergeser karena terlalu mengikuti 
+logika mesin pencari (Adzhari et al., 2025).  
+6. Metode yang digunakan: pendekatan sistematis Temuan Penelitian : 
+mengidentifikasi strategi SEO On -page dan Off -page serta mengevaluasi 
+efektivitasnya dalam meningkatkan visibilitas dan jumlah pengunjung. Hasil riset 
+
+--- PAGE 17 ---
+ 
+8 
+ 
+menunjukkan bahwa memakai teknik SEO yang baik itu penting.  Ini termasuk 
+memilih kata kunci yang tepat hingga optimasi konten dan backlink. Tujuannya 
+agar perusahaan bisa membuat situs web mereka bekerja lebih baik.  Apalagi dalam 
+pemasaran digital lewat situs web (Nugroho et al., 2025). 
+7. Metode yang digunakan: kuantitatif deskriptif Temuan Penelitian : 
+pengembangan sistem dilakukan menggunakan model Waterfall dan platform 
+Wordpress CMS. Pengumpulan data melalui observasi, wawancara, dokumentasi, 
+serta pemantauan metrik kinerja menggunakan Google Analythic, Google Search 
+Console, dan Yoast SEO. Analisis korelasional juga menunjukan adanya hubungan 
+positif antara skor SEO dengan durasi kunjungan pengguna . Temuan ini 
+membuktikan bahwa strategi SEO On -page efektif dalam meningkatkan visibilitas 
+dan performa website promosi UMKM secara digital (Rendyanto & Junaedi, 2025). 
+8. Metode yang digunakan: research and development (R&D) Temuan Penelitian : 
+Analisis awal menunjukkan performa pencarian organik yang rendah, dengan hanya 
+satu klik, 667 tayangan, rasio klik -tayang (CTR) sebesar 0,1%, dan posisi rata -rata 
+42,5 pada hasil Google Penelusuran. Proses optimasi melibatkan perbaikan struktur 
+situs, penyempurnaan konten dengan kata kunci yang relevan, pengoptimalan 
+gambar dengan nama f ile deskriptif dan teks alternatif, penyempurnaan meta tag, 
+dan pembangunan backlink berkualitas tinggi dari situs web yang relevan dan 
+bereputasi baik. Pengukuran pasca -implementasi menggunakan Google Search 
+Console menunjukkan peningkatan yang signifikan , termasuk peningkatan total 
+klik menjadi 173, tayangan menjadi 27,8 ribu, dan peningkatan posisi rata -rata 
+menjadi 16,3. Hasil ini menunjukkan bahwa strategi SEO yang terencana dengan 
+baik dan diterapkan secara konsisten dapat meningkatkan peringkat mesin  pencari 
+secara signifikan, memperluas jangkauan audiens, dan mendukung efektivitas 
+upaya pemasaran digital(Febriana & Khafidhoh, 2025) . 
+9. Metode yang digunakan: in-depth reaserch Temuan Penelitian : SEO memiliki 
+proses fundamental yaitu keyword  research dan optimasi On-Page. Keyword  
+research adalah melakukan analisis terhadap kata kunci untuk mengetahui tingkat 
+popularitas, jumlah kueri dan tingkat persaingannya. Pada penelitian ini, dilakukan 
+optimasi On -Page long -tail keyword pada website nuponorogo.or.id.  Proses  
+
+--- PAGE 18 ---
+ 
+9 
+ 
+optimasi pada  penelitian ini  adalah melakukan  in-depth research pada keyword 
+utama “khutbah jumat nu” kemudian meregenerasi long -tail ke yword dan 
+selanjutnya mengoptimasinya dengan metode On-Page (Masruri & Nihayati, 2022). 
+10. Metode yang digunakan: deskriptif kualitatif Temuan Penelitian : penerapan 
+teknik SEO (Search Engine Optimization) on page dan off page pada berita 
+Kompas.com. Metode yang digunakan dalam penelitian ini adalah kualitatif, yang 
+melibatkan percakapan atau interview dengan informan, serta dikombinasikan 
+dengan observasi da n studi pustaka. Hasil penerapan teknik SEO yang dilakukan 
+media Kompas.com terbagi menjadi dua, yaitu teknik SEO on page dan off page. 
+Di Kompas.com, penerapan teknik SEO on page berada pada semua badan berita, 
+mulai dari judul, teaser (deskripsi), taggin g, lead, sub judul (heading), gambar dan 
+dari keseluruhan tersebut harus mempunyai unsur SEO. Adapun untuk SEO off 
+page berada pada backlink, embed video atau embed media sosial dan rekomendasi 
+berita (Marsha Awang Lisba Siella et al., 2024) . 
+Tabel 2. 1 Perbedaan dengan Penelitian Sebelumnya 
+No Objek Penelitian Metode 
+Penelitian Temuan Utama Peneliti & 
+Tahun 
+1 Website kecantikan 
+(perbandingan strategi SEO) 
+Kuantitatif 
+Komparatif 
+dengan sistem 
+skor (uji-T) 
+SEO On-page 
+menunjukan skor 
+efektivitas yang 
+signifikan lebih 
+tinggi 
+dibandingkan 
+SEO Off-page 
+Apriyani & 
+Syifa 
+(2025) 
+2 Website bisnis di Era Industri 
+4.0 
+Metode Crawl Kendala dalam 
+kompetisi 
+peringkat SERP 
+yang 
+menyebabkan 
+traffic website 
+kurang maksimal 
+Irsyad 
+(2024) 
+3 Website lembaga pendidikan  Pendekatan 
+Sistematis 
+(Metode 
+Campuran) 
+Fokus pada 
+optimasi 
+keyword, konten, 
+dan link building. 
+Rekomendasi: 
+optimasi konten 
+rutin dan 
+Welli 
+Braham 
+Kurniawan 
+(2025) 
+
+--- PAGE 19 ---
+ 
+10 
+ 
+No Objek Penelitian Metode 
+Penelitian Temuan Utama Peneliti & 
+Tahun 
+membangun 
+tautan dengan 
+portal berita 
+nasional 
+4 Website blog Kesehatan 
+(rumahginjal.id) 
+Kualitatif 
+Deskriptif 
+dengan 
+Google 
+Analytics & 
+GSC 
+SEO On-page 
+meningkatkan 
+trafik organic 
+secara signifikan 
+dalam 4 bulan 
+(pageviews naik 
+635%, clicks naik 
+600%) 
+Rizqi, 
+Zaman, & 
+Hendradi 
+(2023) 
+5 Portal berita Akurat.co Deskriptif 
+Kualitatif 
+(wawancara 
+mendalam) 
+SEO 
+memengaruhi 
+proses pemilihan 
+topik dan 
+penulisan berita 
+redaksi, 
+berpotensi 
+menggeser 
+prinsip jurnalisme 
+murni 
+Adzhari, 
+Suwanda, 
+& Kuntoro 
+(2025) 
+6 Website perusahaan (Screenesia) Pendekatan 
+Sistematis 
+Identifikasi dan 
+evaluasi 
+efektivitas 
+strategi SEO On-
+Page dan Off-
+Page dalam 
+meningkatkan 
+visibilitas dan 
+traffic website 
+secara signifikan 
+Bambang 
+Prihantoro 
+Nugroho 
+(2025) 
+7 Website promosi UMKM 
+(NUSANTARABIBIT.WEB.ID)  
+Kuantitatif 
+Deskriptif 
+(model 
+Waterfall) 
+Korelasi positif 
+antara skor SEO 
+dengan durasi 
+kunjungan. SEO 
+On-Page efektif 
+meningkatkan 
+visibilitas website 
+UMKM 
+Junaedi 
+(2025) 
+8 Website Vendoroutbond Research and 
+Development 
+(R&D) 
+Optimasi On-
+page dan 
+backlink 
+meningkatkan 
+Khoirul 
+Annisa 
+Febriana 
+(2025) 
+
+--- PAGE 20 ---
+ 
+11 
+ 
+No Objek Penelitian Metode 
+Penelitian Temuan Utama Peneliti & 
+Tahun 
+permormaorganik 
+signifikan (klik 
+naikdari 1 ke 173, 
+posisi rata-rata 
+dari 42,5 ke 16,3) 
+9 nuponorogo.or.id In-depth 
+Research 
+Optimasi On-
+Page long-tail 
+keyword dengan 
+riset mendalam 
+pada keyword 
+utama 
+meningkatkan 
+visibilitas di 
+SERP 
+Masruri & 
+Nihayati 
+(2022) 
+10 Berita Kompas.com Deskriptif 
+Kualitatif 
+SEO On-page 
+diterapkan di 
+seluruh badan 
+berita (judul, 
+teaser, tagging, 
+heading, 
+gambar); SEO 
+Off-page pada 
+backlink, embed 
+media sosial, dan 
+rekomendasi 
+berita 
+Putro & 
+Fauzy 
+(2024) 
+ 
+2.1.1 Analisis Gap Penelitian  
+ 
+Tabel 2. 2 Analisis Gap Penelitian 
+Aspek 
+Perbandingan 
+Penelitian 
+Terdahulu GAP Penelitian Fokus Penelitian Ini 
+Objek Penelitian SEO banyak dikaji 
+pada website bisnis 
+umum, kecantikan, 
+lembagapendidikan, 
+blogkesehatan, 
+UMKM, dan portal 
+berita nasional 
+(Akurat.co, 
+Kompas.com) 
+Minim kajian 
+terhadap media 
+daring lokal, 
+khususnya portal 
+berita berbasis 
+wilayah.  
+Menganalisis portal 
+berita lokal 
+Lintasjejaring.com 
+sebagai representasi 
+media daring daerah 
+Kalimantan Timur. 
+
+--- PAGE 21 ---
+ 
+12 
+ 
+Aspek 
+Perbandingan 
+Penelitian 
+Terdahulu GAP Penelitian Fokus Penelitian Ini 
+Karakteristik 
+Website 
+Objek penelitian 
+umumnya media 
+nasional besar atau 
+website komersial 
+dengan sumber 
+daya digital yang 
+lebih memadai. 
+Belum ada kajian 
+yang 
+menyesuaikan 
+strategi SEO 
+dengan 
+karakteristik media 
+daring local 
+berskala kecil. 
+Menyusun model 
+evaluasi SEO yang 
+relevan bagi media local 
+dengan keterbatasan 
+sumber daya. 
+Pendekatan 
+Metodologis 
+Bervariasi antara 
+kualitatif deskriptif 
+(Adzhari dkk., 
+Putro & Fauzy), 
+R&D (Febriana), 
+in-depth research 
+(Nihayati), hingga 
+kuantitatif 
+deskriptif dan 
+komparatif 
+(Apriyani & Syifa, 
+Rizqi dkk., 
+Junaedi). 
+Kurangnya 
+pendekatan 
+deskriptif 
+kuantitatif berbasis 
+multi-tools yang 
+terintegrasi untuk 
+media berita lokal. 
+Menggunakan 
+pendekatan deskriptif 
+kuantitatif berbasis data 
+Google Analytics, 
+Google Search Console, 
+dan Ahrefs Webmaster 
+Tool. 
+Teknik Analisis 
+Data 
+Analisis naratif, 
+wawancara, 
+evaluasi deskriptif, 
+atau perbandingan 
+skor sederhana 
+antar strategi. 
+Belum 
+mengintegrasikan 
+analisis tren 
+mingguan dengan 
+system penelitian 
+(scoring system) 
+berbobot secara 
+sistematis. 
+Menggunakan analisis 
+tren komparatif, system 
+skor berbobot, dan 
+interpretasi skor SEO 
+Health. 
+Variabel SEO 
+On-Page 
+Fokus umumnya 
+terbatas pada 
+keyword, meta tag, 
+struktur konten, 
+atau elemen 
+tertentu saja 
+(mis.long-tail 
+keyword pada 
+Nihayati). 
+Analisis SEO On-
+page pada 
+penelitian 
+terdahulu bersifat 
+parsial, jarang 
+mencakup seluruh 
+elemen teknis 
+sekaligus. 
+Menggunakan indikator 
+on-page SEO 
+komprehensif: 
+indexability, metadata, 
+internal links, redirect, 
+content quality, gambar, 
+dan Core Web Vitals. 
+
+--- PAGE 22 ---
+ 
+13 
+ 
+Aspek 
+Perbandingan 
+Penelitian 
+Terdahulu GAP Penelitian Fokus Penelitian Ini 
+Variabel SEO 
+Off-Page 
+Umumnya dibahas 
+terpisah sebagai 
+focus utama (missal 
+Apriyani & Syifa) 
+atau hanya 
+disinggung sekilas 
+(missal backlink 
+pada Putro & 
+Fauzy). 
+Data off-page 
+jarang diposisikan 
+sebagai data 
+pendukung yang 
+terintegritasi 
+dengan analisis on-
+page. 
+Menampilkan data 
+backlink dan referring 
+domains sebagai data 
+deskriptif pendukung 
+otoritas domain, tanpa 
+menjadi fokus utama. 
+Tools Analitik Google Analytics, 
+Google Search 
+Console, atau 
+Ahrefs digunakan 
+secara terpisah di 
+masing-masing 
+penelitian. 
+Belum terdapat 
+penelitian yang 
+mengintegrasikan 
+ketiga tools (GA4, 
+GSC, dan AWT) 
+sekaligus untuk 
+media lokal. 
+Mengintegrasikan 
+Google Analytics 4, 
+Google Searcch Console, 
+dan Ahrefs Webmaster 
+Tool dalam satu kerangka 
+analisis. 
+Cakupan 
+Analisis 
+Umumnya berfokus 
+pada satu aspek 
+SEO (on-page saja, 
+off-page saja, atau 
+studi kasus tunggal 
+tanpa tren waktu). 
+Belum 
+menghasilkan 
+model evaluasi 
+SEO holistik 
+dengan tren 
+mingguan untuk 
+media daring lokal. 
+Menyusun evaluasi SEO 
+On-page komprehensif 
+dengan tren mingguan 
+selama satu bulan (Juli 
+2026). 
+Output 
+Penelitian 
+Evaluasi umum, 
+rekomendasi 
+konseptual, atau 
+perbandingan 
+efektivitas strategi 
+tanpa skor terukur 
+holistik. 
+Minimnya 
+rekomendasi 
+strategis berbasis 
+skor kuantitatif 
+yang dapat 
+langsung 
+ditindaklanjuti. 
+Menyusun roadmap 
+optimasi SEO berbasis 
+data dan skor SEO 
+Health. 
+Kontribusi 
+Ilmiah 
+Menjelaskan 
+implementasi SEO 
+pada sector bisnis, 
+Pendidikan, dan 
+media nasional 
+berskala besar. 
+Kurangnya 
+kontribusi pada 
+kajian SEO media 
+lokal berbasis 
+wilayah, 
+khususnya 
+Kalimantan Timur. 
+Memberikan kontribusi 
+empiris pada 
+pengembangan SEO 
+media daring lokal di 
+Kalimantan Timur. 
+2.2 Search Engine Optimization  
+Search Engine Optimization (SEO) adalah serangkaian upaya yang dilakukan oleh 
+pemilik website atau pengelola konten digital untuk meningkatkan visibilitas sebuah situs 
+di halaman hasil pencarian mesin pencari (Search Engine Result Pages atau SERP). 
+Tujuan utama SEO adalah meningkatkan peringkat halaman pada hasil pencarian organik 
+
+--- PAGE 23 ---
+ 
+14 
+ 
+yaitu kunjungan yang diperoleh tanpa melalui iklan berbayar sehingga dapat 
+mendatangkan lebih banyak pengunjung yang relevan (Rizqi et al., 2023). 
+Mesin pencari seperti Google bekerja melalui 3 proses utama sebelum sebuah 
+halaman bisa muncul di pencarian. Proses diawali dengan crawling, yaitu penjelajahan 
+halaman oleh bot mesin pencari, kemudian dilanjutkan deng an indexing, yakni 
+penyimpanan dan pengorganisasian halaman tersebut ke dalam basis data mesin pencari, 
+dan diakhiri dengan ranking, yaitu penetuan urutantampilnya halaman berdasarkan 
+relevansi dan kualitas kontennya. SEO pada dasarnya diarahkan untuk memastikan ketiga 
+proses ini berjalan seoptimal mungkin pada sebuah situs (Memahami Core Web Vitals 
+dan hasil penelusuran Google | Pusat Google Penelusuran | Documentation , n.d.). 
+Secara umum, strategi SEO dikategorikan menjadi dua  pendekatan utama, yaitu 
+SEO On-page dan SEO Off-page (Febriana & Khafidhoh, 2025). SEO On-page berkaitan 
+dengan optimasi yang dilakukan langsung pada eleme n-elemen di dalam halaman situs, 
+mulai dari kualitas konten, struktur metadata seperti title tag  dan meta description , 
+penggunaan heading tag , struktur URL, intenal linking , hingga kecepatan halaman dan 
+aspek teknis lainnya. karena seluruh faktor tersebut sepenuhnya berada dalam kendali 
+pengelola situs, SEO On -page biasa dijadikan fondasi yang perlu dibenahi lebih dulu 
+sebelum strategi lain dapat memberikan hasil yang maksimal. Berbeda dengan itu,  SEO 
+Off-page justru berlangsung di luar halaman situs itu sendiri, terutama melalui 
+pembangunan tautan ekternal (link building) dari situs lain,aktivitas di media sosial, serta 
+peningkatan otoritas domain.meski tidak kalah penting faktor off -page ini sangat 
+bergantung pada pihak ketiga sehingga pengelola situs ti dak bisa sepenuhnya 
+mengendalikannya. 
+Penelitian ini menempatkan SEO On -page sebagai fokus analisis utama, dengan 
+pertimbangan bahwa perbaikan on -page merupakan langkah yang paling dapat 
+dikendalikan dan ditindaklanjuti langsung oleh pengelola Lintasjejaring.com. sementara 
+itu, data off-page tetap disertakan sebagai data pendukung untuk memberikan gambaran 
+konteks otoritas domain situs secara keseluruhan. 
+2.3 SEO On-page 
+SEO On -page secara umum dipahami sebagai seluruh teknik optimasi yang 
+diterapkan langsung p ada elemen-elemen di dalam sebuah halaman web, dengan tujuan 
+
+--- PAGE 24 ---
+ 
+15 
+ 
+agar halaman tersebut lebih mudah dipahami mesin pencari sekaligus tetap nyaman 
+diakses oleh pengguna (Sadiah & Maharani, 2024) . 
+Berikut adalah elemen-elemen utama SEO On-page yang menjadi indikator dalam 
+penelitian ini : 
+a. Title Tag 
+Title tag  adalah elemen HTML yang mendefinisikan judul sebuah halaman dan 
+ditampilkan sebagai tautan utama (headline) di hasil pencarian Google. Title tag yang 
+baik bersifat deskriptif, mengandung kata kunci utama, dan memiliki panjang antara 
+50–60 karakter agar tidak terpotong di SERP. Ketiadaan atau duplikasi title tag pada 
+beberapa halaman merupakan masalah on -page yang umum ditemukan dan 
+berdampak langsung pada click-through rate (CTR) situs (Albab et al., 2024). 
+b. Meta Description 
+Meta description  adalah ringkasan singkat isi halaman yan g ditampilkan di bawah 
+title tag  pada hasil pencarian. Meskipun meta description  tidak secara langsung 
+menjadi faktor peringkat, konten yang relevan dan menarik dapat meningkatkan 
+CTR. Panjang yang direkomendasikan adalah 120 –160 karakter. Halaman tanpa 
+meta description atau dengan meta description yang terduplikasi dianggap memiliki 
+masalah teknis on-page (Rendyanto & Junaedi, 2025) . 
+c. Heading Tag (H1-H6) 
+Heading tag digunakan untuk memberikan struktur hierarkis pada konten halaman. 
+Tag H1 berfungsi sebagai judul utama halaman dan idealnya hanya digunakan  satu 
+kali per halaman, mengandung kata kunci utama yang relevan. Tag H2-H6 digunakan 
+sebagai subjudul untuk memecah konten menjadi bagian -bagian yang lebih mudah 
+dibaca. Penggunaan heading yang tepat membantu mesin pencari memahami topik 
+utama dan struktur konten halaman (Masruri & Nihayati, 2022) . 
+ 
+d. Struktur Tag 
+URL yang ramah mesin pencari (SEO -friendly URL) bersifat singkat, deskriptif, 
+mengandung kata kunci, menggunakan tanda hubung sebagai pemisah kata, dan 
+menghindari karakter khusus atau angka acak. URL yang buruk dapat menyulitkan 
+mesin pencari dalam memahami konteks halaman (Sadiah & Maharani, 2024) . 
+
+--- PAGE 25 ---
+ 
+16 
+ 
+e. Internal Linking 
+Internal link adalah tautan yang menghubungkan satu halaman dengan halaman lain 
+dalam situs yang sama. Struktur internal linking yang baik membantu mesin pencari 
+dalam menjelajahi ( crawling) dan mengindeks seluruh halaman situs, sekaligus 
+mendistribusikan otoritas halaman ( page authority ) secara merata. Broken internal 
+link, tautan yang mengarah ke halaman yang tidak ada merupakan masalah teknis 
+yang perlu segera diperbaiki (Putra et al., 2024). 
+f. Indexability 
+Indexability adalah kemampuan sebuah halaman untuk dapat dirayapi ( crawled) dan 
+diindeks oleh mesin pencari. Halaman yang diblokir oleh file robots.txt, memiliki tag 
+noindex, atau mengalami masalah redirect akan gagal terindeks sehingga tidak dapat 
+muncul di hasil pencarian. Pemeriksaan indexability merupakan langkah awal yang 
+kritis dalam audit SEO On-page (Putra et al., 2024). 
+g. Kualitas dan Kelengkapan Konten 
+Konten yang berkualitas adalah konten yang relevan, orisinal, informatif, dan 
+memiliki panjang yang memadai sesuai topik yang dibahas. Halaman dengan jumlah 
+kata yang sangat sedikit ( thin content ) atau konten yang terduplikasi ( duplicate 
+content) dianggap memiliki kualitas rendah oleh algoritma Google dan berisiko 
+mendapatkan peringkat yang buruk  (Nugroho et al., 2025). 
+h. Optimasi Gambar 
+Gambar yang tidak dioptimasi misalnya tanpa atribut alt text, berukuran file terlalu 
+besar, atau menggunakan format yang tidak efisien dapat memperlambat kecepatan 
+halaman dan mengurangi pemahaman mesin pencari terhadap konteks visual konten. 
+Atribut alt text juga berperan penting dalam aksesibilitas dan penelusura n gambar di 
+Google (Putra et al., 2024). 
+i. Redirect 
+Redirect adalah pengalihan akses dari satu URL ke URL lain. Redirect 301 
+(permanen) digunakan untuk mengarahkan halaman yang sudah tidak aktif ke 
+halaman pengganti yang rel evan. Masalah yang umum terjadi adalah rantai redirect 
+panjang ( redirect chain ) atau redirect yang mengarah ke halaman rusak ( redirect 
+
+--- PAGE 26 ---
+ 
+17 
+ 
+loop), yang dapat menghambat proses crawling dan menurunkan performa situs  
+(Putra et al., 2024). 
+j. Performa Teknis Halaman 
+Performa teknis halaman terutama kecepatan muat merupakan faktor peringkat 
+langsung yang diakui Google. Sejak tahun 2021, Google menjadikan Core Web 
+Vitals sebagai sinyal resmi dalam algoritma penentuan peringkat. Indikator ini 
+dibahas secara lebih mendalam pada subbab 2.4.  
+2.4 Core Web Vitals 
+Core Web Vitals adalah seperangkat metrik teknis yang ditetapkan oleh Google 
+untuk mengukur pengalaman pengguna nyata ( real user experience ) saat mengakses 
+sebuah halaman web. Sejak Mei 2021, Core Web Vitals resmi menjadi bagian dari sinyal 
+peringkat Google melalui pembaruan algoritma Page Experience Update . Terdapat tiga 
+metrik utama dalam Core Web Vitals (Memahami Core Web Vitals dan hasil penelusuran 
+Google | Pusat Google Penelusuran | Documentation , n.d.): 
+a. Largest Contentful Paint (LCP) 
+LCP mengukur waktu yang dibutuhkan elemen konten terbesar yang terlihat di layar 
+biasanya gambar utama atau blok teks besar untuk selesai dimuat sejak pengguna 
+pertama kali membuka halaman. LCP yang baik adalah di bawah 2,5 detik. Nilai 
+antara 2,5–4,0 detik membutuhkan perbaikan, sedangkan di atas 4,0 detik dianggap 
+buruk. LCP yang lambat seringkali disebab kan oleh gambar yang tidak dikompresi, 
+server yang lambat, atau CSS yang memblokir rendering.  
+b. Cumulative Layout Shift (CLS) 
+CLS mengukur stabilitas visual halaman, yaitu seberapa banyak elemen -elemen 
+halaman bergeser posisinya secara tidak terduga selama p roses pemuatan. 
+Perpindahan elemen yang tidak disengaja misalnya tombol yang tiba -tiba bergeser 
+saat pengguna hendak mengkliknya memberikan pengalaman yang buruk. Skor CLS 
+yang baik adalah di bawah 0,1. Nilai antara 0,1 sampai 0,25 membutuhkan perbaikan, 
+dan di atas 0,25 dianggap buruk.  
+c. Interaction to Next Paint (INP) 
+INP menggantikan metrik First Input Delay (FID) secara resmi sejak Maret 2024. 
+INP mengukur responsivitas keseluruhan halaman terhadap interaksi pengguna, 
+
+--- PAGE 27 ---
+ 
+18 
+ 
+seperti klik, ketukan, dan input pada keyboard. Skor INP yang baik adalah di bawah 
+200 milidetik. Rentang nilai antara 200-500 ms membutuhkan perbaikan, dan di atas 
+500 ms dianggap buruk. 
+Data Core Web Vitals dapat diperoleh melalui laporan Core Web Vitals di 
+Google Search Console, yang menampilkan data berdasarkan pengalaman pengguna 
+nyata (field data) yang dikumpulkan oleh Chrome User Experience Report (CrUX). 
+Selain itu, data lab (lab data) dapat diperoleh melalui Google PageSpeed Insights 
+untuk diagnosis masalah yang lebih teknis. Dalam pe nelitian ini, data Core Web 
+Vitals Lintasjejaring.com diperoleh dari laporan Google Search Console yang 
+terhubung langsung dengan situs.  
+2.5 Website  
+Secara sederhana, website dapat dipahami sebagai kumpulan halaman web beserta 
+file-file pendukungnya seperti g ambar, video, skrip, dan stylesheet yang tersimpan pada 
+sebuah web server dan dapat di akses melalui jaringan internet menggunakan protokol 
+HTTP/HTTPS (Melinda et al., 2023) . Antar halaman dalam sebuah website saling 
+terhubung melalui tautan ( hyperlink), yang pada akhirnya membentuk struktur navigasi 
+situs secara keseluruhan. 
+Dalam konteks penelitian SEO, website tidak lagi dipandang sekedar kumpulan 
+halaman statis, melainkan sebagai sistem yang kinerjanya dapat diukur melalui indikator 
+performa. Penilaian indikator website pun tidak berhenti padda aspek desain atau estetika 
+visual semata, t etapi juga mencakup faktor -faktor teknis sepertikecepatan akses ( page 
+load time ), struktur navigasi, kemampuan indeks, hingga pengalaman pengguna ( user 
+experience atau UX). Sejumlah faktor teknis lain, termasuk mobile responsiveness , 
+arsitektur situs, dan interaktivitas halaman, juga diketehuimemiliki hubungan yang 
+signifikan terhadap peringkat SEO di mesin pencari.  
+Khusus portal berita daring seperti Lintasjejaring.com, tantangan teknis yang 
+dihadapi cenderung lebih kompleks dibandingkan situs statis pada umumnya. Hal ini 
+tidak lepas dari volume konten yang terus bertambah setiap harinya, sehingga berpotensi 
+memunculkan sejumlah persoalan  seperti duplikasi konten, halaman tipis ( thin content), 
+maupun pertumbuhan URL yang sulit dikendalikan yang pada akhirn ya berdampak 
+langsung pada performa SEO On -page situs tersebut.  
+
+--- PAGE 28 ---
+ 
+19 
+ 
+2.6 Lintasjejaring.com 
+Lintasjejaring.com merupakan portal berita daring lokal yang berbasis di 
+Kalimantan Timur. Sebagai media daring, situs ini menerbitkan konten berita secara rutin 
+meliputi isu -isu politik, ekonomi, sosial, dan budaya yang relevan dengan wilayah 
+Kalimantan Timur dan sekitarnya. Dalam ko nteks penelitian ini, Lintasjejaring.com 
+menjadi objek analisis untuk mengkaji sejauh mana penerapan SEO On -page yang telah 
+berjalan, serta mengidentifikasi permasalahan teknis yang perlu diperbaiki.  
+Sebagai portal berita lokal, Lintasjejaring.com menghadapi dinamika kompetitif 
+yang cukup khas.  Di satu sisi, situs ini harus bersaing dengan media nasional besar yang 
+memiliki domain authority jauh lebih tinggi, sekaligus bersaing dengan portal berita lokal 
+lain di Kalimantan Timur dalam memperebutkan posisi teratas untuk kata kunci berita 
+daerah. Dalam kondisi ini, optimasi SEO On -page menjadi faktor pembeda yang paling 
+dapat dikendalikan secara mandiri oleh pengelola situs tanpa bergantung pada faktor 
+eksternal. 
+(Nasution et al., 2023)  menemukan bahwa me dia digital yang menerapkan teknik 
+SEO secara konsisten pada pemilihan top news mampu meningkatkan visibilitas 
+kontennya di mesin pencari melalui optimasi kata kunci dan struktur konten yang relevan, 
+sebuah pola yang juga berlaku bagi portal berita daerah dalam bersaing memperebutkan 
+visibilitas kata kunci lokal . Pengukuran efektivitas SEO On -page di Lintasjejaring.com 
+dalam penelitian ini dilakukan melalui pengumpulan data menggunakan Ahrefs 
+Webmaster Tools, Google Search Console, dan Google Analytics, yang kemudian 
+dianalisis secara deskriptif untuk menggambarkan kondisi aktual situs pada periode 
+pengamatan. 
+2.7 Ahrefs Webmaster Tools 
+Ahrefs Webmaster Tools (AWT) adalah platform analitik SEO yang dikembangkan 
+oleh Ahrefs perusahaan perangkat lunak SEO yang berkantor pusat di Singapura. AWT 
+menyediakan versi gratis yang dapat diakses oleh pemilik atau pengelola situs yang telah 
+memverifikasi kepemilikan domain mereka, dan menawarkan fitur yang cukup  
+komprehensif untuk keperluan audit teknis SEO tanpa biaya berlangganan (Irsyad, 2024). 
+Dalam versi gratis, Ahrefs Webmaster Tools menyediakan dua fitur utama yang 
+relevan dengan penelitian ini. 
+
+--- PAGE 29 ---
+ 
+20 
+ 
+a. Site Audit 
+Fitur Site Audit  merayapi ( crawling) seluruh halam an situs secara otomatis dan 
+menghasilkan laporan kesehatan SEO yang mencakup berbagai indikator, mulai dari 
+internal pages , indexability, internal dan external links  (termasuk broken links ), 
+redirect, content issues  (title tag , meta description , H1, jumlah kata, konten 
+duplikat), performa halaman, optimasi gambar, JavaScript, dan CSS. Site Audit  
+memberikan skor kesehatan SEO secara keseluruhan dan mengelompokkan temuan 
+berdasarkan tingkat keparahan error, warning, dan notice sehingga pengelola situs  
+dapat memprioritaskan perbaikan secara terstruktur.  
+b. Site Explorer 
+Pada versi gratis, Site Explorer  memungkinkan pengelola situs untuk melihat data 
+backlink dan referring domains  milik situsnya sendiri. Data ini dalam penelitian ini 
+digunakan sebagai data pendukung off -page untuk memberikan gambaran otoritas 
+domain Lintasjejaring.com. 
+Proses penggunaan AWT dimulai dengan verifikasi kepemilikan situs melalui salah 
+satu dari empat metode: Google Search Console, DNS record, HTML file, atau HTML 
+tag. Setelah te rverifikasi, pengguna dapat menjalankan crawl dan mengakses seluruh 
+laporan Site Audit. Pendekatan ini serupa dengan yang digunakan oleh (Putra et al., 2024) 
+dalam penelitiannya pada website konterku.com, namun menggunakan versi berbayar. 
+Penelitian ini mengadaptasi pendekatan tersebut menggunakan versi gratis AWT yang 
+memiliki cakupan fitur yang cukup untuk analisis on -page secara menyeluruh. 
+2.8 Google Search Console 
+Google Search Console (GSC) adalah layanan analitik web gratis yang disediakan 
+langsung oleh Google, dirancang untuk membantu pengelola situs memantau, 
+memelihara, dan memecahkan masalah kehadiran situs mereka di hasil pencarian Google 
+(Febriansyah et al., 2026). Berbeda dengan tools SEO pihak ketiga, data yang tersedia di 
+GSC adalah data resmi dari Google itu sendiri sehingga memiliki tingkat akurasi yang 
+paling tinggi untuk mengukur visibilitas situs di mesin pencari Google .  
+Beberapa laporan GSC yang relevan dan digunakan dalam penelitian ini antara lain: 
+a. Performance Report 
+
+--- PAGE 30 ---
+ 
+21 
+ 
+Laporan ini menampilkan data visibilitas situs di hasil pencarian Google, meliputi  
+total clicks  (jumlah klik ke situs dari Google Search), total impressions  (jumlah 
+kemunculan situs di hasil pencarian), average CTR  (rasio klik terhadap tayangan), dan 
+average position  (rata-rata peringkat halaman di SERP). Data ini dapat difilter 
+berdasarkan halaman, kata kunci, negara, dan perangkat, serta dapat dibandingkan antar 
+periode waktu. 
+b. Index Coverage Report 
+Laporan ini menampilkan status pengindeksan seluruh halaman situs, termasuk 
+halaman yang berhasil diindeks, halaman yang diblokir, halaman dengan peringatan, dan 
+halaman yang dikecualikan dari indeks beserta alasa nnya. Laporan ini sangat penting 
+untuk mengevaluasi indexability situs secara keseluruhan. 
+c. Core Web Vitals Report 
+Laporan Core Web Vitals di GSC menampilkan kondisi LCP, CLS, dan INP 
+berdasarkan data pengguna nyata yang dikumpulkan dari browser Chrome (fie ld data). 
+Halaman-halaman situs kemudian dikelompokkan menjadi tiga kategori Good (baik), 
+Needs Improvement  (perlu perbaikan), dan Poor (buruk), baik untuk perangkat mobile 
+maupun desktop. 
+d. Sitemaps 
+GSC memungkinkan pengelola situs untuk mengirimkan sitemap  XML sehingga 
+Google dapat mengetahui struktur dan daftar halaman situs secara lebih efisien. Status 
+sitemap dan jumlah URL yang berhasil diindeks dapat dipantau melalui laporan ini.  
+2.9 Google Analytics 
+Google Analytics sendiri merupakan sebuah platform marke ting yang disediakan 
+oleh google untuk membantu pelaku usaha khuususnya dalam mengumpulkan data baik 
+yang bersumber dari aplikasi atau traffic web  (Maulidia et al., 2023) . Penelitian ini 
+menggunakan Google Analytics 4 (GA4) versi terbaru yang telah sepenuhnya 
+menggantikan Universal Analytics sejak Juli 2023.  
+Melalui GA4, peneliti dapat memperoleh data mengenai bagaimana pengguna 
+menemukan, mengakses, dan berinteraksi dengan halaman -halaman Lintasjejaring.com. 
+Beberapa metrik utama yang dikumpulkan dan dianalisis dalam penelitian ini antara lain: 
+a. Sessions dan Users 
+
+--- PAGE 31 ---
+ 
+22 
+ 
+Sessions adalah jumlah sesi kunjungan ke situs dalam periode tertentu, sedangkan 
+users adalah jumlah pengguna unik yang mengunjungi situs. Tren kedua metrik ini 
+digunakan untuk melihat pola pertumbuhan atau penurunan kunjungan selama periode 
+penelitian. 
+b. Organic Traffic (User Acquisition) 
+Melalui laporan User Acquisition , GA4 memungkinkan identifikasi sumber trafik 
+berdasarkan saluran ( channel), termasuk Organic Search  (trafik dari mesin pencari), 
+Direct, Referral, dan Social. Data trafik organik ini menjadi indikator utama efektivitas 
+SEO On-page situs. 
+c. Bounce Rate dan Engagement Rate 
+Berbeda dari versi sebelumnya, GA4 kini mengandalkan engangement rate sebagai 
+metrik keterlibatan utama, menggantikan peran bounce rate. Engagement rate mengukur 
+persentase sesi yang dianggap " engaged" yaitu sesi dengan durasi lebih dari 10 detik, 
+memiliki setidaknya satu konversi, atau memuat lebih dari satu halaman. Nilai 
+engagement rate yang tinggi menunjukkan bahwa konten situs relevan dan menarik bagi 
+pengunjung. 
+d. Average Engagement Time 
+Metrik ini mengukur rata -rata durasi waktu pengguna aktif berinteraksi dengan 
+halaman situs. Nilai yang lebih tinggi mengindikasikan konten yang lebih relevan dan 
+menarik bagi audiens target.  
+2.10 SEO Off-page dan Backlink 
+Sebagai pelengkap analisis on -page, penelitian ini juga mengumpulkan data off -
+page secara terbatas sebagai konteks otoritas domain Lintasjejaring.com. SEO Off-page 
+merujuk pada faktor-faktor optimasi yang berada di luar kendali langsung pengelola situs, 
+terutama tautan eksternal ( backlink) yang diperoleh dari situs -situs lain. Backlink dari 
+situs yang memiliki otoritas tinggi dianggap sebagai "suara kepercayaan" oleh algoritma 
+Google dan berkontribusi pada peningkatan otoritas domain ( domain authority ) serta 
+peringkat organik situs secara keseluruhan  (Apiani & Syifa, 2025). 
+Adapun d alam penelitian ini, data off -page yang dikumpulkan melalui Ahrefs 
+Webmaster Tools meliputi jumlah referring domains  dan total backlink disajikan hanya 
+sebagai data deskriptif pendukung. Data ini berguna untuk memahami posisi otoritas 
+
+--- PAGE 32 ---
+ 
+23 
+ 
+Lintasjejaring.com secara umum, namun tidak menjadi variabel utama dalam analisis 
+karena berada di luar fokus penelitian dan di luar kendali langsung pengelola s itus. 
+ 
+
+--- PAGE 33 ---
+ 
+24 
+ 
+BAB III METODOLOGI PENELITIAN 
+METODOLOGI PENELITIAN 
+ 
+3.1 Tahapan Pelaksanaan Penelitian 
+Penelitian ini menggunakan pendekatan deskriptif komparatif, y aitu  
+mendeskripsikan kondisi penerapan SEO On -page website Lintasjejaring.com secara 
+terukur, kemudian membandingkan hasilnya antar periode bulan juli 2026 untuk melihat 
+perubahan tren performa.  Pendekatan ini dipilih karena mampu memberikan gambaran 
+objektif mengenai dinamika kualitas SEO On-page berbasis dan terukur dari alat analitik 
+digital, tanpa memerlukan intervensi atau manipulasi variabel pada objek penelitian . 
+Alur pelaksanaan penelitian dirancang secara sistematis melalui lima tahapan utama 
+sebagaimana dijelaskan pada Gambar 3.1. 
+Gambar 3. 1 Tahapan Penelitian 
+
+--- PAGE 34 ---
+ 
+25 
+ 
+ 
+ 
+Berdasarkan Gambar 3.1 mengenai tahapan penelitian :  
+1. Identifikasi Masalah 
+Tahap pertama adalah mengidentifikasi dan menentukan permasalahan yang 
+berkaitan dengan performa  SEO On-page situs Lintasjejaring.com. Proses ini 
+dilakukan melalui observasi awal menggunakan Ahrefs Webmaster Tools dan 
+Google Search Console untuk mendapatkan gambaran awal kondisi teknis situs, serta 
+kajian literatur untuk menentukan indikator dan standar yang akan digunakan.  
+2. Studi Literatur 
+Tahap ini mencakup kajian terhadap teori, konsep, dan penelitian terdahulu yang 
+relevan dengan topik SEO O n-page, audit website, Core Web Vitals , dan analisis 
+web. Kajian literatur bertujuan untuk membangun kerangka teoritis yang kuat, 
+menetapkan indikator pengukuran yang  valid, serta menentukan ambang batas 
+(threshold) standar untuk setiap indikator yang digunakan dalam sistem penilaian 
+(scoring system). 
+3. Pengumpulan Data  
+Pengumpulan data dilakukan dalam dua skema berbeda sesuai ketersediaan akses 
+tools. Data tren dikumpulkan dari GSC dan GA4 selama empat periode mingguan 
+(minggu 1 - minggu 4 Juli 2026) . Data audit teknis dikumpulkan melalui satu kali 
+crawl AWT dan pengukura n PageSpeed Insights sebagai snapshot kondisi aktual 
+situs pada Juli 2026. Detail pengumpulan data diuraikan pada subbab 3.2.  
+4. Analisis Data  
+Data yang telah dikumpulkan diolah melalui dua pendekatan analisis. Pertama, data 
+tren GSC dan GA4 dari tiga period e dibandingkan secara komparatif untuk 
+mengidentifikasi arah perubahan visibilitas dan keterlibatan pengguna. Kedua, data 
+audit teknis AWT dan PageSpeed Insights dianalisis secara deskriptif dengan 
+membandingkan nilai aktual terhadap standar acuan untuk me nghasilkan penilaian 
+status per indikator. Kedua hasil analisis digabungkan dalam perhitungan Skor SEO 
+Health sebagai gambaran holistik kondisi on -page situs. Detail metode analisis 
+diuraikan pada subbab 3.5. 
+
+--- PAGE 35 ---
+ 
+26 
+ 
+ 
+5. Penarikan Kesimpulan dan Rekomendasi  
+Berdasarkan hasil analisis data, ditarik kesimpulan mengenai kondisi keseluruhan 
+SEO On-page Lintasjejaring.com beserta tren perubahan mingguannya selama bulan 
+Juli 2026 . Selanjutnya dirumuskan rekomendasi strategis berbasis data yang dapat 
+langsung ditindaklanjuti oleh pengelola situs untuk meningkatkan performa organik.  
+3.2  Pengumpulan Data 
+3.2.1 Jenis dan Sumber Data 
+Penelitian ini menggunakan data primer yang dikumpulkan langsung dari tiga 
+platform analitik digital yang terhubung dengan situs Lintasjejaring.com, yaitu: 
+a. Google Analytics 4 (GA4)  
+GA4 digunakan untuk mengumpulkan data perilaku pengguna di situs selama 
+empat periode mingguan pada Juli 2026 . Data yang dikumpulkan meliputi: total 
+sessions, organic search sessions  (dari saluran Organic Search), engagement rate , 
+dan average engagement time . Filter rentang tanggal diterapkan per  minggu 
+(minggu 1- minggu 4) sesuai periode pengumpulan. 
+b. Google Search Console (GSC)  
+GSC digunakan untuk mengumpulkan data visibilitas situs di mesin pencari Google 
+secara resmi. Data yang dikumpulkan meliputi: total clicks , total impressions , 
+average CTR , average position , laporan Index Coverage  (halaman terindeks vs 
+tidak terindeks)  untuk masing -masing minggu , laporan Core Web Vitals  (LCP, 
+CLS, INP) untuk perangkat mobile dan desktop, serta data sitemap.  
+c. Ahrefs Webmaster Tools (AWT)  
+AWT baru dapat digunakan setelah verifikasi kepemilikan domain 
+Lintasjejaring.com dilakukan pada Juli 2026. Oleh karena itu, data AWT disajikan 
+sebagai snapshot kondisi aktual situs pada saat crawl dilakukan di minggu ketiga 
+Juli 2026 bukan data tren mingguan. Data yang dikumpulkan melalui fitur Site 
+Audit meliputi: jumlah halaman internal yang ter-crawl, status indexability, kondisi 
+internal links (total dan bro ken), kondisi metadata ( title tag, meta description , H1 
+missing, duplicate, terlalu panjang/pendek), duplicate content , kondisi gambar 
+
+--- PAGE 36 ---
+ 
+27 
+ 
+(missing alt text ), serta data off -page terbatas (jumlah referring domains  dan total 
+backlink) dari fitur Site Explorer sebagai data pendukung. 
+ 
+d. Google PageSpeed Insights  
+Google PageSpeed Insights digunakan untuk memperoleh nilai Core Web Vitals  
+(LCP, CLS, dan INP) dalam bentuk lab data  pada halaman utama 
+Lintasjejaring.com. Pengukuran dilakukan pada minggu ke empat Juli 2026 untuk 
+perangkat desktop dan mobile. PageSpeed Insights dipilih sebagai pengganti 
+laporan Core Web Vitals di GSC yang tidak menampilkan data karena jumlah traffic 
+Chrome yang belum mencukupi ambang batas pelaporan Google.  
+3.2.2 Periode dan Frekuensi Pengumpulan Data 
+Penelitian ini menggunakan dua skema periode pengumpulan data yang berbeda 
+sesuai karakteristik masing-masing sumber data: 
+Tabel 3. 1 Jadwal Pengambilan Data per Periode 
+Periode Waktu Pengambilan Data Keterangan 
+Minggu 1 1-7 Juli 2026 Data GSC & GA4 minggu ke-1: verifikasi 
+domain AWT dilakukan di awal minggu. 
+Minggu 2 8-14 Juli 2026 Data GSC & GA4 minggu ke-2.  
+Minggu 3 15-21 Juli 2026 Data GSC & GA4 minggu ke-3.  
+Minggu 4 22-28 Juli 2026 Data GSC & GA4 minggu ke-4: snapshot 
+audit teknis AWT (Site Audit & Site 
+Explorer) dan PageSpeed Insights diambil 
+dan penutup periode observasi. 
+Pengambilan data GSC dan GA4 dilakukan di akhir minggu berikutnya untuk 
+memastikan data yang dikumpulkan sudah mencakup seluruh hari dalam satu minggu, 
+sehingga perbandingan antar periode menjadi valid dan setara. Untuk data AWT dan 
+PageSpeed Insights, pengambilan dilakukan satu kali sebagai snapshot kondisi t eknis 
+situs setelah verifikasi domain AWT tersedia.  
+
+--- PAGE 37 ---
+ 
+28 
+ 
+3.2.3 Teknik Pengumpulan Data 
+Pengumpulan data dilakukan melalui dua teknik:  
+a. Observasi Terstruktur 
+Peneliti melakukan observasi langsung terhadap dashboard dan laporan yang 
+tersedia di ketiga tools secara  terstruktur berdasarkan daftar indikator yang telah 
+ditetapkan. Setiap temuan dicatat ke dalam lembar pengumpulan data yang telah 
+disiapkan sesuai format Tabel Perancangan Data (Tabel 3. 2). 
+b. Dokumentasi 
+Seluruh data yang dikumpulkan didokumentasikan dalam bentuk tangkapan layar 
+(screenshot) laporan dari masing -masing tools sebagai bukti empiris yang dapat 
+diverifikasi. Tangkapan layar disertakan pada bagian Lampiran.  
+3.3 Perancangan Data 
+Perancangan data difokuskan pada struktur pengumpulan yang sistematis agar 
+seluruh indikator SEO On -page dapat dipetakan, diukur, dan dibandingkan secara 
+konsisten antar  minggu dalam periode Juli 2026 . Tabel 3. 2 menggambarkan rancangan 
+struktur data penelitian secara lengkap.  
+Tabel 3. 2 Perancangan Data Penelitian 
+No Kategori Indikator Sumber Data Satuan Standar Acuan 
+1 Visibilitas 
+Organik 
+Total Clicks GSC-
+Performance 
+(minggu 1-4 
+juli 2026) 
+Jumlah 
+klik 
+Tren meningkat 
+2 Visibilitas 
+Organik 
+Total 
+Impressions 
+GSC-
+Performance 
+(minggu 1-4 
+juli 2026) 
+Jumlah 
+tayangan 
+Tren meningkat 
+3 Visibilitas 
+Organik 
+Average CTR GSC-
+Performance 
+(minggu 1-4 
+juli 2026) 
+Persentase 
+(%) 
+> 3% (berita 
+lokal) 
+
+--- PAGE 38 ---
+ 
+29 
+ 
+No Kategori Indikator Sumber Data Satuan Standar Acuan 
+4 Visibilitas 
+Organik 
+Average 
+Position 
+GSC-
+Performance 
+(minggu 1-4 
+juli 2026) 
+Angka 
+peringkat 
+< 10 (halaman 
+1) 
+5 Indexability Halaman 
+Terindeks 
+GSC - Index 
+Coverage 
+(minggu 1-4 
+juli 2026) 
+Jumlah 
+halaman 
+Semua halaman 
+penting 
+terindeks 
+6 Indexability Halaman 
+Tidak 
+Terindeks 
+GSC - Index 
+Coverage 
+(minggu 1-4 
+juli 2026) 
+Jumlah 
+halaman 
+Seminimal 
+mungkin 
+7 Perilaku 
+Pengguna 
+Organic 
+Sessions 
+GA4 (minggu 
+1-4 juli 2026) 
+Jumlah 
+sesi 
+Tren meningkat 
+8 Perilaku 
+Pengguna 
+Engagement 
+Rate 
+GA4 (minggu 
+1-4 juli 2026) 
+Persentase 
+(%) 
+> 50% 
+9 Perilaku 
+Pengguna 
+Average 
+Engagement 
+Time 
+GA4 (minggu 
+1-4 juli 2026) 
+Detik (s) > 30 detik 
+10 Internal 
+Links 
+Total Internal 
+Links 
+AWT - Site 
+Audit (Snapshot 
+Juli 2026) 
+Jumlah 
+tautan 
+Kondisi aktual 
+situs 
+11 Internal 
+Links 
+Broken 
+Internal 
+Links 
+AWT - Site 
+Audit (Snapshot 
+Juli 2026) 
+Jumlah 
+tautan 
+rusak 
+0 (ideal) 
+12 Metadata - 
+Title Tag 
+Missing Title 
+Tag 
+AWT - Site 
+Audit (Snapshot 
+Juli 2026) 
+Jumlah 
+halaman 
+0 (ideal) 
+
+--- PAGE 39 ---
+ 
+30 
+ 
+No Kategori Indikator Sumber Data Satuan Standar Acuan 
+13 Metadata - 
+Title Tag 
+Duplicate 
+Title Tag 
+AWT - Site 
+Audit (Snapshot 
+Juli 2026) 
+Jumlah 
+halaman 
+0 (ideal) 
+14 Metadata - 
+Title Tag 
+Title Tag 
+Terlalu 
+Panjang (>60 
+karakter) 
+AWT - Site 
+Audit (Snapshot 
+Juli 2026) 
+Jumlah 
+halaman 
+0 (ideal) 
+15 Metadata - 
+Title Tag 
+Title Tag 
+Terlalu 
+Pendek (<30 
+karakter) 
+AWT - Site 
+Audit (Snapshot 
+Juli 2026) 
+Jumlah 
+halaman 
+0 (ideal) 
+16 Metadata - 
+Meta 
+Description 
+Missing Meta 
+Description 
+AWT - Site 
+Audit (Snapshot 
+Juli 2026) 
+Jumlah 
+halaman 
+0 (ideal) 
+17 Metadata - 
+Meta 
+Description 
+Duplicate 
+Meta 
+Description 
+AWT - Site 
+Audit (Snapshot 
+Juli 2026) 
+Jumlah 
+halaman 
+0 (ideal) 
+18 Metadata - 
+H1 Tag 
+Missing H1 
+Tag 
+AWT - Site 
+Audit (Snapshot 
+Juli 2026) 
+Jumlah 
+halaman 
+0 (ideal) 
+19 Metadata - 
+H1 Tag 
+Duplicate H1 
+Tag 
+AWT - Site 
+Audit (Snapshot 
+Juli 2026) 
+Jumlah 
+halaman 
+0 (ideal) 
+20 Konten Duplicate 
+Content 
+AWT - Site 
+Audit (Snapshot 
+Juli 2026) 
+Jumlah 
+halaman 
+0 (ideal) 
+21 Redirect Redirect 
+Chain / Loop 
+AWT - Site 
+Audit (Snapshot 
+Juli 2026) 
+Jumlah 
+halaman 
+0 (ideal) 
+
+--- PAGE 40 ---
+ 
+31 
+ 
+No Kategori Indikator Sumber Data Satuan Standar Acuan 
+22 Gambar Missing Alt 
+Text 
+AWT - Site 
+Audit (Snapshot 
+Juli 2026) 
+Jumlah 
+gambar 
+0 (ideal) 
+23 Performa - 
+Core Web 
+Vitals 
+LCP (Largest 
+Contentful 
+Paint) 
+PageSpeed 
+Insights 
+(Snapshot Juli 
+2026) 
+Detik (s) < 2,5 detik 
+24 Performa - 
+Core Web 
+Vitals 
+CLS 
+(Cumulative 
+Layout Shift) 
+PageSpeed 
+Insights 
+(Snapshot Juli 
+2026) 
+Skor 
+desimal 
+< 0,1 
+25 Performa -
+Core Web 
+Vitals 
+INP 
+(Interaction 
+to Next 
+Paint) 
+PageSpeed 
+Insights 
+(Snapshot Juli 
+2026) 
+Milidetik 
+(ms) 
+< 200 ms 
+26 Data 
+Pendukung 
+Off-page 
+Referring 
+Domains 
+AWT - Site 
+Explorer 
+(Snapshot Juli 
+2026) 
+Jumlah 
+domain 
+Data deskriptif 
+27 Data 
+Pendukung 
+Off-page 
+Total 
+Backlinks 
+AWT - Site 
+Explorer 
+(Snapshot Juli 
+2026) 
+Jumlah 
+tautan 
+Data deskriptif 
+ 
+Data tren dari GSC dan GA4 (indikator no. 1 –9) dikumpulkan untuk empat periode 
+mingguan (minggu 1,2,3, dan 4 Juli 2026) sehingga setiap indikator memiliki 4 titik data 
+yang dapat dibandingkan secara komparatif. Data snapshot dari AWT dan PageSpeed 
+Insights (indikator no. 10–27) dikumpulkan satu kali pada minggu keempat Juli 2026 dan 
+dianalisis secara deskriptif sebagai gambaran kondisi aktual teknis situs.  
+
+--- PAGE 41 ---
+ 
+32 
+ 
+3.4  Perancangan Proses/Algoritma 
+Perancangan proses menggambarkan alur kerja teknis yang dilakukan peneliti dalam 
+menyiapkan dan mengoperasikan tools analitik untuk mengumpulkan data dari situs 
+Lintasjejaring.com. Tahapan perancangan proses adalah sebagai berikut : 
+1. Persiapan dan Verifikasi Akses Tools  
+Sebelum pengumpulan data dimulai, peneliti memastikan ketiga tools telah 
+terhubung dengan situs Lintasjejaring.com: 
+a. Google Search Console: Situs Lintasjejaring.com telah diverifikasi dan terdaftar 
+sebagai properti aktif di GSC. Peneliti memastikan data his toris minimal beberapa 
+minggu sebelum periode penelitian dimulai  agar perbandingan antar minggu Juli 
+2026 dapat dilakukan secara konsisten . 
+b. Google Analytics 4: Tracking code  GA4 dipastikan sudah terpasang dan berfungsi 
+dengan benar pada seluruh halaman sit us, ditandai dengan data real-time yang aktif 
+di dashboard GA4. 
+c. Ahrefs Webmaster Tools: Verifikasi kepemilikan domain Lintasjejaring.com 
+dilakukan pada awal Juli 2026 melalui salah satu metode yang tersedia (Google 
+Search Console, DNS record, HTML file, atau HTML tag). Setelah terverifikasi, 
+konfigurasi crawl dilakukan dengan mengecualikan URL dinamis yang tidak relevan 
+dengan konten editorial. 
+2. Konfigurasi Crawl Ahrefs Webmaster Tools 
+Crawl dikonfigurasi dengan pengaturan berikut:  
+a. Scope: seluruh domain Lintasjejaring.com. 
+b. Scheduled crawl : dinonaktifkan , crawl dijalankan secara manual satu kali pada 
+minggu keempat Juli 2026. 
+c. URL exclusion: mengecualikan pola URL dinamis yang tidak relevan dengan konten 
+editorial (misalnya halaman pencarian internal, halaman tag berparameter, dan URL 
+sesi pengguna). 
+3. Pengambilan Data Tren per Periode 
+Setiap periode pengambilan data (minggu 1, minggu 2, minggu 3, dan minggu 4 Juli 
+2026), peneliti melakukan langkah-langkah berikut secara berurutan:  
+
+--- PAGE 42 ---
+ 
+33 
+ 
+a. Buka GSC dan atur rentang tanggal ke bulan yang sedang dikumpulkan; ekspor data 
+Performance Report dan Index Coverage . 
+b. Buka GA4 dan atur rentang tanggal ke bulan yang sama; catat data sessions, organic 
+traffic, engagement rate , dan average engagement time . 
+c. Catat semua data ke dalam lembar pengumpulan data (format Tabel 3. 2) dan simpan 
+tangkapan layar sebagai dokumentasi.  
+Pengambilan Data Snapshot (AWT & PageSpeed Insights)  
+Untuk pengambilan data snapshot audit teknis pada minggu keempat Juli 2026: 
+a. Jalankan crawl baru di Ahrefs Webmaster Tools dan tunggu hingga selesai.  
+b. Ekspor laporan Site Audit  (semua kategori: internal pages , indexability, links, 
+content, images). 
+c. Buka Site Explorer AWT; catat jumlah referring domains dan total backlinks. 
+d. Buka Google PageSp eed Insights ( pagespeed.web.dev ), masukkan URL 
+Lintasjejaring.com, jalankan analisis untuk perangkat mobile dan desktop; catat nilai 
+LCP, CLS, dan INP. 
+e. Simpan seluruh tangkapan layar sebagai dokumentasi di bagian Lampiran . 
+3.5  Perancangan Pengujian 
+3.5.1 Pendekatan Analisis 
+Pengujian dalam penelitian ini dilakukan menggunakan pendekatan analisis 
+deskriptif komparatif  yang diperkuat dengan sistem penilaian ( scoring system ). 
+Pendekatan ini terdiri dari dua lapis analisis yang saling melengkapi:  
+1. Lapis pertama Analisis tren komparatif: Nilai indikator tren (GSC & GA4) dari 
+empat periode (minggu 1, minggu 2, minggu 3, minggu 4 Juli 2026) dibandingkan 
+untuk mengidentifikasi arah perubahan Meningkat  (↑), Stagnan (→), atau Menurun  
+(↓). 
+2. Lapis kedua Analisis deskriptif audit teknis: Setiap indikator snapshot (AWT & PSI) 
+dibandingkan dengan standar acuan yang ditetapkan pada Tabel 3. 2 untuk 
+menghasilkan penilaian status: Baik, Perlu Perbaikan, atau Buruk.  
+
+--- PAGE 43 ---
+ 
+34 
+ 
+3.5.2 Sistem Penilaian (Scoring System) SEO On -page 
+Untuk menghasilkan gambaran holistik tentang kesehatan SEO On -page situs 
+secara keseluruhan, setiap indikator on -page diberi skor berdasarkan kesesuaiannya 
+dengan standar acuan. 
+1. Skala Penilaian per Indikator  
+Setiap indikator on-page dinilai menggunakan skala tiga tingkat: 
+ 
+Tabel 3. 3 Skala Penilaian per Indikator 
+Skor Status Kriteria Umum 
+2 Baik Nilai memenuhi standar acuan yang ditetapkan  
+1 Perlu Perbaikan Nilai mendekati standar namun belum memenuhi 
+sepenuhnya 
+0 Buruk Nilai jauh dari standar atau terdapat masalah kritis  
+ 
+2. Pengelompokan Indikator dan Bobot Kategori  
+Indikator on-page dikelompokkan ke dalam lima kategori utama dengan bobot yang 
+mencerminkan tingkat pengaruhnya terhadap performa SEO On -page: 
+Tabel 3. 4 Pengelompokan Indikator dan Bobot Kategori 
+No Kategori Indikator yang Dinilai  Bobot 
+1 Indexability & 
+Crawlability 
+Halaman terindeks (GSC), halaman 
+tidak terindeks (GSC), broken 
+internal links (AWT), redirect chain 
+(AWT) 
+25% 
+2 Metadata & 
+Struktur Konten 
+Title tag (missing, duplicate, 
+panjang - AWT), meta description 
+(missing, duplicate - AWT), H1 tag 
+(missing, duplicate - AWT) 
+25% 
+
+--- PAGE 44 ---
+ 
+35 
+ 
+3 Performa Halaman 
+(Core Web Vitals) 
+LCP, CLS, INP (PageSpeed 
+Insights) 
+25% 
+4 Kualitas Konten & 
+Teknis 
+Duplicate content (AWT), missing 
+alt text (AWT) 
+15% 
+5 Visibilitas & 
+Keterlibatan 
+Pengguna 
+Average CTR (GSC), average 
+position (GSC), engagement rate 
+(GA4) 
+10% 
+ 
+3. Perhitungan Skor SEO Health 
+Skor tiap kategori dihitung sebagai rata -rata skor indikator di dalamnya, kemudian 
+dikalikan bobotnya. Skor akhir SEO Health merupakan penjumlahan dari skor tertimbang 
+seluruh kategori, dikonversi ke skala 0 –100 dengan formula: 
+Skor Kategori = (Jumlah skor  indikator dalam kategori / Skor 
+maksimal kategori) × 100 ................................ . (1) 
+Skor SEO Health = Σ (Skor Kategori × Bobot Kategori) ...... (2) 
+4. Interpretasi Skor SEO Health 
+Tabel 3. 5 Interpretasi Skor SEO Health 
+Rentang Skor Interpretasi 
+81 - 100 Sangat Baik - SEO On-page sudah optimal, pemeliharaan rutin 
+diperlukan 
+61 - 80 Baik - Sebagian besar indikator terpenuhi, ada beberapa 
+perbaikan minor 
+41 - 60 Cukup - Terdapat sejumlah masalah signifikan yang perlu 
+segera diperbaiki 
+21 - 40 Buruk - Banyak indikator tidak terpenuhi, diperlukan perbaikan 
+menyeluruh 
+
+--- PAGE 45 ---
+ 
+36 
+ 
+0 - 20 Sangat Buruk - Kondisi kritis, situs berisiko tinggi kehilangan 
+visibilitas organik 
+Mengingat data tren (GSC & GA4) tersedia untuk empat periode mingguan, Skor 
+SEO Health pada kategori Visibilitas & Keterlibatan Pengguna dihitung untuk setiap 
+minggu (minggu 1, 2, 3, dan 4 Juli 2026) sehingga tren perubahannya dapat diamati secara 
+kuantitatif. Sementara itu, Skor SEO Health keseluruhan dihitung satu kali berdasarkan 
+data snapshot AWT dan PSI yang merepresentasikan kondisi aktual teknis situs.  
+3.5.3 Analisis Tren Komparatif Antar Periode  
+Setelah data tren per periode diperoleh, analisis dilakukan dengan cara:  
+1. Membuat tabel perbandingan nilai aktual setiap indikator tren untuk keempat minggu 
+secara berdampingan. 
+2. Menghitung selisih nilai antar periode ( minggu 1- minggu 2, minggu 2 - minggu 3, 
+dan minggu 3 - minggu 4) untuk setiap indikator.  
+3. Menetapkan arah tren: Meningkat (↑) jika nilai bergerak menuju standar, Menurun 
+(↓) jika menjauh dari standar, atau Stagnan (→)  jika tidak ada perubahan berarti 
+(selisih ≤ 5% dari nilai periode sebelumnya).  
+4. Membuat visualisasi tren berupa grafik garis untuk indikator utama (Organic Clicks, 
+Impressions, CTR, Average Position, Organic Sessions, Engagement Rate) agar pola 
+perubahan mudah dipahami.  
+3.5.4 Uji Konsistensi Data 
+Untuk data tren GSC dan GA4, konsistensi dipastikan dengan menggunakan 
+rentang tanggal yang tepat per minggu dan memverifikasi bahwa total data tidak melebihi 
+jumlah hari dalam minggu tersebut. Jika ditemukan  penyimpangan data  (deviasi > 15% 
+dari pola tiga minggu lainnya) pada indikator yang seharusnya stabil, peneliti melakukan 
+verifikasi ulang dengan membuka ke mbali laporan GSC atau GA4 pada rentang tanggal 
+yang sama. 
+3.6  Waktu dan Tempat Penelitian 
+Penelitian ini dilaksanakan dalam dua fase waktu yang berbeda sesuai skema 
+pengumpulan data. Pengumpulan data tren  dilakukan selama periode Juli 2026 
+menggunakan GSC dan GA4 yang terhubung langsung dengan server Lintasjejaring.com. 
+
+--- PAGE 46 ---
+ 
+37 
+ 
+Pengumpulan data snapshot audit teknis dilakukan pada minggu ke 4 Juli 2026 setelah 
+verifikasi domain Ahrefs Webmaster Tools berhasil dilakukan pada awal Juli 2026. 
+Analisis data dan penyu sunan laporan dilakukan di Laboratorium Informatika, Fakultas 
+Teknik, Universitas Mulawarman, Samarinda.  
+ 
+Tabel 3. 6 Jadwal Penelitian 
+No Kegiatan Bulan (Tahun 2026) 
+Jul Agu Sep okt Nov Des 
+I 
+Tahap Persiapan Penelitian 
+1. Pembuatan Proposal ✓      
+2. Seminar Proposal  ✓     
+3. Perbaikan Seminar 
+Proposal 
+ ✓ ✓    
+II 
+Tahap Pelaksanaan 
+1. Pengumpulan Data ✓      
+2. Mengolah Data dan 
+analisis 
+✓ ✓     
+III 
+Tahap Penyusunan Laporan 
+1. Seminar Hasil    ✓   
+2. Perbaikan Seminar 
+Hasil 
+ ✓ ✓ ✓   
+3. Penulisan Artikel 
+Ilmiah 
+   ✓ ✓ ✓ 
+4. Seminar Akhir     ✓  
+5. Perbaikan Seminar 
+Akhir 
+    ✓ ✓ 
+ 
+ 
+  
+
+--- PAGE 47 ---
+ 
+ 
+38 
+ 
+DAFTAR PUSTAKA 
+1. Adzhari, N. L., Suwanda, B. S., & Kuntoro, D. (2025). Peran SEO Dalam 
+Pembentukan Agenda Berita Di Akurat.Co . 
+2. Albab, M. H. F., Ratnawati, D. E., & Rahayudi, B. (2024). Analisis Metode Search 
+Engine Optimization (SEO) dengan Teknik On- Page dalam Upaya Meningkatkan 
+Visibilitas pada Google Search Engine (Studi Kasus IFL Chapter Malang) . 
+3. Apiani, C. S., & Syifa, R. H. (2025). Strategi SEO On -Page dan Off -Page: 
+Perbandingan dan Implikasi untuk Digital Marketing. LANCAH: Jurnal Inovasi 
+dan Tren, 3(1). https://doi.org/10.35870/ljit.v3i1.4009 
+4. Chaffey, D., & Ellis -Chadwick, F. (2022). Digital marketing  (Eighth edition). 
+Pearson. 
+5. Febriana, K. A., & Khafidhoh, N. (2025). Analisis Penerapan Metode On Page 
+Off Page Pada Penentuan Berita Untuk Penaikan Trafic Di Website 
+Vendoroutbound . 
+6. Febriansyah, F. F., Wardani, R. T. I., & Arjo, T. R. (2026). Analisis Penggunaan 
+Google Analytics dan Google Search Console untuk Meningkatkan Strategi 
+Digital Marketing Website SEAL. Jejak Digital: Jurnal Ilmiah Multidisiplin , 
+2(5), 9757–9767. https://doi.org/10.63822/sbkea661 
+7. Kurniawan, W. B., Handayani, M., & Anggraini, N. (2025). Analisis Penerapan 
+Strategi Search Engine Optimization (SEO) pada Website www.pbc.ac.id. JIIP - 
+Jurnal Ilmiah Ilmu Pendidikan , 8(1), 1086 –1090. 
+https://doi.org/10.54371/jiip.v8i1.7011 
+8. Marsha Awang Lisba Siella, Moh. Zaenal Abidin Eko Putro, & Mohammad 
+Fauzy. (2024). Penerapan Teknik Search Engine Optimization On Page dan Off 
+Page Pada Berita Kompas.Com. JURNALISTIK DAN MEDIA , 2(2), 56 –68. 
+https://doi.org/10.32722/jjm.v2i2.7082 
+9. Masruri, N. H., & Nihayati, D. A. (2022). Optimasi SEO On-Page pada Long-Tail 
+Keyword untuk meningkatkan Visibilitas Website di dalam SERP. JRST (Jurnal 
+Riset Sains dan Teknologi) , 6(2), 141. https://doi.org/10.30595/jrst.v6i2.13071  
+10. Maulidia, R., Umyana, A., Yani, A., Fitriana, A., & Setiawan, H. (2023). 
+Pemanfaatan Google Analytics Sebagai Marketing Tools Bagi Pelaku Umkm Di 
+Kabupaten Kubu Raya. Dedikasi Sains Dan Teknologi (DST) , 3(2), 212 –229. 
+https://doi.org/10.47709/dst.v3i2.3212  
+11. Melinda, F., Latief, R., Muhammad, F., & Mayasari Pakaya, S. (2023). Penerapan 
+Teknik Search Engine Optimization (SEO) Dalam Produksi Berita Di Detik 
+
+--- PAGE 48 ---
+ 
+ 
+39 
+ 
+Sulsel. JAMBURA JURNAL ILMU KOMUNIKASI , 1(2), 44 –62. 
+https://doi.org/10.37905/jik.v1i2.67  
+12. Memahami Core Web Vitals  dan hasil penelusuran Google | Pusat Google 
+Penelusuran | Documentation . (n.d.). Google for Developers. Retrieved August 
+15, 2026, from https://developers.google.com/search/docs/appearance/core -web-
+vitals?hl=id 
+13. Nasution, I. N., Muslimah, F., & Rubiyanah, R. (2023). Konvergensi Konten 
+Berita Melalui Teknik Search Engine Optimization dan Bahasa Jurnalistik Pada 
+Pemilihan Top News di Media Antaranews.com. Jurnal Studi Jurnalistik , 5(2), 
+83–97. https://doi.org/10.15408/jsj.v5i2.35375  
+14. Nugroho, B. P., Alam, S., & Aris, V. (2025). Analisis Implementasi Search 
+Engine Optimization (SEO) Pada Konten Artikel Terhadap Trafik Website. 
+RIGGS: Journal of Artificial Intelligence and Digital Business , 3(4), 26 –35. 
+https://doi.org/10.31004/riggs.v3i4.410 
+15. Pratama, I., & Hasmawati, F. (2024). Konsep Portal Berita Palpres.com Dalam 
+Penggunaan Search Engine Optimization (SEO) . 02(01). 
+16. Putra, G. M., Ikram, A. D., Wardhana, R., Prafanto, A., & Irsyad, A. (2024). 
+Analisis Metode Search Engine Optimization ( SEO) Pada Website Konterku.com 
+Menggunakan Ahrefs. 
+17. Rendyanto, M. N., & Junaedi, L. (2025). Analisis Dampak Penerapan SEO On -
+Page dan Optimasi Kata Kunci dengan Yoast SEO terhadap Peningkatan Kinerja 
+Website UMKM. 6(4). 
+18. Rizqi, M. N. W., Zaman, B., & Hendrad i, R. (2023). ANALISIS PENERAPAN 
+METODE SEARCH ENGINE OPTIMIZATION (SEO) ON PAGE DALAM 
+OPTIMALISASI KONTEN WEBSITE BLOG (STUDI KASUS: 
+RUMAHGINJAL.ID). NJCA (Nusantara Journal of Computers and Its 
+Applications), 8(2), 47. https://doi.org/10.36564/njca.v8i2. 319 
+19. Sadiah, H., & Maharani, S. H. (2024). Optimasi SEO On -Page untuk 
+Meningkatkan Visibalitas dan Traffic Website E -Commerce: Studi Kasus pada 
+Website Fahmi Sasirangan . 3(2). 
+20. We Are Social, & Meltwater. (2025, February 25). Digital: Indonesia . 
+DataReportal – Global Digital Insights. https://datareportal.com/reports/digital -
+2025-indonesia 
+ 
+
+--- PAGE 49 ---
+ 
+ 
+40 
+ 
+LAMPIRAN 
+ 
+Lampiran 1 halaman utama Ahrefs Webmaster Tools 
+ 
+ 
+Lampiran 2 halaman utama Google Search Console 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+--- PAGE 50 ---
+ 
+ 
+41 
+ 
+Lampiran 3 halaman utama Google Analythics  
+ 
+
+
