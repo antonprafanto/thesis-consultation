@@ -1,0 +1,1095 @@
+PROPOSAL SKRIPSI
+
+
+
+PENGEMBANGAN MINI GAME EDUKATIF SIMULASI PENANGANAN KEBAKARAN BERBASIS ROBLOX MENGGUNAKAN BEHAVIOR TREE
+
+
+
+
+
+
+Oleh:
+
+AHMAD DHAFIN
+2209106122
+
+
+
+
+
+
+
+
+
+
+
+FAKULTAS TEKNIK
+UNIVERSITAS MULAWARMAN
+
+
+
+SAMARINDA
+2026
+
+PROPOSAL SKRIPSI
+
+
+
+PENGEMBANGAN MINI GAME EDUKATIF SIMULASI PENANGANAN KEBAKARAN BERBASIS ROBLOX MENGGUNAKAN BEHAVIOR TREE
+HALAMAN JUDUL
+
+
+
+Diajukan sebagai salah satu syarat untuk menyelesaikan pendidikan 
+pada Program Studi Strata 1 Informatika, 
+Fakultas Teknik, Universitas Mulawarman
+
+
+
+Oleh:
+
+AHMAD DHAFIN
+2209106122
+
+
+ 
+
+
+FAKULTAS TEKNIK
+UNIVERSITAS MULAWARMAN
+
+
+
+
+SAMARINDA
+2026
+
+PROPOSAL SKRIPSI
+
+
+PENGEMBANGAN MINI GAME EDUKATIF SIMULASI PENANGANAN KEBAKARAN BERBASIS ROBLOX MENGGUNAKAN BEHAVIOR TREE
+HALAMAN PENGESAHAN
+
+
+Oleh:
+AHMAD DHAFIN
+2209106122
+
+
+
+
+
+Telah dibahas dalam Rapat Dosen Pembimbing pada [tgl, bln, tahun] dan dinyatakan memenuhi syarat sebagai Skripsi, dengan Dosen Pembimbing:
+
+
+
+
+
+Nama Dosen Pembimbing I lengkap dengan gelar
+Nama Dosen Pembimbing II lengkap dengan gelar
+
+
+
+
+
+Koordinator Program Studi S1 Informatika,
+Fakultas Teknik, Universitas Mulawarman,
+
+
+
+Awang Harsa Kridalaksana, S.Kom., M.Kom.
+NIP 19731229 200501 1 002
+KATA PENGANTAR
+
+Puji syukur kepada Allah SWT, Tuhan Yang Maha Esa sehingga dapat menyelesaikan proposal skripsi dengan judul “Pengembangan Mini Game Edukatif Simulasi Penanganan Kebakaran Berbasis Roblox Menggunakan Behavior Tree”. Proposal ini disusun sebagai salah satu tahapan dalam menyelesaikan skripsi pada Fakultas Teknik, Universitas Mulawarman. Oleh karena itu, pada kesempatan ini kami ingin mengucapkan terima kasih kepada semua pihak yang telah mendukung serta membantu saya selama proses penyusunan proposal skripsi, kepada:
+Orang tua dan Saudara-saudara saya atas do’a, bimbingan serta kasih sayangnya.
+Nama dan gelar akademik lengkap Dekan selaku Dekan Fakultas Teknik, Universitas Mulawarman.
+Nama dan gelar akademik Koordinator Prodi selaku K Program Studi Informatika
+Nama dan gelar akademik Dosen Pembimbing I selaku Pembimbing I yang selalu memberikan arahan dan masukkan terhadap penelitian ini.
+Nama dan gelar akademik Dosen Pembimbing II selaku Pembimbing II atas masukkan terhadap penelitian ini 
+Nama dan gelar akademik Dosen Penguji I selaku Penguji I atas saran dan masukkan terhadap penelitian ini.
+Nama dan gelar akademik Dosen Penguji II selaku Penguji II atas saran dan masukkan terhadap penelitian ini.
+Rekan-rekan seperjuangan yang terus memberikan dukungan semangat demi terselesainya tugas ini.
+Saya menyadari bahwa proposal skripsi ini tidak luput dari berbagai kekurangan. Oleh karena itu, semua kritik dan saran yang bersifat memperbaiki demi kesempurnaan sangat diharapkan.
+Samarinda,.............................2026
+Penulis
+DAFTAR ISI
+
+halaman
+HALAMAN JUDULi
+HALAMAN PENGESAHANii
+KATA PENGANTARiii
+DAFTAR ISIiv
+DAFTAR TABELvi
+DAFTAR GAMBARvii
+DAFTAR LAMPIRANviii
+DAFTAR ISTILAH/LAMBANGix
+DAFTAR SINGKATANx
+
+BAB I PENDAHULUAN1
+
+1.1Latar Belakang1
+1.2Rumusan Masalah4
+1.3Batasan Masalah4
+1.4Tujuan Penelitian5
+1.5Manfaat Penelitian6
+1.6Kontribusi Penelitian6
+
+BAB II TINJAUAN PUSTAKA7
+
+2.1Penelitian Terkait7
+2.2Pembalajaran Interaktif Berbasis Teknologi12
+2.3Game-Based Learning12
+2.4Mini games Edukatif13
+2.5Simulasi Kebakaran Berbasis 3D13
+2.6Artificial Intelligence dalam Game14
+2.6.1Behavior Tree14
+2.6.2Non-Player Character (NPC)16
+2.7Game Development Life Cycle (GDLC)16
+2.8Roblox Studio19
+2.9User Acceptance Testing (UAT)20
+2.10Black Box Testing20
+
+BAB III METODOLOGI PENELITIAN22
+
+3.1Tahapan Pelaksanaan Penelitian22
+3.2Pengumpulan Data23
+3.3Perancangan Data24
+3.3.1Data Lingkungan24
+3.3.2Data Karakter (NPC)25
+3.3.3Data Skenario Kebakaran26
+3.4Perancangan Proses (Behavior Tree)26
+3.4.1Perancangan Mekanisme Behavior Tree27
+3.5Perancangan Tampilan30
+3.5.1Storyboard30
+3.5.2Wireframe Antarmuka32
+3.6Perancangan Pengujian32
+3.6.1Black Box Testing33
+3.6.2User Acceptance Testing (UAT)34
+3.7Waktu dan Tempat Penelitian35
+
+DAFTAR PUSTAKA37
+
+DAFTAR TABEL
+
+Halaman
+Tabel 2.1 Perbedaan dengan Penelitian Sebelumnya11
+Tabel 3.1 Data Lingkungan Simulasi23
+Tabel 3.2 Data Karakter NPC24
+Tabel 3.3 Status Perilaku NPC24
+Tabel 3.4 Data Skenario Kebakaran24
+Tabel 3.5 Komponen Node pada Behavior Tree28
+Tabel 3.6 Pengujian Black Box Testing34
+Tabel 3.7 Rentang Penilaian Skala Likert35
+Tabel 3.8 Kuesioner Pengalaman Pengguna35
+
+
+DAFTAR GAMBAR
+
+
+Halaman
+Gambar 2.1 Struktur Dasar Behavior Tree15
+Gambar 2. 2 Tahapan Game Development Life Cycle (GDLC)17
+Gambar 3.1 Tahapan Pelaksanaan Penelitian22
+Gambar 3.2 Flowchart Pengambilan Keputusan NPC Menggunakan Behavior Tree28
+Gambar 3.3 Storyboard Mini games Edukatif Simulasi Penanganan Kebakaran31
+Gambar 3.4 Wireframe Antarmuka Mini games Simulasi Kebakaran32
+
+
+DAFTAR LAMPIRAN
+
+
+Halaman
+Lampiran 1 contents42
+
+
+DAFTAR ISTILAH/LAMBANG
+
+
+Arti
+Behavior Tree
+Struktur berbentuk pohon yang digunakan untuk mengatur dan menentukan perilaku NPC berdasarkan kondisi tertentu.
+Game Development Life Cycle
+Metode pengembangan permainan yang digunakan sebagai tahapan sistematis dalam proses pengembangan game.
+Black Box Testing
+Metode pengujian yang berfokus pada fungsi sistem berdasarkan masukan dan keluaran tanpa melihat struktur kode program.
+User Acceptance Testing
+Metode pengujian yang digunakan untuk mengetahui tingkat penerimaan pengguna terhadap sistem atau media yang dikembangkan.
+Non-Player Character
+Karakter dalam permainan yang dikendalikan oleh sistem dan bukan oleh pemain.
+Proximity Detection
+Mekanisme untuk mendeteksi jarak antara pemain dengan NPC sebagai pemicu terjadinya interaksi.
+Idle
+Kondisi ketika NPC berada dalam keadaan normal dan tidak menjalankan tindakan tertentu.
+WaitForHelp
+Kondisi atau aksi NPC ketika menunggu bantuan dari pemain dalam simulasi.
+Input
+Data atau tindakan yang diberikan oleh pengguna atau sistem sebagai masukan.
+Output
+Hasil atau respons yang dihasilkan oleh sistem berdasarkan masukan yang diberikan.
+APAR
+Alat Pemadam Api Ringan yang digunakan untuk memadamkan api pada tahap simulasi.
+3D
+Representasi objek atau lingkungan dalam tiga dimensi yang memiliki panjang, lebar, dan tinggi.
+Likert
+Skala pengukuran yang digunakan untuk mengetahui tingkat persetujuan responden terhadap suatu pernyataan.
+
+DAFTAR SINGKATAN
+Arti
+AI
+Artificial Intelligence
+APAR
+Alat Pemadam Api Ringan
+BPBD
+Badan Penanggulangan Bencana Daerah
+GDLC
+Game Development Life Cycle
+NPC
+Non-Player Character
+UAT
+User Acceptance Testing
+VR
+Virtual Reality
+
+BAB I PENDAHULUAN
+PENDAHULUAN
+
+Latar Belakang
+
+Indonesia merupakan salah satu negara dengan jumlah pengguna game digital yang besar. Data Kementerian Komunikasi dan Informatika menunjukkan bahwa jumlah pemain game di Indonesia mencapai 174,1 juta orang pada tahun 2022 dan diperkirakan meningkat hingga 192,1 juta orang pada tahun 2025 (Kemenparekraf (2024); Kemenkominfo, 2022). Laporan Global Web Index juga menunjukkan bahwa sebagian besar pengguna internet di Indonesia aktif bermain game digital, sehingga Indonesia menjadi salah satu pasar game yang potensial secara global (GWI, 2024). Tingginya penggunaan game digital tersebut menunjukkan bahwa game tidak hanya dapat dipandang sebagai media hiburan, tetapi juga berpotensi digunakan sebagai media pembelajaran interaktif. Dalam konteks pendidikan, game dapat menghadirkan tujuan, tantangan, umpan balik, serta pengalaman belajar yang mendorong pengguna untuk terlibat secara aktif dalam proses pembelajaran (Barz dkk., 2024; de Carvalho dkk., 2022).
+Kebakaran gedung masih menjadi salah satu kondisi darurat yang perlu mendapat perhatian karena dapat menimbulkan korban jiwa, luka-luka, dan kerugian material. Badan Penanggulangan Bencana Daerah DKI Jakarta mencatat sebanyak 788 kejadian kebakaran gedung atau permukiman sepanjang tahun 2024, dengan korban meninggal, korban luka, serta kerugian material yang cukup besar (BPBD DKI Jakarta, 2025). Risiko kebakaran dapat semakin meningkat apabila masyarakat belum memahami prosedur dasar penanganan kebakaran, seperti penggunaan alat pemadam api ringan (APAR), aktivasi alarm, dan evakuasi menuju titik aman. Rendahnya pengalaman dalam mengikuti pelatihan atau simulasi darurat juga dapat menyebabkan individu mengalami kebingungan ketika harus mengambil keputusan dalam situasi kebakaran  (de Carvalho et al., 2022; Snopková et al., 2022; Willem Menzemer et al., 2024). Oleh karena itu, diperlukan media pembelajaran yang dapat membantu pengguna memahami prosedur penanganan kebakaran secara aman, terarah, dan interaktif.
+Perkembangan teknologi digital membuka peluang untuk menghadirkan media pembelajaran berbasis simulasi yang dapat digunakan tanpa menghadapkan pengguna pada risiko kebakaran secara langsung. Simulasi interaktif memungkinkan pengguna mempelajari prosedur darurat melalui pengalaman virtual, sehingga pengguna tidak hanya menerima informasi, tetapi juga dapat mencoba mengambil keputusan dalam skenario tertentu (Mystakidis et al., 2022; Snopková et al., 2022). Salah satu pendekatan yang relevan adalah game-based learning, yaitu pembelajaran berbasis permainan yang memanfaatkan elemen tujuan, tantangan, aturan, dan umpan balik untuk meningkatkan keterlibatan pengguna (Bata et al., 2025; de Carvalho et al., 2022). Dalam konteks edukasi keselamatan, pendekatan berbasis game juga dinilai dapat meningkatkan motivasi belajar karena pengguna dapat mempelajari prosedur secara lebih menarik dan berulang (Huang et al., 2025). Dengan demikian, game edukatif dapat menjadi alternatif media pembelajaran untuk memperkenalkan prosedur dasar penanganan kebakaran.
+Simulasi berbasis tiga dimensi (3D) menjadi pendekatan yang sesuai untuk menggambarkan kondisi kebakaran karena mampu menampilkan tata ruang, objek, jalur evakuasi, serta situasi bahaya secara lebih representatif. Lingkungan 3D memungkinkan pengguna melihat ruang dari berbagai sudut dan memahami hubungan antara posisi pengguna, sumber api, peralatan darurat, serta jalur keluar(Bata & Defira, 2023). Penelitian sebelumnya menunjukkan bahwa simulasi virtual dan serious game dapat digunakan sebagai media pelatihan keselamatan kebakaran karena mampu memberikan pengalaman belajar yang lebih mendekati kondisi nyata dibandingkan penyampaian materi secara konvensional (Aaboud et al., 2025; Chen & Chien, 2022; Mystakidis et al., 2022). Sebagian simulasi yang telah dikembangkan masih berfokus pada interaksi pengguna dengan lingkungan, sementara dinamika perilaku karakter lain di dalam skenario evakuasi belum selalu ditampilkan secara optimal. Padahal, dalam kondisi kebakaran nyata, keberadaan orang lain di sekitar pengguna dapat memengaruhi proses pengambilan keputusan dan jalannya evakuasi.
+Salah satu elemen penting untuk membangun simulasi yang lebih dinamis adalah kehadiran Non-Player Character (NPC). NPC dapat digunakan untuk merepresentasikan karakter lain di dalam gedung, misalnya karakter yang panik, menunggu bantuan, mengikuti arahan, atau bergerak menuju jalur evakuasi. Dalam pengembangan game, kecerdasan buatan digunakan untuk mengatur perilaku karakter agar dapat bereaksi terhadap tindakan pemain dan perubahan kondisi lingkungan (Uludağlı & Oğuz, 2023). Salah satu metode yang dapat digunakan untuk mengatur perilaku NPC adalah Behavior Tree, yaitu struktur pengambilan keputusan berbentuk hierarki yang bersifat modular, terstruktur, dan mudah dikembangkan (Iovino et al., 2022; Lee et al., 2024). Dalam skenario kebakaran, Behavior Tree dapat digunakan untuk menentukan respons NPC berdasarkan kondisi tertentu, seperti aktifnya alarm, jarak NPC terhadap api, keamanan jalur evakuasi, dan interaksi pemain dengan NPC (Seo & Yang, 2020; Wang et al., 2025).
+Penelitian terdahulu telah menunjukkan bahwa Behavior Tree dapat digunakan untuk mengatur perilaku NPC dalam serious game maupun simulasi interaktif. Adaptive Behavior Tree mampu membentuk skenario pelatihan yang lebih dinamis karena sistem dapat merespons tindakan pengguna selama simulasi berlangsung (Seo & Yang, 2020). Penelitian lain juga menunjukkan bahwa penerapan Behavior Tree pada NPC dapat meningkatkan pengalaman imersif pengguna dalam serious game karena perilaku karakter terasa lebih sesuai dengan konteks permainan (Marchelputra et al., 2023). Selain itu, Behavior Tree dinilai memiliki keunggulan dibandingkan struktur kecerdasan buatan lain karena lebih modular, mudah dimodifikasi, dan sesuai untuk lingkungan yang membutuhkan respons terhadap perubahan kondisi (Iovino et al., 2022; Lee et al., 2024; Partlan et al., 2022). Namun, penerapan Behavior Tree pada mini games edukatif simulasi penanganan kebakaran berbasis 3D yang menampilkan NPC dinamis masih menjadi celah yang dapat dikembangkan lebih lanjut. 
+Penelitian ini mengembangkan mini games edukatif simulasi penanganan kebakaran berbasis 3D menggunakan Roblox Studio. Roblox Studio dipilih karena mendukung pembuatan lingkungan 3D interaktif, penggunaan bahasa pemrograman Lua, serta distribusi permainan yang relatif mudah diakses oleh pengguna melalui ekosistem Roblox (Alhasan et al., 2025; Tinterri et al., 2023). Mini games yang dikembangkan berfokus pada skenario penanganan kebakaran di dalam gedung, meliputi aktivasi alarm, penggunaan APAR, interaksi dengan NPC, dan evakuasi menuju titik kumpul. Pengembangan media dilakukan dengan mengacu pada tahapan Game Development Life Cycle (GDLC), sedangkan Behavior Tree digunakan untuk mengatur perilaku NPC dalam merespons kondisi darurat (Bata et al., 2025; Iovino et al., 2022). Untuk menilai hasil pengembangan, penelitian ini menggunakan Black Box Testing untuk menguji kesesuaian fungsi sistem terhadap skenario yang telah dirancang, serta Beta Testing melalui kuesioner pengguna untuk mengetahui tingkat penerimaan, pengalaman penggunaan, dan penilaian terhadap media interaktif yang dikembangkan (Marchelputra et al., 2023; Menora et al., 2023). Celah utama yang ingin dijawab dalam penelitian ini adalah belum optimalnya integrasi antara simulasi kebakaran berbasis 3D, media pembelajaran berbasis game, dan NPC dengan perilaku dinamis berbasis Behavior Tree.
+Oleh karena itu, penelitian ini mengajukan sebuah alternatif pembelajaran interaktif mengenai prosedur dasar penanganan kebakaran, sekaligus memberikan kontribusi pada bidang Informatika, khususnya dalam penerapan kecerdasan buatan sederhana pada game edukatif, dengan penelitian yang berjudul "Pengembangan Mini games Edukatif Simulasi Penanganan Kebakaran Berbasis 3D Menggunakan Behavior Tree".
+
+Rumusan Masalah
+
+Bagaimana performa Behavior Tree sebagai metode pengendalian perilaku Non-Player Character (NPC) pada mini games edukatif simulasi penanganan kebakaran berbasis 3D, dan bagaimana hasil pengujiannya dalam menghasilkan respons NPC terhadap kondisi darurat?
+
+Batasan Masalah
+
+Batasan masalah dalam penelitian ini adalah sebagai berikut:
+Penelitian ini berfokus pada pengembangan mini games edukatif simulasi penanganan kebakaran berbasis 3D sebagai media pembelajaran interaktif. 
+Lingkungan simulasi yang digunakan merepresentasikan gedung baru Fakultas Teknik Universitas Mulawarman sebagai objek perancangan ruang 3D. 
+Fokus utama penelitian terletak pada penerapan Behavior Tree sebagai metode pengendalian perilaku Non-Player Character (NPC) dalam kondisi darurat kebakaran. 
+Perilaku NPC yang dirancang meliputi kondisi normal, panik, menunggu bantuan, mengikuti pemain, menjauhi sumber api, dan bergerak menuju titik evakuasi. 
+Skenario penanganan kebakaran yang disimulasikan dibatasi pada aktivasi alarm, penggunaan alat pemadam api ringan (APAR), interaksi pemain dengan NPC, dan proses evakuasi menuju titik kumpul. 
+Simulasi api dan asap digunakan sebagai elemen visual dan pemicu kondisi dalam gameplay, bukan sebagai simulasi ilmiah mengenai penyebaran api, suhu, asap, atau dinamika kebakaran secara teknis. 
+Pengujian sistem dibatasi pada pengujian fungsionalitas fitur dan respons pengguna terhadap media yang dikembangkan, bukan untuk mengukur peningkatan kesiapsiagaan secara eksperimental. 
+
+Tujuan Penelitian
+
+Tujuan dari penelitian ini adalah menerapkan Behavior Tree sebagai metode pengendalian perilaku Non-Player Character (NPC) pada mini games edukatif simulasi penanganan kebakaran berbasis 3D. Penerapan Behavior Tree bertujuan untuk menghasilkan NPC yang mampu merespons kondisi darurat secara dinamis berdasarkan kondisi lingkungan dan interaksi pemain, seperti kondisi normal, panik, menunggu bantuan, mengikuti pemain, menjauhi sumber api, dan bergerak menuju titik evakuasi. Hasil penerapan tersebut kemudian diuji untuk mengetahui kesesuaian perilaku NPC dan fungsionalitas sistem terhadap skenario simulasi yang telah dirancang.
+
+Manfaat Penelitian
+
+Manfaat yang diharapkan dari penelitian ini adalah sebagai berikut:
+Bagi Penulis
+Penelitian ini bermanfaat untuk meningkatkan pemahaman dan kemampuan penulis dalam merancang mini games edukatif berbasis 3D serta menerapkan Behavior Tree sebagai metode pengendalian perilaku Non-Player Character (NPC) dalam skenario simulasi penanganan kebakaran. 
+Bagi Mahasiswa Informatika
+Penelitian ini dapat menjadi referensi dalam pengembangan game edukatif dan simulasi interaktif, khususnya yang menerapkan kecerdasan buatan sederhana untuk mengatur perilaku NPC menggunakan metode Behavior Tree. 
+Bagi Instansi
+Penelitian ini dapat memberikan alternatif media pembelajaran interaktif berbasis game yang dapat digunakan untuk memperkenalkan prosedur dasar penanganan kebakaran, seperti aktivasi alarm, penggunaan APAR, interaksi dengan NPC, dan evakuasi menuju titik kumpul. Selain itu, hasil penelitian ini dapat menjadi masukan bagi instansi dalam pemanfaatan teknologi simulasi 3D sebagai media edukasi keselamatan yang lebih menarik dan mudah diakses.
+
+Kontribusi Penelitian
+ Penelitian ini memberikan kontribusi pada bidang Informatika dalam dua aspek utama. Secara teknis, penelitian ini menyediakan rancangan arsitektur Behavior Tree untuk pengaturan perilaku NPC dalam skenario simulasi penanganan kebakaran gedung berbasis 3D yang dapat diadaptasi pada platform Roblox Studio. Secara praktis, penelitian ini menghasilkan prototipe mini games edukatif berbasis game yang dapat digunakan sebagai alternatif media pembelajaran prosedur tanggap darurat kebakaran tanpa memerlukan infrastruktur perangkat keras khusus seperti pada sistem Virtual Reality, sehingga dapat diakses secara luas oleh pengguna umum. Selain itu, penelitian ini dapat menjadi referensi bagi peneliti selanjutnya yang ingin mengembangkan simulasi interaktif berbasis Behavior Tree pada platform game yang mudah diakses
+
+BAB II TINJAUAN PUSTAKA
+TINJAUAN PUSTAKA
+
+Penelitian Terkait
+
+Dalam rangka mendukung penelitian ini, dilakukan kajian terhadap penelitian-penelitian terdahulu yang relevan dengan tema pembelajaran berbasis game (game-based learning), serious game/VR training kebakaran, simulasi evakuasi bangunan (khususnya kampus/pendidikan), serta penerapan teknik AI/behavior modeling (termasuk Behavior Tree) dalam pengembangan simulasi interaktif. Berikut beberapa penelitian terkait yang menjadi landasan dan pembanding:
+Metode yang digunakan: Adaptive Behavior Tree untuk pengembangan skenario berbasis VR pada pelatihan pemadam kebakaran.Temuan penelitian: Penelitian ini menghasilkan Behavior Tree yang mampu beradaptasi secara runtime berdasarkan reaksi pengguna dalam simulasi VR. Setiap kali pengguna mengambil tindakan, struktur pohon perilaku berubah sehingga skenario pelatihan menjadi lebih bervariasi dan tidak sepenuhnya dapat diprediksi. Pengujian pada simulator pelatihan kebakaran menunjukkan bahwa pendekatan ini berhasil mereproduksi situasi darurat yang dinamis serta meningkatkan kesan realisme, karena NPC dan sistem tidak sekadar menjalankan urutan aksi tetap, melainkan merespons keputusan pengguna secara kontekstual. Dengan demikian, pengguna mendapatkan pengalaman yang berbeda di setiap sesi latihan, yang penting untuk membangun kesiapan mental.(Seo & Yang, 2020)
+Metode yang digunakan: Behaviour Tree untuk NPC pada serious game edukasi budaya. Temuan penelitian: Behaviour Tree diterapkan pada NPC dalam serious game "Warik's Adventure" yang bertujuan menyampaikan konten budaya. Evaluasi menggunakan Game Experience Questionnaire (GEQ) memperoleh skor immersive experience sebesar 3,2 dari 4,0, mengindikasikan bahwa kehadiran NPC berbasis BT membuat interaksi terasa lebih alami. NPC mampu menunjukkan perilaku yang sesuai dengan konteks permainan, seperti memberi petunjuk, bereaksi terhadap pemain, dan menjaga alur cerita tanpa terasa kaku. Temuan ini memperkuat argumen bahwa BT dapat meningkatkan kualitas imersif serious game, aspek yang juga penting dalam simulasi pelatihan.(Marchelputra et al., 2023)
+Metode yang digunakan: Eksperimen komparatif antara Hierarchical Finite State Machine (HFSM) dan Behavior Tree untuk NPC cerdas. Temuan penelitian: Studi ini mengukur efisiensi dua struktur AI dengan mengimplementasikan mekanisme perilaku NPC yang identik pada HFSM dan BT di Unity Engine. Hasil eksperimen menunjukkan bahwa BT memiliki waktu eksekusi yang lebih singkat, terutama saat terjadi perubahan kondisi lingkungan secara tiba-tiba. Selain itu, BT lebih mudah dimodifikasi dan dikembangkan karena setiap sub-pohon bersifat modular. Temuan kuantitatif ini memberikan justifikasi teknis bahwa BT lebih cocok untuk lingkungan dinamis seperti simulasi kebakaran, di mana kondisi dapat berubah cepat dan perilaku NPC perlu segera disesuaikan. (Lee et al., 2024)
+Metode yang digunakan: Systematic literature review tentang Behavior Tree di bidang robotika dan AI. Temuan penelitian: Kajian ini menganalisis puluhan makalah dan mengidentifikasi keunggulan utama BT dibandingkan Finite State Machine (FSM), yaitu modularitas, skalabilitas, dan reusability. Struktur pohon yang hierarkis membuat desainer dapat menambah atau mengubah perilaku tanpa mengganggu logika keseluruhan. Review ini juga mencatat bahwa BT banyak diadopsi di industri game dan mulai merambah simulasi interaktif karena kemampuannya menangani pengambilan keputusan yang kompleks. Bagi penelitian ini, temuan tersebut menegaskan bahwa BT merupakan fondasi arsitektur AI yang andal untuk mengelola respons NPC dalam skenario darurat kebakaran. (Iovino et al., 2022)
+Metode yang digunakan: Genetic programming untuk evolusi Behavior Tree pada NPC game. Temuan penelitian: Sistem bernama EvolvingBehavior dibangun di Unreal Engine 4 untuk mengembangkan Behavior Tree secara otomatis menggunakan algoritma genetika. BT yang berevolusi mampu menghasilkan perilaku NPC yang tidak hanya efektif, tetapi juga menunjukkan variasi yang kaya, seperti patroli dinamis dan reaksi terhadap ancaman. Lebih penting lagi, BT hasil evolusi dapat diintegrasikan langsung ke dalam alur kerja desainer tanpa memerlukan penulisan ulang skrip secara manual. Meskipun tidak spesifik untuk simulasi kebakaran, penelitian ini menunjukkan bahwa BT mampu mencapai kompleksitas perilaku tinggi dengan usaha pengembangan yang efisien. (Partlan et al., 2022)
+Metode yang digunakan: ADDIE model dengan CAVEVR untuk serious game evakuasi sekolah. Temuan penelitian: Serious game berbasis CAVEVR dirancang untuk meningkatkan kesiapsiagaan kebakaran di sekolah. Evaluasi kuantitatif dengan pre-post test menunjukkan peningkatan skor pengetahuan pengguna tentang bahaya kebakaran, prosedur pemadaman sederhana, dan langkah evakuasi. Validasi ahli memberikan nilai tinggi pada aspek materi dan media, sementara uji coba pengguna mengungkapkan tingkat penerimaan yang sangat positif. Meskipun hasilnya membuktikan efektivitas VR untuk pelatihan, sistem ini tidak memiliki NPC dinamis dan memerlukan perangkat ruang CAVE yang mahal, sehingga menyulitkan distribusi massal. (Mystakidis et al., 2022) 
+Metode yang digunakan: ADDIE menggunakan Unity dan Blender untuk gim simulasi jalur evakuasi kebakaran kampus. Temuan penelitian: Gim tiga dimensi yang merepresentasikan gedung kampus nyata ini berhasil memperkenalkan tata letak ruangan, posisi tangga darurat, dan jalur keluar yang aman. Pengujian fungsional (black box) dan validasi oleh dosen ahli menunjukkan bahwa seluruh fitur berjalan sesuai spesifikasi dan materi evakuasi tersampaikan dengan benar. Gim ini dinilai layak sebagai media sosialisasi keselamatan bagi mahasiswa. Kekurangannya terletak pada tidak adanya NPC dan kecerdasan buatan, sehingga simulasi terasa statis dan belum dapat menggambarkan dinamika evakuasi sesungguhnya. (Bata & Defira, 2023)
+Metode yang digunakan: Serious game VR imersif untuk pelatihan evakuasi gedung tinggi dengan dukungan deep learningassisted learning. Temuan penelitian: Simulasi VR gedung pencakar langit ini dilengkapi modul pembelajaran adaptif berbasis deep learning. Hasil eksperimen menunjukkan bahwa kelompok yang berlatih dengan VR memperoleh waktu evakuasi yang lebih cepat dan membuat lebih sedikit kesalahan rute dibandingkan kelompok yang hanya menerima instruksi tertulis. Pengguna juga melaporkan peningkatan kesadaran terhadap tandatanda bahaya dan pemahaman prosedur yang lebih baik. Akan tetapi, penelitian ini belum memanfaatkan NPC untuk mensimulasikan interaksi sosial saat evakuasi. (Chen & Chien, 2022)
+Metode yang digunakan: VR prototype untuk pelatihan fire safety di kereta penumpang. Temuan penelitian: Prototipe VR ini memungkinkan pengguna berlatih mengidentifikasi sumber api, mengambil alat pemadam, dan melakukan evakuasi dalam gerbong kereta. Evaluasi pengguna menunjukkan bahwa VR memberikan sensasi kehadiran (presence) yang tinggi dan dianggap lebih realistis daripada pelatihan teori. Pengguna merasa lebih siap menghadapi kebakaran setelah menjalani simulasi. Namun, prototipe ini masih berfokus pada interaksi pengguna tunggal terhadap lingkungan statis, tanpa kehadiran NPC yang dapat memengaruhi keputusan evakuasi. (Aaboud et al., 2025) 
+Metode yang digunakan: Serious game Unity3D untuk pelatihan prosedur evakuasi kebakaran di sekolah dengan prepost test. Temuan penelitian: Game edukatif ini menyajikan skenario kebakaran sekolah di mana pemain harus menyelesaikan serangkaian langkah evakuasi. Hasil uji prepost menunjukkan peningkatan signifikan pada pemahaman siswa mengenai urutan tindakan yang benar, dengan rerata kenaikan skor mencapai lebih dari 20%. Selain aspek kognitif, game juga mendorong diskusi reflektif di kelas yang menumbuhkan budaya keselamatan. Walau demikian, game belum dibekali NPC, sehingga dinamika evakuasi seperti berdesakan atau mengikuti pemandu belum tersimulasikan. (Carvalho et al., 2022)
+Perbedaan dengan Penelitian Sebelumnya
+Beberapa penelitian sebelumnya telah membuktikan efektivitas Behavior Tree dalam mengelola perilaku NPC secara adaptif, namun penerapannya belum menyasar konteks simulasi kebakaran di lingkungan kampus. Di sisi lain, penelitian yang berfokus pada serious game dan simulasi VR keselamatan kebakaran umumnya belum mengintegrasikan NPC berbasis kecerdasan buatan, sehingga dinamika evakuasi yang realistis belum tersimulasikan dengan baik. Penelitian ini menggabungkan kedua pendekatan tersebut melalui pengembangan simulasi penanganan kebakaran berbasis 3D dengan NPC dinamis menggunakan Behavior Tree pada platform Roblox Studio.
+
+Tabel 2.1 Perbedaan dengan Penelitian Sebelumnya
+No.
+Peneliti & Tahun
+Perbedaan Penelitian 
+1.
+(Seo & Yang, 2020)
+Platform VR berbayar dan tidak dapat diakses umum. Penelitian ini menggunakan Roblox Studio yang gratis tanpa perangkat khusus.
+4.
+(Iovino et al., 2022)
+Sebatas kajian literatur Behavior Tree tanpa implementasi. Penelitian ini menerapkannya secara langsung sebagai pengendali NPC pada simulasi kebakaran 3D.
+5.
+(Partlan et al., 2022)
+Behavior Tree diterapkan pada game umum, bukan konteks kebakaran. Penelitian ini merancangnya khusus untuk respons NPC dalam kondisi darurat kebakaran.
+6.
+(Mystakidis et al., 2022)
+Bergantung pada infrastruktur CAVE VR yang mahal tanpa NPC berbasis AI. Penelitian ini menggunakan Roblox Studio yang gratis dan dilengkapi NPC dinamis.
+10.
+(de Carvalho et al., 2022)
+Tidak menggunakan AI dan belum mencakup penggunaan APAR maupun interaksi NPC. Kedua aspek tersebut diimplementasikan dalam penelitian ini.
+8.
+(Chen & Chien, 2022)
+Simulasi evakuasi tanpa NPC adaptif. Pada penelitian ini, NPC berbasis Behavior Tree mampu merespons kondisi darurat secara dinamis.
+2.
+(Marchelputra et al., 2023)
+Behavior Tree digunakan untuk edukasi budaya, bukan simulasi darurat. Penelitian ini menggunakannya khusus untuk simulasi kebakaran di lingkungan gedung kampus.
+7.
+(Bata & Defira, 2023)
+Simulasi kebakaran 3D bersifat statis tanpa NPC maupun AI. Penelitian ini menambahkan NPC dinamis dengan enam state perilaku berbasis Behavior Tree.
+3.
+(Lee et al., 2024)
+Hanya membuktikan keunggulan Behavior Tree atas HFSM secara teknis tanpa implementasi nyata. Temuan tersebut diterapkan langsung dalam simulasi kebakaran 3D pada penelitian ini.
+9.
+(Aaboud et al., 2025)
+Simulasi VR kebakaran tanpa NPC sehingga dinamika evakuasi sosial tidak tersimulasikan. Penelitian ini menghadirkan NPC adaptif yang berinteraksi langsung dengan pemain selama simulasi berlangsung.
+
+
+
+
+Pembalajaran Interaktif Berbasis Teknologi
+
+Pembelajaran interaktif berbasis teknologi adalah cara belajar yang memanfaatkan perangkat digital agar pengguna terlibat secara aktif. Berbeda dengan metode ceramah di mana pengguna hanya mendengarkan, pendekatan ini mendorong pengguna untuk langsung berinteraksi dengan materi pelajaran melalui simulasi, visualisasi, dan pengambilan keputusan (de Carvalho et al., 2022; Mystakidis et al., 2022). Dengan demikian, pengguna tidak hanya menerima informasi, tetapi juga mengalami dan mempraktikkan langsung apa yang dipelajari.
+Dalam pelatihan keselamatan, pendekatan ini sangat membantu karena pengguna dapat berlatih prosedur darurat tanpa harus berhadapan dengan bahaya sungguhan (Chen & Chien, 2022). Teknologi seperti Virtual Reality (VR) dan Augmented Reality (AR) juga terbukti membuat pengguna lebih fokus dan lebih siap menghadapi situasi darurat karena latihan terasa lebih nyata (Aaboud et al., 2025; Sulistia et al., 2025).
+
+Game-Based Learning
+
+Game-Based Learning (GBL) atau pembelajaran berbasis permainan adalah metode belajar yang menggunakan permainan digital untuk menyampaikan materi pelajaran. Elemen-elemen seperti tujuan permainan, tantangan, dan hadiah digunakan untuk membuat proses belajar lebih menarik dan memotivasi pengguna (Barz et al., 2024; de Carvalho et al., 2022). Melalui permainan, pengguna tidak hanya membaca atau menghafal, tetapi belajar sambil mencoba langsung.
+Untuk belajar prosedur seperti tanggap darurat kebakaran, GBL sangat cocok karena pengguna bisa berlatih berulang kali dalam lingkungan yang aman. Jika membuat kesalahan, mereka bisa langsung mencoba lagi tanpa risiko apa pun (Huang et al., 2025). Cara belajar seperti ini membuat pengguna lebih percaya diri saat harus menerapkan prosedur yang sama di dunia nyata (Mystakidis et al., 2022).
+
+Mini games Edukatif
+
+Mini games edukatif adalah permainan digital singkat yang dirancang khusus untuk mengajarkan satu topik tertentu. Karena ukurannya yang terbatas dan aturannya yang sederhana, pengguna dapat langsung berfokus pada tujuan belajar tanpa memerlukan waktu panjang untuk memahami mekanisme permainan (Bata et al., 2025). Karakteristik utama mini games edukatif mencakup aturan yang sederhana, durasi yang singkat, tujuan belajar yang spesifik, serta umpan balik yang diberikan secara langsung sebagai respons terhadap tindakan pengguna (Amzalag et al., 2024).
+Dalam pelatihan kebakaran, mini games bisa digunakan untuk melatih satu atau dua keterampilan spesifik, misalnya cara memakai alat pemadam api atau cara membaca jalur evakuasi. Karena materinya ringkas, pengguna tidak bosan dan bisa mengulang latihan kapan saja (Huang et al., 2025).
+
+Simulasi Kebakaran Berbasis 3D
+
+Simulasi kebakaran berbasis 3D merupakan representasi virtual situasi kebakaran yang ditampilkan dalam bentuk ruang tiga dimensi pada perangkat komputer. Berbeda dengan media pembelajaran dua dimensi seperti gambar atau video, lingkungan 3D memungkinkan pengguna mengamati ruangan dari berbagai sudut pandang dan memahami hubungan spasial antara posisinya, sumber api, peralatan darurat, serta jalur evakuasi yang tersedia (Bata & Defira, 2023). Hal ini membuat latihan terasa lebih nyata dan membantu pengguna mengingat tata letak ruangan serta jalur evakuasi dengan lebih baik.
+Penelitian menunjukkan bahwa latihan di lingkungan 3D dapat meningkatkan kesadaran pengguna terhadap keadaan sekitar dan kemampuan mencari jalan keluar saat darurat (Chen & Chien, 2022). Selain itu, elemen visual seperti api dan asap bisa ditampilkan secara lebih realistis, mendekati kejadian sesungguhnya (Aaboud et al., 2025).
+
+Artificial Intelligence dalam Game
+
+Artificial Intelligence (AI) atau kecerdasan buatan dalam game adalah teknologi yang digunakan untuk mengatur perilaku karakter dan sistem di dalam permainan agar terlihat cerdas dan alami (Uludağlı & Oğuz, 2023). Dengan AI, karakter dalam game tidak hanya diam atau bergerak secara kaku, tetapi bisa bereaksi terhadap tindakan pemain dan perubahan situasi di sekitarnya.
+Dalam simulasi kebakaran, AI berguna untuk mengatur bagaimana karakter lain (selain pemain) berperilaku saat terjadi kebakaran, misalnya apakah mereka panik, membantu, atau segera menuju pintu darurat (Seo & Yang, 2020). Salah satu teknik AI yang paling populer untuk mengatur perilaku karakter adalah Behavior Tree, karena hasilnya terstruktur dan mudah dikembangkan (Lee et al., 2024).
+
+Behavior Tree
+
+Behavior Tree (BT) merupakan salah satu metode kecerdasan buatan (Artificial Intelligence) yang digunakan untuk mengatur proses pengambilan keputusan karakter di dalam permainan (game). Metode ini menyusun perilaku karakter dalam bentuk struktur pohon (tree structure) yang terdiri atas berbagai node yang saling terhubung. Setiap node akan dievaluasi secara berurutan untuk menentukan tindakan yang paling sesuai berdasarkan kondisi yang sedang terjadi (Iovino et al., 2024).
+
+Gambar 2.1 Struktur Dasar Behavior Tree
+Gambar 2.6 menunjukkan struktur dasar Behavior Tree yang terdiri atas Root Node, Selector Node, Sequence Node, Condition Node, dan Action Node. Setiap node memiliki fungsi yang berbeda dalam proses pengambilan keputusan sehingga membentuk alur eksekusi yang sistematis berdasarkan kondisi yang dievaluasi.
+Komponen utama dalam Behavior Tree terdiri atas:
+Root Node, merupakan titik awal proses evaluasi seluruh struktur Behavior Tree. 
+Selector Node, digunakan untuk memilih satu perilaku berdasarkan kondisi yang pertama kali terpenuhi. 
+Sequence Node, digunakan untuk menjalankan beberapa kondisi dan aksi secara berurutan. Apabila salah satu kondisi tidak terpenuhi, proses pada node tersebut akan dihentikan. 
+Condition Node, digunakan untuk mengevaluasi kondisi tertentu sebagai dasar dalam proses pengambilan keputusan. 
+Action Node, digunakan untuk menjalankan tindakan setelah kondisi tertentu terpenuhi sesuai hasil evaluasi Condition Node.
+Dibandingkan dengan Finite State Machine (FSM) yang telah lama digunakan sebagai representasi logika pengambilan keputusan, Behavior Tree memiliki keunggulan dalam aspek modularitas, reaktivitas, dan kemudahan pengelolaan struktur perilaku, terutama ketika kompleksitas perilaku karakter semakin meningkat (Iovino et al., 2024).
+Selain itu, Behavior Tree memiliki struktur yang fleksibel karena setiap node dapat dikembangkan atau dimodifikasi tanpa memengaruhi keseluruhan struktur pohon. Karakteristik tersebut memudahkan pengembang dalam menambahkan maupun memperbaiki perilaku NPC sesuai kebutuhan permainan (Partlan et al., 2022). Pada penelitian ini, Behavior Tree digunakan untuk mengendalikan perilaku NPC dalam simulasi penanganan kebakaran sehingga NPC mampu mengambil keputusan secara dinamis berdasarkan kondisi lingkungan, seperti mendeteksi alarm kebakaran, mengikuti pemain menuju jalur evakuasi, menunggu bantuan, dan melakukan evakuasi menuju titik kumpul (Wang et al., 2025).
+
+Non-Player Character (NPC)
+
+Non-Player Character atau NPC adalah karakter dalam game yang digerakkan oleh komputer, bukan oleh pemain. Kehadiran NPC membuat dunia permainan terasa lebih hidup dan nyata (Marchelputra et al., 2023). NPC bisa berfungsi sebagai teman, lawan, atau sekadar karakter latar yang membuat suasana permainan lebih ramai.
+Dalam simulasi kebakaran, NPC mewakili orang-orang lain yang ada di dalam gedung saat kejadian darurat. Mereka bisa menunjukkan berbagai reaksi: ada yang tenang mengikuti petunjuk, ada yang panik dan berlari tak beraturan, ada pula yang membantu orang lain (Fu & Li, 2024). Variasi perilaku ini penting agar simulasi terasa seperti kejadian sebenarnya (Wang et al., 2025).
+
+Game Development Life Cycle (GDLC)
+
+Game Development Life Cycle (GDLC) merupakan metode pengembangan permainan yang membagi proses pengembangan ke dalam beberapa tahapan secara sistematis, yaitu Initiation, Pre-production, Production, Testing, Beta, dan Release. Metode ini digunakan untuk membantu proses pengembangan permainan agar berjalan secara terstruktur mulai dari perencanaan konsep hingga permainan siap digunakan oleh pengguna (Ardiansyah et al., 2024).
+
+Gambar 2. 2 Tahapan Game Development Life Cycle (GDLC)
+Berdasarkan Gambar 2.2, tahapan Initiation merupakan tahap awal yang dilakukan untuk menentukan konsep, tujuan, dan ruang lingkup permainan. Tahap Pre-production digunakan untuk menyusun rancangan permainan yang meliputi gameplay, mekanisme permainan, perancangan antarmuka, serta perencanaan aset. Selanjutnya, tahap Production merupakan proses implementasi seluruh rancangan ke dalam permainan melalui pembuatan lingkungan, aset, dan pemrograman sistem. Pada tahap Testing, proses pengujian masih berada dalam Production Cycle, sehingga apabila ditemukan kesalahan atau kebutuhan penyempurnaan, pengembangan dapat kembali ke tahap Pre-production maupun Production untuk melakukan perbaikan (Lonteng et al., 2024).
+Setelah sistem dinilai stabil, pengembangan dilanjutkan ke tahap Beta, yaitu pengujian yang melibatkan pengguna untuk memperoleh umpan balik terhadap permainan yang telah dikembangkan sebelum memasuki tahap Release sebagai versi akhir yang siap dipublikasikan. Pada penelitian ini, metode GDLC digunakan sebagai (Lonteng et al., 2024)acuan dalam pengembangan mini games edukatif simulasi penanganan kebakaran berbasis Roblox karena menyediakan alur pengembangan yang sistematis dari tahap perencanaan hingga evaluasi hasil pengembangan (Zaliluddin et al., 2026)
+
+Roblox Studio
+
+Roblox Studio adalah aplikasi gratis yang digunakan untuk membuat permainan dan simulasi di dalam platform Roblox. Aplikasi ini memungkinkan pembangunan lingkungan 3D dan penulisan kode program menggunakan bahasa Lua. Keunggulan utama Roblox Studio adalah kemudahan aksesnya pengguna bisa langsung memainkan hasilnya melalui komputer, ponsel, atau konsol tanpa perlu menginstal aplikasi tambahan (Alhasan et al., 2025).
+Beberapa alasan Roblox Studio cocok untuk pengembangan game edukatif (Alhasan et al., 2025; Tinterri et al., 2023):
+Mudah diakses : gratis dan bisa dipakai di berbagai perangkat.
+Bahasa pemrograman sederhana : Bahasa Lua relatif mudah dipelajari, bahkan oleh pemula.
+Komunitas besar : banyak tutorial dan forum yang membantu proses belajar dan pengembangan.
+Penyebaran luas : hasil karya bisa langsung dimainkan oleh jutaan pengguna Roblox di seluruh dunia.
+
+
+
+User Acceptance Testing (UAT)
+
+User Acceptance Testing (UAT) merupakan metode pengujian yang dilakukan oleh pengguna akhir (end user) untuk memastikan bahwa sistem yang telah dikembangkan sesuai dengan kebutuhan pengguna dan dapat diterima sebelum diimplementasikan. Pengujian ini berfokus pada pengalaman pengguna dalam menggunakan sistem, sehingga aspek yang dinilai tidak hanya terbatas pada fungsi sistem, tetapi juga mencakup kemudahan penggunaan, kesesuaian kebutuhan, serta kepuasan pengguna terhadap sistem yang dikembangkan (Aliyah Aliyah et al., 2024; Wulandari Putri Bahmin et al., 2025).
+Berbeda dengan Black Box Testing yang bertujuan menguji fungsi-fungsi sistem berdasarkan masukan dan keluaran tanpa memperhatikan struktur kode program, UAT dilakukan untuk mengetahui tingkat penerimaan pengguna terhadap sistem yang telah lolos pengujian fungsional. Oleh karena itu, UAT umumnya dilaksanakan pada tahap akhir pengembangan sebagai bentuk validasi bahwa sistem telah memenuhi kebutuhan pengguna dan layak digunakan dalam kondisi nyata (Hasugian, 2023)
+Pada penelitian ini, UAT digunakan untuk mengevaluasi tingkat penerimaan pengguna terhadap mini games edukatif simulasi penanganan kebakaran berbasis Roblox. Pengujian dilakukan dengan meminta responden memainkan mini games yang telah dikembangkan, kemudian memberikan penilaian melalui kuesioner menggunakan Skala Likert lima tingkat. Aspek yang dievaluasi meliputi kemudahan penggunaan, tampilan antarmuka, kemudahan memahami alur permainan, fungsi fitur, serta kepuasan pengguna terhadap simulasi penanganan kebakaran yang dikembangkan. Hasil pengujian tersebut digunakan sebagai dasar untuk mengetahui tingkat penerimaan pengguna terhadap sistem yang telah dibangun.
+
+Analisis Data User Acceptance Testing
+Data hasil kuesioner UAT dianalisis menggunakan nilai rata-rata dari setiap aspek penilaian. Perhitungan nilai rata-rata dilakukan dengan rumus:
+
+Keterangan:
+= nilai rata-rata penilaian 
+= jumlah keseluruhan skor responden 
+= jumlah responden 
+Hasil nilai rata-rata kemudian diinterpretasikan berdasarkan kategori berikut:
+Interval Nilai
+Kategori
+4,20 – 5,00
+Sangat Baik
+3,40 – 4,19
+Baik
+2,60 – 3,39
+Cukup
+1,80 – 2,59
+Kurang
+1,00 – 1,79
+Sangat Kurang
+
+
+Black Box Testing
+
+Black Box Testing merupakan teknik pengujian yang berfokus pada fungsionalitas sistem dari sudut pandang pengguna, tanpa mempertimbangkan struktur internal atau kode program di dalamnya (Santi dkk., 2022). Pengujian ini bertujuan memverifikasi kesesuaian output sistem terhadap input yang diberikan berdasarkan spesifikasi kebutuhan yang telah ditetapkan. Beberapa teknik yang umum digunakan dalam Black Box Testing antara lain equivalence partitioning, boundary value analysis, dan use case testing (Santi et al., 2022)
+Teknik yang umum digunakan dalam Black Box Testing meliputi equivalence partitioning, boundary value analysis, dan use case testing. Dalam pengembangan mini games simulasi kebakaran ini, Black Box Testing diterapkan untuk menguji fungsionalitas utama sistem, seperti mekanisme aktivasi alarm, respons NPC terhadap kondisi darurat, penggunaan alat pemadam api ringan (APAR), serta jalur evakuasi yang dihasilkan oleh sistem Behavior Tree. Pengujian dilakukan dengan menyusun skenario uji (test case) berdasarkan spesifikasi fungsional yang telah dirancang, kemudian memverifikasi kesesuaian output sistem terhadap hasil yang diharapkan.
+
+BAB III METODOLOGI PENELITIAN
+METODOLOGI PENELITIAN
+
+
+Tahapan Pelaksanaan Penelitian
+
+Penelitian ini dilaksanakan melalui beberapa tahapan yang dimulai dari identifikasi permasalahan hingga evaluasi hasil pengembangan mini games edukatif simulasi penanganan kebakaran berbasis 3D menggunakan Roblox. Secara garis besar, tahapan penelitian terdiri atas tiga bagian utama, yaitu identifikasi, pengembangan sistem, dan evaluasi. Tahapan pelaksanaan penelitian ditunjukkan pada Gambar 3.1.
+
+Gambar 3.1 Tahapan Pelaksanaan Penelitian
+
+Tahap identifikasi merupakan tahap awal yang dilakukan untuk menentukan permasalahan dan kebutuhan penelitian. Tahap ini dimulai dengan identifikasi dan batasan masalah untuk menentukan ruang lingkup penelitian. Selanjutnya dilakukan perumusan masalah sebagai dasar dalam menentukan tujuan penelitian. Studi literatur dilakukan untuk memperoleh landasan teori dan referensi yang berkaitan dengan game edukatif, simulasi kebakaran, Roblox Studio, Behavior Tree, Non-Player Character (NPC), dan metode Game Development Life Cycle (GDLC). Setelah itu, dilakukan pengumpulan dan analisis kebutuhan sistem untuk menentukan kebutuhan yang diperlukan dalam pengembangan mini games.
+Tahap pengembangan sistem merupakan proses pengembangan mini games menggunakan metode Game Development Life Cycle (GDLC). Pada tahap ini, proses pengembangan dilakukan berdasarkan tahapan GDLC yang telah dijelaskan pada Bab II, mulai dari perencanaan dan perancangan hingga sistem siap untuk diuji dan digunakan. Pengembangan mencakup pembuatan lingkungan 3D, perancangan gameplay, implementasi Behavior Tree pada NPC, serta implementasi fitur-fitur yang diperlukan dalam simulasi penanganan kebakaran.
+Tahap evaluasi dilakukan untuk mengetahui kesesuaian hasil implementasi sistem dengan rancangan yang telah dibuat. Evaluasi meliputi pemeriksaan implementasi Behavior Tree, pengujian fungsionalitas menggunakan Black Box Testing, serta pengujian penerimaan pengguna menggunakan User Acceptance Testing (UAT). Hasil dari tahap evaluasi digunakan untuk mengetahui apakah mini games yang dikembangkan telah berjalan sesuai dengan kebutuhan dan tujuan penelitian.
+
+Pengumpulan Data
+
+Pengumpulan data dalam penelitian ini dilakukan untuk memperoleh informasi yang dibutuhkan sebagai dasar pengembangan mini games edukatif simulasi penanganan kebakaran berbasis Roblox menggunakan metode Behavior Tree. Data yang dikumpulkan meliputi kebutuhan sistem, kondisi lingkungan Gedung Baru Fakultas Teknik Universitas Mulawarman sebagai lokasi simulasi, serta prosedur penanganan kebakaran yang menjadi acuan perilaku NPC dalam permainan.
+Data diperoleh melalui studi literatur, observasi langsung pada Gedung Baru Fakultas Teknik Universitas Mulawarman untuk mendokumentasikan tata letak bangunan, jalur evakuasi, pintu darurat, dan titik kumpul, serta studi terhadap prosedur penanganan kebakaran yang digunakan sebagai dasar penyusunan skenario simulasi dan logika perilaku NPC pada Behavior Tree.
+
+Perancangan Data
+
+Perancangan data merupakan tahap untuk mengelompokkan data yang digunakan dalam pengembangan mini games edukatif simulasi penanganan kebakaran berbasis Roblox. Data tersebut digunakan sebagai dasar dalam membangun lingkungan simulasi serta sebagai masukan dalam proses pengambilan keputusan NPC menggunakan metode Behavior Tree.
+Berdasarkan hasil pengumpulan data, data yang digunakan pada penelitian ini dikelompokkan menjadi tiga kategori, yaitu data lingkungan simulasi, data karakter NPC, dan data skenario kebakaran.
+
+Data Lingkungan
+
+Data lingkungan simulasi digunakan sebagai acuan dalam membangun area permainan di Roblox Studio. Data ini meliputi struktur bangunan, jalur evakuasi, pintu darurat, titik kumpul, lokasi munculnya api, dan lokasi APAR yang digunakan selama simulasi.
+
+Tabel 3.1 Data Lingkungan Simulasi
+No
+Data Lingkungan
+Keterangan
+
+Struktur gedung
+Model bangunan yang terdiri atas beberapa ruangan dan koridor
+
+Jalur evakuasi
+Rute aman yang digunakan pemain dan NPC menuju titik kumpul
+
+Pintu darurat
+Akses keluar yang dapat digunakan saat proses evakuasi
+
+Titik kumpul
+Lokasi tujuan akhir evakuasi
+
+Titik muncul api
+Lokasi awal terjadinya kebakaran dalam simulasi
+
+Lokasi APAR
+Posisi alat pemadam api ringan yang dapat digunakan pemain
+
+Seluruh data lingkungan direpresentasikan sebagai objek tiga dimensi pada Roblox Studio untuk mendukung jalannya simulasi penanganan kebakaran.
+
+Data Karakter (NPC)
+
+Data karakter NPC digunakan untuk mendefinisikan atribut dan status yang dimiliki NPC selama simulasi berlangsung. Data tersebut menjadi dasar dalam menentukan perilaku NPC pada saat simulasi.
+
+Tabel 3.2 Data Karakter NPC
+No
+Data Karakter
+Keterangan
+
+Posisi awal NPC
+Lokasi awal NPC pada saat simulasi dimulai
+
+Status NPC
+Kondisi perilaku NPC yang sedang aktif
+
+Kecepatan gerak
+Kecepatan perpindahan NPC saat bergerak
+
+Radius deteksi api
+Jarak maksimum NPC dapat mendeteksi keberadaan api
+
+Status interaksi pemain
+Menunjukkan apakah pemain telah berinteraksi dengan NPC
+
+Jalur evakuasi
+Rute yang dipilih NPC menuju titik kumpul
+
+Status perilaku NPC yang digunakan pada penelitian ini ditunjukkan pada Tabel 3.5.
+
+Tabel 3.3 Status Perilaku NPC
+No
+Status NPC
+Deskripsi
+
+Idle
+NPC berada pada kondisi normal dan belum terdapat ancaman
+
+WaitForHelp
+NPC menunggu bantuan ketika jalur evakuasi belum aman atau belum ada interaksi pemain
+
+FollowPlayer
+NPC mengikuti pemain menuju jalur evakuasi
+
+Evacuate
+NPC bergerak menuju titik kumpul melalui jalur yang tersedia
+
+
+
+Data Skenario Kebakaran
+
+Data skenario kebakaran merupakan kumpulan variabel yang menggambarkan kondisi selama simulasi berlangsung. Variabel tersebut digunakan sebagai dasar dalam proses evaluasi Behavior Tree untuk menentukan perilaku NPC.
+Tabel 3.4 Data Skenario Kebakaran
+No
+Variabel
+Tipe Data
+Keterangan
+
+AlarmActive
+Boolean
+Status alarm kebakaran (aktif/tidak aktif)
+
+FireDistance
+Float
+Jarak NPC terhadap sumber api
+
+PathSafe
+Boolean
+Status keamanan jalur evakuasi
+
+PlayerInteraction
+Boolean
+Status interaksi pemain dengan NPC
+
+FireLocation
+Vector/Posisi
+Lokasi munculnya titik api
+
+SimulationTime
+Integer
+Waktu yang tersisa selama simulasi
+
+PanicLevel
+Integer/Float
+Tingkat kepanikan NPC akibat kondisi kebakaran
+
+Variabel pada Tabel 3.6 digunakan sebagai masukan dalam proses evaluasi sehingga NPC dapat menentukan aksi yang sesuai dengan kondisi yang terjadi selama simulasi.
+
+Perancangan Proses (Behavior Tree)
+
+Perancangan proses merupakan tahapan untuk merancang mekanisme pengambilan keputusan yang digunakan oleh Non-Player Character (NPC) pada mini games edukatif simulasi penanganan kebakaran berbasis Roblox. Pada penelitian ini, proses pengambilan keputusan NPC dirancang menggunakan metode Behavior Tree sebagai algoritma utama yang mengatur perilaku NPC berdasarkan kondisi yang terjadi selama simulasi berlangsung.
+Behavior Tree dipilih karena memiliki struktur yang modular, fleksibel, dan mudah dikembangkan sehingga setiap perilaku NPC dapat dipisahkan ke dalam beberapa node yang saling terhubung. Melalui mekanisme tersebut, NPC mampu mengevaluasi kondisi lingkungan secara bertahap sebelum menentukan tindakan yang akan dilakukan. Dengan demikian, perilaku NPC tidak bersifat statis, tetapi dapat berubah secara dinamis sesuai kondisi simulasi kebakaran.
+
+Perancangan Mekanisme Behavior Tree
+
+Mekanisme Behavior Tree pada penelitian ini dirancang untuk mengendalikan perilaku NPC selama simulasi penanganan kebakaran berlangsung. Dalam proses pengambilan keputusan, NPC melakukan evaluasi terhadap beberapa kondisi yang diperoleh dari lingkungan simulasi, yaitu status alarm kebakaran (IsAlarmActive), jarak NPC terhadap sumber api (IsFireVeryNear), keamanan jalur evakuasi (IsPathSafe), status interaksi pemain (HasPlayerInteracted), serta tingkat kepanikan NPC (IsPanicLevelHigh). Setiap kondisi tersebut dievaluasi secara berurutan untuk menentukan aksi yang paling sesuai.
+Proses evaluasi dimulai dari Root Node dan diteruskan ke Selector Node sebagai pengendali utama. Selanjutnya, Condition Node akan memeriksa setiap kondisi yang terjadi pada lingkungan simulasi. Berdasarkan hasil evaluasi tersebut, NPC akan menjalankan Action Node yang sesuai, seperti menunggu bantuan (WaitForHelp), mengikuti pemain (FollowPlayer), melakukan evakuasi (Evacuate), atau tetap berada pada kondisi normal (Idle). Pendekatan tersebut memungkinkan NPC memberikan respons yang bersifat reaktif terhadap perubahan kondisi lingkungan karena proses evaluasi dilakukan secara bertingkat berdasarkan prioritas node yang telah ditentukan.
+
+Gambar 3. 2 Flowchart Pengambilan Keputusan NPC Menggunakan Behavior Tree
+
+Gambar 3.2 menunjukkan flowchart pengambilan keputusan NPC menggunakan metode Behavior Tree pada mini games simulasi penanganan kebakaran. Proses diawali dengan pemeriksaan status alarm kebakaran (IsAlarmActive) sebagai pemicu utama simulasi. Apabila alarm tidak aktif, NPC akan tetap berada pada kondisi Idle. Sebaliknya, apabila alarm aktif, sistem akan mengevaluasi jarak NPC terhadap sumber api (IsFireVeryNear). Jika api berada pada radius bahaya, NPC akan segera melakukan Evacuate menuju jalur evakuasi.
+Apabila api tidak berada pada radius bahaya, sistem selanjutnya mengevaluasi keamanan jalur evakuasi (IsPathSafe). Jika jalur evakuasi tidak aman, NPC akan menjalankan aksi WaitForHelp. Namun, apabila jalur evakuasi aman, sistem akan memeriksa apakah pemain telah berinteraksi dengan NPC (HasPlayerInteracted). Jika interaksi telah dilakukan, NPC akan menjalankan aksi FollowPlayer untuk mengikuti pemain menuju jalur evakuasi. Sebaliknya, apabila belum terjadi interaksi, sistem akan mengevaluasi tingkat kepanikan NPC (IsPanicLevelHigh). NPC dengan tingkat kepanikan tinggi akan melakukan Evacuate, sedangkan NPC dengan tingkat kepanikan rendah akan tetap berada pada kondisi WaitForHelp. Mekanisme tersebut memungkinkan NPC memberikan respons yang sesuai terhadap perubahan kondisi lingkungan selama simulasi berlangsung.
+
+Tabel 3.5 Komponen Node pada Behavior Tree
+No
+Node
+Jenis Node
+Fungsi
+1
+Root
+Root Node
+Titik awal proses evaluasi pada Behavior Tree
+2
+Selector
+Selector Node
+Memilih cabang perilaku berdasarkan prioritas
+3
+Sequence
+Sequence Node
+Menjalankan kondisi dan aksi secara berurutan hingga proses evaluasi selesai atau salah satu kondisi tidak terpenuhi
+4
+IsAlarmActive
+Condition Node
+Memeriksa apakah alarm kebakaran aktif
+5
+IsFireVeryNear
+Condition Node
+Memeriksa apakah api berada dalam radius bahaya
+6
+IsPathSafe
+Condition Node
+Memeriksa apakah jalur evakuasi aman
+7
+HasPlayerInteracted
+Condition Node
+Memeriksa apakah pemain telah berinteraksi dengan NPC
+8
+IsPanicLevelHigh
+Condition Node
+Memeriksa apakah tingkat kepanikan NPC berada pada kategori tinggi
+9
+WaitForHelp
+Action Node
+NPC menunggu bantuan
+10
+FollowPlayer
+Action Node
+NPC mengikuti pemain menuju jalur evakuasi
+11
+Evacuate
+Action Node
+NPC melakukan evakuasi menuju titik kumpul
+12
+Idle
+Action Node
+NPC berada dalam kondisi normal
+
+Tabel 3.7 menjelaskan komponen-komponen node yang digunakan dalam implementasi Behavior Tree pada penelitian ini. Root Node berfungsi sebagai titik awal proses evaluasi, sedangkan Selector Node digunakan untuk memilih cabang perilaku berdasarkan kondisi yang pertama kali terpenuhi. Sequence Node mengatur pelaksanaan kondisi dan aksi secara berurutan sesuai alur Behavior Tree. Selanjutnya, Condition Node digunakan untuk mengevaluasi kondisi lingkungan, seperti status alarm kebakaran, kedekatan NPC terhadap sumber api, keamanan jalur evakuasi, status interaksi pemain, dan tingkat kepanikan NPC. Berdasarkan hasil evaluasi tersebut, Action Node menentukan perilaku akhir NPC, yaitu Idle, WaitForHelp, FollowPlayer, atau Evacuate. Kombinasi seluruh node tersebut membentuk mekanisme pengambilan keputusan NPC yang mampu beradaptasi terhadap kondisi yang terjadi selama simulasi penanganan kebakaran.
+
+Perancangan Tampilan
+
+Perancangan tampilan merupakan tahap untuk menggambarkan rancangan visual mini games edukatif simulasi penanganan kebakaran sebelum proses implementasi pada Roblox Studio. Perancangan ini bertujuan memberikan gambaran mengenai alur permainan serta antarmuka yang akan digunakan oleh pemain selama simulasi berlangsung. Pada penelitian ini, perancangan tampilan terdiri atas storyboard sebagai ilustrasi alur permainan dan wireframe antarmuka sebagai rancangan tampilan awal sebelum diimplementasikan.
+
+Storyboard
+
+Storyboard digunakan untuk menggambarkan urutan kejadian yang dialami pemain selama mengikuti mini games simulasi penanganan kebakaran. Storyboard membantu memvisualisasikan alur permainan sehingga proses implementasi pada Roblox Studio dapat dilakukan sesuai dengan skenario yang telah dirancang.
+
+
+Gambar 3. 3 Storyboard Mini games Edukatif Simulasi Penanganan Kebakaran
+
+Berdasarkan Gambar 3.3, alur permainan dimulai ketika pemain mendekati APAR yang berada di lantai satu gedung dan melakukan interaksi untuk memulai mini games. Setelah interaksi dilakukan, pemain dipindahkan ke lantai empat sebagai lokasi dimulainya simulasi kebakaran. Alarm kebakaran kemudian aktif dan muncul beberapa titik api yang harus dipadamkan menggunakan APAR. Setelah api berhasil dipadamkan, pemain membantu NPC melakukan evakuasi melalui jalur evakuasi menuju pintu darurat hingga mencapai titik kumpul. Rangkaian aktivitas tersebut menggambarkan keseluruhan skenario permainan yang menjadi dasar implementasi mini games simulasi penanganan kebakaran.
+
+
+
+Wireframe Antarmuka
+
+Wireframe antarmuka digunakan sebagai rancangan awal tampilan antarmuka yang muncul ketika pemain akan memulai mini games simulasi kebakaran. Wireframe berfungsi sebagai acuan dalam proses implementasi antarmuka pada Roblox Studio sehingga informasi yang disampaikan kepada pemain dapat tersusun dengan jelas sebelum permainan dimulai.
+
+Gambar 3.4 Wireframe Antarmuka Mini games Simulasi Kebakaran
+Gambar 3.4 menunjukkan rancangan antarmuka berupa jendela pop-up yang menampilkan informasi mengenai mini games simulasi kebakaran. Antarmuka ini berisi deskripsi singkat simulasi, tujuan permainan yang meliputi memadamkan api menggunakan APAR, membantu NPC melakukan evakuasi, serta mengikuti jalur evakuasi hingga mencapai titik kumpul. Selain itu, terdapat informasi singkat mengenai prosedur keselamatan yang harus dipatuhi selama permainan berlangsung dan sebuah tombol "Mulai Simulasi" yang digunakan pemain untuk memulai mini games.
+
+
+
+Perancangan Tampilan Lingkungan Simulasi
+
+Perancangan tampilan lingkungan simulasi digunakan sebagai acuan visual dalam membangun lingkungan mini games edukatif simulasi penanganan kebakaran pada Roblox Studio. Perancangan ini mencakup tampilan eksterior dan interior Gedung Fakultas Teknik Universitas Mulawarman yang digunakan sebagai lingkungan utama dalam simulasi. Tampilan lingkungan dirancang berdasarkan karakteristik bangunan yang menjadi objek penelitian dengan mempertimbangkan bentuk bangunan, area akses masuk, ruang dalam, serta jalur pergerakan pemain dan NPC.
+
+Gambar 3.5 Perancangan Tampilan Eksterior Gedung Baru Fakultas Teknik
+Gambar 3.5 menunjukkan rancangan tampilan eksterior Gedung Baru Fakultas Teknik yang digunakan sebagai acuan dalam pembangunan lingkungan luar pada mini games. Tampilan eksterior terdiri atas dua massa utama bangunan, yaitu Lecture Building dan Laboratory Building, yang dihubungkan oleh area akses utama di bagian tengah. Bagian depan bangunan dilengkapi dengan tangga utama dan area terbuka yang digunakan sebagai akses menuju gedung. Rancangan ini menjadi dasar dalam menyesuaikan bentuk dan susunan lingkungan luar pada simulasi 3D. 
+
+
+Gambar 3.6 Perancangan Tampilan Interior Gedung Baru Fakultas Teknik
+Gambar 3.6 menunjukkan rancangan tampilan interior Gedung Baru Fakultas Teknik yang digunakan sebagai acuan dalam pembangunan lingkungan dalam mini games. Rancangan interior meliputi area lobi, koridor, pintu ruangan, serta beberapa fasilitas pendukung yang terdapat di dalam gedung. Koridor menjadi salah satu jalur utama pergerakan pemain dan NPC selama simulasi, khususnya pada proses evakuasi menuju jalur keluar. Rancangan ini digunakan sebagai pedoman untuk membangun lingkungan interior agar sesuai dengan alur permainan dan skenario kebakaran yang telah dirancang. 
+
+Perancangan Pengujian
+
+Perancangan pengujian pada penelitian ini bertujuan untuk memastikan bahwa mini games edukatif simulasi penanganan kebakaran berbasis Roblox yang dikembangkan telah berfungsi sesuai dengan rancangan dan layak digunakan oleh pengguna. Pengujian dilakukan dalam dua tahap, yaitu pengujian fungsionalitas menggunakan metode Black Box Testing dan pengujian penerimaan pengguna menggunakan kuesioner berbasis Skala Likert.
+Tahap pertama adalah Black Box Testing, yang dilakukan untuk memverifikasi apakah seluruh fitur dan fungsi pada mini games berjalan sesuai dengan skenario yang telah dirancang. Pengujian ini berfokus pada aspek fungsional tanpa memperhatikan struktur kode program di baliknya. Fitur yang diuji meliputi aktivasi simulasi kebakaran, deteksi alarm, respons NPC berbasis Behavior Tree, penggunaan APAR, interaksi pemain dengan NPC, serta proses evakuasi menuju titik kumpul. Setiap fungsi yang diuji akan dicatat hasilnya dalam tabel pengujian dengan keterangan “Berhasil” atau “Tidak Berhasil”, sehingga apabila ditemukan ketidaksesuaian dapat segera dilakukan perbaikan sebelum media digunakan oleh pengguna.
+Tabel 3.6 Pengujian Black Box Testing
+No
+Fitur yang Diuji
+Skenario Pengujian
+Hasil yang Diharapkan
+Kriteria Keberhasilan
+Keterangan
+1
+Aktivasi Simulasi Kebakaran
+Pemain memulai simulasi
+Simulasi kebakaran aktif
+Simulasi dimulai dengan benar
+Berhasil/Tidak
+2
+Deteksi Alarm Kebakaran
+Alarm kebakaran aktif
+NPC mendeteksi kondisi bahaya
+NPC merespons alarm
+Berhasil/Tidak
+3
+Perilaku NPC Idle
+Tidak ada kondisi darurat
+NPC berada pada kondisi normal
+NPC tetap Idle
+Berhasil/Tidak
+4
+Perilaku NPC Evakuasi
+Api berada di dekat NPC
+NPC bergerak menuju jalur evakuasi
+NPC mengikuti jalur aman
+Berhasil/Tidak
+5
+Perilaku NPC Menunggu Bantuan
+Alarm aktif tanpa interaksi pemain
+NPC menjalankan aksi WaitForHelp
+NPC tetap menunggu bantuan
+Berhasil/Tidak
+6
+Perilaku NPC Mengikuti Pemain
+Pemain membantu NPC
+NPC mengikuti pemain
+NPC bergerak mengikuti pemain
+Berhasil/Tidak
+7
+Penggunaan APAR
+Pemain menggunakan APAR pada sumber api
+Api berhasil dipadamkan
+Api padam sesuai mekanisme
+Berhasil/Tidak
+8
+Proses Evakuasi
+Pemain dan NPC mencapai titik kumpul
+Simulasi selesai
+Sistem menampilkan kondisi berhasil
+Berhasil/Tidak
+
+Tahap kedua adalah User Acceptance Testing (UAT) yang dilakukan melalui penyebaran kuesioner kepada 20–30 mahasiswa Universitas Mulawarman yang dipilih menggunakan teknik purposive sampling, yaitu pemilihan responden berdasarkan pertimbangan tertentu, seperti mahasiswa yang terbiasa menggunakan platform game atau pernah mengikuti simulasi keselamatan. Penilaian menggunakan Skala Likert dengan rentang nilai 1 sampai 5, di mana nilai 1 menunjukkan Sangat Tidak Setuju dan nilai 5 menunjukkan Sangat Setuju.
+
+Tabel 3.7 Rentang Penilaian Skala Likert
+Keterangan
+Skor
+Sangat Setuju (SS)
+5
+Setuju (S)
+4
+Netral (N)
+3
+Tidak Setuju (TS)
+2
+Sangat Tidak Setuju (STS)
+1
+
+Kuesioner terdiri atas 10 pernyataan yang bertujuan untuk mengukur pengalaman pengguna terkait kemudahan penggunaan, respons perilaku NPC, kejelasan simulasi, interaksi permainan, serta efektivitas pembelajaran mengenai prosedur penanganan kebakaran.
+
+Tabel 3.8 Kuesioner Pengalaman Pengguna
+No
+Daftar Pernyataan
+SS
+S
+N
+TS
+STS
+
+Petunjuk dan tujuan mini games mudah dipahami.
+
+
+
+
+
+
+Kontrol permainan mudah digunakan selama simulasi.
+
+
+
+
+
+
+NPC memberikan respons yang sesuai ketika terjadi kondisi kebakaran.
+
+
+
+
+
+
+Perilaku NPC membantu menggambarkan proses evakuasi dalam simulasi.
+
+
+
+
+
+
+Alur simulasi kebakaran mudah dipahami dari awal hingga akhir permainan.
+
+
+
+
+
+
+Informasi mengenai penggunaan APAR dan proses evakuasi disampaikan dengan jelas.
+
+
+
+
+
+
+Interaksi dengan APAR dapat dilakukan dengan mudah sesuai tujuan permainan.
+
+
+
+
+
+
+Interaksi dengan NPC berjalan dengan baik selama simulasi berlangsung.
+
+
+
+
+
+
+Simulasi membantu saya memahami langkah dasar penanganan kebakaran.
+
+
+
+
+
+
+Simulasi meningkatkan pemahaman saya tentang pentingnya mengikuti jalur evakuasi hingga titik kumpul.
+
+
+
+
+
+Total
+
+
+
+
+
+
+Total × Skala
+
+
+
+
+
+
+Jumlah Skala
+
+
+
+
+
+
+Jumlah Skor
+
+
+
+
+
+
+Persentase (%)
+
+
+
+
+
+
+
+Hasil kuesioner kemudian dihitung berdasarkan skor yang diperoleh dari seluruh responden dan dianalisis menggunakan metode yang telah dijelaskan pada Subbab 2.9 User Acceptance Testing (UAT). Nilai yang diperoleh selanjutnya diinterpretasikan untuk mengetahui tingkat penerimaan pengguna terhadap mini games edukatif simulasi penanganan kebakaran berbasis Roblox yang dikembangkan.
+
+
+ Waktu dan Tempat Penelitian
+
+Penelitian ini akan dilaksanakan pada bulan …… sampai bulan ……. tahun ….. Adapun tempat pelaksanaan penelitian dilakukan di Instansi/Lembaga/Perusahaan …………………. , sedangkan analisis data dilakukan pada Laboratorium ……………, Fakultas Teknik, Universitas Mulawarman.
+Berbagai aktivitas dan kegiatan dalam penelitian ini dapat terjadwal dan selesai sesuai dengan waktu yang telah ditentukan, maka perlu disusun dalam suatu jadwal penelitian yang dapat dilihat pada Tabel 3.x.
+
+
+
+
+
+
+Tabel 3.x Jadwal Penelitian
+No
+Kegiatan
+Bulan (Tahun 2026)
+
+
+Jan
+Feb
+Mar
+Apr
+Mei
+Juni 
+Juli 
+Agust
+I
+Tahap Persiapan Penelitian
+
+Pembuatan Proposal
+
+
+
+
+
+
+
+
+
+Seminar Proposal
+
+
+
+
+
+
+
+
+
+Perbaikan Seminar Proposal
+
+
+
+
+
+
+
+
+
+…
+
+
+
+
+
+
+
+
+II
+Tahap Pelaksanaan
+
+Pengumpulan Data
+
+
+
+
+
+
+
+
+
+Mengolah Data dan analisis
+
+
+
+
+
+
+
+
+
+…
+
+
+
+
+
+
+
+
+III
+Tahap Penyusunan Laporan
+
+Seminar Hasil
+
+
+
+
+
+
+
+
+
+Perbaikan Seminar Hasil
+
+
+
+
+
+
+
+
+
+Penulisan Artikel Ilmiah
+
+
+
+
+
+
+
+
+
+Seminar Akhir
+
+
+
+
+
+
+
+
+
+Perbaikan Seminar Akhir
+
+
+
+
+
+
+
+
+
+…
+
+
+
+
+
+
+
+
+
+
+DAFTAR PUSTAKA
+
+Aaboud, G., Smouni, M., Saoudi, T., & Boudi, E. (2025). Virtual Reality Simulations For Effective Fire Safety Training In Passenger Trains. International Journal Of Advances In Soft Computing And Its Applications, 17(2), 67–82. Https://Doi.Org/10.15849/Ijasca.250730.04
+Alhasan, K., Alhasan, K., & Hashimi, S. Al. (2025). Roblox In Higher Education: Opportunities, Challenges, And Future Directions For Multimedia Learning. Https://Doi.Org/10.58014/Aubh.28218212.V1
+Amzalag,  Meital, Kadusi,  Dorin, & Peretz,  Shimon. (2024). Enhancing Academic Achievement And Engagement Through Digital Game-Based Learning: An Empirical Study On Middle School Students. Journal Of Educational Computing Research, 62(5), 989–1013. Https://Doi.Org/10.1177/07356331241236937
+Ardiansyah, R., Putra, Y., & Mashuri, C. (2024). Rancang Bangun Digital Learning System (Dls) Berbasis Gamifikasi Menggunakan Metode Game Development Life Cycle (Gdlc).
+Barz,  Nathalie, Benick,  Manuela, Dörrenbächer-Ulrich,  Laura, & Perels,  Franziska. (2024). The Effect Of Digital Game-Based Learning Interventions On Cognitive, Metacognitive, And Affective-Motivational Learning Outcomes In School: A Meta-Analysis. Review Of Educational Research, 94(2), 193–227. Https://Doi.Org/10.3102/00346543231167795
+Bata, J., & Defira, L. I. (2023). Klik: Kajian Ilmiah Informatika Dan Komputer Pengembangan Gim Simulasi Jalur Evakuasi Bencana Kebakaran Di Kampus Menggunakan Metode Addie. Media Online, 4(3). Https://Doi.Org/10.30865/Klik.V4i3.1459
+Bata, J., Sutanto, D. D., Ghozali, T., Wijayanti, L., Mulyadi, M., & Kartawidjaja, M. A. (2025). Pengembangan Game Kesiapsiagaan Kebakaran Di Kampus Menggunakan Metode Mdlc Untuk Meningkatkan Kesadaran Mahasiswa. Jurnal Pendidikan Dan Teknologi Indonesia, 5(2). Https://Doi.Org/10.52436/1.Jpti.576
+Bpbd Dki Catat 1.810 Bencana Terjadi Sepanjang 2024. (N.D.). Retrieved April 26, 2026, From Https://M.Beritajakarta.Id/Read/142306/Bpbd-Dki-Catat-1810-Bencana-Terjadi-Sepanjang-2024
+Chen, S. Y., & Chien, W. C. (2022). Immersive Virtual Reality Serious Games With Dl-Assisted Learning In High-Rise Fire Evacuation On Fire Safety Training And Research. Frontiers In Psychology, 13. Https://Doi.Org/10.3389/Fpsyg.2022.786314
+De Carvalho, P. V. R., Ranauro, D. O., Mol, G. M. S. A., Jatoba, A., De Siqueira, A. P. L., & De Abreu Mol, A. C. (2022). Using A Serious Game In Public Schools For Training Fire Evacuation Procedures. International Journal Of Serious Games, 9(3), 125–139. Https://Doi.Org/10.17083/Ijsg.V9i3.484
+Fu, Y., & Li, Q. (2024). A Virtual Reality–Based Serious Game For Fire Safety Behavioral Skills Training. International Journal Of Human–Computer Interaction, 40(19), 5980–5996. Https://Doi.Org/10.1080/10447318.2023.2247585
+Gamer Di Indonesia Terbesar Di Asia, Kemenparekraf Apresiasi Perpres Industri Gim Nasional. (N.D.). Retrieved April 26, 2026, From Https://Www.Inews.Id/Travel/Destinasi/Gamer-Di-Indonesia-Terbesar-Di-Asia-Kemenparekraf-Apresiasi-Perpres-Industri-Gim-Nasional
+Huang, T., Feng, Z., Paes, D., Ying, F., Zhao, X., Kinateder, M., Langer, E. R., & Lovreglio, R. (2025). Gamification For Wildfire Education And Safety Training: A Systematic Literature Review And Meta-Analysis. In Journal Of Computer Assisted Learning (Vol. 41, Number 5). John Wiley And Sons Inc. Https://Doi.Org/10.1111/Jcal.70108
+Indonesia Millennial And Gen-Z Report 2024: Gamer Gandrungi Genre | Ggwp. (N.D.). Retrieved April 26, 2026, From Https://Www.Ggwp.Id/Gaming/Others/Indonesia-Millenial-Gen-Z-Report-2024-Gamer-00-183ky-Qlydym
+Iovino, M., Förster, J., Falco, P., Chung, J. J., Siegwart, R., & Smith, C. (2024). Comparison Between Behavior Trees And Finite State Machines. Http://Arxiv.Org/Abs/2405.16137
+Iovino, M., Scukins, E., Styrud, J., Ögren, P., & Smith, C. (2022). A Survey Of Behavior Trees In Robotics And Ai. Robotics And Autonomous Systems, 154, 104096. Https://Doi.Org/10.1016/J.Robot.2022.104096
+Kemal Pasha, M., & Prabowo, A. (2025). Penggunaan Metode Mdlc Dalam Pengembangan Game Visual Novel Anastasia Love Story Berbasis Ren’py. Jurnal Komputer Dan Informatika, 7, 148–155.
+Khasanah, F. N., Untari, D. T., Nurmanto, D., Satria, B., Sukreni, T., & Perdhana, T. S. (2022). Beta Testing Techniques In Non-Functional Testing Of Gamified Learning Applications For Lecture Learning Media During The Covid-19 Pandemic. Journal Of Internet Services And Information Security, 12(4), 197–203. Https://Doi.Org/10.58346/Jisis.2022.I4.014
+Kominfo Klaim Industri Game Di Indonesia Semakin Moncer. (N.D.). Retrieved April 26, 2026, From Https://Tekno.Kompas.Com/Read/2022/10/15/17000057/Kominfo-Klaim-Industri-Game-Di-Indonesia-Semakin-Moncer?
+Lee, J.-M., Kim, J.-Y., & 미디어소프트웨어학과성결대학교. (2024). 지능형 NPC의 행동 메커니즘에 따른 계층적 유한 상태 기계와 행동 트리의 효율성 평가 Efficiency Evaluation Of Hierarchical Finite-State Machines And Behavior Trees According To Behavior Mechanism Of Intelligent NPCs. 24(2), 2289. Https://Doi.Org/10.7236/Jiibc.2024.24.2.113
+Lonteng, A., Montolalu, C., Tenda, E., & Ketaren, E. (2024). Pengembangan Game “Esa Saga : Legacy Of The Brave” Menggunakan Game Development Life Cycle. Http://Ejournal.Stmik-Time.Ac.Id
+Marchelputra, T. S., Haryanto, H., Hastuti, K., Kadiasti, R., Nuswantoro Semarang, D., & Dian Nuswantoro Semarang, U. (2023). Non-Playable Character (NPC) Based On Behaviour Tree For Enhanced Immersive Experience In The Serious Game “Warik’s Adventure.” In Journal Of Applied Informatics And Computing (Jaic) (Vol. 7, Number 2). Http://Jurnal.Polibatam.Ac.Id/Index.Php/Jaic
+Menora, T., Primasari, C. H., Wibisono, Y. P., Sidhi, T. A. P., Setyohadi, D. B., & Cininta, M. (2023). Implementasi Pengujian Alpha Dan Beta Testing Pada Aplikasi Gamelan Virtual Reality (Vol. 3, Number 1).
+Mystakidis, S., Besharat, J., Papantzikos, G., Christopoulos, A., Stylios, C., Agorgianitis, S., & Tselentis, D. (2022). Design, Development, And Evaluation Of A Virtual Reality Serious Game For School Fire Preparedness Training. Education Sciences, 12(4). Https://Doi.Org/10.3390/Educsci12040281
+Naufal, M. R., Haryanto, H., Hastuti, K., & Nathania, N. V. (2024). Aktivitas Dinamis Pada Appreciative Game “Warik The Adventurer” Berbasis Finite State Machine. Journal Of Applied Computer Science And Technology (Jacost). Jacost, 5, 26–32.
+Partlan, N., Soto, L., Howe, J., Shrivastava, S., Seif El-Nasr, M., & Marsella, S. (2022, September 5). Evolvingbehavior: Towards Co-Creative Evolution Of Behavior Trees For Game NPCs. Acm International Conference Proceeding Series. Https://Doi.Org/10.1145/3555858.3555896
+Santi, P. A. D. A., Afwani, R., Albar, Moh. A., Anjarwani, S. E., & Mardiansyah, A. Z. (2022). Black Box Testing With Equivalence Partitioning And Boundary Value Analysis Methods (Study Case: Academic Information System Of Mataram University). In Proceedings Of The First Mandalika International Multi-Conference On Science And Engineering 2022, Mimse 2022 (Informatics And Computer Science) (Pp. 207–219). Atlantis Press International Bv. Https://Doi.Org/10.2991/978-94-6463-084-8_19
+Seo, J., & Yang, U. (2020). Behavior Tree-Based Scenario Development Technology To Induce Various Experiences Of Vr Content. Journal Of Multimedia Information System, 7(4), 263–268. Https://Doi.Org/10.33851/Jmis.2020.7.4.263
+Simanjuntak, S. M., & Putra, I. N. T. A. (2025). Analisis Usability Pada Game Mobile Growtopia Menggunakan Metode System Usability Scale (Sus). Jurnal Informatika Dan Teknik Elektro Terapan, 13(2). Https://Doi.Org/10.23960/Jitet.V13i2.6446
+Snopková, D., Ugwitz, P., Stachoň, Z., Hladík, J., Juřík, V., Kvarda, O., & Kubíček, P. (2022). Retracing Evacuation Strategy: A Virtual Reality Game-Based Investigation Into The Influence Of Building’s Spatial Configuration In An Emergency. Spatial Cognition And Computation, 22(1–2), 30–50. Https://Doi.Org/10.1080/13875868.2021.1913497
+Sulistia, B., Marta, R., Asmara, D., Mhlanga, D., & Tsoy, D. (2025). Augmented Reality-Based Interactive Educational Media For Light Fire Extinguisher Training And Enhanced Emergency Preparedness. Journal Of Hypermedia & Technology-Enhanced Learning, 3(2), 144–164. Https://Doi.Org/10.58536/J-Hytel.181
+Tinterri, A., Guerriero, M. A., & Dipace, A. (2023). Constructionism And Game-Making For Learning In The Age Of Roblox. An Analysis Of Current Evidence And Future Perspectives Costruzionismo E Game-Making Per L’apprendimento Nell’era Di Roblox. Un’analisi Delle Attuali Evidenze E Delle Prospettive Future. Https://Doi.Org/10.32043/Gsd.V7i2.866
+Uludağlı, M. Ç., & Oğuz, K. (2023). Non-Player Character Decision-Making In Computer Games. Artificial Intelligence Review, 56(12), 14159–14191. Https://Doi.Org/10.1007/S10462-023-10491-7
+Wang, Y., Ge, J., & Comber, A. (2025). Modelling Emergent Pedestrian Evacuation Behaviors From Intelligent, Game-Playing Agents. Journal Of Computational Social Science, 8(2). Https://Doi.Org/10.1007/S42001-025-00369-9
+Willem Menzemer, L., Marie Vad Karsten, M., Gwynne, S., Frederiksen, J., & Ronchi, E. (2024). Fire Evacuation Training: Perceptions And Attitudes Of The General Public. Safety Science, 174, 106471. Https://Doi.Org/10.1016/J.Ssci.2024.106471
+Zaliluddin, D., Bastian, A., & Afrenda, R. A. (2026). Penerapan Metode Ux Honeycomb Dan Game Development Life Cycle Pada Game Future Warfare. Infotech Journal, 12(1), 59–66. Https://Doi.Org/10.31949/Infotech.V12i1.16914
