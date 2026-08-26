@@ -1,90 +1,99 @@
-# 📋 CATATAN AUDIT & PANDUAN REVISI PROPOSAL SKRIPSI
+# 📋 LAPORAN AUDIT KOMPREHENSIF & PANDUAN REVISI PROPOSAL SKRIPSI
 
 **Kepada Mahasiswa:** Ahmad Dhafin (NIM: 2209106122)  
 **Program Studi:** S1 Informatika, Fakultas Teknik, Universitas Mulawarman  
+**Dosen Pembimbing:** Anton Prafanto, S.Kom., M.T.  
 **Judul Proposal:** *Pengembangan Mini Game Edukatif Simulasi Penanganan Kebakaran Berbasis Roblox Menggunakan Behavior Tree*  
-**Tanggal Audit:** 26 Agustus 2026  
-**Status Evaluasi:** **Diterima dengan Catatan Revisi (Perlu Perbaikan Sebelum Seminar Proposal)**
+**Tanggal Evaluasi:** 26 Agustus 2026  
+**Status Naskah:** **Diterima dengan Catatan Revisi (Wajib Diperbaiki Sebelum Seminar Proposal)**
 
 ---
 
-## 🌟 1. Apresiasi & Catatan Positif
+## 🌟 1. Apresiasi & Kekuatan Naskah
 
-Secara keseluruhan, draf proposal kamu memiliki fondasi yang **sangat baik dan menarik**:
-1. **Topik Sangat Relevan & Aplikatif:** Penggunaan Roblox Studio untuk simulasi keselamatan gedung baru FT UNMUL merupakan pendekatan modern yang efisien biaya (tanpa ketergantungan perangkat VR mahal).
-2. **Kajian Literatur (Bab 2) Sangat Kuat:** Ringkasan 10 penelitian terdahulu dan **Tabel 2.1 (Matriks Perbedaan Penelitian)** disusun dengan sangat rapi dan berhasil menunjukkan *research gap* yang jelas.
-3. **Penyusunan Alur Cerita & Lingkungan Jelas:** Konsep lingkungan 3D eksterior/interior gedung dan perancangan *wireframe* sudah memberikan gambaran simulasi yang konkret.
-
-Namun, ada beberapa aspek **metodologi AI, konsistensi data, dan kerapian dokumen** yang harus kamu perbaiki agar proposal ini kokoh saat diuji di Seminar Proposal.
+Secara umum, proposal skripsi ini memiliki konsep yang **sangat menarik dan relevan**:
+1. **Topik Aplikatif & Kontekstual:** Pemanfaatan platform Roblox Studio untuk simulasi tanggap darurat di Gedung Baru Fakultas Teknik UNMUL merupakan langkah cerdas dan efisien biaya tanpa menuntut perangkat VR mahal.
+2. **Kajian Literatur (Bab 2) Kuat:** Perbandingan 10 penelitian terdahulu yang dirangkum dalam matriks perbedaan penelitian berhasil menunjukkan *research gap* yang jelas.
+3. **Perancangan Visual Terstruktur:** Penyusunan *storyboard*, *wireframe*, serta model eksterior/interior 3D memberikan gambaran alur simulasi yang konkret.
 
 ---
 
-## 🚦 2. Ringkasan Status Kesiapan Naskah
+## 🚦 2. Matriks Status Kesiapan Naskah
 
-| Komponen | Status | Catatan Utama |
+| Komponen | Status | Catatan Evaluasi Utama |
 | :--- | :---: | :--- |
-| **Format & Halaman Depan** | ⚠️ *Perlu Perapian* | Hilangkan *Error Bookmark*, lengkapi placeholder template & komentar Word. |
-| **Bab I: Pendahuluan** | ⚠️ *Revisi Sedang* | Sinkronkan kata "performa" pada Rumusan Masalah dengan metode pengujian di Bab 3. |
-| **Bab II: Tinjauan Pustaka** | ✅ *Hampir Siap* | Perbaiki salah nomor gambar di teks dan hilangkan paragraf berulang. |
-| **Bab III: Metodologi & AI** | 🚨 *Revisi Mayor* | Ganti diagram Flowchart biasa (Gambar 3.2) dengan **Diagram Hierarki Behavior Tree yang sesungguhnya**. |
-| **Daftar Pustaka** | ⚠️ *Perlu Perapian* | Sesuaikan kapitalisasi judul dan perbaiki format DOI sesuai kaidah APA 7th. |
+| **Format & Kelengkapan Awal** | ⚠️ *Perlu Perapian* | Hilangkan *Error! Bookmark not defined*, lengkapi *placeholder* & hapus balon komentar Word. |
+| **Bab I: Pendahuluan** | ⚠️ *Revisi Sedang* | Sinkronkan kata judul di latar belakang, perbaiki rumusan masalah vs metode uji, tetapkan istilah *mini game*. |
+| **Bab II: Tinjauan Pustaka** | 🚨 *Revisi Mayor* | Urutkan nomor pada Tabel 2.1 (saat ini meloncat-loncat), kembalikan rumus UAT yang hilang, bersihkan sitasi rusak. |
+| **Bab III: Metodologi & AI** | 🚨 *Revisi Mayor* | Ganti Flowchart Gambar 3.2 dengan Diagram Hierarki *Behavior Tree*, definisikan formula PanicLevel, sinkronkan 4 status NPC, dan lengkapi arsitektur scripting Roblox. |
+| **Daftar Pustaka** | 🚨 *Revisi Mayor* | Hapus referensi yang tidak pernah disitasi (*ghost citations*), lengkapi sitasi yang belum ada di daftar pustaka, dan rapikan format APA 7th. |
 
 ---
 
-## 🔍 3. Rincian Catatan Revisi Bab per Bab
+## 🔍 3. Rincian Catatan Revisi & Solusi Perbaikan Bab per Bab
 
-### 📄 Bagian Awal (Halaman Judul s.d. Daftar Singkatan)
+### 📄 Bagian Awal Naskah (Cover s.d. Daftar Singkatan)
 
-1. **Hilangkan "Error! Bookmark not defined" di Daftar Isi & Daftar Gambar:**
-   * Pada Daftar Isi (hal. iv–v) dan Daftar Gambar (hal. vii), beberapa subbab/gambar masih bertuliskan *Error! Bookmark not defined*.
-   * **Solusi:** Di Microsoft Word, pastikan heading telah ditandai dengan benar, lalu klik kanan pada Daftar Isi > pilih **Update Field** > **Update entire table** sebelum menyimpan ke PDF.
+1. **Hilangkan "Error! Bookmark not defined":**
+   * Pada Daftar Isi (hal. iv–v), Daftar Tabel (hal. vi), dan Daftar Gambar (hal. vii), masih banyak tautan rusak bertuliskan *Error! Bookmark not defined*.
+   * **Solusi:** Di Microsoft Word, pastikan heading telah diatur dengan benar, lalu klik kanan pada Daftar Isi > pilih **Update Field** > **Update entire table**.
 2. **Lengkapi Template Kata Pengantar (Halaman iii):**
-   * Masih terdapat teks bawaan template: *`Nama dan gelar akademik Dekan...`*, *`Nama Dosen Pembimbing...`*, dan *`Samarinda, ........... 2026`*.
-   * Ada balon komentar Word yang ikut tercetak: *`Commented [1]: Menggunakan sapaan Bapak atau Ibu...`*. Pastikan semua komentar di-delete.
+   * Masih terdapat teks bawaan template: *Nama dan gelar akademik Dekan...*, *Nama Dosen Pembimbing...*, dan *Samarinda, ........... 2026*.
+   * Balon komentar Word (*Commented [1]: Menggunakan sapaan Bapak atau Ibu...*) ikut tercetak ke PDF. Hapus seluruh komentar Word sebelum ekspor final.
 3. **Halaman Pengesahan (Halaman ii):**
-   * Isi nama lengkap dosen pembimbing beserta gelar dan tanggal pembahasan.
+   * Lengkapi nama pembimbing I dan II beserta gelar dan tanggal pembahasan rapat.
 4. **Daftar Lampiran (Halaman viii):**
-   * Tertulis *`Lampiran 1 contents 42`*, padahal halaman lampiran belum ada. Jika belum ada lampiran, hapus sementara atau lampirkan instrumen kuesionernya di lembar paling belakang.
+   * Tertulis *Lampiran 1 contents 42*. Jika instrumen kuesioner belum dilampirkan, hapus sementara daftar lampiran atau cantumkan instrumen draft kuesioner di halaman belakang.
 
 ---
 
 ### 📘 BAB I – Pendahuluan
 
-1. **Perbaikan Redaksi Rumusan Masalah (Subbab 1.2, Hal. 4):**
-   * **Masalah:** Pada Rumusan Masalah, kamu menulis kata *"Bagaimana **performa** Behavior Tree..."*. 
-   * **Penjelasan:** Kata *"performa"* menuntut adanya pengujian teknis komputasi (misal: *latency pengambilan keputusan*, *frame rate (FPS)*, atau konsumsi memori script). Sedangkan di Bab 3, pengujian yang kamu lakukan berfokus pada **kesesuaian fungsionalitas (Black Box)** dan **penerimaan pengguna (UAT)**.
-   * **Rekomendasi Revisi Rumusan Masalah:**
+1. **Konsistensi Judul Proposal:**
+   * Di Halaman Judul tertulis: *"BERBASIS ROBLOX MENGGUNAKAN BEHAVIOR TREE"*.
+   * Namun di paragraf penutup Latar Belakang (hal. 4, baris 267) tertulis: *"BERBASIS 3D MENGGUNAKAN BEHAVIOR TREE"*. Kata *Roblox* hilang. Samakan agar konsisten!
+2. **Standarisasi Istilah "Mini Game":**
+   * Pilih salah satu istilah baku dan gunakan secara konsisten di seluruh naskah:
+     - Bahasa Inggris: *mini-game* atau *mini game* (dicetak miring / *italic*).
+     - Bahasa Indonesia: gim mini (tegak).
+     *(Hindari mencampuradukkan Mini games, mini-game, dan mini games tanpa aturan baku).*
+3. **Penyempurnaan Rumusan Masalah (Subbab 1.2, Hal. 4):**
+   * **Masalah:** Rumusan Masalah menggunakan kata *"Bagaimana **performa** Behavior Tree..."*. Kata *"performa"* menuntut adanya pengujian teknis kuantitatif (misal: *latency pengambilan keputusan*, *frame rate FPS*, atau konsumsi memori script). Sedangkan di Bab 3, pengujian kamu berfokus pada **kesesuaian fungsionalitas (Black Box)** dan **penerimaan pengguna (UAT)**.
+   * **Rekomendasi Redaksi:**
      > **1.2 Rumusan Masalah:**  
      > 1. Bagaimana merancang dan mengimplementasikan arsitektur *Behavior Tree* dalam mengendalikan perilaku dinamis *Non-Player Character* (NPC) pada *mini-game* simulasi penanganan kebakaran berbasis Roblox?  
      > 2. Bagaimana hasil pengujian fungsionalitas sistem menggunakan *Black Box Testing* dan tingkat penerimaan pengguna menggunakan *User Acceptance Testing* (UAT) terhadap media simulasi yang dikembangkan?
-2. **Sinkronisasi Tujuan Penelitian (Subbab 1.4, Hal. 5):**
-   * Buat butir-butir Tujuan Penelitian menjawab secara simetris butir-butir Rumusan Masalah di atas.
-3. **Penulisan Istilah Asing:**
-   * Pastikan istilah asing seperti *mini-game*, *Non-Player Character*, *Behavior Tree*, *serious game* dicetak miring (*italic*) secara konsisten di seluruh naskah.
+4. **Penyelarasan Tujuan Penelitian (Subbab 1.4, Hal. 5):**
+   * Rumusan tujuan harus menjawab secara langsung dan simetris butir-butir rumusan masalah di atas.
 
 ---
 
 ### 📗 BAB II – Tinjauan Pustaka
 
-1. **Salah Nomor Gambar pada Teks (Subbab 2.6.1, Hal. 15):**
-   * Di teks tertulis: *"Gambar 2.6 menunjukkan struktur dasar Behavior Tree..."*, padahal caption gambarnya adalah **Gambar 2.1**. Mohon dikoreksi.
-2. **Format Sitasi Rusak di Tengah Kalimat (Subbab 2.7, Hal. 17):**
-   * Tertulis: *"...digunakan sebagai (Lonteng et al., 2024)acuan dalam pengembangan..."*. Rapikan posisinya di akhir kalimat.
-3. **Duplikasi Nama Pengarang (Subbab 2.9, Hal. 18):**
-   * Tertulis *"Aliyah Aliyah et al., 2024"*, perbaiki menjadi *(Aliyah et al., 2024)*.
+1. **🚨 KRUSIAL: Urutan Nomor pada Tabel 2.1 (Perbedaan Penelitian) Berantakan:**
+   * Pada naskah saat ini, nomor urut tabel tersusun: **1, 4, 5, 6, 10, 8, 2, 7, 3, 9**.
+   * Ini kesalahan fatal yang menunjukkan tabel belum dirapikan setelah pemindahan data. **Urutkan kembali menjadi 1 sampai 10 secara berurutan.**
+2. **🚨 Rumus Analisis Data UAT Hilang (Subbab 2.9, Hal. 20):**
+   * Pada teks tertulis keterangan variabel $\bar{x}$, $\sum x$, dan $, namun objek rumus matematikanya kosong / tidak tercetak.
+   * **Wajib Dilengkapi:** Tampilkan rumus perhitungan rata-rata skor Likert:
+     \bar{x} = \frac{\sum x}{n}
+     *(di mana $\bar{x}$ = skor rata-rata, $\sum x$ = jumlah skor responden, $ = total responden)*.
+3. **Salah Nomor Gambar pada Teks (Subbab 2.6.1, Hal. 15):**
+   * Di teks tertulis: *"Gambar 2.6 menunjukkan struktur dasar Behavior Tree..."*, padahal label gambarnya adalah **Gambar 2.1**.
 4. **Paragraf Berulang pada Subbab 2.10 (Black Box Testing, Hal. 20):**
-   * Kalimat *"Teknik yang umum digunakan dalam Black Box Testing meliputi equivalence partitioning, boundary value analysis, dan use case testing..."* tertulis dua kali di paragraf 1 dan awal paragraf 2. Hapus salah satu pengulangannya.
+   * Kalimat *"Teknik yang umum digunakan dalam Black Box Testing meliputi equivalence partitioning, boundary value analysis, dan use case testing..."* tertulis dua kali berturut-turut. Hapus salah satu pengulangannya.
+5. **Format Sitasi Rusak di Tengah Kalimat (Subbab 2.7, Hal. 17):**
+   * Tertulis: *"...digunakan sebagai (Lonteng et al., 2024)acuan dalam pengembangan..."*. Rapikan posisi sitasi di akhir kalimat.
 
 ---
 
 ### 📙 BAB III – Metodologi Penelitian
 
-#### 🚨 1. REVISI UTAMA: Gambar 3.2 Bukan Diagram *Behavior Tree*
-* **Masalah:** Gambar 3.2 (hal. 27) saat ini berupa **Flowchart IF-ELSE bersyarat**, bukan arsitektur pohon hierarki *Behavior Tree*.
-* **Penjelasan Ilmiah:** *Behavior Tree* dievaluasi dari **Root** ke bawah melalui node komposit (**Selector `?`** untuk prioritas, **Sequence `→`** untuk aksi berurutan), di mana setiap cabang memeriksa kondisi (*Condition Node*) lalu mengeksekusi tindakan (*Action Node*).
-* **Solusi Wajib:** Ganti Gambar 3.2 dengan diagram pohon hierarki *Behavior Tree* standar (Mermaid) seperti di bawah ini:
+#### 🚨 1. PERBAIKAN UTAMA: Ganti Flowchart Gambar 3.2 Menjadi Diagram Hierarki Behavior Tree
+* **Masalah:** Gambar 3.2 (hal. 27) saat ini adalah **Flowchart IF-ELSE bersyarat**, bukan diagram pohon hierarki *Behavior Tree*.
+* **Solusi Wajib:** Ganti Gambar 3.2 dengan diagram pohon hierarki *Behavior Tree* standar berikut:
 
-```mermaid
+`mermaid
 graph TD
     %% Styling Classes
     classDef rootStyle fill:#1A202C,stroke:#2D3748,stroke-width:2px,color:#fff,font-weight:bold;
@@ -95,31 +104,37 @@ graph TD
 
     %% Root & Main Selector
     ROOT["<b>[ Root Node ]</b>"]:::rootStyle
-    SEL["<b>? Selector</b><br>(Prioritas Perilaku NPC)"]:::selectorStyle
+    SEL["<b>? Selector</b><br>(Prioritas Evaluasi Kondisi)"]:::selectorStyle
 
-    %% Branch 1: Bahaya Dekat
-    SEQ1["<b>→ Sequence</b><br>Tanggap Bahaya Dekat"]:::sequenceStyle
+    %% Cabang 1: Bahaya Api Sangat Dekat
+    SEQ1["<b>→ Sequence</b><br>Bahaya Api Dekat"]:::sequenceStyle
     COND1["<b>Condition:</b><br>IsFireVeryNear == True"]:::conditionStyle
     ACT1["<b>Action:</b><br>Evacuate (Titik Kumpul)"]:::actionStyle
 
-    %% Branch 2: Ikuti Pemain
+    %% Cabang 2: Interaksi & Bantuan Pemain
     SEQ2["<b>→ Sequence</b><br>Ikuti Arahan Pemain"]:::sequenceStyle
     COND2["<b>Condition:</b><br>HasPlayerInteracted == True"]:::conditionStyle
     ACT2["<b>Action:</b><br>FollowPlayer"]:::actionStyle
 
-    %% Branch 3: Tunggu Bantuan
-    SEQ3["<b>→ Sequence</b><br>Tunggu Bantuan Saat Darurat"]:::sequenceStyle
-    COND3["<b>Condition:</b><br>IsAlarmActive == True"]:::conditionStyle
-    ACT3["<b>Action:</b><br>WaitForHelp"]:::actionStyle
+    %% Cabang 3: Kepanikan Tinggi
+    SEQ3["<b>→ Sequence</b><br>Respon Panik Mandiri"]:::sequenceStyle
+    COND3["<b>Condition:</b><br>IsPanicLevelHigh == True"]:::conditionStyle
+    ACT3["<b>Action:</b><br>Evacuate (Lari Mandiri)"]:::actionStyle
 
-    %% Branch 4: Fallback Idle
+    %% Cabang 4: Alarm Aktif (Menunggu Bantuan)
+    SEQ4["<b>→ Sequence</b><br>Darurat Menunggu Bantuan"]:::sequenceStyle
+    COND4["<b>Condition:</b><br>IsAlarmActive == True"]:::conditionStyle
+    ACT4["<b>Action:</b><br>WaitForHelp"]:::actionStyle
+
+    %% Cabang 5: Fallback Normal
     ACT_IDLE["<b>Action:</b><br>Idle (Kondisi Normal)"]:::actionStyle
 
-    %% Connections
+    %% Hubungan Node
     ROOT --> SEL
     SEL --> SEQ1
     SEL --> SEQ2
     SEL --> SEQ3
+    SEL --> SEQ4
     SEL --> ACT_IDLE
 
     SEQ1 --> COND1
@@ -130,80 +145,124 @@ graph TD
 
     SEQ3 --> COND3
     SEQ3 --> ACT3
-```
 
-> **Cara Membaca Alur Evaluasi (*Tick*):**
-> 1. Pohon dievaluasi secara periodik dari **Root** ke **Selector Node `?`**.
-> 2. Selector mengevaluasi cabang dari **kiri ke kanan** berdasarkan prioritas:
->    - **Prioritas 1 (Bahaya Dekat):** Jika `IsFireVeryNear == True`, NPC langsung melakukan aksi `Evacuate`.
->    - **Prioritas 2 (Interaksi Pemain):** Jika pemain mengajak/berinteraksi (`HasPlayerInteracted == True`), NPC menjalankan `FollowPlayer`.
->    - **Prioritas 3 (Alarm Aktif):** Jika alarm menyala tapi belum ada interaksi (`IsAlarmActive == True`), NPC menjalankan `WaitForHelp`.
->    - **Prioritas 4 (Fallback):** Jika semua kondisi di atas False (tidak ada kebakaran), NPC tetap berada pada status `Idle`.
+    SEQ4 --> COND4
+    SEQ4 --> ACT4
+`
 
-#### 2. Sinkronkan Jumlah State / Status NPC (Bab 2 vs Bab 3)
-* Di Bab 2 (Tabel 2.1 baris 8, hal. 11), kamu menyebutkan *"enam (6) state perilaku"*.
-* Di Bab 3 (Tabel 3.3, hal. 24), kamu hanya menuliskan **4 status**: `Idle`, `WaitForHelp`, `FollowPlayer`, dan `Evacuate`.
-* *Pastikan jumlahnya konsisten di seluruh bab.*
+> **Logika Eksekusi (*Tick Evaluation*):**
+> Evaluasi dilakukan periodik dari kiri ke kanan:
+> 1. **Prioritas 1 (Bahaya Api Dekat):** Jika IsFireVeryNear == True, NPC langsung melakukan aksi Evacuate (menyelamatkan diri ke titik kumpul terdekat).
+> 2. **Prioritas 2 (Interaksi Pemain):** Jika pemain mengajak/berinteraksi (HasPlayerInteracted == True), NPC menjalankan FollowPlayer.
+> 3. **Prioritas 3 (Kepanikan Tinggi):** Jika kepanikan tinggi (IsPanicLevelHigh == True), NPC otomatis menjalankan Evacuate.
+> 4. **Prioritas 4 (Alarm Aktif):** Jika alarm aktif namun belum ada interaksi (IsAlarmActive == True), NPC menjalankan WaitForHelp.
+> 5. **Prioritas 5 (Fallback):** Jika semua kondisi di atas False, NPC berstatus Idle.
 
-#### 3. Perbaiki Nomor Referensi Tabel di Paragraf Penjelas
-Periksa kembali teks penjelas tabel yang tidak cocok dengan label tabel aslinya:
+---
+
+#### 🚨 2. Definisi & Aturan Variabel PanicLevel
+* **Masalah:** Di Tabel 3.4 dan Tabel 3.5 terdapat node IsPanicLevelHigh, tetapi tidak ada penjelasan mengenai bagaimana nilai kepanikan dihitung.
+* **Solusi Wajib:** Tambahkan penjelasan matematis/logika di Bab 3 mengenai pemicu status PanicLevel:
+  \text{IsPanicLevelHigh} = \begin{cases} \text{True}, & \text{jika } \text{FireDistance} \le 5\,\text{meter} \text{ atau } \text{SimulationTime} \le 60\,\text{detik} \\ \text{False}, & \text{lainnya} \end{cases}
+
+---
+
+#### 3. Sinkronisasi Jumlah State Perilaku NPC (4 Status Konsisten)
+* Di Batasan Masalah (Bab 1) dan Tinjauan Pustaka (Bab 2), kamu menyebutkan *"enam (6) state perilaku"*.
+* Namun di Bab 3 (Tabel 3.3), kamu merancangnya menjadi **4 status**:
+  1. Idle
+  2. WaitForHelp
+  3. FollowPlayer
+  4. Evacuate
+* *Tindakan:* Sesuaikan seluruh naskah di Bab 1 dan Bab 2 agar konsisten menyatakan **4 status perilaku utama NPC**.
+
+---
+
+#### 4. Koreksi Referensi Label Tabel di Teks Penjelas
+Perbaiki nomor referensi tabel pada paragraf penjelas yang salah ketik:
 * Hal. 24: Di teks tertulis *"Tabel 3.5"* ➔ Seharusnya **Tabel 3.3**.
 * Hal. 25: Di teks tertulis *"Tabel 3.6"* ➔ Seharusnya **Tabel 3.4**.
 * Hal. 28: Di teks tertulis *"Tabel 3.7"* ➔ Seharusnya **Tabel 3.5**.
 
-#### 4. Tambahkan Penjelasan Teknis Implementasi Roblox Studio (Bahasa Luau)
-Tambahkan 1–2 paragraf penjelasan singkat di Bab 3 mengenai:
-* Bagaimana logika *Behavior Tree* ini dikodekan di Roblox (misal: apakah membuat script OOP modular sendiri atau memanfaatkan *module script open-source* seperti *BehaviorTree3*).
-* Bagaimana pergerakan NPC saat evakuasi/mengikuti pemain (apakah menggunakan layanan bawaan `PathfindingService` Roblox untuk menghindari rintangan api/objek).
+---
 
-#### 5. Lengkapi Waktu & Tempat Penelitian (Subbab 3.7, Hal. 36–37)
-* Isi titik-titik lokasi penelitian (misal: Gedung Baru FT UNMUL dan Laboratorium Informatika).
-* Ganti judul `Tabel 3.x Jadwal Penelitian` menjadi `Tabel 3.9 Jadwal Penelitian` dan isi kolom rincian kegiatannya secara lengkap.
+#### 5. Tambahkan Spesifikasi Scripting Roblox Studio (Bahasa Luau)
+Tambahkan 1–2 paragraf pada Subbab 3.4 yang menjelaskan:
+1. **Server vs Client Architecture:** Seluruh logika evaluasi *Behavior Tree* dan perubahan state NPC dieksekusi di sisi **Server (Script)** agar posisi dan respons NPC tersinkronisasi antar-pemain.
+2. **Tick Rate & Optimasi Performa:** Evaluasi pohon keputusan (*tick*) dijalankan dengan interval waktu berkala (misal: setiap {,}2$ detik menggunakan 	ask.wait(0.2) di dalam perulangan while true do), bukan di setiap frame RunService.Heartbeat, demi mencegah *server lag*.
+3. **Pathfinding:** Pergerakan fisik NPC saat FollowPlayer dan Evacuate memanfaatkan layanan PathfindingService Roblox untuk menghindari rintangan statis maupun titik api dinamis.
 
 ---
 
-### 📚 Bagian Akhir: Daftar Pustaka
-
-1. **Gunakan Huruf Kecil pada Judul Artikel (*Sentence Case*):**
-   * Standar APA Style mengharuskan judul artikel jurnal/prosiding ditulis dengan huruf kapital hanya di awal kalimat (dan setelah tanda titik dua), bukan di setiap kata.
-   * *Contoh salah:* `Virtual Reality Simulations For Effective Fire Safety Training In Passenger Trains`
-   * *Contoh benar:* `Virtual reality simulations for effective fire safety training in passenger trains`
-2. **Standarisasi Penulisan Tautan DOI / Web:**
-   * Ubah `Https://Doi.Org/...` menjadi huruf kecil `https://doi.org/...`.
-3. **Rapikan Rujukan dari Berita Web / Media:**
-   * Referensi no. 8, 12, 14, dan 19 yang tertulis `(N.D.)` mohon dilengkapi nama instansi/redaksi dan tahun penerbitan yang sesuai.
-4. **Referensi No. 20 (Bahasa Korea):**
-   * Rapikan nama penulis dan gunakan judul versi bahasa Inggrisnya agar terbaca jelas oleh pembaca/penguji.
+#### 6. Lengkapi Bagian Waktu, Tempat, dan Jadwal Penelitian (Subbab 3.7)
+* Ganti titik-titik lokasi penelitian:
+  - *Tempat pelaksanaan:* Gedung Baru Fakultas Teknik Universitas Mulawarman.
+  - *Laboratorium analisis:* Laboratorium Rekayasa Perangkat Lunak / Laboratorium Informatika FT UNMUL.
+* Ganti label Tabel 3.x Jadwal Penelitian menjadi Tabel 3.9 Jadwal Penelitian dan lengkapi detail baris kegiatan yang masih bertanda titik-titik ….
 
 ---
 
-## 🎯 4. Pertanyaan Latihan untuk Persiapan Seminar Proposal
+## 📚 4. Audit Silang Sitasi vs Daftar Pustaka (Cross-Reference Audit)
 
-Coba siapkan jawaban untuk pertanyaan-pertanyaan yang kemungkinan besar ditanyakan penguji ini:
+Setelah diaudit secara menyeluruh, ditemukan banyak ketidaksesuaian antara kutipan di naskah dengan entri di Daftar Pustaka:
 
-1. **"Kenapa memilih Behavior Tree, bukan Finite State Machine (FSM) yang lebih sederhana?"**  
-   *Petunjuk Jawaban:* Jelaskan keunggulan BT dalam aspek modularitas (mudah menambah cabang perilaku baru tanpa merusak transisi logika yang ada) dan reaktivitas terhadap kondisi dinamis (misal api mendadak membesar).
-2. **"Bagaimana cara NPC bergerak mencari rute evakuasi di Roblox saat api menghalangi jalan?"**  
-   *Petunjuk Jawaban:* Jelaskan integrasi antara pengambilan keputusan oleh *Behavior Tree* dengan kalkulasi jalur titik koordinat menggunakan `PathfindingService` di Roblox.
-3. **"Mengapa pengujian edukasi ini dibatasi pada UAT kuesioner, bukan dengan pre-test dan post-test pengetahuan kebakaran?"**  
-   *Petunjuk Jawaban:* Jelaskan bahwa fokus skripsi S1 Informatika ini menitikberatkan pada aspek rekayasa perangkat lunak (*software engineering*) dan implementasi kecerdasan buatan (*AI behavior*), sedangkan pengukuran kognitif psikologis berada di luar ruang lingkup utama penelitian.
+### A. Sitasi di Naskah yang BELUM ADA di Daftar Pustaka (Wajib Ditambahkan):
+1. **Aliyah et al., 2024** *(Bab 2, hal. 20)*
+2. **Wulandari Putri Bahmin et al., 2025** *(Bab 2, hal. 20)*
+3. **Hasugian, 2023** *(Bab 2, hal. 20)*
+4. **Global Web Index (GWI), 2024** *(Bab 1, hal. 1)*
+5. **Kemenkominfo (2022) & Kemenparekraf (2024)** *(Bab 1, hal. 1)* ➔ Masukkan sebagai dokumen resmi instansi pemerintah, bukan sekadar link berita media.
+
+### B. Referensi di Daftar Pustaka yang TIDAK PERNAH DISITASI di Naskah (Wajib Dihapus / Disitir):
+1. **Kemal Pasha, M., & Prabowo, A. (2025)** – Visual Novel Ren'Py (tidak relevan dengan skripsi).
+2. **Naufal, M. R., et al. (2024)** – Game Warik berbasis FSM (tidak disitasi di teks).
+3. **Simanjuntak, S. M., & Putra (2025)** – Analisis Usability SUS (Dhafin menggunakan UAT Likert, bukan SUS).
+
+### C. Data Sitasi yang Tidak Lengkap (Lengkapi Volume, Nomor, Halaman):
+1. **Ardiansyah, R., Putra, Y., & Mashuri, C. (2024)** ➔ Nama jurnal, volume, dan nomor halaman belum ada.
+2. **Lonteng, A., et al. (2024)** ➔ Nama jurnal tidak dicantumkan lengkap.
+3. **Menora, T., et al. (2023)** ➔ Nama jurnal penerbit tidak dicantumkan.
+
+### D. Format Standar APA Style 7th Edition:
+* Tulis judul artikel jurnal dalam bentuk ***Sentence case*** (hanya huruf awal kalimat yang kapital).
+* Standarisasi tautan DOI menggunakan huruf kecil: https://doi.org/....
 
 ---
 
-## ✅ 5. Lembar Checklist Tindak Lanjut Revisi
+## 🎯 5. Pertanyaan Latihan untuk Persiapan Seminar Proposal
 
-Silakan beri tanda centang `[v]` setelah kamu menyelesaikan poin perbaikan berikut:
+Pelajari dan siapkan jawaban untuk pertanyaan kritis yang berpotensi diajukan dosen penguji:
 
-- [ ] Memperbarui seluruh Daftar Isi, Daftar Tabel, dan Daftar Gambar di Word sehingga tidak ada lagi `Error! Bookmark not defined`.
-- [ ] Mengisi nama pembimbing, dekan, dan menghapus komentar Word pada Kata Pengantar.
-- [ ] Menyelaraskan kata pada Rumusan Masalah 1 dan Tujuan Penelitian (menghilangkan ambigu kata *performa* jika tidak ada uji komputasi kuantitatif).
-- [ ] Mengoreksi nomor Gambar 2.1 (sebelumnya tertulis Gambar 2.6 pada teks hal. 15).
-- [ ] Menghilangkan paragraf duplikasi pada Subbab 2.10 (Black Box Testing).
+1. **"Mengapa memilih Behavior Tree dibanding Finite State Machine (FSM) yang lebih sederhana?"**  
+   *Jawaban yang tepat:* *Behavior Tree* memiliki sifat modularitas tinggi dan evaluasi berbasis prioritas (*Selector & Sequence*). Jika ingin menambah perilaku baru (misal: NPC memadamkan api atau NPC pingsan), kita hanya perlu menambah sub-pohon tanpa harus mengubah seluruh matriks transisi state seperti pada FSM.
+2. **"Bagaimana cara NPC menghindari api saat menuju titik evakuasi di Roblox?"**  
+   *Jawaban yang tepat:* Pengambilan keputusan kapan harus evakuasi ditentukan oleh *Behavior Tree*, sedangkan kalkulasi rute fisik di lapangan dilakukan oleh PathfindingService Roblox dengan menambahkan *PathfindingModifier* berbobot tinggi (*cost penalty*) pada area yang terbakar.
+3. **"Dari mana penentuan nilai ambang batas PanicLevel pada NPC?"**  
+   *Jawaban yang tepat:* Nilai ambang batas *PanicLevel* ditentukan secara deterministik berdasarkan radius deteksi bahaya api ($\le 5\text{ meter}$) dan sisa waktu simulasi ($\le 60\text{ detik}$), yang memicu NPC beralih dari status menunggu bantuan menjadi evakuasi mandiri.
+4. **"Mengapa pengujian edukasi ini menggunakan UAT Likert, bukan pre-test dan post-test?"**  
+   *Jawaban yang tepat:* Fokus utama skripsi S1 Informatika ini berada pada aspek rekayasa perangkat lunak (*software engineering*) dan implementasi AI pada game. UAT digunakan untuk menguji aspek penerimaan antarmuka, fungsionalitas, dan keterbacaan pesan edukatif oleh pengguna.
+
+---
+
+## ✅ 6. Lembar Checklist Tindak Lanjut Revisi Mahasiswa
+
+Beri tanda centang [v] jika perbaikan berikut telah selesai dikerjakan:
+
+- [ ] Memperbarui Daftar Isi, Daftar Tabel, dan Daftar Gambar sehingga bebas dari Error! Bookmark not defined.
+- [ ] Menghapus seluruh balon komentar Word dan mengisi nama pembimbing/dekan pada Kata Pengantar.
+- [ ] Menyamakan judul di Halaman Judul dengan paragraf penutup Latar Belakang (mencantumkan *Roblox*).
+- [ ] Menyesuaikan Rumusan Masalah 1 dan Tujuan Penelitian (mengganti kata *performa* dengan perancangan dan pengujian kesesuaian perilaku).
+- [ ] **Mengurutkan nomor urut 1 sampai 10 secara berurutan pada Tabel 2.1.**
+- [ ] Menampilkan rumus perhitungan nilai rata-rata UAT ($\bar{x} = \frac{\sum x}{n}$) di Subbab 2.9.
+- [ ] Menghapus kalimat duplikasi pada Subbab 2.10 (Black Box Testing).
 - [ ] **MENGGANTI Gambar 3.2 dengan Diagram Hierarki Behavior Tree yang benar.**
-- [ ] Menyelaraskan jumlah state NPC antara Bab 2 dan Bab 3 (4 status).
-- [ ] Mengoreksi seluruh nomor referensi tabel pada narasi teks di Bab 3.
+- [ ] Mendefinisikan formula dan aturan status PanicLevel di Bab 3.
+- [ ] Menyelaraskan jumlah status NPC di seluruh bab menjadi **4 status** (Idle, WaitForHelp, FollowPlayer, Evacuate).
+- [ ] Memperbaiki referensi penomoran tabel di narasi Bab 3 (Tabel 3.3, 3.4, 3.5).
+- [ ] Menambahkan penjelasan teknis Luau script (Server script, tick rate {,}2\text{s}$, PathfindingService).
 - [ ] Melengkapi isian Waktu, Tempat, dan Jadwal Penelitian (Tabel 3.9).
-- [ ] Merapikan format APA Style pada Daftar Pustaka (*sentence case* dan `https://doi.org`).
+- [ ] Melakukan sinkronisasi Daftar Pustaka (menambahkan sitasi yang hilang, menghapus *ghost references*, dan melengkapi metadata jurnal).
+- [ ] Mengubah kapitalisasi judul daftar pustaka ke format *sentence case* dan tautan https://doi.org.
 
 ---
-*Semangat menyelesaikan revisinya! Jika ada bagian logika Behavior Tree atau scripting Luau Roblox yang ingin didiskusikan lebih lanjut, silakan tanyakan pada sesi bimbingan berikutnya.*
+*Laporan audit ini disusun sebagai panduan resmi bimbingan skripsi agar draf proposal siap dan matang untuk diajukan ke Seminar Proposal.*
