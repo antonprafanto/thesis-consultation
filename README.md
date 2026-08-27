@@ -32,6 +32,7 @@ Repository ini didedikasikan untuk pengelolaan dokumentasi bimbingan, audit nask
 | 2 | Aji Pangestu | 2009106134 | *Analisis Search Engine Optimization (SEO) pada Website Lintasjejaring.com* | [Laporan Audit & Panduan Revisi](audit_mahasiswa/laporan_audit_proposal_aji_pangestu.md) |
 | 3 | Benny Hernanda Putra | 2009106066 | *Implementasi Convolutional Neural Network Berbasis MobileNetV2 pada Aplikasi Flutter untuk Klasifikasi Nominal Uang Kertas Rupiah* | [Laporan Audit & Evaluasi Kelayakan](audit_mahasiswa/laporan_audit_proposal_benny.md) |
 | 4 | Erika Christy Pagili | 2209106117 | *Perancangan Ulang Design UI/UX Website PT Bina Karya Nuansa Sejahtera Menggunakan Metode Design Thinking* | [Laporan Audit Forensik & Evaluasi Sidang](audit_mahasiswa/laporan_audit_skripsi_erika_christy.md) |
+| 5 | Muhammad Faqih Ajiputra | 2209106114 | *Long Sequence Time-Series Forecasting pada Pasar Valuta Asing EUR/USD Menggunakan Model Informer* | [Laporan Audit Forensik & Evaluasi Sidang](audit_mahasiswa/laporan_audit_skripsi_faqih_ajiputra.md) |
 
 ---
 
