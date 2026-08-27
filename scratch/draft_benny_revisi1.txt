@@ -1,0 +1,1416 @@
+--- PAGE 1 ---
+ 
+ 
+ 
+ 
+PROPOSAL SKRIPSI 
+ 
+ 
+IMPLEMENTASI CONVOLUTIONAL NEURAL 
+NETWORK BERBASIS MOBILENETV2 PADA APLIKASI 
+FLUTTER UNTUK KLASIFIKASI NOMINAL UANG 
+KERTAS RUPIAH 
+ 
+ 
+ 
+ 
+Oleh: 
+ 
+BENNY HERNANDA PUTRA 
+2009106066 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+FAKULTAS TEKNIK 
+UNIVERSITAS MULAWARMAN 
+ 
+ 
+ 
+SAMARINDA 
+2026
+
+--- PAGE 2 ---
+ 
+ii 
+PROPOSAL SKRIPSI 
+ 
+ 
+IMPLEMENTASI CONVOLUTIONAL NEURAL NETWORK 
+BERBASIS MOBILENETV2 PADA APLIKASI FLUTTER 
+UNTUK KLASIFIKASI NOMINAL UANG KERTAS RUPIAH 
+ 
+ 
+ 
+Diajukan sebagai salah satu syarat untuk menyelesaikan pendidikan  
+pada Program Studi Strata 1 Informatika,  
+Fakultas Teknik, Universitas Mulawarman 
+ 
+ 
+ 
+Oleh: 
+ 
+BENNY HERNANDA PUTRA 
+2009106066 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+FAKULTAS TEKNIK 
+UNIVERSITAS MULAWARMAN 
+ 
+ 
+ 
+ 
+SAMARINDA 
+ 2026 
+ 
+ 
+ 
+ 
+PROPOSAL SKRIPSI 
+ 
+
+--- PAGE 3 ---
+ 
+iii 
+IMPLEMENTASI CONVOLUTIONAL NEURAL NETWORK 
+BERBASIS MOBILENETV2 PADA APLIKASI FLUTTER 
+UNTUK KLASIFIKASI NOMINAL UANG KERTAS RUPIAH 
+ 
+ 
+Oleh: 
+BENNY HERNANDA PUTRA 
+2009106066 
+ 
+ 
+ 
+Telah dibahas dalam Rapat Dosen Pembimbing pada [tgl, bln, tahun] dan dinyatakan 
+memenuhi syarat sebagai Skripsi, dengan Dosen Pembimbing: 
+ 
+Pembimbing I, 
+ 
+ 
+ 
+{Nama Dosen Gelar Lengkap 12 pt} 
+NIP {18 digit angka tanpa spasi} 
+Pembimbing II, 
+ 
+ 
+ 
+{Nama Dosen Gelar Lengkap 12 pt} 
+NIP {18 digit angka tanpa spasi} 
+ 
+Koordinator Program Studi S1 Informatika, 
+Fakultas Teknik, Universitas Mulawarman, 
+ 
+ 
+ 
+Awang Harsa Kridalaksana, S.Kom., M.Kom. 
+NIP 19731229 200501 1 002 
+--- PAGE 4 ---
+ 
+iv 
+KATA PENGANTAR 
+ 
+Puji syukur kepada Allah SWT, Tuhan Yang Maha Esa sehingga dapat menyelesaikan 
+skripsi saya yang berjudul “IMPLEMENTASI CONVOLUTIONAL NEURAL 
+NETWORK BERBASIS MOBILENETV2 PADA APLIKASI FLUTTER UNTUK 
+KLASIFIKASI NOMINAL UANG KERTAS RUPIAH” untuk Program Studi S1 
+Informatika di Fakultas Teknik, Universitas Mulawarman. 
+Oleh karena itu, pada kesempatan ini penulis ingin mengucapkan terima kasih kepada 
+semua pihak yang telah mendukung serta membantu penulis selama proses penyusunan 
+skripsi, terkhusus kepada: 
+1. {Keluarga; boleh di No. 1, boleh juga di bawah No. 8} 
+2. Bapak Prof. Dr. Ir. H. Tamrin, M.T., IPU., ASEAN Eng., APEC Eng. selaku 
+Dekan Fakultas Teknik, Universitas Mulawarman. 
+3. Bapak Awang Harsa Kridalaksana, S.Kom., M.Kom. selaku Koordinator Program 
+Studi Informatika, Fakultas Teknik, Universitas Mulawarman. 
+4. {Bapak/Ibu}{Nama Dosen Gelar Lengkap} selaku Pembimbing I yang selalu 
+memberikan arahan, masukan, dan dorongan terhadap penelitian ini. 
+5. {Bapak/Ibu}{Nama Dosen Gelar Lengkap}selaku Pembimbing II atas arahan dan 
+masukan dalam penulisan terhadap penelitian ini. 
+6. {Bapak/Ibu}{Nama Dosen Gelar Lengkap}selaku Penguji I atas masukan dan 
+arahan terhadap topik penelitian ini. 
+7. {Bapak/Ibu}{Nama Dosen Gelar Lengkap} selaku Penguji II atas masukan dalam 
+penulisan terhadap penelitian ini. 
+8. Segenap Dosen Program Studi Informatika yang telah memberikan ilmu 
+pengetahuan selama mengikuti perkuliahan. 
+9. {Honorable Mentions: Rekan Seperjuangan / Orang Spesial}.  
+Penulis menyadari bahwa skripsi ini tidak luput dari berbagai kekurangan. Oleh karena 
+itu, semua kritik dan saran yang bersifat memperbaiki demi kesempurnaan sangat 
+diharapkan. 
+ 
+Samarinda, {tgl pdd} 2026 
+Penulis  
+--- PAGE 5 ---
+ 
+v 
+DAFTAR ISI 
+ 
+Halaman 
+HALAMAN JUDUL ....................................................................................................... ii 
+KATA PENGANTAR .................................................................................................... iv 
+DAFTAR ISI ................................................................................................................... v 
+DAFTAR TABEL ......................................................................................................... vii 
+DAFTAR GAMBAR .................................................................................................... viii 
+DAFTAR ISTILAH/LAMBANG ................................................................................. ix 
+DAFTAR SINGKATAN ................................................................................................. x 
+BAB I PENDAHULUAN ................................................................................................ 1 
+1.1 Latar Belakang ................................................................................................. 1 
+1.2 Rumusan Masalah ............................................................................................ 3 
+1.3 Batasan Masalah ............................................................................................... 3 
+1.4 Tujuan Penelitian .............................................................................................. 4 
+1.5 Manfaat Penelitian ............................................................................................ 4 
+1.6 Kontribusi Penelitian ........................................................................................ 5 
+BAB II TINJAUAN PUSTAKA .................................................................................... 6 
+2.1 Penelitian Terkait ............................................................................................. 6 
+2.2 Uang Kertas Rupiah ....................................................................................... 10 
+2.3 Kecerdasan Buatan dan Machine Learning .................................................... 11 
+2.4 Deep Learning ................................................................................................ 11 
+2.5 Convolutional Neural Network ...................................................................... 12 
+2.5.1 Convolution Layer ....................................................................................... 13 
+2.5.2 Fungsi Aktivasi ReLU ................................................................................. 13 
+2.5.3 Pooling Layer ............................................................................................... 13 
+2.5.4 Global Average Pooling ............................................................................... 13 
+2.5.5 Softmax ........................................................................................................ 14 
+2.6 Transfer Learning ........................................................................................... 14 
+2.7 MobileNetV2 .................................................................................................. 15 
+2.8 Computer Vision ............................................................................................ 15 
+2.9 Citra Digital .................................................................................................... 15 
+2.10 Preprocessing Citra ........................................................................................ 16 
+2.11 Augmentasi Data ............................................................................................ 16 
+2.12 Pembagian Dataset ......................................................................................... 17 
+2.13 Metrik Evaluasi Klasifikasi ............................................................................ 17 
+2.13.1 Accuracy ...................................................................................................... 17 
+2.13.2 Precision ....................................................................................................... 18 
+2.13.3 Recall ........................................................................................................... 18 
+2.13.4 F1-Score ....................................................................................................... 18 
+2.13.5 Confusion Matrix ......................................................................................... 18 
+2.14 Android ........................................................................................................... 19 
+2.15 TensorFlow Lite ............................................................................................. 19 
+BAB III METODOLOGI PENELITIAN ................................................................... 21 
+3.1 Tahapan Pelaksanaan Penelitian .................................................................... 21 
+3.2 Pengumpulan Data ......................................................................................... 22 
+3.3 Perancangan Data ........................................................................................... 23 
+--- PAGE 6 ---
+ 
+vi 
+3.4 Perancangan Proses/Algoritma ...................................................................... 24 
+3.5 Perancangan Tampilan ................................................................................... 28 
+3.6 Perancangan Pengujian .................................................................................. 28 
+DAFTAR PUSTAKA .................................................................................................... 30 
+LAMPIRAN .................................................................................................................. 33 
+ 
+  
+--- PAGE 7 ---
+ 
+vii 
+DAFTAR TABEL 
+ 
+Halaman 
+Tabel 3.1 Pembagian Dataset Citra Uang Kertas Rupiah .............................................. 24 
+Tabel 3.2 Detail Hyperparameter Training. ................................................................... 27 
+ 
+ 
+  
+--- PAGE 8 ---
+ 
+viii 
+DAFTAR GAMBAR 
+ 
+Halaman 
+Gambar 2.1 Spesimen Uang Kertas Rupiah Emisi 2022. ............................................. 10 
+Gambar 2.2 Ilustrasi Tahapan Convolutional Neural Network. .................................... 12 
+ 
+Gambar 3.1 Alur Tahapan Pelaksanaan Penelitian. ...................................................... 21 
+Gambar 3.2 Contoh Citra Dataset: (a) Sisi Depan, (b) Sisi Belakang, (c) Rotasi 90° Sisi 
+Depan, (d) Rotasi 90° Sisi Belakang. ............................................................................. 23 
+Gambar 3.3 Tahapan Perancangan Proses. ................................................................... 25 
+Gambar 3.4 Wireframe Aplikasi: (a) Wireframe Tampilan Home, (b) Wireframe 
+Tampilan CameraX. ........................................................................................................ 28 
+ 
+ 
+ 
+  
+--- PAGE 9 ---
+ 
+ix 
+DAFTAR ISTILAH/LAMBANG 
+ 
+Istilah Arti 
+Algoritma Prosedur langkah demi langkah untuk menyelesaikan masalah. 
+Batch Size Jumlah data yang diproses dalam setiap iterasi epoch. 
+Citra digital Representasi digital dari suatu gambar atau objek. 
+Dataset Kumpulan data yang digunakan untuk melatih model ML. 
+Epoch Satu siklus penuh saat seluruh data latih diproses melalui neural network. 
+Framework kerangka kerja atau fondasi siap pakai yang berisi kumpulan kode, fungsi, 
+dan aturan dasar 
+Input Data masukan pada suatu sistem. 
+Klasifikasi Tugas dalam supervised learning untuk memprediksi kelas data 
+berdasarkan variabel independen dataset. 
+Machine learning Bidang ilmu komputer yang berfokus pada pengembangan algoritma yang 
+dapat belajar dari data tanpa diprogram secara eksplisit. 
+Metrik Ukuran yang digunakan untuk mengevaluasi performa model ML. 
+Model Sistem atau algoritma Artificial Intelligence yang dilatih untuk 
+memprediksi atau menghasilkan luaran berdasarkan data yang diberikan. 
+Output Data luaran pada suatu sistem. 
+Package kumpulan kode, fungsi, kelas, atau widget siap pakai yang dapat digunakan 
+kembali untuk mempercepat pembuatan aplikasi 
+Parameter Nilai bobot dan bias yang dapat diubah untuk mengoptimalkan model. 
+Performa Kemampuan model ML untuk menghasilkan output dengan akurat. 
+Pre-trained weights Pembobotan dalam model yang telah dilatih. 
+Supervised learning Jenis pendekatan ML jika model dilatih dengan data yang disertai label. 
+Testing Proses mengevaluasi performa model ML dengan menggunakan data baru. 
+Training Proses melatih model ML dengan menggunakan dataset. 
+Validation Proses memantau dan mengevaluasi performa model selama proses 
+pelatihan menggunakan data validation. 
+  
+--- PAGE 10 ---
+ 
+x 
+DAFTAR SINGKATAN 
+ 
+Singkatan Arti 
+CNN Convolutional Neural Network 
+FN False Negative 
+FP False Positive 
+ML Machine Learning 
+ReLU Rectified Linear Unit 
+TN True Negative 
+TP True Positive 
+ 
+ 
+--- PAGE 11 ---
+ 
+ 
+ 
+ 
+1 
+BAB I 
+PENDAHULUAN 
+ 
+ 
+1.1 Latar Belakang 
+ 
+Uang kertas merupakan salah satu alat pembayaran yang sah dan digunakan dalam 
+berbagai transaksi sehari-hari di Indonesia. Bank Indonesia menerbitkan uang kertas 
+dalam berbagai pecahan, mulai dari Rp1.000 hingga Rp100.000, dengan desain dan 
+karakteristik visual yang berbeda untuk setiap nominalnya. Setiap pecahan uang memiliki 
+ciri khas tersendiri, seperti warna dominan, ukuran, gambar pahlawan, dan elemen 
+keamanan yang membedakannya dari pecahan lain. 
+Penyandang tunanetra merupakan individu yang mengalami hambatan pada fungsi 
+penglihatan sehingga menghadapi berbagai keterbatasan dalam menjalankan aktivitas 
+sehari-hari, termasuk dalam mengenali nominal uang kertas rupiah. Bagi penyandang 
+tunanetra, khususnya yang mengalami kebutaan total, proses identifikasi nominal uang 
+umumnya dilakukan melalui indera peraba. Meskipun pada beberapa emisi uang kertas 
+rupiah telah dilengkapi dengan blind code atau penanda khusus yang dirancang untuk 
+memudahkan penyandang tunanetra dalam membedakan nominal uang, implementasinya 
+masih belum sepenuhnya efektif (Bahar dkk., 2023). 
+Kesulitan dalam mengenali nominal uang kertas juga dapat terjadi ketika uang 
+berada dalam kondisi lusuh, terlipat, atau mengalami perubahan bentuk. Selain itu, 
+pencahayaan, sudut pengambilan citra, jarak kamera, dan latar belakang dapat 
+memengaruhi proses pengenalan citra. Kondisi tersebut dapat menyebabkan kesalahan 
+dalam membedakan nominal uang, baik oleh manusia maupun oleh sistem pengenalan 
+berbasis citra. Oleh karena itu, diperlukan suatu sistem yang mampu membantu proses 
+pengenalan nominal uang kertas secara otomatis, cepat, dan akurat. 
+Perkembangan teknologi computer vision dan deep learning telah mendorong 
+pengembangan berbagai sistem pengenalan objek berbasis citra. Computer vision 
+memungkinkan komputer untuk memperoleh dan menganalisis informasi dari sebuah 
+citra, sedangkan deep learning mampu mempelajari pola serta karakteristik objek 
+berdasarkan data yang digunakan dalam proses pelatihan.  
+--- PAGE 12 ---
+ 
+ 
+ 
+ 
+2 
+Salah satu metode deep learning yang banyak digunakan dalam tugas klasifikasi 
+citra adalah Convolutional Neural Network (CNN). CNN telah terbukti efektif dalam 
+mengenali berbagai objek visual, termasuk uang kertas. Beberapa penelitian sebelumnya 
+telah berhasil mengimplementasikan CNN untuk klasifikasi nominal uang kertas Rupiah 
+dengan akurasi mencapai 98-100% (Yahya & Fauziah, 2026). Arsitektur CNN yang 
+terdiri dari convolution layer, pooling layer, dan fully connected layer memungkinkan 
+ekstraksi fitur visual secara otomatis tanpa memerlukan ekstraksi fitur manual. 
+Dalam penelitian ini, digunakan Convolutional Neural Network (CNN) dengan 
+arsitektur MobileNetV2. MobileNetV2 dipilih karena memiliki arsitektur yang ringan dan 
+efisien sehingga sesuai untuk diterapkan pada perangkat dengan sumber daya komputasi 
+terbatas, seperti smartphone. Penggunaan MobileNetV2 diharapkan mampu 
+menghasilkan model yang memiliki performa klasifikasi yang baik. 
+Model MobileNetV2 yang telah dilatih selanjutnya diintegrasikan ke dalam aplikasi 
+Android. Aplikasi tersebut dirancang agar pengguna dapat mengambil citra uang kertas 
+melalui kamera smartphone, kemudian memperoleh hasil klasifikasi nominal 
+berdasarkan citra yang dimasukkan. Dengan implementasi ini, sistem tidak hanya 
+menghasilkan model klasifikasi, tetapi juga menyediakan media penggunaan yang praktis 
+dan mudah diakses dalam aktivitas sehari-hari. 
+Penelitian terdahulu telah menunjukkan bahwa CNN dapat digunakan untuk 
+mengklasifikasikan nominal uang kertas berdasarkan citra. Namun, masih terdapat 
+peluang pengembangan pada aspek implementasi model yang ringan dan efisien untuk 
+perangkat mobile. Selain itu, penelitian ini membedakan diri dari penelitian sebelumnya 
+melalui penerapan model pada aplikasi Android, sehingga proses klasifikasi dapat 
+dilakukan menggunakan perangkat yang mudah dibawa dan digunakan dalam aktivitas 
+sehari-hari. Oleh karena itu, diperlukan pemilihan arsitektur CNN yang sesuai dengan 
+keterbatasan sumber daya komputasi pada perangkat Android. 
+ 
+ 
+ 
+ 
+ 
+--- PAGE 13 ---
+ 
+ 
+ 
+ 
+3 
+1.2 Rumusan Masalah 
+ 
+Berdasarkan latar belakang penelitian yang telah dijabarkan, maka masalah yang 
+dirumuskan dalam penelitian ini adalah sebagai berikut. 
+1. Bagaimana merancang dan melatih model CNN berbasis arsitektur MobileNetV2 
+dengan transfer learning dan fine-tuning untuk klasifikasi 7 pecahan uang kertas 
+Rupiah? 
+2. Bagaimana mengintegrasikan model .tflite ke dalam aplikasi Flutter yang 
+dilengkapi fitur Text-to-Speech (TTS) untuk aksesibilitas tunanetra? 
+3. Bagaimana performa akurasi, waktu inferensi (latency ms), dan ketahanan model 
+terhadap uang lusuh/lecek serta variasi pencahayaan saat dijalankan langsung 
+pada smartphone? 
+ 
+1.3 Batasan Masalah 
+ 
+Penelitian ini disusun berdasarkan data-data yang diperoleh. Luasnya bidang yang 
+dihadapi membuat penelitian ini harus dibatasi. Ruang lingkup masalah dibatasi pada: 
+1. Objek penelitian berupa citra uang kertas Rupiah dengan nominal Rp1.000, 
+Rp2.000, Rp5.000, Rp10.000, Rp20.000, Rp50.000, dan Rp100.000. 
+2. Penelitian berfokus pada klasifikasi nominal uang kertas dan tidak mencakup 
+pendeteksian keaslian atau pemalsuan uang. 
+3. Citra yang digunakan berupa citra berwarna dengan format JPG, JPEG, atau PNG 
+yang diperoleh melalui kamera smartphone dan/atau dataset penelitian. 
+4. Model yang digunakan adalah CNN dengan arsitektur MobileNetV2 melalui 
+pendekatan transfer learning. 
+5. Citra masukan diproses dengan ukuran 224 x 224 piksel dan melalui tahap 
+preprocessing. 
+6. Model yang telah dilatih diimplementasikan ke dalam aplikasi Android 
+menggunakan TensorFlow Lite. 
+7. Aplikasi digunakan untuk mengambil citra uang kertas melalui kamera smartphone 
+dan menampilkan hasil klasifikasi nominal. 
+8. Penelitian tidak membahas deteksi uang palsu, sistem pembayaran, maupun 
+integrasi dengan layanan perbankan. 
+--- PAGE 14 ---
+ 
+ 
+ 
+ 
+4 
+9. Pengujian dilakukan pada citra uang kertas yang masih dapat dikenali secara visual 
+dan tidak tertutup seluruhnya oleh objek lain. 
+10. Evaluasi dilakukan berdasarkan akurasi, precision, recall, F1-score, confusion 
+matrix, dan waktu inferensi pada perangkat Android. 
+ 
+1.4 Tujuan Penelitian 
+ 
+Tujuan yang ingin dicapai dalam penelitian ini adalah membuat aplikasi Android 
+untuk mengklasifikasikan nominal uang kertas Indonesia menggunakan metode 
+Convolutional Neural Network (CNN) dengan arsitektur MobileNetV2 berdasarkan citra 
+yang diambil melalui kamera smartphone. 
+Tujuan yang ingin dicapai dalam penelitian ini adalah sebagai berikut: 
+1. Merancang model CNN berbasis arsitektur MobileNetV2 dengan transfer learning 
+dan fine-tuning untuk klasifikasi 7 pecahan uang kertas Rupiah. 
+2. Mengintegrasikan model .tflite ke dalam aplikasi Flutter yang memiliki fitur Text-
+to-Speech (TTS)  
+3. Mengecek performa akurasi, waktu inferensi (latency ms), dan ketahanan model 
+terhadap uang lusuh/lecek serta variasi pencahayaan saat dijalankan langsung pada 
+smartphone 
+ 
+1.5 Manfaat Penelitian 
+ 
+Penelitian ini diharapkan dapat memberikan manfaat pada berbagai pihak, 
+khususnya: 
+b. Penulis 
+Manfaat penelitian bagi penulis adalah untuk menambah pengetahuan serta 
+mengasah keterampilan dalam mengembangkan aplikasi Android berbasis deep learning 
+dengan mengimplementasikan arsitektur MobileNetV2 untuk klasifikasi citra nominal 
+uang kertas Indonesia.  
+2. Mahasiswa 
+Penelitian ini dapat memberikan pengetahuan mendalam mengenai penerapan 
+metode Convolutional Neural Network (CNN) khususnya arsitektur MobileNetV2 yang 
+ringan dan efisien untuk perangkat mobile, serta dapat menjadi referensi ilmiah bagi 
+--- PAGE 15 ---
+ 
+ 
+ 
+ 
+5 
+mahasiswa bidang Informatika dalam pengembangan sistem pengenalan objek berbasis 
+citra.  
+3. Pengguna 
+Manfaat penelitian ini bagi pengguna adalah memberikan kemudahan dalam 
+mengenali nominal uang kertas, khususnya bagi masyarakat umum. Aplikasi ini juga 
+berpotensi membantu penyandang tunanetra dengan fitur output audio (text-to-speech) 
+untuk membacakan hasil klasifikasi. 
+ 
+1.6 Kontribusi Penelitian 
+ 
+Penelitian ini memberikan kontribusi pada bidang ilmu pengetahuan dan 
+teknologi, khususnya dalam pengembangan sistem computer vision berbasis deep 
+learning untuk mendukung aksesibilitas dan pengenalan objek secara otomatis. Sistem 
+klasifikasi nominal uang kertas Rupiah dibangun menggunakan Convolutional Neural 
+Network (CNN) dengan arsitektur MobileNetV2 yang ringan, lalu diintegrasikan 
+langsung ke dalam aplikasi Android agar dapat dijalankan dengan efisien di perangkat 
+smartphone. Hasil penelitian ini diharapkan dapat menjadi acuan bagi pengembangan 
+riset berbasis kecerdasan buatan pada perangkat mobile di masa depan, sekaligus 
+memberikan solusi nyata untuk membantu masyarakat, khususnya penyandang tunanetra, 
+dalam mengenali nominal uang kertas secara praktis, cepat, dan akurat. 
+  
+--- PAGE 16 ---
+ 
+ 
+ 
+ 
+6 
+BAB II 
+TINJAUAN PUSTAKA 
+ 
+ 
+2.1 Penelitian Terkait 
+ 
+Dalam rangka mendukung penelitian ini, maka dilakukan kajian dengan 
+mempelajari penelitian-penelitian terkait yang telah dilakukan sebelumnya. Daftar 
+penelitian terkait antara lain: 
+1. Metode yang digunakan: Convolutional Neural Network pra-latih ResNet152. 
+Temuan Penelitian: Penelitian ini menunjukkan hasil  dari pengujian pada kurva 
+ROC menunjukkan grafik yang stabil  pada  akurasinya dan  grafik  penurunan  pada 
+lossnya selanjutnya dibuktikan dari hasil pada evaluasi model dengan confusion 
+matrix di dapati nilai TP dan TN lebih besar daripada nilai FP dan FN yang dimana 
+nilai dari seluruh FP dan FN  ini  hanya  memiliki  nilai nol. Dari  informasi  tersebut  
+model  klasifikasi  uang kertas rupiah emisi 2022 dengan 8400 gambar dibagi 
+kedalam   14   kelas   menggunakan   ResNet152   dan metode transfer learning 
+menunjukkan hasil performa keseluruhan mendapatkan nilai 1.00 (Sukmawardani 
+dkk., 2024). 
+2. Metode yang digunakan: K-Nearest Neighbor dan Gabor Filter. Temuan 
+Penelitian: Penelitian ini berhasil membuat sistem klasifikasi uang kertas 
+menggunakan KNN, Gabor Filter, dan PCA dengan akurasi 97,14% dan kinerja 
+"excellent" (AUC 97,35%), sehingga model ini siap diimplementasikan ke dalam 
+sistem nyata (Mulyani & Nurazizah, 2025). 
+3. Metode yang digunakan: Convolutional Neural Network. Temuan Penelitian: 
+Penelitian ini melakukan klasifikasi penyakit mata menggunakan metode 
+Convolutional Neural Network (CNN) dengan arsitektur AlexNet. Penelitian 
+tersebut mengklasifikasikan citra mata ke dalam empat kelas, yaitu normal, katarak, 
+glaukoma, dan retina disease. Tahapan penelitian diawali dengan pre-processing 
+berupa pengubahan ukuran citra menjadi 224×224 piksel, kemudian dilanjutkan 
+dengan ekstraksi fitur melalui tiga jenis lapisan, yaitu convolutional layer, pooling 
+layer, dan fully connected layer sesuai dengan arsitektur yang digunakan. 
+--- PAGE 17 ---
+ 
+ 
+ 
+ 
+7 
+Implementasi model CNN dilakukan dengan 150 epoch dan menghasilkan akurasi 
+sebesar 98,37% dalam mengklasifikasikan penyakit mata (Cahya dkk., 2021). 
+4. Metode yang digunakan: Convolutional Neural Network pra-latih MobileNetV2.  
+Temuan Penelitian: Penelitian ini berhasil mencapai akurasi 94% pada data testing 
+dengan dataset yang relatif terbatas untuk melakukan training, yaitu 4000 citra 
+untuk 20 kelas. Hal ini menunjukkan efisiensi  pendekatan  Transfer  Learning  
+dalam  mencapai  performa  kompetitif  sekaligus  mengatasi  keterbatasan.  
+Perbandingan dengan  penelitian  yang  juga  menggunakan Transfer Learning oleh 
+penelitian sebelumnya menunjukkan bahwa penelitian ini, dengan dataset 4.000 
+citra dan 20 kelas mampu mencapai akurasi 94% sedikit lebih tinggi dari akurasi 
+90% yang dicapai penelitian sebelumnya yang hanya mengklasifikasikan 2 kelas 
+dengan 1.138 citra (Hartono & Muslikh, 2025). 
+5. Metode yang digunakan: Convolutional Neural Network pra-latih MobileNetV2. 
+Temuan Penelitian: Penelitian ini menunjukkan bahwa model MobileNetV2 
+memperoleh akurasi pengujian sebesar 95%, lebih unggul dibandingkan model 
+CNN sederhana yang hanya mencapai akurasi 82%. MobileNetV2 juga mampu 
+mengidentifikasi kelas korosi dan nonkorosi dengan performa yang lebih baik. 
+Meskipun ditemukan indikasi overfitting yang disebabkan oleh keterbatasan jumlah 
+dataset, penerapan metode transfer learning terbukti dapat meningkatkan kinerja 
+klasifikasi secara signifikan. Sistem yang dikembangkan memiliki potensi untuk 
+diterapkan dalam proses pemantauan industri secara real-time sehingga dapat 
+membantu mengurangi kerugian ekonomi akibat korosi (Pratama dkk., 2025). 
+6. Metode yang digunakan: Convolutional Neural Network pra-latih Xception. 
+Temuan Penelitian: Hasil penelitian mendapatkan metode transfer learning 
+dengan pre-trained model Xception dinilai baik untuk mengklasifikasikan Uang 
+Kertas Rupiah Tidak Layak Edar dan Layak Edar tahun Emisi 2016. Hal ini 
+ditunjukkan oleh akurasi pengujian model sebesar 93,75%. Hasil penelitian ini 
+dapat digunakan secara langsung untuk memudahkan masyarakat mengetahui 
+kelayakan uang kertasnya, dikarenakan sistem ini dikembangkan menjadi aplikasi 
+website yang dapat diakses oleh masyarakat secara luas (Albani & Andhi, 2023).  
+7. Metode yang digunakan: Convolutional Neural Network. Temuan Penelitian: 
+Penelitian ini menghasilkan sebuah model deep learning berbasis Convolutional 
+--- PAGE 18 ---
+ 
+ 
+ 
+ 
+8 
+Neural Network (CNN) yang mampu mengklasifikasikan 14 jenis citra batik. 
+Berdasarkan perbandingan beberapa parameter, arsitektur CNN dengan kinerja 
+terbaik menggunakan ukuran citra 150×150 piksel, batch size 64, filter atau kernel 
+berukuran 3×3, learning rate sebesar 0,0001, serta optimizer Adam. Model tersebut 
+menerapkan fungsi aktivasi ReLU pada lapisan tersembunyi dan Softmax pada 
+lapisan keluaran, dengan jumlah pelatihan sebanyak 30 epoch. Dataset yang 
+digunakan terdiri atas 3.880 citra RGB dengan pembagian data sebesar 70% untuk 
+pelatihan, 20% untuk validation, dan 10% untuk pengujian. Hasil evaluasi 
+menunjukkan bahwa model terbaik mampu mencapai akurasi sebesar 91,24% pada 
+data testing (Wona dkk., 2023). 
+8. Metode yang digunakan: Convolutional Neural Network pra-latih VGG16. 
+Temuan Penelitian: Penelitian ini menunjukkan bahwa proses pembelajaran 
+menggunakan metode Convolutional Neural Network (CNN) pada citra bunga 
+dipengaruhi oleh arsitektur yang digunakan. Setelah dilakukan sebanyak 50 iterasi, 
+arsitektur I menghasilkan akurasi sebesar 0,62, sedangkan arsitektur II yang 
+menerapkan VGG16 memperoleh akurasi sebesar 0,80 (Intyanto, 2021). 
+9. Metode yang digunakan: Convolutional Neural Network, Support Vector 
+Machine.. Temuan Penelitian: Penelitian ini membandingkan kinerja metode 
+Convolutional Neural Network (CNN) dan Support Vector Machine (SVM) dengan 
+beberapa jenis kernel, yaitu RBF, linear, dan polynomial. Hasil pengujian 
+menunjukkan bahwa CNN serta SVM dengan kernel RBF, linear, dan polynomial 
+mampu memperoleh nilai accuracy, precision, recall, dan F1-score masing-masing 
+sebesar 100%. Pada penerapan SVM, proses klasifikasi diawali dengan ekstraksi 
+fitur tekstur menggunakan metode GLCM. Namun, penggunaan kernel sigmoid 
+menghasilkan performa yang jauh lebih rendah dibandingkan kernel lainnya 
+(Zalvadila, 2023). 
+10. Metode yang digunakan: Convolutional Neural Network, Support Vector 
+Machine. Temuan Penelitian: Penelitian ini mengembangkan sistem berbasis 
+website dengan metode Convolutional Neural Network (CNN) untuk 
+mengklasifikasikan lima genus anggrek yang umum dibudidayakan, yaitu Cattleya, 
+Dendrobium, Oncidium, Phalaenopsis, dan Vanda, berdasarkan citra daun. Hasil 
+pengujian menunjukkan bahwa model terbaik adalah MobileNetV2 dengan 
+--- PAGE 19 ---
+ 
+ 
+ 
+ 
+9 
+penambahan dropout, optimizer Adam, dan learning rate 0,0001 pada skenario data 
+pelatihan tanpa background noise, yang memperoleh akurasi pengujian sebesar 
+90,44% pada citra lapangan dan 80,54% pada citra internet dengan ukuran model 
+101 MB. Sementara itu, model MobileNetV2 tanpa modifikasi dengan optimizer 
+Adam dan learning rate 0,0003 menghasilkan akurasi sebesar 83,12% pada citra 
+lapangan dan 80,00% pada citra internet dengan ukuran model 9 MB. Secara 
+keseluruhan, arsitektur MobileNetV2 mampu memberikan performa klasifikasi 
+yang baik, sedangkan penggunaan dropout, pemilihan hyperparameter yang sesuai, 
+penghilangan background noise, dan augmentasi data dapat meningkatkan akurasi 
+serta membantu mengurangi overfitting. Meskipun demikian, kesalahan klasifikasi 
+masih ditemukan akibat kemiripan bentuk dan warna daun antar genus, terutama 
+pada genus Cattleya dan Oncidium, sehingga dapat disimpulkan bahwa model CNN 
+yang dikembangkan efektif untuk klasifikasi genus anggrek, tetapi tingkat 
+keberhasilannya tetap dipengaruhi oleh karakteristik dan kualitas citra yang 
+digunakan (Allaam & Wibowo, 2021). 
+ 
+Perbedaan dengan Penelitian Sebelumnya 
+ 
+Berdasarkan referensi yang terkait, maka didapatkan perbedaan penelitian yang 
+terdahulu sebagai dasar penelitian ini: 
+1. Penelitian sebelumnya mengimplementasikan model machine learning ke website 
+menggunakan flask sebagai framework (Mawaddah, 2023), pada penelitian ini model 
+machine learning diimplementasikan ke dalam aplikasi android. 
+2. Penelitian sebelumnya menggunakan model CNN yang dilatih untuk melakukan 
+klasifikasi citra (Mawaddah, 2023), sedangkan penelitian ini menggunakan arsitektur 
+MobileNetV2 dengan pendekatan transfer learning. MobileNetV2 dipilih karena 
+memiliki arsitektur yang lebih ringan dan efisien untuk diterapkan pada perangkat 
+mobile. 
+3. Penelitian sebelumnya memproses citra dengan ukuran 150 × 150 piksel (Mawaddah, 
+2023), sedangkan penelitian ini menggunakan ukuran citra 224 × 224 piksel yang 
+disesuaikan dengan konfigurasi model MobileNetV2. 
+--- PAGE 20 ---
+ 
+ 
+ 
+ 
+10 
+4. Penelitian sebelumnya, proses klasifikasi dilakukan melalui website dengan model 
+yang dijalankan pada sisi server, sedangkan pada penelitian ini model diintegrasikan 
+ke dalam aplikasi Android sehingga proses klasifikasi dapat dilakukan langsung 
+melalui perangkat mobile. 
+5. Penelitian sebelumnya menggunakan bahasa pemrograman Kotlin, sedangkan 
+penelitian ini menggunakan bahasa pemrograman Dart (Yahya & Fauziah, 2026). 
+ 
+ 
+ 
+ 
+2.2 Uang Kertas Rupiah  
+ 
+Uang kertas adalah uang yang terbuat dari kertas dan merupakan  alat pembayaran 
+yang sah. Menurut Undang-Undang Nomor 23 Tahun 1999 tentang Bank Indonesia,  uang 
+kertas berarti uang yang berbentuk kertas sebanyak lembar atau bahan lain yang 
+berbentuk kertas.Uang kertas Rupiah merupakan uang kertas  atau  uang  negara 
+Indonesia, uang kertas Rupiah  sendiri mempunyai banyak pecahan , diantaranya adalah 
+1000, 2000, 5000, 10000, 20000, 50000, 100000. Pada masing-masing pecahan tersebut 
+mempunyai ciri yang berbeda-beda.(Alfita dkk., 2022). Spesimen yang digunakan dalam 
+penelitian ini terdapat pada Gambar 2.1. 
+ 
+Gambar 2.1 Spesimen Uang Kertas Rupiah Emisi 2022. 
+
+--- PAGE 21 ---
+ 
+ 
+ 
+ 
+11 
+2.3 Kecerdasan Buatan dan Machine Learning 
+ 
+Kecerdasan buatan adalah bidang ilmu komputer yang mempelajari cara membuat 
+sistem agar komputer bisa melakukan pekerjaan yang biasanya memerlukan kemampuan 
+manusia. Tugas tersebut mencakup mengenali pola, memahami informasi, membuat 
+prediksi, serta mengambil keputusan (Sharifani & Amini, 2023). 
+Salah satu cabang dari kecerdasan buatan adalah Machine Learning. Mitchell 
+menjelaskan bahwa machine learning adalah bidang yang mempelajari algoritma 
+komputer yang mampu meningkatkan kemampuannya bekerja secara otomatis melalui 
+pengalaman. Sehingga, sistem tidak hanya menerapkan aturan yang dibuat secara manual, 
+tetapi juga belajar dari pola-pola yang terdapat dalam data yang diberikan (Mitchell, 
+2013). 
+Secara umum, machine learning dapat dibagi menjadi tiga pendekatan, yaitu 
+supervised learning, unsupervised learning, dan reinforcement learning. Supervised 
+learning menggunakan data yang telah memiliki label. Unsupervised learning 
+mempelajari pola dari data tanpa label, sedangkan reinforcement learning mempelajari 
+tindakan berdasarkan umpan balik berupa penghargaan atau penalti (Rahmaddeni dkk., 
+2026). 
+Penelitian ini menggunakan pendekatan supervised learning karena setiap citra 
+uang kertas telah dikelompokkan berdasarkan nominalnya. Model menerima citra sebagai 
+data masukan dan label nominal sebagai target yang harus dipelajari. Setelah proses 
+pelatihan, model diharapkan dapat memprediksi nominal dari citra baru yang belum 
+pernah digunakan dalam pelatihan. 
+ 
+2.4 Deep Learning 
+ 
+Deep learning merupakan bagian dari machine learning yang menggunakan 
+jaringan saraf dengan banyak lapisan untuk mempelajari representasi data. Setiap lapisan 
+dapat mempelajari karakteristik yang berbeda dari data masukan (Taye, 2023). 
+Pada pengolahan citra, lapisan awal umumnya mempelajari fitur sederhana, seperti 
+garis dan tepi. Lapisan berikutnya dapat mempelajari fitur yang lebih kompleks, seperti 
+bentuk, tekstur, warna, dan pola objek. Kemampuan untuk mempelajari fitur secara 
+otomatis membuat deep learning banyak digunakan dalam klasifikasi citra. Goodfellow, 
+--- PAGE 22 ---
+ 
+ 
+ 
+ 
+12 
+Bengio, dan Courville menjelaskan konsep dasar deep learning, jaringan saraf, dan 
+pembelajaran representasi dalam buku Deep Learning (Goodfellow dkk., 2016).  
+Dalam penelitian ini, deep learning diterapkan melalui arsitektur Convolutional 
+Neural Network (CNN), khususnya MobileNetV2, untuk mempelajari karakteristik visual 
+pada citra uang kertas. Hubungan antara kecerdasan buatan, machine learning, deep 
+learning, CNN, dan MobileNetV2 ditunjukkan pada Gambar 2.1. 
+ 
+2.5 Convolutional Neural Network 
+ 
+Convolutional Neural Network (CNN) merupakan salah satu arsitektur deep 
+learning yang banyak digunakan untuk pengolahan dan klasifikasi citra. CNN dapat 
+mempelajari fitur visual secara otomatis melalui beberapa lapisan yang tersusun secara 
+berurutan (Goodfellow dkk., 2016). 
+Pada proses klasifikasi citra, CNN menerima citra sebagai masukan, kemudian 
+melakukan ekstraksi fitur melalui lapisan konvolusi dan pooling. Fitur yang diperoleh 
+selanjutnya diproses oleh lapisan klasifikasi untuk menghasilkan prediksi kelas. 
+Pada Gambar 2.2 merupakan gambaran alur Convolutional Neural Network. 
+ 
+Gambar 2.2 Ilustrasi Tahapan Convolutional Neural Network. 
+CNN sesuai digunakan pada penelitian ini karena citra uang kertas memiliki 
+karakteristik visual yang dapat dipelajari, seperti warna, bentuk, tekstur, tulisan, dan pola. 
+Dengan demikian, CNN dapat digunakan untuk membedakan citra uang kertas 
+berdasarkan nominalnya. 
+ 
+
+--- PAGE 23 ---
+ 
+ 
+ 
+ 
+13 
+2.5.1 Convolution Layer 
+ 
+Convolution layer merupakan lapisan yang melakukan operasi konvolusi terhadap 
+citra masukan menggunakan filter atau kernel. Filter digeser pada bagian-bagian citra 
+untuk menemukan fitur tertentu (Cao dkk., 2022). Hasil proses tersebut disebut feature 
+map. 
+Pada lapisan awal, filter dapat mendeteksi fitur sederhana, seperti garis, tepi, dan 
+perubahan warna. Pada lapisan yang lebih dalam, filter dapat mempelajari fitur yang lebih 
+kompleks. 
+ 
+2.5.2 Fungsi Aktivasi ReLU 
+ 
+ReLU atau Rectified Linear Unit merupakan fungsi aktivasi yang banyak digunakan 
+dalam jaringan CNN. Fungsi ini mengubah nilai negatif menjadi nol, sedangkan nilai 
+positif tetap dipertahankan.  
+Secara matematis, ReLU secara matematis dituliskan pada persamaan 2.1. 
+𝑓(𝑥)= max(0,𝑥) ....................... (2.1) 
+Penggunaan ReLU memberikan sifat nonlinier pada model sehingga jaringan dapat 
+mempelajari pola yang lebih kompleks. 
+ 
+2.5.3 Pooling Layer 
+ 
+Pooling layer digunakan untuk mengurangi ukuran feature map dengan tetap 
+mempertahankan informasi penting. Salah satu metode pooling yang umum digunakan 
+adalah max pooling, yaitu memilih nilai terbesar dari area tertentu. 
+Pooling layer memiliki beberapa manfaat dalam arsitektur CNN. Lapisan ini dapat 
+mengurangi ukuran data atau feature map sehingga beban komputasi menjadi lebih 
+ringan. Selain itu, pooling juga membantu mengurangi jumlah parameter yang diproses 
+oleh model serta meningkatkan kemampuan model dalam mengenali fitur meskipun 
+terjadi perubahan posisi pada citra. 
+ 
+2.5.4 Global Average Pooling 
+ 
+Global Average Pooling digunakan untuk merangkum setiap feature map menjadi 
+--- PAGE 24 ---
+ 
+ 
+ 
+ 
+14 
+satu nilai sehingga menghasilkan vektor fitur yang lebih ringkas. Vektor fitur tersebut 
+kemudian diteruskan ke lapisan dropout untuk mengurangi risiko overfitting. Setelah itu, 
+dense layer mengolah fitur yang diperoleh dan menghubungkannya dengan tujuh kelas 
+nominal uang kertas. Lapisan keluaran menggunakan fungsi aktivasi softmax untuk 
+menghasilkan probabilitas pada setiap kelas. 
+ 
+2.5.5 Softmax  
+ 
+Softmax digunakan pada lapisan keluaran untuk menghasilkan nilai probabilitas 
+pada setiap kelas. Nilai probabilitas tersebut menunjukkan tingkat keyakinan model 
+terhadap masing-masing nominal. Kelas dengan nilai probabilitas paling tinggi dipilih 
+sebagai hasil prediksi model. 
+ 
+ 
+ 
+2.6 Transfer Learning 
+ 
+Transfer learning merupakan teknik yang memanfaatkan pengetahuan atau bobot 
+dari model yang telah dilatih sebelumnya untuk menyelesaikan tugas baru. Model yang 
+telah dilatih menggunakan dataset berukuran besar dapat digunakan sebagai model dasar 
+untuk tugas klasifikasi yang lebih spesifik. Pendekatan ini memungkinkan model 
+memanfaatkan fitur yang telah dipelajari sebelumnya sehingga proses pelatihan pada 
+dataset baru dapat dilakukan secara lebih efisien (Goodfellow dkk., 2016). 
+Pada penelitian ini, model MobileNetV2 digunakan melalui pendekatan transfer 
+learning. Lapisan dasar MobileNetV2 berfungsi sebagai ekstraktor fitur, sedangkan 
+lapisan klasifikasi akhir disesuaikan dengan tujuh kelas nominal uang kertas. 
+Tahapan transfer learning dapat dilakukan dengan memuat model MobileNetV2 
+yang telah dilatih sebelumnya (pretrained), lalu menghilangkan lapisan klasifikasi 
+bawaannya agar dapat disesuaikan dengan tugas baru. Sebagian lapisan dasar model 
+kemudian dibekukan agar bobotnya tidak berubah selama pelatihan awal, sementara 
+lapisan klasifikasi baru ditambahkan di atas fitur yang diekstrak oleh backbone. Lapisan 
+klasifikasi ini dilatih menggunakan dataset uang kertas hingga konvergen, dan jika 
+performa masih belum optimal, fine-tuning dapat dilakukan dengan membuka sebagian 
+--- PAGE 25 ---
+ 
+ 
+ 
+ 
+15 
+lapisan akhir (misalnya 20 lapisan terakhir) model dasar untuk menyesuaikan representasi 
+fitur lebih lanjut dengan karakteristik dataset target.  
+ 
+2.7 MobileNetV2  
+ 
+MobileNetV2 merupakan arsitektur CNN yang dirancang untuk perangkat mobile 
+dan sistem dengan sumber daya komputasi terbatas (Fransisca & Matondang, 2023). 
+Arsitektur ini dikembangkan untuk menghasilkan model yang memiliki keseimbangan 
+antara kemampuan klasifikasi dan efisiensi komputasi. 
+MobileNetV2 menggunakan konsep inverted residual dan linear bottleneck. 
+Inverted residual menggunakan struktur blok yang memperluas representasi fitur pada 
+bagian tengah, kemudian meringkasnya kembali. Sementara itu, linear bottleneck 
+digunakan untuk mempertahankan informasi penting pada representasi berdimensi 
+rendah (Sandler dkk., 2018). 
+MobileNetV2 dipilih dalam penelitian ini karena model akan diimplementasikan 
+pada aplikasi Android. Arsitektur yang ringan dapat membantu mengurangi ukuran 
+model dan beban komputasi ketika proses klasifikasi dijalankan pada smartphone. 
+ 
+2.8 Computer Vision 
+ 
+Computer vision merupakan bidang yang mempelajari kemampuan komputer 
+dalam memperoleh dan menganalisis informasi visual dari citra atau video. Informasi 
+visual tersebut dapat berupa bentuk, warna, tekstur, pola, dan posisi objek (Zhao dkk., 
+2024). 
+Dalam penelitian ini, computer vision digunakan untuk menganalisis citra uang 
+kertas Rupiah. Citra yang dimasukkan ke dalam sistem akan diproses untuk memperoleh 
+fitur visual yang membedakan satu nominal dengan nominal lainnya. Hasil dari analisis 
+tersebut kemudian dipakai oleh model untuk menentukan jenis uang kertas yang sesuai. 
+ 
+2.9 Citra Digital 
+ 
+--- PAGE 26 ---
+ 
+ 
+ 
+ 
+16 
+Citra digital merupakan representasi visual yang tersusun atas sejumlah piksel. 
+Setiap piksel memiliki nilai tertentu yang menunjukkan intensitas atau warna pada posisi 
+tertentu (Dijaya & Setiawan, 2023). 
+Citra berwarna umumnya memiliki tiga kanal warna, yaitu merah, hijau, dan biru 
+atau RGB. Dalam penelitian ini, citra uang kertas digunakan sebagai data masukan untuk 
+model klasifikasi. 
+ 
+2.10 Preprocessing Citra 
+ 
+Preprocessing merupakan tahap persiapan citra sebelum digunakan dalam proses 
+pelatihan dan pengujian. Tahap ini dilakukan agar citra memiliki bentuk dan skala yang 
+sesuai dengan masukan model. 
+Tahap preprocessing yang dapat digunakan dalam penelitian ini meliputi: 
+1. Mengubah ukuran citra menjadi 224 × 224piksel. 
+2. Mengubah citra menjadi format RGB. 
+3. Melakukan normalisasi nilai piksel. 
+4. Menyesuaikan format citra dengan kebutuhan MobileNetV2. 
+ 
+ 
+2.11 Augmentasi Data 
+ 
+Augmentasi data merupakan proses menghasilkan variasi baru dari citra yang sudah 
+tersedia. Teknik ini dapat dilakukan melalui rotasi, perubahan ukuran, pembalikan, 
+pergeseran, pembesaran, dan perubahan tingkat pencahayaan (Gunardi, 2023). 
+Augmentasi dapat membantu model mengenali citra dalam kondisi yang lebih 
+beragam. Pada penelitian ini, dataset yang digunakan sudah memiliki variasi rotasi (0°, 
+90°, 180°, 270°) untuk setiap lembar uang kertas, namun akan tetap dilakukan augmentasi 
+data seperti random rotation, zoom, brightness/contrast agar bisa menyesuaikan dengan 
+data real world testing. 
+ 
+ 
+ 
+--- PAGE 27 ---
+ 
+ 
+ 
+ 
+17 
+2.12 Pembagian Dataset 
+ 
+Dataset dapat dibagi menjadi tiga bagian, yaitu data training yang digunakan untuk 
+melatih model, data validation yang berfungsi untuk memantau performa model selama 
+proses training berlangsung, dan data testing yang digunakan untuk mengukur performa 
+model pada data yang tidak pernah digunakan selama training, sehingga dapat 
+memberikan evaluasi yang objektif terhadap kemampuan generalisasi model.  
+Pembagian dataset harus dilakukan secara hati-hati agar data yang sama atau sangat 
+mirip tidak masuk ke bagian training dan testing secara bersamaan.  
+TensorFlow menyediakan contoh alur klasifikasi citra, mulai dari pemuatan dataset, 
+pembangunan model, training, hingga evaluasi (Martín Abadi dkk., 2015).  
+ 
+2.13 Metrik Evaluasi Klasifikasi 
+ 
+Metrik evaluasi digunakan untuk mengukur kemampuan model dalam melakukan 
+klasifikasi citra uang kertas. Metrik yang digunakan dalam penelitian ini meliputi 
+accuracy, precision, recall, F1-score, dan confusion matrix. Accuracy menunjukkan 
+proporsi prediksi yang benar terhadap seluruh data, sedangkan precision, recall, dan F1-
+score digunakan untuk menilai performa model pada setiap kelas. Confusion matrix 
+digunakan untuk melihat hubungan antara label sebenarnya dan label hasil prediksi pada 
+tujuh kelas nominal uang kertas. 
+ 
+2.13.1  Accuracy 
+ 
+Accuracy merupakan perbandingan antara jumlah prediksi yang benar dan jumlah 
+seluruh data pengujian. Pada klasifikasi multikelas, nilai accuracy dapat dihitung dengan 
+membandingkan jumlah sampel yang diklasifikasikan dengan benar terhadap seluruh 
+sampel pengujian (Vickers dkk., 2023). Untuk rumus dapat dihitung pada menggunakan 
+rumus pada persamaan 2.2. 
+Accuracy =  ୎୳୫୪ୟ୦ ୮୰ୣୢ୧୩ୱ୧ ୠୣ୬ୟ୰
+୎୳୫୪ୟ୦ ୱୣ୪୳୰୳୦ ୢୟ୲ୟ ୮ୣ୬୥୳୨୧ୟ୬  .......... (2.2) 
+ 
+--- PAGE 28 ---
+ 
+ 
+ 
+ 
+18 
+2.13.2 Precision 
+ 
+Precision menunjukkan proporsi data yang diprediksi sebagai suatu kelas dan 
+benar-benar termasuk dalam kelas tersebut. Nilai precision dihitung dengan membagi 
+jumlah true positive dengan jumlah true positive dan false positive (Vickers dkk., 2023), 
+precision dapat dihitung menggunakan rumus pada persamaan 2.3. 
+Precision  =  ்௉
+்௉ାி௉  .................. (2.3) 
+Keterangan: 
+ 𝑇𝑃: data positif yang diprediksi benar. 
+ 𝐹𝑃: data negatif yang diprediksi sebagai positif. 
+ 
+2.13.3  Recall 
+ 
+Recall menunjukkan kemampuan model dalam menemukan data yang sebenarnya 
+termasuk dalam suatu kelas. Nilai recall dihitung dengan membagi jumlah true positive 
+dengan jumlah true positive dan false negative (Vickers dkk., 2023), Recall dapat 
+dihitung menggunakan rumus pada persamaan 2.4. 
+Recall  =  ்௉
+்௉ାிே   ..................... (2.4)  
+Keterangan: 
+ 𝐹𝑁: data positif yang diprediksi sebagai negatif. 
+ 
+2.13.4 F1-Score 
+ 
+F1-score merupakan rata-rata harmonis antara precision dan recall. Metrik ini 
+digunakan untuk memberikan ukuran gabungan terhadap ketepatan prediksi dan 
+kemampuan model dalam menemukan data dari suatu kelas, F1-score dapat dihitung 
+menggunakan rumus pada persamaan 2.5. 
+F1-score = 2 ⋅ ௉௥௘௖௜௦௜௢௡ ⋅ ோ௘௖௔௟௟
+௉௥௘௖௜௦௜௢௡ ା ோ௘௖௔௟௟  ...... (2.5) 
+ 
+2.13.5 Confusion Matrix 
+ 
+--- PAGE 29 ---
+ 
+ 
+ 
+ 
+19 
+Confusion matrix merupakan tabel yang menunjukkan hubungan antara label 
+sebenarnya dan label hasil prediksi. Pada penelitian ini, baris dan kolom mewakili tujuh 
+kelas nominal uang kertas. Nilai pada diagonal utama menunjukkan jumlah prediksi yang 
+benar, sedangkan nilai di luar diagonal menunjukkan kesalahan klasifikasi antar kelas. 
+Confusion matrix digunakan sebagai dasar untuk menganalisis kesalahan prediksi pada 
+masing-masing kelas (Vickers dkk., 2023). 
+ 
+2.14 Android 
+ 
+Android merupakan platform sistem operasi yang digunakan pada berbagai 
+perangkat mobile. Dalam penelitian ini, Android digunakan sebagai platform untuk 
+mengimplementasikan model klasifikasi uang kertas. 
+Aplikasi Android dapat memanfaatkan kamera untuk mengambil citra uang kertas. 
+Citra tersebut kemudian diproses dan diberikan kepada model untuk memperoleh hasil 
+klasifikasi. 
+Pengembangan aplikasi dapat dilakukan menggunakan Visual Studio Code sebagai 
+editor code dengan menggunakan bahasa Dart dan framework Flutter. Untuk 
+pengambilan citra, aplikasi memanfaatkan package Flutter seperti camera atau 
+image_picker serta flutter_tts . Model TensorFlow Lite dijalankan di aplikasi 
+menggunakan plugin tflite_flutter. 
+ 
+2.15 TensorFlow Lite 
+ 
+TensorFlow Lite merupakan teknologi yang digunakan untuk menjalankan model 
+machine learning pada perangkat mobile dan perangkat dengan sumber daya terbatas. 
+Model yang telah dilatih menggunakan TensorFlow atau Keras dapat dikonversi ke 
+format TensorFlow Lite dengan ekstensi .tflite (Martín Abadi dkk., 2015). 
+Dalam penelitian ini, model MobileNetV2 dikonversi ke format TensorFlow Lite 
+dan dimasukkan ke dalam aplikasi Android. Aplikasi kemudian menggunakan model 
+tersebut untuk melakukan proses inferensi terhadap citra uang kertas. 
+Tahapan penggunaan TensorFlow Lite meliputi: 
+1. Melatih model menggunakan TensorFlow atau Keras. 
+2. Mengonversi model ke format .tflite. 
+--- PAGE 30 ---
+ 
+ 
+ 
+ 
+20 
+3. Memasukkan model ke dalam proyek Android. 
+4. Memuat model menggunakan interpreter. 
+5. Menyesuaikan citra dengan format masukan model. 
+6. Menjalankan inferensi. 
+7. Membaca hasil prediksi dan menampilkan nominal uang. 
+TensorFlow Lite menyediakan dukungan untuk menjalankan model TensorFlow 
+pada aplikasi Android (Martín Abadi dkk., 2015), sedangkan proses inferensi merupakan 
+proses menjalankan model untuk menghasilkan prediksi berdasarkan data masukan. 
+ 
+  
+--- PAGE 31 ---
+ 
+ 
+ 
+ 
+21 
+BAB III 
+METODOLOGI PENELITIAN 
+ 
+ 
+3.1 Tahapan Pelaksanaan Penelitian  
+ 
+Penelitian ini dilaksanakan melalui beberapa tahapan proses yang dilakukan 
+sebelum memasuki tahap klasifikasi, sebagaimana dapat dilihat pada Gambar 3.1. 
+ 
+Gambar 3.1 Alur Tahapan Pelaksanaan Penelitian. 
+Berdasarkan Gambar 3.1, tahapan penelitian dapat dijelaskan sebagai berikut: 
+1. Studi Literatur   
+Mempelajari referensi mengenai machine learning, deep learning, CNN, 
+MobileNetV2, transfer learning, fine-tuning, TensorFlow Lite, Android, dan 
+evaluasi model. 
+2. Penyiapan Dataset   
+Memperoleh dataset sekunder citra tujuh nominal uang kertas Rupiah dari 
+penelitian atau sumber terdahulu, kemudian memeriksa label dan kualitas citra. 
+3. Perancangan Data  
+Melakukan preprocessing citra dengan mengubah ukuran menjadi 224 ×
+224piksel, menyesuaikan format RGB, melakukan normalisasi, augmentasi rotasi, 
+flip, zoom, brightness adjustment untuk meningkatkan generalisasi serta membagi 
+dataset menjadi training, validation, dan testing.    
+4. Perancangan Proses  
+Merancang model MobileNetV2 menggunakan transfer learning. Model terdiri 
+atas MobileNetV2 sebagai feature extractor, Global Average Pooling, dropout, 
+
+--- PAGE 32 ---
+ 
+ 
+ 
+ 
+22 
+dense layer, dan softmax. Selanjutnya, 20 lapisan terakhir dibuka untuk proses fine-
+tuning. 
+5. Perancangan Tampilan  
+Merancang antarmuka aplikasi Android yang mencakup kamera, tombol 
+pengambilan citra, tombol klasifikasi, dan tampilan hasil prediksi. 
+6. Implementasi 
+Melatih dan melakukan fine-tuning model, menyimpan model terbaik, 
+mengonversinya ke format TensorFlow Lite, serta mengintegrasikannya ke dalam 
+aplikasi Android. 
+7. Pengujian 
+Menguji performa model menggunakan accuracy, precision, recall, F1-score, dan 
+confusion matrix. Aplikasi diuji menggunakan metode black-box untuk memeriksa 
+fungsi kamera, klasifikasi, dan tampilan hasil. 
+8. Kesimpulan 
+Menarik kesimpulan berdasarkan hasil pengujian untuk mengetahui keberhasilan 
+model dalam mengenali tujuh nominal uang kertas Rupiah serta memberikan saran 
+untuk penelitian selanjutnya. 
+3.2 Pengumpulan Data 
+ 
+Tahap pengumpulan data dilakukan dengan memperoleh dataset dari pengambilan 
+gambar menggunakan kamera smartphone sebagai real-world testing dataset dan juga 
+dataset sekunder dari penelitian terdahulu. Dataset sekunder yang digunakan dalam 
+penelitian ini berupa citra uang kertas Rupiah yang diperoleh dari Rahmiatul Mawaddah 
+pada tahun 2023 melalui tautan Google Drive berikut:  
+https://drive.google.com/drive/folders/1HmsMI11GHNxvCjema6mafU2vwaBvEW9_?
+usp=drive_link  
+Dataset tersebut terdiri atas citra tujuh kelas nominal uang kertas Rupiah, yaitu 
+Rp1.000, Rp2.000, Rp5.000, Rp10.000, Rp20.000, Rp50.000, dan Rp100.000. Dataset 
+digunakan sebagai data masukan dalam proses klasifikasi nominal uang kertas 
+menggunakan arsitektur MobileNetV2 dengan pendekatan transfer learning dan fine-
+tuning.  
+--- PAGE 33 ---
+ 
+ 
+ 
+ 
+23 
+Setiap kelas memuat citra sisi depan dan sisi belakang uang kertas. Dataset juga 
+memiliki variasi orientasi dengan rotasi dalam kelipatan 90∘, yaitu 0∘, 90∘, 180∘, dan 
+270∘. Sisi depan, sisi belakang, dan citra yang mengalami rotasi dari nominal yang sama 
+tetap dimasukkan ke dalam satu kelas nominal. 
+ 
+(a) 
+ 
+(b) 
+ 
+(c) 
+ 
+(d) 
+Gambar 3.2 Contoh Citra Dataset: (a) Sisi Depan, (b) Sisi Belakang, (c) Rotasi 90° Sisi Depan, 
+(d) Rotasi 90° Sisi Belakang. 
+ 
+Citra pada dataset disusun ke dalam folder berdasarkan kelas nominal uang kertas. 
+Nama folder digunakan sebagai label kelas, sedangkan nama file tidak diubah karena 
+hanya berfungsi sebagai identitas masing-masing citra. 
+ 
+3.3 Perancangan Data  
+ 
+Perancangan data dilakukan dengan menyiapkan dataset agar sesuai dengan 
+kebutuhan pelatihan dan pengujian model MobileNetV2. Dataset terdiri atas tujuh kelas 
+nominal uang kertas Rupiah, dan setiap kelas memiliki 900 citra. Dengan demikian, 
+jumlah keseluruhan dataset yang digunakan adalah 5.700 citra. 
+Dataset kemudian dibagi ulang secara proporsional pada setiap kelas menjadi 70% 
+data training, 15% data validation, dan 15% data testing. Berdasarkan jumlah tersebut, 
+Setiap kelas terdiri atas 630 citra training, 135 citra validation, dan 135 citra testing. 
+Dengan demikian, keseluruhan dataset terbagi menjadi 4.410 citra training, 945 citra 
+validation, dan 945 citra testing. 
+
+--- PAGE 34 ---
+ 
+ 
+ 
+ 
+24 
+Data training digunakan untuk melatih model, data validation digunakan untuk 
+memantau kinerja model dan menentukan model terbaik, sedangkan data testing 
+digunakan untuk mengevaluasi kemampuan akhir model terhadap data yang tidak 
+digunakan selama proses pelatihan. Pemisahan data pelatihan dan pengujian diperlukan 
+agar performa model dapat diukur secara lebih objektif.  
+Tabel 3.1 Pembagian Dataset Citra Uang Kertas Rupiah 
+No. Kelas 
+Nominal 
+Total 
+Gambar 
+Training 
+70% 
+Validation 
+15% 
+Testing 
+15% 
+1 Rp1.000 900  630 135 135 
+2 Rp2.000 900  630 135 135 
+3 Rp5.000 900  630 135 135 
+4 Rp10.000 900  630 135 135 
+5 Rp20.000 900  630 135 135 
+6 Rp50.000 900  630 135 135 
+7 Rp100.000 900  630 135 135 
+ Total 5700 4410 945 945 
+ 
+Setelah pembagian data, citra disesuaikan dengan kebutuhan MobileNetV2 melalui 
+proses preprocessing. Proses tersebut meliputi perubahan ukuran citra menjadi 
+224 × 224piksel, penyesuaian format citra menjadi RGB, dan normalisasi nilai piksel. 
+Dataset kemudian siap digunakan dalam proses transfer learning, fine-tuning, dan 
+pengujian model. 
+ 
+3.4 Perancangan Proses/Algoritma 
+ 
+Dataset yang telah disiapkan kemudian diterapkan pada arsitektur CNN 
+MobileNetV2 menggunakan pendekatan transfer learning dan fine-tuning. Ilustrasi 
+proses penerapan dataset ke dalam model MobileNetV2 dapat dilihat pada Gambar 3.3. 
+--- PAGE 35 ---
+ 
+ 
+ 
+ 
+25 
+ 
+Gambar 3.3 Tahapan Perancangan Proses. 
+Berdasarkan Gambar 3.3, proses klasifikasi dapat diuraikan sebagai berikut: 
+1. Dataset citra uang kertas yang diperoleh dari Rahmiatul Mawaddah (2023) 
+dimasukkan ke dalam program berdasarkan folder nominal. Nama folder digunakan 
+sebagai label kelas, sedangkan nama file citra tidak diubah. 
+2. Citra dibagi menjadi 70% data training, 15% data validation, dan 15% data testing. 
+Dari 900 citra pada setiap kelas, diperoleh 630 citra training, 135 citra validation, dan 
+135 citra testing. Secara keseluruhan, dataset terdiri atas 4410 citra training, 945 citra 
+validation, dan 945 citra testing. 
+3. Citra melalui proses preprocessing dengan mengubah ukuran menjadi 224 ×
+224piksel, menyesuaikan format warna menjadi RGB, melakukan normalisasi nilai 
+piksel dan data di augmentasi random rotation, zoom, brightness/contrast.  
+
+--- PAGE 36 ---
+ 
+ 
+ 
+ 
+26 
+4. Citra hasil preprocessing dimasukkan ke dalam MobileNetV2 yang digunakan 
+sebagai feature extractor. MobileNetV2 menggunakan bobot pretrained dan lapisan 
+klasifikasi bawaannya disesuaikan dengan kebutuhan penelitian. 
+5. Lapisan klasifikasi baru ditambahkan setelah MobileNetV2, yang terdiri atas Global 
+Average Pooling, dropout, dense layer, dan fungsi aktivasi softmax. Lapisan tersebut 
+digunakan untuk menghasilkan probabilitas dari tujuh kelas nominal uang kertas. 
+6. Pada tahap awal transfer learning, lapisan dasar MobileNetV2 dibekukan sehingga 
+bobotnya tidak berubah. Pelatihan dilakukan pada lapisan klasifikasi baru 
+menggunakan data training, sedangkan data validation digunakan untuk memantau 
+performa model dan menentukan model terbaik. 
+7. Setelah pelatihan awal selesai, 20 lapisan terakhir MobileNetV2 dibuka untuk proses 
+fine-tuning. Proses ini dilakukan agar model dapat menyesuaikan fitur yang telah 
+dipelajari dengan karakteristik citra uang kertas. Selanjutnya, model dilatih kembali 
+menggunakan learning rate yang lebih rendah. 
+8. Model diuji menggunakan 945 citra testing yang tidak digunakan selama proses 
+pelatihan. Hasil pengujian digunakan untuk memperoleh nilai accuracy, precision, 
+recall, F1-score, dan confusion matrix. Tahap pengujian dilakukan untuk mengetahui 
+kemampuan model dalam mengklasifikasikan tujuh nominal uang kertas. Proses 
+pelatihan dan pengujian model dilakukan dengan memisahkan data pelatihan dari data 
+pengujian agar hasil evaluasi lebih objektif.  
+9. Model dengan performa terbaik disimpan dan dikonversi ke format TensorFlow Lite 
+dengan ekstensi .tflite. TensorFlow menyediakan TFLiteConverter untuk 
+mengonversi model Keras ke format TensorFlow Lite.android.googlesource+1 
+10. Model TensorFlow Lite diintegrasikan ke dalam aplikasi Android. Aplikasi menerima 
+citra dari kamera, melakukan preprocessing sesuai dengan format input model, 
+menjalankan proses inferensi, dan menampilkan nominal uang kertas berdasarkan 
+probabilitas tertinggi. 
+ 
+ 
+ 
+ 
+--- PAGE 37 ---
+ 
+ 
+ 
+ 
+27 
+3.4.1 Detail Konfigurasi Model dan Training 
+Konfigurasi model yang digunakan dapat dilihat pada tabel 3.2. 
+Tabel 3.2 Detail Hyperparameter Training. 
+Komponen Konfigurasi 
+Base model MobileNetV2 (Pretrained on ImageNet) 
+Input shape 224×224×3  
+Feature Pooling GlobalAveragePooling2D 
+Dense Layer Dense(7, activation='softmax') 
+Regularization Dropout(0.2) 
+Optimizer Adam 
+Initial Learning-Rate 10 -4 
+Fine-Tuning Learning Rate 10 -5 
+Loss Function CategoricalCrossentropy 
+Batch Size 32 
+Epoch 50 (dengan EarlyStopping & 
+ModelCheckpoint). 
+ 
+  
+--- PAGE 38 ---
+ 
+ 
+ 
+ 
+28 
+3.5 Perancangan Tampilan 
+ 
+Perancangan tampilan dilakukan untuk menentukan struktur antarmuka aplikasi 
+Android yang digunakan dalam proses klasifikasi nominal uang kertas. Rancangan ini 
+dibuat dalam bentuk wireframe untuk memberikan gambaran awal mengenai tata letak 
+komponen, navigasi, dan fungsi utama pada aplikasi. Wireframe yang dirancang terdiri 
+atas tampilan Home sebagai halaman utama dan tampilan kamera sebagai halaman 
+pengambilan citra uang kertas. Kedua rancangan tampilan tersebut ditunjukkan pada 
+Gambar 3.4.  
+ 
+(a) 
+ 
+(b) 
+Gambar 3.4 Wireframe Aplikasi: (a) Wireframe Tampilan Home, (b) Wireframe Tampilan 
+Kamera. 
+3.6 Perancangan Pengujian 
+ 
+Tahap pengujian dilakukan untuk mengetahui kinerja model MobileNetV2 dan 
+fungsi aplikasi Android. Pengujian model dilakukan menggunakan 135 citra testing dari 
+tujuh kelas nominal dengan membandingkan label sebenarnya dan hasil prediksi model.  
+
+--- PAGE 39 ---
+ 
+ 
+ 
+ 
+29 
+Metrik yang digunakan meliputi accuracy, precision, recall, F1-score, dan 
+confusion matrix. Pengujian aplikasi dilakukan menggunakan metode black-box terhadap 
+fungsi pembukaan aplikasi, izin kamera, pengambilan citra melalui camera atau 
+image_picker, proses klasifikasi, dan penampilan hasil prediksi. Hasil pengujian 
+dianalisis untuk mengetahui kemampuan model dan kesesuaian fungsi aplikasi dengan 
+rancangan yang telah dibuat. 
+  
+--- PAGE 40 ---
+ 
+ 
+ 
+ 
+30 
+DAFTAR PUSTAKA 
+ 
+1. Albani, M., & Andhi, R. R. (2023). Klasifikasi Uang Rupiah Kertas Tidak Layak 
+Edar Menggunakan CNN Xception Transfer Learning Berbasis Website. Jurnal 
+Inovtek Polbeng Seri Informatika, 8(2), 393–406. 
+ 
+2. Alfita, R., Ibadillah, A. F., & Prianto, A. (2022). Identifikasi Nilai Nominal Uang 
+Kertas Berdasarkan Warna Berbasis Image Processing Menggunakan Metode 
+Template Matching. Jurnal Teknik Elektro dan Komputer TRIAC, 9(1), 28–32. 
+https://doi.org/10.21107/triac.v9i1.12487 
+ 
+3. Allaam, M. R. R., & Wibowo, A. T. (2021). Klasifikasi Genus Tanaman Anggrek 
+Menggunakan Metode Convolutional Neural Network (CNN). e-Proceeding of 
+Engineering, 8(2), 3147–3179. 
+ 
+4. Bahar, B., Raban, R. D. Yc., & Arnie, R. (2023). Model Pendeteksi Nominal Uang 
+Kertas Rupiah Menggunakan Teknologi Optical Character Recognition. Jurnal 
+Ticom: Technology of Information and Communication, 12(1), 8–13. 
+https://doi.org/10.70309/ticom.v12i1.101 
+ 
+5. Cahya, F. N., Hardi, N., & Riana, D. (2021). Klasifikasi penyakit mata 
+menggunakan convolutional neural network (CNN). SISTEMASI: Jurnal Sistem 
+Informasi, 10(3), 618–626. 
+ 
+6. Cao, J., Li, Y., Sun, M., Chen, Y., Lischinski, D., Cohen-Or, D., Chen, B., & Tu, 
+C. (2022). Do-conv: Depthwise over-parameterized convolutional layer. IEEE 
+Transactions on Image Processing, 31, 3726–3736. 
+ 
+7. Dijaya, R., & Setiawan, H. (2023). Buku ajar pengolahan citra digital. Umsida 
+Press, 1–85. 
+ 
+8. Fransisca, P. S., & Matondang, N. (2023). Deteksi Citra Digital Penyakit Cacar 
+Monyet menggunakan Algoritma Convolutional Neural Network dengan 
+Arsitektur MobileNetV2. Jurnal Ilmu Komputer dan Agri-Informatika, 10(2), 
+200. 
+ 
+9. Goodfellow, I., Bengio, Y., Courville, A., & Bengio, Y. (2016). Deep learning 
+(Vol. 1, Nomor 2). MIT press Cambridge. 
+ 
+10. Gunardi, M. F. (2023). Implementasi Augmentasi Citra pada Suatu Dataset. J. 
+Inform, 9(1), 1–5. 
+ 
+11. Hartono, A. C., & Muslikh, A. R. (2025). Penerapan Transfer Learning 
+MobileNetV2 Pada Klasifikasi Citra Jenis Buah-Buahan. Journal of Information 
+System and Application Development, 3(2), 103–111. 
+--- PAGE 41 ---
+ 
+ 
+ 
+ 
+31 
+12. Intyanto, G. W. (2021). Klasifikasi citra bunga dengan menggunakan deep 
+learning: CNN (Convolution Neural Network). Jurnal Arus Elektro Indonesia, 
+7(3), 80–83. 
+ 
+13. Martín Abadi, Ashish Agarwal, Paul Barham, Eugene Brevdo, Zhifeng Chen, 
+Craig Citro, Greg S. Corrado, Andy Davis, Jeffrey Dean, Matthieu Devin, Sanjay 
+Ghemawat, Ian Goodfellow, Andrew Harp, Geoffrey Irving, Michael Isard, Jia, 
+Y., Rafal Jozefowicz, Lukasz Kaiser, Manjunath Kudlur, … Xiaoqiang Zheng. 
+(2015). TensorFlow: Large-Scale Machine Learning on Heterogeneous Systems. 
+https://www.tensorflow.org/ 
+ 
+14. Mawaddah, R. (2023). KLASIFIKASI NOMINAL MATA UANG KERTAS 
+INDONESIA MENGGUNAKAN CONVOLUTIONAL NEURAL NETWORK 
+[Skripsi]. Mulawarman. 
+ 
+15. Mitchell, T. M. (2013). Machine learning (Nachdr.). McGraw-Hill. 
+16. Mulyani, A., & Nurazizah, N. P. (2025). Klasifikasi Keaslian Uang Kertas 
+Menggunakan Algoritma K-Nearest Neighbor dan Metode Gabor Filter. Jurnal 
+Algoritma, 22(2), 1510–1520. 
+ 
+17. Pratama, M. H. R., Akrom, M., Santosa, A. P., Rosyid, M. R., & Mawaddah, L. 
+(2025). Klasifikasi otomatis korosi menggunakan Convolutional Neural Network 
+dan transfer learning dengan model MobileNetV2. Jurnal Algoritma, 22(1), 138–
+148. 
+ 
+18. Rahmaddeni, R., Adrianto, S., Muhammad, M., Hidayatullah, R., & Daulay, S. 
+(2026). Pengantar Lengkap Machine Learning: Supervised, Unsupervised, dan 
+Reinforcement Learning Dengan Python. Serasi Media Teknologi. 
+ 
+19. Sandler, M., Howard, A., Zhu, M., Zhmoginov, A., & Chen, L.-C. (2018). 
+MobileNetV2: Inverted Residuals and Linear Bottlenecks. 2018 IEEE/CVF 
+Conference on Computer Vision and Pattern Recognition, 4510–4520. 
+https://doi.org/10.1109/CVPR.2018.00474 
+ 
+20. Sharifani, K., & Amini, M. (2023). Machine learning and deep learning: A review 
+of methods and applications. World information technology and engineering 
+journal, 10(07), 3897–3904. 
+ 
+21. Sukmawardani, R., Nurpulaela, L., & Rahmadewi, R. (2024). Implementasi 
+arsitektur ResNet152 untuk klasifikasi uang kertas rupiah dengan metode transfer 
+learning. JATI (Jurnal Mahasiswa Teknik Informatika), 8(4), 5650–5657. 
+ 
+22. Taye, M. M. (2023). Understanding of machine learning with deep learning: 
+Architectures, workflow, applications and future directions. Computers, 12(5), 
+91. 
+ 
+--- PAGE 42 ---
+ 
+ 
+ 
+ 
+32 
+23. Vickers, P., Barrault, L., Monti, E., & Aletras, N. (2023). We need to talk about 
+classification evaluation metrics in NLP. 498–510. 
+ 
+24. Wona, M. M. A., Asyifa, S. A., Virgianti, R., Hamid, M. N., Handoko, I. M., 
+Septiani, N. W. P., & Lestari, M. (2023). Klasifikasi Batik Indonesia 
+Menggunakan Convolutional Neural Network (CNN). Jurnal Rekayasa 
+Teknologi Informasi (JURTI), 7(2), 172–179. 
+ 
+25. Yahya, H., & Fauziah, E. (2026). Implementasi CNN Transfer Learning 
+MobileNetV2 untuk Klasifikasi Mata Uang Rupiah bagi Tunanetra. RIGGS: 
+Journal of Artificial Intelligence and Digital Business, 5(2), 20754–20763. 
+https://doi.org/10.31004/riggs.v5i2.12446 
+ 
+26. Zalvadila, A. (2023). Klasifikasi Penyakit Tanaman Bawang Merah 
+Menggunakan Metode SVM dan CNN. Jurnal Informatika: Jurnal 
+Pengembangan IT, 8(3), 255–260. 
+ 
+27. Zhao, X., Wang, L., Zhang, Y., Han, X., Deveci, M., & Parmar, M. (2024). A 
+review of convolutional neural networks in computer vision: X. Zhao et al. 
+Artificial Intelligence Review, 57(4), 99. 
+ 
+  
+--- PAGE 43 ---
+ 
+ 
+ 
+ 
+33 
+LAMPIRAN 
+ 
