@@ -151,6 +151,29 @@ Namun, sebelum mahasiswa mencetak dan menjilid skripsi (*hard cover*), ditemukan
   - [ ] Hal. 83: Ganti rujukan gambar dari 4.31 menjadi **Gambar 4.32**.
   - [ ] Hal. 86: Ganti judul Gambar 4.35 menjadi **High-Fidelity Profil (2)**.
   - [ ] Hal. 89: Ganti judul Gambar 4.38 menjadi **High-Fidelity Detail Berita**.
-- [ ] **5. Lembar Pengesahan & Gelar:** Perbaiki penulisan gelar Pembimbing II menjadi `Prof. Dr. Ir. Anindita Septiarini, S.T., M.Cs., IPU` (Hal. iii) dan hilangkan koma pada kalimat pembuka Kata Pengantar (Hal. vii).
-- [ ] **6. Daftar Pustaka:** Bersihkan teks hak cipta pada entri Shaktyanti (No. 31) dan hilangkan garis bawah pada Lemeshow (No. 17).
-- [ ] **7. Wawancara & Tipografi:** Ganti kata "Ibu" menjadi "Bapak" pada Tabel 3.2 butir 1, perbaiki istilah "website hidup" di Bab V, serta bersihkan kata yang terpecah spasi di seluruh dokumen.
+- [x] **5. Lembar Pengesahan & Gelar:** Perbaiki penulisan gelar Pembimbing II menjadi `Prof. Dr. Ir. Anindita Septiarini, S.T., M.Cs., IPU` (Hal. iii) dan hilangkan koma pada kalimat pembuka Kata Pengantar (Hal. vii). *(Selesai diperbaiki)*
+- [x] **6. Daftar Pustaka:** Bersihkan teks hak cipta pada entri Shaktyanti (No. 31) dan hilangkan garis bawah pada Lemeshow (No. 17). *(Selesai diperbaiki)*
+- [x] **7. Wawancara & Tipografi:** Ganti kata "Ibu" menjadi "Bapak" pada Tabel 3.2 butir 1, perbaiki istilah "website hidup" di Bab V, serta bersihkan kata yang terpecah spasi di seluruh dokumen. *(Selesai diperbaiki)*
+
+---
+
+## 🎯 7. Hasil Verifikasi Revisi Draf 2 & Keputusan Final (ACC JILID)
+
+**Berkas yang Dievaluasi:** `2209106117 ERIKA CHRISTY SKRIPSI (2).pdf` (158 Halaman)  
+**Status Evaluasi:** 🟢 **ACC JILID SKRIPSI (HARD COVER / YUDISIUM)**
+
+### Evaluasi Pemenuhan Revisi Mahasiswa:
+1. ✅ **Sinkronisasi Data Kuantitatif:**
+   - Skor SUS telah konsisten **82** di seluruh naskah.
+   - *Success Rate Desktop* telah diperbaiki langkah rumusnya menjadi $\frac{73 + (2 \times 0.5)}{75} = \frac{74}{75} \times 100\% = \mathbf{98,6\%}$. Narasi teks di bawah rumus, Tabel 4.7 (73 S dan 2 TS), Abstrak, dan Bab V Kesimpulan seluruhnya telah sinkron 100% pada angka **98,6%**.
+2. ✅ **Lembar Pengesahan:** Gelar Pembimbing II telah diperbaiki menjadi `Prof. Dr. Ir. Anindita Septiarini, S.T., M.Cs., IPU.`.
+3. ✅ **Kata Pengantar:** Tanda koma salah letak telah dihapus dan gelar dosen telah rapi.
+4. ✅ **Daftar Pustaka:** Teks hak cipta pada Shaktyanti et al. dan garis bawah pada Lemeshow telah dibersihkan.
+5. ✅ **Bab V Saran:** Istilah *website hidup* telah diganti menjadi *website lingkungan produksi (production/live website)* dan redundansi fitur pencarian telah dirapikan.
+6. ✅ **User Persona 1:** Pekerjaan telah diperbaiki menjadi *Karyawan IT PT BKNS*.
+
+### Catatan Minor Pra-Cetak (Bisa langsung disesuaikan saat print final):
+* **Gambar 4.35 (Hal. 86 / PDF 111):** Judul caption tertulis *High-Fidelity Profil (1)*, ubah angka `(1)` menjadi **`(2)`** agar tidak sama persis dengan Gambar 4.34.
+* **Gambar 4.38 (Hal. 89 / PDF 114):** Judul caption *High-Fidelity Detail Berita (2)*, hilangkan angka `(2)`.
+* **Abstract Bahasa Inggris (Hal. vi / PDF 7):** Ganti koma menjadi titik desimal pada `98,6%` $\to$ **`98.6%`** dan perbaiki spasi kata kunci `System Usabilit y Scale` $\to$ **`System Usability Scale`**.
+
