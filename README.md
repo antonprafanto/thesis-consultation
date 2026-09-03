@@ -33,7 +33,7 @@ Repository ini didedikasikan untuk pengelolaan dokumentasi bimbingan, audit nask
 | 3 | Benny Hernanda Putra | 2009106066 | *Implementasi Convolutional Neural Network Berbasis MobileNetV2 pada Aplikasi Flutter untuk Klasifikasi Nominal Uang Kertas Rupiah* | [Laporan Audit Awal](audit_mahasiswa/laporan_audit_proposal_benny.md) • [Revisi 1](audit_mahasiswa/laporan_audit_proposal_benny_revisi1.md) • [Revisi 2 (ACC)](audit_mahasiswa/laporan_audit_proposal_benny_revisi2.md) |
 | 4 | Erika Christy Pagili | 2209106117 | *Perancangan Ulang Design UI/UX Website PT Bina Karya Nuansa Sejahtera Menggunakan Metode Design Thinking* | [Audit Sidang](audit_mahasiswa/laporan_audit_skripsi_erika_christy.md) • [Audit Final Pra-Jilid](audit_mahasiswa/laporan_audit_skripsi_erika_christy_final_jilid.md) |
 | 5 | Muhammad Faqih Ajiputra | 2209106114 | *Long Sequence Time-Series Forecasting pada Pasar Valuta Asing EUR/USD Menggunakan Model Informer* | [Laporan Audit Forensik & Evaluasi Sidang](audit_mahasiswa/laporan_audit_skripsi_faqih_ajiputra.md) |
-| 6 | Muhammad Annur Akbar | 2309106110 | *Rancang Bangun Perangkap Hama Cahaya Berbasis Raspberry Pi 4 dengan Algoritma YOLOv5* | [Laporan Audit Forensik & Evaluasi Sempro](audit_mahasiswa/laporan_audit_proposal_annur_akbar.md) |
+| 6 | Muhammad Annur Akbar | 2309106110 | *Rancang Bangun Perangkap Hama Cahaya Berbasis Raspberry Pi 4 dengan Algoritma YOLOv5* | [Laporan Audit Awal](audit_mahasiswa/laporan_audit_proposal_annur_akbar.md) • [Revisi 1 (Menuju ACC)](audit_mahasiswa/laporan_audit_proposal_annur_akbar_revisi1.md) |
 
 ---
 
