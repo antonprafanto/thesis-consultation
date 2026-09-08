@@ -1,0 +1,2056 @@
+=== HALAMAN 1 ===
+
+
+=== HALAMAN 2 ===
+LEMBAR PENGESAHAN BIMBINGAN 
+DETEKSI BOLA DENGAN OPEN CV 
+Sebagai salah satu syarat untuk menyelesaikan  
+Program Diploma III Teknik Komputer 
+Jurusan Teknologi Informasi 
+Oleh: 
+Ridho Putra Darma 
+216201028 
+Menyetujui: 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+  
+Pembimbing 1 
+ 
+ 
+ 
+AgusmaWajiansyah,S.ST.,MT 
+NIP.19810805 200501 1 003 
+ 
+Mengetahui: 
+Kepala Ketua  Jurusan Teknologi informasi  
+ 
+ 
+ 
+ 
+Rheo Malani, S.Kom, M.Kom 
+NIP.19780823 200312 1 001 
+ 
+Pembimbing 2 
+ 
+ 
+ 
+Didi Susilo Budi Utomo,ST., M.Sc 
+NIP.19661109 199103 1 004  
+ 
+
+=== HALAMAN 3 ===
+ TUGAS AKHIR 
+DETEKSI BOLA MENGGUNAKAN OPENCV  
+Sebagai salah satu syarat untuk menyelesaikan 
+ Program Studi Diploma III/Sarjana Jurusan  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Oleh 
+Ridho Putra Darma 
+NIM 216201028 
+ 
+KEMENTERIAN RISET TEKNOLOGI DAN PENDIDIKAN 
+TINGGI 
+POLITEKNIK NEGERI SAMARINDA 
+JURUSAN TEKNOLOGI INFORMASI 
+PROGRAM STUDI TEKNIK INFORMATIKA 
+ 
+Samarinda,2024 
+
+=== HALAMAN 4 ===
+ 
+ 
+A FINAL PROJECT REPORT 
+BALL DETECTION USING OPENCV 
+In Partial Fulfillment of a Three-Year Diploma 
+Program of Business English of State Polytechnic of 
+Samarinda 
+ 
+ 
+ 
+ 
+ 
+By 
+Ridho Putra Darma 
+Reg.Number 216201028 
+ 
+DEPARTMENT OF INFORMATION TECHNOLOGY 
+SAMARINDA STATE POLYTECHNIC 
+Samarinda,2024 
+
+=== HALAMAN 5 ===
+ 
+ 
+v 
+ 
+PENYATAAN KEASLIAN TUGAS AKHIR DAN SKRIPSI 
+Saya menyatakan dengan sesungguhnya bahwa Tugas Akhir dan Skripsi ini adalah 
+asli hasil karya saya dan tidak terdapat karya yang pernah dilakukan untuk 
+memperoleh gelar kesarjanaan di perguruan tinggi, dan sepanjang pengetahuan saya 
+juga tidak terdapat karya atau pendapat yang pernah ditulis atau dipublikasikan oleh 
+orang lain, kecuali yang secara tertulis disebutkan sumbernya dalam naskah dan dalam 
+daftar pustaka 
+ 
+ 
+ 
+ 
+Samarinda, 
+ 
+ 
+ 
+ 
+             
+
+=== HALAMAN 6 ===
+ 
+ 
+vi 
+ 
+KATA PENGANTAR 
+ 
+Assalamu’alaikum Warohmatullahi wabarokatuh 
+ Puji syukur penulis panjatkan kepada Allah SWT. Yang telah melimpahkan  
+rahmat, taufik. Hidayah  serta inaiyahnya sehingga penulis dapat menyelesaikan 
+penyusunan Laporan Tugas Akhir ini.Penyusunan Tugas Akhir ini selain merupakan 
+salah satu persyaratan yangharus dipenuhi untuk menyelesaikan pendidikan  san 
+peneliti pada jenjang  Diploma 3, dengan doa yang terus dipanjatkan oleh kedua 
+orang tua dan orang -orang yang telah mendukung sela ma ini sang penulis dapat 
+menyelesaikan tugas akhirnya yang berjudul “ Deteksi Bola Menggunakan Opencv ” 
+Penyusunan skripsi ini dimaksudka untuk memenuhi persyaratan dalam 
+menyelesaikan jejang pendidikan program Diploma 3, program studi teknik komputer, 
+jurusan teknologi informasi, Politeknik Negri Samarinda. Laporan Ini disusun 
+berdasarkan data yang diperoleh penulis salama melakukan penelitian.Pada 
+kesempatan ini ijinkan penulis untuk mengucapkan terima kasih dan rasahormat atsa 
+segala bantuan yang telah di berikan kepada penulis sehingga dapatmenyelesaikan 
+laporan Tugas Akhir ini, yaitu kepada : 
+1. Kepada Direktur Politeknik Negeri Samarinda :Ahyar M. Diah, SE.,MM,. 
+Ph.D 
+2. Kepada Ketua Jurusan: Rheo Malani, S.Kom, M.Kom 
+3. Kepada Ketua Program Studi : Agusma Wajiansyah,S.ST.,MT 
+4. Kepada Pembimbing I dan II : Agusma Wajiansyah,S.ST.,MT dan Didi Susilo 
+Budi Utomo,ST.,M.Sc 
+5. Kepada Staf Dosen, Staf Teknisi, dan Staf Administrasi Jurusan 
+6. Kepada teman-teman mahasiswa  
+  
+
+=== HALAMAN 7 ===
+ 
+ 
+vii 
+ 
+DETEKSI BOLA MENGGUNAKAN OPENCV 
+Nama Mahasiswa :Ridho Putra Darma 
+NIM   : 216201028 
+Dosen Pebimbing : Agusma Wajiansyah,S.ST.,MT 
+      Didi Susilo Budi Utomo,ST.,M.Sc 
+ABSTRAK 
+Seiring pesat berkembangnya teknologi beberapa tahun terakhir ini yang sangat 
+berpengaruh terhadap kehidupan jutaan manusia sangat tidak dapat di pungkuri 
+teknologi memiliki peran penting dalam kehidupan manusia terutama dalam bidang 
+penelitian dan pengembangan oleh karena itu teknologi akan selalu berkembangan 
+seiiring dengan majunya peradaban manusia. Teknologi memberikan kemudahan 
+dalam mengembankan pendeteksi yang memiliki peran penting dalam pengembangan 
+indra yang serupa dengan indra mata yang dimiliki  manusia dengan bahasa 
+pemograman dan library yang tepat dapat mempermudah pengembangan 
+tersebebut.Dalam penelitian ini adalah me ngembangkan pendeteksi object yang 
+berbentuk bola dan juga mencari  jarak beserta koordinat dari objek tersebut melalui 
+metode Hough circle dengan opencv sebagai library  dan bahasa pemograman python 
+yang mana penelitian nya akan dilaksanakan dengan code e ditor yaitu visual code 
+studio yang mana hasil dari penelitian tersebut adalah bola yang telah terdeteksi dan 
+juga dengan jarak bola dan koordinaatnya dengan  begitu kesimpulan dari penelitian 
+dapat ditarik berapa jarak dan koordinatdari bola yang telah terdeteksi . 
+ 
+Kata Kunci : Deteksi Bola, Opencv 
+  
+
+=== HALAMAN 8 ===
+ 
+ 
+viii 
+ 
+ 
+ 
+BALL DETECTION USING OPENCV 
+Student Name   :Ridho Putra Darma 
+Reg.Number    :216201028 
+lecturers   : Agusma Wajiansyah,S.ST.,MT 
+        Didi Susilo Budi Utomo,ST.,M.Sc   
+  ABSTRACT 
+With the rapid growth of technology over the past few years that has influenced the 
+bilion of human life, undoubtedly, technology plays an important role in human life, 
+especially in the field of research and development. Therefore, technology keeps 
+growing alongside civilization. The technology has given us an advantage in 
+developing a detection system that plays an important role in developing a sense 
+similar to human eyes. With the right programming and library, developing such a 
+sense would be possible. This research is about developing ball -shaped object 
+detection, including distance and coordinates of the object, through the Hough circle 
+method with OpenCV as the library and Python for language programming. The 
+research will be conducted on  a code editor known as Visual Code Studio. By doing 
+so, the outcome of the research is a detected ball with a distance, and the coordinate 
+of the ball for the conclusion of this research can be determined by how far the 
+distance and coordinate of the detected ball are.  
+Keywords: Ball detection,opencv 
+
+=== HALAMAN 9 ===
+ 
+ 
+ix 
+ 
+ 
+  
+DAFTAR ISI 
+          Halaman 
+LEMBAR PENGESAHAN BIMBINGAN 2 
+PENYATAAN KEASLIAN TUGAS AKHIR DAN SKRIPSI v 
+KATA PENGANTAR vi 
+ABSTRAK vii 
+ABSTRACT viii 
+GAMBAR xii 
+TEXT  xiii 
+TABLE  xiv 
+BAB I   PENDAHLUAN 15 
+1.1. Latar Belakang 15 
+1.2. Rumusan Masalah 16 
+1.3. Tujuan Penelitian 16 
+1.4. Batasan Masalah 16 
+1.5. Manfaat penelitian 16 
+1.6. Sistematika Penulisan 16 
+BAB II   TINJAUAN  PUSTAKA 18 
+2.1. Kajian Terdahulu 18 
+2.2. Landasan Teori 20 
+2.2.1. Citra 20 
+2.2.2. Warna 21 
+2.2.3. Pixel 21 
+2.2.4. RGB dan CMYK 22 
+2.2.5. OpenCV 22 
+2.2.6. Python 23 
+
+=== HALAMAN 10 ===
+ 
+ 
+x 
+ 
+2.3. Hubungan Python Dengan Opencv 24 
+2.4. Circular Hough  Transform 25 
+2.5. Rumus Kartasia 25 
+BAB III   METODE PENELITIAN 26 
+3.1. Tempat dan Waktu Penelitian 26 
+3.2. Definisi Operasional 26 
+3.2.1. Indetefikasi Variabel 26 
+3.3. Objek Penelitian 27 
+3.4. Teknik  Pengambilan Data 27 
+3.5. Jenis Data 28 
+3.6. Jangkauan Penelitian 28 
+3.7. Teknik Analisa Penelitian 29 
+3.8. Alat Penelitian 30 
+3.8.1. Keterangan dan spefikasi alat 30 
+3.9. Konsep Penelitian 31 
+3.10. Tahapan Penelitian 32 
+3.11. Teknik Penggumpulan 33 
+3.11.1. Studi Pustaka 33 
+3.11.2. Penggujian Langsung 33 
+3.12. Penelitian  deteksi Warna kuning  dari objek HSV 34 
+BAB IV  HASIL DAN PEMBAHASAN 35 
+4.1. Tahapan Penelitian Dan Pembahasan 35 
+4.1.1. Import Opencv 35 
+4.1.2. Fungsi Untuk Menghitung Jarak 35 
+4.1.3. Fungsi Mendeteksi Bola Secara Real Time 36 
+4.1.4. Menambahkan loop 36 
+4.1.5. Menambahkan Pernyataan Jika Ada Bola 37 
+4.1.6. Loop Jika ada Bola yang terdeteksi Dan Menandai Dengan Lingkaran 37 
+4.1.7. Memberi Informasi Dari Objek dengan Text 38 
+
+=== HALAMAN 11 ===
+ 
+ 
+xi 
+ 
+4.1.8. Memunculkan Jedela Frame 38 
+4.1.9. Melakukan Kalibrasi 39 
+4.2. Hasil Riset Penelitian 40 
+4.2.1. Mencari Jarak dan Kordinat 40 
+4.3. Mendeteksi Warna Kuning 45 
+4.3.1. Mendeteksi Warna Kuning Dengan HSV 45 
+4.4. Tahapan Penelitian Dan Pembahasan Deteksi Warna Kuning Dari Objek HSV 51 
+4.4.1. Fungsi Upper dan Lower 51 
+4.4.2. Fungsi hsv_frame 52 
+4.4.3. Fungsi Yellow_Result 52 
+4.4.4. Tambahan Pada Loop 53 
+BAB V  KESIMPULAN DAN SARAN 55 
+5.1. Kesimpulan 55 
+5.2. Saran 56 
+LAMPIRAN 57 
+1. Pemograman 57 
+DAFTAR RUJUKAN 59 
+ 
+ 
+  
+
+=== HALAMAN 12 ===
+ 
+ 
+xii 
+ 
+GAMBAR 
+Gambar 2. 1 RGB dan CMYK (Sumber www.stellendesign.com) 22 
+Gambar 2. 2 OpenCV Sumber (www. Wikipedia.com) 22 
+Gambar 2. 3 Python Sumber (www.wikipedia.com) 23 
+Gambar 3. 1 Laptop           30 
+Gambar 3. 2 Webcam             30 
+Gambar 3. 3 Flowchart Konsep Penelitian         31 
+Gambar 3. 4 Tahapan Penlitian          32 
+Gambar 3. 5deteksi Warna Kuning Dari Objek HSV       34 
+ 
+  
+
+=== HALAMAN 13 ===
+ 
+ 
+xiii 
+ 
+TEXT 
+Text 4. 1 Import Opencv 35 
+Text 4. 2Menghitung jarak 35 
+Text 4. 3Fungsi Mendeteksi Bola Secara Real Time 36 
+Text 4. 4Menambah Loop 36 
+Text 4. 5Pernyataan Jika Ada Bola 37 
+Text 4. 6Jika Bola Terdeteksi 37 
+Text 4. 7Mmemberi Informasi Dengan Text 38 
+Text 4. 8Memunculkan Jedela Frame 38 
+Text 4. 9Melakukan Kalibrasi 39 
+Text 4. 10Fungsi Upper dan Lower 51 
+Text 4. 11Fungsi hsv_frame 52 
+Text 4. 12Fungsi Yellow_Result 52 
+Text 4. 13Tambahan Pada Loop 53 
+  
+
+=== HALAMAN 14 ===
+ 
+ 
+xiv 
+ 
+TABLE 
+ 
+  
+TABLE 4. 1Mencari Jarak Dan Koordinat 40 
+TABLE 4. 2Tabel Penelitian 44 
+TABLE 4. 3Mendeteksi Warna Kuning Dengan HSV 45 
+TABLE 4. 4 Tabel Penelitian warna kuning bola hsv 50 
+Lampiran 1 Pemograman ................................ ................................ ................................ .... 57 
+  
+
+=== HALAMAN 15 ===
+ 
+15 
+ 
+BAB I  
+ 
+PENDAHLUAN 
+ 
+1.1.Latar Belakang 
+Dengan berkembangnya teknologi terutama dalam bidang citra dan 
+gambar pengetahuan dalam memahami unsur objek dan warna sangatlah 
+diperlukan di tambah dengan berkembangnya kemajuan teknologi seperti 
+camera yang berfungsi untuk menangkap objek setelah itu mengubah nya 
+dalam bentuk citra. 
+Dengan hough circle jarak dan lokasi dimana objek berada bisa 
+diketahui dengan kam era yang berfungsi seperti mata  pada robot . Dalam 
+mempermudah pendeteksian jarak pada suatu bola, komputer harus 
+dilengkapi dengan sistem pengolahan citra yang dapat  mengindetifikasi 
+warna dan bentuk objek. Berdasarkan warna dan bentuk sistem yang dapat 
+menghitung luasan sebagai acuan untuk menghitung jarak. Terdapat 
+banyak penelitian dan pengembangan pendeteksian jarak berdasarkan 
+luasan objek namun dengan tujuan dan metode yang berbeda-beda[1]. 
+Dalam penelitian ini adalah  pencarian objek berbentuk bola dengan 
+open cv  mendeteksi objek berbentuk bola banyak digunakan  dalam  
+bidang robotika, terutama digunakan seb agai sensor pada robot untuk 
+mendeteksi keberadaan  objek berbentuk bola [2].Dan itu merupakan salah 
+satu  alasan yang melatarbelakangi penelitian ini.  Metode transformasi 
+lingkaran Hough digunakan untuk mengidentifikasi lingkaran yang 
+mewakili bola dalam penelitian ini.Metode ini efektif karena 
+memungkinkan  mendeteksi lingkaran dengan  ukuran dan posisi berbeda 
+pada gambar. 
+
+=== HALAMAN 16 ===
+ 
+16 
+ 
+1.2. Rumusan Masalah 
+Berdasarkan latar belakang diatas maka,  rumusan masalah pada 
+laporan tugas akhir ini adalah: 
+1. kordinat dari bola dapat diketahui . 
+2. Jarak dari bola dapat diketahui. 
+3. warna kuning dari objek dideteksi 
+1.3. Tujuan Penelitian 
+Tujuan Penelitian yang ingin dicapai dalam penelitian ini adalah 
+1. Dapat memahami berapa jarak sebuah  objek yang berbentuk bola . 
+2. Dapat mendeteksi lokasi dari sebuah  bola.  
+3. Dapat membedakan warna dari objek  yang berbentuk bola  dengan 
+warna yang disekitarnya. 
+1.4. Batasan Masalah 
+Batasan Masalah adalah sebagai berikut: 
+1. Penelitian ini berfokus pada pencarian objek yang berbentuk bola 
+dengan  opencv  . 
+2. Kordinat  dari objek  bola tersebut . 
+3. Warna dari objek bola dapat terdeteksi. 
+4. Bola yang digunakan berwarna kuning 
+5. Mendeteksi warna bola dengan ruang warna HSV 
+1.5. Manfaat penelitian 
+Manfaat yang  dapat didapatkan dari penelitian ini adalah pengalaman 
+dalam membuat indra penglihatan robot meskipun dalam bentuk sangat 
+sederhana. 
+1.6.Sistematika Penulisan 
+ 
+BAB I PENDAHULUAN 
+Merupakan bab yang berisi tentang gambaran umum dari  
+penelitian yang akan dilaksakan. Dalam pendahuluan ini 
+
+=== HALAMAN 17 ===
+ 
+17 
+ 
+terdiri dari enam sub bab, yaitu latar belakang masalah, 
+perumusanmasalah, pembatasan masalah, tujuan penelitian, 
+manfaatpenelitian, dan sistematika  Penulisan. 
+BAB II TINJAUAN  PUSTAKA 
+ Tinjuan Pustaka merupakan bab  yang terdiri dari kajian 
+terdahlu yang  akan membahasa penelitian sebelumnya , 
+landasan teori  berisi penjelasan tentang teori dasar, 
+hubungan antara python dan opencv dan, metode yang akan 
+digunakan  beserta rumusnya . 
+BAB III METODE PENELITIAN 
+ Metode Penelitian disusun dengan beberapa sub bab seperti 
+tempat dan waktu penelitian, defini oprasional, objek 
+penelitian, teknik pengambilan data, jenis data, jangkauan 
+penelitian, Teknik Analisa Penelitian, Alat penelitian, 
+Konsep Penelitian, Tahapan Penelitian . Secara singkatnya   
+akan membahas tempat waktu penelitian, tahapan penelitian 
+dan juga alat yang akan digunakan dalam penelitian.   
+BAB IV HASIL DAN PEMBAHASAN 
+ Dalam bab Hasil dan pembahan akan membahas hasil 
+penelitian dan juga pembahasan dari penelitian ini . 
+BAB V  KESIMPULAN DAN SARAN 
+Dalam bab kesimpulan dan saran akan membahas 
+kesimpulan dan saran yang diperuntukan untuk peneliti 
+yang akan melanjutkan penelitian ini,  dan juga membahas 
+tentang kekurangan dari penelitian ini dan juga memberi 
+saran tentang penelitian.  
+ 
+
+=== HALAMAN 18 ===
+ 
+18 
+ 
+ 
+BAB II 
+  
+TINJAUAN  PUSTAKA 
+ 
+2.1. Kajian Terdahulu 
+Sebagai kajian terdahulu penelitian ini berfokus pada simulasi 
+pendeteksi bola menggunakan opencv yang mana opencv berfungsi 
+sebagai library sementara hough circle adalah metodenya. 
+Dalam penelitian “Implementasi Sistem Tracking Bola Pada 
+Pengolahan Citra Menggunakan Metode Find Contour” menggunakan  
+library opencv, yang dikarenakan open cv  menyediakan code 
+pemograman dalam penggolalahan citra seperti menggubah  RGB menjadi  
+HSV yang  meru pakan  ruang warna -warna dasar  yang digunakan  untuk 
+mengindetifikasi objek [3]Dan  juga dalam  penelitian “Sistem Deteksi 
+Posisi Dan Pengambilan Bola Pada Robot Sepak Bola Amperawan” 
+menggunakan library opencv untuk mendeteksi  bola dan jaraknya 
+berdasarkan warna yang diambil dari RGB yang  telah diubah menjadi 
+HSV[4] . 
+Dalam Penelitian “ROBOT PENJAGA GAWANG PADA 
+KONTES ROBOT SEPAK BOLA INDONESIA JENIS BERODA  2019” 
+yang dilaksakan oleh “Rahmajid Wijaya, BayuKhaycal, Muhammad 
+Taryudi” terdapat opencv  yang sebagai  library yang digunakan untuk 
+mengolah citra secara realtime untuk memfilter gambar yang akan 
+digunakan sebagai referensi gerak bola [5].Dalam penelitian “Apl ikasi 
+pengukur kecepatan bola pada video pertandingan tenis meja 
+menggunakan OpenCV dan Python”  yang dilaksakan oleh “Mozef, 
+ErilKurniati, Siti”  opencv digunakan untuk mengukur kecepatan suatu 
+
+=== HALAMAN 19 ===
+ 
+19 
+ 
+objek dengan frame yang terdapat pada video dan  juga dalam  pe nelitian 
+tersebut juga menggunakan alat pembantu lain. 
+Dalam penelitian lain juga “Sistem Deteksi Bola pada Robot Kiper 
+Pemain Sepak Bola Beroda ” yang dilaksakan oleh “Fatekha, Rifqi 
+AmalyaSena,BimaDewantara, BayuOktavianto, Hary”  penggunaan  
+opencv dengan cara dilakukan penyeleksian warna (color thresholding) 
+dan  menggunakan fungsi inRange dari library opencv sesuai warna bola 
+dengan memanfaatkan ruang warna HSV nilai warna bola pada ruang 
+HSV telah ditentukan sebelumnya.Dan kemu dian hasil seleksi warna akan 
+dilanjutkan melalui proses deteksi bentuk, agar dapat melihat bentuknya 
+lingkaran atau bukan. Untuk proses deteksi bentuk, terdapat dua cara yang 
+telah dilakukan, yaitu dengan metode HoughCircle dan menggunakan 
+fungsi approxPolyDP. Penetelitian mendeteksi objek dengan opencv telah 
+dilaksakan dalam berbagai macam penelitian terutama penelitian yang 
+berjudul” PENGOLAHAN CITRA DIGITAL UNTUK MENDETEKSI 
+OBYEK MENGGUNAKAN PENGOLAHAN WARNA MODEL 
+NORMALISASI RGB” yang dilaksakan oleh “ RD. Kusumanto, Alan 
+Novi Tompunu” dalam penelitian tersebut dilakukan sebuah penelitian  
+pencarian objek yang librarynya adalah opencv bersarkan warna RGB dan 
+metode threshold dan apakah metode threshold itu ,  metode threshold 
+adalah sebuah algoritma untuk  melakukan segmentasi citra digital yang 
+kemudian akan dibaca sebagai hasil citra tersegmentasi [6] dalam 
+penelitian ini menggunakan met ode circular hough transformation  dan 
+metode pusat yang  digunakan untuk mengidentifikasi lingkaran yang 
+terdapat dalam gambar melalui array akumulator dua dimensi A(a, b), 
+yang memiliki memori berurutan dengan titik pusat dari lingkaran yang 
+tumpang tindih. Untuk menghitung nilai triplet (a, b, r) pada transformasi 
+lingkaran tegak (CHT), metode pusat juga dapat digunakan , CHT 
+merupakan varian dari Metode Transformasi Hough ,  transformasi hough 
+adalah metode yang populer untuk melakukan pengenalan pola  kompleks 
+
+=== HALAMAN 20 ===
+ 
+20 
+ 
+pada gambar adalah transformasi hough, yang mengubah domain gambar 
+ruang menjadi domain parameter ruang. Metode ini dapat mendeteksi 
+lengkungan dengan parameter tertentu, seperti garis lurus, polynomial, dan 
+lingkaran[7]. 
+ 
+2.2. Landasan Teori 
+2.2.1. Citra 
+ 
+   Citra merupakan pergabungan dari titik, garis, bidang, dan 
+warna dalam menciptakan suatu imitasi dari sebuah objek dan 
+biasanya objek fisik atau manusia.Citra dapat berbentuk gambar 
+(picture) dua dimensi, seperti lukisan, foto, dan juga dalam bentuk 
+tiga dimensi, seperti patung.Citra dapat diartikan sebagai gambaran 
+dari suatu objek yang diamati . Dua jenis citra   adalah analog dan 
+digital, berdasarkan bentuk sinyal penyusunnya. Citra dengan 
+sinyal analog adalah kontinyu, sedangkan citra di gital 
+memiliki sinyal  diskrit.Ciri sinyal analog berasal dari alat akuisisi 
+citra analog, seperti mata manusia dan kamera analog. Gambar 
+yang ditangkap oleh mata manusia dan foto atau film yang 
+ditangkap oleh kamera analog adalah contoh citra analog. 
+Meskipun citra tersebut memi liki tingkat kerincian dan resolusi 
+yang luar biasa, salah satu kelemahannya adalah tidak dapat 
+disimpan, diolah, atau diduplikasi dalam komputer, sedangkan citra 
+digital Cirta digital menampilkan fungsi intensitas cahaya dalam 
+bidang dua dimensi dalam ben tuk diskrit. Piksel, atau elemen 
+gambar, terdiri dari sekumpulan piksel yang memiliki koordinat (x, 
+y) dan amplitudo (f(x, y). Koordinat (x, y) menunjukkan letak atau 
+posisi piksel dalam suatu gambar, dan amplitudo (f(x, y) 
+menunjukkan nilai intensitas warna gambar. 
+
+=== HALAMAN 21 ===
+ 
+21 
+ 
+ 
+ 
+2.2.2. Warna 
+ 
+Warna merupakan spektrum yang berada didalam sebuah 
+cahaya sempurna (berwarna putih).Indentitas suatu warna 
+ditentukan melalui panjang gelombang cahaya tersebut.Misalkan 
+saja warna biru mempunyai panjang gelombang 460 nanometer. 
+Panjang gelombang warna yang dapat ditangkap oleh mata 
+manusia berkisar sekitar 380-780 nanometer.Dalam peralatan optis, 
+warna dapat diartikan sebagai interpretasi otak dengan campuran 
+tiga warna primer cahaya: merah, hijau,  biru yang digabungkan 
+dalam  komposis i tertentu.Sebagai contoh percampuran 100% 
+merah, 0%Hijau, dan  100% Biru akan menghasilkan interpretasi 
+warna mangenta. 
+ 
+2.2.3. Pixel 
+Pixel merupakan reprerentasi dari titik kecil citra digital 
+atau gambar grafis dihitung per inci (satuan metrik), titik terkecil  
+ini yang disebut dengan pixel, yang  merupakan singkatan dari 
+Bahasa Inggris ‘Picture Element.’, resolusi adalah seberapa banyak 
+jumlah pixel yang tersusun dalam 1 gambar.Dapat diartikan 
+sebagai kerapatan pixel pada sebuah gambar dan tersusun dari 
+pixel.Kuantitas dari pixel akan menentukan seberapa bagus 
+kualitas sebuah gambar. 
+ 
+
+=== HALAMAN 22 ===
+ 
+22 
+ 
+2.2.4. RGB dan CMYK 
+Ada dua jenis warna yang biasanya digunakan adalah RGB 
+dan CMYK.RGB merupakan singakatan dari Red(merah), 
+Green(Hijau), dan Blue(biru), Sementara CMYK merupakan 
+singkatan dari Cyan(Biru Kehijauan), Magenta, Yellow (Kuning) 
+dan Black (Hitam).Dalam ilmu komputer, jenis warna yang sering 
+digunakan adalah jenis warna RGB dan CMYK[8]. 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+2.2.5. OpenCV 
+OpenCV (Open Source Computer Vision Library), adalah 
+sebuah library open source yang dikembangkan oleh intel  yang 
+bertjuan untuk menyederhanakan programing yang berhubungan 
+dengan  citra digital. Di dalam OpenCV dilengkapi dengan banyak 
+fitur, ant ara lain : pengenalan wajah, pelacakan wajah, deteksi 
+wajah, Kalman filtering, dan berbagai jenis metode AI (Artificial 
+Intellegence). Dan menyediakan berbagai algoritma sederhana 
+terkait Computer Vision untuk low level API. 
+ 
+ 
+ 
+Gambar 2. 2 OpenCV Sumber 
+(www. Wikipedia.com) 
+Gambar 2. 1 RGB dan CMYK (Sumber www.stellendesign.com)  
+
+
+=== HALAMAN 23 ===
+ 
+23 
+ 
+ 
+ 
+2.2.6. Python 
+Python merupakan bahasa pemrograman komputer yang 
+biasa dignakan untuk  mengembangkan sebuah situs, 
+software/aplikasi, mengotomatiskan tugas dan melakukan analisis 
+data. Bahasa pemrograman ini termasuk bahasa tujuan umum. 
+Artinya, python  bisa digunakan da lam pembuatan berbagai 
+program berbeda,tidak hanya  khusus untuk masalah tertentu 
+saja.Dikarenakan sifatnya yang dapat diandalkan dan mudah 
+digunakan, python menjadi bahasa pemrograman yang paling 
+sering  digunakan oleh programmer. Terutama untuk mereka ya ng 
+masih pemula.Menurut survei pengembang Stack Overflow tahun 
+2022, Python merupakan bahasa pemrograman terpopuler keempat. 
+Sekitar hampir 50% dari responden mengatakan bahwa mereka 
+menggunakan python  hampir setengah dari waktu kerja mereka 
+dengan menggu nakan bahasa pemrograman ini.Nama Python di 
+ambil dari Monty Python.Saat Guido van Rossum  
+menggembangkan python, ketika dia membaca skrip Sirkus 
+Terbang Monty Python BBC. Menurutnya nama itu simple dan 
+sedikit misterius. Karena itulah, sang penggembang  memilih 
+menggunakan nama  “Python” tersebut untuk bahasa pemrograman 
+yang  dia kembangkan itu. 
+  
+Gambar 2. 3 Python Sumber 
+(www.wikipedia.com) 
+
+
+=== HALAMAN 24 ===
+ 
+24 
+ 
+2.3. Hubungan Python Dengan Opencv 
+ 
+A. Opencv 
+OpenCV adalah sebuah library(perpustakaan) yang difunsingkan untuk 
+mengolah gambar dan video. Kalimat “open” pada OpenCV memiliki arti 
+opensource gratis/tidak dipungut biaya apapun, dan Dapat didownload 
+dimanapun . Sementara CV yang terdapat pada “ OpenCV” merupakan 
+kependekan dari bahasa inggris  Computer Vision, yang  berarti menggunakan 
+komputer yang diambil untuk mengolah image  berupa citra atau gambar  yang 
+ditangkap oleh alat perekam seperti kamera atau webcam yang diubah dari 
+analog ke digital lalu di olah dal am komputer. pemrosesan gambar dapat 
+dimanfaatkan dalam pengolahan image ini ada banyak diantaranya untuk 
+memperbaiki kualitas gambar atau untuk identifikasi gambar  
+B. Python 
+Python adalah sebuah  bahasa pemrograman yang biasa digunakan di 
+dunia percodingan. Kelebihan python untuk mengolah citra dan memperoses 
+gambar  sangatlah terbatas karena itu diperlukan untuk meng import library 
+yang terdapat pada OpenCV.  
+C. Hubungan Python dan Opencv 
+Hubungan Opencv dengan Python adalah  layaknya indra penglihatan 
+dengan camera sebagai  indra penglihatan yang akan mencari object dan 
+mengubah nya menjadi analog dan kemudian  memproses gambar tersebut dan 
+mencari nilai threshold nya agar dapat membedakan object dan background. 
+ 
+ 
+ 
+
+=== HALAMAN 25 ===
+ 
+25 
+ 
+2.4. Circular Hough  Transform 
+Adalah merupakan  Metode transformasi sirkular Hough (CHT) 
+yang sangat berguna untuk menemukan lingkaran pada gambar melalui 
+array akumulator dua dimensi A(a, b) yang memiliki memori berurutan 
+dengan titik pusat dari lingkaran yang tumpang tindih. Untuk mendapatkan 
+nilai triplet (a, b, r) pada transformasi sirkular Hough (CHT), metode pusat 
+menggunakan nilai parameter jari-jari yang dipilih[9]. 
+ 
+2.5. Rumus Kartasia 
+ 
+ Pusat lingkaran (a,b) 
+ Jari-jari lingkaran r 
+(𝑥 − 𝑎)2 + (𝑦 − 𝑏)2 =  𝑟2 … … … ..  (1)  
+ 
+Keterangan : 
+ (x,y) adalah titik – titik pada lingkaran 
+ (a,b) adalah pusat lingkaran 
+ r adalah jari-jari lingkaran   
+Rumus (𝑥 − 𝑎)2 + (𝑦 − 𝑏)2 =  𝑟2    merupakan adalah persamaan lingkaran 
+dalam bidang koordinat kartesian. Dari rumus ini  (a,b) merupakan  kordinat 
+pusat lingkaran sedangkan  r adalah Jari -jari lingkaran, dalam pernyataan ini 
+menyatakan  bahwa setiap dari titik (x,y) yang memenuhi persamaan ini 
+terdapat pada lingkaran dengan pusat (a,b) dan jari -jari r.  Hubungan utama 
+antara metode Hough Circle dan persamaan lingkaran dalam bidang koordinat 
+Kartesia adalah bahwa metode Hough Circle menggunakan prinsip -prinsip ini 
+untuk mendeteksi lingkaran dalam citra digital.  Metode Hough Circle dapat 
+secara efektif mengidentifikasi lingkaran dan menentukan parameter pusat dan 
+jari-jari lingkaran dengan memetakan titik te pi gambar ke ruang parameter 
+yang sesuai dengan persamaan lingkaran.  
+
+=== HALAMAN 26 ===
+ 
+26 
+ 
+BAB III 
+ 
+ METODE PENELITIAN 
+ 
+3.1.Tempat dan Waktu Penelitian 
+ 
+1) Waktu Penelitian 
+Waktu yang akan digunakan dipenelitian ini akan dilaksakan ketika 
+mendapat kan ijin penelitian dari pihak kampus  mendatang. 
+ 
+2) Tempat Penelitia 
+Tempat yang dimana akan dilaksakan penelitian ini akan berada disekitar 
+area kampus  Politeknik Negeri Samarinda  atau  lab.   
+ 
+3.2. Definisi Operasional 
+3.2.1. Indetefikasi Variabel 
+ 
+A. Variabel Bebas 
+Variabel bebas atau independent variable adalah variabel yang 
+mempengaruhi, atau yang menjadi sebab perubahan dari  adanya suatu variabel 
+dependen(terikat).yang berati jika terjadi perubahan pada suatu variabel, 
+perubahan tersebut dikarenakan variabel bebas.Dalam penelitian ini yang menja di 
+variabel bebasnya adalah “Deteksi” dikarenakan deteksi dapat menentukan 
+variabel selanjutnya.  Variabel bebas atau independent variable dalam penelitian 
+deteksi adalah faktor yang dapat diubah atau dimanipulasi oleh peneliti untuk 
+melihat dampaknya terhadap variabel lainnya. Dalam konteks ini, pengaturan atau 
+
+=== HALAMAN 27 ===
+ 
+27 
+ 
+metode deteksi menjadi variabel bebas yang dapat mempengaruhi hasil deteksi 
+dan analisis selanjutnya. 
+B. Variable Kontrol 
+Variabel kontrol adalah variabel yang  dapat dikendalikan yang bertujuan  
+supaya pengaruh variabel bebas pada variabel terikat tidak dapat diganggu  
+oleh faktor-faktor lain yang tidak  termasuk dalam penelitian.Dalam penelitian 
+ini variabel “Bola” adalah variabel kontrol. 
+ 
+3.3.Objek Penelitian 
+ 
+Dalam penelitian ini hal yang akan menjadi o bjeknya adalah pencarian 
+objek berbentu bola dengan opencv, opencv merupakan sebuah library python 
+yang digunakan dalam pengambilan gambar  dengan kamera Program ini bebas 
+dan berada dalam naungan sumber terbuka dari lisensi BSD. Library ini 
+merupakan library lintas platform. Program ini  diperuntukan  untuk pengolahan 
+citra secara real -time, dan juga dalam penelitian ini juga  mendeteksi i jarak dari 
+sebuah objek dan warna dari objek tersebut jika objek terdapat dalam kumpulan 
+objek yang berbentuk sama tapi berwarna berbeda . 
+3.4.Teknik  Pengambilan Data 
+ 
+A. Data Primer  
+Data yang diambil dalam penelitian adalah data yang dihasilkan dari 
+penelitian sendiri dan merupakan hasil dari kesimpulan dari sang peneliti. 
+B. Data Sekunder 
+Data sekunder dalam penelitian ini adalah berupa sebuah contoh dari 
+penelitian lainnya yang dilaksakan oleh peneliti lainnya  untuk memperdalam 
+maksud dari penelitian ini.  
+
+=== HALAMAN 28 ===
+ 
+28 
+ 
+ 
+3.5.Jenis Data 
+ 
+Terdapat dua macam data umum digunakan  seperti   data Kuantitatif dan  
+Kualitatif  dalam penelitian ini sang peneliti lebih memfokuskan terhadap data 
+kuantitatif meskipun juga terdapat beberapa data kualitatif. 
+A. Data Kuantitatif 
+Data kuantitatif merupakan data atau informasi yang di dapatkan 
+dalambentuk angka, yang biasanya d iproses dengan  rumus matematika, 
+statistik, atau pengukuran berdasarkan angka.  
+B. Data Kualitatif 
+Data Kualitatif merupakan data yang berbentuk kata -kata ,gambar selain 
+angka .proses dari data kualitatif adalah menggunakan kalimat yang disusun 
+untuk menjela skan sebuah data dan juga dapat menggunakan ga mbar dalam 
+penjelasan tersebut. 
+ 
+3.6.Jangkauan Penelitian  
+ 
+Jangkauan penelitian adalah ruang lingkup penelitian deteksi bola 
+menggunakan open cv yang menggunakan bahasa pemograman berupa Python 
+yang mendeteksi bola berdasarkan jarak dan warna.  Jangkauan penelitian adalah 
+ruang lingkup penelitian deteksi bola menggunakan OpenCV yang menggunakan 
+bahasa pemrograman berupa Python yang mendeteksi bola berdasarkan jarak dan 
+warna. Penelitian ini mencakup pengujian dal am berbagai kondisi pencahayaan 
+dan latar belakang, serta analisis kinerja algoritma dalam mendeteksi bola kuning 
+pada jarak yang berbeda.  Selain itu, penelitian ini juga mengeksplorasi akurasi 
+perhitungan jarak menggunakan rumus geometris dan bagaimana be rbagai 
+parameter kamera, seperti panjang fokus, mempengaruhi hasil deteksi. 
+Implementasi ini berpotensi digunakan dalam aplikasi seperti robotika, olahraga, 
+dan sistem pengawasan otomatis.   
+
+=== HALAMAN 29 ===
+ 
+29 
+ 
+3.7.Teknik Analisa Penelitian  
+ 
+Dalam pelaksanaan penelitian ini, analisa dilaksakan dengan cara 
+mengamati sebuah objek yang sudah dideteksi, dan hasil penelitian tersebut  
+dijelaskan menggunakan tabel yang terdapat  gambar, jarak dan keterangan 
+untuk memperjelas penelitian,  sesuai dengan jenis data kuantitatif dan 
+kualitatif yang mana kuantitatif nya merupakan  jarak  dan rumus matematika  
+sedangkan kualitatif nya berupa gambar dan keterangan meskipun penelitian 
+ini lebih memfokuskan terhadap jenis data kuantitatif . 
+A. Angka (Kuantitatif) 
+Digunakan untuk menjelaskan jarak  atau rumus matematika dalam 
+penelitian. 
+B. Keterangan (Kualitatif) 
+ Keterangan disusun dengan kalimat dan digunakan untuk 
+menjelaskan data yang berupa angka atau gambar 
+C. Gambar (Kualitatif) 
+ Digunakan untuk memberi sebuah gambaran dari data yang sedang 
+diteliti yang berjuan agar sang pembaca memahami data tersebut 
+dengan jelas. 
+Dengan pendekatan ini, penelitian ini tidak hanya memberikan data numerik yang 
+akurat tetapi juga konteks visual dan deskriptif yang kaya, sehingga hasil 
+penelitian dapat dipahami dan d iaplikasikan dengan lebih baik oleh pembaca. 
+Integrasi data kuantitatif dan kualitatif ini memungkinkan analisis yang lebih 
+komprehensif dan mendalam, menjelaskan fenomena yang terjadi dengan lebih 
+jelas dan mendetail. Pendekatan yang terstruktur dan menye luruh ini memastikan 
+bahwa setiap aspek dari deteksi bola, mulai dari jarak hingga warna, dapat 
+dievaluasi dengan teliti. Hasil penelitian ini diharapkan memberikan kontribusi 
+yang signifikan dalam bidang pengolahan citra dan dapat digunakan sebagai 
+referensi untuk penelitian lebih lanjut.  Mendeteksi lingkaran dengan 
+menggunakan teknologi HoughCircles  juga membuka peluang  pengembangan 
+
+=== HALAMAN 30 ===
+ 
+30 
+ 
+lebih lanjut, seperti meningkatkan akurasi deteksi melalui kalibrasi yang lebih 
+baik dan penggunaan algoritma yang lebih canggih. 
+3.8.Alat Penelitian 
+Daftar Alat yang dibutuhkan (ada kemungkinan penambahan alat diluar 
+daftar ini) : 
+Alat: 
+ Laptop 
+ Camera (Webcam) 
+ Bahasa Pemograman Python 
+Bahan: 
+ Bola warna kuning 
+3.8.1. Keterangan dan spefikasi alat  
+ 
+ 
+ 
+ 
+ 
+  
+Model    :Asus  X456URK 
+Prosesor   : Intel ( R )  Core ( TM ) i5 – 
+7200u CPU @ 2.50 Ghz ,2172 Mhz , 2 core(s)  
+Memory   : 4gb RAM 
+GPU/VGA  : Nvdia 930Mx 
+ 
+Model    :JOVITEK CM08 1080P 
+FULL HD CAMERA 
+ 
+Field Of View Angle  : 90® 
+Power Input   : 5V 
+Main Body Weight  : 105g 
+Video Format   :H.264 H.265 MJPG NV12 
+YUY2 
+Support   : Windows 7/8/10, Linux 2.4.6 
+And Above 
+Gambar 3. 1 Laptop 
+Gambar 3. 2 Webcam 
+
+=== HALAMAN 31 ===
+ 
+31 
+ 
+3.9.Konsep Penelitian 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Dalam penelitian ini diperlukan tahapan terl ebih dahulu untuk memahami hal apa  
+yang akan diteliti.Yang pertama adalah Riset awal  atau dalam flowchart adalah 
+“Mulai”  dilanjutkan dengan menentukan tempat ujicoba, Pembelian 
+barang&bahan, Pemilihan bahasa pemograman & Code editor, dan diakhiri 
+dengan percobaan alat dan analisa tentunnya tahapan  penelitian bertujuan sebagai 
+langkah ya ng akan dilalui dalam penelitian.  Tahapan ini merupakan bagian 
+penting dalam metodologi penelitian dan memastikan bahwa setiap langkah 
+dilakukan secara sistematis dan efektif untuk mencapai tujuan penelitian yang 
+diinginkan.  
+Gambar 3. 3 Flowchart Konsep Penelitian 
+
+
+=== HALAMAN 32 ===
+ 
+32 
+ 
+ 
+3.10. Tahapan Penelitian 
+ 
+  
+Gambar 3. 4 Tahapan Penlitian 
+Penelitian diawalin dengan mulai, import library opencv, membuat fungsi 
+mengukur jarak,  membuat fungsi  mendeteksi bola realti me, membuat 
+loop while, menambahkah penyataan kondisi, menambahkan loop jika 
+bola  terdeteksi, menambahkan untuk menggambarkan lingkaran pada 
+objek bola, menambahkan fungsi memberi informasi berupa text, 
+menambahkan fungsi untiuk memunculkan jendela frame, kalibrasi untuk 
+hasil  yang akurat, selesai . 
+
+=== HALAMAN 33 ===
+ 
+33 
+ 
+3.11. Teknik Penggumpulan 
+ 
+3.11.1. Studi Pustaka 
+ 
+Studi Pustaka dilaksakan dalam mencari informasi yang memiliki 
+keterkaitan dengan penelitian ini, metode penggumpulan data dilakukan 
+dengan pencarian  pada situs internet, buku referensi, dan jurnal  yang terdapat 
+pada situs jurnal dan juga informasi yang berkaitan dengan penelitian ini juga 
+berdasarkan dari penjelasan dosen pembimbing atau dari tenaga pengajar yang 
+ada dikampus dengan sumber studi pustaka yang berasal dari bermacam 
+tempat maka penelitiann dapat terarah dan dapat di kerjakan tanpa  mengalami 
+kendala. 
+3.11.2. Penggujian Langsung  
+ 
+Untuk Mengetahui apakah alat dapat berfungsi dengan baik maka 
+diperlukan penggujian langsung, dan setelah itu maka alat akan dianalisis 
+untuk mencari dimana letak kesalahan atau kekurangan dari alat tersebut dan 
+setelah alat dapat dipastikan berfungsi dengan baik maka penelitian dapat 
+dilanjutkan untuk memperolah data atau hasil yang diinginkan  dan hasil atau 
+data yang telah diperolah akan diolah dalam bentuk tabel yang memberi 
+penjelasan merinci untu k memperjelas informasi dari hasil atau data yang 
+telah diperoleh dengan kata lain dalam penelitian ini menggunakan metode 
+observasi dikarenakan. Melalui observasi, penenlitian dapat dipahami dengan 
+jelas, itulah mengapa observasi dalam penelitian ini sang atlah diperlukan dan 
+sangat membantu dalam mengolah hasil atau data untuk dipahami dan juga 
+jika terjadi kesalahan dalam penelitian maka kesalahan tersebut perlu 
+ditelusuri melalui observasi setelah itu memahami letak kesalahan tersebut 
+dengan begitu kesalahan dapat diperbaiki. 
+ 
+
+=== HALAMAN 34 ===
+ 
+34 
+ 
+ 
+3.12. Penelitian  deteksi Warna kuning  dari objek HSV 
+  
+Gambar 3. 5deteksi Warna 
+Kuning Dari Objek HSV 
+Penelitian diawali dengan "mulai", kemudian menambahkan fungsi deteksi warna 
+kuning, membuat fungsi yang mengatur upper dan lower bound warna, membuat 
+fungsi untuk mengonversi ke ruang warna HSV, membuat fungsi untuk masking 
+objek berwarna kuning, dan membuat fungsi yang menampilkan warna kuning 
+terdeteksi. Setelah itu, dilakukan pengujian sistem untuk memastikan 
+fungsionalitas deteksi, diikuti dengan analisis hasil  untuk memastika n apakah 
+warna kuning dapat terdeteksi dari objek dalam ruang warna HSV.  
+
+=== HALAMAN 35 ===
+ 
+35 
+ 
+BAB IV 
+ 
+HASIL DAN PEMBAHASAN 
+ 
+4.1.Tahapan Penelitian Dan Pembahasan 
+4.1.1.Import Opencv  
+ 
+ 
+Yang pertama adalah mengimport Opencv ke kode editor dalam penelitian ini 
+kode editor yang digunakan adalah Visual code studio  dan alasan kenapa 
+menggunakan opencv karena opencv adalah library khusus image processing atau 
+penggolahan gambar secara real time. 
+4.1.2.Fungsi Untuk Menghitung Jarak 
+ 
+ 
+Fungsi calculate_distance menghitung jarak antara kamera dan suatu objek 
+menggunakan radius objek dalam piksel, ukuran sebenarnya dari objek, dan 
+panjang foku s kamera. Fungsi ini menggunakan rumus distance = 
+(actual_object_size * focal_length) / (2 * radius_in_pixels). Rumus ini didasarkan 
+pada prinsip -prinsip optik, khususnya model kamera pinhole, yang 
+menyederhanakan kompleksitas cara kamera menangkap gambar.  Dengan 
+mengambil ukuran sebenarnya dari objek dan panjang fokus, kemudian membagi 
+dengan dua kali radius objek dalam gambar, kita dapat menentukan jarak ke objek 
+dengan akurat. Hal ini sangat penting dalam penglihatan komputer dan robotika, 
+di mana mengetahui jarak yang tepat ke objek dapat memungkinkan interaksi dan 
+Text 4. 1 Import Opencv 
+import cv2 
+import numpy as np 
+Text 4. 2Menghitung jarak  
+def calculate_distance(radius_in_pixels, actual_object_size, 
+focal_length): 
+    distance = (actual_object_size * focal_length) / (2 * radius_in_pixels) 
+    return distance 
+
+=== HALAMAN 36 ===
+ 
+36 
+ 
+navigasi yang lebih baik. Misalnya, dalam realitas tertambah, pengukuran jarak 
+yang akurat memastikan objek virtual diukur dan diposisikan dengan benar terkait 
+dengan objek dunia nyata, meningkatkan pengalaman pengguna. 
+4.1.3. Fungsi Mendeteksi Bola Secara Real Time 
+ 
+ 
+Fungsi diatas adalah fung si yang digunakan dalam mendeteksi bola secara real 
+time dan “cap = cv2.VideoCaputure adalah pemanggilan fungsi yang berfungsi 
+untuk memilih kamera mana yang mau digunakan dalam jendela frame angka “0” 
+adalah kamera yang diwakilkan dengan angka dan setiap komputer angkanya bisa 
+berubah-rubah tergantung kamera tersebut terhubung le wat lubang usb mana 
+dikomputer. 
+4.1.4. Menambahkan loop 
+ 
+ 
+Fungsi diatas merupakan sebuah loop secara jelasnya merupakan loop  yang 
+bertujuan untuk membaca kamera secara real time hinga kondisi ret menjadi false 
+( dikarenakan ret bernilai true), dan grayFrame = cv2.cvtColor(frame, 
+cv2.COLOR_BGR2GRAY) berfungsi untuk memberi efek  keabuan pada frame 
+Text 4. 3Fungsi Mendeteksi Bola Secara Real Time 
+def detect_ball_realtime(): 
+    cap = cv2.VideoCapture(0)   
+    actual_ball_diameter_cm = 10 (perlu disesuaikan) 
+    focal_length = 50 (perlu disesuaikan) 
+Text 4. 4Menambah Loop 
+while True: 
+        ret, frame = cap.read() 
+        if not ret: 
+            break 
+grayFrame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY) 
+        blurFrame = cv2.GaussianBlur(grayFrame, (17, 17), 0) 
+ 
+        circles = cv2.HoughCircles(blurFrame, cv2.HOUGH_GRADIENT, 
+1.2, 500, 
+                                   param1=100, param2=38, minRadius=20, 
+maxRadius=100) 
+
+=== HALAMAN 37 ===
+ 
+37 
+ 
+sementara blurFrame = cv2.GaussianBlur(grayFrame, (17, 17), 0) berfungsi 
+memberikan efek blur pada frame yang bertujuan dalam mengurangi noise, dan 
+“circles = cv2.HoughCircles “ adalah fungsi yang digunakan dalam metode hough 
+circle yang juga bisa digunakan untuk melakukan kalibrasi. 
+ 
+4.1.5.Menambahkan Pernyataan Jika Ada Bola 
+ 
+ 
+Fungsi diatas merupakan pernyataan “if circles is not None:” berati jika “Circle” 
+bernilai tidak “none” maka “if” akan dijalankan, selanjutnya “circles = 
+np.uint16(np.around(circles))” variable “circle” di konversi menjadi tipe data 
+“np.uint16” yang berati “interger 16 -bit” yang tidak memiliki data, sementara 
+fungsi “np.around(circles)” untuk membulatkan hasil konversi. 
+ 
+4.1.6. Loop Jika ada Bola yang terdeteksi Dan Menandai Dengan 
+Lingkaran 
+ 
+Fungsi diatas  “for i in circles[0, :]:” berfungsi sebagai loop untuk mendeteksi 
+lingkaran atau objek yang berbentuk bola, sementara “cv2.circle(frame, (i[0], i[1]), 
+i[2], (0, 255, 0), 2)” berfungsi menggambar lingkaran disekitar objek bola yang 
+telah dideteksi dan “cv2 .circle(frame, (i[0], i[1]), 2, (0, 0, 255), 3)” berfungsi 
+menggambar titik pusat dari sebuah objek bola atau lingkaran “radius_in_pixels = 
+Text 4. 5Pernyataan Jika Ada Bola 
+if circles is not None: 
+            circles = np.uint16(np.around(circles)) 
+Text 4. 6Jika Bola Terdeteksi 
+for i in circles[0, :]: 
+                 cv2.circle(frame, (i[0], i[1]), i[2], (0, 255, 0), 2) 
+                cv2.circle(frame, (i[0], i[1]), 2, (0, 0, 255), 3) 
+                radius_in_pixels = i[2] 
+                distance = calculate_distance(radius_in_pixels, actual_ball_diameter_cm, 
+focal_length) 
+ 
+
+=== HALAMAN 38 ===
+ 
+38 
+ 
+i[2]” adalah variable lingkaran dalam pixels dan nilai “2” akan digunakan dalam 
+mengukur jarak dan yang terakhir “di stance = calculate_distance(radius_in_pixels, 
+actual_ball_diameter_cm, focal_length)” yang berfungsi sebagai pemanggil fungsi 
+“calculate_distance()” yang juga berfungsi untuk mengukur jarak objek. 
+ 
+4.1.7. Memberi Informasi Dari Objek dengan Text 
+ 
+ 
+Fungsi diatas “cv2.putText(frame, f"Distance: {distance:.2f} cm", (i[0] - 50, i[1] 
++ 50), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 255), 2)” berfungsi untuk 
+memberi text pada objek nilai “0.5” adalah ukuran text dan nilai “(255, 0, 255)” 
+adalah warna RGB yang akan memberikan warna text dalam penelitian ini 
+warnanya adalah ungu sementara nilai 2 adalah ketebalan text. 
+4.1.8. Memunculkan Jedela Frame  
+ 
+ 
+Dalam tabel diatas “cv2.imshow("", frame)” berfungsi untuk memunculkan 
+jendela frame dari camera atau webcam tanda “” bisa diisi untuk menamai jendela 
+frame. Ketika menjalankan program yang menggunakan cv2.imshow, penting 
+untuk juga menggunakan cv2.waitKey untuk memberikan waktu bagi jendela 
+untuk diperbarui dan merespon input pengguna. Fungsi ini menunggu input d ari 
+keyboard dan memungkinkan program untuk berjalan dalam loop yang stabil.  
+Text 4. 7Mmemberi Informasi Dengan Text 
+cv2.putText(frame, f"Distance: {distance:.2f} cm", (i[0] - 50, i[1] + 50), 
+cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 255), 2) 
+ 
+Text 4. 8Memunculkan Jedela Frame 
+cv2.imshow("", frame) 
+
+=== HALAMAN 39 ===
+ 
+39 
+ 
+ 
+4.1.9. Melakukan Kalibrasi 
+ 
+ 
+Fungsi diatas adalah fungsi  “circles = cv2.HoughCircles “ yang dapat digunakan 
+untuk melakukan kalibrasi hingga mendapat hasil yang akurat yang pertama 
+adalah nilai“1.2” merupakan dp (Delta rho) yang digunakan untuk menentukan 
+resolusi jarak dalam jarak dalam pixel yang digunakan untuk mengontrol akurasi 
+lingkaran, semakin besar nilainya semakin tidak akurat begitu juga sebaliknya, 
+dan yang kedua minimal distance dengan nilai “500” parameter ini digunakan 
+untuk mendeteksi berapa banyak lingkaran yang mau dideteksi jika cuma satu 
+lingkaran maka nilainya harus lebih dari angka”100” dalam penelitian ini nilainya 
+adalah “500” dan  yang kedua adalah par ameter 1”100” ini merupakan sesitivitas 
+jika semakin rendah nilainya semakin banyak juga lingkaran yang terdeteksi 
+begitu juga sebaliknya jika terlalu besar nilainya semakin sedikit lingkaran yang 
+terdeteksi dan kemudia adalah parameter 2”38” ini digunakan  untuk membatasi 
+titik tepi suatu lingkaran dan juga sama seperti parameter 1 semakin sedikit 
+nilainya semakin banyak lingkaran yang terdeteksi dan juga kebalikan jika 
+nilainya besar setelah itu adalah  Minradius = 20  ini merupakan ukuran objek jika 
+jauh dari kamera untuk bisa dideteksi ,  dan Maxradius = 100 adalah ukuran objek 
+jika dekat ke kamera dengan melakukan semua itu maka hasil dari bola yang 
+terdeteksi semakin akurat . Keakuratan metode HoughCircles di OpenCV 
+dapat ditingkatkan dengan memastikan pa rameter dan pencahayaan  
+yang optimal, serta menyesuaikan parameter deteksi seperti dp, 
+minDist, param1, param2, minRadius dan maxRadius.  Dan juga 
+menjaga stabilitas kamera dan mengurangi noise pada gambar.   
+Text 4. 9Melakukan Kalibrasi 
+circles = cv2.HoughCircles(blurFrame, cv2.HOUGH_GRADIENT, 1.2, 500, 
+                                   param1=100, param2=38, minRadius=20, 
+maxRadius=100) (perlu disesuaikan) 
+
+=== HALAMAN 40 ===
+ 
+40 
+ 
+4.2.Hasil Riset Penelitian 
+4.2.1. Mencari Jarak dan Kordinat 
+ 
+TABLE 4. 1Mencari Jarak Dan Koordinat 
+ 
+Gambar Kordinat Jarak Keterangan 
+ 
+ 
+ 
+ 
+X(266) 
+Y(307) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+X(303) 
+Y(274) 
+2.84 m 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+2.23 m 
+Jarak 
+terjauh 
+Dari bola 
+ke kamera 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+=== HALAMAN 41 ===
+ 
+41 
+ 
+ 
+ 
+ 
+ 
+X(272) 
+Y(303) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+X(382) 
+Y(297) 
+2.08m 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1.95m 
+ 
+ 
+ 
+ 
+ 
+X(205) 
+Y(241) 
+1.60m  
+
+
+=== HALAMAN 42 ===
+ 
+42 
+ 
+ 
+ 
+ 
+ 
+X(278) 
+Y(277) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+X(277) 
+Y(274) 
+1.39m 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1.13m 
+ 
+ 
+ 
+ 
+ 
+X(214) 
+Y(292) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+0,97cm 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+=== HALAMAN 43 ===
+ 
+43 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+X(295) 
+Y(297) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+X(452) 
+Y(301) 
+ 
+ 
+0.88cm 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+0.63cm 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Jarak 
+terdekat 
+dari bola 
+ke kamera 
+ 
+ 
+ 
+Berdasarkan tabel diatas dapat diketahui berapa jarak dan kordinat bola yang 
+terdeteksi yang mana jika bola terlalu jauh dari kamera maka bola semakin susah 
+dideteksi dan begitu juga jika semakin dekat dengan kamera bola juga tidak dapat 
+dideteksi dalam penelitian ini cahaya memainkan perang penting agar bola dapat 
+dideteksi oleh kamera dengan mudah, Untuk mengetahui jarak dan koordinat bola  
+yang terdeteksi, ada beberapa faktor penting yang harus diperhatikan. Salah 
+satunya adalah jarak antara bola dan kamera. Jika bola terlalu jauh dari kamera, 
+maka ukuran bola pada frame akan menjadi sangat kecil, yang menyebabkan 
+algoritma pendeteksi bola,  seperti Hough Circle Transform, kesulitan dalam 
+mendeteksi lingkaran yang kecil dan terdistorsi. Sebaliknya, jika bola terlalu dekat 
+dengan kamera, ukuran bola pada frame akan menjadi sangat besar sehingga 
+
+
+=== HALAMAN 44 ===
+ 
+44 
+ 
+sebagian besar bola mungkin berada di luar frame,  atau bola mungkin terlihat 
+terlalu terdistorsi karena efek perspektif, sehingga sulit untuk mendeteksi 
+lingkaran dengan benar.  Selain itu, pencahayaan juga memainkan peran penting 
+dalam pendeteksian bola. Cahaya yang cukup memungkinkan kamera menangkap 
+gambar yang lebih jelas dan kontras, yang sangat penting untuk algoritma 
+pendeteksian objek. Ketika pencahayaan buruk, gambar yang dihasilkan oleh 
+kamera bisa jadi gelap atau kabur, membuat warna dan bentuk bola lebih sulit 
+dikenali. Oleh karena itu, memasti kan lingkungan memiliki pencahayaan yang 
+baik dan stabil adalah kunci untuk pendeteksian bola yang sukses.  Dibawah ini 
+adalah tabel penelitian. 
+TABLE 4. 2Tabel Penelitian 
+ 
+tabel diatas  dapat disimpulkan berapa jarak dari bola dan juga kordinatnya.  
+No Jarak Kordinat Diameter Bola 
+1 2.84 m 
+ 
+X(266) Y(307) 34 
+2 2.23 m X(303) Y(274) 34 
+3 2.08m 
+ 
+X(272)Y(303) 
+ 
+34 
+4 1.95m X(382)Y(297) 34 
+5 1.60m X(205)Y(241) 34 
+6 1.39m 
+ 
+X(278)Y(277) 
+ 
+34 
+7 1.13m X(277)Y(274) 34 
+8 0,97cm 
+ 
+X(214)Y(292) 
+ 
+34 
+9 0.88cm X(295)Y(297) 
+ 
+34 
+10 0.63cm X(452)Y(301) 
+ 
+34 
+
+=== HALAMAN 45 ===
+ 
+45 
+ 
+ 
+4.3. Mendeteksi Warna Kuning 
+4.3.1. Mendeteksi Warna Kuning Dengan HSV 
+TABLE 4. 3Mendeteksi Warna Kuning Dengan HSV 
+Gambar jarak Kordinat 
+ 
+Tidak 
+terdetek
+si 
+Tidak 
+terdetek
+si 
+ 
+2.84m X(303) 
+Y(321) 
+ 
+2.40m X(317) 
+Y(267) 
+ 
+2.23m X(329) 
+Y(308) 
+ 
+
+
+=== HALAMAN 46 ===
+ 
+46 
+ 
+ 
+2.01m X(352) 
+Y(296) 
+ 
+1.60m X(269) 
+Y(269) 
+ 
+1.45m X(322) 
+Y(302) 
+ 
+1.42m X(326) 
+Y(320) 
+ 
+1.33m X(377) 
+Y(326) 
+ 
+
+
+=== HALAMAN 47 ===
+ 
+47 
+ 
+ 
+1.25m X(317) 
+Y(337) 
+ 
+1.13m X(357) 
+Y(308) 
+ 
+1.11m X(340) 
+Y(299) 
+ 
+ 
+1.04m X(387) 
+Y(345) 
+ 
+0,95cm X(247) 
+Y(511) 
+
+
+=== HALAMAN 48 ===
+ 
+48 
+ 
+ 
+0,84cm X(218) 
+Y(350) 
+ 
+0.81cm X(209) 
+Y(362) 
+  
+0.78cm X(237) 
+Y(364) 
+ 
+0.71cm X(297) 
+Y(371) 
+
+
+=== HALAMAN 49 ===
+ 
+49 
+ 
+ 
+0.69cm X(353) 
+Y(383) 
+ 
+ 
+0.64cm X(352) 
+Y(362) 
+ 
+ 
+0.63cm X(465) 
+Y(359) 
+ 
+ 
+Tidak 
+terdetek
+si 
+Tidak 
+terdetek
+si 
+  
+Berdasarkan dengan tabel yang diatas maka dapat ditarik kesimpulan dalam 
+mendeteksi warna dari objek atau dalam penel itian ini adalah objek berbentu bola 
+dibutuhkan  penerangan cahaya yang cukup untuk memperjelas warna dari sebuah 
+objek jadi jika objek  berada diruagan yang cukup gelap atau kurang sumber 
+cahaya maka warna dari objek tersebut akan susah dideteksi terutama dengan 
+ruang warna Hsv akan tetapi kekurangan nya adaalah warna yang terdeteksi bisa 
+
+
+=== HALAMAN 50 ===
+ 
+50 
+ 
+datang dari objek mana saja tidak hanya bola dan i tu merupakan kekurangan yang 
+dialami dalam penelitian ini. 
+TABLE 4. 4 Tabel Penelitian warna kuning bola hsv 
+No Jarak Kordinat 
+1 Tidak terdeteksi Tidak terdeteksi 
+2 2.84m X(303)Y(321) 
+3 2.40m X(317)Y(267) 
+4 2.23m X(329)Y(308) 
+5 2.01m X(352)Y(296) 
+6 1.60m X(269)Y(269) 
+7 1.45m X(322)Y(302) 
+8 1.42m X(326)Y(320) 
+9 1.33m X(377)Y(326) 
+10 1.25m X(317)Y(337) 
+11 1.13m X(357)Y(308) 
+12 1.11m X(340)Y(299) 
+13 1.04m X(387)Y(345) 
+14 0,95cm X(247)Y(511) 
+15 0,84cm X(218)Y(350) 
+16 0.78cm X(237)Y(364) 
+17 0.71cm X(297)Y(371) 
+18 0.69cm X(353)Y(383) 
+19 0.64cm X(352)Y(362) 
+20 0.63cm X(465)Y(359) 
+ 
+21 Tidak terdeteksi Tidak terdeteksi 
+ 
+Tabel diatas merupakan tabel rangkuman dari penelitian mendeteksi warna kuning 
+pada bola dengan informasi tentang, jarak, kordinat, dan juga penjelasan apakah 
+jarak dan kordinat bola itu terdeteksi atau tidak. 
+
+=== HALAMAN 51 ===
+ 
+51 
+ 
+ 
+ 
+4.4.Tahapan Penelitian Dan Pembahasan Deteksi Warna Kuning Dari 
+Objek HSV 
+ 
+4.4.1. Fungsi Upper dan Lower 
+ 
+Text 4. 10Fungsi Upper dan Lower 
+ 
+Fungsi “lower_yellow = np.array([20, 100, 100])  upper_yellow = np.array([30, 
+255, 255])” merupakan rentan warna yang  juga digunakan  memberi mask  di 
+daerah  warna yang ditemukan didalam frame dalam penelitian ini adalah warna 
+kuning sementara  “def detect_yellow_object(frame):”digunakan mendeteksi 
+warna kuning. Fungsi “lower_yellow = np.array([20, 100, 100]) upper_yell ow = 
+np.array([30, 255, 255])” mendefinisikan rentang warna kuning dalam HSV. 
+Fungsi “def detect_yellow_object(frame):” mendeteksi objek kuning dengan 
+mengubah frame ke HSV, menerapkan masker, dan mengekstraksi area berwarna 
+kuning. sehingga objek kuning lebih mudah diidentifikasi dalam gambar. 
+  
+def detect_yellow_object(frame): 
+    lower_yellow = np.array([20, 100, 100]) 
+    upper_yellow = np.array([30, 255, 255]) 
+
+=== HALAMAN 52 ===
+ 
+52 
+ 
+ 
+ 
+4.4.2. Fungsi hsv_frame 
+Text 4. 11Fungsi hsv_frame 
+ 
+Fungsi diatas adalah menggubah warna RGB(RED GREEN BLUE) menjadi HSV 
+(Hue Saturation  Value), hsv adalah ruang warna yang dapat digunakan untuk 
+mendeteksi warna, cahaya,  dan kejenuhan. 
+4.4.3. Fungsi Yellow_Result 
+ 
+Text 4. 12Fungsi Yellow_Result 
+ 
+Fungsi “yellow_result = cv2.bitwise_and(frame, frame, mask=yellow_mask)” 
+adalah memberi mask diobjek kuning yang telah diketahui sementara “return 
+yellow_result”merupakan hasil dari fungsi “def detect_yellow_object(frame);” 
+yang ditampilkan dalam ruang warna HSV  yang mana hasil akan menunjukan 
+warna kuning yang dideteksi dari bola yang juga berwana kuning. Dengan  begitu, 
+hanya bagian-bagian objek yang berwarna k uning yang akan ditampilkan dalam 
+gambar hasil. Hasil ini kemudian dikembalikan oleh fungsi “detect_yellow_object” 
+sebagai representasi dari objek berwarna kuning yang terdeteksi dalam ruang 
+warna HSV. Ini memungkinkan untuk fokus pada bola yang berwarna k uning 
+dalam gambar, meningkatkan ketepatan deteksi dan analisis.  Dengan demikian, 
+fokus pada bola kuning meningkatkan akurasi deteksi dan analisis, memberikan 
+informasi yang lebih jelas.  
+hsv_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV) 
+yellow_mask = cv2.inRange(hsv_frame, lower_yellow, upper_yellow) 
+    yellow_result = cv2.bitwise_and(frame, frame, mask=yellow_mask) 
+ 
+    return yellow_result 
+
+=== HALAMAN 53 ===
+ 
+53 
+ 
+ 
+4.4.4. Tambahan Pada Loop 
+ 
+Text 4. 13Tambahan Pada Loop 
+def calculate_distance(radius_in_pixels, actual_object_size, focal_length): 
+    distance = (actual_object_size * focal_length) / (2 * radius_in_pixels) 
+    return distance 
+ 
+def detect_ball_realtime(): 
+    cap = cv2.VideoCapture(0)   
+    actual_ball_diameter_cm = 10 
+    focal_length = 50 
+ 
+    while True: 
+        ret, frame = cap.read() 
+        if not ret: 
+            break 
+         
+        frame_with_yellow_text = detect_yellow_object(frame) 
+         
+ 
+        grayFrame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY) 
+        blurFrame = cv2.GaussianBlur(grayFrame, (17, 17), 0) 
+ 
+        circles = cv2.HoughCircles(blurFrame, cv2.HOUGH_GRADIENT, 1.2, 500, 
+                                   param1=95, param2=40, minRadius=20, maxRadius=100) 
+         
+        if circles is not None: 
+            circles = np.uint16(np.around(circles)) 
+            for i in circles[0, :]: 
+                cv2.circle(frame, (i[0], i[1]), i[2], (0, 255, 0), 2) 
+                cv2.circle(frame, (i[0], i[1]), 2, (0, 0, 255), 3) 
+                radius_in_pixels = i[2] 
+                distance = calculate_distance(radius_in_pixels, 
+actual_ball_diameter_cm, focal_length) 
+                cv2.putText(frame, f"Distance: {distance:.2f} cm", (i[0] - 50, i[1] + 50), 
+cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 255), 2) 
+                cv2.putText(frame, f"Coordinates: ({i[0]}, {i[1]})", (i[0] - 50, i[1] + 
+30), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 255), 2) 
+ 
+ 
+
+=== HALAMAN 54 ===
+ 
+54 
+ 
+        
+        cv2.imshow("deteksi kuning pada objek", frame_with_yellow_text) 
+        cv2.imshow("Deteksi Bola", frame) 
+      
+        if cv2.waitKey(1) & 0xFF == ord('q'): 
+            break 
+             
+    cap.release() 
+    cv2.destroyAllWindows() 
+ 
+detect_ball_realtime() 
+ 
+Bagian yang diberi bold seperti “frame_with_yellow_text = 
+detect_yellow_object(frame)” dan “cv2.imshow("deteksi kuning pada objek", 
+frame_with_yellow_text)” merupakan 2 fungsi yang perlu ditambah didalam loop 
+dalam memunculkan frame yang mendeteksi warna kuning dalam ruang warna 
+HSV. Dalam loop utama, fungsi "detect_yellow_object(frame)" memproses setiap 
+frame untuk mendeteksi objek berwarna kuning, dan hasilnya disimpan dalam 
+"frame_with_yellow_text". Kemudian, "fra me_with_yellow_text" ditampilkan 
+menggunakan "cv2.imshow()" untuk memperlihatkan deteksi warna kuning pada 
+objek. Proses ini dilakukan secara terus menerus selama proses pengambilan 
+gambar berlangsung, memungkinkan pemantauan waktu nyata terhadap deteksi 
+objek kuning dalam ruang warna HSV. Selain itu, pemrosesan berulang dalam 
+loop memastikan bahwa setiap frame yang diambil oleh kamera atau webcam 
+akan melalui proses deteksi warna kuning. Ini memungkinkan untuk terus 
+memonitor objek kuning yang muncul dalam  bidang pandang kamera secara 
+waktu nyata, memfasilitasi pemantauan dan analisis yang akurat terhadap 
+pergerakan dan perilaku objek tersebut.  Dengan pemrosesan berulang dalam loop, 
+setiap frame yang diambil oleh kamera atau webcam akan melewati deteksi war na 
+kuning secara konsisten. Ini memungkinkan pemantauan objek kuning dalam 
+waktu nyata, memudahkan analisis terperinci terhadap pergerakan dan perilaku 
+objek tersebut.  Dengan pendekatan ini, penelitian dapat memperoleh data yang 
+konsisten dan akurat tentan g perilaku objek kuning dalam lingkungan tertentu, 
+memfasilitasi analisis yang lebih mendalam dan pemahaman yang lebih baik 
+tentang dinamika objek tersebut.  
+
+=== HALAMAN 55 ===
+ 
+55 
+ 
+BAB V 
+ 
+KESIMPULAN DAN SARAN 
+ 
+5.1.Kesimpulan 
+Berdasarkan tujuan penelitian di BAB I maka tujuan pe nelitian dibagi menjadi 
+3 point yaitu: 
+ 
+1. Mengenai  jarak dari bola dapat diketahui dam dipahami  berapa 
+jarak sebuah bola dengan fungsi “def 
+calculate_distance(radius_in_pixels, actual_object_size, 
+focal_length): distance = (actual_object_size * focal_lengt h) / (2 * 
+radius_in_pixels)    return distance”. 
+ 
+ 
+2. Mengenai  lokasi dari bola juga dapat dideteksi bola berada dimana  
+melalui pemograman “ if circles is not None circles = 
+np.uint16(np.around(circles))for i in circles[0, :]               
+cv2.circle(frame,(i[0], i[1]), i[2], (0, 255, 0), 2)              
+cv2.circle(frame,(i[0], i[1]), 2, (0, 0, 255), 3) rad ius_in_pixels = 
+i[2]     
+distance=calculate_distance(radius_in_pixels,actual_ball_diameter
+_cm, focal_length).  
+ 
+ 
+ 
+3. Mengenai warna bola  bisa diketahui dalam penelitian ini 
+meskipun yang bisa dideteksi hanya 1 warna saja dan itu 
+merupakan warna kuning  dengan fungsi “def 
+
+=== HALAMAN 56 ===
+ 
+56 
+ 
+detect_yellow_object(frame):   lower_yellow = np.array([20, 100, 
+100])upper_yellow = np.array([30, 255, 255])hsv_frame = 
+cv2.cvtColor(frame, cv2.COLOR_BGR2HSV) 
+yellow_mask = cv2.inRange(hsv_frame, lower_yellow, 
+upper_yellow)    yellow_result = cv2.bitwise_and(frame, frame, 
+mask=yellow_mask)  return yellow_result  tetapi ada sedikit 
+perbedaan  warna kuning yang dedeteksi tidak hanya dari bola saja 
+tetapi juga dari objek lain tetapi juga warna selain kuning tidak 
+dapat dideteksi . 
+ 
+5.2. Saran 
+Saran kepada peneliti ataupun dosen yang berencana untuk melanjutkan 
+penelitian ini , penelitian ini  dapat dikembangkan lagi dengan  micro 
+controller berupa “raspberry pi” dan juga motor driver  untuk 
+menggerakan  webcam dengan begitu  webcam dapat bergerak sesuai arah 
+bola,  webcam berperan selayaknya indra mata masih menggunakan 
+bahasa pemograman yang sama dan juga opencv tapi salah satu hambata n 
+dalam mengkembangkan penelitian ini adalah harga dari “raspberry pi”   
+cukup mahal oleh karena itu  jika mempunya i “raspberry pi”  sangat 
+disarankan untuk mengkembangkan penelitian ini.  Selain itu, untuk 
+meningkatkan akurasi pendeteksian, peneliti dapat mempertimbangkan 
+pendeteksian dan pelacakan objek yang lebih canggih menggunaka n 
+algoritme pembelajaran mesin.  Penggabungan teknologi ini membuat 
+sistem deteksi bola  lebih mudah beradaptasi, sehingga dapat bekerja lebih 
+baik dalam berbagai kondisi pencaha yaan dan lingkungan. Penggunaan 
+algoritma machine learning untuk memperbaiki deteksi dan pelacakan bola 
+dalam kondisi pencahayaan yang bervariasi juga bisa diteliti lebih 
+lanjut.Dengan begitu maka penelitian  mendeteksi bola menggunakan 
+opencv dapat disemu purnakan  lagi d i penelitian berikut nya  dan dapat 
+terus dikembangkan oleh peneliti atau  mahasiswa.  
+
+=== HALAMAN 57 ===
+ 
+57 
+ 
+LAMPIRAN 
+ 
+1. Pemograman 
+Pemograman deteksi bola dengan opencv beserta deteksi warna kuning 
+HSV. 
+Lampiran 1 Pemograman 
+import cv2 
+import numpy as np 
+ 
+def detect_yellow_object(frame): 
+    lower_yellow = np.array([20, 100, 100]) 
+    upper_yellow = np.array([30, 255, 255]) 
+ 
+    hsv_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV) 
+    yellow_mask = cv2.inRange(hsv_frame, lower_yellow, upper_yellow) 
+    yellow_result = cv2.bitwise_and(frame, frame, mask=yellow_mask) 
+ 
+    return yellow_result 
+ 
+def calculate_distance(radius_in_pixels, actual_object_size, focal_length): 
+    distance = (actual_object_size * focal_length) / (2 * radius_in_pixels) 
+    return distance 
+ 
+def detect_ball_realtime(): 
+    cap = cv2.VideoCapture(0)   
+    actual_ball_diameter_cm = 10(Tergantung  berapa diameter bola) 
+    focal_length = 50 ( Tergantung focal length camera/webcam yang 
+digunakan) 
+ 
+    while True: 
+        ret, frame = cap.read() 
+        if not ret: 
+            break 
+         
+        frame_with_yellow_text = detect_yellow_object(frame) 
+         
+ 
+        grayFrame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY) 
+        blurFrame = cv2.GaussianBlur(grayFrame, (17, 17), 0) 
+ 
+        circles = cv2.HoughCircles(blurFrame, cv2.HOUGH_GRADIENT, 1.2, 500, 
+                                   param1=95, param2=40, minRadius=20, 
+maxRadius=100)(Perlu disesuaikan lagi) 
+
+=== HALAMAN 58 ===
+ 
+58 
+ 
+ 
+         
+        if circles is not None: 
+            circles = np.uint16(np.around(circles)) 
+            for i in circles[0, :]: 
+                cv2.circle(frame, (i[0], i[1]), i[2], (0, 255, 0), 2) 
+                cv2.circle(frame, (i[0], i[1]), 2, (0, 0, 255), 3) 
+                radius_in_pixels = i[2] 
+                distance = calculate_distance(radius_in_pixels, 
+actual_ball_diameter_cm, focal_length) 
+                cv2.putText(frame, f"Distance: {distance:.2f} cm", (i[0] - 50, i[1] + 50), 
+cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 255), 2) 
+                cv2.putText(frame, f"Coordinates: ({i[0]}, {i[1]})", (i[0] - 50, i[1] + 
+30), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 255), 2) 
+ 
+ 
+        
+        cv2.imshow("Deteksi Warna Kuning", frame_with_yellow_text) 
+        cv2.imshow("Deteksi Bola", frame) 
+      
+        if cv2.waitKey(1) & 0xFF == ord('q'): 
+            break 
+             
+    cap.release() 
+    cv2.destroyAllWindows() 
+ 
+detect_ball_realtime() 
+Sebagai catatan kalimat yang di Bold itu menandakan bahwa fungsi pemograman 
+perlu disesuaikan dengan objek bola ataupun camera /webcam  yang digunakan 
+begitu juga dengan kalibrasi Hough circle.  
+
+=== HALAMAN 59 ===
+ 
+59 
+ 
+ 
+ 
+DAFTAR RUJUKAN 
+[1] A. A. Fitrawan, M. N. Shodiq, D. H. Kusuma, and F. R. U. Jannah, “Sistem 
+Pendeteksi Jarak Pada Objek Realtime Video Berdasarkan Luas Kontur 
+Menggunakan Metode Circle Hough,” Semin. Nas. Terap. Ris. Inov. , vol. 6, 
+no. 1, pp. 935–942, 2020. 
+[2] B. C. Wibowo, F. Nugraha, and A. P. Utomo, “Uji Deteksi Objek Bentuk 
+Bola Dengan Menerapkan Metode Circular Hough Transform,” J. Inform. 
+Upgris, vol. 7, no. 1, 2021, doi: 10.26877/jiu.v7i1.8309. 
+[3] A. M. Rizal, “Implementation of a Ball Tracking System In  Image 
+Processing Using the Find Contour Method Implementasi Sistem Tracking 
+Bola Pada Pengolahan Citra Menggunakan Metode Find Contour,” J. 
+Electr. Electron. Eng., vol. 4, no. 2, pp. 105–114, 2020. 
+[4] A. Amperawan, D. Andika, M. Anisah, and ..., “Sistem Deteksi Posisi Dan 
+Pengambilan Bola Pada Robot Sepak Bola,” J. …, vol. 7, no. 1, pp. 28 –38, 
+2022, [Online]. Available: https://jurnal.univpgri -
+palembang.ac.id/index.php/ampere/article/view/8507%0Ahttps://jurnal.uni
+vpgri-palembang.ac.id/index.php/ampere/article/download/8507/5957 
+[5] B. Rahmajid Wijaya, M. Khaycal, and Taryudi, “Robot Penjaga Gawang 
+Pada Kontes Robot Sepak Bola Indonesia Jenis Beroda 2019,” Autocracy J. 
+Otomasi, Kendali, dan Apl. Ind. , vol . 7, no. 2, pp. 60 –65, 2021, doi: 
+10.21009/autocracy.072.3. 
+[6] I. Setiawan, W. Dewanta, H. A. Nugroho, and H. Supriyono, “Pengolah 
+Citra Dengan Metode Thresholding Dengan Matlab R2014A,” J. Media 
+Infotama, vol. 15, no. 2, 2019, doi: 10.37676/jmi.v15i2.868. 
+[7] M. H. Rifqo, Y. Darnita, D. Deslianti, and W. Zen, “Application of Hough 
+Transformation Method for Value Analysis Rupiah Coins,” J. Komputer, 
+Inf. dan Teknol. , vol. 2, no. 2, pp. 247 –258, 2022, doi: 
+10.53697/jkomitek.v2i2.855. 
+[8] P. Citra, K. Termog rafi, I. Merah, N. Kerusakan, and S. Otomatik, “Color 
+segmentation,” pp. 204–211, 2007. 
+[9] Z. Bahri, “Metode Pusat dan Circular Hough Transformation untuk 
+Mendeteksi Lingkaran pada Sebuah Citra,” Digit. Zo. J. Teknol. Inf. dan 
+Komun., vol. 11, no. 2, pp. 301–310, 2020, doi: 
+
+=== HALAMAN 60 ===
+ 
+60 
+ 
+10.31849/digitalzone.v11i2.5086. 
+   
+
