@@ -42,7 +42,10 @@ Pemeriksaan komparatif terhadap berkas PDF 60 halaman memperlihatkan bahwa naska
   Hal ini mengindikasikan mahasiswa melakukan *copy-paste* draf format dari jurusan **Bahasa Inggris Bisnis (Business English)** tanpa membaca dan memeriksa kembali naskahnya sebelum dicetak/disahkan.
 * **Kerusakan Formula Matematis (Halaman 25):**  
   Pada sub-bab 2.5 ("Rumus Kartasia" — maksudnya Sistem Koordinat Kartesius), formula lingkaran tertulis rusak akibat kesalahan encoding simbol font:
-  $$\text{Tertulis di naskah: } (? \; ? \; ?)^2 + (? \; ? \; ?)^2 = ?^2$$
+
+  $$
+  \text{Tertulis di naskah: } (? \; ? \; ?)^2 + (? \; ? \; ?)^2 = ?^2
+  $$
 * **Duplikasi Teks Paragraf (Halaman 28):**  
   Pada sub-bab 3.6 ("Jangkauan Penelitian"), seluruh isi paragraf pertama di-copy-paste ulang persis dua kali berturut-turut pada halaman yang sama.
 * **Gaya Bahasa & Typo Masif:**  
@@ -104,14 +107,26 @@ circles = cv2.HoughCircles(blurFrame, cv2.HOUGH_GRADIENT, ...)
 Pada chat WhatsApp, mahasiswa mengirim foto memegang **tutup botol obat kecil** dalam keadaan diam di depan webcam, lalu menutupinya dengan telapak tangan, dan berseru bangga karena muncul label *"Predicting (Occluded)"*.
 
 * **Fakta Matematika di Balik Kode:**
-  1. Objek dipegang **statis/diam** dengan tangan. Kecepatan estimasi Kalman adalah $v_x \approx 0, v_y \approx 0$.
-  2. Saat objek ditutup telapak tangan, `circles is None` (deteksi hilang).
+  1. Objek dipegang **statis/diam** dengan tangan, sehingga estimasi kecepatan adalah nol ($v_x \approx 0, v_y \approx 0$).
+  2. Saat objek ditutup telapak tangan, lingkaran tidak terdeteksi (`circles is None`), sehingga fungsi koreksi `kalman.correct()` tidak dipanggil.
   3. Baris 74 memanggil `predicted = kalman.predict()`.
-  4. Karena matriks transisi adalah:
-     $$\mathbf{x}_{t+1} = \begin{bmatrix} 1 & 0 & 1 & 0 \\ 0 & 1 & 0 & 1 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{bmatrix} \begin{bmatrix} x_t \\ y_t \\ v_{xt} \\ v_{yt} \end{bmatrix} = \begin{bmatrix} x_t + v_{xt} \\ y_t + v_{yt} \\ v_{xt} \\ v_{yt} \end{bmatrix}$$
-     Dengan $v_{xt} \approx 0, v_{yt} \approx 0$, maka posisi prediksi adalah:
-     $$x_{t+1} \approx x_t, \quad y_{t+1} \approx y_t$$
-  5. Akibatnya, titik prediksi Kalman **terpaku diam persis di koordinat terakhir**.
+  4. Model transisi state Kalman Filter mengalikan matriks transisi $\mathbf{F}$ dengan state sebelumnya:
+
+$$
+\mathbf{x}_{t+1} = \mathbf{F} \mathbf{x}_t
+$$
+
+$$
+\begin{bmatrix} x_{t+1} \\ y_{t+1} \\ v_{xt+1} \\ v_{yt+1} \end{bmatrix} = \begin{bmatrix} 1 & 0 & 1 & 0 \\ 0 & 1 & 0 & 1 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{bmatrix} \begin{bmatrix} x_t \\ y_t \\ v_{xt} \\ v_{yt} \end{bmatrix} = \begin{bmatrix} x_t + v_{xt} \\ y_t + v_{yt} \\ v_{xt} \\ v_{yt} \end{bmatrix}
+$$
+
+Ketika objek dipegang diam ($v_{xt} \approx 0, v_{yt} \approx 0$), posisi prediksi terdegenerasi menjadi:
+
+$$
+x_{t+1} \approx x_t, \quad y_{t+1} \approx y_t
+$$
+
+  5. **Titik prediksi Kalman terpaku diam persis di koordinat terakhir.**
   6. Mahasiswa mengira Kalman Filter telah "sukses melacak saat terhalang", padahal itu hanyalah retensi memori koordinat statis (*last known coordinate lock*).
 * **Ketiadaan Uji Dinamis Riil:** Jika objek dilemparkan atau menggelinding melewati penghalang (misal bergerak dari kiri ke kanan lalu tertutup papan rintangan), kode mahasiswa akan gagal memprediksi karena:
   - $\Delta t$ diasumsikan konstan integer $1$, tidak berbasis waktu fisik riil (`dt = current_time - prev_time`).
@@ -168,7 +183,11 @@ flowchart LR
    `HoughCircles` atau `findContours` harus dijalankan **pada citra hasil masking warna**, bukan pada citra grayscale mentah.
 2. **Implementasi $\Delta t$ Fisik Riil:**  
    Menghitung waktu delta per frame:
-   $$\Delta t = t_{\text{sekarang}} - t_{\text{sebelumnya}}$$
+
+   $$
+   \Delta t = t_{\text{sekarang}} - t_{\text{sebelumnya}}
+   $$
+
    dan memperbarui matriks transisi $\mathbf{F}(\Delta t)$ secara dinamis di setiap iterasi.
 3. **Mekanisme *Track Lifecycle* & *Occlusion State Machine*:**  
    - `ACTIVE`: Objek terdeteksi dan terasosiasi dengan measurement.
