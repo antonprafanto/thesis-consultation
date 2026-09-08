@@ -1,0 +1,1800 @@
+=== [PAGE 1] ===
+PROPOSAL SKRIPSI 
+IMPLEMENTASI ALGORITMA PRIORITY SCHEDULING PADA SISTEM 
+INFORMASI PELAYANAN SURAT ADMINISTRASI KELURAHAN 
+KAMPUNG SAMBAKUNGAN BERBASIS WEB 
+ 
+Oleh: 
+NELSI 
+2309106120 
+FAKULTAS TEKNIK 
+UNIVERSITAS MULAWARMAN 
+SAMARINDA 
+2026 
+ 
+ 
+
+=== [PAGE 2] ===
+ii 
+ 
+PROPOSAL SKRIPSI 
+IMPLEMENTASI ALGORITMA PRIORITY SCHEDULING PADA SISTEM 
+INFORMASI PELAYANAN SURAT ADMINISTRASI KELURAHAN 
+KAMPUNG SAMBAKUNGAN BERBASIS WEB 
+Diajukan sebagai salah satu syarat untuk menyelesaikan pendidikan 
+pada Program Studi Strata 1 Informatika, 
+Fakultas Teknik, Universitas Mulawarman 
+Oleh: 
+NELSI 
+2309106120 
+FAKULTAS TEKNIK 
+UNIVERSITAS MULAWARMAN 
+SAMARINDA 
+2026 
+ 
+ 
+
+=== [PAGE 3] ===
+iii 
+ 
+HALAMAN PENGESAHAN 
+ 
+Oleh: 
+NELSI 
+2309106120 
+Telah dibahas dalam Rapat Dosen Pembimbing pada [tanggal, bulan, tahun] dan 
+dinyatakan siap untuk diseminarkan sebagai Proposal Skripsi, dengan Dosen 
+Pembimbing: 
+ 
+I. 
+Anton Prafanto, S.Kom., M.T. 
+II. 
+Gubtha Mahendra Putra, S.Kom., M.Eng. 
+ 
+Koordinator Program Studi S1 Informatika, 
+Fakultas Teknik, Universitas Mulawarman, 
+ 
+Awang Harsa Kridalaksana, S.Kom., M.Kom. 
+NIP 19731229 200501 1 002 
+ 
+ 
+
+=== [PAGE 4] ===
+iv 
+ 
+KATA PENGANTAR 
+Puji syukur kepada Tuhan Yang Maha Esa sehingga penulis dapat menyelesaikan 
+proposal skripsi dengan judul “Implementasi Algoritma Priority Scheduling pada 
+Sistem 
+Informasi 
+Pelayanan 
+Surat 
+Administrasi 
+Kelurahan 
+Kampung 
+Sambakungan Berbasis Web”. Proposal ini disusun sebagai salah satu tahapan dalam 
+menyelesaikan skripsi pada Fakultas Teknik, Universitas Mulawarman. 
+Oleh karena itu, pada kesempatan ini Saya ingin mengucapkan terima kasih kepada 
+semua pihak yang telah mendukung serta membantu Saya selama proses penyusunan 
+proposal skripsi ini, kepada: 
+1. Ayah Saya Piter Pongdatu Bassi Dan Ibu Saya Santy Serta saudara-saudara saya 
+atas doa, bimbingan, serta kasih sayangnya. 
+2. Bapak Prof. Dr. Ir. H. Thamrin, S.T., M.T.,IPU., ASEAN.Eng., APEC.Eng selaku 
+Dekan Fakultas Teknik, Universitas Mulawarman. 
+3. Bapak Awang Harsa Kridalaksana, S.Kom,. M.Kom selaku Koordinator Program 
+Studi Informatika. 
+4. Bapak Anton Prafanto, S.Kom., M.T. selaku Pembimbing I yang selalu 
+memberikan arahan dan masukan terhadap penelitian ini. 
+5. Bapak Gubtha Mahendra Putra, S.Kom., M.Eng. selaku Pembimbing II atas 
+masukan terhadap penelitian ini. 
+6. ……………………….selaku Penguji I atas saran dan masukan terhadap 
+penelitian ini. 
+7. ………………………selaku Penguji II atas saran dan masukan terhadap 
+penelitian ini. 
+8. Segenap Dosen Program Studi Informatika, yang telah memberikan ilmu 
+pengetahuan selama mengikuti perkuliahan. 
+9. Pihak Kelurahan Kampung Sambakungan yang telah memberikan izin dan 
+membantu proses pengumpulan data. 
+
+=== [PAGE 5] ===
+v 
+ 
+10. Rekan-rekan seperjuangan yang terus memberikan dukungan dan semangat demi 
+terselesainya tugas ini. 
+Penulis menyadari bahwa proposal skripsi ini tidak luput dari berbagai kekurangan. Oleh 
+karena itu, semua kritik dan saran yang bersifat memperbaiki demi kesempurnaan sangat 
+diharapkan. 
+ 
+Samarinda, 20 Juni 2026 
+ 
+Nelsi 
+ 
+ 
+
+=== [PAGE 6] ===
+vi 
+ 
+DAFTAR ISI 
+ 
+PROPOSAL SKRIPSI .................................................................................................... ii 
+HALAMAN PENGESAHAN ........................................................................................ iii 
+KATA PENGANTAR .................................................................................................... iv 
+DAFTAR ISI .................................................................................................................. vi 
+DAFTAR TABEL ........................................................................................................ viii 
+DAFTAR GAMBAR ...................................................................................................... ix 
+DAFTAR LAMPIRAN ................................................................................................... x 
+DAFTAR ISTILAH/LAMBANG .................................................................................. 1 
+DAFTAR SINGKATAN ................................................................................................. 2 
+BAB I ................................................................................................................................ 3 
+PENDAHULUAN ........................................................................................................... 3 
+1.1 Latar Belakang ........................................................................................................ 3 
+1.2 Rumusan Masalah ................................................................................................... 5 
+1.3 Batasan Masalah ..................................................................................................... 6 
+1.4 Tujuan Penelitian .................................................................................................... 7 
+1.5 Manfaat Penelitian .................................................................................................. 7 
+1.6 Kontribusi Penelitian .............................................................................................. 8 
+BAB II .............................................................................................................................. 9 
+TINJAUAN PUSTAKA .................................................................................................. 9 
+2.1 Penelitian Terkait .................................................................................................... 9 
+2.2 Sistem Informasi ................................................................................................... 12 
+2.3 Algoritma Priority Scheduling .............................................................................. 12 
+2.3.1 Konsep Dasar Priority Scheduling ................................................................. 12 
+2.3.2 Formula Perhitungan Prioritas ....................................................................... 13 
+2.3.3 Risiko Starvation pada Priority Scheduling ................................................... 15 
+2.4 Metode Pengembangan Waterfall ......................................................................... 16 
+2.5 Black Box Testing ................................................................................................ 17 
+BAB III ........................................................................................................................... 18 
+METODOLOGI PENELITIAN .................................................................................. 18 
+3.1 Tahapan Pelaksanaan Penelitian ........................................................................... 18 
+3.2 Pengumpulan Data ................................................................................................ 19 
+3.3 Perancangan Data ................................................................................................. 20 
+3.4 Perancangan Proses/Algoritma ............................................................................. 21 
+
+=== [PAGE 7] ===
+vii 
+ 
+3.5 Perancangan Tampilan .......................................................................................... 24 
+3.6 Perancangan Pengujian ......................................................................................... 36 
+3.6.1 Pengujian Algoritma ...................................................................................... 36 
+3.6.2 Pengujian Fungsional Sistem (Black Box Testing) ....................................... 37 
+3.6.3 Uji Banding Priority Scheduling vs FIFO ..................................................... 37 
+3.7 Waktu dan Tempat Penelitian ............................................................................... 38 
+DAFTAR PUSTAKA .................................................................................................... 40 
+LAMPIRAN .................................................................................................................. 44 
+ 
+ 
+ 
+
+=== [PAGE 8] ===
+viii 
+ 
+DAFTAR TABEL 
+Tabel 3.1 Keterangan Simbol Flowchart ........................................................................ 17 
+Tabel 3.2 Rencana Struktur Tabel Database ................................................................... 18 
+Tabel 3.3 Variabel Penelitian .......................................................................................... 19 
+Tabel 3.4 Keterangan Simbol Use Case Diagram .......................................................... 20 
+Tabel 3.5 Daftar Halaman Sistem ................................................................................... 23 
+Tabel 3.6 Rancangan Skenario Pengujian Black Box .................................................... 32 
+Tabel 3.7 Rancangan Data Uji Perbandingan FIFO vs Priority Scheduling................... 33 
+Tabel 3.8 Jadwal Penelitian ............................................................................................ 34 
+ 
+ 
+
+=== [PAGE 9] ===
+ix 
+ 
+DAFTAR GAMBAR 
+Gambar 3.1 Kerangka Penelitian .................................................................................... 17 
+Gambar 3.2 Use Case Diagram Sistem ........................................................................... 21 
+Gambar 3.3 Activity Diagram Pengajuan dan Pemrosesan Permohonan Surat ............. 22 
+Gambar 3.4 Entity Relationship Diagram (ERD) ........................................................... 19 
+Gambar 3.5 Rancangan Antarmuka Halaman Login / Registrasi ................................... 25 
+Gambar 3.6 Rancangan Antarmuka Form Pengajuan Surat ........................................... 26 
+Gambar 3.7 Rancangan Antarmuka Riwayat & Lacak Status Permohonan ................... 26 
+Gambar 3.8 Rancangan Antarmuka Dashboard Antrean Prioritas Petugas .................... 27 
+Gambar 3.9 Rancangan Antarmuka Detail & Verifikasi Permohonan ........................... 28 
+Gambar 3.10 Rancangan Antarmuka Kelola Data Jenis Surat ....................................... 29 
+Gambar 3.11 Rancangan Antarmuka Beranda Warga .................................................... 29 
+Gambar 3.12 Rancangan Antarmuka Profil Akun Warga .............................................. 30 
+Gambar 3.13 Rancangan Antarmuka Riwayat Permohonan (Petugas) .......................... 30 
+Gambar 3.14 Rancangan Antarmuka Rekap Sederhana ................................................. 31 
+ 
+ 
+
+=== [PAGE 10] ===
+x 
+ 
+DAFTAR LAMPIRAN 
+Lampiran 1 Surat Izin Observasi Kelurahan Kampung Sambakungan .......................... 38 
+Lampiran 2 Pedoman Wawancara .................................................................................. 39 
+Lampiran 3 Rubrik Skor Prioritas dan Contoh Perhitungan ........................................... 40
+
+=== [PAGE 11] ===
+DAFTAR ISTILAH/LAMBANG 
+ 
+Contents 
+halaman 
+Algoritma 
+urutan langkah logis dan sistematis untuk menyelesaikan 
+suatu masalah atau melakukan perhitungan. 
+1 
+Prioritas 
+nilai yang menunjukkan tingkat kepentingan suatu 
+permohonan dalam antrean pemrosesan. 
+1 
+Antrean 
+barisan permohonan yang menunggu untuk diproses secara 
+berurutan. 
+1 
+Software 
+perangkat lunak yang berisi instruksi untuk menjalankan 
+tugas tertentu pada komputer. 
+9 
+Non-preemptive 
+mode penjadwalan yang tidak menghentikan proses yang 
+sedang berjalan meskipun ada proses lain berprioritas lebih 
+tinggi. 
+10 
+P(i) 
+lambang nilai prioritas permohonan surat ke-i pada algoritma 
+Priority Scheduling. 
+11 
+w1, w2, w3 
+lambang bobot masing-masing variabel prioritas, dengan w1 
++ w2 + w3 = 1. 
+11 
+Tie-breaker 
+aturan penentu urutan pemrosesan ketika dua atau lebih 
+permohonan memiliki nilai prioritas yang sama. 
+12 
+Starvation 
+kondisi ketika suatu permohonan berprioritas rendah tidak 
+pernah diproses karena terus didahului permohonan lain yang 
+berprioritas lebih tinggi. 
+14 
+Aging 
+mekanisme menaikkan nilai prioritas suatu proses secara 
+bertahap seiring bertambahnya waktu tunggu. 
+14 
+Waterfall 
+model pengembangan perangkat lunak yang bersifat 
+sekuensial dan linier. 
+15 
+Black Box Testing 
+teknik pengujian perangkat lunak yang berfokus pada evaluasi 
+fungsionalitas sistem tanpa memerlukan pengetahuan 
+mengenai struktur kode program di dalamnya. 
+15 
+Framework 
+kerangka kerja perangkat lunak yang menyediakan struktur 
+dasar untuk pengembangan aplikasi. 
+19 
+
+=== [PAGE 12] ===
+2 
+ 
+DAFTAR SINGKATAN 
+ 
+Contents 
+Arti 
+FIFO 
+First In First Out 
+UML 
+Unified Modeling Language 
+ERD 
+Entity Relationship Diagram 
+UAT 
+User Acceptance Testing 
+SUS 
+System Usability Scale 
+SDLC 
+System Development Life Cycle 
+PHP 
+Hypertext Preprocessor 
+SQL 
+Structured Query Language 
+SKTM 
+Surat Keterangan Tidak Mampu 
+NIM 
+Nomor Induk Mahasiswa 
+NIP 
+Nomor Induk Pegawai 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+=== [PAGE 13] ===
+3 
+ 
+BAB I 
+PENDAHULUAN 
+1.1 Latar Belakang 
+Perkembangan teknologi informasi pada era digital saat ini telah memberikan 
+pengaruh yang signifikan terhadap berbagai aspek kehidupan, termasuk dalam bidang 
+pelayanan administrasi pemerintahan. Pemanfaatan teknologi informasi memungkinkan 
+suatu proses yang sebelumnya dilakukan secara manual dapat dilakukan secara lebih 
+cepat, efisien, dan terstruktur. Salah satu bidang yang dapat memanfaatkan kemajuan 
+teknologi tersebut adalah pelayanan administrasi di tingkat kelurahan, yang merupakan 
+unit pemerintahan terkecil yang berhadapan langsung dengan masyarakat. 
+Pelayanan administrasi di Kelurahan Kampung Sambakungan saat ini masih 
+dilakukan secara manual, terutama dalam proses pengajuan surat seperti surat pengantar, 
+surat domisili, surat keterangan usaha, dan surat keterangan tidak mampu. Masyarakat 
+yang ingin mengajukan permohonan surat harus datang langsung ke kantor kelurahan, 
+mengisi formulir secara manual, kemudian menunggu antrean tanpa adanya kepastian 
+urutan pemrosesan. Proses pengantrean yang berjalan saat ini bersifat First In First Out 
+(FIFO), yaitu permohonan yang diajukan lebih dahulu akan diproses lebih dahulu, tanpa 
+memperhatikan tingkat urgensi maupun jenis kebutuhan dari masing-masing pemohon. 
+Masalah utama yang menjadi fokus penelitian ini adalah ketidaksesuaian antara 
+urutan pemrosesan FIFO dengan tingkat kebutuhan masyarakat yang sesungguhnya. 
+Sebagai contoh, seorang warga lanjut usia yang membutuhkan surat keterangan untuk 
+keperluan pengobatan mendesak dapat tertunda pelayanannya karena harus menunggu 
+antrean warga lain yang mengajukan permohonan untuk keperluan yang tidak mendesak. 
+Kondisi ini menunjukkan perlunya suatu mekanisme pengurutan antrean yang lebih 
+adaptif, yang dapat mempertimbangkan tingkat prioritas dari setiap permohonan 
+berdasarkan kriteria tertentu, bukan sekadar urutan waktu kedatangan. 
+Dalam bidang ilmu komputer, khususnya pada sistem operasi, terdapat berbagai 
+algoritma penjadwalan (scheduling) yang dapat diadaptasi untuk mengatur urutan 
+pemrosesan suatu antrean berdasarkan nilai prioritas. Salah satu algoritma yang dapat 
+diadaptasi untuk keperluan tersebut adalah algoritma Priority Scheduling, yaitu algoritma 
+
+=== [PAGE 14] ===
+4 
+ 
+yang mengurutkan proses berdasarkan nilai prioritas yang telah ditentukan, di mana 
+proses dengan nilai prioritas tertinggi akan diproses lebih dahulu. Pada penelitian ini, 
+algoritma Priority Scheduling diterapkan secara non-preemptive, artinya begitu petugas 
+mulai memproses suatu permohonan, proses tersebut tidak akan digeser oleh permohonan 
+lain yang datang kemudian dengan skor lebih tinggi. Penerapan algoritma ini pada sistem 
+informasi pelayanan administrasi memungkinkan permohonan surat diproses berdasarkan 
+tingkat urgensi, jenis surat, dan status pemohon, bukan semata-mata berdasarkan urutan 
+waktu pengajuan. 
+Kontribusi ilmiah utama dari penelitian ini terletak pada perancangan mekanisme 
+perhitungan prioritas dan pembuktian bahwa algoritma Priority Scheduling memberikan 
+kinerja yang lebih baik dibandingkan FIFO, bukan sekadar pembangunan sistem 
+informasi berbasis web. Oleh karena itu, algoritma dirancang dengan rubrik skor yang 
+jelas (bobot dan skala setiap variabel), dan kinerjanya diuji secara eksplisit melalui 
+perbandingan dengan metode FIFO, sehingga klaim peningkatan efisiensi dan keadilan 
+pelayanan dapat dibuktikan secara terukur, bukan hanya diasumsikan. 
+Penelitian terkait penerapan algoritma penjadwalan pada sistem informasi 
+pelayanan administrasi kependudukan telah dilakukan oleh (Rohmah & Gunawan, 2023) 
+yang mengimplementasikan algoritma Priority Scheduling pada sistem informasi 
+pelayanan administrasi kependudukan desa dengan metode pengembangan Waterfall, 
+pengujian Black Box Testing, dan kuesioner System Usability Scale (SUS). Penelitian ini 
+mengadaptasi pendekatan serupa dengan studi kasus yang berbeda, yaitu di Kelurahan 
+Kampung Sambakungan, namun dengan perbedaan yang bersifat teknis: rubrik skor 
+prioritas dan bobot yang disusun berdasarkan wawancara langsung dengan petugas 
+kelurahan setempat, serta evaluasi kinerja algoritma yang dilakukan melalui uji banding 
+eksplisit terhadap FIFO — sesuatu yang tidak dilakukan pada penelitian (Rohmah & 
+Gunawan, 2023), yang hanya menggunakan Black Box Testing dan SUS sebagai alat ukur 
+keberhasilan sistem. 
+Selain permasalahan pada mekanisme antrean, sistem pencatatan dan pengelolaan 
+data permohonan surat di Kelurahan Kampung Sambakungan saat ini masih dilakukan 
+menggunakan berkas fisik, sehingga proses pencarian data, pelaporan, maupun 
+rekapitulasi permohonan surat menjadi kurang efisien dan rentan terhadap kehilangan 
+
+=== [PAGE 15] ===
+5 
+ 
+atau kerusakan dokumen. Namun, permasalahan digitalisasi ini bersifat sebagai alasan 
+pendukung dibangunnya sistem, dan bukan merupakan kontribusi ilmiah utama 
+penelitian ini. Kontribusi ilmiah utama tetap berada pada perancangan dan pembuktian 
+kinerja algoritma Priority Scheduling. 
+Berdasarkan permasalahan yang telah diuraikan, penelitian ini merancang dan 
+membangun suatu sistem informasi pelayanan surat administrasi berbasis web yang 
+mengimplementasikan algoritma Priority Scheduling untuk mengatur urutan pemrosesan 
+permohonan surat berdasarkan tingkat prioritas, serta membandingkan kinerjanya secara 
+eksplisit dengan metode FIFO. Sistem ini diharapkan dapat membantu pihak Kelurahan 
+Kampung Sambakungan dalam mengelola pelayanan surat administrasi secara lebih 
+efisien, serta memberikan pelayanan yang lebih responsif terhadap kebutuhan masyarakat 
+yang bersifat mendesak. 
+Metode pengembangan sistem yang digunakan dalam penelitian ini adalah 
+metode Waterfall, yang terdiri atas tahapan analisis kebutuhan, perancangan sistem, 
+implementasi, pengujian, dan pemeliharaan. Metode ini dipilih karena kebutuhan sistem 
+dalam penelitian ini sudah dapat didefinisikan secara jelas sejak tahap awal penelitian. 
+Pengujian sistem dilakukan menggunakan metode Black Box Testing untuk memastikan 
+seluruh fungsi sistem berjalan sesuai dengan kebutuhan yang telah ditetapkan, dan kinerja 
+algoritma diuji melalui perbandingan kuantitatif dengan metode FIFO menggunakan data 
+uji yang disusun oleh peneliti. 
+Oleh sebab itu, penelitian ini mengangkat judul “Implementasi Algoritma Priority 
+Scheduling pada Sistem Informasi Pelayanan Surat Administrasi Kelurahan Kampung 
+Sambakungan Berbasis Web”, dengan tujuan membantu pihak kelurahan meningkatkan 
+efisiensi dan ketepatan pelayanan administrasi surat berdasarkan tingkat prioritas 
+kebutuhan masyarakat, sekaligus memberikan bukti empiris atas keunggulan algoritma 
+Priority Scheduling dibandingkan mekanisme antrean FIFO yang berjalan saat ini. 
+ 
+1.2 Rumusan Masalah 
+Berdasarkan latar belakang penelitian, maka yang menjadi rumusan masalah 
+dalam penelitian ini adalah: 
+
+=== [PAGE 16] ===
+6 
+ 
+1. Bagaimana merancang mekanisme penentuan prioritas permohonan surat 
+berdasarkan jenis surat, tingkat urgensi, dan status pemohon, serta 
+mengimplementasikannya pada sistem informasi pelayanan surat administrasi 
+berbasis web di Kelurahan Kampung Sambakungan menggunakan metode 
+pengembangan Waterfall? 
+2. Bagaimana kinerja algoritma Priority Scheduling dibandingkan dengan metode 
+First In First Out (FIFO) dalam mengatur urutan pemrosesan permohonan surat, 
+ditinjau dari rata-rata waktu tunggu, waktu penyelesaian permohonan, dan 
+ketepatan pelayanan terhadap permohonan yang bersifat mendesak? 
+3. Bagaimana hasil pengujian fungsionalitas sistem yang dibangun menggunakan 
+metode Black Box Testing? 
+1.3 Batasan Masalah 
+Penelitian ini disusun berdasarkan data-data yang diperoleh. Luasnya bidang yang 
+dihadapi membuat penelitian ini harus dibatasi. Ruang lingkup masalah dibatasi pada: 
+1. Sistem yang dibangun hanya mencakup layanan pengajuan surat administrasi 
+di Kelurahan Kampung Sambakungan, meliputi surat pengantar, surat domisili, 
+surat keterangan usaha, dan surat keterangan tidak mampu. 
+2. Algoritma yang diimplementasikan dalam penelitian ini adalah algoritma 
+Priority Scheduling non-preemptive, dengan nilai prioritas ditentukan 
+berdasarkan tiga variabel, yaitu jenis surat, tingkat urgensi, dan status pemohon, 
+tanpa menerapkan mekanisme aging. 
+3. Bobot dan skala setiap variabel prioritas disusun berdasarkan hasil wawancara 
+dengan petugas dan Lurah Kelurahan Kampung Sambakungan, sebagaimana 
+dijelaskan pada Subbab 2.3.2 dan 3.4. 
+4. Pengujian kinerja algoritma dilakukan dengan membandingkan hasil 
+pengurutan antrean menggunakan algoritma Priority Scheduling terhadap metode 
+FIFO, menggunakan data uji yang dibuat oleh peneliti (bukan data produksi riil 
+dalam jumlah besar), berdasarkan metrik rata-rata waktu tunggu dan ketepatan 
+pelayanan kasus mendesak. 
+
+=== [PAGE 17] ===
+7 
+ 
+5. Sistem dibangun berbasis web menggunakan bahasa pemrograman PHP 
+dengan framework Laravel dan basis data MySQL. 
+6. Metode pengembangan sistem yang digunakan adalah metode Waterfall, 
+dengan pengujian fungsionalitas sistem menggunakan metode Black Box Testing. 
+Penelitian ini tidak menggunakan kuesioner System Usability Scale (SUS) atau 
+pengujian usability lainnya. 
+7. Notifikasi status permohonan surat kepada pemohon dilakukan melalui surat 
+elektronik (email). 
+1.4 Tujuan Penelitian 
+Tujuan yang ingin dicapai dalam penelitian ini adalah: 
+1. Merancang mekanisme perhitungan prioritas permohonan surat berdasarkan 
+jenis surat, tingkat urgensi, dan status pemohon, serta mengimplementasikannya 
+pada sistem informasi pelayanan surat administrasi berbasis web di Kelurahan 
+Kampung Sambakungan menggunakan metode pengembangan Waterfall. 
+2. Mengimplementasikan algoritma Priority Scheduling dan membandingkan 
+kinerjanya dengan metode FIFO berdasarkan rata-rata waktu tunggu, waktu 
+penyelesaian permohonan, dan ketepatan pelayanan terhadap permohonan yang 
+bersifat mendesak. 
+3. Menguji fungsionalitas sistem yang dibangun menggunakan metode Black Box 
+Testing. 
+1.5 Manfaat Penelitian 
+Penelitian ini diharapkan dapat memberikan manfaat pada berbagai pihak, khususnya: 
+ 
+1. Penulis 
+Manfaat penelitian bagi penulis adalah untuk mengembangkan wawasan penulis 
+dalam merancang, mengimplementasikan, dan mengevaluasi kinerja algoritma Priority 
+Scheduling dalam sistem informasi pelayanan administrasi berbasis web. 
+
+=== [PAGE 18] ===
+8 
+ 
+2. Mahasiswa 
+Penelitian ini dapat memberikan pengetahuan kepada mahasiswa mengenai 
+bagaimana algoritma Priority Scheduling dirancang, diimplementasikan, dan diuji 
+kinerjanya dibandingkan metode FIFO dalam sistem informasi pelayanan administrasi, 
+dan menjadi referensi khususnya bagi mahasiswa di bidang Informatika. 
+ 
+3. Instansi/Lembaga (Kelurahan Kampung Sambakungan) 
+Manfaat penelitian ini bagi Kelurahan Kampung Sambakungan adalah dengan 
+adanya sistem informasi pelayanan surat administrasi ini diharapkan dapat membantu 
+pihak kelurahan untuk meningkatkan efisiensi dan ketepatan pelayanan administrasi, 
+khususnya bagi permohonan yang bersifat mendesak. 
+1.6 Kontribusi Penelitian 
+Kontribusi yang dapat diberikan dari penelitian ini adalah: 
+1. Perancangan rubrik penentuan skor prioritas permohonan surat administrasi 
+kelurahan berdasarkan tiga variabel (jenis surat, tingkat urgensi, dan status 
+pemohon) beserta pembobotan yang disusun berdasarkan wawancara dengan 
+petugas kelurahan. 
+2. Implementasi dan evaluasi kinerja algoritma Priority Scheduling dibandingkan 
+dengan metode FIFO dalam pemrosesan antrean permohonan surat, sebagai bukti 
+empiris atas peningkatan ketepatan pelayanan terhadap permohonan yang bersifat 
+mendesak. 
+3. Sistem informasi pelayanan surat administrasi berbasis web yang 
+mengimplementasikan mekanisme tersebut, yang dapat menjadi rujukan bagi 
+penelitian maupun penerapan sistem sejenis di kelurahan atau desa lain dengan 
+karakteristik permasalahan serupa. 
+ 
+ 
+
+=== [PAGE 19] ===
+9 
+ 
+BAB II 
+TINJAUAN PUSTAKA 
+2.1 Penelitian Terkait 
+Bagian ini menjelaskan beberapa penelitian terkait yang berhubungan dengan 
+proses penelitian. Tinjauan pustaka menguraikan teori, temuan, dan bahan penelitian lain 
+yang diperoleh dari acuan yang dijadikan landasan untuk melakukan penelitian. Dalam 
+rangka mendukung penelitian ini, dilakukan kajian terhadap penelitian-penelitian terkait 
+yang telah dilakukan sebelumnya, sebagaimana diuraikan berikut ini. 
+1. Metode yang digunakan: Waterfall. Temuan Penelitian (1): Penelitian yang 
+dilakukan bertujuan mengimplementasikan algoritma Priority Scheduling pada 
+sistem informasi pelayanan administrasi kependudukan desa, dengan pengujian 
+menggunakan Black Box Testing dan kuesioner System Usability Scale (SUS). 
+Penelitian ini menjadi topik yang paling dekat dengan penelitian yang diusulkan, 
+namun bobot prioritas ditentukan secara asumtif dan tidak dilakukan uji banding 
+kinerja algoritma terhadap metode FIFO, sehingga penelitian yang diusulkan 
+menyusun 
+rubrik 
+pembobotan 
+berdasarkan 
+wawancara 
+petugas 
+serta 
+menambahkan uji banding kinerja Priority Scheduling terhadap FIFO yang tidak 
+dilakukan pada penelitian tersebut (Rohmah & Gunawan, 2023). 
+2. Metode yang digunakan: Waterfall. Temuan Penelitian (2): Penelitian yang 
+dilakukan bertujuan membangun sistem informasi pelayanan surat menyurat di 
+kelurahan menggunakan metode pengembangan Waterfall, namun belum 
+menerapkan algoritma penjadwalan dalam mengatur urutan pemrosesan 
+permohonan, sehingga penelitian yang diusulkan menambahkan penerapan 
+algoritma Priority Scheduling beserta uji banding kinerjanya terhadap metode 
+FIFO (Aldila, 2022). 
+3. Metode yang digunakan: Waterfall. Temuan Penelitian (3): Penelitian yang 
+dilakukan bertujuan membangun sistem informasi administrasi kependudukan 
+berbasis web di tingkat kelurahan, dengan pengujian menggunakan Black Box 
+Testing dan kuesioner System Usability Scale (SUS). Penelitian ini sama-sama 
+berbasis web kelurahan dengan penelitian yang diusulkan, namun tidak 
+
+=== [PAGE 20] ===
+10 
+ 
+menerapkan mekanisme prioritas antrean dalam memproses permohonan (Hasri 
+& Sudarmilah, 2021). 
+4. Metode yang digunakan: Waterfall. Temuan Penelitian (4): Penelitian yang 
+dilakukan bertujuan membangun sistem informasi administrasi kependudukan 
+yang terintegrasi dengan WhatsApp Gateway untuk keperluan notifikasi, dengan 
+pengujian menggunakan Black Box Testing. Penelitian ini berfokus pada 
+mekanisme notifikasi melalui WhatsApp, bukan pada mekanisme prioritas 
+antrean permohonan (Hidayat, 2022). 
+5. Metode yang digunakan: Waterfall. Temuan Penelitian (5): Penelitian yang 
+dilakukan bertujuan membangun sistem informasi administrasi desa terpadu, 
+dengan pengujian menggunakan Black Box Testing. Penelitian ini membahas 
+sistem administrasi desa secara umum dan tidak menerapkan algoritma 
+penjadwalan dalam mengatur urutan pemrosesan permohonan (Romadhon & 
+Maryam, 2023) 
+6. Metode yang digunakan: Extreme Programming. Temuan Penelitian (6): 
+Penelitian yang dilakukan bertujuan membangun sistem informasi pelayanan 
+publik administrasi kependudukan menggunakan metode pengembangan Extreme 
+Programming, dengan pengujian menggunakan User Acceptance Testing (UAT). 
+Penelitian ini menggunakan metode pengembangan yang berbeda dari penelitian 
+yang diusulkan dan tidak menerapkan mekanisme prioritas dalam pelayanannya 
+(Satya et al., 2021). 
+7. Metode yang digunakan: Prototype. Temuan Penelitian (7): Penelitian yang 
+dilakukan bertujuan membangun sistem informasi manajemen surat berbasis web 
+untuk instansi pemerintah menggunakan metode Prototype, dengan pengujian 
+menggunakan User Acceptance Testing (UAT). Penelitian ini berfokus pada 
+manajemen surat internal instansi, bukan pada pelayanan permohonan warga yang 
+mempertimbangkan tingkat prioritas (Hartanto & Perdananto, 2023). 
+8. Metode yang digunakan: SDLC Prototype. Temuan Penelitian (8): Penelitian 
+yang dilakukan bertujuan membangun sistem informasi Indeks Kepuasan 
+Masyarakat (IKM) berbasis website menggunakan pendekatan System 
+
+=== [PAGE 21] ===
+11 
+ 
+Development Life Cycle (SDLC) model Prototype, dengan pengujian 
+menggunakan User Acceptance Testing (UAT). Penelitian ini berfokus pada 
+pengukuran kepuasan masyarakat, bukan pada pengurutan antrean permohonan 
+berdasarkan tingkat prioritas (Firmansyah et al., 2021). 
+9. Metode yang digunakan: Studi analisis. Temuan Penelitian (9): Penelitian yang 
+dilakukan bertujuan menganalisis tingkat kepuasan pengguna terhadap layanan 
+publik digital, dengan pengujian menggunakan User Acceptance Testing (UAT). 
+Penelitian ini bersifat studi analisis kepuasan pengguna dan tidak 
+mengembangkan sistem dengan algoritma prioritas (Fitriastuti et al., 2025) 
+10. Metode yang digunakan: Waterfall dan Unified Modelling Language (UML). 
+Temuan Penelitian (10): Penelitian yang dilakukan bertujuan menerapkan UML 
+dalam perancangan sistem informasi administrasi kelurahan menggunakan 
+metode pengembangan Waterfall. Penelitian ini berfokus pada pemodelan sistem 
+menggunakan UML, bukan pada penerapan algoritma prioritas dalam pengurutan 
+antrean (Wulandari & Purnomo, 2021). 
+ 
+Perbedaan dengan Penelitian Sebelumnya 
+Berdasarkan uraian di atas, sebagian besar penelitian terdahulu mengembangkan 
+sistem informasi pelayanan administrasi kependudukan dengan metode pengembangan 
+Waterfall, Prototype, atau Extreme Programming, namun hanya penelitian (Rohmah & 
+Gunawan, 2023) yang secara khusus mengimplementasikan algoritma penjadwalan 
+(Priority Scheduling) sebagai mekanisme pengurutan antrean permohonan surat 
+berdasarkan tingkat prioritas. Penelitian yang membahas sistem informasi administrasi 
+desa secara umum, seperti (Romadhon & Maryam, 2023) tidak menerapkan algoritma 
+penjadwalan sehingga tidak dijadikan rujukan arsitektur algoritma pada penelitian ini. 
+Dibandingkan dengan (Rohmah & Gunawan, 2023) yang menjadi penelitian 
+dengan topik paling dekat, penelitian ini memiliki tiga perbedaan teknis utama. Pertama, 
+rubrik skor dan bobot prioritas (w₁, w₂, w₃) pada penelitian ini disusun berdasarkan hasil 
+wawancara langsung dengan petugas dan Lurah Kelurahan Kampung Sambakungan, 
+bukan ditentukan secara asumtif, sebagaimana dijelaskan pada Subbab 2.3.2. Kedua, 
+
+=== [PAGE 22] ===
+12 
+ 
+kinerja algoritma Priority Scheduling pada penelitian ini dievaluasi secara eksplisit 
+melalui uji banding kuantitatif terhadap metode FIFO menggunakan data uji terkontrol, 
+sedangkan (Rohmah & Gunawan, 2023) hanya menggunakan Black Box Testing untuk 
+menguji fungsionalitas sistem dan SUS untuk mengukur usability, tanpa membandingkan 
+kinerja algoritma terhadap metode antrean konvensional. Ketiga, penelitian ini tidak 
+menggunakan kuesioner SUS, dan sebagai gantinya mengalokasikan upaya pengujian 
+pada pembuktian kinerja algoritma itu sendiri. 
+ 
+2.2 Sistem Informasi 
+Sistem informasi merupakan kombinasi dari manusia, perangkat keras, perangkat 
+lunak, jaringan komunikasi, sumber data, dan kebijakan serta prosedur yang menyimpan, 
+mengambil, mengubah, dan mendiseminasikan informasi dalam sebuah organisasi 
+(Sahiba et al., 2024). Sistem informasi memungkinkan organisasi untuk mengolah data 
+menjadi informasi yang berguna bagi pengambilan keputusan. Dalam konteks pelayanan 
+publik, sistem informasi berperan penting dalam meningkatkan kualitas dan efisiensi 
+layanan, sehingga proses pelayanan dapat dilakukan secara lebih cepat, akurat, dan 
+transparan. 
+2.3 Algoritma Priority Scheduling 
+2.3.1 Konsep Dasar Priority Scheduling 
+Priority Scheduling merupakan salah satu algoritma penjadwalan (scheduling 
+algorithm) yang pada mulanya digunakan dalam sistem operasi untuk menentukan urutan 
+eksekusi proses berdasarkan nilai prioritas yang dimiliki oleh masing-masing proses 
+(Rumahorbo et al., 2025). Proses dengan nilai prioritas tertinggi akan dijalankan lebih 
+dahulu dibandingkan proses dengan nilai prioritas yang lebih rendah. Priority Scheduling 
+dapat diterapkan secara preemptive maupun non-preemptive. Pada mode non-
+preemptive, sekali proses dengan prioritas tertinggi mulai dieksekusi, proses tersebut 
+akan diselesaikan terlebih dahulu sebelum proses lain dijalankan, meskipun ada proses 
+baru dengan prioritas lebih tinggi yang masuk ke dalam antrean. 
+Konsep ini diadaptasi ke dalam sistem informasi pelayanan administrasi pada 
+penelitian ini, di mana setiap permohonan surat diperlakukan sebagai sebuah proses yang 
+
+=== [PAGE 23] ===
+13 
+ 
+memiliki nilai prioritas berdasarkan kriteria tertentu, yaitu jenis surat, tingkat urgensi, dan 
+status pemohon. Algoritma diterapkan secara non-preemptive: begitu petugas mulai 
+memproses suatu permohonan, proses tersebut diselesaikan terlebih dahulu sebelum 
+petugas beralih ke permohonan berikutnya, meskipun ada permohonan baru dengan skor 
+prioritas lebih tinggi yang masuk pada saat itu. Pendekatan non-preemptive dipilih karena 
+proses verifikasi berkas administrasi bersifat satu kesatuan dan tidak dapat dihentikan di 
+tengah jalan tanpa menimbulkan inkonsistensi data. 
+2.3.2 Formula Perhitungan Prioritas 
+Nilai prioritas pada penelitian ini dihitung menggunakan formula penjumlahan 
+terbobot (weighted sum) dari tiga variabel utama, sebagai berikut: 
+P(i) = w₁ × SkorJenisSurat + w₂ × SkorUrgensi + w₃ × SkorStatusPemohon 
+...................................................................(2.1) 
+Keterangan: 
+P(i) = Nilai prioritas permohonan ke-i 
+SkorJenisSurat = Skor berdasarkan jenis surat yang diajukan 
+SkorUrgensi = Skor berdasarkan tingkat kemendesakan waktu kebutuhan surat 
+SkorStatusPemohon = Skor berdasarkan status pemohon (lansia, disabilitas, umum) 
+w₁, w₂, w₃ = Bobot masing-masing variabel, dengan w₁ + w₂ + w₃ = 1 
+Bobot dan Alasan Pemilihan Bobot 
+Bobot ditentukan berdasarkan hasil wawancara dengan petugas dan Lurah Kelurahan 
+Kampung Sambakungan, yang menyatakan bahwa tingkat urgensi kebutuhan pemohon 
+merupakan pertimbangan paling penting dalam menentukan urutan pelayanan, diikuti 
+oleh jenis surat yang diajukan, dan status pemohon. Berdasarkan hasil wawancara 
+tersebut, bobot awal yang digunakan pada penelitian ini adalah sebagai berikut (nilai final 
+akan dikonfirmasi ulang pada tahap pengumpulan data): 
+1. w₁ (Jenis Surat) = 0,3 
+2. w₂ (Urgensi) = 0,5 
+3. w₃ (Status Pemohon) = 0,2 
+
+=== [PAGE 24] ===
+14 
+ 
+Skala Setiap Variabel 
+Setiap variabel diberi skor pada rentang 1–5 berdasarkan tingkat kepentingannya, 
+sebagaimana ditunjukkan pada tabel berikut. Skala ini disusun berdasarkan hasil 
+wawancara dan akan divalidasi kembali bersama petugas kelurahan sebelum tahap 
+implementasi. 
+       Tabel 2.2. Skala Skor Setiap Variabel Prioritas 
+Variabel 
+Kategori 
+Skor 
+Jenis Surat 
+Surat Keterangan Tidak Mampu 
+(SKTM) 
+5 
+ 
+Surat Keterangan Usaha 
+3 
+ 
+Surat Domisili 
+2 
+ 
+Surat Pengantar 
+2 
+Urgensi 
+Tinggi 
+5 
+ 
+Sedang 
+3 
+ 
+Rendah 
+1 
+Status Pemohon 
+Lansia 
+5 
+ 
+Disabilitas 
+4 
+ 
+Umum 
+1 
+ 
+Aturan Jika Skor Sama dan Sifat Algoritma 
+Apabila dua atau lebih permohonan memiliki nilai P(i) yang sama, maka 
+permohonan dengan waktu pengajuan lebih awal akan didahulukan (aturan First Come 
+First Served sebagai tie-breaker). Algoritma diterapkan secara non-preemptive 
+sebagaimana dijelaskan pada Subbab 2.3.1, sehingga sekali petugas memulai proses suatu 
+permohonan, permohonan tersebut akan diselesaikan terlebih dahulu. 
+Langkah Algoritma (Pseudocode) 
+INPUT: daftar permohonan surat yang belum diproses 
+UNTUK setiap permohonan i dalam daftar: 
+
+=== [PAGE 25] ===
+15 
+ 
+    hitung SkorJenisSurat(i), SkorUrgensi(i), 
+SkorStatusPemohon(i) 
+    P(i) = w1 * SkorJenisSurat(i) + w2 * SkorUrgensi(i) + w3 * 
+SkorStatusPemohon(i) 
+URUTKAN seluruh permohonan berdasarkan P(i) secara descending 
+JIKA terdapat P(i) yang sama: 
+    dahulukan permohonan dengan waktu pengajuan lebih awal 
+OUTPUT: antrean permohonan yang sudah terurut 
+petugas memproses permohonan dari urutan teratas secara non-
+preemptive 
+ 
+Contoh Perhitungan 
+Berikut adalah contoh perhitungan nilai prioritas untuk tiga permohonan surat 
+menggunakan bobot dan skala pada Tabel 2.2: 
+4. Pemohon A: Surat Keterangan Tidak Mampu (5), Urgensi Tinggi (5), Lansia (5) 
+→ P = 0,3(5) + 0,5(5) + 0,2(5) = 5,0 
+5. Pemohon B: Surat Domisili (2), Urgensi Rendah (1), Umum (1) → P = 0,3(2) + 
+0,5(1) + 0,2(1) = 1,3 
+6. Pemohon C: Surat Keterangan Usaha (3), Urgensi Sedang (3), Disabilitas (4) → 
+P = 0,3(3) + 0,5(3) + 0,2(4) = 3,2 
+Berdasarkan hasil perhitungan tersebut, maka urutan antrean yang terbentuk adalah 
+Pemohon A (5,0) → Pemohon C (3,2) → Pemohon B (1,3). Pemohon A diproses lebih 
+dahulu karena memiliki nilai prioritas tertinggi, meskipun mungkin bukan pemohon yang 
+datang paling awal, sehingga menunjukkan bahwa algoritma ini benar-benar mengubah 
+urutan pemrosesan berdasarkan tingkat kepentingan, bukan sekadar mengurutkan data 
+(sorting) tanpa dasar prioritas. 
+Permohonan dengan nilai P(i) tertinggi akan ditempatkan pada urutan teratas dalam 
+antrean dan diproses lebih dahulu oleh petugas (Rohmah, 2023). 
+2.3.3 Risiko Starvation pada Priority Scheduling 
+Salah satu risiko yang melekat pada algoritma Priority Scheduling adalah 
+starvation, yaitu kondisi ketika suatu proses atau permohonan dengan nilai prioritas 
+
+=== [PAGE 26] ===
+16 
+ 
+rendah tidak pernah diproses karena terus didahului oleh proses-proses lain yang 
+memiliki nilai prioritas lebih tinggi (Rumahorbo et al., 2025). Pada konteks penelitian ini, 
+risiko tersebut dapat terjadi apabila permohonan dengan skor P(i) rendah, misalnya 
+permohonan Surat Domisili dengan urgensi rendah dari pemohon berstatus umum, terus-
+menerus didahului oleh permohonan-permohonan baru yang memiliki skor lebih tinggi, 
+sehingga waktu tunggunya menjadi tidak terbatas meskipun permohonan tersebut 
+sebenarnya sudah diajukan sejak lama. 
+Salah satu mekanisme umum untuk mengatasi starvation adalah aging, yaitu 
+menaikkan nilai prioritas suatu proses secara bertahap seiring bertambahnya waktu 
+tunggu, sehingga proses dengan prioritas awal rendah pada akhirnya tetap akan diproses. 
+Sebagaimana dijelaskan pada Subbab 1.3 (Batasan Masalah), penelitian ini tidak 
+menerapkan mekanisme aging, dengan pertimbangan bahwa: (1) volume permohonan 
+surat di Kelurahan Kampung Sambakungan relatif kecil per minggunya sebagaimana 
+akan dikonfirmasi pada tahap observasi (Subbab 3.2), sehingga permohonan dengan 
+prioritas rendah pada praktiknya tetap akan diproses dalam rentang waktu yang wajar, 
+dan (2) penambahan mekanisme aging akan menambah kompleksitas rubrik skor yang 
+berada di luar fokus utama penelitian pada tahap ini. Sebagai mitigasi sederhana, 
+algoritma tetap menerapkan aturan First Come First Served sebagai tie-breaker ketika dua 
+permohonan memiliki nilai P(i) yang sama (Subbab 2.3.2), sehingga di antara 
+permohonan-permohonan dengan tingkat prioritas setara, urutan kedatangan tetap 
+diperhatikan. Penerapan mekanisme aging secara penuh dapat menjadi arah 
+pengembangan lanjutan apabila sistem ini diterapkan pada skala volume permohonan 
+yang lebih besar. 
+2.4 Metode Pengembangan Waterfall 
+Waterfall adalah model pengembangan perangkat lunak yang bersifat sekuensial 
+dan linier, terdiri atas tahapan analisis kebutuhan (requirements analysis), perancangan 
+sistem (system design), implementasi (implementation), pengujian (testing), dan 
+pemeliharaan (maintenance) (Ramadhan et al., 2023) Setiap tahapan dalam metode 
+Waterfall harus diselesaikan terlebih dahulu sebelum melanjutkan ke tahapan berikutnya. 
+Metode ini cocok digunakan untuk pengembangan sistem yang kebutuhannya sudah 
+dapat didefinisikan secara jelas sejak tahap awal penelitian (Nuari & Chotijah, 2023). 
+
+=== [PAGE 27] ===
+17 
+ 
+2.5 Black Box Testing 
+Black Box Testing merupakan teknik pengujian perangkat lunak yang berfokus 
+pada evaluasi fungsionalitas sistem tanpa memerlukan pengetahuan mengenai struktur 
+kode program di dalamnya (Amalia et al., 2021) Pengujian dilakukan dengan 
+memberikan data masukan (input) tertentu kepada sistem, kemudian membandingkan 
+keluaran (output) yang dihasilkan dengan hasil yang diharapkan. Pada penelitian ini, 
+Black Box Testing digunakan khusus untuk menguji fungsionalitas sistem (misalnya 
+form, login, status, dan notifikasi email), dan dibedakan dari pengujian algoritma serta uji 
+banding FIFO vs Priority Scheduling yang mengukur kinerja, sebagaimana dijelaskan 
+pada Subbab 3.6. 
+ 
+ 
+
+=== [PAGE 28] ===
+18 
+ 
+BAB III 
+METODOLOGI PENELITIAN 
+ 
+3.1 Tahapan Pelaksanaan Penelitian 
+Penelitian ini dilaksanakan melalui beberapa tahapan yang saling berkaitan, 
+dimulai dari identifikasi masalah, studi literatur, pengumpulan data, analisis kebutuhan 
+sistem, perancangan sistem dan algoritma, implementasi, pengujian sistem (fungsional 
+maupun kinerja algoritma), hingga penarikan kesimpulan. Tahapan pelaksanaan 
+penelitian ini mengikuti kerangka kerja metode pengembangan sistem Waterfall, 
+sebagaimana ditunjukkan pada Gambar 3.1. 
+Sebelum menjelaskan kerangka penelitian, berikut disajikan keterangan simbol 
+flowchart yang digunakan pada Gambar 3.1, sebagaimana ditunjukkan pada Tabel 3.1. 
+Tabel 3.1. Keterangan Simbol Flowchart 
+Nama Simbol 
+Penjelasan 
+Simbol 
+Start/End 
+Permulaan 
+(awal) 
+dan 
+akhir 
+flowchart. 
+Process 
+Proses atau kegiatan yang dilakukan. 
+ 
+Decision 
+Pernyataan 
+yang 
+menghasilkan 
+jawaban ya/tidak. 
+Data 
+Proses input atau output data. 
+Arrow 
+Arah aliran proses/sistem. 
+On-Page 
+Reference 
+Penghubung 
+antarhalaman 
+yang 
+berbeda maupun pada halaman yang 
+sama. 
+ 
+
+=== [PAGE 29] ===
+19 
+ 
+Nama Simbol 
+Penjelasan 
+Simbol 
+Sub-Process 
+Menyatakan sekumpulan langkah 
+proses yang ditulis sebagai prosedur. 
+ 
+ 
+ 
+ 
+ 
+Gambar 3.1. Kerangka Penelitian 
+3.2 Pengumpulan Data 
+Teknik pengumpulan data yang digunakan dalam penelitian ini meliputi: 
+1. Observasi, yaitu pengamatan langsung terhadap proses pelayanan administrasi 
+surat yang berjalan di Kelurahan Kampung Sambakungan untuk memahami alur 
+kerja yang ada saat ini, termasuk perkiraan jumlah permohonan per minggu, jenis 
+surat yang paling sering diajukan, dan gambaran waktu tunggu yang terjadi saat 
+ini. 
+2. Wawancara, yaitu wawancara terstruktur dengan Lurah, petugas pelayanan, 
+serta beberapa warga untuk mengetahui kebutuhan dan permasalahan dalam 
+
+=== [PAGE 30] ===
+20 
+ 
+proses pelayanan administrasi yang berjalan, sekaligus untuk menggali dan 
+mengonfirmasi bobot serta skala variabel prioritas (jenis surat, urgensi, status 
+pemohon) sebagaimana dijelaskan pada Subbab 2.3.2. 
+3. Studi Literatur, yaitu pengumpulan data dari berbagai sumber referensi seperti 
+jurnal ilmiah dan buku yang relevan dengan topik penelitian. 
+4. Penyusunan Data Uji, yaitu penyusunan sekumpulan data permohonan surat 
+buatan (bukan data produksi riil) dengan variasi jenis surat, tingkat urgensi, dan 
+status pemohon, yang digunakan untuk menguji algoritma Priority Scheduling 
+dan membandingkan kinerjanya dengan metode FIFO sebagaimana dijelaskan 
+pada Subbab 3.6. 
+3.3 Perancangan Data 
+Perancangan data dalam penelitian ini meliputi perancangan struktur basis data 
+yang digunakan untuk menyimpan data permohonan surat, data pemohon, dan nilai 
+prioritas hasil perhitungan algoritma. Struktur basis data dirancang menggunakan Entity 
+Relationship Diagram (ERD) yang terdiri atas beberapa tabel utama, sebagaimana 
+ditunjukkan pada Tabel 3.2. 
+Tabel 3.2. Rencana Struktur Tabel Database 
+Nama Tabel 
+Keterangan 
+Kolom Kunci 
+users 
+Menyimpan data akun warga dan petugas beserta 
+peran (role) masing-masing 
+id, role, email 
+permohonan_surat 
+Menyimpan data permohonan surat, jenis surat, 
+urgensi, status pemohon, waktu pengajuan, waktu 
+mulai diproses, skor prioritas, dan status 
+permohonan 
+id, user_id, 
+skor_prioritas 
+jenis_surat 
+Menyimpan daftar jenis surat yang dapat diajukan 
+beserta skor bobotnya 
+id, nama_surat, 
+skor_bobot 
+ 
+Kolom waktu pengajuan dan waktu mulai diproses pada tabel permohonan_surat 
+digunakan untuk mencatat timestamp yang menjadi dasar perhitungan waktu tunggu 
+setiap permohonan, sebagaimana dijelaskan pada Tabel 3.3 dan Subbab 3.6.3. 
+
+=== [PAGE 31] ===
+21 
+ 
+Relasi antartabel tersebut digambarkan dalam bentuk Entity Relationship 
+Diagram (ERD) sebagaimana ditunjukkan pada Gambar 3.4. 
+ 
+ 
+Gambar 3.4. Entity Relationship Diagram (ERD) 
+3.4 Perancangan Proses/Algoritma 
+Perancangan proses dalam penelitian ini berfokus pada penerapan algoritma 
+Priority Scheduling non-preemptive untuk menentukan urutan pemrosesan permohonan 
+surat. Setiap permohonan yang masuk akan dihitung nilai prioritasnya menggunakan 
+formula, bobot, dan skala yang telah dijelaskan pada Persamaan 2.1 dan Tabel 2.2, 
+mengikuti langkah algoritma (pseudocode) pada Subbab 2.3.2, kemudian disimpan ke 
+dalam basis data bersama dengan data permohonan lainnya. Variabel penelitian yang 
+digunakan dalam perancangan algoritma ini ditunjukkan pada Tabel 3.3. 
+Tabel 3.3. Variabel Penelitian 
+Kategori 
+Variabel 
+Nama Variabel 
+Definisi Operasional 
+Cara 
+Pengukuran 
+Variabel Bebas 
+(X) 
+Metode antrean 
+(Priority Scheduling 
+vs FIFO) 
+Metode 
+pengurutan 
+antrean 
+permohonan surat; Priority Scheduling 
+mengurutkan 
+berdasarkan 
+nilai 
+prioritas P(i), FIFO mengurutkan 
+berdasarkan waktu kedatangan 
+Perlakuan 
+pada data uji 
+yang sama 
+Variabel Terikat 
+(Y1) 
+Rata-rata waktu 
+tunggu 
+Rata-rata 
+selisih 
+antara 
+waktu 
+pengajuan dan waktu mulai diproses 
+Timestamp 
+sistem / data 
+uji buatan 
+
+=== [PAGE 32] ===
+22 
+ 
+Kategori 
+Variabel 
+Nama Variabel 
+Definisi Operasional 
+Cara 
+Pengukuran 
+untuk seluruh permohonan pada data 
+uji 
+Variabel Terikat 
+(Y2) 
+Ketepatan 
+pelayanan kasus 
+mendesak 
+Proporsi permohonan berstatus urgensi 
+tinggi atau pemohon lansia/disabilitas 
+yang terproses dalam urutan awal 
+antrean 
+Perbandingan 
+urutan proses 
+terhadap 
+urutan ideal 
+Variabel Kontrol Jenis surat dan 
+jumlah data uji 
+Kategori surat administrasi dan jumlah 
+data permohonan uji yang sama 
+digunakan pada kedua skenario (FIFO 
+dan Priority Scheduling) 
+Ditetapkan 
+tetap pada 
+seluruh 
+pengujian 
+ 
+Selanjutnya, alur proses sistem dimodelkan menggunakan Use Case Diagram dan 
+Activity Diagram untuk menggambarkan interaksi antara pengguna (warga dan petugas) 
+dengan sistem, sebagaimana ditunjukkan pada Gambar 3.2 dan Gambar 3.3. 
+Sebelum menampilkan diagram, berikut disajikan keterangan simbol Use Case 
+Diagram yang digunakan pada Gambar 3.2, sebagaimana ditunjukkan pada Tabel 3.4. 
+Tabel 3.4. Keterangan Simbol Use Case Diagram 
+Nama Simbol 
+Penjelasan 
+Simbol 
+Actor 
+Pengguna atau entitas luar yang berinteraksi 
+dengan sistem. 
+Use Case 
+Fungsi atau layanan yang disediakan sistem 
+bagi aktor. 
+ 
+Association 
+Interaksi atau hubungan antara aktor dan use 
+case. 
+Include 
+Menyatakan bahwa satu use case selalu 
+menyertakan (menjalankan) use case lain. 
+ 
+
+=== [PAGE 33] ===
+23 
+ 
+Nama Simbol 
+Penjelasan 
+Simbol 
+Extend 
+Menyatakan bahwa satu use case dapat 
+diperluas 
+oleh 
+use 
+case 
+lain 
+secara 
+kondisional. 
+ 
+System Boundary 
+Batas cakupan sistem yang memuat seluruh 
+use case di dalamnya. 
+ 
+Use Case Diagram pada Gambar 3.2 menunjukkan dua aktor utama, yaitu Warga 
+dan Petugas Kelurahan. Warga berinteraksi dengan sistem untuk melakukan 
+registrasi/login, mengajukan permohonan surat, melihat status permohonan, dan 
+menerima notifikasi email. Petugas berinteraksi dengan sistem untuk login, membuka 
+dashboard antrean prioritas, memverifikasi permohonan, memproses dan mengubah 
+status permohonan, serta mengelola data jenis surat. Use case “Menghitung Skor Prioritas 
+P(i)” dan “Mengirim Notifikasi Email” bersifat <<include>>, yaitu selalu dijalankan 
+sebagai bagian dari use case “Mengajukan Permohonan Surat” dan “Memproses & 
+Mengubah Status”. 
+ 
+Gambar 3.2. Use Case Diagram Sistem 
+Activity Diagram pada Gambar 3.3 menggambarkan alur proses secara lebih rinci, 
+mulai dari warga mengajukan permohonan, sistem menghitung skor prioritas dan 
+mengurutkan antrean, hingga petugas memverifikasi dan memproses permohonan secara 
+non-preemptive berdasarkan urutan skor tertinggi. Apabila berkas dinyatakan tidak 
+
+=== [PAGE 34] ===
+24 
+ 
+lengkap, sistem mengirimkan notifikasi perbaikan kepada warga sebelum permohonan 
+diproses kembali; apabila lengkap, petugas menyelesaikan permohonan tersebut hingga 
+status “Selesai” dan sistem mengirimkan notifikasi email kepada pemohon. 
+ 
+Gambar 3.3. Activity Diagram Pengajuan dan Pemrosesan Permohonan Surat 
+ 
+3.5 Perancangan Tampilan 
+Perancangan tampilan (user interface) sistem terdiri atas seluruh halaman yang 
+dibutuhkan oleh dua peran pengguna, yaitu Warga dan Petugas Kelurahan. Daftar 
+lengkap halaman beserta fungsinya ditunjukkan pada Tabel 3.5, sedangkan rancangan 
+visual (wireframe) untuk halaman-halaman utama ditunjukkan pada Gambar 3.5 sampai 
+dengan Gambar 3.14. 
+
+=== [PAGE 35] ===
+25 
+ 
+Tabel 3.5. Daftar Halaman Sistem 
+No Nama Halaman 
+Aktor 
+Deskripsi Fungsi 
+Referensi 
+1 
+Login / Registrasi 
+Warga & 
+Petugas 
+Satu halaman dengan dua tab (Masuk dan 
+Daftar Akun). Warga baru mendaftar dengan 
+NIK; sistem mengarahkan pengguna ke 
+Beranda Warga atau Dashboard Petugas 
+secara otomatis sesuai role akun setelah 
+berhasil masuk. 
+Gambar 
+3.5 
+2 
+Form Pengajuan 
+Permohonan Surat 
+Warga 
+Warga mengisi data diri, memilih jenis surat, 
+tingkat urgensi, dan status pemohon. Sistem 
+menampilkan estimasi skor prioritas P(i) 
+sebelum permohonan disubmit (Persamaan 
+2.1). 
+Gambar 
+3.6 
+3 
+Riwayat & Lacak 
+Status Permohonan 
+Warga 
+Menampilkan seluruh permohonan yang 
+pernah diajukan warga beserta status 
+berjalan dalam bentuk timeline (Diajukan → 
+Diverifikasi → Diproses → Selesai). 
+Gambar 
+3.7 
+4 
+Dashboard Antrean 
+Prioritas 
+Petugas 
+Menampilkan seluruh permohonan yang 
+masuk, terurut otomatis secara descending 
+berdasarkan skor prioritas P(i); permohonan 
+dengan skor tertinggi ditandai agar diproses 
+lebih dahulu (non-preemptive). 
+Gambar 
+3.8 
+5 
+Detail & Verifikasi 
+Permohonan 
+Petugas 
+Menampilkan 
+data 
+pemohon, 
+berkas 
+pendukung, dan rincian perhitungan skor 
+prioritas per variabel (jenis surat, urgensi, 
+status pemohon). Petugas dapat menyetujui 
+& memproses, atau menolak & meminta 
+perbaikan berkas. 
+Gambar 
+3.9 
+6 
+Kelola Data Jenis 
+Surat 
+Petugas 
+Mengelola daftar 4 jenis surat beserta skor 
+bobotnya (Tabel 2.2), sesuai batasan 
+masalah pada Subbab 1.3 sehingga jumlah 
+jenis surat tidak ditambah di luar cakupan 
+penelitian. 
+Gambar 
+3.10 
+7 
+Beranda Warga 
+Warga 
+Halaman utama warga setelah login, 
+menampilkan ringkasan status permohonan 
+(jumlah diajukan, diproses, dan selesai), 
+Gambar 
+3.11 
+
+=== [PAGE 36] ===
+26 
+ 
+No Nama Halaman 
+Aktor 
+Deskripsi Fungsi 
+Referensi 
+daftar aktivitas terbaru, serta tombol untuk 
+mengajukan surat baru. 
+8 
+Profil Akun Warga 
+Warga 
+Menampilkan dan memungkinkan 
+perubahan data akun warga, meliputi nama, 
+NIK, alamat, nomor HP, dan email. 
+Gambar 
+3.12 
+9 
+Riwayat 
+Permohonan 
+(Petugas) 
+Petugas 
+Menampilkan daftar seluruh permohonan 
+surat yang pernah diproses petugas beserta 
+status dan skor prioritasnya, dilengkapi 
+pencarian permohonan. 
+Gambar 
+3.13 
+10 Rekap Sederhana 
+Petugas 
+Menampilkan ringkasan statistik sederhana 
+serta grafik perbandingan kinerja pelayanan 
+(misalnya rata-rata waktu tunggu) sebagai 
+gambaran umum performa antrean. 
+Gambar 
+3.14 
+ 
+Gambar 3.5 menunjukkan rancangan halaman Login / Registrasi yang menjadi 
+pintu masuk bagi kedua peran pengguna. Warga baru mendaftar melalui tab “Daftar 
+Akun” dengan mengisi nama lengkap, NIK, email, dan kata sandi; warga maupun petugas 
+yang sudah memiliki akun masuk melalui tab “Masuk”. 
+
+=== [PAGE 37] ===
+27 
+ 
+ 
+Gambar 3.5. Rancangan Antarmuka Halaman Login / Registrasi 
+Gambar 3.6 menunjukkan rancangan form pengajuan permohonan surat oleh 
+warga, yang terdiri atas data diri pemohon, pilihan jenis surat, tingkat urgensi, dan status 
+pemohon. Ketiga pilihan terakhir digunakan langsung oleh sistem untuk menghitung skor 
+prioritas P(i) sesuai Persamaan 2.1, dan estimasi skornya ditampilkan kepada warga 
+sebelum permohonan disubmit. 
+
+=== [PAGE 38] ===
+28 
+ 
+ 
+Gambar 3.6. Rancangan Antarmuka Form Pengajuan Surat 
+Gambar 3.7 menunjukkan rancangan halaman riwayat dan lacak status, tempat 
+warga memantau posisi setiap permohonan yang pernah diajukan melalui indikator 
+timeline, tanpa perlu datang langsung ke kantor kelurahan untuk menanyakan status. 
+
+=== [PAGE 39] ===
+29 
+ 
+ 
+Gambar 3.7. Rancangan Antarmuka Riwayat & Lacak Status Permohonan 
+Gambar 3.8 menunjukkan rancangan dashboard petugas yang menampilkan 
+antrean permohonan terurut secara descending berdasarkan skor prioritas P(i). Baris 
+permohonan dengan skor tertinggi ditandai secara visual agar mudah dikenali dan 
+diproses lebih dahulu oleh petugas, sejalan dengan sifat non-preemptive algoritma 
+Priority Scheduling yang dijelaskan pada Subbab 2.3.1. 
+
+=== [PAGE 40] ===
+30 
+ 
+ 
+Gambar 3.8. Rancangan Antarmuka Dashboard Antrean Prioritas Petugas 
+Gambar 3.9 menunjukkan rancangan halaman detail dan verifikasi permohonan 
+yang dibuka petugas dari dashboard. Halaman ini menampilkan rincian perhitungan skor 
+P(i) per variabel (skor, bobot, dan kontribusi), sehingga nilai prioritas dapat ditelusuri 
+kembali, bukan berupa angka tersembunyi. Petugas memutuskan untuk menyetujui dan 
+memproses, atau menolak dan meminta perbaikan berkas. 
+
+=== [PAGE 41] ===
+31 
+ 
+ 
+Gambar 3.9. Rancangan Antarmuka Detail & Verifikasi Permohonan 
+Gambar 3.10 menunjukkan rancangan halaman kelola data jenis surat, tempat 
+petugas melihat dan memperbarui skor bobot dari 4 jenis surat yang menjadi cakupan 
+penelitian ini (Subbab 1.3). Perubahan skor bobot pada halaman ini akan memengaruhi 
+perhitungan P(i) untuk permohonan baru. 
+
+=== [PAGE 42] ===
+32 
+ 
+ 
+Gambar 3.10. Rancangan Antarmuka Kelola Data Jenis Surat 
+Gambar 3.11 menunjukkan rancangan halaman beranda warga yang tampil 
+setelah warga berhasil masuk ke sistem. Halaman ini menyajikan ringkasan status 
+permohonan (jumlah yang diajukan, sedang diproses, dan telah selesai) beserta daftar 
+aktivitas terbaru, sehingga warga dapat langsung memantau perkembangan 
+permohonannya. Tombol untuk mengajukan surat baru juga ditempatkan pada halaman 
+ini agar warga dapat memulai permohonan baru dengan mudah. 
+
+=== [PAGE 43] ===
+33 
+ 
+ 
+Gambar 3.11. Rancangan Antarmuka Beranda Warga 
+Gambar 3.12 menunjukkan rancangan halaman profil akun warga, tempat warga 
+dapat melihat sekaligus memperbarui data akunnya sendiri, meliputi nama, NIK, alamat, 
+nomor HP, dan email. Ketersediaan halaman ini memungkinkan warga menjaga 
+keakuratan data pribadi yang digunakan sistem saat memproses permohonan surat. 
+
+=== [PAGE 44] ===
+34 
+ 
+ 
+Gambar 3.12. Rancangan Antarmuka Profil Akun Warga 
+Gambar 3.13 menunjukkan rancangan halaman riwayat permohonan bagi 
+petugas, yang menampilkan daftar seluruh permohonan surat yang pernah diproses 
+beserta status dan skor prioritasnya. Fitur pencarian pada halaman ini memudahkan 
+petugas menelusuri kembali permohonan tertentu tanpa harus memeriksa seluruh data 
+secara manual. 
+
+=== [PAGE 45] ===
+35 
+ 
+ 
+Gambar 3.13. Rancangan Antarmuka Riwayat Permohonan (Petugas) 
+Gambar 3.14 menunjukkan rancangan halaman rekap sederhana yang menyajikan 
+ringkasan statistik pelayanan bagi petugas, termasuk grafik perbandingan kinerja seperti 
+rata-rata waktu tunggu. Halaman ini memberikan gambaran umum performa antrean 
+permohonan surat, sehingga petugas maupun pihak kelurahan dapat memantau efektivitas 
+pelayanan dari waktu ke waktu. 
+
+=== [PAGE 46] ===
+36 
+ 
+ 
+Gambar 3.14. Rancangan Antarmuka Rekap Sederhana 
+3.6 Perancangan Pengujian 
+Pengujian dalam penelitian ini dibagi menjadi tiga bagian yang terpisah dan saling 
+melengkapi: pengujian algoritma, pengujian fungsional sistem (Black Box Testing), dan 
+uji banding kinerja antara Priority Scheduling dengan FIFO. Pemisahan ini dilakukan 
+agar setiap klaim penelitian —fungsionalitas berjalan dan kinerja algoritma lebih baik 
+dari FIFO— dapat dibuktikan dengan metode pengujian yang sesuai. 
+3.6.1 Pengujian Algoritma 
+Pengujian algoritma bertujuan untuk memverifikasi bahwa skor prioritas P(i) dan 
+urutan antrean yang dihasilkan oleh sistem sudah sesuai dengan hasil perhitungan manual 
+menggunakan formula, bobot, dan skala pada Tabel 2.2. Pengujian dilakukan dengan 
+memasukkan data uji dengan nilai variabel yang telah diketahui (seperti pada contoh 
+perhitungan di Subbab 2.3.2), kemudian membandingkan skor dan urutan keluaran sistem 
+dengan hasil perhitungan manual. Kesesuaian antara keduanya menunjukkan bahwa 
+algoritma telah diimplementasikan dengan benar pada sistem. 
+ 
+
+=== [PAGE 47] ===
+37 
+ 
+ 
+3.6.2 Pengujian Fungsional Sistem (Black Box Testing) 
+Pengujian fungsional sistem dalam penelitian ini dilakukan menggunakan metode 
+Black Box Testing untuk mengevaluasi fungsionalitas sistem tanpa memeriksa struktur 
+kode program. Skenario pengujian dirancang untuk memastikan setiap fungsi utama 
+sistem, seperti pengajuan surat, perhitungan skor prioritas, pengurutan antrean, dan 
+perubahan status permohonan, berjalan sesuai dengan yang diharapkan. Rancangan 
+skenario pengujian ditunjukkan pada Tabel 3.6. Status pengujian pada tahap proposal ini 
+masih berupa rencana, karena implementasi dan pengujian belum dilaksanakan. 
+Tabel 3.6. Rancangan Skenario Pengujian Black Box 
+No Skenario Pengujian 
+Hasil yang Diharapkan 
+Status 
+1 
+Warga 
+mengajukan 
+permohonan surat melalui form 
+web 
+Data tersimpan dan skor prioritas 
+terhitung otomatis 
+Direncanakan 
+2 
+Petugas membuka dashboard 
+antrean 
+Daftar permohonan tampil terurut 
+dari skor prioritas tertinggi 
+Direncanakan 
+3 
+Petugas 
+mengubah 
+status 
+permohonan 
+Status berubah dan notifikasi 
+email terkirim ke pemohon 
+Direncanakan 
+4 
+Sistem 
+menghitung 
+skor 
+prioritas 
+untuk 
+kombinasi 
+variabel yang berbeda 
+Skor 
+sesuai 
+dengan 
+hasil 
+perhitungan manual (lihat Subbab 
+3.6.1) 
+Direncanakan 
+3.6.3 Uji Banding Priority Scheduling vs FIFO 
+Uji banding ini bertujuan untuk membuktikan bahwa algoritma Priority 
+Scheduling memberikan kinerja yang lebih baik dibandingkan metode FIFO yang 
+berjalan saat ini. Pengujian dilakukan dengan menyusun 20–30 data permohonan uji 
+dengan variasi jenis surat, tingkat urgensi, dan status pemohon, kemudian data yang sama 
+dijalankan pada dua skenario: (1) diurutkan menggunakan metode FIFO berdasarkan 
+urutan kedatangan, dan (2) diurutkan menggunakan algoritma Priority Scheduling 
+berdasarkan nilai P(i). Sebagai pelengkap, sistem juga mencatat timestamp waktu 
+pengajuan dan waktu mulai diproses pada data uji coba penggunaan sistem, sehingga 
+waktu tunggu aktual dapat dihitung dari selisih kedua waktu tersebut. 
+
+=== [PAGE 48] ===
+38 
+ 
+Contoh rancangan data uji berskala kecil ditunjukkan pada Tabel 3.7 sebagai 
+ilustrasi; data uji lengkap (20–30 permohonan) akan disusun pada tahap pengumpulan 
+data. 
+Tabel 3.7. Contoh Rancangan Data Uji Perbandingan FIFO vs Priority Scheduling 
+ID 
+Jenis Surat 
+Urgensi 
+Status 
+Pemohon 
+Urutan 
+Datang 
+Skor P(i) 
+1 
+Domisili 
+Rendah 
+Umum 
+1 
+1,3 
+2 
+SKTM 
+Tinggi 
+Lansia 
+2 
+5,0 
+3 
+Pengantar 
+Sedang 
+Umum 
+3 
+2,3 
+ 
+Berdasarkan contoh data pada Tabel 3.7, urutan FIFO adalah 1 → 2 → 3 (sesuai 
+urutan kedatangan), sedangkan urutan Priority Scheduling adalah 2 → 3 → 1 
+(berdasarkan skor P(i) tertinggi ke terendah). Contoh ini menunjukkan bahwa 
+permohonan ID 2 (SKTM, urgensi tinggi, lansia) yang datang belakangan tetap dapat 
+diproses lebih dahulu oleh Priority Scheduling, sedangkan pada metode FIFO 
+permohonan tersebut harus menunggu permohonan ID 1 selesai terlebih dahulu. 
+Dari hasil uji banding menggunakan seluruh data uji (20–30 permohonan), akan 
+dihitung dan dibandingkan tiga hal: (1) rata-rata waktu tunggu seluruh permohonan pada 
+metode FIFO dibandingkan Priority Scheduling, (2) rata-rata waktu tunggu khusus untuk 
+permohonan berkategori mendesak (urgensi tinggi, lansia, atau disabilitas), dan (3) posisi 
+rata-rata permohonan mendesak dalam antrean pada kedua metode. Hasil perbandingan 
+ini menjadi bukti kuantitatif atas klaim peningkatan efisiensi dan keadilan pelayanan yang 
+diajukan dalam penelitian ini. 
+3.7 Waktu dan Tempat Penelitian 
+Penelitian ini akan dilaksanakan pada bulan Juli sampai dengan bulan Desember 
+tahun 2026. Tempat pelaksanaan penelitian dilakukan di Kelurahan Kampung 
+Sambakungan, sedangkan proses perancangan dan pengembangan sistem dilakukan pada 
+Laboratorium Informatika, Fakultas Teknik, Universitas Mulawarman. 
+Berbagai aktivitas dan kegiatan dalam penelitian ini perlu disusun dalam suatu 
+jadwal penelitian agar dapat terjadwal dan selesai sesuai dengan waktu yang telah 
+
+=== [PAGE 49] ===
+39 
+ 
+ditentukan, sebagaimana ditunjukkan pada Tabel 3.8. Rincian tahap pengujian sistem 
+sengaja dipecah menjadi beberapa kegiatan agar penyusunan data uji, pelaksanaan uji 
+banding FIFO vs Priority Scheduling, dan analisis hasil memiliki alokasi waktu yang 
+memadai, tidak menumpuk hanya pada satu minggu. 
+Tabel 3.8. Jadwal Penelitian 
+No Kegiatan 
+Jul 
+Agt 
+Sep 
+Okt 
+Nov 
+Des 
+Tahap Persiapan Penelitian 
+1 
+Pembuatan Proposal 
+X 
+ 
+ 
+ 
+ 
+ 
+2 
+Seminar Proposal 
+ 
+X 
+ 
+ 
+ 
+ 
+Tahap Pelaksanaan 
+3 
+Pengumpulan Data (observasi, 
+wawancara, penyusunan data uji) 
+ 
+X 
+X 
+ 
+ 
+ 
+4 
+Perancangan & Implementasi 
+Sistem 
+ 
+ 
+X 
+X 
+ 
+ 
+5 
+Pengujian Algoritma & Fungsional 
+(Black Box) 
+ 
+ 
+ 
+ 
+X 
+ 
+6 
+Uji Banding FIFO vs Priority 
+Scheduling & Analisis Hasil 
+ 
+ 
+ 
+ 
+X 
+ 
+Tahap Penyusunan Laporan 
+7 
+Seminar Hasil 
+ 
+ 
+ 
+ 
+ 
+X 
+8 
+Seminar Akhir / Sidang Skripsi 
+ 
+ 
+ 
+ 
+ 
+X 
+ 
+ 
+
+=== [PAGE 50] ===
+40 
+ 
+DAFTAR PUSTAKA 
+Afrianto, M. I., Fauziah, F., & Wijaya, Y. F. (2024). Kombinasi Algoritma 
+Priority Scheduling dan Earliest Due Date untuk Sistem Penjadwalan 
+Slitting Produk Berbasis Web. TEKNOKOM, 7(1), 180–186. 
+https://doi.org/10.31943/teknokom.v7i1.176 
+Al Husaeni, D. N. (2025). Analisis Trend Penelitian Penggunaan Algoritma 
+Penjadwalan serta Faktor yang Mempengaruhinya: Analisis 
+Bibliometrik R dan Pemetaan VOSviewer. Jurnal Nasional Teknologi 
+Dan Sistem Informasi, 11(1), 57–66. 
+https://doi.org/10.25077/TEKNOSI.v11i01.2025.57-66 
+Aldila. (2022). Sistem Informasi Pelayanan Surat Menyurat di Kelurahan 
+Menggunakan Metode Waterfall. 
+Amalia, A., Putri Hamidah, S. W., & Kristanto, T. (2021). Pengujian Black 
+Box Menggunakan Teknik Equivalence Partitions Pada Aplikasi E-
+Learning Berbasis Web. Building of Informatics, Technology and 
+Science (BITS), 3, 1198–1204. https://doi.org/10.47065/bits.v3i3.1062 
+Darip, M., Rohman, A., Rudianto, Pratama, G. U., & Hidayatullah, M. 
+(2025). Simulasi Model Antrean Menggunakan Pendekatan Algoritma 
+FIFO Di Kantin Sekolah (Studi Kasus: SMA Mandiri Balaraja). 
+INFOTECH Journal, 11(1), 61–67. 
+Effendy, C., & Gusrianty, G. (2024). Application of Round Robin in 
+Scheduling in Web-Based Wedding Organizers. Journal of Applied 
+Business and Technology, 5(2), 90–95. 
+Fachri, B., Rizal, C., & Supiyandi. (2024). Penerapan Metode Waterfall 
+Dalam Perancangan Sistem Informasi Merdeka Belajar Kampus 
+Merdeka Berbasis Web. Jurnal Komputer Teknologi Informasi Sistem 
+Komputer (JUKTISI), 2(3), 591–597. 
+https://doi.org/10.62712/juktisi.v2i3.147 
+Firmansyah, Y., Maulana, R., & Maulana, M. S. (2021). Implementasi 
+Metode SDLC Prototype pada Sistem Informasi Indeks Kepuasan 
+Masyarakat (IKM) Berbasis Website Studi Kasus Dinas 
+Kependudukan dan Catatan Sipil. Jurnal Sistem Dan Teknologi 
+Informasi (JUSTIN), 9(3), 315–323. 
+
+=== [PAGE 51] ===
+41 
+ 
+Fitriastuti, F., Bening, R. G., & Andika, S. (2025). Analisis Website 
+Fakultas Teknik Universitas Janabadra Menggunakan Metode UAT. 
+Jurnal Teknologi Sistem Informasi, 6(1), 188–197. 
+https://doi.org/10.35957/jtsi.v6i1.10054 
+Hartanto, N., & Perdananto, A. (2023). Perancangan Sistem Informasi 
+Persuratan Berbasis Web Dengan Metode Prototype Pada Badan 
+Litbang Dan Diklat Kementerian Agama. LOGIC: Jurnal Ilmu 
+Komputer dan Pendidikan, 1(4), 826–838. 
+https://journal.mediapublikasi.id/index.php/logic/article/view/2206 
+Hasibuan, N., & Putri, R. A. (2022). Usability Evaluation of Wedding 
+Administrative Information System using System Usability Scale. 
+Sinkron, 7(4), 2198–2207. https://doi.org/10.33395/sinkron.v7i3.11749 
+Hasri, A., & Sudarmilah. (2021). Sistem Informasi Administrasi 
+Kependudukan Berbasis Web di Tingkat Kelurahan. 
+Hidayat. (2022). Sistem Informasi Administrasi Kependudukan 
+Terintegrasi WhatsApp Gateway untuk Notifikasi. 
+Kosim, M. A., Aji, S. R., & Darwis, M. (2022). Pengujian Usability 
+Aplikasi Pedulilindungi Dengan Metode System Usability Scale 
+(SUS). Jurnal Sistem Informasi Dan Sains Teknologi, 4(2), 1–7. 
+Lestari, M. A., Tabrani, M., & Ayumida, S. (2021). Sistem Informasi 
+Pengolahan Data Administrasi Kependudukan Pada Kantor Desa 
+Pucung Karawang. Interkom: Jurnal Publikasi Ilmiah Bidang 
+Teknologi Informasi Dan Komunikasi, 13(3), 14–21. 
+https://doi.org/10.35969/interkom.v13i3.50 
+Mahendra, G. R., & Gunawan, D. (2025). Implementasi Algoritma Shortest 
+Job First Untuk Optimalisasi Sistem Antrean Pelayanan Administrasi 
+Kependudukan Desa. Jurnal Pendidikan Dan Teknologi Indonesia, 
+5(7), 2069–2086. 
+Maulana, F. R., Faisol, M., & Zuraidah, E. (2021). Aplikasi Sistem 
+Informasi Pelayanan Masyarakat Rukun Tetangga 02 Kelurahan 
+Kalibaru berbasis Website. JPM: Jurnal Pengabdian Masyarakat, 
+2(1), 14–21. 
+Mustakim, Mokoginta, D., Wowiling, S. A. S., Iswahyudi, M. S., Indra, 
+
+=== [PAGE 52] ===
+42 
+ 
+Suparman, A., & Veza, O. (2024). Perancangan Sistem Informasi 
+Penggajian Berbasis Web Dengan Metode Waterfall. Digital 
+Transformation Technology, 4(1), 157–168. 
+https://doi.org/10.47709/digitech.v4i1.3787 
+Nuari, A. H., & Chotijah, U. (2023). Penerapan Metode Waterfall pada 
+Sistem Informasi Pelayanan Jasa Uji Laboratorium Kimia. Intelektiva, 
+5(2), 1–6. 
+https://www.jurnalintelektiva.com/index.php/jurnal/article/view/990 
+Ramadhan, J. A., Haniva, D. T., & Suharso, A. (2023). Systematic 
+Literature Review Penggunaan Metodologi Pengembangan Sistem 
+Informasi Waterfall, Agile, dan Hybrid. JIEET: Journal Information 
+Engineering and Educational Technology, 7(1), 36–42. 
+https://journal.unesa.ac.id/index.php/jieet/article/view/21941 
+Rashkovits, R., & Lavy, I. (2021). Mapping Common Errors in Entity 
+Relationship Diagram Design of Novice Designers. International 
+Journal of Database Management Systems, 13(1), 1–19. 
+https://doi.org/10.5121/ijdms.2021.13101 
+Ridwan, M. A., Nuryasin, I., Informatika, P., Malang, U. M., & 
+Lowokwaru, K. (2024). PENGUJIAN BLACK BOX PADA WEBSITE 
+BJS PROPERTY MENGGUNKAN. 8(1), 65–74. 
+Rohmah, A. A., & Gunawan, D. (2023). Implementasi Algoritma Priority 
+Scheduling Sistem Informasi Pelayanan Administrasi Kependudukan 
+Desa. Jurnal Informatika: Jurnal Pengembangan IT (JPIT), 8(3), 181–
+187. https://doi.org/10.30591/jpit.v8i3.4891 
+Romadhon, A. L., & Maryam, M. (2023). Rancang Bangun Sistem 
+Informasi Layanan Administrasi Desa Berbasis Web di Desa Dukuh. 
+JIPI (Jurnal Ilmiah Penelitian dan Pembelajaran Informatika), 8(2), 
+514–524. https://doi.org/10.29100/jipi.v8i2.3553 
+Rumahorbo, G. A., Indra, Z., Wijaya, A., Putri, M. D., & Buulolo, C. S. 
+(2025). Analisis Perbandingan Algoritma Penjadwalan Prioritas 
+Preemptive dan Non-Preemptive Menggunakan Aplikasi Web 
+Interaktif. Teknik: Jurnal Ilmu Teknik dan Informatika, 5(2), 150–158. 
+https://doi.org/10.51903/teknik.v5i2.994 
+Sahiba, A. J., Supardi, S., & Lubis, A. H. (2024). Sistem Informasi 
+
+=== [PAGE 53] ===
+43 
+ 
+Penjadwalan Diklat Berbasis Web pada Balai Laboratorium Bea dan 
+Cukai Kelas II Medan. Jurnal Sistem Informasi Komputer (SIKOM), 
+1(2), 51. 
+https://journal.beaninstitute.id/index.php/sikom/article/view/61 
+Samsudin, Syamsiah, A., & Ilyas. (2024). Usability Evaluation of Azkiya 
+Creative Application at Pondok Pesantren Modern Al-Azkiya’ 
+Pengalihan Keritang Village Using the System Usability Scale (SUS) 
+Method. Sistemasi: Jurnal Sistem Informasi, 13(4), 1642–1650. 
+https://doi.org/10.32520/stmsi.v13i4.4261 
+Sari, I. P., Batubara, I. H., Ramadhani, F., & Wardani, S. (2022). 
+Perancangan Sistem Antrian pada Wahana Hiburan dengan Metode 
+First In First Out (FIFO). Sudo Jurnal Teknik Informatika, 1(3), 116–
+123. https://doi.org/10.56211/sudo.v1i3.93 
+Satya, J. B., Suhery, L., Sinlae, A. A. J., & Uliyatunisa, U. (2021). 
+Pengembangan Sistem Pelayanan Publik Melalui Sistem Administrasi 
+Kependudukan Menggunakan Metode Extreme Programming. Jurnal 
+Sistem Komputer Dan Informatika (JSON), 3(2), 87–93. 
+https://doi.org/10.30865/json.v3i2.3592 
+Wulandari, & Purnomo. (2021). Penerapan Unified Modelling Language 
+(UML) dalam Perancangan Sistem Informasi Administrasi Kelurahan. 
+ 
+
+=== [PAGE 54] ===
+44 
+ 
+LAMPIRAN 
+Lampiran 1. Surat Izin Observasi Kelurahan Kampung Sambakungan 
+Catatan: Halaman ini merupakan draf/template surat yang akan dicetak dan diajukan kepada pihak 
+Kelurahan Kampung Sambakungan untuk mendapatkan tanda tangan dan stempel resmi sebelum 
+proposal diseminarkan. Kop surat resmi Fakultas Teknik Universitas Mulawarman ditambahkan 
+pada saat pencetakan. 
+SURAT PERMOHONAN IZIN OBSERVASI DAN PENGAMBILAN DATA 
+Yang bertanda tangan di bawah ini: 
+Nama : Nelsi 
+NIM 
+: 2309106120 
+Program Studi : S1 Informatika, Fakultas Teknik, Universitas Mulawarman 
+dengan ini memohon izin kepada Bapak/Ibu Lurah Kampung Sambakungan untuk 
+melakukan observasi, wawancara, dan pengambilan data terkait proses pelayanan administrasi 
+surat di Kelurahan Kampung Sambakungan, dalam rangka penyusunan skripsi dengan judul 
+"Implementasi Algoritma Priority Scheduling pada Sistem Informasi Pelayanan Surat 
+Administrasi Kelurahan Kampung Sambakungan Berbasis Web". Data yang diperoleh akan 
+digunakan semata-mata untuk kepentingan akademik dan penyusunan skripsi. 
+Demikian surat permohonan ini dibuat, atas izin dan kerja sama yang diberikan, Saya 
+ucapkan terima kasih. 
+Samarinda, [tanggal, bulan, tahun] 
+Pemohon, 
+Nelsi 
+NIM 2309106120 
+Mengetahui, 
+Lurah Kampung Sambakungan 
+( .......................................... ) 
+
+=== [PAGE 55] ===
+45 
+ 
+Lampiran 2. Pedoman Wawancara 
+Pedoman wawancara ini digunakan sebagai acuan pada tahap pengumpulan data (Subbab 
+3.2), baik untuk menggali kondisi pelayanan yang berjalan saat ini maupun untuk 
+mengonfirmasi bobot dan skala variabel prioritas pada rubrik skor (Subbab 2.3.2). 
+A. Wawancara dengan Lurah dan Petugas Pelayanan 
+1. Bagaimana alur proses pelayanan permohonan surat yang berjalan saat ini, 
+mulai dari pengajuan hingga surat selesai diterbitkan? 
+2. Berapa perkiraan jumlah permohonan surat yang masuk per minggu, dan 
+jenis surat apa yang paling sering diajukan? 
+3. Kendala apa yang paling sering muncul akibat sistem antrean FIFO yang 
+berjalan saat ini, terutama untuk permohonan yang bersifat mendesak? 
+4. Menurut Bapak/Ibu, di antara jenis surat, tingkat urgensi, dan status 
+pemohon, manakah yang paling menentukan urutan pelayanan yang 
+seharusnya didahulukan? Mengapa? 
+5. Apakah kategori urgensi (tinggi/sedang/rendah) dan status pemohon 
+(lansia/disabilitas/umum) pada rubrik skor sudah sesuai dengan kondisi 
+nyata di lapangan? Apakah ada kategori yang perlu ditambah atau 
+disesuaikan? 
+6. Apakah nilai bobot awal (w₁ = 0,3; w₂ = 0,5; w₃ = 0,2) sudah 
+mencerminkan urutan kepentingan urgensi, jenis surat, dan status 
+pemohon menurut pengalaman Bapak/Ibu di lapangan? 
+7. Fitur atau informasi apa yang paling dibutuhkan petugas dalam dashboard 
+antrean prioritas agar memudahkan pekerjaan sehari-hari? 
+B. Wawancara dengan Warga (Pemohon Surat) 
+1. Berapa lama biasanya Bapak/Ibu menunggu sejak mengajukan 
+permohonan surat hingga selesai diproses? 
+2. Apakah Bapak/Ibu pernah mengajukan permohonan surat untuk keperluan 
+yang mendesak? Bagaimana pengalaman menunggu antreannya? 
+3. Menurut Bapak/Ibu, apakah permohonan dengan keperluan mendesak 
+sebaiknya diproses lebih dahulu dibandingkan permohonan yang datang 
+lebih awal namun tidak mendesak? 
+
+=== [PAGE 56] ===
+46 
+ 
+Lampiran 3. Rubrik Skor Prioritas dan Contoh Perhitungan 
+Lampiran ini merangkum rubrik skor prioritas yang telah dijelaskan pada Subbab 2.3.2, 
+disusun sebagai lembar acuan cepat (quick reference). 
+P(i) = w₁ × SkorJenisSurat + w₂ × SkorUrgensi + w₃ × SkorStatusPemohon 
+Bobot: w₁ (Jenis Surat) = 0,3; w₂ (Urgensi) = 0,5; w₃ (Status Pemohon) = 0,2 (w₁ + w₂ + 
+w₃ = 1) 
+Skala Jenis Surat: SKTM = 5; Surat Keterangan Usaha = 3; Surat Domisili = 2; Surat 
+Pengantar = 2 
+Skala Urgensi: Tinggi = 5; Sedang = 3; Rendah = 1 
+Skala Status Pemohon: Lansia = 5; Disabilitas = 4; Umum = 1 
+Contoh perhitungan: Pemohon A — SKTM (5), Urgensi Tinggi (5), Lansia (5) → P = 
+0,3(5) + 0,5(5) + 0,2(5) = 5,0 
+Pemohon B — Surat Domisili (2), Urgensi Rendah (1), Umum (1) → P = 0,3(2) + 0,5(1) 
++ 0,2(1) = 1,3 
+Pemohon C — Surat Keterangan Usaha (3), Urgensi Sedang (3), Disabilitas (4) → P = 
+0,3(3) + 0,5(3) + 0,2(4) = 3,2 sehingga urutan antrean yang terbentuk adalah A (5,0) → 
+C (3,2) → B (1,3). 
+ 

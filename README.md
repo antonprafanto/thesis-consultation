@@ -35,6 +35,7 @@ Repository ini didedikasikan untuk pengelolaan dokumentasi bimbingan, audit nask
 | 5 | Muhammad Faqih Ajiputra | 2209106114 | *Long Sequence Time-Series Forecasting pada Pasar Valuta Asing EUR/USD Menggunakan Model Informer* | [Laporan Audit Forensik & Evaluasi Sidang](audit_mahasiswa/laporan_audit_skripsi_faqih_ajiputra.md) |
 | 6 | Muhammad Annur Akbar | 2309106110 | *Rancang Bangun Perangkap Hama Cahaya Berbasis Raspberry Pi 4 dengan Algoritma YOLOv5* | [Laporan Audit Awal](audit_mahasiswa/laporan_audit_proposal_annur_akbar.md) • [Revisi 1 (Menuju ACC)](audit_mahasiswa/laporan_audit_proposal_annur_akbar_revisi1.md) |
 | 7 | Ridho Putra Darma | 2509106133 | *Sistem Pelacakan Bola Dinamis Real-Time Menggunakan Kombinasi Segmentasi Citra dan Filter Kalman Terhadap Variasi Oklusi* (Alih Jenjang D3 Polnes) | [Audit TA D3 & Arah Skripsi S1](audit_mahasiswa/laporan_audit_ta_d3_dan_arah_skripsi_ridho_putra_darma.md) |
+| 8 | Nelsi | 2309106120 | *Implementasi Algoritma Priority Scheduling pada Sistem Informasi Pelayanan Surat Administrasi Kelurahan Kampung Sambakungan Berbasis Web* | [Laporan Audit Proposal](audit_mahasiswa/laporan_audit_proposal_nelsi.md) |
 
 ---
 
