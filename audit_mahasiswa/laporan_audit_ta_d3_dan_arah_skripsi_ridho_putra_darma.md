@@ -188,24 +188,5 @@ Mahasiswa tidak boleh lagi menguji dengan memegang botol di depan wajah. Penguji
   - *Latency & Throughput:* FPS pemrosesan pada resolusi $640\times 480$ dan $1280\times 720$.
 
 ---
-
-## 📝 5. Rekomendasi Respon WhatsApp Pembimbing kepada Mahasiswa
-
-Berikut adalah draf pesan terarah yang dapat dikirimkan dosen pembimbing kepada Ridho Putra Darma untuk memberikan arahan yang mendidik, meluruskan pemahaman teknis, sekaligus memotivasi mahasiswa:
-
-> *"Wa'alaikumsalam wr wb, halo Ridho.*
-> 
-> *Bagus sekali, saya apresiasi semangat dan kecepatan kamu dalam langsung menguji coba arahan kemarin.*
-> 
-> *Namun, setelah saya memeriksa kode `import cv2.py` dan foto pengujian kamu secara mendalam, ada beberapa catatan mendasar yang perlu kamu pahami dan luruskan agar skripsi kamu nanti kuat secara metodologi dan tidak diserang dewan penguji:*
-> 
-> 1. * **Warna dan Deteksi Lingkaran Belum Terhubung:** Fungsi `detect_yellow_object` kamu hanya menampilkan warna kuning di jendela terpisah, tapi pendeteksian lingkarannya masih membaca seluruh gambar grayscale. Akibatnya benda bulat apapun (bukan cuma bola kuning) akan terdeteksi. Kamu harus menggabungkan masking warna sebagai filter sebelum mencari bentuk lingkaran.*
-> 2. * **Uji Oklusi Kalman Filter Belum Riil:** Di foto tersebut kamu memegang benda diam lalu menutupinya dengan tangan. Karena bendanya diam (kecepatan = 0), titik prediksi Kalman tentu saja akan diam di tempat terakhir. Itu belum membuktikan kemampuan prediksi lintasan gerak.*
->    *Kalman Filter baru terbukti ampuh jika bola sedang **bergerak menggelinding/meluncur**, lalu di tengah jalan terhalang oleh penghalang (misal buku/papan), dan sistem tetap bisa memperkirakan bola akan tembus di titik mana di balik penghalang tersebut.*
-> 3. * **Gunakan Objek Bola Asli & Kalibrasi:** Tolong siapkan bola asli (misal bola tenis atau bola mini) dengan diameter pasti. Rumus jarak kamu saat ini belum valid karena focal length 500 itu masih angka tebakan dan butuh kalibrasi kamera dasar.*
-> 
-> *Untuk melangkah ke penyusunan Proposal Skripsi S1, kita perlu merapikan logika algoritmanya terlebih dahulu dan merancang pengujian gerak bola yang terukur. Nanti saat bimbingan tatap muka di kampus, kita bedah bersama arsitektur kodingannya ya. Tetap semangat!*
-
----
 *Laporan audit ini disusun sebagai dokumen evaluasi resmi dan arsip akademik Program Studi S1 Informatika, Fakultas Teknik, Universitas Mulawarman.*
 
