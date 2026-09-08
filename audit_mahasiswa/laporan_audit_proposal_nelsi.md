@@ -6,39 +6,64 @@
 **Dosen Pembimbing II:** Gubtha Mahendra Putra, S.Kom., M.Eng.  
 **Koordinator Program Studi:** Awang Harsa Kridalaksana, S.Kom., M.Kom. (NIP: 19731229 200501 1 002)  
 **Judul Naskah:** *Implementasi Algoritma Priority Scheduling pada Sistem Informasi Pelayanan Surat Administrasi Kelurahan Kampung Sambakungan Berbasis Web*  
-**Dokumen yang Diaudit:** `draft_proposal_nelsi.pdf` (56 Halaman, berasal dari `C:\Users\anton\Downloads\Skripsi Nelsii.pdf`)  
-**Status Evaluasi:** **DRAF PROPOSAL SKRIPSI — REVISI MAYOR SEBELUM SEMINAR PROPOSAL (BELUM LAYAK SEMPRO TANPA PERBAIKAN FUNDAMENTAL)**
+**Dokumen yang Diaudit:** `draft_proposal_nelsi.pdf` (56 Halaman, berkas sumber `Skripsi Nelsii.pdf`)  
+**Status Evaluasi:** **DRAF PROPOSAL SKRIPSI — REVISI MAYOR SEBELUM SEMINAR PROPOSAL (BELUM DIIZINKAN SEMINAR SEBELUM PERBAIKAN FUNDAMENTAL)**
 
 ---
 
 > [!NOTE]
-> **Catatan Pembimbing Akademik:** Dokumen audit ini disusun sebagai evaluasi forensik akademik, metodologis, dan rekayasa perangkat lunak untuk mempersiapkan Nelsi menghadapi **Ujian Seminar Proposal Skripsi** di Program Studi S1 Informatika FT Unmul. Audit ini menyoroti integritas literatur, keabsahan formulasi algoritma penjadwalan, validitas data uji, ketepatan pemodelan perangkat lunak (UML & ERD), serta kepatuhan mutlak terhadap Buku Panduan Penulisan Skripsi FT Unmul.
+> **Catatan Pembimbing Akademik:** Dokumen audit ini disusun sebagai evaluasi forensik akademik, metodologis, integritas pustaka, dan rekayasa perangkat lunak untuk mempersiapkan Nelsi menghadapi **Ujian Seminar Proposal Skripsi** di Program Studi S1 Informatika FT Unmul. Naskah telah ditelaah per halaman (56 halaman) untuk memastikan kepatuhan mutlak terhadap kaidah keilmuan komputer, teori antrean/penjadwalan, pemodelan sistem (UML & ERD), serta Buku Panduan Penulisan Skripsi FT Unmul.
 
 ---
 
 ## ⚖️ 1. Resume Evaluasi Akademik Umum
 
-Secara garis besar, arah riset yang diusulkan oleh Nelsi (NIM: **2309106120**) memiliki intensi positif untuk mengangkat permasalahan nyata pelayanan administrasi di **Kampung Sambakungan, Kecamatan Gunung Tabur, Kabupaten Berau**. Upaya menyematkan **Algoritma Priority Scheduling** non-preemptive pada sistem persuratan kelurahan/kampung merupakan langkah yang baik agar skripsi tidak sekadar menjadi sistem informasi *CRUD (Create, Read, Update, Delete)* biasa.
+Secara substansi terapan, topik yang diangkat oleh Nelsi (NIM: **2309106120**) memiliki relevansi yang sangat baik untuk menjawab persoalan pelayanan administrasi warga di **Kampung Sambakungan, Kecamatan Gunung Tabur, Kabupaten Berau**. Penerapan **Algoritma Priority Scheduling** non-preemptive pada sistem persuratan publik bertujuan agar pelayanan tidak bersifat kaku menggunakan FIFO biasa, terutama bagi permohonan yang membutuhkan penanganan lekas (seperti SKTM berobat darurat atau pemohon lansia).
 
-Namun, dari hasil audit forensik menyeluruh terhadap 56 halaman naskah proposal, ditemukan **cacat metodologis, logis, dan tata tulis yang sangat fundamental**. Proposal ini belum siap dibawa ke meja Seminar Proposal karena mengandung:
-1. **14 Referensi Hantu (*Ghost References*)** di Daftar Pustaka yang tidak pernah disitasi dalam badan naskah, termasuk kontradiksi mencantumkan paper pengujian *System Usability Scale (SUS)* padahal di batasan masalah menyatakan tidak menggunakan SUS.
-2. **Celah Logika & *Moral Hazard* pada Input Prioritas:** Pemohon (warga) dapat memilih sendiri tingkat urgensi ("Tinggi") dan status ("Lansia/Disabilitas") tanpa validasi NIK maupun syarat berkas kedaruratan, yang berakibat pada manipulasi antrean (*gaming the system*).
-3. **Kekeliruan Matematis pada Klaim Uji Banding FIFO vs Priority Scheduling:** Mengklaim rata-rata waktu tunggu seluruh populasi antrean akan turun, padahal dalam teori antrean server tunggal non-preemptive, penataan prioritas **tidak menurunkan rata-rata waktu tunggu total**, melainkan melakukan kompensasi (*trade-off*) waktu tunggu antara permohonan mendesak dan normal. Selain itu, parameter uji tidak menyertakan *Burst Time* dan *Arrival Time*.
-4. **Penolakan Mekanisme *Aging* dengan Alasan Lemah:** Alasan volume pelayanan kecil justru bertentangan dengan urgensi penggunaan algoritma penjadwalan.
-5. **Inflasi Naskah: 10 Halaman Berisi Wireframe Kosong Melompong (*Blank Skeletons*):** Gambar 3.5 s.d. Gambar 3.14 hanya berupa kotak abu-abu tanpa teks dan tanpa label komponen antarmuka.
-6. **Pelanggaran Standar UML 2.5 & Inversi Kardinalitas ERD:** Relasi `<<include>>` digambar garis polos, batas sistem hilang, kardinalitas ERD antara permohonan dan jenis surat terbalik, serta ketiadaan *Class Diagram*.
-7. **Kerusakan Format Tata Tulis FT Unmul:** Penomoran halaman preliminer melompat ke angka Arab (halaman 1 dan 2), margin tidak baku (3.5 cm bukan 4 cm), percampuran font (Arial, Calibri, Times New Roman), serta typo nama diagram (*"Pegujian"*).
+Namun, dari audit forensik mendalam yang dilakukan terhadap struktur naskah PDF, ditemukan **10 kelemahan kritis (*10 Critical Red Flags*)**, mulai dari integritas kepustakaan yang tercemar, kerapuhan logika sistem yang membuka celah manipulasi antrean (*moral hazard*), kesalahan fatal teori antrean matematis, ketiadaan mekanisme penanganan *starvation*, inflasi 10 halaman wireframe kosong tanpa teks, inversi kardinalitas ERD, lompatan nomor gambar dan tabel, kontradiksi waktu wawancara, hingga pelanggaran format baku FT Unmul.
+
+Proposal ini **BELUM MEMENUHI STANDAR KELAYAKAN** untuk diseminarkan dan **WAJIB DIREVISI SECARA TOTAL** sesuai arahan di bawah ini.
 
 ---
 
-## 🚨 2. Temuan Kritis (*Critical Red Flags*) & Pelanggaran Akademik
+## 🚨 2. Rincian 10 Temuan Kritis (*10 Critical Red Flags*)
+
+```mermaid
+mindmap
+  root((Audit Proposal Nelsi 2309106120))
+    Integritas Literatur
+      14 Ghost References
+      Metadata Error Ridwan et al
+      Pustaka Menggantung Tanpa Jurnal
+      Kontradiksi Sitasi SUS
+    Logika Algoritma
+      Moral Hazard Dropdown Urgensi
+      Status Lansia Tanpa Validasi NIK
+      Starvation Diabaikan Tanpa Aging
+    Matematika Antrean
+      Klaim AWT Global Cacat Teori
+      Tabel Uji Tanpa Arrival & Burst Time
+    Pemodelan Rekayasa PL
+      Kardinalitas ERD Terbalik 1 ke N
+      Use Case Garis Polos Tanpa Include
+      Tidak Ada Class Diagram
+      10 Halaman Wireframe Kosong
+    Tata Tulis & Format FT
+      Daftar Istilah Halaman 1 Arab
+      Urutan Gambar Melompat 3.1 ke 3.4
+      Tabel 2.1 Hilang
+      Daftar Tabel & Gambar Meleset Total
+      Kontradiksi Jadwal Wawancara
+```
+
+---
 
 ### 🚨 RED FLAG 1: Kerusakan Integritas Daftar Pustaka (14 Ghost References & Metadata Berantakan) — SANGAT FATAL!
 
-Berdasarkan audit silang otomatis antara teks naskah (Bab I–III) dengan Daftar Pustaka (halaman 40–43), ditemukan anomali parah:
+Berdasarkan audit silang komputasi antara badan naskah (Bab I–III) dengan Daftar Pustaka (halaman 40–43), ditemukan pelanggaran integritas literatur yang berat:
 
-#### A. 14 Referensi Hantu (*Ghost References*) Tidak Pernah Disitasi di Badan Teks
-Sebanyak 14 pustaka tertera di Daftar Pustaka namun **sama sekali tidak pernah dirujuk** dalam kalimat mana pun di Bab I, Bab II, maupun Bab III:
+#### A. 14 Referensi Hantu (*Ghost References*)
+Sebanyak 14 pustaka tertera di Daftar Pustaka namun **sama sekali tidak pernah disitasi atau dirujuk satu kali pun** di badan teks:
 1. **Afrianto, M. I., Fauziah, F., & Wijaya, Y. F. (2024)** — *Priority Scheduling & EDD*.
 2. **Al Husaeni, D. N. (2025)** — *Bibliometrik Penjadwalan*.
 3. **Darip, M. et al. (2025)** — *Simulasi FIFO Kantin Sekolah*.
@@ -55,16 +80,16 @@ Sebanyak 14 pustaka tertera di Daftar Pustaka namun **sama sekali tidak pernah d
 14. **Sari, I. P. et al. (2022)** — *Antrian FIFO Wahana Hiburan*.
 
 > [!WARNING]
-> **Kontradiksi Nyata:** Masuknya paper SUS (Hasibuan 2022, Kosim 2022, Samsudin 2024) ke dalam Daftar Pustaka membuktikan bahwa mahasiswa melakukan *dumping* atau *copy-paste* daftar pustaka dari naskah orang lain tanpa membaca dan mengutipnya. Padahal di Batasan Masalah (Subbab 1.3 poin 6), mahasiswa menulis: *"Penelitian ini tidak menggunakan kuesioner System Usability Scale (SUS)..."*.
+> **Kontradiksi Nyata:** Masuknya 3 paper pengujian *System Usability Scale (SUS)* (Hasibuan 2022, Kosim 2022, Samsudin 2024) ke Daftar Pustaka membuktikan terjadinya *copy-paste* daftar pustaka secara serampangan. Padahal di Batasan Masalah (Subbab 1.3 poin 6), Nelsi tegas menulis: *"Penelitian ini tidak menggunakan kuesioner System Usability Scale (SUS)..."*. Di hadapan penguji, ini adalah bukti mahasiswa tidak membaca daftar pustakanya sendiri.
 
-#### B. Kerusakan Metadata Sitasi & Error Scraping
-1. **Pencampuran Afiliasi Kampus ke Nama Penulis (Hal. 42):**
+#### B. Kerusakan Metadata Sitasi yang Memalukan
+1. **Pencampuran Afiliasi/Alamat Kampus Menjadi Nama Pengarang (Hal. 42):**
    * Tertulis: `Ridwan, M. A., Nuryasin, I., Informatika, P., Malang, U. M., & Lowokwaru, K. (2024). PENGUJIAN BLACK BOX PADA WEBSITE BJS PROPERTY MENGGUNKAN. 8(1), 65–74.`
-   * **Fakta:** Mahasiswa mengimpor metadata secara ceroboh dari Google Scholar/Mendeley. `"Informatika, P."` (Program Studi Informatika), `"Malang, U. M."` (Universitas Muhammadiyah Malang), dan `"Lowokwaru, K."` (Kecamatan Lowokwaru) dimasukkan sebagai nama pengarang manusia! Judulnya pun terpotong dan typo (*MENGGUNKAN*), serta nama jurnalnya hilang sama sekali.
+   * **Fakta:** Mahasiswa mengimpor metadata tanpa diperiksa. `"Informatika, P."` (Program Studi Informatika), `"Malang, U. M."` (Universitas Muhammadiyah Malang), dan `"Lowokwaru, K."` (Kecamatan Lowokwaru) masuk sebagai nama pengarang! Judulnya terpotong dan typo (*MENGGUNKAN*), serta nama jurnalnya hilang.
 2. **Pustaka Tidak Lengkap / Menggantung (Hal. 40, 41, 43):**
    * `Aldila. (2022). Sistem Informasi Pelayanan Surat Menyurat di Kelurahan Menggunakan Metode Waterfall.` (Tanpa nama jurnal/penerbit, tanpa volume/halaman).
    * `Hasri, A., & Sudarmilah. (2021). Sistem Informasi Administrasi Kependudukan Berbasis Web di Tingkat Kelurahan.` (Tanpa wadah publikasi).
-   * `Hidayat. (2022). Sistem Informasi Administrasi Kependudukan Terintegrasi WhatsApp Gateway untuk Notifikasi.` (Nama tunggal, tanpa penerbit).
+   * `Hidayat. (2022). Sistem Informasi Administrasi Kependudukan Terintegrasi WhatsApp Gateway untuk Notifikasi.` (Nama tunggal tanpa identitas jurnal).
    * `Wulandari, & Purnomo. (2021). Penerapan Unified Modelling Language (UML) dalam Perancangan Sistem Informasi Administrasi Kelurahan.` (Tanpa inisial, tanpa nama jurnal).
    * Entri `Mustakim ...` (Hal. 41 baris terakhir) terputus di tengah jalan dan menyambung aneh pada baris pertama Hal. 42 dengan nama `Suparman, A., & Veza, O. (2024)`.
 
@@ -74,7 +99,7 @@ Sebanyak 14 pustaka tertera di Daftar Pustaka namun **sama sekali tidak pernah d
 
 Formula prioritas yang dirancang pada Persamaan 2.1:
 $$P(i) = w_1 \times \text{SkorJenisSurat} + w_2 \times \text{SkorUrgensi} + w_3 \times \text{SkorStatusPemohon}$$
-dengan bobot: $w_1 = 0.3$, $w_2 = 0.5$, $w_3 = 0.2$.
+dengan bobot awal: $w_1 = 0.3$, $w_2 = 0.5$, $w_3 = 0.2$.
 
 ```
 Skala Variabel:
@@ -84,7 +109,7 @@ Skala Variabel:
 ```
 
 #### Kelemahan Desain Sistem:
-1. **Bobot Terbesar Berada pada Dropdown Subjektif:** Variabel *Urgensi* memegang bobot $50\%$ ($w_2 = 0.5$). Berdasarkan rancangan antarmuka (Gambar 3.6), pemohon surat (warga) memilih sendiri opsi urgensi melalui *dropdown*. Secara psikologis dan perilaku pengguna pelayanan publik, **semua pemohon akan memilih "Tinggi"** agar permohonannya didahulukan.
+1. **Bobot Terbesar Berada pada Dropdown Subjektif:** Variabel *Urgensi* memegang bobot $50\%$ ($w_2 = 0.5$). Berdasarkan form permohonan (Gambar 3.6), pemohon surat (warga) memilih sendiri opsi urgensi melalui *dropdown*. Secara psikologis dalam pelayanan publik, **semua pemohon akan memilih "Tinggi"** agar permohonannya didahulukan.
 2. **Ketiadaan Validasi NIK untuk Status Pemohon:** Pilihan status pemohon (Lansia/Disabilitas/Umum) juga diisi secara mandiri. Mengapa warga muda berusia 20 tahun bisa memilih "Lansia" jika sistem memegang data NIK? Tanggal lahir pemohon dapat di-ekstrak langsung dari 16 digit NIK (digit ke-7 s.d. 12). Jika sistem tidak memvalidasi usia dari NIK secara otomatis, ini adalah kelalaian rekayasa perangkat lunak (*software engineering design flaw*).
 3. **Solusi Perbaikan Wajib:**
    - Variabel **Status Pemohon (Lansia)** wajib dihitung **otomatis oleh sistem** dari data tanggal lahir / NIK pemohon ($Usia \ge 60$ tahun = Lansia).
@@ -170,69 +195,179 @@ classDiagram
 
 ---
 
-### 🚨 RED FLAG 7: Kerusakan Tata Tulis, Penomoran Halaman, & Typo
+### 🚨 RED FLAG 7: Lompatan Penomoran Gambar & Hilangnya Tabel 2.1 (*Out-of-Order Captions*)
+
+Ditemukan kekacauan serius pada penomoran elemen visual dalam dokumen:
+1. **Urutan Gambar Melompat Terbalik di Bab III:**
+   * Pada Halaman 19: **Gambar 3.1** (*Kerangka Penelitian*).
+   * Pada Halaman 21 (Subbab 3.3): Tiba-tiba muncul **Gambar 3.4** (*Entity Relationship Diagram*)!
+   * Pada Halaman 23 (Subbab 3.4): Baru muncul **Gambar 3.2** (*Use Case Diagram*).
+   * Pada Halaman 24: Baru muncul **Gambar 3.3** (*Activity Diagram*).
+   * **Evaluasi:** Nomor urut Gambar melompat dari 3.1 langsung ke 3.4, baru kemudian kembali ke 3.2 dan 3.3! Penomoran gambar wajib berurutan sesuai kemunculan pertama dalam narasi.
+2. **Tabel 2.1 Hilang dari Naskah:**
+   * Di Bab II (Hal. 14 / Dokumen P.24), tabel pertama yang muncul berlabel **`Tabel 2.2. Skala Skor Setiap Variabel Prioritas`**.
+   * **Tabel 2.1 SAMA SEKALI TIDAK ADA** di seluruh naskah Bab II!
+   * Di preliminer (Daftar Tabel Hal. viii), Tabel 2.2 ini bahkan **tidak terdaftar sama sekali**.
+
+---
+
+### 🚨 RED FLAG 8: Total Mismatch / Misalignment Halaman pada Daftar Tabel & Daftar Gambar
+
+Seluruh nomor halaman yang tercantum pada preliminer Daftar Tabel (Hal. viii) dan Daftar Gambar (Hal. ix) **meleset total dari lokasi aslinya di naskah**:
+
+| Entri Tabel / Gambar | Halaman Tercetak di Preliminer | Halaman Fisik Asli di Naskah | Selisih Halaman | Status Sinkronisasi |
+|:---|:---:|:---:|:---:|:---|
+| **Tabel 3.1** Simbol Flowchart | Hal. 17 | Hal. 18 | +1 | ❌ Meleset |
+| **Tabel 3.2** Struktur Database | Hal. 18 | Hal. 20 | +2 | ❌ Meleset |
+| **Tabel 3.3** Variabel Penelitian | Hal. 19 | Hal. 21 | +2 | ❌ Meleset |
+| **Tabel 3.4** Simbol Use Case | Hal. 20 | Hal. 22 | +2 | ❌ Meleset |
+| **Tabel 3.5** Daftar Halaman | Hal. 23 | Hal. 24–25 | +2 | ❌ Meleset |
+| **Tabel 3.6** Black Box Testing | Hal. 32 | Hal. 37 | **+5** | ❌ Meleset Parah |
+| **Tabel 3.7** Data Uji Antrean | Hal. 33 | Hal. 38 | **+5** | ❌ Meleset Parah |
+| **Tabel 3.8** Jadwal Penelitian | Hal. 34 | Hal. 39 | **+5** | ❌ Meleset Parah |
+| **Gambar 3.1 s.d. 3.14** | Hal. 17 s.d. 31 | Hal. 19 s.d. 36 | +2 s.d. +5 | ❌ 100% Seluruh Gambar Meleset |
+
+* **Penyebab:** Mahasiswa tidak pernah melakukan *Update Field* (`F9`) pada Table of Figures Microsoft Word sebelum mengekspor naskah ke format PDF.
+
+---
+
+### 🚨 RED FLAG 9: Kontradiksi Kronologis Riset (Klaim Wawancara Prematur vs Jadwal Riset)
+
+Ditemukan kontradiksi fatal mengenai status pengumpulan data lapangan:
+1. **Klaim di Bab II (Subbab 2.3.2 Hal. 13):**
+   > *"Bobot ditentukan berdasarkan hasil wawancara dengan petugas dan Lurah Kelurahan Kampung Sambakungan, yang menyatakan bahwa tingkat urgensi kebutuhan pemohon merupakan pertimbangan paling penting... Berdasarkan hasil wawancara tersebut, bobot awal adalah w1=0.3, w2=0.5, w3=0.2..."*
+2. **Kontradiksi di Jadwal & Lampiran:**
+   * Di Tabel 3.8 (Jadwal Penelitian Hal. 39), kegiatan **Pengumpulan Data (observasi, wawancara)** baru dijadwalkan pada **Bulan Agustus – September 2026** (setelah Seminar Proposal).
+   * Pada Lampiran 1 (Surat Izin Pengambilan Data Hal. 44), surat masih berupa draf kosong bertanggal `[tanggal, bulan, tahun]` dan belum ditandatangani pihak kelurahan/kampung.
+   * **Dampak saat Sempro:** Penguji akan bertanya: *"Kapan Anda wawancara? Siapa nama narasumbernya? Mengapa di jadwal wawancara baru dilakukan bulan Agustus dan surat izinnya masih kosong?"*. Mahasiswa akan terpojok atas dugaan klaim prematur atau manipulasi data awal.
+
+---
+
+### 🚨 RED FLAG 10: Kerusakan Format Tata Tulis FT Unmul & Kerapuhan Pengujian Black Box
 
 1. **Penomoran Halaman Preliminer Rusak:**
-   * Di naskah, Daftar Istilah/Lambang diberi nomor **1** (angka Arab) dan Daftar Singkatan diberi nomor **2**. Bab I kemudian dimulai pada halaman **3**.
-   * **Standar FT Unmul:** Seluruh halaman preliminer (Judul s.d. Daftar Singkatan) **wajib menggunakan angka Romawi kecil (i, ii, iii, ... xi, xii)** di bagian tengah bawah (*bottom center*). Angka Arab (1, 2, 3...) **harus dimulai tepat pada BAB I halaman 1**!
+   * Di naskah, Daftar Istilah diberi nomor **1** (angka Arab) dan Daftar Singkatan diberi nomor **2**. Bab I baru mulai di halaman **3**.
+   * **Standar FT Unmul:** Preliminer **wajib menggunakan angka Romawi kecil (i s.d. xii)** di tengah bawah. Angka Arab (1, 2, 3...) **harus dimulai tepat pada BAB I halaman 1** di kanan atas.
 2. **Artefak Field Code Microsoft Word yang Tidak Dihapus:**
-   * Pada Daftar Istilah (Hal. 11 dokumen) dan Daftar Singkatan (Hal. 12 dokumen), muncul teks header bawaan Word yang tidak dihapus: `Contents halaman` dan `Contents Arti`.
+   * Muncul teks header bawaan Word yang tidak dihapus: `Contents halaman` (Hal. 11) dan `Contents Arti` (Hal. 12).
 3. **Pelanggaran Margin Baku FT Unmul:**
-   * Hasil pengukuran naskah menunjukkan: Top = 3.5 cm, Left = 3.5 cm, Right = 2.4 cm, Bottom = 2.5 cm.
-   * **Standar FT Unmul:** **Kiri = 4 cm, Atas = 4 cm, Kanan = 3 cm, Bawah = 3 cm**. Ruang kiri 4 cm mutlak dibutuhkan untuk jilid lakban/hardcover.
+   * Hasil pengukuran naskah: Top = 3.5 cm, Left = 3.5 cm, Right = 2.4 cm, Bottom = 2.5 cm.
+   * **Standar FT Unmul:** **Kiri = 4 cm, Atas = 4 cm, Kanan = 3 cm, Bawah = 3 cm**.
 4. **Inkonsistensi Font:**
-   * Ditemukan jenis font campur aduk:
-     - Teks Utama: *Times New Roman* (12 pt).
-     - Halaman Pengesahan & Kata Pengantar: *Arial* (12 pt).
-     - Daftar Isi: *Calibri-Light* (16 pt) dan *Calibri* (12 pt).
-     - Pseudocode: *Courier New* (11 pt).
-   * Seluruh dokumen wajib diseragamkan menggunakan **Times New Roman** sesuai pedoman.
+   * Percampuran font dalam satu naskah: *Times New Roman* (teks utama), *Arial* (pengesahan & kata pengantar), *Calibri / Calibri-Light* (daftar isi), *Courier New* (pseudocode). Wajib diseragamkan ke Times New Roman 12 pt.
 5. **Typo pada Diagram:**
-   * Pada Gambar 3.1 (Kerangka Penelitian), kotak pengujian tertulis: **`Pegujian Algoritma`** (kurang huruf 'n').
-6. **Placeholder Formalia Belum Lengkap:**
-   * Lembar Pengesahan (Hal. iii): Tidak mencantumkan NIP Dosen Pembimbing I (Anton Prafanto, S.Kom., M.T.) dan NIP Pembimbing II (Gubtha Mahendra Putra, S.Kom., M.Eng.), serta tanggal rapat masih `[tanggal, bulan, tahun]`.
-   * Kata Pengantar: Poin 6 dan 7 menuliskan titik-titik panjang untuk ucapan terima kasih kepada Penguji I dan Penguji II. Pada tahap seminar proposal, dewan penguji belum ditetapkan secara definitif dan belum menguji, sehingga poin ini harus dihapus.
-   * Nama instansi lokasi: Di Kabupaten Berau, status resmi wilayah administratif adalah **Kampung Sambakungan** yang dipimpin oleh **Kepala Kampung** (bukan Kelurahan/Lurah murni). Mahasiswa harus memperjelas penyebutan nomenklatur pemerintahan daerah Kabupaten Berau agar tidak didebat penguji saat sempro.
+   * Gambar 3.1 tertulis: **`Pegujian Algoritma`** (kurang huruf 'n').
+6. **Kerapuhan Rancangan Black Box (Tabel 3.6):**
+   * Hanya 4 skenario uji yang sangat umum. Tidak ada skenario uji otentikasi NIK unik, validasi form, hak akses role warga vs petugas, upload berkas persyaratan, kondisi skor seri (*tie-breaker*), dan penanganan error SMTP email.
+7. **Nomenklatur Wilayah Administrasi Pemerintahan:**
+   * Judul tertulis *"Kelurahan Kampung Sambakungan"*. Di Kabupaten Berau (Kecamatan Gunung Tabur), status resminya adalah **Kampung Sambakungan** yang dipimpin oleh **Kepala Kampung** (UU No. 6 Tahun 2014). Istilah ini harus dikonsultasikan dan disesuaikan agar tidak rancu secara hukum tata negara.
 
 ---
 
 ## 🛠️ 3. Panduan Tindakan Revisi Konkret (*Action Plan*) untuk Mahasiswa
 
-Agar proposal ini memenuhi standar kelayakan seminar proposal S1 Informatika, Nelsi wajib menjalankan instruksi revisi terstruktur berikut:
+Berikut adalah langkah perbaikan sistematis yang wajib diselesaikan mahasiswa:
 
 ```mermaid
 flowchart TD
-    A["Audit Proposal Nelsi (2309106120)"] --> B["1. Pembersihan Sitasi & Daftar Pustaka"]
+    A["Revisi Komprehensif Nelsi (2309106120)"] --> B["1. Pembersihan & Restrukturisasi Pustaka"]
     A --> C["2. Penguatan Formulasi & Logika Algoritma"]
-    A --> D["3. Penyempurnaan Parameter Uji Banding"]
-    A --> E["4. Perbaikan Diagram UML, ERD & UI Mockup"]
-    A --> F["5. Standardisasi Format & Tata Tulis FT"]
+    A --> D["3. Perbaikan Parameter Uji Banding Antrean"]
+    A --> E["4. Rekayasa Basis Data & UML Standar"]
+    A --> F["5. Sinkronisasi Dokumen & Format FT Unmul"]
 
     B --> B1["Hapus 14 Ghost References"]
-    B --> B2["Perbaiki Metadata Ridwan et al. & Pustaka Gantung"]
-    B --> B3["Sinkronkan Pustaka via Mendeley/Zotero"]
+    B --> B2["Perbaiki Metadata Ridwan et al. & 4 Pustaka Gantung"]
+    B --> B3["Buat Tabel Matriks Penelitian Terkait di Subbab 2.1"]
 
-    C --> C1["Otomasi Lansia via NIK"]
-    C --> C2["Wajibkan Bukti Kedaruratan untuk Urgensi Tinggi"]
-    C --> C3["Integrasikan Rumus Aging Sederhana"]
+    C --> C1["Otomatisasi Status Lansia dari NIK (Usia >= 60)"]
+    C --> C2["Wajibkan Bukti Kedaruratan untuk Dropdown Urgensi Tinggi"]
+    C --> C3["Tambahkan Rumus Linear Aging untuk Cegah Starvation"]
 
-    D --> D1["Lengkapi Tabel Uji dengan Arrival & Burst Time"]
-    D --> D2["Koreksi Klaim Metrik: Reduksi WT Khusus Kasus Mendesak"]
+    D --> D1["Lengkapi Data Uji dengan Arrival Time (AT) & Burst Time (BT)"]
+    D --> D2["Revisi Klaim: Reduksi WT Khusus Kasus Mendesak"]
 
-    E --> E1["Perbaiki Kardinalitas ERD (1 ke N) & Tambah Atribut"]
-    E --> E2["Perbaiki Simbol <<include>> & Boundary pada Use Case"]
-    E --> E3["Ganti 10 Halaman Wireframe Kosong dengan Mockup Berlabel"]
+    E --> E1["Koreksi Kardinalitas ERD (Jenis Surat 1 ke N Permohonan)"]
+    E --> E2["Tambahkan Atribut: NIK, Berkas, Waktu Selesai, Catatan"]
+    E --> E3["Lengkapi Simbol <<include>> & Boundary pada Use Case"]
+    E --> E4["Ganti 10 Halaman Wireframe Kosong dengan Mockup Hi-Fi"]
 
-    F --> F1["Reset Margin ke 4-4-3-3 cm"]
-    F --> F2["Perbaiki Penomoran Halaman (Romawi Awal & Arab Bab I = 1)"]
-    F --> F3["Seragamkan Font ke Times New Roman"]
+    F --> F1["Perbaiki Urutan Gambar (3.1 -> 3.2 -> 3.3 -> 3.4)"]
+    F --> F2["Hadirkan Tabel 2.1 atau Ubah Tabel 2.2 Menjadi 2.1"]
+    F --> F3["Update Field Seluruh Halaman pada Daftar Tabel & Gambar"]
+    F --> F4["Reset Margin 4-4-3-3 cm & Romawi Preliminer (Bab I = 1)"]
 ```
 
 ---
 
-## 🎯 4. Matriks Perbandingan Pustaka Terkait yang Hilang (Wajib Dimasukkan ke Subbab 2.1)
+## 💻 4. Usulan Desain Teknis Layanan Penjadwalan (Laravel Service Implementation)
 
-Saat ini Subbab 2.1 hanya berupa narasi monoton 10 poin. Mahasiswa wajib merangkumnya ke dalam **Tabel Matriks Penelitian Terkait** berikut untuk mempertegas *Research Gap*:
+Untuk membantu Nelsi menyusun Bab III dan merealisasikan algoritma secara konkret pada framework Laravel, berikut adalah rancangan arsitektur *Service Class* yang benar:
+
+```php
+namespace App\Services;
+
+use App\Models\PermohonanSurat;
+use Carbon\Carbon;
+
+class PriorityQueueService
+{
+    // Bobot Algoritma
+    private float $w1 = 0.3; // Jenis Surat
+    private float $w2 = 0.5; // Tingkat Urgensi
+    private float $w3 = 0.2; // Status Pemohon (Lansia/Disabilitas)
+    private float $agingFactor = 0.05; // Tambahan skor per jam tunggu (Anti-Starvation)
+
+    /**
+     * Hitung Nilai Prioritas Awal P(i)
+     */
+    public function calculatePriority(int $skorJenis, int $skorUrgensi, int $skorStatus, Carbon $waktuPengajuan): float
+    {
+        $baseScore = ($this->w1 * $skorJenis) + ($this->w2 * $skorUrgensi) + ($this->w3 * $skorStatus);
+        
+        // Mekanisme Linear Aging: kenaikan prioritas seiring bertambahnya jam tunggu
+        $jamTunggu = max(0, Carbon::now()->diffInHours($waktuPengajuan));
+        $agingScore = $this->agingFactor * $jamTunggu;
+
+        return round($baseScore + $agingScore, 4);
+    }
+
+    /**
+     * Otomasi Status Pemohon dari NIK (Digit 7-12: DDMMYY)
+     */
+    public function extractAgeCategoryFromNIK(string $nik): int
+    {
+        if (strlen($nik) !== 16) return 1; // Default: Umum (Skor 1)
+
+        $tgl = (int) substr($nik, 6, 2);
+        if ($tgl > 40) $tgl -= 40; // Koreksi wanita (+40 pada NIK)
+        $bln = (int) substr($nik, 8, 2);
+        $thn = (int) substr($nik, 10, 2);
+        $fullThn = ($thn > 30) ? 1900 + $thn : 2000 + $thn;
+
+        $umur = Carbon::createFromDate($fullThn, $bln, $tgl)->age;
+
+        return ($umur >= 60) ? 5 : 1; // 5 = Lansia, 1 = Umum
+    }
+
+    /**
+     * Ambil Antrean Terurut Prioritas (Non-Preemptive) dengan Tie-Breaker FCFS
+     */
+    public function getPrioritizedQueue()
+    {
+        return PermohonanSurat::where('status_permohonan', 'Menunggu_Verifikasi')
+            ->orderBy('skor_prioritas', 'DESC')
+            ->orderBy('waktu_pengajuan', 'ASC') // Tie-Breaker: First Come First Served
+            ->get();
+    }
+}
+```
+
+---
+
+## 🎯 5. Matriks Perbandingan Pustaka Terkait yang Hilang (Subbab 2.1)
+
+Mahasiswa wajib mengganti narasi monoton 10 poin di Subbab 2.1 dengan menyertakan **Tabel Matriks Penelitian Terkait** berikut:
 
 | No | Penulis & Tahun | Judul Penelitian | Metode / Algoritma | Parameter / Variabel | Uji Banding Kinerja | Celah Riset (*Gap*) & Posisi Penelitian Ini |
 |:---|:---|:---|:---|:---|:---:|:---|
@@ -244,39 +379,37 @@ Saat ini Subbab 2.1 hanya berupa narasi monoton 10 poin. Mahasiswa wajib merangk
 
 ---
 
-## 🎤 5. Simulasi Pertanyaan Kritis Dewan Penguji Seminar Proposal
+## 🎤 6. Simulasi Pertanyaan Kritis Dewan Penguji Seminar Proposal
 
-Berikut adalah daftar pertanyaan tajam yang diprediksi kuat akan dilontarkan oleh Dewan Penguji saat Nelsi maju Seminar Proposal:
+1. **Penguji 1 (Metodologi & Teori Antrean):**
+   > *"Di Bab I dan III Anda menyatakan Priority Scheduling menurunkan rata-rata waktu tunggu seluruh permohonan. Secara hukum konservasi kerja (work-conserving theorem) antrean single server non-preemptive, mengacak urutan tanpa mengubah burst time tidak akan menurunkan rata-rata waktu tunggu total! Jelaskan mengapa demikian dan apa sebenarnya yang diturunkan oleh algoritma Anda?"*
+   * **Jawaban Mahasiswa:** Mengakui bahwa rata-rata waktu tunggu total populasi antrean secara matematis tidak berubah. Keunggulan Priority Scheduling adalah **mereduksi waktu tunggu khusus kelompok kritis (*waiting time of urgent requests*)** agar permohonan darurat dan warga rentan (lansia/disabilitas) tertolong lebih cepat dengan mengorbankan waktu tunggu permohonan normal.
 
-1. **Pertanyaan Penguji 1 (Metodologi & Algoritma):**
-   > *"Di Bab I dan III Anda mengklaim bahwa Priority Scheduling dapat menurunkan rata-rata waktu tunggu seluruh permohonan dibandingkan FIFO. Secara teori antrean non-preemptive work-conserving, merombak urutan tanpa mengubah burst time tidak akan menurunkan rata-rata waktu tunggu total! Bisa Anda jelaskan penurunan waktu tunggu di kelompok mana yang sebenarnya Anda tuju?"*
-   * **Jawaban yang Harus Dipersiapkan Mahasiswa:** Mengakui bahwa secara matematis rata-rata waktu tunggu total seluruh populasi tetap sama, namun Priority Scheduling bertujuan **memangkas waktu tunggu secara drastis pada kelompok permohonan berkategori mendesak dan warga rentan (lansia/disabilitas)**, di mana hal ini memiliki nilai kemanfaatan sosial (*utility value*) yang jauh lebih tinggi bagi pelayanan publik.
+2. **Penguji 2 (Integritas Sistem & Rekayasa Perangkat Lunak):**
+   > *"Di form Anda, warga bebas memilih tingkat urgensi 'Tinggi'. Bobot urgensi Anda buat 50%. Apa jaminan warga tidak curang memilih 'Tinggi' semua? Dan kenapa status lansia dipilih manual bukan dideteksi otomatis dari NIK?"*
+   * **Jawaban Mahasiswa:** Sistem menerapkan kontrol validasi: status lansia dihitung otomatis dari tanggal lahir yang di-parse dari NIK 16 digit, dan opsi urgensi tinggi mewajibkan lampiran berkas bukti darurat yang diverifikasi awal oleh petugas sebelum antrean diprioritaskan.
 
-2. **Pertanyaan Penguji 2 (Integritas Sistem & Keamanan Logika):**
-   > *"Di form pengajuan surat, warga memilih sendiri apakah urgensinya Tinggi, Sedang, atau Rendah. Bobot urgensi Anda buat 50%. Apa yang menjamin warga tidak berbohong memilih 'Tinggi' semua agar suratnya selesai duluan? Dan kenapa status lansia dipilih manual bukan dideteksi dari NIK?"*
-   * **Jawaban yang Harus Dipersiapkan Mahasiswa:** Sistem dilengkapi verifikasi ganda: status lansia dihitung otomatis dari parsing tanggal lahir NIK, dan pemilihan opsi urgensi tinggi mewajibkan unggah dokumen bukti kedaruratan yang diverifikasi awal oleh petugas sebelum antrean diprioritaskan.
+3. **Penguji 3 (Integritas Kepustakaan):**
+   > *"Mengapa di Daftar Pustaka Anda ada paper dengan pengarang 'Informatika, P.' dan 'Lowokwaru, K.'? Dan kenapa ada banyak paper tentang System Usability Scale (SUS) padahal Anda tidak meneliti SUS?"*
+   * **Jawaban Mahasiswa:** Mengakui adanya kekeliruan impor metadata dari citation manager dan menyatakan telah membersihkan pustaka hantu serta mengoreksi metadata primer langsung dari artikel asli.
 
-3. **Pertanyaan Penguji 3 (Studi Kasus & Kepustakaan):**
-   > *"Mengapa di Daftar Pustaka Anda banyak sekali paper tentang System Usability Scale (SUS), padahal Anda dengan tegas membatasi masalah tidak menguji SUS? Dan di pustaka nomor [x] tertulis pengarangnya 'Informatika, P.' dan 'Lowokwaru, K.'? Apakah Anda membaca artikel-artikel ini?"*
-   * **Jawaban yang Harus Dipersiapkan Mahasiswa:** Harus meminta maaf atas kelalaian impor metadata sitasi dan menyatakan telah membersihkan pustaka hantu serta mengoreksi metadata langsung dari dokumen primer artikel aslinya.
-
-4. **Pertanyaan Penguji 4 (Perancangan Basis Data & UML):**
-   > *"Coba lihat ERD Anda di Gambar 3.4. Kenapa relasinya dari Permohonan Surat ke Jenis Surat adalah 1 ke N? Apakah satu surat bisa punya banyak jenis surat, sedangkan satu jenis surat cuma bisa diajukan satu kali seumur hidup? Dan ke mana atribut NIK serta file lampiran di database Anda?"*
-   * **Jawaban yang Harus Dipersiapkan Mahasiswa:** Menjelaskan perbaikan kardinalitas menjadi 1 Jenis Surat memiliki Banyak (N) Permohonan Surat, serta menyajikan skema relasi baru yang sudah memuat atribut `nik`, `waktu_selesai`, `berkas_persyaratan`, dan `catatan_petugas`.
+4. **Penguji 4 (Perancangan Basis Data):**
+   > *"Di Gambar 3.4, Anda menghubungkan Permohonan Surat ke Jenis Surat dengan relasi 1 ke N. Artinya 1 surat punya banyak jenis surat? Kenapa foreign key-nya ada di Permohonan Surat kalau jenis suratnya yang N? Ke mana atribut NIK dan file lampiran?"*
+   * **Jawaban Mahasiswa:** Menjelaskan perbaikan kardinalitas menjadi 1 Jenis Surat digunakan pada Banyak (N) Permohonan Surat (`1 ke N` dari Jenis Surat ke Permohonan), serta menunjukkan ERD yang telah dilengkapi atribut NIK, file persyaratan, dan waktu selesai.
 
 ---
 
-## 📌 6. Rekomendasi Keputusan Pembimbing
+## 📌 7. Rekomendasi Keputusan Pembimbing
 
 | Aspek Evaluasi | Skor Kelayakan (1–10) | Catatan Pembimbing |
 |:---|:---:|:---|
-| **Relevansi Topik & Urgensi Kasus** | **7.5 / 10** | Topik sangat aplikatif untuk digitalisasi persuratan kampung di Berau. |
-| **Formulasi & Desain Algoritma** | **5.0 / 10** | Perlu perbaikan pada verifikasi input urgensi/NIK dan mitigasi starvation. |
-| **Metodologi Pengujian Kinerja** | **4.5 / 10** | Desain data uji belum menyertakan *Arrival Time* dan *Burst Time*. |
-| **Pemodelan Sistem (UML & Basis Data)** | **4.0 / 10** | Kardinalitas ERD terbalik fatal; Use Case cacat notasi; tidak ada Class Diagram. |
-| **Integritas Literatur & Sitasi** | **3.5 / 10** | Ditemukan 14 pustaka hantu dan kesalahan impor metadata yang memalukan. |
-| **Kepatuhan Tata Tulis & Format FT** | **4.0 / 10** | Penomoran halaman preliminer rusak; wireframe 10 halaman kosong melompong. |
+| **Relevansi Topik & Urgensi Kasus** | **7.5 / 10** | Topik aplikatif dan relevan untuk instansi desa/kampung di Berau. |
+| **Formulasi & Desain Algoritma** | **4.5 / 10** | Rentan manipulasi (*moral hazard*) dan mengabaikan mitigasi starvation. |
+| **Metodologi Pengujian Antrean** | **4.0 / 10** | Data uji belum menyertakan *Arrival Time* dan *Burst Time*. |
+| **Pemodelan Sistem (UML & Basis Data)** | **4.0 / 10** | Kardinalitas ERD terbalik; Use Case salah notasi; Class Diagram nihil. |
+| **Integritas Literatur & Sitasi** | **3.0 / 10** | 14 Ghost references dan metadata scraper rusak. |
+| **Kepatuhan Tata Tulis & Format FT** | **3.5 / 10** | Nomor gambar melompat; halaman daftar tabel meleset; wireframe kosong. |
 
 **Keputusan Pembimbing I (Anton Prafanto, S.Kom., M.T.):**
-> **BELUM DIIZINKAN SEMINAR PROPOSAL.**  
-> Mahasiswa wajib melakukan revisi naskah secara komprehensif sesuai 7 poin *Red Flags* di atas, membersihkan daftar pustaka, memperbaiki perancangan UML & ERD, melengkapi data uji algoritma, dan menyerahkan draf revisi lengkap untuk audit ulang sebelum lembar persetujuan seminar proposal ditandatangani.
+> **STATUS: REVISI MAYOR (BELUM DIIZINKAN SEMINAR PROPOSAL).**  
+> Nelsi wajib merombak naskah proposal sesuai **10 Poin Red Flags** di atas, membersihkan daftar pustaka, memperbaiki perancangan basis data & UML, menyempurnakan data uji antrean, dan menyerahkan draf perbaikan untuk audit ulang sebelum persetujuan seminar proposal dapat diterbitkan.
