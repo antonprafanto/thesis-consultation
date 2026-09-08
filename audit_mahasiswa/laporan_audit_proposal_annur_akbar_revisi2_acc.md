@@ -41,6 +41,14 @@
 
 ---
 
+### 📌 Catatan Mikro Tambahan (Untuk Pencetakan Berkas Fisik Sempro):
+1. **Sinkronisasi Angka Halaman di Daftar Lampiran (Hal. ix):**  
+   Di Daftar Isi (Hal. vi), nomor halaman Lampiran 1 s.d. 4 tercantum presisi sesuai letak fisik: `38, 39, 39, 41`. Namun pada halaman **Daftar Lampiran (Hal. ix)**, angka yang terketik manual masih `37, 38, 38, 40` (selisih 1 halaman akibat pergeseran pemindahan draf surat izin ke Lampiran 1). Mahasiswa dapat menyelaraskan angka ini sebelum mencetak berkas pendaftaran.
+2. **Template Kolom Tanda Tangan Lembar Pengesahan (Hal. ii):**  
+   Format Lembar Pengesahan saat ini mencantumkan nama pembimbing dalam bentuk poin daftar teks. Mahasiswa perlu memastikan apakah prodi mewajibkan format 2-kolom tanda tangan berdampingan (*Menyetujui: Pembimbing I & Pembimbing II*, serta *Mengetahui: Koordinator Program Studi*) saat pengajuan lembar pengesahan bertanda tangan basah/digital.
+
+---
+
 ## 🎯 3. Kesimpulan & Rekomendasi Dosen Pembimbing
 
 1. **Kelayakan Akademik:**  
