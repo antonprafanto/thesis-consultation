@@ -28,7 +28,7 @@ Repository ini didedikasikan untuk pengelolaan dokumentasi bimbingan, audit nask
 
 | No | Nama Mahasiswa | NIM | Judul Proposal / Skripsi | Status Audit |
 |:---|:---|:---|:---|:---|
-| 1 | Ahmad Dhafin | 2209106122 | *Pengembangan Mini Game Edukatif Simulasi Penanganan Kebakaran Berbasis Roblox Menggunakan Behavior Tree* | [Laporan Audit & Panduan Revisi](audit_mahasiswa/laporan_audit_proposal_dhafin.md) |
+| 1 | Ahmad Dhafin | 2209106122 | *Pengembangan Mini Game Edukatif Simulasi Penanganan Kebakaran Berbasis Roblox Menggunakan Behavior Tree* | [Laporan Audit Awal](audit_mahasiswa/laporan_audit_proposal_dhafin.md) • [Revisi 1](audit_mahasiswa/laporan_audit_proposal_dhafin_revisi1.md) |
 | 2 | Aji Pangestu | 2009106134 | *Analisis Search Engine Optimization (SEO) pada Website Lintasjejaring.com* | [Laporan Audit & Panduan Revisi](audit_mahasiswa/laporan_audit_proposal_aji_pangestu.md) |
 | 3 | Benny Hernanda Putra | 2009106066 | *Implementasi Convolutional Neural Network Berbasis MobileNetV2 pada Aplikasi Flutter untuk Klasifikasi Nominal Uang Kertas Rupiah* | [Laporan Audit Awal](audit_mahasiswa/laporan_audit_proposal_benny.md) • [Revisi 1](audit_mahasiswa/laporan_audit_proposal_benny_revisi1.md) • [Revisi 2 (ACC)](audit_mahasiswa/laporan_audit_proposal_benny_revisi2.md) |
 | 4 | Erika Christy Pagili | 2209106117 | *Perancangan Ulang Design UI/UX Website PT Bina Karya Nuansa Sejahtera Menggunakan Metode Design Thinking* | [Audit Sidang](audit_mahasiswa/laporan_audit_skripsi_erika_christy.md) • [Audit Final Pra-Jilid](audit_mahasiswa/laporan_audit_skripsi_erika_christy_final_jilid.md) |
