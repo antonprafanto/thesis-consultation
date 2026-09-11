@@ -1,0 +1,288 @@
+0: PROPOSAL SKRIPSI
+1: Implementasi Google Sheets sebagai Media Penyimpanan Data pada Content Management System (CMS) Berbasis Web
+2: Oleh:
+3: VANDY RIZKY SEPTIAWAN
+4: 2309106048
+5: FAKULTAS TEKNIK
+6: UNIVERSITAS MULAWARMAN
+7: SAMARINDA
+8: 2026
+9: PROPOSAL SKRIPSI
+10: Implementasi Google Sheets sebagai Media Penyimpanan Data pada Content Management System (CMS) Berbasis Web 
+11: HALAMAN JUDUL
+12: Diajukan sebagai salah satu syarat untuk menyelesaikan pendidikan 
+13: pada Program Studi Strata 1 Informatika, 
+14: Fakultas Teknik, Universitas Mulawarman
+15: Oleh:
+16: VANDY RIZKY SEPTIAWAN
+17: 2309106048
+18:  
+19: FAKULTAS TEKNIK
+20: UNIVERSITAS MULAWARMAN
+21: SAMARINDA
+22: 2026
+23: PROPOSAL SKRIPSI
+24: JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI
+25: HALAMAN PENGESAHAN
+26: Oleh:
+27: NAMA MAHASISWA
+28: NIM (Tanpa Tulisan NIM)
+29: Telah dibahas dalam Rapat Dosen Pembimbing pada [tgl, bln, tahun] dan dinyatakan memenuhi syarat sebagai Skripsi, dengan Dosen Pembimbing:
+30: Nama Dosen Pembimbing I lengkap dengan gelar
+31: Nama Dosen Pembimbing II lengkap dengan gelar
+32: Koordinator Program Studi S1 Informatika,
+33: Fakultas Teknik, Universitas Mulawarman,
+34: Awang Harsa Kridalaksana, S.Kom., M.Kom.
+35: NIP 19731229 200501 1 002
+36: KATA PENGANTAR
+37: Kata Pengantar (preface, foreword) sebaiknya disusun secara ringkas dan tidak lebih dari 2 halaman (lihat contoh Lampiran 9). Isi Kata Pengantar mencakup: a. kalimat pembuka; b. tempat dan waktu pengumpulan data; c. ucapan terima kasih dengan hirarki sebagai berikut (i. pimpinan perusahaan/lembaga/instansi dari luar Unmul; ii. pembimbing lapangan; iii. pimpinan fakultas; iv. pimpinan program studi; v. pembimbing I dan II; vi. Penguji; dan d. kalimat penutup)
+38: Puji syukur kepada Allah SWT, Tuhan Yang Maha Esa sehingga dapat menyelesaikan proposal skripsi dengan judul “<Judul Skripsi>”. Proposal ini disusun sebagai salah satu tahapan dalam menyelesaikan skripsi pada Fakultas Teknik, Universitas Mulawarman.
+39: Oleh karena itu, pada kesempatan ini kami ingin mengucapkan terima kasih kepada semua pihak yang telah mendukung serta membantu saya selama proses penyusunan proposal skripsi, kepada:
+40: Orang tua dan Saudara-saudara saya atas do’a, bimbingan serta kasih sayangnya.
+41: Nama dan gelar akademik lengkap Dekan selaku Dekan Fakultas Teknik, Universitas Mulawarman.
+42: Nama dan gelar akademik Koordinator Prodi selaku K Program Studi Informatika
+43: Nama dan gelar akademik Dosen Pembimbing I selaku Pembimbing I yang selalu memberikan arahan dan masukkan terhadap penelitian ini.
+44: Nama dan gelar akademik Dosen Pembimbing II selaku Pembimbing II atas masukkan terhadap penelitian ini 
+45: Nama dan gelar akademik Dosen Penguji I selaku Penguji I atas saran dan masukkan terhadap penelitian ini.
+46: Nama dan gelar akademik Dosen Penguji II selaku Penguji II atas saran dan masukkan terhadap penelitian ini.
+47: Segenap Dosen Program Studi Informatika, yang telah memberikan ilmu pengetahuan selama mengikuti perkuliahan.
+48: Rekan-rekan seperjuangan yang terus memberikan dukungan semangat demi terselesainya tugas ini.
+49: Saya menyadari bahwa proposal skripsi ini tidak luput dari berbagai kekurangan. Oleh karena itu, semua kritik dan saran yang bersifat memperbaiki demi kesempurnaan sangat diharapkan.
+50: Samarinda,.............................. 2024
+51: Penulis
+52: DAFTAR ISI
+53: halaman
+54: Halaman Juduli
+55: Halaman Pengesahanii
+56: Kata Pengantariii
+57: Daftar Isi ……………………………………………………………………………...iv
+58: Daftar Tabelv
+59: Daftar Gambarvi
+60: Daftar Lampiranvii
+61: Daftar Istilah/Lambangviii
+62: Daftar Singkatanix
+63: BAB I PENDAHULUAN1
+64: 1.1Latar Belakang1
+65: 1.2Rumusan Masalah1
+66: 1.3Batasan Masalah1
+67: 1.4Tujuan Penelitian1
+68: 1.5Manfaat Penelitian2
+69: 1.6 Kontribusi Penelitian2
+70: BAB II TINJAUAN PUSTAKA3
+71: 2.1Penelitian Terkait3
+72: 2.2 Teori Pendukung5
+73: 2.3Teori Pendukung5
+74: 2.3.1Teori Pendukung Sub BAB5
+75: 2.3.2      Teori Pendukung Sub BAB5
+76: 2.4Teori Pendukung5
+77: BAB III METODOLOGI PENELITIAN7
+78: 3.1Tahapan Pelaksanaan Penelitian7
+79: 3.2 Pengumpulan Data7
+80: 3.3Perancangan Data7
+81: 3.4 Perancangan Proses/Algoritma7
+82: 3.5 Perancangan Tampilan7
+83: 3.6 Perancangan Pengujian7
+84: 3.7 Waktu dan Tempat Penelitian8
+85: Daftar Pustaka9
+86: Lampiran-Lampiran11
+87: Keterangan:
+88: WAJIB menggunakan alat bantu TOC (Table of Contents) pada Microsoft Word.
+89: DAFTAR TABEL
+90: Halaman
+91: Tabel 1.1 contents6
+92: Tabel 2.2 contents7
+93: DAFTAR GAMBAR
+94: Halaman
+95: Gambar 2.1 contents8
+96: Gambar 2.2 contents18
+97: Gambar 2.3 contents19
+98: DAFTAR LAMPIRAN
+99: Halaman
+100: Lampiran 1 contents42
+101: DAFTAR ISTILAH/LAMBANG
+102: Arti
+103: Contents
+104: DAFTAR SINGKATAN
+105: Arti
+106: Contents
+107: BAB I PENDAHULUAN
+108: PENDAHULUAN
+109: Latar Belakang
+110: Perkembangan teknologi informasi saat ini berlangsung sangat pesat dan memberikan dampak yang signifikan pada berbagai sektor kehidupan (Segara & Nasution, 2025). Website merupakan salah satu media penyampaian informasi dan komunikasi yang digunakan oleh berbagai instansi dan organisasi (Giuffredi dkk., 2024). Agar relevansi dan keakuratan informasi tetap terjaga, konten di dalam sebuah website dituntut untuk diperbarui secara berkala mengikuti dinamika yang terjadi (Adila, 2022). Hal ini memunculkan kebutuhan mendesak akan adanya sistem pengelolaan website yang efektif agar proses pembaruan informasi dapat dilakukan dengan lancar dan tepat sasaran.
+111: Dalam praktiknya, terdapat berbagai permasalahan krusial dalam pengelolaan konten website. Konten website pada dasarnya bersifat sangat dinamis. Seorang administrator situs perlu dapat menambah, menghapus, serta mengubah konten kapan saja sesuai dengan kebutuhan penyebaran informasi terkini (Rupilele & Lahallo, 2022). Apabila pengelolaan dan pembaruan konten tersebut dilakukan secara manual melalui modifikasi kode program (source code), proses tersebut menjadi kurang efektif dan sangat menyita waktu pengembang (Fikri dkk., 2023). Oleh karena itu, sangat dibutuhkan sebuah sistem yang memungkinkan administrator untuk mengelola konten secara mudah melalui antarmuka (interface) pengguna visual tanpa harus melakukan perubahan secara langsung pada kode program.
+112: Sistem yang menjembatani kebutuhan fungsional tersebut dikenal dengan istilah Content Management System (CMS). CMS pada prinsipnya adalah perangkat lunak yang berfungsi memfasilitasi pengguna untuk melakukan manajemen konten secara independen (Dewi dkk., 2023). Dalam pengelolaan konten, CMS memerlukan mekanisme penyimpanan data untuk menyimpan dan mengelola informasi yang digunakan oleh website (Hulu dkk., 2025). Data konten website perlu disimpan secara terstruktur agar kedepannya dapat dikelola, diolah, dan ditampilkan kembali secara dinamis pada antarmuka website.
+113: Untuk menunjang pengolahan konten tersebut, sebuah CMS membutuhkan media penyimpanan data yang memadai. Data yang dikelola dalam CMS dapat berupa teks, metadata, kategori, serta URL aset media, serta informasi konten pendukung lainnya (Adyanda dkk., 2023). Media penyimpanan yang digunakan perlu mendukung proses penyimpanan, pembacaan, pembaruan, dan penghapusan data sesuai dengan kebutuhan sistem. Basis data seperti PostgreSQL atau MongoDB merupakan salah satu pilihan media penyimpanan, tetapi infrastruktur tersebut bukanlah satu-satunya pendekatan yang dapat digunakan. Pada dasarnya, tingkat kebutuhan media penyimpanan akan sangat bergantung pada karakteristik, kompleksitas fungsionalitas, serta skala dari aplikasi yang sedang dibangun (Guyo & Hartmann, 2024).
+114: Google Sheets pada umumnya sering digunakan untuk memenuhi kebutuhan dalam menyimpan dan mengelola data (Asqia & Nabarian, 2021). Dalam hal ini, Google Sheets menyediakan struktur data yang sangat relevan dalam bentuk baris dan kolom yang merepresentasikan tabel relasional (Sugiarto & Supadi, 2024). Data pada sistem ini dapat dikelola secara langsung melalui antarmuka Google Sheets yang fleksibel. Oleh karena itu, Google Sheets dapat dimanfaatkan sebagai media penyimpanan data untuk aplikasi dengan kebutuhan dan batasan tertentu. Salah satu karakteristik Google Sheets yang mendukung pemanfaatannya sebagai media penyimpanan data adalah struktur data berbentuk baris dan kolom serta antarmuka yang memungkinkan data dikelola secara langsung oleh pengguna.
+115: Untuk memungkinkan CMS berinteraksi dengan data yang tersimpan pada Google Sheets, diperlukan Application Programming Interface (API). API memungkinkan suatu aplikasi berkomunikasi dan bertukar data dengan layanan lain (Baharuddin dkk., 2022; van der Vlist dkk., 2022). Dalam hal ini, Google Sheets API menyediakan mekanisme bagi sistem untuk mengakses dan mengelola data pada dokumen Google Sheets. Dengan demikian, Google Sheets API berperan sebagai penghubung antara CMS berbasis web dengan Google Sheets sehingga sistem dapat melakukan akses dan pengelolaan data secara terprogram.
+116: Meskipun model arsitektur ini menawarkan kepraktisan yang tinggi, terdapat sejumlah tantangan dan permasalahan dalam proses implementasi Google Sheets API. Dokumen Google Sheets yang digunakan perlu memiliki pengaturan struktur data spesifik yang sesuai dengan kebutuhan pemrosesan pada CMS. Data CMS yang beragam perlu dipetakan dan direpresentasikan secara sistematis di dalam sel dan struktur Google Sheets (Fattah dkk., 2023). Sistem perlu melakukan proses penyimpanan dan pengambilan data melalui jaringan API (Hong dkk., 2023). Operasi pengelolaan data seperti penambahan, pembacaan, pembaruan, dan penghapusan data perlu diimplementasikan melalui Google Sheets API. Selain itu, implementasi integrasi memerlukan pengaturan struktur data, mekanisme akses melalui API, serta autentikasi dan otorisasi agar pertukaran data antara CMS dan Google Sheets dapat dilakukan sesuai kebutuhan sistem.
+117: Oleh sebab itu, diperlukan implementasi Google Sheets API pada CMS berbasis web untuk memungkinkan pengelolaan data konten secara terstruktur melalui antarmuka CMS. Implementasi tersebut mencakup operasi Create, Read, Update, dan Delete (CRUD) terhadap data yang tersimpan pada Google Sheets. Sistem dikembangkan menggunakan metode Waterfall untuk menghasilkan tahapan pengembangan yang sistematis. Oleh karena itu, penelitian ini mengangkat judul "Implementasi Google Sheets API sebagai Media Penyimpanan Data pada Content Management System (CMS) Berbasis Web". Penelitian ini bertujuan menghasilkan sistem CMS berbasis web yang mengimplementasikan Google Sheets API sebagai media penyimpanan data.
+118: Rumusan Masalah
+119: Berdasarkan latar belakang penelitian, maka yang menjadi rumusan masalah dalam penelitian ini adalah “Bagaimana mengimplementasikan Google Sheets API sebagai media penyimpanan data pada Content Management System (CMS) berbasis web?”.
+120: Batasan Masalah
+121: Penelitian ini disusun berdasarkan data-data yang diperoleh. Luasnya bidang yang dihadapi membuat penelitian ini harus dibatasi. Ruang lingkup masalah dibatasi pada:
+122: Penelitian berfokus pada implementasi Google Sheets API sebagai media penyimpanan data pada CMS berbasis web.
+123: CMS dikembangkan menggunakan Next.js.
+124: Implementasi sistem dilakukan pada Fokaris Balikpapan.
+125: Data yang dikelola melalui CMS mencakup data konten yang diperlukan oleh sistem.
+126: Pengelolaan data pada Google Sheets mencakup operasi Create, Read, Update, dan Delete (CRUD).
+127: Akses Google Sheets dilakukan melalui Google Sheets API dengan mekanisme autentikasi dan otorisasi yang diperlukan.
+128: Google Sheets digunakan sebagai media penyimpanan data, sedangkan aset gambar dikelola menggunakan layanan penyimpanan media terpisah, yaitu Cloudinary.
+129:  
+130: Tujuan Penelitian
+131: Tujuan yang ingin dicapai dalam penelitian ini adalah Mengimplementasikan Google Sheets API sebagai media penyimpanan data pada Content Management System (CMS) berbasis web.
+132: Manfaat Penelitian
+133: Penelitian ini diharapkan dapat memberikan manfaat pada berbagai pihak, khususnya:
+134: 1.Penulis
+135: Manfaat penelitian bagi penulis adalah untuk mengembangkan wawasan serta pengalaman penulis dalam mengimplementasikan teknologi Google Sheets API sebagai media penyimpanan data alternatif dalam pengembangan aplikasi Content Management System (CMS) berbasis web.
+136: 2.Mahasiswa
+137: Penelitian ini dapat memberikan pengetahuan kepada mahasiswa bagaimana implementasi dan pemanfaatan Google Sheets API sebagai basis data dilakukan dalam pengembangan arsitektur CMS berbasis web, dan menjadi referensi khususnya bagi mahasiswa dibidang Informatika yang dapat membantu proses pembelajaran.
+138: 3.Instansi/Lembaga/Perusahaan
+139: Manfaat penelitian ini bagi instansi/lembaga/perusahaan adalah dengan adanya hasil rekayasa perangkat lunak berupa website CMS ini diharapkan dapat membantu instansi untuk mengelola data dan konten website secara visual, mandiri, dan efisien.
+140: 1.6 Kontribusi Penelitian
+141: Kontribusi yang dapat diberikan dari penelitian ini adalah menghasilkan implementasi Google Sheets API sebagai media penyimpanan data pada Content Management System (CMS) berbasis web yang memungkinkan proses pengelolaan data dilakukan melalui antarmuka CMS. Implementasi tersebut mencakup perancangan struktur data pada Google Sheets serta penerapan operasi Create, Read, Update, dan Delete (CRUD) melalui Google Sheets API sehingga data yang dikelola pada CMS dapat disimpan, diambil, diperbarui, dan dihapus secara terintegrasi.
+142: BAB II TINJAUAN PUSTAKA
+143: TINJAUAN PUSTAKA
+144: Penelitian Terkait
+145: Bagian ini menjelaskan beberapa penelitian terkait yang berhubungan dengan proses Penelitian. 
+146: Menggunakan pustaka yang baru, relevan, dan asli, yang berasal dari jurnal ilmiah, buku. Uraikan dengan jelas kajian pustaka yang menimbulkan gagasan dan yang mendasari penelitian/perancangan yang akan dilakukan. Tinjauan pustaka menguraikan teori, temuan, dan bahan penelitian lain yang diperoleh dari acuan yang akan dijadikan landasan untuk melakukan kegiatan penelitian/perancangan. Uraian dalam tinjauan pustaka diarahkan untuk menyusun kerangka pemikiran atau konsep yang akan digunakan dalam penelitian/perancangan. Kerangka pemikiran harus utuh menuju satu tujuan, yaitu memberikan jawab atas pertanyaan-pertanyaan yang diajukan dalam perumusan masalah. Tinjauan pustaka mengacu pada daftar pustaka.
+147: Dalam rangka mendukung penelitian ini, maka dilakukan kajian dengan mempelajari penelitian-penelitian terkait yang telah dilakukan sebelumnya. Daftar penelitian terkait antara lain:
+148: Metode yang digunakan: Backpropagation Neural Network. Temuan Penelitian: Data yang digunakan pada penelitian ini adalah data produksi kelapa sawit dari tahun 2015 hingga 2017 yang berjumlah 319 data. Dalam penelitian ini dilakukan 5 pengujian untuk mendapatkan nilai terbaik, yaitu (1) Pengujian iterasi maksimal, jumlah iterasi yang diuji adalah 200 hingga 1.000 iterasi dan 2.000 iterasi, dengan nilai learning rate ialah 0.4, batas erorr 0.001, jumlah data latih 260 dan jumlah data uji 59, hasilnya jumlah iterasi maksimal sebesar 900 iterasi dengan MAPE terendah yaitu 14.68%.  (2) Pengujian jumlah data latih, data latih yang diuji terdiri atas 52, 104, 156, 208 dan 260 data dengan menggunakan nilai learning rate 0,4, iterasi maksimal 900, 5 neuron hidden, batas error sebesar 0.0001, serta 59 data uji. Hasil pengujian menghasilkan nilai MAPE terendah sebesar 15.90308% yaitu 260 data latih. (3) Pengujian learning rate. Nilai learning rate yang diuji terdiri atas 0,1 hingga 0.7 dengan 260 data latih, 59 data uji, maksimal iterasi 900, 5 neuron hidden dan batas error 0.001. Dari hasil pengujian diperoleh nilai MAPE terendah 14.74% dari learning rate 0.4. (4) Pengujian jumlah neuron hidden. Neuron hidden yang diuji mulai dari 1-5. Pengujian ini menggunakan 260 data latih, nilai learning rate 0.4, jumlah iterasi maksimal 900, batas error 0.001 dan 59 data uji. Nilai MAPE terbaik yaitu 14.13% dengan jumlah neuron sebesar 5. (5) Pengujian K-Fold Cross Validation. Nilai K-fold yang diuji adalah 5 dan 7, nilai learning rate yang digunakan adalah 0.4, iterasi maksimal 900, 5 neuron hidden dan batas error 0.001. Nilai MAPE terkecil terjadi pada fold ke 6 dengan K-7 sebesar 12.96%. Parameter tersebut digunakan untuk meguji 12 data uji yang menghasilkan MAPE sebesar T0.0047%  (Nama belakang penulis, tahun terbit). 
+149: Penelitian terkait 2
+150: Penelitian terkait 3
+151: Penelitian terkait 4
+152: Penelitian terkait 5
+153: Penelitian terkait 6
+154: Penelitian terkait 7
+155: Penelitian terkait 8
+156: Penelitian terkait 9
+157: Penelitian terkait 10
+158: Dst…
+159: Perbedaan dengan Penelitian Sebelumnya
+160: Berdasarkan referensi yang terkait, maka didapatkan perbedaan penelitian yang terdahulu sebagai dasar penelitian ini ………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………
+161: 2.2 Teori Pendukung
+162:  
+163: Penjelasan.
+164: Rumus/persamaan/formula harus diberi identitas nomor dan keterangan. Contoh:
+165: A + B = C ......................................................................................................(2.1)
+166: Di mana:
+167: A = .....
+168: B = .....
+169: C = ......
+170: Teori Pendukung
+171: Penjelasan 
+172: Teori Pendukung Sub BAB
+173: Penjelasan 
+174: 2.3.2 Teori Pendukung Sub BAB
+175: Penjelasan
+176: Teori Pendukung
+177: Penjelasan.
+178: (Identitas gambar diletakkan di bawah gambar. Sedangkan identitas tabel diletakkan di atas tabel. Rata tengah).
+179: Gambar 2.1. Geometri Patch Antena Mikrostrip Dengan Teknik Pencatuan 
+180: Electro-Magnetically Coupled
+181: Penulisan tabel seperti ini.
+182: Tabel 2.1. Tabel Data Mahasiswa Informatika
+183: No.
+184: Nama Mahasiswa
+185: NIM
+186: L/P
+187: Program Studi
+188: 1
+189: 1815025063
+190: L
+191: S1 Informatika
+192: 2
+193: 1815025121
+194: L
+195: S1 Informatika
+196: 3
+197: 1715015068
+198: L
+199: S1 Informatika
+200: 4
+201: 1715025029
+202: P
+203: S1 Informatika
+204: 5
+205: 1815025123
+206: L
+207: S1 Informatika
+208: 6
+209: L
+210: S1 Informatika
+211: 7
+212: L
+213: S1 Informatika
+214: BAB III METODOLOGI PENELITIAN
+215: METODOLOGI PENELITIAN
+216: 3.1Tahapan Pelaksanaan Penelitian
+217: Penjelasan lihat di ppt
+218: 3.2 Pengumpulan Data
+219: Penjelasan lihat di ppt
+220: 3.3Perancangan Data
+221: Penjelasan lihat di ppt 
+222: 3.4 Perancangan Proses/Algoritma
+223: Penjelasan lihat di ppt. Penulisan rumus matematik ditulis ulang menggunakan tools pada Word seperti Equation atau Math Type, tidak boleh dari hasil capture.
+224: 3.5 Perancangan Tampilan
+225: Penjelasan lihat di ppt
+226: 3.6 Perancangan Pengujian
+227: Penjelasan lihat di ppt
+228: 3.7 Waktu dan Tempat Penelitian
+229: Penelitian ini akan dilaksanakan pada bulan …… sampai bulan ……. tahun ….. Adapun tempat pelaksanaan penelitian dilakukan di Instansi/Lembaga/Perusahaan …………………. , sedangkan analisis data dilakukan pada Laboratorium ……………, Fakultas Teknik, Universitas Mulawarman.
+230: Berbagai aktivitas dan kegiatan dalam penelitian ini dapat terjadwal dan selesai sesuai dengan waktu yang telah ditentukan, maka perlu disusun dalam suatu jadwal penelitian yang dapat dilihat pada Tabel 3.x.
+231: Tabel 3.x Jadwal Penelitian
+232: No
+233: Kegiatan
+234: Bulan (Tahun ……)
+235: Jan
+236: Feb
+237: Mar
+238: Apr
+239: Mei
+240: Juni 
+241: Juli 
+242: Agust
+243: I
+244: Tahap Persiapan Penelitian
+245: Pembuatan Proposal
+246: Seminar Proposal
+247: Perbaikan Seminar Proposal
+248: …
+249: II
+250: Tahap Pelaksanaan
+251: Pengumpulan Data
+252: Mengolah Data dan analisis
+253: …
+254: III
+255: Tahap Penyusunan Laporan
+256: Seminar Hasil
+257: Perbaikan Seminar Hasil
+258: Penulisan Artikel Ilmiah
+259: Seminar Akhir
+260: Perbaikan Seminar Akhir
+261: …
+262: DAFTAR PUSTAKA
+263: Adila, N. (2022). Implementation of Web Scraping for Journal Data Collection on the SINTA Website. Sinkron : Jurnal Dan Penelitian Teknik Informatika, 6(4), 2478–2485. https://doi.org/10.33395/sinkron.v7i4.11576
+264: Adyanda, I. K., Efendi, R., & Winarti, D. (2023). Rancang Bangun Website Content Management System (CMS) Pada Fakultas Ilmu Komputer Sebagai Media Promosi dan Akses Informasi. Innovative: Journal Of Social Science Research, 3(4), 5090–5103.
+265: Asqia, M., & Nabarian, T. (2021). Pemanfaatan Google Sheets dan Google Form untuk Layanan Administrasi Mahasiswa Menggunakan Konsep Electronic Service Quality. Jurnal Teknologi Terpadu, 7(1), 15–22. https://doi.org/10.54914/jtt.v7i1.339
+266: Baharuddin, B., Wakkang, H., & Irianto, B. (2022). IMPLEMENTASI WEB SERVICE DENGAN METODE REST API UNTUK INTEGRASI DATA COVID 19 DI SULAWESI SELATAN. Jurnal Sintaks Logika, 2(1), 236–241. https://doi.org/10.31850/jsilog.v2i1.1035
+267: Dewi, W. N., Azhar, F. D. B., Nas, C., & Sevtiana, A. (2023). PEMBUATAN CONTENT MANAGEMENT SYSTEM PADA APLIKASI PERHITUNGAN DAN PEMBAGIAN HAK WARIS BERDASARKAN HUKUM NEGARA BERBASIS WEB. Jurnal Digit, 13(1), 53. https://doi.org/10.51920/jd.v13i1.321
+268: Fattah, A. M. M., Ridwan, T., & Sulistiyowati, N. (2023). Dimensional Data Design for Event Feedback Data Warehouse. JISA(Jurnal Informatika Dan Sains), 6(1), 69–73. https://doi.org/10.31326/jisa.v6i1.1648
+269: Fikri, M., Ahmad, L., & Imilda. (2023). Sistem Informasi Kartu Tanda Mahasiswa (KTM) Menggunakan Kodular Berbasis Android Pada Stmik Indonesia Banda Aceh. Jurnal Sistem Komputer (SISKOM), 3(2), 56–64. https://doi.org/10.35870/siskom.v3i2.794
+270: Giuffredi, R., Grasso, V., & L’Astorina, A. (2024). Web-based science communication at Research Institute level: Balancing dissemination, dialogue and promotion in a major Italian scientific institution. Frontiers in Communication, 9. https://doi.org/10.3389/fcomm.2024.1427033
+271: Guyo, E. D., & Hartmann, T. (2024). Evaluating the efficiency and performance of data persistent systems in managing building and environmental Data: A comparative study. Advanced Engineering Informatics, 62, 102582. https://doi.org/10.1016/j.aei.2024.102582
+272: Hong, S.-S., Lee, J., Chung, S., & Kim, B. (2023). Fast Real-Time Data Process Analysis Based on NoSQL for IoT Pavement Quality Management Platform. Applied Sciences, 13(1). https://doi.org/10.3390/app13010658
+273: Hulu, N. K., Tommy, T., & Handoko, D. (2025). OPTIMALISASI KINERJA CMS WORDPRESS MELALUI PENERAPAN REPLIKASI DATABASE MYSQL. JUDIS : Jurnal Multidisiplin dan Sains, 1(2), 160–172. https://doi.org/10.63854/jms.v1i2.46
+274: Rupilele, F. G. J., & Lahallo, F. F. (2022). Perancangan Sistem Informasi Referensi (SIREF) Pada Program Studi Manajemen Universitas Victory Sorong. Jurnal Jendela Ilmu, 3(1), 35–40. https://doi.org/10.34124/ji.v3i1.109
+275: Segara, K. G., & Nasution, M. I. P. (2025). Perkembangan Teknologi Informasi di Indonesia: Tantangan dan Peluang. JOURNAL SAINS STUDENT RESEARCH, 3(1), 21–33. https://doi.org/10.61722/jssr.v3i1.3128
+276: Sugiarto, S., & Supadi, S. (2024). Analysis of Digital Archive Management Using Google Spreadsheets in the Educators and Education Personnel Section of the Education Office. Lembaran Ilmu Kependidikan, 53(2), 284–292. https://doi.org/10.15294/lik.v53i2.11914
+277: van der Vlist, F. N., Helmond, A., Burkhardt, M., & Seitz, T. (2022). API Governance: The Case of Facebook’s Evolution. Social Media + Society, 8(2), 20563051221086228. https://doi.org/10.1177/20563051221086228
+278:  
+279: Keterangan:
+280: WAJIB menggunakan software management reference (SMR) seperti Mendeley, EndNote, Zotero dll.
+281: Komposisi daftar pustaka:
+282: Artikel Ilmiah (jurnal/prosiding) 5 tahun terakhir yang terkait/relevan penelitiannya, berbahasa Indonesia maupun Inggris 60%
+283: Buku/Chapter Book 5 tahun terakhir yang terkait/relevan penelitiannya, berbahasa Indonesia maupun Inggris 30%
+284: Web yang terkait/relevan penelitiannya, berbahasa Indonesia maupun Inggris 10%
+285: Jumlah daftar pustaka yang digunakan yang terkait/relevan penelitiannya sebanyak 30-50 referensi.
+286: LAMPIRAN
+287: Penjelasan lihat di ppt

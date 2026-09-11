@@ -36,6 +36,8 @@ Repository ini didedikasikan untuk pengelolaan dokumentasi bimbingan, audit nask
 | 6 | Muhammad Annur Akbar | 2309106110 | *Rancang Bangun Perangkap Hama Cahaya Berbasis Raspberry Pi 4 dengan Algoritma YOLOv5* | [Audit Awal](audit_mahasiswa/laporan_audit_proposal_annur_akbar.md) • [Revisi 1](audit_mahasiswa/laporan_audit_proposal_annur_akbar_revisi1.md) • [Revisi 2 (ACC Sempro)](audit_mahasiswa/laporan_audit_proposal_annur_akbar_revisi2_acc.md) |
 | 7 | Ridho Putra Darma | 2509106133 | *Sistem Pelacakan Bola Dinamis Real-Time Menggunakan Kombinasi Segmentasi Citra dan Filter Kalman Terhadap Variasi Oklusi* (Alih Jenjang D3 Polnes) | [Audit TA D3 & Arah Skripsi S1](audit_mahasiswa/laporan_audit_ta_d3_dan_arah_skripsi_ridho_putra_darma.md) |
 | 8 | Nelsi | 2309106120 | *Implementasi Algoritma Priority Scheduling pada Sistem Informasi Pelayanan Surat Administrasi Kelurahan Kampung Sambakungan Berbasis Web* | [Laporan Audit Awal (Revisi Mayor)](audit_mahasiswa/laporan_audit_proposal_nelsi.md) |
+| 9 | Vandy Rizky Septiawan | 2309106048 | *Implementasi Google Sheets sebagai Media Penyimpanan Data pada Content Management System (CMS) Berbasis Web* | [Review Ide Awal & Panduan Peningkatan Skripsi S1](audit_mahasiswa/laporan_audit_proposal_vandy_rizky_septiawan.md) |
+
 
 ---
 
