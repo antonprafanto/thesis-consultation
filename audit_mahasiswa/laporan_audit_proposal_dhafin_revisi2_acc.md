@@ -8,14 +8,14 @@
 **Judul Proposal:** *Pengembangan Mini Game Edukatif Simulasi Penanganan Kebakaran Berbasis Roblox Menggunakan Behavior Tree*  
 **Dokumen yang Diaudit:** `draft proposal ahmad dhafin revisi 2.pdf` (54 Halaman / 42 Halaman Tubuh Utama)  
 **Tanggal Evaluasi:** 15 September 2026  
-**Status Evaluasi Akhir:** **STATUS: ACC (DISETUJUI) SEMINAR PROPOSAL SKRIPSI — DENGAN PANDUAN PENYEMPURNAAN PRA-CETAK (ZERO-DEFECT)**
+**Status Evaluasi Akhir:** **STATUS: ACC (DISETUJUI) SEMINAR PROPOSAL SKRIPSI — DENGAN PANDUAN REVISI PRA-CETAK (ZERO-DEFECT POLISH)**
 
 ---
 
 > [!IMPORTANT]
 > **Keputusan Resmi Tim Dosen Pembimbing:**  
 > Naskah proposal skripsi Ahmad Dhafin pada versi **Revisi 2** ini telah memenuhi seluruh kriteria kelayakan akademik S1 Informatika, kesesuaian metodologi rekayasa game (*Game Development Life Cycle*), pemodelan kecerdasan buatan (*Behavior Tree* dengan Luau *server-side scripting* 0.2s *tick rate*), serta kesiapan instrumen evaluasi (*Black Box Testing* dan *User Acceptance Testing*). Mahasiswa **RESMI DIBERIKAN PERSETUJUAN (ACC)** untuk mendaftar dan menjadwalkan **Ujian Seminar Proposal Skripsi**.  
-> Laporan audit forensik paripurna ini disusun bukan untuk menunda ujian, melainkan sebagai instrumen penjaminan mutu (*quality assurance*) dan proteksi akademik agar naskah fisik yang diserahkan ke Dewan Penguji berstatus **bebas cacat (*zero-defect*)** dan mahasiswa siap menghadapi segala sudut pertanyaan penguji.
+> Laporan audit forensik paripurna ini membedah naskah hingga ke level mikro (termasuk cacat tipografi font *Calibri/Arial* bawaan Word/Mendeley, aturan formalia FT UNMUL, dan atribusi gambar) agar naskah fisik yang diserahkan ke Dewan Penguji berstatus **bebas cacat (*zero-defect*)** dan mahasiswa siap menghadapi segala sudut pertanyaan penguji.
 
 ---
 
@@ -23,8 +23,8 @@
 
 ```mermaid
 pie title Distribusi Status Kesiapan Naskah Revisi 2
-    "Tuntas Sempurna & Siap Uji" : 96
-    "Catatan Mikro Pra-Cetak (Word)" : 4
+    "Tuntas Sempurna & Siap Uji (Substansi & Metodologi)" : 95
+    "Catatan Mikro Pra-Cetak (Font & Format Word)" : 5
 ```
 
 | Dimensi Evaluasi | Draf Awal (26 Agt 2026) | Revisi 1 (10 Sept 2026) | Revisi 2 (15 Sept 2026) — ACC |
@@ -44,7 +44,7 @@ pie title Distribusi Status Kesiapan Naskah Revisi 2
 
 ### A. Bagian Preliminer (Halaman i – xi / PDF Hal. 1–12)
 1. **Halaman Cover & Halaman Judul (Hal. i / PDF Hal. 1–2):**
-   * *Temuan:* Pada Halaman Judul (Hal. 2), tercetak teks `HALAMAN JUDUL` tepat di bawah judul skripsi. Selain itu, nomor romawi `i` tercetak di sudut kanan bawah.
+   * *Temuan:* Pada Halaman Judul (Hal. 2), tercetak teks `HALAMAN JUDUL` tepat di bawah judul skripsi. Selain itu, nomor romawi `i` tercetak di sudut kanan bawah ber-font **Calibri 11 pt**.
    * *Kaidah FT UNMUL:* Teks penanda template (`HALAMAN JUDUL`) tidak boleh dicetak. Halaman judul dihitung sebagai halaman `i` tetapi nomor halamannya **tidak boleh dicetak**.
 2. **Halaman Pengesahan (Hal. ii / PDF Hal. 3):**
    * *Temuan:* Nama Pembimbing I (Ibu Aulia Khoirunnita, S.Kom., M.Kom.), Pembimbing II (Bapak Anton Prafanto, S.Kom., M.T.), dan Koordinator Prodi (Bapak Awang Harsa Kridalaksana, S.Kom., M.Kom.) beserta NIP sudah tepat dan lengkap.
@@ -72,6 +72,8 @@ pie title Distribusi Status Kesiapan Naskah Revisi 2
 2. **Ketiadaan Subbab 1.7 Sistematika Penulisan:**
    * Bab I berakhir mendadak pada Subbab `1.6 Kontribusi Penelitian` di halaman 6.
    * *Kaidah FT UNMUL:* Bab I wajib ditutup dengan **`1.7 Sistematika Penulisan`** yang menguraikan secara ringkas kerangka Bab I (Pendahuluan), Bab II (Tinjauan Pustaka), Bab III (Metodologi Penelitian), rencana Bab IV (Hasil dan Pembahasan), dan Bab V (Kesimpulan dan Saran).
+3. **Inkonsistensi Frasa Judul:**
+   * Pada judul Cover tertulis `MINI GAME` (dua kata tanpa tanda hubung), sedangkan pada paragraf penutup latar belakang (hal. 4), batasan masalah (hal. 5), dan 42 tempat lainnya di naskah konsisten tertulis `mini-game` (dengan tanda hubung). Seragamkan menjadi `MINI-GAME`.
 
 ---
 
@@ -79,7 +81,11 @@ pie title Distribusi Status Kesiapan Naskah Revisi 2
 1. **Tabel 2.1 (Matriks Perbandingan SOTA, Hal. 11–12):**
    * Tata letak *floating table* yang sebelumnya melompati subbab telah sembuh total. Baris 1–8 berada di hal. 11 dan baris 9–10 tersambung rapi di puncak hal. 12.
    * *Konsistensi Redaksional:* Pada baris 8 (Bata & Defira, 2023), kolom metode menyebut *"enam state perilaku"*. Sesuaikan menjadi *"empat (4) state perilaku"* agar selaras dengan pemodelan Behavior Tree di Bab III.
-2. **Rumus Matematika Rata-Rata UAT (Subbab 2.9, Hal. 19 / PDF Hal. 31):**
+2. **Atribusi Sumber Gambar 2.1, Gambar 2.2, & Tabel 2.2:**
+   * **Gambar 2.1 (Struktur Dasar Behavior Tree, Hal. 15):** Wajib diberi sumber pada caption: `(Sumber: Diadaptasi dari Iovino et al., 2022)`.
+   * **Gambar 2.2 (Tahapan GDLC, Hal. 17):** Wajib diberi sumber: `(Sumber: Diadaptasi dari Ramadan & Widyani, 2013 / Ardiansyah et al., 2024)`.
+   * **Tabel 2.2 (Interpretasi Nilai UAT, Hal. 20):** Wajib diberi sumber acuan kategori Likert: `(Sumber: Sugiyono, 2018)`.
+3. **Rumus Matematika Rata-Rata UAT (Subbab 2.9, Hal. 19 / PDF Hal. 31):**
    * Formula perhitungan skor rata-rata UAT:
      $$\bar{x} = \frac{\sum x}{n}$$
      belum dilengkapi dengan nomor label persamaan di margin kanan. Berikan label resmi **`(Persamaan 2.1)`** atau **`(2.1)`**.
@@ -93,30 +99,37 @@ pie title Distribusi Status Kesiapan Naskah Revisi 2
 2. **Formula Piecewise Kepanikan NPC (Subbab 3.4.1, Hal. 28 / PDF Hal. 40):**
    * Formula logika kepanikan NPC:
      $$IsPanicLevelHigh = \begin{cases} True, & \text{jika } FireDistance \le 5\text{ meter atau } SimulationTime \le 60\text{ detik} \\ False, & \text{lainnya} \end{cases}$$
-     belum diberi nomor label persamaan. Berikan label **`(Persamaan 3.1)`** atau **`(3.1)`** di margin kanan.
-   * Posisikan kata `Keterangan:` **setelah** rumus, bukan sebelum rumus.
+     belum diberi nomor label persamaan. Berikan label **`(Persamaan 3.1)`** atau **`(3.1)`** di margin kanan. Posisikan kata `Keterangan:` **setelah** rumus.
 3. **Pengujian Black Box Testing (Tabel 3.6, Hal. 35):**
    * Tabel 3.6 memuat 8 skenario pengujian fungsional (Aktivasi simulasi, deteksi alarm, Idle, Evakuasi, Menunggu bantuan, Mengikuti pemain, Penggunaan APAR, dan Penyelesaian evakuasi).
    * *Catatan Kritis Penguji:* Kedelapan skenario ini baru menguji alur positif (*happy path*). Pada skripsi penuh (Bab IV), mahasiswa wajib menyiapkan skenario pengujian negatif/ekstrem (*edge cases*), seperti kegagalan *pathfinding* saat jalur terblokir api total atau batas tepat angka 5 meter / 60 detik.
 4. **Pengujian User Acceptance Testing (Tabel 3.7 & 3.8, Hal. 36–37):**
-   * Instrumen Skala Likert 5 tingkat dan 10 butir pertanyaan kuesioner pengalaman pengguna sudah sangat representatif mengukur kejelasan tujuan, respons NPC, alur evakuasi, dan edukasi APAR pada 20–30 responden mahasiswa FT UNMUL.
+   * Instrumen Skala Likert 5 tingkat dan 10 butir pernyataan kuesioner pengalaman pengguna sudah sangat representatif mengukur kejelasan tujuan, respons NPC, alur evakuasi, dan edukasi APAR pada 20–30 responden mahasiswa FT UNMUL.
+5. **Jadwal Penelitian (Tabel 3.9, Hal. 38):**
+   * Kolom bulan ketiga tertulis `Agust`, seragamkan singkatan menjadi `Agt` atau `Agu` agar konsisten dengan `Jun`, `Jul`, `Sept`, `Okt`, `Nov`, `Des`.
 
 ---
 
-### E. Forensik Daftar Pustaka (Hal. 39–42 / PDF Hal. 51–54)
-Dari 37 entri referensi yang terdaftar, audit forensik menemukan 5 anomali bawaan *reference manager* (Mendeley/Zotero):
-1. **Pustaka Marchelputra dkk. (2023) (Hal. 40):**
+### E. Forensik Tipografi Font & Metadata Reference Manager
+Audit forensik menemukan ketidakkonsistenan font dokumen yang sangat masif akibat *copy-paste* dan *default style* plugin Mendeley:
+1. 🚨 **Seluruh Daftar Pustaka (Hal. 39–42 / PDF Hal. 51–54) Ber-font CALIBRI (11 pt):**
+   * Dari 37 entri rujukan, seluruh isi pustaka terformat menggunakan font **Calibri dan Calibri-Italic** bawaan Mendeley, bukan **Times New Roman 12 pt**. Mahasiswa wajib menyeleksi seluruh teks Daftar Pustaka dan mengubahnya ke Times New Roman 12 pt spasi tunggal dengan *hanging indent*.
+2. 🚨 **Seluruh Nomor Halaman Naskah Ber-font CALIBRI:**
+   * Nomor halaman romawi (hal. i–xi) dan angka arab (hal. 1–42) di footer tercetak dengan font **Calibri / Calibri-Italic 11 pt**. Wajib diubah ke **Times New Roman 12 pt**.
+3. **Tabel-tabel Ber-font ARIAL & CALIBRI:**
+   * Teks di dalam sel Tabel 2.1, 2.2, 3.1–3.4, dan 3.6–3.9 terdeteksi bercampur font Arial dan Calibri. Seragamkan seluruh isi tabel ke Times New Roman (ukuran 10–11 pt diperbolehkan untuk tabel agar rapi).
+4. **Anomali Pengarang Fiktif Marchelputra dkk. (2023) (Hal. 40):**
    * Tertulis: `Marchelputra, T. S., Haryanto, H., Hastuti, K., Kadiasti, R., Nuswantoro Semarang, D., & Dian Nuswantoro Semarang, U. (2023)...`
    * *Koreksi:* Hapus `Nuswantoro Semarang, D.` dan `Dian Nuswantoro Semarang, U.` dari Mendeley. Itu adalah nama kampus *Universitas Dian Nuswantoro Semarang* (UDINUS) yang salah diurai menjadi dua pengarang oleh *parser* metadata.
-2. **Pustaka Lee dkk. (2024) (Hal. 40):**
-   * Tertulis teks Hangul Korea: `미디어소프트웨어학과성결대학교`. Hapus teks tersebut di Mendeley. Di teks naskah (hal. 8), ganti sitasi dari `(Lee et al., 2024)` menjadi **`(Lee & Kim, 2024)`** karena penulis aslinya hanya berdua (*Jung-Min Lee & Jin-Young Kim*).
-3. **Pustaka Wulandari (2023) (Hal. 40):**
+5. **Residu Aksara Korea pada Pustaka Lee dkk. (2024) (Hal. 40):**
+   * Tertulis teks Hangul Korea: `미디어소프트웨어학과성결대학교` (terformat font Malgun Gothic). Hapus teks tersebut di Mendeley. Di teks naskah (hal. 8), ganti sitasi dari `(Lee et al., 2024)` menjadi **`(Lee & Kim, 2024)`** karena penulis aslinya hanya berdua (*Jung-Min Lee & Jin-Young Kim*).
+6. **Pustaka Wulandari (2023) (Hal. 40):**
    * *Urutan Abjad:* Terselip di antara `Fu` dan `Huang`. Pindahkan ke bawah abjad **W**.
    * *Metadata Hilang:* Hanya tertulis `4(1), 20–27.` tanpa nama jurnal. Lengkapi menjadi: *Jurnal Mahasiswa Ilmu Komputer (JMIK)*, Vol. 4, No. 1, hlm. 20–27. DOI: `10.24127/ilmukomputer.v4i1.3383`.
-4. **Metadata Jurnal Hilang pada Ardiansyah & Menora:**
+7. **Metadata Jurnal Hilang pada Ardiansyah & Menora:**
    * **Ardiansyah dkk. (2024) (Hal. 39):** Lengkapi nama jurnal: *Format: Jurnal Ilmiah Teknik Informatika*, Vol. 13, No. 1, hlm. 66–78.
    * **Menora dkk. (2023) (Hal. 40):** Lengkapi nama jurnal: *KONSTELASI: Konvergensi Teknologi dan Sistem Informasi*, Vol. 3, No. 1, hlm. 24–35.
-5. **Pustaka Berita BPBD DKI (Hal. 39):**
+8. **Pustaka Berita BPBD DKI (Hal. 39):**
    * Tertulis judul berita sebagai pengarang dengan tahun `(N.D.)`. Ubah di Mendeley menjadi pengarang korporat: `BPBD DKI Jakarta. (2025). BPBD DKI Catat 1.810 Bencana Terjadi Sepanjang 2024...` agar klop dengan sitasi di Bab I.
 
 ---
@@ -156,6 +169,11 @@ Dosen Pembimbing membekali mahasiswa dengan argumentasi ilmiah tangguh untuk men
 
 Gunakan daftar centang berikut untuk merapikan berkas di Microsoft Word dalam waktu 15–20 menit sebelum mencetak naskah:
 
+- [ ] **Standardisasi Font Seluruh Naskah (Times New Roman 12 pt):**
+  - Ubah seluruh teks Daftar Pustaka (hal. 39–42) dari font **Calibri 11 pt** ke **Times New Roman 12 pt**.
+  - Ubah format nomor halaman di Header/Footer dari **Calibri 11 pt** ke **Times New Roman 12 pt**.
+  - Ubah teks dalam tabel (Tabel 2.1 s.d. 3.9) dari font **Arial/Calibri** ke **Times New Roman** (ukuran 10–11 pt).
+  - Ubah sitasi yang terselip font Calibri di teks naskah (hal. 3 dan hal. 11) ke Times New Roman.
 - [ ] **Halaman Judul (Hal. i):** Hapus teks `HALAMAN JUDUL` di bawah judul proposal; hilangkan nomor romawi `i` dari sudut kanan bawah.
 - [ ] **Halaman Pengesahan (Hal. ii):** Hapus teks `HALAMAN PENGESAHAN`; ganti placeholder `[tgl, bln, tahun]` dengan tanggal persetujuan resmi (misal: `15 September 2026`).
 - [ ] **Kata Pengantar (Hal. iii):** Ganti kata *"kami"* menjadi **`penulis`** atau **`saya`**; ganti kata *"masukkan"* menjadi **`masukan`** pada butir 4 & 5.
@@ -166,8 +184,10 @@ Gunakan daftar centang berikut untuk merapikan berkas di Microsoft Word dalam wa
   - Halaman lanjutan BAB: letak nomor halaman di **Kanan Atas**.
 - [ ] **Bab I (Hal. 6):** Tambahkan **`Subbab 1.7 Sistematika Penulisan`** yang merangkum alur Bab I s.d. Bab V.
 - [ ] **Bab II (Hal. 11):** Pada Tabel 2.1 baris 8 (Bata & Defira), ubah frasa *"enam state"* menjadi *"empat (4) state"*.
+- [ ] **Bab II (Hal. 15, 17, 20):** Cantumkan sumber rujukan pada Gambar 2.1 (`Iovino et al., 2022`), Gambar 2.2 (`Ramadan & Widyani, 2013`), dan Tabel 2.2 (`Sugiyono, 2018`).
 - [ ] **Bab II (Hal. 19):** Berikan nomor label persamaan **`(Persamaan 2.1)`** pada rumus rata-rata UAT di margin kanan.
 - [ ] **Bab III (Hal. 28):** Berikan nomor label persamaan **`(Persamaan 3.1)`** pada formula kepanikan piecewise NPC di margin kanan; pindahkan kata `Keterangan:` ke bawah rumus.
+- [ ] **Bab III (Hal. 38):** Singkatan kolom bulan pada Tabel 3.9 diubah dari `Agust` menjadi `Agt` atau `Agu`.
 - [ ] **Daftar Pustaka — Marchelputra (2023):** Hapus pengarang fiktif `Nuswantoro Semarang, D.` dan `Dian Nuswantoro Semarang, U.` di Mendeley.
 - [ ] **Daftar Pustaka — Lee (2024):** Hapus teks Hangul Korea di Mendeley; ubah sitasi di teks (hal. 8) menjadi `(Lee & Kim, 2024)`.
 - [ ] **Daftar Pustaka — Wulandari (2023):** Pindahkan posisi entri ke urutan abjad huruf **W**; lengkapi nama jurnal: *Jurnal Mahasiswa Ilmu Komputer (JMIK)*, 4(1), 20–27.
@@ -190,27 +210,32 @@ Gunakan daftar centang berikut untuk merapikan berkas di Microsoft Word dalam wa
 ```text
 Wa'alaikumsalam wr. wb. Ahmad Dhafin,
 
-Saya sudah memeriksa naskah proposal skripsi revisi 2 kamu secara mendalam.
+Saya sudah memeriksa naskah proposal skripsi revisi 2 kamu secara mendalam hingga ke level tipografi font dan metadata rujukan.
 
 Secara substansi akademik dan keilmuan Informatika (Behavior Tree, alur GDLC, script Luau server-side 0.2s tick rate, serta pengujian Black Box & UAT), proposal kamu SUDAH SANGAT BAIK, SOLID, DAN MEMENUHI STANDAR KELAYAKAN S1 INFORMATIKA. Perbaikan lembar pengesahan, kata pengantar, Tabel 2.1, dan jadwal penelitian Tabel 3.9 juga sudah rapi.
 
 Dengan ini proposal skripsi kamu RESMI SAYA NYATAKAN ACC UNTUK DAFTAR SEMINAR PROPOSAL SKRIPSI.
 
-Sebagai bekal agar naskah fisik yang kamu serahkan ke Dewan Penguji benar-benar 'zero-defect' dan bebas dari kritikan formalia, tolong luangkan waktu 15–20 menit di Word untuk menuntaskan checklist mikro berikut sebelum dicetak:
+Sebagai bekal agar naskah fisik yang kamu serahkan ke Dewan Penguji benar-benar 'zero-defect' dan bebas dari sasaran koreksi formalia, tolong luangkan waktu 15–20 menit di Word untuk menuntaskan checklist mikro berikut sebelum dicetak:
 
-1. Lembar Pengesahan (Hal. ii): Ganti teks '[tgl, bln, tahun]' dengan tanggal persetujuan (misal: 15 September 2026). Hapus tulisan 'HALAMAN PENGESAHAN' & 'HALAMAN JUDUL' yang tercetak di bawah judul proposal.
-2. Penomoran Halaman (Pedoman FT UNMUL): Aktifkan opsi 'Different First Page' di Word. Ingat: Halaman awal BAB nomornya wajib di TENGAH BAWAH, sedangkan halaman lanjutan BAB nomornya di KANAN ATAS (saat ini naskahmu semuanya masih di kanan bawah). Halaman Judul tidak boleh mencetak angka 'i'.
-3. Rumus Matematika: Berikan nomor persamaan rata kanan pada rumus UAT Bab 2 (Persamaan 2.1) dan rumus piecewise kepanikan Bab 3 (Persamaan 3.1).
-4. Bab I: Tambahkan Subbab 1.7 Sistematika Penulisan di akhir Bab I (ringkasan alur Bab I s.d. Bab V).
-5. Daftar Lampiran (Hal. viii): Saat ini tertulis 'Lampiran 1 contents 42' padahal lampirannya belum ada. Lampirkan draf kuesioner UAT sebagai Lampiran 1, atau jika belum ada, hapus saja halaman Daftar Lampiran tersebut.
-6. Daftar Pustaka (Mendeley):
+1. STANDARISASI FONT (Wajib Times New Roman):
+   - Seluruh teks Daftar Pustaka (hal. 39–42) saat ini masih ber-font Calibri 11 pt bawaan Mendeley. Blok semua dan ubah ke Times New Roman 12 pt spasi tunggal.
+   - Nomor halaman di Header/Footer ubah ke Times New Roman 12 pt (saat ini masih Calibri 11 pt).
+   - Teks di dalam tabel (Tabel 2.1 s.d. 3.9) ubah dari Arial/Calibri ke Times New Roman.
+2. Lembar Pengesahan (Hal. ii): Ganti teks '[tgl, bln, tahun]' dengan tanggal persetujuan (misal: 15 September 2026). Hapus tulisan 'HALAMAN PENGESAHAN' & 'HALAMAN JUDUL' yang tercetak di bawah judul proposal.
+3. Penomoran Halaman (Pedoman FT UNMUL): Aktifkan opsi 'Different First Page' di Word. Ingat: Halaman awal BAB nomornya wajib di TENGAH BAWAH, sedangkan halaman lanjutan BAB nomornya di KANAN ATAS (saat ini naskahmu semuanya masih di kanan bawah). Halaman Judul tidak boleh mencetak angka 'i'.
+4. Rumus Matematika: Berikan nomor persamaan rata kanan pada rumus UAT Bab 2 (Persamaan 2.1) dan rumus piecewise kepanikan Bab 3 (Persamaan 3.1).
+5. Bab I: Tambahkan Subbab 1.7 Sistematika Penulisan di akhir Bab I (ringkasan alur Bab I s.d. Bab V).
+6. Atribusi Gambar & Tabel Bab 2: Berikan sumber rujukan di caption Gambar 2.1 (Iovino et al., 2022), Gambar 2.2 (Ramadan & Widyani, 2013), dan Tabel 2.2 (Sugiyono, 2018).
+7. Daftar Lampiran (Hal. viii): Saat ini tertulis 'Lampiran 1 contents 42' padahal lampirannya belum ada. Lampirkan draf kuesioner UAT sebagai Lampiran 1, atau jika belum ada, hapus saja halaman Daftar Lampiran tersebut.
+8. Daftar Pustaka (Mendeley):
    - Marchelputra (2023): Hapus pengarang fiktif 'Nuswantoro Semarang, D.' dan 'Dian Nuswantoro Semarang, U.' (itu nama kampus UDINUS yang keliru masuk jadi pengarang).
    - Lee (2024): Hapus teks aksara Korea di Mendeley, dan sitasi di teks cukup (Lee & Kim, 2024).
    - Pindahkan pustaka Wulandari (2023) ke bawah huruf 'W' (saat ini masih di antara Fu dan Huang).
    - Lengkapi nama jurnal: Wulandari (JMIK), Ardiansyah (Format), dan Menora (KONSTELASI).
-7. Di Tabel 2.1 nomor 8, ganti kata 'enam state' menjadi 'empat state'.
+9. Di Tabel 2.1 nomor 8, ganti kata 'enam state' menjadi 'empat state'.
 
-Silakan diselesaikan checklist mikro tersebut di Word, siapkan lembar pengesahan untuk ditandatangani, dan segera daftarkan berkasnya ke prodi untuk penjadwalan ujian Seminar Proposal ya. Pelajari juga argumen teknis Behavior Tree vs FSM yang sudah saya siapkan. Selamat dan sukses menuju Sempro!
+Silakan diselesaikan checklist mikro tersebut di Word, siapkan lembar pengesahan untuk ditandatangani, dan segera daftarkan berkasnya ke prodi untuk penjadwalan ujian Seminar Proposal ya. Pelajari juga argumen teknis Behavior Tree vs FSM yang sudah saya siapkan di laporan bimbingan. Selamat dan sukses menuju Sempro!
 ```
 
 ---
