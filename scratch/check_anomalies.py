@@ -30,3 +30,4 @@ for pat in patterns:
         end = min(len(text), m.end() + 30)
         snippet = text[start:end].replace('\n', ' ')
         print(f'   -> ...{snippet}...')
+
