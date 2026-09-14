@@ -1,0 +1,2370 @@
+=== PAGE 1 ===
+ 
+ 
+ 
+ 
+ 
+PROPOSAL SKRIPSI 
+ 
+ 
+ 
+RANCANG BANGUN SISTEM MONITORING KUALITAS 
+AIR SUNGAI MAHAKAM BERBASIS INTERNET OF 
+THINGS MENGGUNAKAN ESP32 DENGAN METODE 
+FUZZY MAMDANI 
+ 
+ 
+ 
+ 
+ 
+ 
+Oleh: 
+ 
+MUHAMMAD KHAIRRUDIN 
+2209106128 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+FAKULTAS TEKNIK 
+UNIVERSITAS MULAWARMAN 
+ 
+ 
+ 
+SAMARINDA 
+<TAHUN SEKARANG> 
+
+
+=== PAGE 2 ===
+ 
+1 
+PROPOSAL SKRIPSI 
+ 
+ 
+RANCANG BANGUN SISTEM MONITORING KUALITAS 
+AIR SUNGAI MAHAKAM BERBASIS INTERNET OF 
+THINGS MENGGUNAKAN ESP32 DENGAN METODE 
+FUZZY MAMDANI 
+HALAMAN JUDUL 
+ 
+ 
+ 
+Diajukan sebagai salah satu syarat untuk menyelesaikan pendidikan  
+pada Program Studi Strata 1 Informatika,  
+Fakultas Teknik, Universitas Mulawarman 
+ 
+ 
+ 
+Oleh: 
+ 
+Muhammad Khairrudin 
+2209106128 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+FAKULTAS TEKNIK 
+UNIVERSITAS MULAWARMAN 
+ 
+ 
+ 
+ 
+SAMARINDA 
+<TAHUN SEKARANG> 
+ 
+ 
+
+
+=== PAGE 3 ===
+ 
+2 
+ 
+PROPOSAL SKRIPSI 
+ 
+RANCANG BANGUN SISTEM MONITORING KUALITAS 
+AIR SUNGAI MAHAKAM BERBASIS INTERNET OF 
+THINGS MENGGUNAKAN ESP32 DENGAN METODE   
+FUZZY MAMDANIAN PENGESAHAN 
+ 
+ 
+Oleh: 
+MUHAMMAD KHAIRRUDIN 
+2209106128 
+ 
+ 
+ 
+Telah dibahas dalam Rapat Dosen Pembimbing pada [tgl, bln, tahun] dan 
+dinyatakan memenuhi syarat sebagai Skripsi, dengan Dosen Pembimbing: 
+ 
+I. Reza Wardhana, S.Kom., M.Eng  
+II. Anton Prafanto, S.Kom.,MT 
+ 
+ 
+ 
+ 
+Koordinator Program Studi S1 Informatika, 
+Fakultas Teknik, Universitas Mulawarman, 
+ 
+ 
+ 
+Awang Harsa Kridalaksana, S.Kom., M.Kom. 
+NIP 19731229 200501 1 002  
+
+=== PAGE 4 ===
+ 
+3 
+KATA PENGANTAR 
+Puji syukur ke hadirat Allah SWT, Tuhan Yang Maha Esa, karena atas rahmat dan 
+karunia-Nya Penulis dapat menyelesaikan proposal skripsi dengan judul RANCANG 
+BANGUN SISTEM MONITORING KUALITAS AIR SUNGAI MAHAKAM 
+BERBASIS INTERNET OF THINGS MENGGUNAKAN ESP32 DENGAN 
+METODE FUZZY MAMDANI. Proposal ini disusun sebagai salah satu tahapan dalam 
+menyelesaikan skripsi pada Fakultas Teknik, Universitas Mulawarman. 
+Oleh karena itu, pada kesempatan ini kami ingin mengucapkan terima kasih kepada 
+semua pihak yang telah mendukung serta membantu saya selama proses penyusunan 
+proposal skripsi, kepada: 
+1. Orang tua dan Saudara-saudara saya atas do’a, bimbingan serta kasih sayangnya. 
+2. Prof. Dr. Ir. H. Tamrin, S.T., M.T., IPU., ASEAN Eng., APEC Eng.,  selaku 
+Dekan Fakultas Teknik, Universitas Mulawarman. 
+3. Awang Harsa Kridalaksana, S.Kom., M.Kom.,  selaku Koordinator Program 
+Studi Informatika. 
+4. Reza Wardhana, S.Kom., M.Eng.,  selaku Dosen Pembimbing I, serta Anton 
+Prafanto, S.Kom., M.T.,  selaku Dosen Pembimbing II, atas arahan dan 
+masukan selama penyusunan proposal ini. 
+5. Nama dan gelar akademik Dosen Pembimbing II selaku Pembimbing II atas 
+masukkan terhadap penelitian ini  
+6. Nama dan gelar akademik Dosen Penguji I selaku Penguji I atas saran dan 
+masukkan terhadap penelitian ini. 
+7. Nama dan gelar akademik Dosen Penguji II selaku Penguji II atas saran dan 
+masukkan terhadap penelitian ini. 
+8. Segenap Dosen Program Studi Informatika, yang telah memberikan ilmu 
+pengetahuan selama mengikuti perkuliahan. 
+9. Rekan-rekan seperjuangan yang terus memberikan dukungan semangat demi 
+terselesainya tugas ini. 
+Saya menyadari bahwa proposal skripsi ini tidak luput dari berbagai kekurangan. Oleh 
+karena itu, semua kritik dan saran yang bersifat memperbaiki demi kesempurnaan 
+sangat diharapkan. 
+Samarinda,.............................. 2024 
+ 
+Penulis 
+ 
+ 
+
+=== PAGE 5 ===
+ 
+4 
+DAFTAR ISI 
+ 
+halaman 
+HALAMAN JUDUL ...................................................................................................... 1 
+KATA PENGANTAR ................................................................................................... 3 
+DAFTAR ISI ................................................................................................................. 4 
+DAFTAR TABEL ......................................................................................................... 6 
+DAFTAR GAMBAR ..................................................................................................... 7 
+DAFTAR LAMPIRAN ................................................................................................. 8 
+DAFTAR ISTILAH/LAMBANG ................................................................................ 9 
+DAFTAR SINGKATAN ............................................................................................. 10 
+BAB I PENDAHULUAN .............................................................................................. 3 
+1.1 Latar Belakang ........................................................................................................... 3 
+1.2 Rumusan Masalah ...................................................................................................... 6 
+1.3 Batasan Masalah ........................................................................................................ 7 
+1.4 Tujuan Penelitian ....................................................................................................... 8 
+1.5 Manfaat Penelitian .................................................................................................... 9 
+1.6  Kontribusi Penelitian .................................................................................................. 9 
+BAB II TINJAUAN PUSTAKA ................................................................................ 11 
+2.1 Penelitian Terkait ..................................................................................................... 11 
+2.2 Internet of Things (IoT) ............................................................................................ 25 
+2.3 Mikrokontrol ESP32 ................................................................................................. 26 
+2.4 Sensor Pengukuran Parameter Kualitas Air ............................................................. 27 
+2.4.1  Sensor pH (PH-4502C) ................................................................................. 27 
+2.4.2  Sensor Suhu Air (DS18B20) ........................................................................ 28 
+2.4.3  Sensor Suhu Udara (DHT22) ...................................................................... 28 
+2.4.4  Sensor Kekeruhan (Turbidity) .................................................................... 29 
+2.5 Logika Fuzzy (Fuzzy Logic) ........................................................................................ 30 
+2.5.1  Fuzzy Inference System Mamdani ............................................................. 30 
+2.6 Baku Mutu Air .......................................................................................................... 32 
+2.6.1 Peraturan Pemerintah Nomor 22 Tahun 2021 .......................................... 32 
+2.6.2 Peraturan Menteri Kesehatan Nomor 2 Tahun 2023 ................................ 32 
+2.6.3 Keterbatasan Acuan yang Digunakan ........................................................ 33 
+2.7 Firebase ................................................................................................................... 33 
+2.8 Flowchart ................................................................................................................. 34 
+BAB III METODOLOGI PENELITIAN ................................................................. 36 
+3.1 Tahapan Pelaksanaan Penelitian.............................................................................. 36 
+3.2  Pengumpulan Data .................................................................................................. 39 
+3.3 Perancangan Data .................................................................................................... 39 
+3.3.1 Jenis Data dan Bentuk Data ........................................................................ 40 
+3.3.2 Proses Pengolahan Data menjadi Selisih Suhu (ΔT) ................................. 41 
+3.4  Perancangan Proses/Algoritma ................................................................................ 42 
+3.4.1 Kebutuhan Perangkat Keras ....................................................................... 42 
+3.4.2 Wiring Diagram Sensor dan ESP32 ............................................................ 44 
+3.4.3 Kebutuhan Perangkat Lunak ...................................................................... 45 
+3.4.4 Alur Kerja Sistem ......................................................................................... 46 
+3.4.5  Alur Kerja Fuzzy .......................................................................................... 47 
+
+=== PAGE 6 ===
+ 
+5 
+3.4.6 Perancangan Data yang Dikirim dan Disimpan ........................................ 52 
+3.5  Perancangan Tampilan............................................................................................. 52 
+3.5.1 Tampilan OLED dan Indikator LED ......................................................... 53 
+3.5.2 Tampilan Dashboard Web ........................................................................... 53 
+3.6  Perancangan Pengujian............................................................................................ 55 
+3.7  Waktu dan Tempat Penelitian ................................................................................. 56 
+DAFTAR PUSTAKA .................................................................................................. 58 
+LAMPIRAN ................................................................................................................ 62 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+=== PAGE 7 ===
+ 
+6 
+ 
+ 
+ 
+ 
+DAFTAR TABEL 
+Halaman 
+Tabel 2. 1 Simbol-Simbol Flowchart....................................................................................... 35 
+Tabel 3. 1 Kebutuhan Perangkat Keras 42 
+Tabel 3. 2 Konfigurasi Pin Sensor dengan ESP32 DevKit V1 .............................................. 44 
+Tabel 3. 3 Kebutuhan Perangkat Lunak ................................................................................ 45 
+Tabel 3. 4 Himpunan Fuzzy Variabel Input dan Output ...................................................... 48 
+Tabel 3. 5 Basis Aturan Fuzzy Mamdani ............................................................................... 49 
+Tabel 3. 6 Struktur Data yang Dikirimkan ke Firebase ........................................................ 52 
+Tabel 3. 7 Skenario Pengujian Sistem .................................................................................... 55 
+Tabel 3. 8 Jadwal Penelitian .................................................................................................... 56 
+ 
+ 
+  
+
+=== PAGE 8 ===
+ 
+7 
+DAFTAR GAMBAR 
+ 
+ 
+Halaman 
+Gambar 2. 1 Modul ESP32 DevKit V1 ................................................................................... 26 
+Gambar 2. 2 Modul Sensor pH PH-4502C ............................................................................. 27 
+Gambar 2. 3 Sensor Suhu DS18B20 Waterproof ................................................................... 28 
+Gambar 2. 4 Modul Sensor DHT22 ........................................................................................ 29 
+Gambar 2. 5 Modul Sensor Turbidity Analog ....................................................................... 29 
+Gambar 3. 1 Tahapan Pelaksanaan Penelitian ...................................................................... 36 
+Gambar 3. 2 Wiring Diagram Sensor Dan ESP32 ................................................................. 44 
+Gambar 3. 3 Flowchart Sistem ................................................................................................ 47 
+Gambar 3. 4 Gambar Fungsi Keanggotaan Variabel pH ..................................................... 49 
+Gambar 3. 5 Keluaran Informasi Oled................................................................................... 53 
+Gambar 3. 6 Keluaran Informasi Aplikasi Website .............................................................. 54 
+ 
+ 
+  
+
+=== PAGE 9 ===
+ 
+8 
+DAFTAR LAMPIRAN 
+ 
+ 
+Halaman 
+Lampiran 1 contents 42 
+ 
+  
+
+=== PAGE 10 ===
+ 
+9 
+DAFTAR ISTILAH/LAMBANG 
+ 
+ 
+Arti 
+Contents  
+
+=== PAGE 11 ===
+ 
+10 
+DAFTAR SINGKATAN 
+ 
+ 
+Arti 
+Contents
+
+=== PAGE 12 ===
+ 
+3 
+ 
+BAB I PEND AHULU AN 
+PENDAHULUAN 
+ 
+ 
+1.1 Latar Belakang 
+Ketersediaan air bersih menjadi tolok ukur penting bagi kesejahteraan suatu 
+wilayah. Pertumbuhan penduduk, aktivitas industri, dan pembangunan di sepanjang 
+daerah aliran sungai memberi tekanan besar terhadap kualitas air, terutama akibat 
+limbah domestik dan buangan industri yang terus meningkat dari tahun ke tahun. 
+Kondisi ini menuntut hadirnya sistem pemantauan yang mampu bekerja secara 
+berkelanjutan dan memberi informasi cepat kepada pihak yang mengelola sumber daya 
+air (Pandey et al., 2023). 
+Sungai Mahakam menjadi salah satu sungai terbesar di Kalimantan Timur dengan 
+peran ganda: sumber air baku, jalur transportasi, sekaligus penopang ekonomi 
+masyarakat di sepanjang alirannya, termasuk Kota Samarinda. Beberapa penelitian 
+mencatat indikasi tekanan pencemaran pada sungai ini, di antaranya kadar amonia yang 
+melampaui ambang baku mutu pada beberapa stasiun pengamatan (Karnelia et al., 
+2023) serta status mutu air yang berfluktuasi antara kategori tercemar ringan hingga 
+berat berdasarkan pemantauan Stasiun KLHK 167 di kawasan PDAM Bakungan, 
+Samarinda (Faradilla et al., 2025). Kondisi ini menunjukkan bahwa pemantauan kualitas 
+air Sungai Mahakam masih menjadi kebutuhan yang relevan untuk terus dikembangkan. 
+Tekanan serupa turut ditemukan pada sungai lain di Kota Samarinda; studi indeks 
+kualitas air pada Sungai Karang Mumus melaporkan kondisi tergolong kurang, dengan 
+mayoritas titik pemantauan berstatus tercemar sedang hingga berat  (Pramaningsih et al., 
+2023). Fenomena serupa juga terjadi pada sungai besar lain di Indonesia, Seperti sungai 
+Citarum yang berdasarkan metode Indeks Pencemaran mengacu pada PP No. 22 Tahun 
+2021 tercatat dalam kategori tercemar ringan akibat parameter DO, BOD, COD dan  
+E.coli yang melebihi baku mutu (Kamila et al., 2024). 
+Metode pemantauan konvensional masih mengandalkan pengambilan sampel 
+manual yang dibawa ke laboratorium untuk diuji. Cara ini memakan waktu, 
+membutuhkan biaya operasional besar, dan tidak sanggup menangkap perubahan 
+
+=== PAGE 13 ===
+ 
+4 
+ 
+kondisi air secara real-time (de Camargo et al., 2023) . Di sisi lain, sistem Online 
+Monitoring (ONLIMO) milik pemerintah yang telah beroperasi di Stasiun KLHK 167 
+memperbarui datanya dengan interval minimal satu jam sekali (Faradilla et al., 2025) , 
+sementara parameter fisik seperti pH, suhu, dan kekeruhan dapat berubah dalam rentang 
+waktu yang jauh lebih singkat. Celah inilah yang menjadi fokus penelitian ini: bukan 
+pada parameter kimia kompleks seperti amonia atau Biochemical Oxygen Demand  
+(BOD) yang memerlukan reagen dan pengujian laboratorium, melainkan pada 
+parameter fisik yang dapat diukur secara langsung menggunakan sensor berbiaya rendah 
+namun masih jarang dipantau dengan frekuensi yang cukup rapat. 
+Teknologi Internet of Things  (IoT) menawarkan jalan keluar dari keterbatasan 
+tersebut. Sensor yang terhubung ke jaringan internet memungkinkan data terekam 
+secara otomatis, terus -menerus, dan dapat dipantau dari jarak jauh (de Camargo et al., 
+2023). Data sensor pada dasarnya berupa angka mentah yang belum tentu langsung 
+dipahami sebagai status kualitas air. Logika fuzzy mengisi celah ini sebagai metode 
+pengambilan keputusan yang mampu menerjemahkan ketidakpastian numerik ke dalam 
+kategori linguistik seperti "baik", "sedang", atau "buruk" (Zadeh et al., 1965) , dengan 
+proses akhir tetap menghasilkan nilai numerik tunggal ( crisp) yang kemudian dipetakan 
+ke kategori tersebut. Kombinasi fuzzy logic dan IoT untuk klasifikasi kualitas air ke 
+dalam tiga kategori serupa (baik, sedang, dan tidak sehat) telah terbukti efektif 
+memberikan status kesesuaian air secara real -time melalui perangkat yang terpasang 
+jarak jauh (Fakhrurroja et al., 2023). 
+Penentuan rentang nilai parameter dalam penelitian ini mengacu pada standar 
+yang tersedia, dengan mempertimbangkan keterbatasan masing -masing acuan. 
+(Sekretariat Negara Republik Indonesia, 2021) menetapkan rentang pH normal untuk air 
+sungai kelas II sebesar 6 hingga 9, serta ambang batas suhu berupa deviasi maksimal 
+3°C dari suhu udara di atas permukaan air; kelas II pada regulasi ini digunakan sebagai 
+acuan operasional untuk lokasi penelitian. Untuk parameter kekeruhan, karena PP 
+tersebut tidak mengatur secara eksplisit dalam satuan NTU, penelitian ini merujuk pada 
+ambang kekeruhan 3 NTU dari (Kementerian Kesehatan Republik Indonesia, 2023)   
+sebagai acuan operasional, bukan sebagai baku mutu resmi kelas sungai. Perlu dicatat 
+bahwa sensor kekeruhan berbasis fotodioda yang umum digunakan pada mikrokontroler 
+
+=== PAGE 14 ===
+ 
+5 
+ 
+hanya memberikan estimasi nilai kekeruhan berdasarkan tegangan keluaran, bukan 
+pengukuran presisi seperti turbidimeter standar, sehingga keterbatasan ini menjadi 
+bagian dari batasan penelitian. Sebagai gambaran, pengujian sensor kekeruhan sejenis 
+(Module SEN0189) terhadap 30 sampel air sungai menunjukkan rata -rata error sebesar 
+18,91% dibandingkan turbidimeter standar, sedangkan sensor suhu DS18B20 dan pH -
+4502C masing-masing menunjukkan error rata-rata sebesar 1,92% dan 6,85% (Latekeng 
+et al., 2024). Untuk memenuhi ketentuan deviasi suhu, sistem ini dilengkapi sensor suhu 
+udara sehingga selisih antara suhu air dan suhu udara dapat dihitung langsung sebagai 
+salah satu variabel input. 
+Metode fuzzy Mamdani dipilih dalam penelitian ini berdasarkan penerapannya 
+yang telah terbukti pada berbagai kasus pemantauan kualitas air berbasis IoT. (Elriyan, 
+2025)  menerapkannya untuk mengendalikan kualitas air minum dengan empat 
+parameter dan mencapai akurasi klasifikasi sebesar 90%, (Aristho umbu nggaba kaho et 
+al., 2025) memakainya untuk memantau kolam ikan nila guna mendeteksi kondisi tidak 
+ideal lebih dini, dan (Ayu Wulandari et al., 2024)  menunjukkan pendekatan serupa 
+efektif mengendalikan kadar oksigen serta pH pada tambak udang vaname. Ketiga 
+penelitian tersebut menjadi dasar utama pemilihan Mamdani untuk kasus kualitas air, 
+sementara studi lain yang membandingkan Mamdani dengan Sugeno dan Tsukamoto 
+pada domain berbeda turut memperkuat gambaran umum bahwa Mamdani cenderung 
+menghasilkan tingkat kesalahan yang lebih rendah pada kasus klasifikasi berbasis 
+aturan (Harliana et al., 2022) . Penerapan Mamdani untuk penentuan status mutu air 
+sungai turut dilaporkan berhasil mengklasifikasikan kondisi Sungai Kapuas ke dalam 
+empat kategori pencemaran dengan akurasi 88,89% dibandingkan metode STORET  
+(Hermansyah, 2022). 
+Perangkat keras yang dipilih untuk mendukung penerapan ini adalah 
+mikrokontroler ESP32, dipilih karena sudah dilengkapi modul WiFi bawaan, konsumsi 
+daya rendah, serta kemampuan pemrosesan yang cukup untuk menjalankan perhitungan 
+fuzzy Mamdani secara langsung tanpa bergantung pada server eksternal (Hercog et al., 
+2023). Sistem yang dibangun membaca nilai pH, suhu air, suhu udara, dan kekeruhan 
+pada satu titik pengamatan di aliran Sungai Mahakam, di sekitar kawasan Stasiun 
+KLHK 167/PDAM Bakungan, dengan interval pembacaan setiap lima menit sekali. 
+
+=== PAGE 15 ===
+ 
+6 
+ 
+Penerapan ESP32 pada sistem pemantauan kualitas air dengan sensor pH, suhu, dan 
+turbidity sejenis telah dilaporkan menghasilkan tingkat kesalahan pembacaan yang 
+rendah, yaitu di bawah 2% untuk pH dan suhu serta di bawah 3% untuk kekeruhan 
+(Helena Manurung et al., 2022) . Sistem sejenis dengan konfigurasi ESP32, sensor pH, 
+DS18B20, dan turbidity yang dilengkapi tampilan OLED turut melaporkan error rata -
+rata di bawah 5% untuk parameter suhu dan pH, meskipun sensor kekeruhan berbasis 
+fotodioda pada penelitian tersebut masih memerlukan kalibrasi lanjutan (Ismail et al., 
+2025). Tiga variabel, yaitu pH, selisih suhu air terhadap suhu udara, dan kekeruhan, 
+diolah menggunakan metode fuzzy Mamdani untuk menghasilkan status akhir berupa 
+baik, sedang, atau buruk. 
+Penelitian ini mengangkat judul "Rancang Bangun Sistem Monitoring Kualitas 
+Air Sungai Mahakam Berbasis Internet of Things Menggunakan ESP32 dengan Metode 
+Fuzzy Mamdani", dengan cakupan sebagai purwarupa pemantauan pada satu titik lokasi 
+yang bersifat melengkapi pemantauan yang sudah ada, bukan menggantikan sistem 
+resmi seperti ONLIMO. Sistem ini diharapkan dapat mendeteksi perubahan parameter 
+fisik air secara lebih sering dibandingkan metode pengambilan sampel manual maupun 
+pembaruan data ONLIMO, serta menyajikan hasil klasifikasi kualitas air yang mudah 
+dipahami sebagai informasi tambahan bagi pemantauan Sungai Mahakam di titik lokasi 
+penelitian. 
+1.2 Rumusan Masalah 
+Berdasarkan latar belakang penelitian, maka yang menjadi rumusan masalah 
+dalam penelitian ini adalah: 
+1. Bagaimana merancang dan membangun perangkat keras sistem monitoring 
+kualitas air Sungai Mahakam berbasis Internet of Things menggunakan 
+mikrokontroler ESP32 yang mampu membaca dan mengirimkan data mentah 
+parameter pH, suhu  air, suhu udara dan kekeruhan secara real-time setiap lima 
+menit sekali? 
+2. Bagaimana mengolah data mentah tersebut menggunakan metode Fuzzy 
+Mamdani sehingga dapat mengklasifikasikan status kualitas air Sungai 
+Mahakam menjadi kategori baik, sedang, atau buruk? 
+
+=== PAGE 16 ===
+ 
+7 
+ 
+3. Bagaimana menampilkan nilai pH, suhu air, suhu udara, kekeruhan, dan hasil 
+klasifikasi kualitas air melalui OLED serta indikator LED, dan menyimpan data 
+hasil pembacaan sensor beserta klasifikasinya secara offline melalui MicroSD 
+dan online melalui Firebase? 
+4. Bagaimana kinerja sistem yang dibangun, dilihat dari tingkat kesalahan 
+pembacaan sensor terhadap alat acuan, kesesuaian hasil klasifikasi fuzzy 
+program dengan perhitungan manual, serta ketepatan interval pembacaan dan 
+pengiriman data? 
+ 
+1.3 Batasan Masalah 
+Penelitian ini disusun berdasarkan data -data yang diperoleh. Luasnya bidang yang 
+dihadapi membuat penelitian ini harus dibatasi. Ruang lingkup masalah dibatasi pada: 
+1. Parameter kualitas air yang diukur langsung oleh sensor pada penelitian ini 
+terbatas pada pH, suhu air, suhu udara (sebagai acuan perhitungan selisih suhu ), 
+dan kekeruhan, tanpa mencakup parameter kimia lain seperti BOD, COD, 
+amonia, atau logam berat. 
+2. Parameter tambahan seperti TDS, apabila diperlukan sebagai data pembanding 
+atau pelengkap, diperoleh dari data sekunder Stasiun ONLIMO KLHK 167, 
+bukan diukur langsung oleh sensor pada alat yang dibangun. 
+3. Sistem monitoring menggunakan mikrokontroler ESP32 sebagai pengendali 
+utama, dengan sensor pH, suhu (DS18B20),  suhu udara (DHT22), dan turbidity 
+yang dipasang pada satu titik pengambilan sampel di aliran Sungai Mahakam 
+Kota Samarinda, dengan interval pembacaan dan pengiriman data setiap lima 
+menit sekali. 
+4. Metode klasifikasi kualitas air menggunakan logika fuzzy Mamdani, dengan 
+acuan rentang nilai berdasarkan PP No. 22 Tahun 2021 dan Permenkes No. 2 
+Tahun 2023, tanpa membandingkan performa terhadap metode fuzzy lain seperti 
+Sugeno atau Tsukamoto secara implementatif. 
+5. Hasil pembacaan sensor (pH, suhu air, suhu udara, kekeruhan) beserta hasil 
+klasifikasi kualitas air ditampilkan secara bersamaan melalui OLED display, 
+
+=== PAGE 17 ===
+ 
+8 
+ 
+sementara indikator LED (hijau, kuning, merah) dan buzzer hanya 
+merepresentasikan hasil klasifikasi akhir sebagai peringatan dini. 
+6. Data disimpan secara ganda: seluruh data mentah hasil pembacaan sensor 
+beserta hasil klasifikasi dan timestamp disimpan secara offline pada modul 
+MicroSD sebagai cadangan lokal, sekaligus dikirimkan secara online ke 
+platform Firebase agar dapat diakses dan dipantau dari jarak jauh secara real -
+time. Firebase dipilih karena arsitekturnya yang mampu menyampaikan 
+informasi secara real -time dengan latensi rendah, sebagaimana telah dibuktikan 
+pada penerapan serupa untuk pengiriman data pada aplikasi mobile (Sugiyatno, 
+2023)a. 
+ 
+ 
+ 
+1.4 Tujuan Penelitian 
+Tujuan yang ingin dicapai dalam penelitian ini adalah: 
+1. Merancang dan membangun perangkat keras sistem monitoring kualitas air 
+Sungai Mahakam berbasis Internet of Things menggunakan mikrokontroler 
+ESP32 yang mampu membaca dan mengirimkan data mentah parameter pH, 
+suhu air, suhu udara,  dan kekeruhan setiap lima menit sekali secara real-time. 
+2. Mengolah data mentah tersebut menggunakan metode Fuzzy Mamdani sehingga 
+dapat mengklasifikasikan status kualitas  air Sungai Mahakam menjadi kategori 
+baik, sedang, atau buruk. 
+3. Menampilkan nilai pH, suhu air, suhu udara, kekeruhan, dan hasil klasifikasi 
+kualitas air melalui OLED serta indikator LED, dan menyimpan data hasil 
+pembacaan sensor beserta klasifikasinya secara offline melalui MicroSD dan 
+online melalui Firebase. 
+4. Mengukur kinerja sistem yang dibangun, meliputi tingkat kesalahan pembacaan 
+sensor terhadap alat acuan, kesesuaian hasil klasifikasi fuzzy program dengan 
+perhitungan manual, serta ketepatan interval pembacaan dan pengiriman data. 
+
+=== PAGE 18 ===
+ 
+9 
+ 
+1.5 Manfaat Penelitian 
+Penelitian ini diharapkan dapat memberikan manfaat pada berbagai pihak, khususnya: 
+1. Penulis 
+Manfaat penelitian bagi penulis adalah untuk mengembangkan wawasan penulis 
+dalam mengimplementasikan metode Fuzzy Mamdani dan teknologi Internet of 
+Things berbasis ESP32 dalam membangun sistem monitoring kualitas air sungai 
+secara real-time, mulai dari perancangan perangkat keras, pemrograman sensor, 
+hingga integrasi dengan platform IoT. 
+2. Mahasiswa 
+Penelitian ini dapat memberikan pengetahuan kepada mahasiswa bagaimana 
+metode Fuzzy Mamdani dan teknologi IoT diterapkan dalam sistem pemantauan 
+lingkungan, dan menjadi referensi khususnya bagi mahasiswa di bidang 
+Informatika yang dapat membantu proses pembelajaran terkait penerapan logika 
+fuzzy dan sistem tertanam (embedded system). 
+3. Instansi/Lembaga/Perusahaan 
+Manfaat penelitian ini bagi instansi/lembaga/perusahaan terkait, seperti Dinas 
+Lingkungan Hidup atau Kementerian Lingkungan Hidup dan Kehutanan, adalah 
+dengan adanya hasil analisa status kualitas air Sungai Mahakam secara real-time 
+dengan interval lebih sering (setiap lima menit sekali) dibandingkan sistem yang 
+sudah ada, diharapkan dapat membantu instansi/lembaga/perusahaan tersebut 
+dalam melakukan pemantauan pencemaran secara lebih cepat, hemat biaya, dan 
+efisien, sehingga mendukung pengambilan keputusan terkait pengendalian 
+pencemaran sungai. 
+1.6  Kontribusi Penelitian 
+Kontribusi yang dapat diberikan dari penelitian ini adalah tersedianya sebuah 
+purwarupa (prototype) sistem monitoring kualitas air berbasis IoT dan Fuzzy Mamdani 
+pada satu titik Sungai Mahakam, yang mengukur pH, suhu air, suhu udara, dan 
+kekeruhan setiap lima menit sekali, mengklasifikasikannya melalui himpunan dan 
+aturan fuzzy yang teruji secara manual, serta menyimpan data secara offline dan online. 
+
+=== PAGE 19 ===
+ 
+10 
+ 
+Sistem ini dirancang untuk bekerja pada interval pembacaan yang lebih rapat 
+dibandingkan metode pemantauan konvensional berbasis pengambilan sampel manual, 
+sekaligus sebagai prototipe berbiaya rendah yang dapat melengkapi pemantauan 
+kualitas air yang sudah ada, bukan menggantikan sistem pemantauan resmi seperti 
+ONLIMO. Kontribusi ini turut mencakup pembuktian konsistensi antara hasil 
+klasifikasi fuzzy Mamdani yang dijalankan pada mikrokontroler ESP32 dengan 
+perhitungan manual, sehingga sistem tidak hanya berfungsi sebagai purwarupa yang 
+beroperasi di lapangan, tetapi juga teruji secara matematis, sekaligus memperkaya 
+referensi penelitian di bidang sistem pemantauan lingkungan berbasis IoT dan 
+kecerdasan buatan pada domain air sungai. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+=== PAGE 20 ===
+ 
+11 
+ 
+ 
+ 
+ 
+ 
+ 
+BAB II TINJAUA N PUSTAK A 
+TINJAUAN PUSTAKA 
+ 
+ 
+2.1  Penelitian Terkait 
+Dalam rangka mendukung penelitian ini, maka dilakukan kajian dengan 
+mempelajari penelitian -penelitian terkait yang telah dilakukan sebelumnya. Daftar 
+penelitian terkait antara lain: 
+1. Metode yang digunakan:  Penelitian ini menerapkan metode Fuzzy Mamdani 
+untuk mengendalikan kualitas air minum berbasis Internet of Things . 
+Permasalahan yang diangkat adalah kebutuhan sistem pemantauan air minum 
+yang mampu bekerja secara otomatis dan real-time, tanpa mengandalkan 
+pengujian laboratorium manual yang memakan waktu. Peneliti memilih 
+pendekatan fuzzy karena penilaian kelayakan air minum melibatkan banyak 
+parameter sekaligus yang saling memengaruhi, sehingga dibutuhkan metode 
+yang mampu menangani ketidakpastian dan menghasilkan keputusan berbasis 
+aturan linguistik, bukan sekadar ambang batas tunggal. Sistem dirancang 
+menggunakan empat variabel input, yaitu suhu, TDS ( Total Dissolved Solids ), 
+pH, dan kekeruhan, dengan satu variabel output berupa kategori kualitas air. 
+Dari kombinasi empat variabel input tersebut, disusun sebanyak 36 aturan fuzzy 
+yang mempertimbangkan seluruh kemungkinan kombinasi kondisi. 
+Implementasi perangkat keras menggunakan mikrokontroler ESP32 yang 
+terhubung dengan sensor suhu, sensor TDS, sensor pH, dan sensor kekeruhan, 
+dilengkapi modul RTC untuk pencatatan waktu, LED dan LCD sebagai 
+indikator visual, buzzer sebagai peringatan, motor servo sebagai aktuator 
+
+=== PAGE 21 ===
+ 
+12 
+ 
+pengendali, serta terintegrasi dengan platform Firebase untuk penyimpanan data 
+online dan aplikasi Kodular sebagai antarmuka pengguna berbasis mobile. 
+Temuan Penelitian:  Pengujian dilakukan sebanyak 20 kali untuk 
+membandingkan hasil klasifikasi kualitas air dari sistem fuzzy Mamdani dengan 
+standar kesehatan lingkungan yang berlaku. Hasil evaluasi dihitung 
+menggunakan Confusion Matrix  untuk menilai tingkat akurasi sistem secara 
+objektif. Berdasarkan hasil pengujian dan uji coba yang dilakukan, sistem 
+pemantauan dan kontrol kualitas air menggunakan IoT dan fuzzy Mamdani 
+berhasil diimplementasikan secara menyeluruh, mulai dari pembacaan sensor 
+hingga pengendalian aktuator. Metode fuzzy Mamdani sebagai sistem 
+pendukung keputusan terbukti mampu menilai kelayakan air minum dengan 
+tingkat akurasi 90% dan tingkat kesalahan 10%, sehingga penelitian ini 
+menyimpulkan bahwa pendekatan ini memberikan dasar pengambilan keputusan 
+yang cukup kuat untuk keperluan konsumsi manusia (Elriyan, 2025). 
+2. Metode yang digunakan:  Penelitian ini mengangkat permasalahan tingginya 
+angka kematian ikan nila akibat penurunan kualitas air kolam yang tidak 
+terdeteksi secara dini oleh peternak, khususnya di lingkungan peternakan skala 
+kecil seperti SMK Negeri 3 Pahunga Lodu yang menjadi lokasi studi kasus. 
+Metode pemantauan konvensional yang mengandalkan pengecekan manual 
+berkala dinilai tidak cukup responsif terhadap perubahan kondisi air yang dapat 
+terjadi kapan saja. Untuk mengatasi hal ini, peneliti merancang sistem 
+pemantauan kualitas air kolam berbasis Internet of Things  yang 
+mengintegrasikan tiga parameter utama, yaitu suhu, pH, dan tingkat kekeruhan 
+air, yang diukur secara real-time menggunakan sensor DS18B20 untuk suhu, 
+sensor pH-4502C untuk keasaman, dan sensor turbidity untuk kekeruhan. Ketiga 
+parameter tersebut kemudian diproses menggunakan logika fuzzy Mamdani 
+untuk menentukan status kelayakan air kolam, sehingga hasil klasifikasi tidak 
+hanya berupa angka mentah, melainkan kategori yang mudah dipahami 
+peternak. Sistem juga dilengkapi dengan notifikasi otomatis melalui Telegram 
+bot, sehingga peternak dapat menerima peringatan langsung ke perangkat seluler 
+mereka tanpa harus memantau alat secara terus-menerus. 
+
+=== PAGE 22 ===
+ 
+13 
+ 
+Temuan Penelitian:  Pengujian dilakukan langsung pada kolam ikan nila di 
+lokasi studi kasus untuk menilai kinerja sistem secara menyeluruh, mencakup 
+kemampuan pembacaan sensor, ketepatan proses klasifikasi fuzzy Mamdani, dan 
+efektivitas pengiriman notifikasi. Hasil pengujian menunjukkan bahwa sistem 
+mampu membaca ketiga parameter air dengan baik dan konsisten, memproses 
+data melalui logika fuzzy Mamdani secara akurat sesuai aturan yang telah 
+ditetapkan, serta berhasil mengirimkan notifikasi kepada pengguna secara real-
+time setiap kali kondisi air terdeteksi berada di luar rentang ideal. Dengan 
+adanya sistem peringatan dini ini, peternak dapat segera mengambil langkah 
+antisipatif seperti mengganti sebagian air atau menambah aerasi sebelum kondisi 
+air memburuk hingga menyebabkan kematian ikan secara masif, sehingga 
+penelitian ini menyimpulkan bahwa integrasi fuzzy Mamdani dan IoT efektif 
+meningkatkan responsivitas pengelolaan kolam dibandingkan metode 
+pemantauan manual konvensional (Aristho umbu nggaba kaho et al., 2025) 
+3. Metode yang digunakan:  Penelitian ini dilatarbelakangi oleh permasalahan 
+keterlambatan deteksi perubahan kadar oksigen terlarut dan pH air pada tambak 
+udang vaname di Bumi Dipasena, yang apabila tidak segera ditangani dapat 
+menimbulkan masalah serius bagi kelangsungan hidup udang. Peneliti 
+merancang dan membangun sistem pemantauan dan pengendalian berbasis 
+Internet of Things  yang memanfaatkan metode fuzzy logic  untuk mengambil 
+keputusan pengendalian secara otomatis, alih -alih hanya menampilkan data 
+mentah kepada petambak. Sistem dibangun menggunakan mikrokontroler 
+ESP32 sebagai pengendali utama, sensor DO tipe SEN0237 untuk mengukur 
+oksigen terlarut, dan sensor pH tipe SEN0161 untuk mengukur tingkat keasaman 
+air. Data hasil pembacaan sensor ditampilkan secara real-time melalui platform 
+ThingSpeak, yang dapat diakses baik melalui smartphone maupun desktop, 
+sementara notifikasi kondisi kritis dikirimkan kepada petambak melalui aplikasi 
+Telegram agar tindakan penanganan dapat dilakukan secepat mungkin. 
+Temuan Penelitian:  Pengujian sistem dilakukan dengan menilai dua aspek 
+utama, yaitu kesesuaian informasi yang ditampilkan pada platform ThingSpeak 
+dengan kondisi aktual di lapangan, serta kesesuaian respons sistem kendali 
+
+=== PAGE 23 ===
+ 
+14 
+ 
+(relay) terhadap perubahan parameter yang terdeteksi. Hasil pengujian 
+menunjukkan bahwa sistem yang dikembangkan berfungsi dengan baik secara 
+keseluruhan, dengan tingkat kesesuaian pengendalian relay antara alat yang 
+dirancang dan tampilan pada platform ThingSpeak mencapai 100%, yang berarti 
+tidak ditemukan selisih antara perintah kendali yang dihasilkan sistem fuzzy 
+dengan aksi aktual yang dijalankan aktuator. Temuan ini membuktikan bahwa 
+pendekatan fuzzy logic  yang diintegrasikan dengan IoT mampu bekerja secara 
+andal dalam mengendalikan kualitas air tambak secara otomatis dan real-time, 
+sehingga dapat menjadi solusi yang layak untuk mengurangi risiko kerugian 
+akibat keterlambatan penanganan perubahan kualitas air pada budi daya udang 
+vaname (Ayu Wulandari et al., 2024). 
+4. Metode yang digunakan:  Penelitian ini dilatarbelakangi oleh kebutuhan untuk 
+memetakan faktor -faktor yang memengaruhi tingkat pencemaran organik pada 
+Sungai Mahakam secara lebih akurat, mengingat karakteristik pencemaran air 
+sungai bersifat heterogen secara spasial antar lokasi pengamatan. Peneliti 
+menerapkan model Geographically Weighted Panel Regression  (GWPR), yaitu 
+pengembangan dari model regresi terboboti geografis yang dirancang khusus 
+untuk menangani data panel dengan heterogenitas spasial. Model diestimasi 
+pada setiap lokasi spasial menggunakan Fixed Effect Model  (FEM) sebagai 
+model global, dengan efek temporal ditangani melalui transformasi demeaning. 
+Data yang digunakan adalah data panel Biochemical Oxygen Demand (BOD) 
+Sungai Mahakam periode 2022 –2024, dengan seluruh analisis statistik dan 
+pemrosesan spasial dilakukan menggunakan perangkat lunak R, GNU Octave, 
+QGIS, dan Google Earth. Penentuan bandwidth adaptif optimal dilakukan 
+menggunakan Akaike Information Criterion (AIC). 
+Temuan Penelitian:  Hasil penelitian menunjukkan bahwa model GWPR 
+memberikan performa yang lebih baik dibandingkan model FEM biasa, dengan 
+nilai AIC sebesar -60,6419, koefisien determinasi (R²) sebesar 80,321%, dan 
+root mean square error  (RMSE) sebesar 0,7122. Faktor -faktor yang ditemukan 
+memengaruhi BOD Sungai Mahakam meliputi suhu, pH air, derajat warna, 
+nitrat, amonia, padatan tersuspensi total, dan sulfat, yang menegaskan bahwa 
+
+=== PAGE 24 ===
+ 
+15 
+ 
+kualitas air sungai dipengaruhi oleh kombinasi banyak parameter fisik dan kimia 
+secara bersamaan, bukan oleh satu parameter tunggal (Fauziyah et al., 2025). 
+5. Metode yang digunakan:  Penelitian ini mengukur kandungan nitrogen, 
+khususnya amonia, nitrit, dan nitrat, pada Sungai Mahakam Kota Samarinda 
+dengan membandingkan kondisi saat air pasang dan saat air surut. Pengukuran 
+dilakukan pada tujuh stasiun penelitian yang tersebar di sepanjang aliran sungai, 
+dengan hasil dianalisis secara deskriptif dan dibandingkan terhadap ambang 
+baku mutu yang berlaku, yaitu Peraturan Daerah Provinsi Kalimantan Timur 
+Nomor 02 Tahun 2011 tentang Pengelolaan Kualitas Air dan Pengendalian 
+Pencemaran Air. 
+Temuan Penelitian: Hasil penelitian menunjukkan bahwa kadar amonia, nitrit, 
+dan nitrat pada saat air pasang secara signifikan lebih rendah dibandingkan pada 
+saat air surut. Kadar amonia saat pasang berkisar antara 0,382 –0,424 mg/L, 
+sementara pada saat surut berkisar antara 0,43 –0,54 mg/L, dan keduanya telah 
+melampaui ambang batas baku mutu 0,5 mg/L yang ditetapkan oleh Peraturan 
+Daerah tersebut. Kadar amoniak tertinggi pada saat pasang ditemukan di Stasiun 
+4, sedangkan pada saat surut ditemukan di Stasiun 3, yang diduga dipengaruhi 
+oleh tingginya aktivitas masyarakat di sekitar pelabuhan dan taman tepian 
+sungai, seperti pembuangan sisa makanan dan aktivitas mandi cuci kakus 
+(MCK) langsung ke badan sungai (Karnelia et al., 2023) 
+6. Metode yang digunakan: Penelitian ini bertujuan menganalisis kualitas dan 
+status mutu air Sungai Ratah, anak sungai terbesar dari Sungai Mahakam yang 
+terletak di Kabupaten Mahakam Ulu, dengan mempertimbangkan bahwa air 
+sungai tersebut dimanfaatkan masyarakat sekitar untuk kebutuhan sehari -hari 
+seperti minum, memasak, dan mencuci, di tengah keberadaan berbagai izin 
+usaha seperti perkebunan kelapa sawit, pabrik kelapa sawit, pemanfaatan hutan, 
+dan pertambangan batu bara di sekitar aliran sungai. Data diperoleh dari 
+pengukuran parameter fisik, kimia, dan biologi pada empat stasiun pengamatan 
+yang mewakili area hulu hingga hilir sungai. Analisis status mutu air dilakukan 
+menggunakan dua metode sekaligus, yaitu metode Storet dan Indeks 
+
+=== PAGE 25 ===
+ 
+16 
+ 
+Pencemaran (IP), dengan hasil pengukuran dibandingkan terhadap baku mutu 
+kelas I sesuai Peraturan Pemerintah Nomor 22 Tahun 2021. 
+Temuan Penelitian: Hasil analisis menunjukkan bahwa sebagian besar parameter 
+tidak memenuhi baku mutu lingkungan kelas I. Berdasarkan metode Storet, pada 
+musim kemarau dan musim hujan, parameter yang secara konsisten melampaui 
+baku mutu di seluruh stasiun adalah COD; pada musim hujan, parameter yang 
+melampaui baku mutu di seluruh stasiun adalah Fecal Coli ; sementara pada 
+Stasiun II dan III saat musim kemarau serta Stasiun I saat musim hujan, 
+parameter yang melampaui baku mutu adalah TSS. Status mutu air pada 
+sebagian besar stasiun tergolong kategori tercemar ringan hingga tercemar 
+sedang berdasarkan metode Storet, sedangkan berdasarkan metode Indeks 
+Pencemaran, sebagian besar stasiun juga menunjukkan kategori tercemar ringan 
+hingga sedang, yang mengindikasikan tekanan pencemaran yang konsisten di 
+sepanjang aliran Sungai Ratah akibat aktivitas industri dan permukiman di 
+sekitarnya (Huvat et al., 2025). 
+7. Metode yang digunakan:  Penelitian ini menentukan status mutu air Sungai 
+Mahakam pada Stasiun KLHK 167 menggunakan analisis Indeks Pencemaran 
+(IP), dengan parameter yang dianalisis meliputi Amonia, BOD, COD, DO, TSS, 
+dan TDS. Data dikumpulkan dan dianalisis secara daring melalui sistem Online 
+Monitoring (ONLIMO), yaitu sistem pemantauan kualitas air berbasis Internet 
+of Things yang bekerja secara otomatis dan real-time, sehingga fluktuasi kualitas 
+air dapat dipantau secara berkelanjutan tanpa memerlukan pengambilan sampel 
+manual secara berulang. 
+Temuan Penelitian:  Hasil pemantauan selama bulan Oktober 2025 
+menunjukkan bahwa nilai Indeks Pencemaran Sungai Mahakam bervariasi dari 
+hari ke hari, dengan status mutu air berada pada kategori tercemar sedang 
+selama 14 hari (50%) dan tercemar berat selama 2 hari (7,14%) dari total 28 hari 
+pengamatan, sedangkan hari -hari lainnya tergolong tercemar ringan hingga 
+memenuhi baku mutu. Nilai amonia yang tinggi, mencapai 11,39%, 
+teridentifikasi sebagai faktor dominan penyebab pencemaran pada stasiun 
+tersebut. Temuan ini menegaskan pentingnya penerapan sistem ONLIMO 
+
+=== PAGE 26 ===
+ 
+17 
+ 
+sebagai alat pemantauan berkelanjutan untuk mendeteksi perubahan kualitas air 
+secara cepat, guna mendukung upaya pengendalian pencemaran di wilayah 
+Sungai Mahakam (Faradilla et al., 2025). 
+8. Metode yang digunakan:  Penelitian ini dilatarbelakangi oleh kebutuhan 
+industri perikanan akan solusi efektif untuk memantau kualitas air pada tambak, 
+mengingat kondisi tidak normal atau potensi penyakit pada ikan mujair dapat 
+berdampak signifikan terhadap produktivitas dan kesehatan tambak, sehingga 
+diperlukan pendekatan yang mampu memberikan deteksi dini secara akurat. 
+Peneliti memilih logika fuzzy Mamdani karena kemampuannya dalam 
+menangani ketidakpastian dan kompleksitas dalam evaluasi parameter kualitas 
+air. Sistem melibatkan tiga sensor, yaitu pH, turbidity (kekeruhan), dan TDS, 
+yang terhubung ke mikrokontroler ESP32 melalui breadboard. Data yang 
+diperoleh dari sensor kemudian diproses menggunakan logika fuzzy Mamdani 
+untuk mengatasi ketidakpastian dalam penilaian kualitas air. Sistem terhubung 
+ke internet dan menggunakan server-side scripting  dengan PHP untuk 
+menyimpan data ke dalam basis data MySQL, serta diintegrasikan dengan 
+aplikasi seluler (Android) agar pemilik tambak dapat menerima informasi 
+kualitas air secara cepat dan responsif. 
+Temuan Penelitian:  Hasil implementasi menunjukkan bahwa sistem berhasil 
+membaca ketiga parameter (pH, kekeruhan, TDS) secara real-time dan 
+memprosesnya melalui logika fuzzy Mamdani untuk menghasilkan klasifikasi 
+kondisi air, yang kemudian ditampilkan melalui aplikasi mobile berbasis 
+Android sehingga pemilik tambak dapat memantau kondisi air ikan mujair dari 
+jarak jauh. Integrasi antara sensor, logika fuzzy, basis data, dan aplikasi seluler 
+ini terbukti mampu memberikan deteksi dini terhadap kondisi tidak normal pada 
+air tambak, sehingga membantu pemilik tambak mengambil tindakan 
+pencegahan sebelum kondisi tersebut berdampak pada kesehatan ikan secara 
+masif (Ayu Wulandari et al., 2024). 
+9. Metode yang digunakan: Penelitian ini merupakan studi tinjauan sistematis 
+(systematic literature review)  yang mengangkat permasalahan keterbatasan 
+pemantauan kualitas air di banyak negara akibat tingginya biaya logistik dan 
+
+=== PAGE 27 ===
+ 
+18 
+ 
+peralatan profesional seperti probe multiparameter. Peneliti melakukan 
+pencarian pada basis data ilmiah menggunakan kombinasi kata kunci “water 
+quality”, “sensor/sensors”, dan “ low cost/low -cost” atau “Internet of 
+Things/IoT”, yang awalnya menjaring  3.517 artikel. Setelah melalui tiga tahap 
+klasifikasi—penerapan kriteria inklusi/eksklusi, pembacaan judul dan abstrak, 
+serta pembacaan penuh naskah —menggunakan bantuan alat bantu Parsifal, 
+peneliti menyaring artikel yang secara khusus membahas penggunaan sensor 
+berbiaya rendah untuk pemantauan kualitas air jarak jauh yang terbit antara 
+tahun 2019 hingga 2022. 
+Temuan Penelitian: Hasil tinjauan menunjukkan bahwa terdapat tiga vendor 
+utama sensor berbiaya rendah yang paling sering digunakan pada penelitian-
+penelitian yang ditinjau, dengan DFRobot sebagai produsen yang paling umum 
+digunakan. Harga sensor yang ditinjau bervariasi dari sekitar US$6,9 hingga 
+US$169,00, bahkan ada yang mencapai US$500,00. Meskipun banyak 
+penelitian menyatakan bahwa sensor berbiaya rendah cukup layak untuk 
+pemantauan kualitas air, penelitian ini menemukan bahwa hanya sedikit dari 
+studi-studi tersebut yang benar -benar membandingkan akurasi sensor berbiaya 
+rendah dengan perangkat profesional sebagai acuan, sehingga disimpulkan perlu 
+adanya penelitian lebih lanjut untuk memastikan keandalan dan akurasi sensor 
+murah dibandingkan perangkat standar (de Camargo et al., 2023). 
+10. Metode yang digunakan:  Penelitian ini mengangkat permasalahan bahwa 
+model fuzzy konvensional membutuhkan jumlah aturan ( rules) yang sangat 
+banyak ketika variabel input bertambah, sehingga model menjadi kompleks dan 
+memakan waktu lama untuk dikembangkan. Untuk mengatasi hal ini, peneliti 
+mengusulkan model fuzzy kohesif ( cohesive fuzzy model ) yang menyusun 
+sembilan parameter kualitas air minum (pH, kesadahan, alkalinitas, bikarbonat, 
+sulfat, nitrat , natrium, kalium, dan magnesium) ke dalam struktur berjenjang 
+(hierarchical) dua tingkat, alih -alih memakai satu model tunggal dengan 
+sembilan input sekaligus yang akan menghasilkan ribuan kombinasi aturan. 
+Pada tingkat pertama, disusun tiga model fuzzy menengah dengan masing -
+masing tiga variabel input (model pertama: alkalinitas, pH, kesadahan; model 
+
+=== PAGE 28 ===
+ 
+19 
+ 
+kedua: nitrat, bikarbonat, sulfat; model ketiga: natrium, kalium, magnesium), 
+sehingga tiap model hanya membutuhkan 27 aturan (3×3×3). Output dari ketiga 
+model menengah tersebut kemudian menjadi input bagi satu model akhir pada 
+tingkat kedua. Penelitian ini membandingkan dua metode fuzzy inference system, 
+yaitu Mamdani dengan berbagai teknik defuzzifikasi (termasuk centroid) dan 
+Sugeno dengan teknik defuzzifikasi weighted average , menggunakan data 
+fisikokimia air minum dari Acea Group di Tivoli, Italia. 
+Temuan Penelitian: Hasil evaluasi menggunakan metode centroid pada sistem 
+Mamdani menunjukkan skor kualitas air sebesar 72,4% untuk model menengah 
+pertama, 83,4% untuk model kedua, dan 92,5% untuk model ketiga, dengan skor 
+akhir gabungan sebesar 85,4%. Sementara itu, sistem Sugeno dengan teknik 
+weighted average  menghasilkan skor konsisten sebesar 76,2%, 83,5%, dan 
+92,5% untuk ketiga model menengah, dengan skor akhir sebesar 83,5%. Kedua 
+metode secara konsisten menunjukkan bahwa kualitas air minum di Tivoli 
+berada pada kategori "sangat tinggi" (rentang 80 –100%). Penelitian ini 
+menyimpulkan bahwa metode Mamdani lebih intuitif dan berorientasi pada 
+manusia sehingga cocok untuk merepresentasikan keahlian pakar, sedangkan 
+metode Sugeno lebih efisien secara komputasi dan mudah dipadukan dengan 
+teknik optimasi untuk sistem dinamis nonlinear, sehingga keluaran Mamdani 
+secara umum lebih mudah dipahami secara linguistik dibandingkan Sugeno 
+(Bellini et al., 2025). 
+11. Metode yang digunakan: Penelitian ini dilatarbelakangi oleh kebutuhan untuk 
+memprediksi laju inflasi Kota Medan secara lebih akurat, mengingat inflasi 
+merupakan indikator ekonomi yang bersifat fluktuatif dan sulit diprediksi secara 
+pasti. Peneliti melakukan analisis perbandingan tingkat akurasi antara dua model 
+fuzzy inference system, yaitu Sugeno dan Mamdani, dalam memprediksi laju 
+inflasi, dengan membandingkan hasil prediksi masing -masing model terhadap 
+nilai aktual inflasi yang terjadi. 
+Temuan Penelitian: Hasil analisis menunjukkan bahwa tingkat akurasi model 
+fuzzy Sugeno dipengaruhi oleh nilai regresi linier berganda, sedangkan tingkat 
+akurasi model fuzzy Mamdani dipengaruhi oleh ketepatan nilai masukannya. 
+
+=== PAGE 29 ===
+ 
+20 
+ 
+Hasil akhirnya, model fuzzy Mamdani terbukti lebih akurat dibandingkan model 
+fuzzy Sugeno dalam memprediksi laju inflasi di Kota Medan (Harliana et al., 
+2022). 
+12. Metode yang digunakan: Penelitian ini mengangkat permasalahan 
+pengendalian kualitas air pada kolam pendederan ikan bandeng, khususnya 
+menjaga kestabilan pH dan kekeruhan air agar mengurangi angka kematian 
+benih ikan. Sistem kontrol dirancang menggunakan sensor pH dan sensor 
+turbidity yang dihubungkan ke ESP32, dengan logika fuzzy Mamdani sebagai 
+metode pengambilan keputusan untuk menentukan kondisi air dan mengaktifkan 
+pompa penetral pH maupun pompa pengatur kekeruhan secara otomatis. 
+Temuan Penelitian: Hasil pengujian menunjukkan bahwa sensor pH dan 
+kekeruhan mampu mendeteksi kondisi air dengan baik, serta pompa dapat 
+bekerja sesuai dengan aturan (rules) fuzzy Mamdani yang telah ditetapkan, yaitu 
+menetralkan pH pada rentang 5 -9 dan menjaga kekeruhan pada rentang 15 -30 
+NTU (Hikmah & Misbah, 2024). 
+13. Metode yang digunakan: Penelitian ini dilatarbelakangi oleh kebutuhan 
+pemantauan kualitas air pada akuarium ikan hias yang sensitif terhadap 
+perubahan parameter air. Sistem dirancang untuk mengimplementasikan dan 
+memantau kualitas air menggunakan metode fuzzy logic, dengan tujuan 
+memberikan informasi kondisi air secara otomatis kepada pemilik akuarium 
+tanpa perlu pengukuran manual berkala. 
+Temuan Penelitian: Hasil implementasi menunjukkan bahwa metode fuzzy 
+logic mampu mengklasifikasikan kondisi kualitas air akuarium secara akurat 
+berdasarkan parameter yang dipantau, sehingga dapat memberikan peringatan 
+dini kepada pengguna sebelum kondisi air menjadi tidak layak bagi ikan hias 
+(Ardana & Sembiring, 2025). 
+14. Metode yang digunakan: Penelitian ini dilatarbelakangi oleh kebutuhan sistem 
+pemberian pakan ikan otomatis yang responsif terhadap kondisi kualitas air 
+kolam budi daya. Sistem mengintegrasikan sensor suhu, pH, dan TDS untuk 
+mendeteksi kondisi air, kemudian menerapkan kendali logika fuzzy Mamdani 
+untuk mengatur intensitas pemberian pakan. Kinerja sistem diuji dengan 
+
+=== PAGE 30 ===
+ 
+21 
+ 
+membandingkan hasil simulasi fuzzy pada MATLAB terhadap implementasi 
+langsung pada mikrokontroler Arduino. 
+Temuan Penelitian: Hasil pengujian menunjukkan tingkat konsistensi yang 
+tinggi antara simulasi MATLAB dan implementasi Arduino, meskipun uji coba 
+lapangan menunjukkan variasi hasil akibat kondisi lingkungan yang berubah 
+secara tidak terduga. Penelitian ini menyimpulkan pentingnya penyesuaian dan 
+kalibrasi tambahan ketika sistem fuzzy diterapkan pada kondisi lapangan yang 
+sebenarnya, dibandingkan hanya mengandalkan hasil simulasi (Kurniawan et al., 
+2025). 
+15. Metode yang digunakan: Penelitian ini dilatarbelakangi oleh tingkat 
+pencemaran Sungai Citarum yang tergolong parah, sehingga diperlukan sistem 
+pendukung keputusan untuk mempermudah penentuan status kualitas air tanpa 
+memerlukan pemahaman teknis mendalam terhadap parameter yang digunakan. 
+Sistem dikembangkan berbasis web menggunakan model SDLC Waterfall, 
+dengan metode fuzzy Tsukamoto yang mengolah tujuh parameter air (EC, TDS, 
+salinitas, pH, ORP, SG, dan suhu) untuk mengklasifikasikan kualitas air ke 
+dalam lima kategori. 
+Temuan Penelitian: Pengujian dilakukan menggunakan data dari delapan titik 
+sungai pada empat kecamatan di Kabupaten Karawang, dengan hasil akurasi 
+model sistem pendukung keputusan mencapai 80%. Penelitian ini 
+menyimpulkan bahwa sistem berbasis fuzzy Tsukamoto mampu memberikan 
+gambaran awal kondisi kualitas air sungai secara cepat, dan menyarankan 
+integrasi dengan IoT pada penelitian selanjutnya untuk meningkatkan kinerja 
+dan manfaat sistem (Putra et al., 2024). 
+16. Metode yang digunakan: Penelitian ini dilatarbelakangi oleh keterbatasan 
+model regresi Weibull konvensional yang mengasumsikan data bersifat 
+homogen secara spasial, padahal kondisi kualitas air antar wilayah geografis 
+pada kenyataannya dapat sangat bervariasi. Peneliti mengembangkan model 
+Geographically Weighted Weibull Regression (GWWR) sebagai perluasan dari 
+model regresi Weibull (WR) dalam kerangka geographically weighted 
+regression, yang memungkinkan parameter model diestimasi secara lokal untuk 
+
+=== PAGE 31 ===
+ 
+22 
+ 
+setiap titik geografis, bukan secara global untuk seluruh wilayah pengamatan. 
+Model ini kemudian diterapkan pada data spasial kadar oksigen terlarut 
+(dissolved oxygen/DO) di berbagai titik sungai di Kalimantan Timur pada tahun 
+2024, dengan pendekatan estimasi parameter melalui metode maximum 
+likelihood berbobot geografis (bandwidth) untuk memetakan kualitas air sungai 
+(river water quality) beserta faktor -faktor yang memengaruhinya secara lokal di 
+tiap wilayah. 
+Temuan Penelitian: Hasil penelitian menunjukkan bahwa kualitas air sungai di 
+Kalimantan Timur pada tahun 2024 secara umum cenderung mengalami 
+penurunan, dengan faktor utama yang memengaruhi meliputi kadar besi terlarut, 
+total fosfat, suhu air, dan kebutuhan oksigen biokimia (BOD). Model GWWR 
+yang diusulkan mampu merepresentasikan karakteristik kualitas air secara lokal 
+melalui beberapa ukuran statistik, yaitu probabilitas perbaikan kualitas air, 
+probabilitas penurunan kualitas air, laju penurunan kualitas air, serta nilai rata -
+rata DO, yang masing -masing dianalisis melalui model survival, distribusi 
+kumulatif, hazard, dan regresi rata -rata secara spasial. Penelitian ini 
+menunjukkan bahwa pendekatan berbasis lokasi geografis dapat menangkap 
+variasi kondisi kualitas air antarwilayah yang tidak dapat dijelaskan oleh model 
+regresi global (Suyitno et al., 2026). 
+17. Metode yang digunakan: Penelitian ini dilatarbelakangi oleh perlunya evaluasi 
+tingkat pencemaran Sungai Kelinjau yang melintasi Desa Muara Dun, 
+Kecamatan Muara Ancalong, Kabupaten Kutai Timur, Kalimantan Timur, akibat 
+aktivitas masyarakat seperti permukiman dan pertanian di sekitar aliran sungai. 
+Peneliti mengambil sampel air pada beberapa titik di sepanjang aliran sungai 
+(bagian hulu, tengah, dan hilir), kemudian mengukur parameter fisik dan kimia 
+air, termasuk Total Dissolved Solids (TDS) dan Dissolved Oxygen (DO). Status 
+mutu air dihitung menggunakan metode Indeks Pencemaran (IP), dengan rumus 
+yang mempertimbangkan nilai maksimum dan rata -rata rasio konsentrasi 
+parameter terhadap baku mutunya, mengacu pada baku mutu air sungai kelas II 
+sesuai Peraturan Pemerintah Nomor 22 Tahun 2021. 
+
+=== PAGE 32 ===
+ 
+23 
+ 
+Temuan Penelitian:  Hasil pengukuran menunjukkan bahwa nilai TDS pada 
+bagian hulu Sungai Kelinjau tercatat jauh lebih tinggi dibandingkan bagian 
+tengah dan hilir, yang diduga disebabkan oleh aktivitas permukiman padat 
+penduduk dan pertanian di sekitar wilayah hulu. Meskipun demikian, secara 
+keseluruhan nilai TDS masih berada dalam kelas 1 sehingga tergolong kualitas 
+air baik, dan kadar DO yang terukur juga masih tergolong aman serta memenuhi 
+baku mutu yang berlaku. Penelitian ini menyimpulkan bahwa Sungai Kelinjau 
+secara umum masih tergolong dalam kondisi kualitas air yang baik berdasarkan 
+perhitungan Indeks Pencemaran, meskipun perlu diwaspadai potensi 
+peningkatan pencemaran di wilayah hulu akibat aktivitas manusia yang terus 
+meningkat (Denny et al., 2025). 
+18. Metode yang digunakan: Penelitian ini dilatarbelakangi oleh kebutuhan sistem 
+pemantauan kualitas air yang efisien, akurat, dan dapat diakses dari jarak jauh 
+untuk mendukung penyediaan air bersih yang berkualitas. Peneliti merancang 
+purwarupa berbasis mikrokontroler ESP32 yang terintegrasi dengan sensor pH, 
+TDS (Total Dissolved Solids), dan turbidity untuk mengukur parameter fisik dan 
+kimia air. Data hasil pengukuran ditampilkan secara lokal pada LCD, sekaligus 
+dikirimkan secara real -time ke basis data Firebase, kemudian divisualisasikan 
+melalui dashboard berbasis web yang dapat diakses melalui jaringan 
+menggunakan protokol MQTT. Pengujian akurasi sistem dilakukan dengan 
+membandingkan hasil pembacaan sensor terhadap nilai referensi, dievaluasi 
+menggunakan metrik Mean Absolute Percentage Error (MAPE), Mean Absolute 
+Error (MAE), dan Root Mean Square Error (RMSE). 
+Temuan Penelitian:  Hasil pengujian menunjukkan akurasi pengukuran yang 
+baik, ditunjukkan oleh nilai MAPE, MAE, dan RMSE yang seluruhnya berada 
+dalam batas wajar untuk ketiga parameter yang diukur. Dashboard pemantauan 
+berbasis web yang dikembangkan turut menyajikan grafik tren kualitas air dari 
+waktu ke waktu, serta dilengkapi fitur kendali on/off relay untuk mengatur 
+pengiriman data sensor demi efisiensi konsumsi energi perangkat. Penelitian ini 
+menyimpulkan bahwa integrasi ESP32, Firebase, dan dashboard web 
+memberikan solusi yang efektif dan inovatif untuk pemantauan kualitas air 
+
+=== PAGE 33 ===
+ 
+24 
+ 
+secara real -time dan jarak jauh, mendukung upaya penyediaan air bersih yang 
+berkualitas (Affandi et al., 2026). 
+Perbedaan dengan Penelitian Sebelumnya 
+Berbagai penelitian telah dilakukan untuk memantau kualitas air menggunakan 
+pendekatan fuzzy Mamdani berbasis Internet of Things , baik pada air minum (Elriyan, 
+2025), kolam ikan nila (Aristho umbu nggaba kaho et al., 2025) , tambak udang vaname 
+(Ayu Wulandari et al., 2024), maupun tambak ikan mujair (Ayu Wulandari et al., 2024). 
+Penelitian lain secara khusus mengkaji kondisi Sungai Mahakam menggunakan 
+pendekatan statistik dan indeks pencemaran konvensional, seperti Geographically 
+Weighted Panel Regression  (Fauziyah et al., 2025) , analisis deskriptif kadar nitrogen 
+(Karnelia et al., 2023) , metode Storet dan Indeks Pencemaran pada anak sungainya 
+(Huvat et al., 2025) , serta sistem Online Monitoring milik pemerintah (Faradilla et al., 
+2025). Penelitian -penelitian tersebut umumnya hanya membahas satu aspek secara 
+terpisah, yaitu penerapan fuzzy Mamdani pada objek air berskala kecil dan tertutup, atau 
+analisis kondisi Sungai Mahakam tanpa pendekatan klasifikasi otomatis berbasis IoT, 
+sehingga belum ada yang menggabungkan keduanya sekaligus untuk memantau Sungai 
+Mahakam secara real-time. 
+Sistem ONLIMO milik pemerintah (Faradilla et al., 2025) yang telah memantau 
+Sungai Mahakam secara online pun memiliki interval pembaruan data minimal satu jam 
+sekali serta tidak menyertakan parameter pH dan suhu secara konsisten pada seluruh 
+stasiun, sebagaimana ditemukan pada Stasiun KLHK 167 yang datanya kosong untuk 
+kedua parameter tersebut. Penelitian ini juga sengaja tidak membandingkan performa 
+Mamdani secara implementatif terhadap metode Sugeno, karena penelitian -penelitian 
+terdahulu ( (Harliana et al., 2022) ; (Bellini et al., 2025) ) telah secara konsisten 
+membuktikan bahwa Mamdani menghasilkan tingkat kesalahan lebih rendah dan 
+keluaran yang lebih mudah dipahami secara linguistik dibandingkan Sugeno, sehingga 
+cukup dijadikan dasar pemilihan metode tanpa perlu diuji ulang. Pendekatan ini dipilih 
+karena kebutuhan komputasinya ringan dan telah terbukti sesuai untuk kasus klasifikasi 
+berbasis kategori, sehingga cukup dijalankan langsung pada ESP32 tanpa memerlukan 
+daya pemrosesan tambahan. 
+
+=== PAGE 34 ===
+ 
+25 
+ 
+Penelitian ini menutup celah tersebut dengan merancang sistem monitoring 
+kualitas air Sungai Mahakam berbasis IoT, mulai dari pembacaan sensor pH, suhu air, 
+suhu udara, dan kekeruhan setiap lima menit sekali, perhitungan selisih suhu air 
+terhadap suhu udara sesuai ketentuan deviasi pada PP No. 22 Tahun 2021, hingga 
+klasifikasi kondisi air ke dalam status "Baik", "Sedang", atau "Buruk" menggunakan 
+metode fuzzy Mamdani. Hasilnya ditampilkan secara real-time melalui OLED dan 
+indikator LED/ buzzer, serta disimpan secara ganda baik offline melalui MicroSD 
+maupun online melalui Firebase, sehingga pengguna dapat memantau kondisi Sungai 
+Mahakam kapan saja tanpa harus berada di lokasi secara langsung. 
+2.2  Internet of Things (IoT) 
+Internet of Things  merupakan konsep yang memungkinkan berbagai perangkat 
+fisik saling terhubung melalui jaringan internet, sehingga mampu mengumpulkan, 
+memproses, dan mengirimkan data secara otomatis tanpa memerlukan interaksi manusia 
+secara langsung. Penerapan konsep ini pada bidang pemantauan lingkungan 
+memungkinkan proses akuisisi data dilakukan secara berkelanjutan dan dapat diakses 
+dari jarak jauh, sehingga mengurangi ketergantungan terhadap metode pengambilan 
+sampel manual yang membutuhkan waktu dan tenaga lebih besar (Ayu Wulandari et al., 
+2024). 
+Berdasarkan tinjauan sistematis terhadap dua puluh sistem pemantauan kualitas 
+air berbasis IoT, parameter yang paling umum dan direkomendasikan untuk 
+diintegrasikan ke dalam sistem tersebut meliputi kekeruhan, oxidation reduction 
+potential (ORP), suhu, pH, dan konduktivitas listrik, karena kelima parameter tersebut 
+memiliki korelasi yang kuat terhadap parameter kualitas air lainnya sehingga cukup 
+representatif untuk menggambarkan kondisi air secara umum tanpa harus mengukur 
+seluruh parameter kimia yang ada (Ayu Wulandari et al., 2024) . Temuan ini menjadi 
+salah satu dasar pertimbangan pemilihan parameter pH, suhu, dan kekeruhan pada 
+penelitian ini, mengingat ketiganya termasuk parameter yang direkomendasikan dan 
+dapat diukur menggunakan sensor berbiaya rendah, sesuai dengan tujuan penelitian 
+untuk membangun prototipe yang terjangkau namun tetap dapat memberikan informasi 
+kualitas air yang bermakna. 
+
+=== PAGE 35 ===
+ 
+26 
+ 
+2.3  Mikrokontrol ESP32 
+ESP32 merupakan mikrokontroler berjenis System on Chip  (SoC) yang banyak 
+digunakan dalam pengembangan sistem Internet of Things , karena mampu 
+menggabungkan kemampuan pemrosesan data dan komunikasi nirkabel dalam satu 
+platform yang efisien dan ekonomis. ESP32 dilengkapi modul WiFi dan Bluetooth 
+bawaan, memiliki prosesor dual-core dengan kecepatan hingga 240 MHz, memori 
+RAM sekitar 520 KB, serta jumlah pin General Purpose Input/Output  (GPIO) yang 
+cukup banyak untuk menghubungkan berbagai sensor sekaligus. Karakteristik tersebut 
+menjadikan ESP32 sebagai pengendali utama yang tepat untuk sistem monitoring 
+kualitas air pada penelitian ini, karena mampu membaca empat sensor (pH, suhu air, 
+suhu udara, dan kekeruhan), menjalankan perhitungan fuzzy Mamdani, serta 
+mengirimkan data ke platform online secara bersamaan tanpa memerlukan komponen 
+tambahan (Hercog dkk., 2023). 
+ 
+Gambar 2. 1 Modul ESP32 DevKit V1 
+Pemilihan ESP32 dibandingkan mikrokontroler sejenis seperti Arduino Uno 
+didasarkan pada ketersediaan modul WiFi bawaan, yang memungkinkan pengiriman 
+data secara langsung ke platform online tanpa memerlukan modul komunikasi 
+tambahan, sehingga lebih efisien dari segi biaya dan kompleksitas perangkat keras 
+untuk keperluan sistem pemantauan berbasis IoT (Hercog dkk., 2023). Kemampuan 
+pemrosesan yang dimiliki ESP32 juga memadai untuk menjalankan seluruh tahapan 
+perhitungan fuzzy Mamdani, mulai dari fuzzifikasi, evaluasi aturan, agregasi, hingga 
+defuzzifikasi, secara langsung pada mikrokontroler tanpa memerlukan bantuan 
+
+
+=== PAGE 36 ===
+ 
+27 
+ 
+komputasi dari server eksternal, sehingga sistem tetap dapat menghasilkan klasifikasi 
+kualitas air meskipun koneksi internet sedang terputus. 
+Dalam penelitian ini, ESP32 berperan sebagai pengendali pusat yang mengatur seluruh 
+alur kerja sistem, mulai dari pembacaan data sensor pH, suhu air, suhu udara, dan 
+kekeruhan setiap lima menit sekali, pemrosesan data tersebut melalui logika fuzzy 
+Mamdani, penampilan hasil klasifikasi pada OLED dan indikator LED, hingga 
+pengiriman data ke platform penyimpanan online serta penyimpanan cadangan secara 
+offline. 
+2.4 Sensor Pengukuran Parameter Kualitas Air 
+Bagian ini menjelaskan empat sensor yang digunakan pada penelitian ini untuk 
+membaca parameter pH, suhu air, suhu udara, dan kekeruhan Sungai Mahakam. 
+2.4.1  Sensor pH (PH-4502C) 
+Modul PH-4502C bekerja bersama probe elektroda yang mendeteksi konsentrasi 
+ion H⁺ dalam air. Probe menghasilkan sinyal tegangan analog yang sebanding dengan 
+tingkat keasaman air, yang kemudian dibaca oleh mikrokontroler melalui pin Analog-to-
+Digital Converter (ADC) pada ESP32. Sensor jenis ini digunakan dalam penelitian ini 
+sebagai salah satu dari tiga variabel input fuzzy Mamdani, dengan rentang nilai yang 
+dipetakan ke himpunan asam, netral, dan basa mengacu pada baku mutu pH air sungai 
+kelas II (Elriyan dkk., 2025; Kaho dkk., 2025). 
+ 
+Gambar 2. 2 Modul Sensor pH PH-4502C 
+ 
+
+
+=== PAGE 37 ===
+ 
+28 
+ 
+2.4.2  Sensor Suhu Air (DS18B20) 
+ DS18B20 adalah sensor suhu digital yang bersifat kedap air ( waterproof), 
+sehingga dapat langsung dicelupkan ke dalam  air Sungai Mahakam tanpa risiko 
+kerusakan akibat kontak langsung dengan cairan. Sensor ini menggunakan protokol 
+komunikasi OneWire, yang memungkinkan pembacaan data suhu hanya melalui satu 
+jalur data ke mikrokontroler, sehingga menyederhanakan proses pengkabelan 
+dibandingkan sensor suhu analog biasa (Kaho dkk., 2025). Nilai suhu air yang terbaca 
+sensor ini akan dibandingkan dengan suhu udara untuk menghitung selisih suhu ( ΔT) 
+sebagai salah satu variabel input fuzzy pada penelitian ini. 
+ 
+Gambar 2. 3 Sensor Suhu DS18B20 Waterproof 
+ 
+2.4.3  Sensor Suhu Udara (DHT22) 
+ DHT22 adalah sensor yang mampu membaca suhu dan kelembapan udara 
+sekaligus. Dalam penelitian ini, DHT22 difungsikan khusus untuk membaca suhu udara 
+di sekitar lokasi penempatan sensor suhu air, sebagai dasar perhitungan selisih suhu 
+(ΔT) sesuai dengan ketentuan deviasi suhu maksimal 3°C yang diatur dalam Peraturan 
+Pemerintah Nomor 22 Tahun 2021. Selisih suhu inilah, bukan suhu air secara tunggal, 
+yang menjadi  salah satu dari tiga variabel input pada sistem fuzzy Mamdani yang 
+dibangun. 
+
+
+=== PAGE 38 ===
+ 
+29 
+ 
+ 
+Gambar 2. 4 Modul Sensor DHT22 
+2.4.4  Sensor Kekeruhan (Turbidity) 
+ Sensor kekeruhan yang digunakan pada penelitian ini bekerja berdasarkan 
+prinsip optik, yaitu memancarkan cahaya inframerah ke dalam air dan mengukur 
+intensitas cahaya yang terhambur oleh partikel tersuspensi. Semakin banyak partikel 
+dalam air, semakin besar hamburan cahaya yang terdeteksi, dan semakin tinggi 
+tegangan keluaran sensor. Perlu dicatat bahwa sensor yang digunakan bersifat sensor 
+fotodioda analog berbiaya rendah, bukan turbidimeter presisi yang biasa digunakan di 
+laboratorium atau stasiun pemantauan resmi seperti ONLIMO. Nilai kekeruhan yang 
+dihasilkan dalam penelitian ini merupakan estimasi berdasarkan konversi tegangan 
+keluaran sensor, bukan pengukuran presisi dalam satuan NTU yang terkalibrasi penuh, 
+sehingga keterbatasan ini menjadi bagian dari batasan penelitian yang perlu 
+dipertimbangkan dalam interpretasi hasil klasifikasi. 
+ 
+Gambar 2. 5 Modul Sensor Turbidity Analog 
+
+
+=== PAGE 39 ===
+ 
+30 
+ 
+2.5 Logika Fuzzy (Fuzzy Logic) 
+Logika fuzzy adalah suatu metode pengambilan keputusan yang mampu 
+menangani ketidakpastian dan ketidaktegasan ( vagueness) dalam data, dengan 
+memetakan suatu nilai ke dalam derajat keanggotaan (membership degree) pada rentang 
+0 hingga 1, alih -alih membatasi nilai tersebut pada dua kondisi mutlak benar atau salah 
+seperti pada logika klasik (Zadeh, 1965). Konsep ini kemudian dikembangkan lebih 
+lanjut ke dalam berbagai bentuk sistem inferensi fuzzy, salah satunya adalah metode 
+Mamdani (Zimmermann, 2001). 
+2.5.1  Fuzzy Inference System Mamdani 
+ Metode Mamdani terdiri atas empat tahap utama, yaitu fuzzifikasi, evaluasi 
+aturan (inferensi), agregasi, dan defuzzifikasi. Pada penelitian ini, metode Mamdani 
+diterapkan dengan tiga variabel input, yaitu pH, selisih suhu air terhadap suhu udara 
+(ΔT), dan kekeruhan, serta satu variabel output berupa status kualitas air. 
+a. Fuzzifikasi 
+Fuzzifikasi adalah proses mengubah nilai masukan ( crisp) menjadi derajat 
+keanggotaan pada setiap himpunan fuzzy yang telah ditetapkan. Penelitian ini 
+menggunakan fungsi keanggotaan berbentuk segitiga ( triangular membership function), 
+dengan persamaan umum sebagai berikut: 
+𝑓(𝑥)=
+{  
+  0 𝑥≤𝑎 atau 𝑥≥𝑐
+𝑥−𝑎
+𝑏−𝑎 𝑎<𝑥≤𝑏
+𝑐−𝑥
+𝑐−𝑏 𝑏<𝑥<𝑐
+ 
+ 
+(2.1) 
+ 
+b. Basis Aturan (Rule Base) 
+Basis aturan pada metode Mamdani terdiri atas kumpulan aturan berbentuk 
+"JIKA...DAN...DAN...MAKA...", yang menggabungkan kondisi dari seluruh variabel 
+input untuk menentukan variabel output. Setiap aturan menghubungkan satu kombinasi 
+himpunan dari tiap variabel input dengan satu kategori output tertentu, sehingga jumlah 
+aturan yang mungkin disusun bergantung pada banyaknya variabel input dan jumlah 
+himpunan pada masing-masing variabel. 
+
+=== PAGE 40 ===
+ 
+31 
+ 
+Pada penelitian ini, digunakan tiga variabel input, yaitu pH, ΔT, dan kekeruhan, 
+yang masing -masing memiliki tiga himpunan linguistik (Tabel 3.5), sehingga jumlah 
+kombinasi aturan yang dapat disusun adalah 3×3×3, atau maksimal 27 aturan. 
+Penyusunan aturan dilakukan dengan mempertimbangkan kondisi ideal dari setiap 
+variabel: kombinasi yang seluruhnya berada pada himpunan yang paling mendekati 
+kondisi normal (misalnya pH Netral, ΔT Rendah, dan kekeruhan Jernih) akan 
+menghasilkan status Baik, sedangkan kombinasi yang seluruhnya berada pada 
+himpunan yang paling jauh dari kondisi normal akan menghasilkan status Buruk. 
+Kombinasi lain yang berada di antara kedua kondisi tersebut umumnya menghasilkan 
+status Sedang. Rincian lengkap ke -27 aturan yang disusun pada penelitian ini disajikan 
+pada Bab III. 
+c. Inferensi (Evaluasi Aturan) 
+Setiap aturan berbentuk "JIKA...DAN...DAN...MAKA...". Kekuatan penyulutan 
+(firing strength , α) setiap aturan dihitung menggunakan operator MIN, karena ketiga 
+syarat dihubungkan oleh kata hubung "DAN": 
+𝛼𝑖 =min(𝜇𝑝𝐻(𝑥1),𝜇Δ𝑇(𝑥2),𝜇kekeruhan(𝑥3)) (2.2) 
+d. Agregasi 
+Aturan-aturan yang menghasilkan kategori output yang sama digabungkan 
+menggunakan operator MAX, sehingga diperoleh satu derajat keanggotaan gabungan 
+untuk setiap kategori output (Buruk, Sedang, Baik): 
+𝜇output(𝑧)=max(𝛼1,𝛼2,…,𝛼𝑛) (2.3) 
+e. Defuzzifikasi 
+Tahap akhir mengubah hasil agregasi menjadi satu nilai crisp tunggal menggunakan 
+metode Centroid (rata-rata tertimbang terhadap titik puncak tiap kategori output): 
+𝑧∗=
+∑ 𝑧𝑖𝑖 𝛼𝑖
+∑ 𝛼𝑖𝑖
+  
+(2.4) 
+di mana: 
+z* = nilai crisp akhir (skala 0–100) 
+zi = titik puncak kategori output ke-(i) (Buruk = 25, Sedang = 50, Baik = 75) 
+αi = kekuatan agregasi kategori output ke-(i) 
+
+=== PAGE 41 ===
+ 
+32 
+ 
+Nilai z* kemudian dipetakan kembali ke label linguistik berdasarkan rentang pada Tabel 
+3.5, yaitu Buruk (0 –50), Sedang (25 –75), dan Baik (50 –100). Pada zona tumpang 
+tindih, penentuan label dilakukan berdasarkan kedekatan nilai  terhadap titik puncak 
+masing-masing kategori. 
+2.6 Baku Mutu Air 
+Bagian ini menjelaskan standar baku mutu yang menjadi acuan penentuan 
+rentang nilai pada himpunan fuzzy yang telah disusun sebelumnya. 
+2.6.1 Peraturan Pemerintah Nomor 22 Tahun 2021 
+Peraturan Pemerintah Republik Indonesia Nomor 22 Tahun 2021 tentang 
+Penyelenggaraan Perlindungan dan Pengelolaan Lingkungan Hidup mengatur baku 
+mutu air nasional, salah satunya untuk kategori air sungai dan sejenisnya, yang dibagi 
+ke dalam empat kelas peruntukan. Kelas I diperuntukkan bagi air baku air minum, Kelas 
+II bagi prasarana rekreasi air dan pembudidayaan ikan air tawar, Kelas III bagi 
+pembudidayaan ikan air tawar dan pengairan tanaman, serta Kelas IV bagi pengairan 
+pertanaman. 
+Untuk parameter derajat keasaman (pH), regulasi ini menetapkan rentang 6 
+hingga 9 pada seluruh kelas, sedangkan untuk parameter temperatur, ditetapkan dalam 
+bentuk deviasi maksimal 3°C dari suhu udara di atas permukaan air, bukan dalam 
+bentuk rentang angka mutlak. Penelitian ini menggunakan Kelas II sebagai acuan 
+operasional, mengingat Sungai Mahakam pada titik lokasi penelitian dimanfaatkan 
+masyarakat untuk kebutuhan sehari-hari yang sejalan dengan peruntukan kelas tersebut. 
+Perlu dicatat bahwa regulasi ini tidak mengatur parameter kekeruhan dalam 
+satuan NTU, melainkan mengatur parameter padatan tersuspensi total (TSS) dalam 
+satuan mg/L, yang secara teknis berbeda dari kekeruhan meskipun keduanya 
+berkorelasi. 
+2.6.2 Peraturan Menteri Kesehatan Nomor 2 Tahun 2023 
+Karena (Sekretariat Negara Republik Indonesia, 2021) tidak mengatur parameter 
+kekeruhan dalam satuan NTU, penelitian ini merujuk pada (Kementerian Kesehatan 
+Republik Indonesia, 2023) , yang menetapkan ambang batas kekeruhan sebesar 3 NTU 
+untuk kategori air bersih. 
+
+=== PAGE 42 ===
+ 
+33 
+ 
+Regulasi ini pada dasarnya mengatur standar kesehatan lingkungan untuk 
+keperluan higiene sanitasi, bukan baku mutu kelas air sungai. Nilai 3 NTU digunakan 
+dalam penelitian ini sebagai acuan operasional karena ketiadaan angka baku mutu 
+kekeruhan yang eksplisit pada regulasi baku mutu air sungai, bukan sebagai representasi 
+baku mutu resmi kelas sungai yang berlaku secara hukum. 
+2.6.3 Keterbatasan Acuan yang Digunakan 
+Penggunaan dua regulasi yang berbeda konteks peruntukannya (Sekretariat 
+Negara Republik Indonesia, 2021)  untuk baku mutu lingkungan, dan (Kementerian 
+Kesehatan Republik Indonesia, 2023)  untuk kesehatan sanitasi merupakan keterbatasan 
+yang disadari dalam penelitian ini. Kombinasi kedua acuan tersebut dipilih karena tidak 
+ditemukan satu regulasi tunggal yang mengatur seluruh parameter (pH, suhu, dan 
+kekeruhan) secara konsisten dalam satu kerangka baku mutu kelas sungai. Oleh karena 
+itu, rentang nilai himpunan fuzzy yang disusun pada penelitian ini bersifat sebagai 
+acuan operasional untuk keperluan klasifikasi prototipe pada penelitian Rancang 
+Bangun Sistem Monitoring Kualitas Air Sungai Mahakam Berbasis Internet of Things 
+Menggunakan ESP32 dengan Metode Fuzzy Mamdani, bukan sebagai penetapan baku 
+mutu resmi yang berlaku secara hukum bagi Sungai Mahakam secara keseluruhan. 
+2.7 Firebase 
+Firebase Realtime Database merupakan layanan basis data berbasis cloud yang 
+digunakan untuk menyimpan dan memperbarui data secara langsung pada sistem 
+monitoring. Data dari perangkat lapangan dapat dikirim ke database cloud , lalu 
+ditampilkan kembali melalui aplikasi mobile maupun website secara real-time. 
+Karakteristik ini membuat Firebase sesuai digunakan pada sistem pemantauan 
+lingkungan berbasis ESP32, karena mendukung sinkronisasi data yang cepat dan 
+memudahkan pengguna melihat kondisi terbaru dari perangkat yang dipantau, dengan 
+tingkat keberhasilan transmisi data yang tinggi serta latensi rendah (Hasib & Akib, 
+2026). 
+Firebase juga dapat dimanfaatkan sebagai media penghubung antara mikrokontroler, 
+sensor, dan antarmuka pengguna jarak jauh. Data sensor yang dikirim oleh ESP32 dapat 
+disimpan di Firebase dan diakses secara serempak dari beberapa perangkat, sehingga 
+
+=== PAGE 43 ===
+ 
+34 
+ 
+mendukung proses monitoring secara real-time, sekaligus menyimpan data historis 
+untuk keperluan penelusuran riwayat kondisi sistem (Hasib & Akib, 2026). 
+Pada penelitian Rancang Bangun Sistem Monitoring Kualitas Air Sungai 
+Mahakam Berbasis Internet of Things Menggunakan ESP32 dengan Metode Fuzzy 
+Mamdani ini, Firebase digunakan sebagai media penyimpanan data hasil pembacaan 
+sensor pH, suhu air, suhu udara, dan kekeruhan, beserta hasil klasifikasi fuzzy Mamdani, 
+agar kondisi kualitas air Sungai Mahakam dapat dipantau secara berkelanjutan dari 
+jarak jauh. 
+2.8 Flowchart 
+Flowchart atau diagram alir merupakan penggambaran suatu proses, sistem, atau 
+algoritma komputer dalam bentuk diagram, yang digunakan di berbagai bidang untuk 
+mendokumentasikan, mempelajari, merencanakan, serta menjelaskan suatu proses agar 
+lebih mudah dipahami. Flowchart menggunakan simbol -simbol tertentu untuk 
+menunjukkan jenis langkah, dihubungkan dengan tanda panah untuk menggambarkan 
+aliran dan urutan proses. 
+Dalam penelitian Rancang Bangun Sistem Monitoring Kualitas Air Sungai 
+Mahakam Berbasis Internet of Things Menggunakan ESP32 dengan Metode Fuzzy 
+Mamdani ini, flowchart digunakan untuk menggambarkan alur kerja sistem monitoring 
+kualitas air Sungai Mahakam, mulai dari pembacaan data sensor pH, suhu air, suhu 
+udara, dan kekeruhan, hingga penentuan status kualitas air melalui metode fuzzy 
+Mamdani. Flowchart memiliki simbol-simbol standar untuk menunjukkan notasi pada 
+suatu proses. Simbol -simbol yang digunakan dalam penelitian ini ditunjukkan pada 
+Tabel 2.1 
+ 
+ 
+ 
+ 
+ 
+ 
+
+=== PAGE 44 ===
+ 
+35 
+ 
+ 
+Tabel 2. 1 Simbol-Simbol Flowchart 
+No Simbol Nama Keterangan 
+1  Process Menggambarkan proses, aksi, 
+atau fungsi yang dilakukan 
+sistem. 
+2  Decision Menunjukkan percabangan 
+kondisi yang biasanya berisi nilai 
+benar atau salah, sehingga alur 
+diagram dapat terbagi menjadi 
+cabang-cabang berbeda. 
+3  Input/Output Mewakili data yang tersedia 
+untuk digunakan sebagai 
+masukan atau yang dihasilkan 
+sebagai keluaran. 
+4  Start/End Dikenal sebagai terminator yang 
+menggambarkan awal dan akhir 
+dari suatu proses. 
+5  Arrow Menggambarkan arah aliran 
+proses dari satu langkah ke 
+langkah berikutnya. 
+6  Connector Digunakan untuk 
+menghubungkan elemen-elemen 
+yang terpisah dalam satu 
+halaman. 
+7  Document Menggambarkan masukan atau 
+keluaran yang berupa dokumen 
+secara khusus. 
+ 
+ 
+ 
+
+=== PAGE 45 ===
+ 
+36 
+ 
+BAB III METODOLOGI PENELITIAN 
+METODOLOGI PENELITIAN 
+ 
+ 
+3.1 Tahapan Pelaksanaan Penelitian 
+ 
+Gambar 3. 1 Tahapan Pelaksanaan Penelitian 
+Penjelasan dari alur tahapan pelaksanaan penelitian pada Gambar 3.1 dijelaskan sebagai 
+berikut: 
+1. Studi Literatur dan Identifikasi Masalah 
+Tahap pertama pada penelitian ini dilakukan dengan mempelajari berbagai 
+referensi yang berkaitan dengan topik penelitian. Referensi tersebut meliputi teori 
+tentang baku mutu air, regulasi PP No. 22 Tahun 2021, logika fuzzy Mamdani, sensor 
+pH, suhu, dan kekeruhan, serta teknologi pendukung seperti ESP32, Firebase, dan 
+sistem IoT. Peneliti memperoleh gambaran mengenai konsep yang akan digunakan 
+sekaligus memahami pendekatan -pendekatan yang telah diterapkan pada penelitian 
+sejenis sebelumnya melalui tahap ini. Permasalahan penelitian kemudian dipetakan 
+berdasarkan hasil kajian tersebut, yaitu perlunya sistem monitoring kualitas air Sungai 
+Mahakam yang tidak hanya menampilkan data sensor secara langsung, tetapi juga 
+mampu mengolah data tersebut menjadi status kualitas air yang lebih sederhana dan 
+mudah dipahami oleh pengguna. 
+2. Perumusan Kebutuhan Sistem 
+Perumusan kebutuhan sistem dilakukan dengan menyusun kebutuhan sistem yang 
+akan dibuat. Komponen yang diperlukan, baik dari sisi perangkat keras maupun 
+
+
+=== PAGE 46 ===
+ 
+37 
+ 
+perangkat lunak, dijelaskan pada bagian ini. Parameter yang akan dipantau serta bentuk 
+informasi yang nantinya ditampilkan kepada pengguna turut ditentukan pada tahap ini. 
+Sistem pada penelitian ini dirancang untuk membaca nilai pH, suhu air, suhu udara, dan 
+kekeruhan pada satu titik lokasi di aliran Sungai Mahakam. Kondisi kualitas air 
+dikelompokkan oleh sistem ke dalam tiga kategori, yaitu Baik, Sedang, dan Buruk, 
+dengan pendekatan logika fuzzy Mamdani berdasarkan baku mutu air yang berlaku. 
+Sistem juga diharapkan mampu mengirimkan data secara real -time ke Firebase, 
+menyimpan data secara offline melalui MicroSD apabila koneksi terputus, serta 
+menampilkan hasil klasifikasi melalui OLED dan indikator LED. 
+3. Perancangan Sistem 
+Perancangan sistem dilakukan untuk menyusun gambaran kerja sistem secara 
+menyeluruh sebelum implementasi dilakukan, meliputi perancangan perangkat keras, 
+perancangan himpunan dan aturan fuzzy Mamdani, alur pengolahan data, mekanisme 
+pengiriman data, serta bentuk tampilan informasi yang akan diterima pengguna. Sensor 
+pH PH -4502C, sensor suhu air DS18B20, sensor suhu udara DHT22, dan sensor 
+kekeruhan direncanakan terhubung pada ESP32. Data dari keempat sensor dirancang 
+untuk dibaca secara berkala, nilai suhu air dan suhu udara diolah menjadi selisih suhu 
+(ΔT), kemudian ketiga variabel input (pH, ΔT, kekeruhan) diproses menggunakan 
+logika fuzzy Mamdani untuk menghasilkan status kualitas air. Proses pengiriman data 
+melalui Firebase Realtime Database serta penyimpanan ke MicroSD turut dirancang 
+pada tahap ini, agar data tetap tersimpan sebagai histori meskipun koneksi WiFi 
+terputus. 
+4. Implementasi Purwarupa (Prototype) 
+Tahap implementasi prototipe dilakukan dengan membangun prototipe sesuai 
+rancangan yang telah disusun. Pada tahap ini keempat sensor dihubungkan dengan 
+ESP32 sebagai pengendali utama. Selanjutnya dibuat program untuk membaca data dari 
+sensor, menghitung selisih suhu ( ΔT), menerapkan algoritma fuzzy Mamdani untuk 
+klasifikasi status kualitas air, menampilkan hasil pada OLED dan indikator LED, serta 
+mengirimkan data ke Firebase Realtime Database. Selain implementasi pada sisi 
+perangkat, pada tahap ini juga disiapkan mekanisme penyimpanan data ke MicroSD 
+
+=== PAGE 47 ===
+ 
+38 
+ 
+sebagai cadangan apabila koneksi WiFi terputus. Tahap implementasi bertujuan untuk 
+memastikan bahwa rancangan yang telah dibuat benar -benar dapat diwujudkan menjadi 
+sistem yang dapat dijalankan. 
+5. Kalibrasi Sensor 
+Kalibrasi sensor dilakukan untuk memastikan nilai yang dibaca oleh setiap sensor 
+mendekati kondisi sebenarnya. Pembacaan pH, suhu air, suhu udara, dan kekeruhan 
+dibandingkan dengan alat ukur acuan pada kondisi air yang sama, kemudian selisih 
+(error) antara hasil bacaan sensor dan alat acuan dihitung sebagai dasar penyesuaian. 
+Kalibrasi ini penting dilakukan karena karakteristik sensor analog seperti PH -4502C 
+dan sensor kekeruhan dapat bervariasi antar unit, sehingga akurasi pembacaan perlu 
+dipastikan terlebih dahulu sebelum data digunakan sebagai input pada proses klasifikasi 
+fuzzy Mamdani. 
+6. Pengujian Sistem 
+Pengujian sistem yang dilakukan bertujuan untuk melihat apakah seluruh bagian 
+sistem sudah berfungsi sesuai dengan yang direncanakan. Pengujian mencakup 
+kesesuaian hasil klasifikasi fuzzy Mamdani antara perhitungan manual dan keluaran 
+program, ketepatan interval pembacaan setiap lima menit, kemampuan sistem 
+menyimpan data ke MicroSD saat koneksi WiFi terputus, serta uji lapangan dengan 
+menempatkan purwarupa di sekitar Stasiun KLHK 167/PDAM Bakungan selama 
+beberapa hari. Melalui pengujian ini diamati apakah sensor dapat membaca data dengan 
+baik, apakah status kualitas air yang dihasilkan sesuai dengan kondisi air yang diamati, 
+dan apakah data dapat dikirim, disimpan, serta ditampilkan dengan baik melalui OLED, 
+LED, dan Firebase. 
+7. Evaluasi Dan Analisis Hasil 
+Hasil Evaluasi pengujian merupakan tahap terakhir dalam penelitian ini. 
+Peninjauan dilakukan terhadap data pH, suhu, dan kekeruhan yang dihasilkan selama 
+pengujian, untuk menganalisis kesesuaian hasil klasifikasi fuzzy Mamdani dengan 
+kondisi kualitas air yang diamati, sekaligus mengevaluasi konsistensi sistem dalam 
+mengklasifikasikan kondisi air ke dalam kategori Baik, Sedang, dan Buruk. Proses 
+
+=== PAGE 48 ===
+ 
+39 
+ 
+pengiriman data, penyimpanan histori, serta tampilan pada OLED dan LED turut dinilai 
+pada tahap ini. Apabila hasil evaluasi menunjukkan bahwa klasifikasi belum sesuai 
+dengan yang diharapkan, proses dapat kembali ke tahap perancangan sistem untuk 
+dilakukan penyesuaian, sebagaimana ditunjukkan oleh alur umpan balik pada Gambar 
+3.1. Hasil evaluasi tersebut digunakan untuk menarik kesimpulan mengenai kemampuan 
+sistem yang dibangun dalam memenuhi tujuan penelitian. 
+3.2  Pengumpulan Data 
+Data dalam penelitian ini dikumpulkan melalui dua cara, yaitu pembacaan 
+langsung menggunakan sensor pada satu titik lokasi di aliran Sungai Mahakam (sekitar 
+Stasiun KLHK 167/PDAM Bakungan, Kota Samarinda), serta studi literatur terhadap 
+regulasi baku mutu air dan penelitian sejenis yang telah dibahas pada Bab II. 
+Pembacaan sensor dilakukan dengan interval lima menit sekali selama periode 
+pengujian yang ditentukan, sedangkan data dari Stasiun ONLIMO KLHK 167 
+digunakan sebagai bahan pembanding kontekstual, bukan sebagai input sistem fuzzy 
+yang dibangun. 
+3.3 Perancangan Data 
+Bagian ini menjelaskan rancangan data yang digunakan dalam penelitian, 
+mencakup jenis data yang dikumpulkan, bentuk data yang dihasilkan sistem, serta 
+proses pengolahan data suhu menjadi selisih suhu (ΔT) sebagai salah satu variabel input 
+fuzzy Mamdani. Perancangan data ini menjadi dasar bagi seluruh proses yang dijelaskan 
+pada bagian 3.4 (Perancangan Proses/Algoritma), karena setiap tahap pemrosesan 
+sistem  mulai dari fuzzifikasi hingga penyimpanan  bergantung pada bagaimana data 
+direpresentasikan dan disiapkan terlebih dahulu. 
+Perancangan data pada penelitian ini disusun dengan mempertimbangkan tiga hal 
+utama. Pertama, data yang dikumpulkan harus mencakup seluruh parameter yang 
+dibutuhkan sistem untuk melakukan klasifikasi, yaitu pH, suhu air, suhu udara, dan 
+kekeruhan, tanpa ada intervensi data Onlimo . Kedua, bentuk data harus disesuaikan 
+dengan kebutuhan pemrosesan pada tiap tahap  data numerik untuk keperluan 
+perhitungan matematis (fuzzifikasi dan defuzzifikasi), dan data kategorikal untuk 
+
+=== PAGE 49 ===
+ 
+40 
+ 
+keperluan penyampaian hasil akhir kepada pengguna. Ketiga, data suhu yang diperoleh 
+dari dua sensor terpisah (suhu air dan suhu udara) perlu diolah menjadi satu variabel 
+gabungan ( ΔT) sebelum dapat digunakan sebagai input fuzzy, sesuai dengan cara PP 
+No. 22 Tahun 2021 mengatur ketentuan deviasi suhu. 
+3.3.1 Jenis Data dan Bentuk Data 
+Penelitian ini mengumpulkan dua kategori data yang saling berkaitan. Kategori 
+pertama adalah data hasil pembacaan sensor, yaitu nilai pH yang dibaca oleh modul PH-
+4502C, suhu air yang dibaca oleh DS18B20, suhu udara yang dibaca oleh DHT22, dan 
+tingkat kekeruhan yang dibaca oleh sensor turbidity. Keempat data ini bersifat mentah 
+(raw data ), artinya belum mengalami proses interpretasi apa pun selain konversi dari 
+sinyal tegangan menjadi nilai satuan yang sesuai (pH, °C, dan NTU estimasi). Kategori 
+kedua adalah data hasil pemrosesan, yaitu data yang tidak langsung diperoleh dari 
+sensor, melainkan dihitung oleh sistem berdasarkan data mentah tersebut, termasuk nilai 
+selisih suhu ( ΔT) dan status kualitas air (Baik/Sedang/Buruk) yang dihasilkan dari 
+proses klasifikasi fuzzy Mamdani. Kedua jenis data ini dikumpulkan secara bersamaan 
+pada setiap siklus pembacaan, sehingga setiap satu kali siklus menghasilkan satu paket 
+data lengkap yang mencakup nilai mentah maupun hasil olahannya. 
+Berdasarkan bentuknya, data yang dihasilkan sistem terbagi menjadi dua jenis. 
+Data numerik (float) digunakan untuk merepresentasikan nilai pH, suhu air, suhu udara, 
+ΔT, dan kekeruhan, karena kelima nilai ini bersifat kontinu dan memerlukan presisi 
+desimal (misalnya pH 6,8 atau suhu 28,3°C), sehingga perhitungan pada tahap 
+fuzzifikasi dapat dilakukan dengan akurat sesuai Persamaan (2.1) yang membutuhkan 
+input berupa angka desimal. Data kategorikal ( string) digunakan untuk 
+merepresentasikan hasil akhir klasifikasi kualitas air, yang hanya memiliki tiga 
+kemungkinan nilai, yaitu "Baik", "Sedang", atau "Buruk", karena tujuan akhir sistem 
+adalah memberikan informasi yang mudah dipahami pengguna awam, bukan angka 
+mentah hasil defuzzifikasi (nilai crisp 0–100) yang memerlukan interpretasi lebih lanjut. 
+Setiap paket data juga disertai penanda waktu ( timestamp) dalam bentuk string 
+berformat tanggal dan jam, yang diperoleh dari modul RTC DS3231, guna memastikan 
+setiap data dapat ditelusuri urutannya secara kronologis. 
+
+=== PAGE 50 ===
+ 
+41 
+ 
+3.3.2 Proses Pengolahan Data menjadi Selisih Suhu (ΔT) 
+Nilai suhu air dan suhu udara yang dibaca oleh sensor DS18B20 dan DHT22 
+tidak dapat langsung digunakan sebagai variabel input pada sistem fuzzy Mamdani, 
+karena baku mutu suhu yang diacu dalam penelitian ini (PP No. 22 Tahun 2021) tidak 
+menetapkan rentang suhu air secara mutlak, melainkan dalam bentuk deviasi maksimal 
+terhadap suhu udara di sekitarnya. Oleh karena itu, kedua nilai suhu tersebut terlebih 
+dahulu diolah menjadi satu nilai gabungan berupa selisih suhu (ΔT), melalui persamaan: 
+ΔT = |Tair − Tudara| (3.1) 
+  
+Nilai mutlak (|...|) digunakan pada persamaan ini karena selisih suhu yang 
+menjadi perhatian bukanlah arah perbedaannya (apakah suhu air lebih tinggi atau lebih 
+rendah dari suhu udara), melainkan besar penyimpangannya terhadap batas deviasi yang 
+diatur regulasi. Tanpa nilai mutlak, hasil perhitungan dapat bernilai negatif ketika suhu 
+air lebih rendah daripada suhu udara, sehingga tidak dapat langsung dipetakan ke 
+himpunan fuzzy Rendah/Sedang/Tinggi yang seluruhnya disusun dalam rentang nilai 
+positif (Tabel 3.5). Dengan menerapkan nilai mutlak, ΔT akan selalu bernilai positif, 
+baik ketika suhu air lebih tinggi maupun lebih rendah dari suhu udara. 
+Proses pengolahan ini dilakukan oleh ESP32 segera setelah kedua sensor suhu 
+selesai dibaca, sebelum data masuk ke tahap fuzzifikasi. Sebagai contoh, apabila 
+DS18B20 membaca suhu air sebesar 28°C dan DHT22 membaca suhu udara sebesar 
+26,5°C pada waktu yang sama, maka nilai ΔT yang dihasilkan adalah |28 − 26,5| = 
+1,5°C. Sebaliknya, apabila suhu air justru lebih rendah, misalnya 25°C sementara suhu 
+udara 27°C, maka ΔT tetap dihitung sebagai |25 − 27| = 2°C, bukan −2°C. Nilai ΔT 
+inilah yang kemudian dipetakan ke dalam himpunan fuzzy Rendah, Sedang, atau Tinggi 
+(Tabel 3.5), bukan nilai suhu air atau suhu udara secara terpisah. Pendekatan ini 
+memastikan bahwa klasifikasi kualitas air yang dihasilkan sistem tetap konsisten 
+dengan cara regulasi mengatur kepatuhan suhu, yaitu berdasarkan besar penyimpangan 
+relatif terhadap kondisi lingkungan sekitar, bukan angka mutlak yang berlaku sama di 
+semua kondisi cuaca. 
+
+=== PAGE 51 ===
+ 
+42 
+ 
+3.4  Perancangan Proses/Algoritma 
+Perancangan proses dilakukan untuk menggambarkan alur kerja sistem 
+monitoring kualitas air Sungai Mahakam berbasis IoT, mulai dari pembacaan data 
+sensor hingga penyajian informasi kepada pengguna, guna memastikan setiap 
+komponen sistem bekerja secara terintegrasi sesuai fungsi yang dirancang. ESP32 
+berperan sebagai pusat pengendali yang membaca data dari sensor pH, suhu air, suhu 
+udara, dan kekeruhan, mengolah data tersebut menjadi selisih suhu ( ΔT), menerapkan 
+metode fuzzy Mamdani untuk menentukan status kualitas air, serta mengirimkan hasil 
+ke platform penyimpanan dan menampilkannya kepada pengguna. 
+3.4.1 Kebutuhan Perangkat Keras 
+Perangkat keras yang digunakan pada penelitian ini merupakan komponen 
+utama yang mendukung proses pembacaan data, pengolahan sinyal, komunikasi data, 
+dan pengujian sistem. Pemilihan perangkat dilakukan dengan mempertimbangkan 
+kesesuaian terhadap kebutuhan penelitian, kemudahan implementasi, serta kemampuan 
+masing-masing komponen dalam mendukung sistem monitoring yang dirancang. 
+Kebutuhan perangkat keras yang digunakan pada penelitian ini ditunjukkan pada Tabel 
+3.1 
+Tabel 3. 1 Kebutuhan Perangkat Keras 
+No Nama Perangkat Fungsi Keterangan 
+1 ESP32 DevKit V1 Mikrokontroler utama untuk 
+membaca sensor, mengolah 
+data, dan mengirim data 
+Digunakan sebagai pusat 
+kendali sistem 
+2 Sensor pH PH-4502C Membaca tingkat keasaman air Dipasang pada titik 
+pengambilan sampel 
+3 Sensor suhu air DS18B20 Membaca suhu air Bersifat kedap air, 
+dicelupkan langsung 
+4 Sensor suhu udara DHT22 Membaca suhu udara di sekitar 
+lokasi 
+Ditempatkan terlindung 
+dari cipratan air 
+5 Sensor kekeruhan (turbidity) Membaca estimasi tingkat 
+kekeruhan air 
+Sensor analog berbasis 
+fotodioda 
+6 OLED 0,96 inci Menampilkan hasil klasifikasi 
+secara lokal 
+Menampilkan nilai 
+parameter dan status 
+
+=== PAGE 52 ===
+ 
+43 
+ 
+7 LED (hijau, kuning, merah) Indikator visual status kualitas 
+air 
+Menyala sesuai kategori 
+Baik/Sedang/Buruk 
+8 Modul microSD Menyimpan data secara offline Digunakan sebagai 
+cadangan saat WiFi 
+terputus 
+9 Modul RTC DS3231 Mencatat waktu pengambilan 
+data 
+Menjadi acuan timestamp 
+10 Laptop/komputer Pemrograman dan pengujian 
+sistem 
+Digunakan untuk menulis 
+program dan konfigurasi 
+11 Jaringan WiFi/internet Media komunikasi data Menghubungkan ESP32 
+dengan Firebase 
+12 Kabel jumper dan perlengkapan 
+pendukung 
+Menghubungkan komponen Digunakan saat perakitan 
+prototipe 
+13 Catu daya (adaptor/power bank) Sumber daya listrik sistem Disesuaikan dengan 
+kondisi lokasi 
+14 Box kedap air (IP65) Melindungi rangkaian dari 
+lingkungan sungai 
+Menjaga komponen tetap 
+aman 
+ 
+ 
+ 
+
+=== PAGE 53 ===
+ 
+44 
+ 
+3.4.2 Wiring Diagram Sensor dan ESP32 
+ 
+Gambar 3. 2 Wiring Diagram Sensor Dan ESP32 
+Rancangan hubungan antarperangkat pada sistem monitoring kualitas air yang 
+menggunakan ESP32 sebagai pengendali utama ditunjukkan pada Gambar 3.2. Sensor 
+pH dihubungkan pada rangkaian tersebut untuk membaca keasaman air, sensor 
+DS18B20 untuk membaca suhu air, sensor DHT22 untuk membaca suhu udara, dan 
+sensor turbidity untuk mendeteksi kekeruhan. Susunan koneksi ini dibuat agar data dari 
+keempat sensor dapat dibaca, diolah, lalu dikirimkan oleh ESP32 ke sistem monitoring 
+secara terintegrasi. 
+Tabel 3. 2 Konfigurasi Pin Sensor dengan ESP32 DevKit V1 
+No Komponen Pin Komponen Pin ESP32 Keterangan 
+1 Sensor pH PH-4502C VCC 3V3 Catu daya modul 
+sensor 
+2 Sensor pH PH-4502C GND GND Ground modul 
+sensor 
+
+
+=== PAGE 54 ===
+ 
+45 
+ 
+3 Sensor pH PH-4502C PO (ANALOG) GPIO34 Membaca sinyal 
+analog pH 
+4 Sensor suhu air DS18B20 VCC 3V3 Catu daya sensor 
+5 Sensor suhu air DS18B20 GND GND Ground sensor 
+6 Sensor suhu air DS18B20 DATA GPIO4 Jalur data protokol 
+OneWire 
+7 Sensor suhu udara DHT22 VCC 3V3 Catu daya sensor 
+8 Sensor suhu udara DHT22 GND GND Ground sensor 
+9 Sensor suhu udara DHT22 DATA GPIO5 Jalur data digital 
+10 Sensor kekeruhan (turbidity) VCC 3V3 Catu daya sensor 
+11 Sensor kekeruhan (turbidity) GND GND Ground sensor 
+12 Sensor kekeruhan (turbidity) PO (ANALOG) GPIO35 Membaca sinyal 
+analog kekeruhan 
+Sensor pH, suhu air, suhu udara, dan kekeruhan masing -masing terhubung ke 
+ESP32 DevKit V1 melalui jalur catu daya (VCC, GND) serta jalur data, sebagaimana 
+ditunjukkan pada Tabel 3.2. Susunan koneksi tersebut memungkinkan sistem membaca 
+keempat parameter secara bersamaan untuk diolah lebih lanjut dalam proses klasifikasi 
+kualitas air. 
+3.4.3 Kebutuhan Perangkat Lunak 
+Perangkat lunak diperlukan pada penelitian ini sebagai pendukung proses 
+pemrograman, pengolahan data, komunikasi, penyimpanan, dan penampilan hasil 
+monitoring. Kebutuhan perangkat lunak pada penelitian ini ditunjukkan pada Tabel 3.3 
+Tabel 3. 3 Kebutuhan Perangkat Lunak 
+No Nama Perangkat Lunak Fungsi Keterangan 
+1 Arduino IDE Menulis dan 
+mengunggah program 
+Digunakan untuk 
+pemrograman 
+
+=== PAGE 55 ===
+ 
+46 
+ 
+ke ESP32 mikrokontroler 
+2 Library OneWire & DallasTemperature Mendukung pembacaan 
+sensor DS18B20 
+Membaca data suhu 
+udara 
+3 Library DHT Mendukung pembacaan 
+sensor DHT22 
+Membaca data suhu 
+udara 
+4 Library Adafruit GFX & SSD1306 Mengontrol tampilan 
+OLED 
+Menampilkan nilai 
+parameter dan status 
+5 Library Firebase ESP Client Mengirim data ke 
+Firebase 
+Digunakan untuk 
+komunikasi data online 
+6 Library SD Menyimpan data ke 
+MicroSD 
+Digunakan untuk 
+penyimpanan offline 
+7 Firebase Realtime Database Menyimpan data 
+monitoring 
+Menyimpan data real-
+time dan histori 
+8 Sistem operasi laptop/komputer Menjalankan perangkat 
+lunak pengembangan 
+Digunakan selama 
+implementasi dan 
+pengujian 
+ 
+ 
+ 
+3.4.4 Alur Kerja Sistem 
+Sistem bekerja secara berulang setiap lima menit sekali. Siklus dimulai dari 
+pembacaan keempat sensor (pH, suhu air, suhu udara, kekeruhan), dilanjutkan dengan 
+perhitungan selisih suhu (ΔT) sesuai Persamaan 3.1, kemudian ketiga variabel input 
+(pH, ΔT, kekeruhan) diproses menggunakan metode fuzzy Mamdani melalui tahap 
+fuzzifikasi, evaluasi aturan, agregasi, dan defuzzifikasi mengikuti Persamaan 2.1 hingga 
+2.4 pada Bab II sehingga menghasilkan status kualitas air. Status akhir tersebut 
+ditampilkan melalui OLED dan indikator LED, dikirim melalui Firebase Realtime 
+
+=== PAGE 56 ===
+ 
+47 
+ 
+Database, dan disimpan sebagai cadangan pada MicroSD, sebagaimana dijelaskan lebih 
+lanjut pada Subbab 3.4.6  
+3.4.5  Alur Kerja Fuzzy 
+ 
+Gambar 3. 3 Flowchart Sistem 
+Alur kerja sistem secara rinci digambarkan melalui flowchart pada Gambar 3.3, 
+dengan logika fuzzy Mamdani sebagai inti proses pengambilan keputusan. Sistem 
+diawali dengan inisialisasi seluruh perangkat (ESP32, sensor, RTC, OLED, LED, 
+MicroSD, dan koneksi WiFi), diikuti pengecekan validitas waktu pada modul RTC 
+DS3231; apabila waktu belum valid, sistem akan menyetel ulang waktu secara otomatis 
+melalui protokol NTP saat WiFi tersedia. Sistem kemudian memeriksa status koneksi 
+WiFi untuk menentukan mode operasi, yaitu Mode Online (siap mengirim data ke 
+Firebase) atau Mode Offline (data akan disimpan sementara ke MicroSD). 
+Pada tahap pembacaan data, sistem membaca nilai pH, suhu air, suhu udara, dan 
+kekeruhan secara berurutan, kemudian melakukan validasi terhadap data yang terbaca; 
+apabila ditemukan nilai yang tidak wajar, sistem akan mengulangi pembacaan sensor 
+
+
+=== PAGE 57 ===
+ 
+48 
+ 
+sebelum melanjutkan proses. Setelah data dinyatakan valid, sistem menghitung selisih 
+suhu (ΔT) sesuai Persamaan (3.1). 
+Ketiga variabel input yang telah diperoleh, yaitu pH, ΔT, dan kekeruhan, 
+selanjutnya diproses menggunakan metode fuzzy Mamdani melalui empat tahap 
+berurutan. Setiap variabel terlebih dahulu dipetakan ke dalam tiga himpunan linguistik 
+menggunakan fungsi keanggotaan segitiga sebagaimana ditunjukkan pada Tabel 3.4, 
+dengan: 
+a = titik kaki kiri segitiga (derajat keanggotaan mulai naik dari 0)  
+b = titik puncak segitiga (derajat keanggotaan bernilai 1)  
+c = titik kaki kanan segitiga (derajat keanggotaan turun kembali ke 0) Himpunan fuzzy 
+untuk setiap variabel input dan output pada penelitian ini ditetapkan sebagai berikut: 
+Tabel 3. 4 Himpunan Fuzzy Variabel Input dan Output 
+Variabel Satuan Himpunan Titik (a,b,c) 
+ 
+pH 
+- Asam 0, 6, 7 
+ Netral  6, 7.5, 9 
+ Basa 8, 9, 14 
+ 
+Selisih Suhu (ΔT) 
+°C Rendah 0, 1, 2 
+ Sedang 1.5, 3, 4.5 
+ Tinggi 3, 6, 10 
+ 
+Kekeruhan 
+NTU (estimasi) Jernih 0, 1, 3 
+ Sedang  2, 3, 6 
+ Keruh 5, 10, 20 
+ 
+Status Air (output) 
+Skala 0-100 Buruk 0, 25, 50 
+ Sedang 25, 50, 75 
+ Baik 50, 75, 100 
+ 
+Titik-titik himpunan pH mengacu pada baku mutu pH air sungai kelas II sebesar 6 
+hingga 9 sebagai acuan operasional (Sekretariat Negara Republik Indonesia, 2021) . 
+Titik himpunan ΔT mengacu pada ketentuan deviasi suhu maksimal 3°C dari peraturan 
+yang sama. Titik himpunan kekeruhan mengacu pada ambang 3 NTU dari (Kementerian 
+
+=== PAGE 58 ===
+ 
+49 
+ 
+Kesehatan Republik Indonesia, 2023)  sebagai acuan operasional, mengingat sensor 
+yang digunakan bersifat estimasi, bukan pengukuran presisi. 
+ 
+Gambar 3. 4 Gambar Fungsi Keanggotaan Variabel pH 
+Tahap pertama, fuzzifikasi, menghitung nilai keanggotaan tiap variabel input 
+sesuai Persamaan (2.1). Tahap kedua, evaluasi aturan, menerapkan operator MIN sesuai 
+Persamaan (2.2) terhadap 27 aturan yang telah disusun pada Tabel 3.5 berikut ini : 
+Tabel 3. 5 Basis Aturan Fuzzy Mamdani 
+No pH ΔT Kekeruhan Status Air 
+1 Netral Rendah Jernih Baik 
+2 Netral Rendah Sedang Baik 
+3 Netral Rendah Keruh Sedang 
+4 Netral Sedang Jernih Sedang 
+5 Netral Sedang Sedang Sedang 
+6 Netral Sedang Keruh Sedang 
+7 Netral Tinggi Jernih Sedang 
+8 Netral Tinggi Sedang Sedang 
+9 Netral Tinggi Keruh Buruk 
+
+
+=== PAGE 59 ===
+ 
+50 
+ 
+10 Asam Rendah Jernih  Sedang 
+11 Asam Rendah Sedang Sedang 
+12 Asam Rendah Keruh Sedang 
+13 Asam Sedang Jernih Sedang 
+14 Asam Sedang Sedang Sedang 
+15 Asam Sedang Keruh Buruk 
+16 Asam Tinggi Jernih Buruk 
+17 Asam Tinggi Sedang Buruk 
+18 Asam Tinggi Keruh  Buruk 
+19 Basa Rendah Jernih Sedang 
+20 Basa Rendah Sedang Sedang 
+21 Basa Rendah Keruh Sedang 
+22 Basa Sedang Jernih Sedang 
+23 Basa Sedang Sedang Sedang 
+24 Basa Sedang Keruh Buruk 
+25 Basa Tinggi Jernih Buruk 
+26 Basa Tinggi Sedang Buruk 
+27 Basa Tinggi Keruh Buruk 
+ 
+ Tahap ketiga, agregasi, menggabungkan seluruh α -predikat ke dalam satu 
+himpunan fuzzy output menggunakan operator MAX sesuai Persamaan (2.3). Tahap 
+keempat, defuzzifikasi, menghitung nilai tegas (z*) pada rentang 0 –100 menggunakan 
+metode centroid sesuai Persamaan (2.4), yang kemudian dipetakan menjadi status Baik, 
+Sedang, atau Buruk.  
+Sebagai ilustrasi penerapan seluruh tahap tersebut, diberikan data pengukuran: 
+pH = 6,2; ΔT = 1,5°C; kekeruhan = 4 (estimasi sensor). 
+Langkah 1 — Fuzzifikasi 
+pH = 6,2 (menggunakan Persamaan 2.1): 
+μ_asam(6,2) = (7−6,2)/(7−6) = 0,8 
+μ_netral(6,2) = (6,2−6)/(7,5−6) = 0,133 
+μ_basa(6,2) = 0 
+
+=== PAGE 60 ===
+ 
+51 
+ 
+ΔT = 1,5°C: 
+μ_rendah(1,5) = (2−1,5)/(2−1) = 0,5 
+μ_sedang(1,5) = 0 
+μ_tinggi(1,5) = 0 
+Kekeruhan = 4: 
+μ_jernih(4) = 0 (karena 4 > 3, sudah lewat batas Jernih) 
+μ_sedang(4) = (6-4)/(6-3) = 0,667 
+μ_keruh(4) = 0 (karena 4 < 5, belum masuk batas Keruh) 
+Langkah 2 — Evaluasi Aturan (Persamaan 2.2) 
+Aturan A: pH Asam ∩ ΔT Rendah ∩ Kekeruhan Sedang → Sedang 
+α_A = min(0,8; 0,5; 0,667) = 0,5 
+Aturan B: pH Netral ∩ ΔT Rendah ∩ Kekeruhan Sedang → Baik 
+α_B = min(0,133; 0,5; 0,667) = 0,133 
+Langkah 3 — Agregasi (Persamaan 2.3) 
+μ_Sedang = 0,5 
+μ_Baik = 0,133 
+μ_Buruk = 0 
+Langkah 4 — Defuzzifikasi (Persamaan 2.4) 
+𝑧∗=
+(25×0)+(50×0,5)+(75×0,133)
+0+0,5+0,133 =0+25+9,975
+0,633 =55,26 
+Hasil: z* ≈ 55,26, lebih dekat ke titik puncak kategori Sedang (50), sehingga status 
+akhir ditetapkan sebagai Sedang. 
+Nilai z* yang telah dipetakan menjadi status kualitas air tersebut, diambil penanda 
+waktunya dari modul RTC, lalu disusun menjadi satu paket data lengkap (pH, suhu air, suhu 
+udara, ΔT, kekeruhan, status, dan timestamp). Hasil klasifikasi ditampilkan kepada pengguna 
+melalui OLED (menampilkan seluruh nilai parameter dan status) serta indikator LED 
+(hijau/kuning/merah sesuai status). Sistem kemudian memeriksa kembali status koneksi WiFi 
+untuk menentukan tujuan pengiriman data: apabila WiFi terhubung, data dikirim ke Firebase 
+Realtime Database dan disimpan pula ke MicroSD sebagai cadangan; apabila pengiriman gagal 
+atau WiFi tidak terhubung, data disimpan sepenuhnya ke MicroSD (Mode Offline). Seluruh 
+siklus ini berulang setiap lima menit sekali. 
+
+=== PAGE 61 ===
+ 
+52 
+ 
+3.4.6 Perancangan Data yang Dikirim dan Disimpan 
+Data hasil pengolahan pada sistem ini dirancang dalam bentuk yang ringkas namun 
+tetap memuat informasi utama yang diperlukan untuk keperluan pemantauan maupun analisis 
+lebih lanjut. Payload yang dikirim memuat tujuh informasi utama, yaitu nilai pH, suhu air, suhu 
+udara, ΔT, kekeruhan, status kualitas air, dan timestamp. Struktur payload ditunjukkan pada 
+Tabel 3.5. 
+Tabel 3. 6 Struktur Data yang Dikirimkan ke Firebase 
+No Data Tipe Keterangan 
+1 pH Float Nilai mentah hasil pembacaan sensor PH-
+4502C 
+2 Suhu Air Float Nilai mentah hasil pembacaan sensor 
+DS18B20 
+3 Suhu Udara Float Nilai mentah hasil pembacaan sensor DHT22 
+4 Selisih Suhu (ΔT) Float Hasil perhitungan suhu air dikurangi suhu 
+udara 
+5 Kekeruhan Float Nilai estimasi hasil pembacaan sensor 
+turbidity 
+6 Status Kualitas Air String Hasil klasifikasi fuzzy Mamdani 
+(Baik/Sedang/Buruk) 
+7 Timestamp String Waktu pengiriman data, diperoleh dari modul 
+RTC DS3231 
+Data hasil pengolahan pada sistem ini dirancang dalam bentuk yang ringkas namun 
+tetap memuat informasi utama yang diperlukan untuk keperluan pemantauan maupun analisis 
+lebih lanjut. Payload yang dikirim memuat tujuh informasi utama, yaitu nilai pH, suhu air, suhu 
+udara, ΔT, kekeruhan, status kualitas air, dan timestamp. Struktur payload ditunjukkan pada 
+Tabel 3.5. 
+3.5  Perancangan Tampilan 
+Perancangan tampilan dilakukan untuk menentukan bagaimana hasil pemantauan 
+dan klasifikasi kualitas air Sungai Mahakam disajikan kepada pengguna, baik secara 
+lokal pada perangkat maupun secara jarak jauh melalui jaringan internet. Penelitian ini 
+merancang dua bentuk tampilan yang saling melengkapi, yaitu tampilan pada OLED 
+
+=== PAGE 62 ===
+ 
+53 
+ 
+dan indikator LED yang terpasang langsung pada purwarupa, serta tampilan dashboard 
+web yang menampilkan data secara real-time dari Firebase Realtime Database. Kedua 
+bentuk tampilan ini dirancang agar informasi kualitas air dapat diakses baik oleh 
+pengguna yang berada langsung di lokasi alat maupun oleh pengguna yang memantau 
+dari jarak jauh. 
+3.5.1 Tampilan OLED dan Indikator LED 
+Hasil klasifikasi kualitas air ditampilkan melalui OLED berukuran 0,96 inci 
+dengan beberapa baris informasi: nilai pH, suhu air, suhu udara, ΔT, kekeruhan, status 
+kualitas air, serta waktu pembacaan. Indikator LED digunakan sebagai penanda visual 
+cepat, dengan warna hijau menandakan status Baik, kuning menandakan status Sedang, 
+dan merah menandakan status Buruk. 
+Perlu dicatat bahwa OLED dan LED pada penelitian ini berfungsi sebagai 
+indikator lokal untuk keperluan pengujian dan demonstrasi purwarupa, sedangkan 
+pemantauan jarak jauh yang lebih bermakna bagi pengguna dilakukan melalui 
+dashboard web yang mengambil data dari Firebase Realtime Database.  Rancangan 
+antarmuka ditampilkan pada Gambar 3.5 
+ 
+Gambar 3. 5 Keluaran Informasi Oled 
+3.5.2 Tampilan Dashboard Web 
+Selain ditampilkan secara lokal melalui OLED dan LED, hasil pemantauan 
+kualitas air juga ditampilkan kepada pengguna melalui dashboard web yang mengambil 
+
+
+=== PAGE 63 ===
+ 
+54 
+ 
+data langsung dari Firebase Realtime Database secara real-time. Rancangan antarmuka 
+dashboard ditampilkan pada Gambar 3.6 
+ 
+Gambar 3. 6 Keluaran Informasi Aplikasi Website 
+ 
+Dashboard terdiri atas beberapa bagian utama: 
+• Kartu status kualitas air, menampilkan kategori Baik/Sedang/Buruk secara 
+menonjol beserta keterangan singkat hasil analisis fuzzy Mamdani 
+• Kartu nilai parameter, menampilkan pH, suhu air, suhu udara, ΔT, dan 
+kekeruhan terkini beserta status masing-masing 
+• Grafik monitoring, menampilkan tren perubahan seluruh parameter dalam 
+rentang waktu tertentu 
+• Tabel data terakhir, menampilkan riwayat pembacaan sensor beserta status 
+klasifikasinya 
+• Panel informasi sistem , menampilkan waktu pembaruan terakhir, interval 
+pembacaan, dan sumber data 
+
+
+=== PAGE 64 ===
+ 
+55 
+ 
+• Panel keterangan status, menampilkan rentang nilai z* untuk tiap kategori 
+(Buruk: 0–33, Sedang: 34 –66, Baik: 67 –100), konsisten dengan Tabel 3.5 pada 
+Bab II 
+Dashboard ini memudahkan pengguna memantau kondisi Sungai Mahakam dari jarak 
+jauh tanpa harus berada di lokasi fisik alat, sekaligus menyediakan riwayat data untuk 
+keperluan analisis tren kualitas air dalam jangka waktu tertentu. 
+ 
+3.6  Perancangan Pengujian 
+ Pengujian dilakukan untuk mengetahui apakah sistem bekerja sesuai rancangan, 
+mencakup akurasi pembacaan sensor, ketepatan klasifikasi fuzzy Mamdani, hingga 
+kelancaran penyimpanan dan pengiriman data. Skenario pengujian yang dirancang 
+ditunjukkan pada Tabel 3.6 
+Tabel 3. 7 Skenario Pengujian Sistem 
+No Aspek Skenario Metrik 
+1 Kesesuaian fuzzy Menghitung manual 15–30 kombinasi 
+data uji dan membandingkan dengan 
+keluaran program 
+Jumlah kecocokan / 
+confusion matrix 3 
+kelas 
+2 Uji Tampilan Membandingkan nilai dan status yang 
+ditampilkan pada OLED, warna 
+indikator LED, serta data pada 
+dashboard web dengan data yang 
+sebenarnya tersimpan di Firebase pada 
+waktu yang sama 
+Kesesuaian antara data 
+di OLED, LED, 
+dashboard web, dan 
+Firebase 
+3 Ketepatan interval Mencatat timestamp setiap pembacaan 
+dan menghitung selisih antar data 
+Selisih waktu rata-rata 
+terhadap target 5 menit 
+4 Penyimpanan data Menguji penyimpanan saat koneksi 
+WiFi terputus dan tersambung kembali 
+Kesesuaian data yang 
+tersimpan dan terkirim 
+ 
+
+=== PAGE 65 ===
+ 
+56 
+ 
+ Melalui pengujian ini diamati apakah sensor dapat membaca data dengan akurasi 
+yang wajar, apakah status kualitas air yang dihasilkan sistem sesuai dengan hasil 
+perhitungan manual, dan apakah data dapat dikirim, disimpan, serta ditampilkan dengan 
+baik melalui OLED, LED, dan Firebase. 
+3.7  Waktu dan Tempat Penelitian 
+Penelitian ini dilaksanakan di dua lokasi sesuai tahapannya, yaitu di Laboratorium 
+Robotic, Fakultas Teknik, Universitas Mulawarman untuk tahap perancangan, 
+implementasi, dan pengujian awal purwarupa, serta di sekitar Stasiun KLHK 
+167/PDAM Bakungan, Sungai Mahakam, Kota Samarinda, sebagai lokasi pengambilan 
+data dan uji lapangan, sehingga proses pemasangan sensor, pengambilan data, serta 
+pengujian sistem dapat dilakukan secara langsung pada kondisi aliran sungai yang 
+sesungguhnya. Penelitian ini akan dilaksanakan sesuai jadwal yang telah ditetapkan 
+pada rencana penelitian yang dapat dilihat pada Tabel 3.8 berikut ini. 
+ 
+ 
+ 
+Tabel 3. 8 Jadwal Penelitian 
+No Kegiatan 
+Bulan (Tahun 2026) 
+Apr Mei Juni  Juli Agus Sept Okt Nov 
+I 
+Tahap Persiapan Penelitian 
+1. Pembuatan Proposal         
+2. Seminar Proposal         
+3. Perbaikan Seminar 
+Proposal 
+        
+II 
+Tahap Pelaksanaan 
+1. Perancangan dan 
+Implementasi 
+Purwarupa 
+        
+
+=== PAGE 66 ===
+ 
+57 
+ 
+2. Kalibrasi Sensor         
+ 
+3. Pengambilan Data 
+dan Uji Lapangan 
+        
+ 
+ 4. Pengujian Sistem 
+dan Klasifikasi Fuzzy 
+        
+ 5. Evaluasi dan Analisis 
+Hasil 
+        
+III 
+Tahap Penyusunan Laporan 
+1. Seminar Hasil         
+2. Perbaikan Seminar 
+Hasil 
+        
+3. Penulisan Artikel 
+Ilmiah 
+        
+4. Seminar Akhir         
+5. Perbaikan Seminar 
+Akhir 
+        
+ 
+ 
+  
+
+=== PAGE 67 ===
+ 
+58 
+ 
+DAFTAR PUSTAKA 
+1. Affandi, Y., Qissisina, G. H., Hidayat, Y. Y., Sari, R. Y., & Asferizal, F. (2026). 
+Perancangan dan Implementasi Sistem Monitoring Kualitas Air Berbasis IoT 
+Menggunakan ESP32 dan Dashboard Web. Jurnal Teori Dan Aplikasi Fisika, XX, 
+No. XX(02), 149–162. 
+2. Ardana, I. M. R., & Sembiring, J. P. (2025). Implementation and Monitoring of 
+Water Quality System in Ornamental Fish Aquarium with Fuzzy Logic Method 
+Implementasi dan Monitoring Sistem Kualitas Air pada Akuarium Ikan Hias 
+Menggunakan Metode Fuzzy Logic. Indonesian Journal of Machine Learning and 
+Computer Science, 5(4), 1570–1576. 
+3. Aristho umbu nggaba kaho, Arini Aha Pekuwali, & Leonard Marten Doni Ratu. 
+(2025). Sistem Pemantauan Kualitas Air Kolam Berbasis Internet of Things (IoT) 
+Untuk Mengurangi Kematian Ikan Nila Menggunakan Logika Fuzzy Mamdani. 
+Jurnal Teknologi Dan Manajemen Industri Terapan, 1(3), 783–791. 
+https://doi.org/10.55826/jtmit.v4i3.1010 
+4. Ayu Wulandari, S., Sucipto, A., Fahriyannur Rosyady, A., Dwiky Riza Ardana, 
+M., Dava Putra Cahyono, O., Nur Khomarudin, A., Studi Teknik Informatika, P., 
+Pertanian Negeri Jember, P., Studi Teknologi Rekayasa Komputer, P., Pertanian 
+Negeri Payakumbuh, P., & Korespondesi, P. (2024). Rancang Bangun Sistem 
+Monitoring Kualitas Air Untuk Mendeteksi Keadaan Tidak Normal atau Penyakit 
+Pada Tambak Ikan Mujaer Menggunakan Fuzzy Logic Mamdani Berbasis Mobile 
+Design and Development of a Water Quality Monitoring System to Detect 
+Abnormal Condit. Technologica, 3(1), 42–54. 
+https://journals.gesociety.org/index.php/technologica/article/view/153 
+5. Bellini, F., Barzegar, Y., Barzegar, A., Marrone, S., Verde, L., & Pisani, P. (2025). 
+Sustainable Water Quality Evaluation Based on Cohesive Mamdani and Sugeno 
+Fuzzy Inference System in Tivoli (Italy). Sustainability (Switzerland), 17(2). 
+https://doi.org/10.3390/su17020579 
+6. de Camargo, E. T., Spanhol, F. A., Slongo, J. S., da Silva, M. V. R., Pazinato, J., 
+de Lima Lobo, A. V., Coutinho, F. R., Pfrimer, F. W. D., Lindino, C. A., 
+Oyamada, M. S., & Martins, L. D. (2023). Low-Cost Water Quality Sensors for 
+
+=== PAGE 68 ===
+ 
+59 
+ 
+IoT: A Systematic Review. Sensors, 23(9), 1–27. 
+https://doi.org/10.3390/s23094424 
+7. Denny, S. D. M., Hidayah, W., Pradana, D. K. A., & Wulandari, D. F. (2025). 
+Contamination Level Analysis of the Klinajau River in Dun Village, Muara 
+Ancalong District, East Kutai Regency, East Kalimantan Province. Jurnal 
+Agriment, 10(1), 51–57. https://doi.org/10.51967/jurnalagriment.v10i1.3353 
+8. Elriyan, D. I. (2025). Pengendalian Kualitas Air Minum Menggunakan Fuzzy 
+Mamdani Berbasis Internet of Things. Electrician : Jurnal Rekayasa Dan 
+Teknologi Elektro, 19(1), 39–45. https://doi.org/10.23960/elc.v19n1.2648 
+9. Fakhrurroja, H., Nuryatno, E. T., Munandar, A., Fahmi, M., & Mahardiono, N. A. 
+(2023). Water quality assessment monitoring system using fuzzy logic and the 
+internet of things. Journal of Mechatronics, Electrical Power, and Vehicular 
+Technology, 14(2), 198–207. https://doi.org/10.14203/j.mev.2023.v14.198-207 
+10. Faradilla, R., Zulya, F., Khairunnisa, K., Ibrahim, I., & Waryati, W. (2025). 
+Penentuan Status Mutu Air Sungai Mahakam Menggunakan Teknologi Online 
+Monitoring (Onlimo) Pada Stasiun Klhk 167 Kota Samarinda. Jurnal Teknologi 
+Lingkungan UNMUL, 9(2), 23. https://doi.org/10.30872/jtlunmul.v9i2.23093 
+11. Fauziyah, Z. N., Suyitno, S., Darnah, Hayati, M. N., & Fauziyah, M. (2025). 
+Analyzing the mahakam river water quality using the geographically weighted 
+panel regression model. MethodsX, 16(December 2025), 103773. 
+https://doi.org/10.1016/j.mex.2025.103773 
+12. Harliana, P., Mardiana, M., & Nainggolan, Y. A. (2022). Analisa Perbandingan 
+Tingkat Akurasi dalam Memprediksi Laju Inflasi Kota Medan Menggunakan 
+Model Fuzzy Inference System Sugeno dan Mamdani. Hello World Jurnal Ilmu 
+Komputer, 1(3), 145–152. https://doi.org/10.56211/helloworld.v1i3.130 
+13. Helena Manurung, C. T., Arifin, J., Syifa, F. T., & Rochmanto, R. A. (2022). 
+Pemanfaatan ESP32 Sebagai Sistem Pemantauan Kualitas Air Keran Siap Minum 
+Secara Real-Time Menggunakan Aplikasi. Journal of Telecommunication, 
+Electronics, and Control Engineering (JTECE), 4(2), 93–98. 
+https://doi.org/10.20895/jtece.v4i2.535 
+14. Hercog, D., Lerher, T., Truntič, M., & Težak, O. (2023). Design and 
+
+=== PAGE 69 ===
+ 
+60 
+ 
+Implementation of ESP32-Based IoT Devices. Sensors, 23(15). 
+https://doi.org/10.3390/s23156739 
+15. Hermansyah, D. (2022). Penentuan Status Mutu Air Sungai Kapuas Menggunakan 
+Metode Storet dan Logika Fuzzy Mamdani. Prisma Fisika, 10(2), 128. 
+https://doi.org/10.26418/pf.v10i2.55246 
+16. Hikmah, M. A., & Misbah, M. (2024). Sistem Kontrol Kualitas Air Berbasis Fuzzy 
+Logic Pada Kolam Pendederan Ikan Bandeng. Jurnal Teknik Elektro, 17(1), 6–10. 
+https://doi.org/10.9744/jte.17.1.6-10 
+17. Huvat, A. G., Kartika, R., Mustakim, M., & Ilang, Y. (2025). Water quality study 
+and water quality status using Storet and index method pollutants in Ratah River 
+Mahakam Ulu Regency, East Kalimantan. Edelweiss Applied Science and 
+Technology, 9(6), 2442–2459. https://doi.org/10.55214/25768484.v9i6.8408 
+18. Ismail, W. Z. W., Aziz, N. A. A., & Ghazali, A. K. (2025). Interactive Fuzzy Logic 
+Interface for Enhanced Real-Time Water Quality Index Monitoring. Algorithms, 
+18(9), 1–28. https://doi.org/10.3390/a18090591 
+19. Kamila, A., Sadidan, I., & Fauzie, A. K. (2024). Penilaian Status Mutu Air Sungai 
+Citarum Menggunakan Metode Indeks Pencemaran. Ruwa Jurai: Jurnal Kesehatan 
+Lingkungan, 18(2), 84–91. https://doi.org/10.26630/rj.v18i2.4562 
+20. Karnelia, K., Ghitarina, I. G., & Suryana, I. I. (2023). Kandungan nitrogen saat 
+pasang dan surut di Sungai Mahakam Kota Samarinda (Nitrogen content during 
+high and low tides in the Mahakam River, Samarinda City). Jurnal Ilmu Perikanan 
+Tropis Nusantara, 2(1), 24–29. 
+21. Kementerian Kesehatan Republik Indonesia. (2023). PERATURAN MENTERI 
+KESEHATAN REPUBLIK INDONESIA NOMOR 2 TAHUN 2023 TENTANG 
+PERATURAN PELAKSANAAN PERATURAN PEMERINTAH NOMOR 66 
+TAHUN 2014 TENTANG KESEHATAN LINGKUNGAN (Number 55). 
+22. Kurniawan, R. F., Ashari, A., & Hujja, R. M. (2025). Sistem Pakan Ikan Otomatis 
+Berdasarkan Kualitas Air Menggunakan Metode Fuzzy Mamdani. IJEIS 
+(Indonesian Journal of Electronics and Instrumentation Systems), 15(1), 73. 
+https://doi.org/10.22146/ijeis.94202 
+23. Latekeng, N., Tansa, S., Raghel, Y., & Nasibu, I. Z. (2024). Monitoring Kualitas 
+
+=== PAGE 70 ===
+ 
+61 
+ 
+Air Sungai ( Kekeruhan , Suhu , TDS , PH ) Menggunakan Mikrokontroler. 
+Jambura Journal of Electrical and Electronics Engineering, 6. 
+24. Pandey, A., Manjare, S. D., Joshi, A., & Singh, A. P. (2023). Quantification of 
+environmental impact of water pollutants using fuzzy comprehensive model. 
+International Journal of Environmental Science and Technology, 20(2), 2009–
+2020. https://doi.org/10.1007/s13762-022-03970-x 
+25. Pramaningsih, V., Yuliawati, R., Sukisman, S., Hansen, H., Suhelmi, R., & 
+Daramusseng, A. (2023). Indek Kualitas Air dan Dampak terhadap Kesehatan 
+Masyarakat Sekitar Sungai Karang Mumus, Samarinda. Jurnal Kesehatan 
+Lingkungan Indonesia, 22(3), 313–319. https://doi.org/10.14710/jkli.22.3.313-319 
+26. Putra, F. A. R., Hendriadi, A. A., & Ridwan, T. (2024). Rancang Bangun SPK 
+Kualitas Air Sungai Metode Fuzzy Tsukamoto (Studi Kasus: 4 Kecamatan 
+Karawang). Computer Science (CO-SCIENCE), 4(2), 99–108. 
+https://doi.org/10.31294/coscience.v4i2.3358 
+27. Sekretariat Negara Republik Indonesia. (2021). Peraturan Pemerintah Nomor 22 
+Tahun 2021 Tentang Penyelenggaraan Perlindungan dan Pengelolaan Lingkungan 
+Hidup. In Sekretariat Negara Republik Indonesia (Vol. 1, Number 078487A). 
+http://www.jdih.setjen.kemendagri.go.id/ 
+28. Sugiyatno. (2023). Pengiriman Informasi Real Time Menggunakan Teknologi 
+Database Firebase pada Aplikasi Mobile Android. Jurnal Informatika Komputer, 
+Bisnis Dan Manajemen, 21(2), 46–55. https://doi.org/10.61805/fahma.v21i2.17 
+29. Suyitno, S., Darnah, Hayati, M. N., Dani, A. T. R., Purnamasari, I., Goejantoro, R., 
+Siringoringo, M., Nugraha, P. Y., Fauziyah, M., Fauziyah, Z. N., & Mislan. 
+(2026). Geographically weighted Weibull regression modeling on dissolved 
+oxygen data to analyze river water quality in East Kalimantan. MethodsX, 
+16(August 2025), 103745. https://doi.org/10.1016/j.mex.2025.103745 
+30. Zadeh, L. A., Introduction, I., & Navy, U. S. (1965). Fuzzy Sets * -. 353, 338–353. 
+ 
+ 
+ 
+
+=== PAGE 71 ===
+ 
+62 
+ 
+LAMPIRAN 
+ 
+ 
+Penjelasan lihat di ppt 
+
