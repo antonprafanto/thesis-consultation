@@ -40,39 +40,73 @@ pie title Status Penyelesaian 10 Red Flags Audit Awal
 
 ---
 
-## 🔍 2. Temuan Minor Sisa (*Remaining Minor Polish*) Sebelum Penggandaan Naskah
+## 🔍 2. Temuan Forensik Tambahan & Checklist Perapian Sebelum Penggandaan Naskah
 
-Sebelum naskah dicetak untuk diserahkan ke calon dewan penguji seminar proposal, Nelsi wajib menyelesaikan 5 perbaikan minor teknis berikut:
+Meskipun secara substansi akademik dan metodologi proposal ini telah melompat kualitasnya dan layak untuk di-ACC Sempro, audit forensik lapis kedua menemukan **sejumlah detail teknis, sinkronisasi antarbab, dan inkonsistensi diagram** yang berpotensi menjadi celah kritisisme oleh Dewan Penguji saat Seminar Proposal:
 
-### 1. Kelengkapan Lembar Pengesahan (Halaman iii)
-* Tanggal rapat pembimbing masih tertulis placeholder: `[tanggal, bulan, tahun]`.
-* Lengkapi Nomor Induk Pegawai (NIP) dosen pembimbing:
-  * **Dosen Pembimbing I:** Anton Prafanto, S.Kom., M.T. (NIP: `199310222019031016`)
-  * **Dosen Pembimbing II:** Gubtha Mahendra Putra, S.Kom., M.Eng. (Lengkapi NIP/NIDN beliau).
+### Kategori A: Sinkronisasi Preliminer & Format Dokumen
+1. **Daftar Lampiran (Halaman x) Tidak Sinkron dengan Halaman Aktual:**
+   * Di Daftar Lampiran tercatat:
+     * Lampiran 1: Hal. **52** $\to$ *Aktual tercetak di Hal. **56*** (PDF Hal. 68).
+     * Lampiran 2: Hal. **54** $\to$ *Aktual tercetak di Hal. **57*** (PDF Hal. 69).
+     * Lampiran 3: Hal. **56** $\to$ *Aktual tercetak di Hal. **59*** (PDF Hal. 71).
+   * *Penyebab:* Penambahan halaman pada Bab III dan meluasnya Daftar Pustaka menggeser posisi lampiran. Mahasiswa lupa meng-update angka di Daftar Lampiran.
+2. **Daftar Istilah/Lambang (Halaman xi) Nomor Halaman Acuan Masih Draf Lama:**
+   * Istilah *Software* tertulis Hal. 15 (di Bab II saat ini di Hal. 16/23).
+   * Lambang bobot $w_1, w_2, w_3$ tertulis Hal. 14 (di teks rumus baru berada di Hal. 18).
+   * Istilah *Tie-breaker* tertulis Hal. 19 (di naskah baru berada di Hal. 21).
+   * Mahasiswa perlu memperbarui nomor halaman acuan pada tabel istilah.
+3. **Kelengkapan Lembar Pengesahan (Halaman iii):**
+   * Tanggal persetujuan masih tertulis placeholder: `[tanggal, bulan, tahun]`.
+   * Lengkapi Nomor Induk Pegawai (NIP) dosen pembimbing:
+     * **Dosen Pembimbing I:** Anton Prafanto, S.Kom., M.T. (NIP: `199310222019031016`)
+     * **Dosen Pembimbing II:** Gubtha Mahendra Putra, S.Kom., M.Eng.
+4. **Penghapusan Placeholder Penguji pada Kata Pengantar (Halaman iv):**
+   * Poin 6 dan 7 ucapan terima kasih Kata Pengantar:
+     ```text
+     6. …..selaku Penguji I atas saran dan masukan terhadap penelitian ini.
+     7. ….selaku Penguji II atas saran dan masukan terhadap penelitian ini.
+     ```
+     **Wajib dihapus.** Dewan penguji belum ditetapkan pada tahap proposal.
+   * Bersihkan tanda petik rusak (karakter ```` `` ````) pada judul di paragraf 1 Kata Pengantar.
+5. **Standardisasi Posisi Nomor Halaman & Residu Typo Format:**
+   * Sesuai buku pedoman FT Unmul: Halaman judul bab (Bab I, II, III, Daftar Pustaka) nomor halaman ditaruh di **Tengah Bawah**, sedangkan halaman isi biasa di **Kanan Atas**. Aktifkan opsi *Different First Page* di Microsoft Word.
+   * Pada Bab II Subbab 2.3.3 (Halaman 22), terdapat teks sisa markup mentah: tertulis `//aging//` (garis miring ganda), ubah menjadi format *italic* (*aging*).
+   * Pastikan seluruh teks di halaman preliminer seragam menggunakan font **Times New Roman 12 pt** (masih terdeteksi residual Calibri/Arial).
 
-### 2. Penghapusan Placeholder Penguji pada Kata Pengantar (Halaman iv)
-* Pada poin nomor 6 dan 7 ucapan terima kasih Kata Pengantar:
-  ```text
-  6. …..selaku Penguji I atas saran dan masukan terhadap penelitian ini.
-  7. ….selaku Penguji II atas saran dan masukan terhadap penelitian ini.
-  ```
-  **Wajib dihapus.** Pada tahap seminar proposal, dewan penguji belum ditetapkan secara definitif oleh program studi dan belum menguji naskah. Ucapan terima kasih kepada penguji baru dicantumkan pada naskah skripsi final (pasca sidang pendadaran).
-* Bersihkan karakter tanda petik yang rusak (berubah menjadi karakter ``) pada judul naskah di paragraf 1 Kata Pengantar.
+---
 
-### 3. Perbaikan Typo Minor pada Use Case Diagram (Gambar 3.3 Hal. 32)
-* Pada panah include dari use case *Memverifikasi Permohonan* menuju use case *Menghitung Skor Prioritas P(i)*, terdapat salah ketik label: tertulis **`<<sinclude>>`** (kelebihan huruf *s*). Ubah menjadi **`<<include>>`**.
-* Tambahkan garis kotak pembatas sistem (*System Boundary*) yang melingkupi seluruh oval use case dengan judul *"Sistem Informasi Pelayanan Surat Administrasi Kampung Sambakungan"*.
-* Selaraskan label aktor sebelah kanan dari *"Petugas Kelurahan"* menjadi *"Petugas Kampung"*.
+### Kategori B: Pemodelan UML, Basis Data & Visual Antarmuka (Figma)
+6. **Residu Nomenklatur "Kelurahan" pada Mockup Figma dan Use Case:**
+   * Di teks judul dan narasi, istilah telah diubah menjadi Kampung Sambakungan. Namun pada aset visual:
+     * **Gambar 3.8 (Form Pengajuan Surat, Hal. 39):** Logo sidebar kiri masih tertulis **"SIPAS Kelurahan"** (seharusnya *"SIPAS Kampung Sambakungan"*).
+     * **Gambar 3.10 (Dashboard Petugas, Hal. 40):** Di pojok kanan atas profil akun tertulis **"Petugas: Admin Kelurahan"** (seharusnya *"Admin Kampung"*).
+     * **Gambar 3.3 (Use Case Diagram, Hal. 32):** Aktor sebelah kanan masih berlabel **"Petugas Kelurahan"** (seharusnya *"Petugas Kampung"*).
+7. **Inkonsistensi Atribut ERD (Gambar 3.2 Hal. 29):**
+   * Pada entitas `Permohonan_Surat`, atribut `Status_Permohonan` tertulis **dua kali** (baris ke-6 dan baris terakhir).
+   * Atribut penting **`Status_Pemohon`** (Lansia / Disabilitas / Umum) **hilang dari diagram ERD**, padahal atribut ini wajib ada untuk menyimpan hasil ekstraksi NIK/bukti darurat dan sudah tercantum di Class Diagram (Gambar 3.6).
+   * *Solusi:* Ganti salah satu atribut `Status_Permohonan` yang duplikat menjadi `Status_Pemohon`.
+   * Pada Tabel 3.2, tambahkan atribut `password` pada tabel `users`.
+8. **Typo dan Kesalahan Terminologi pada Activity Diagram (Gambar 3.4 Hal. 33):**
+   * Kotak aktivitas kedua pada kolom Warga tertulis: *"Isi **From** Permohonan Surat (Jenis Surat, Urgensi, **Status Permohonan**)"*.
+   * Perbaiki typo *"From"* menjadi *"Form"*.
+   * Perbaiki istilah *"Status Permohonan"* menjadi *"Status Pemohon"*.
+9. **Kerapian Notasi Use Case & Sequence Diagram:**
+   * **Use Case Diagram (Gambar 3.3):** Perbaiki typo relasi include yang tertulis `<<sinclude>>` menjadi `<<include>>`, serta tambahkan kotak batas sistem (*System Boundary Box*).
+   * **Sequence Diagram (Gambar 3.5):** Lifeline paling kiri diberi label *"Warga / Petugas"* yang menggabungkan dua aktor sekaligus. Meskipun dapat dipahami dalam konteks sekuensial implementasi, jika ditanya penguji mengenai representasi UML ideal, mahasiswa harus menjelaskan bahwa diagram tersebut menggambarkan alur *end-to-end* layanan, atau idealnya dipecah menjadi dua sequence diagram terpisah (Pengajuan Warga dan Pemrosesan Petugas).
+10. **Sinkronisasi Tabel Simbol Flowchart (Tabel 3.1) vs Gambar 3.1:**
+    * Tabel 3.1 mendefinisikan 7 simbol flowchart (Decision, Data, Sub-process, Start/End, dll.). Namun pada Gambar 3.1 (Kerangka Penelitian), seluruh 9 kotak digambar dengan balok persegi panjang proses biasa. Mahasiswa disarankan melengkapi Gambar 3.1 dengan simbol terminator *Start/End* (kapsul) di awal dan akhir agar sesuai dengan tabel keterangannya.
 
-### 4. Pembersihan Atribut Ganda pada ERD (Gambar 3.2 Hal. 29)
-* Pada entitas `Permohonan_Surat`, atribut `Status_Permohonan` tercantum dua kali (di baris atas setelah *Urgensi*, dan di baris paling bawah). Hapus salah satunya agar skema relasi bersih.
+---
 
-### 5. Standardisasi Posisi Nomor Halaman Teks Utama
-* **Standar FT Unmul:**
-  * Halaman pertama setiap bab (halaman judul BAB I, BAB II, BAB III, DAFTAR PUSTAKA) diletakkan di **Tengah Bawah (*Bottom Center*)**.
-  * Halaman-halaman lanjutan dalam bab diletakkan di **Kanan Atas (*Top Right*)**.
-  * Saat ini, seluruh nomor halaman naskah masih terletak di bagian bawah. Gunakan fitur *Different First Page* pada Microsoft Word untuk menyesuaikannya.
-* Lakukan *Select All* pada halaman preliminer (Pengesahan, Kata Pengantar, Lampiran 2) dan pastikan jenis font seluruhnya seragam menggunakan **Times New Roman** (saat ini masih terdeteksi residu font *Arial* dan *Calibri*).
+### Kategori C: Catatan Metodologi & Rekayasa Perangkat Lunak
+11. **Subbab Analisis Kebutuhan Sistem (FR & NFR) yang Terlewat:**
+    * Di Subbab 3.1 dan Gambar 3.1, tahap 4 secara tegas menyatakan adanya tahap *"Analisis Kebutuhan Sistem"*.
+    * Namun di naskah, urutan subbab langsung melompat dari `3.2 Pengumpulan Data` ke `3.3 Perancangan Data`. Mahasiswa tidak menuliskan subbab tersendiri untuk Kebutuhan Fungsional (*Functional Requirements* / FR) dan Non-Fungsional (*Non-Functional Requirements* / NFR).
+    * Skenario Black Box di Tabel 3.6 (15 skenario) sesungguhnya sudah mencerminkan FR tersebut, namun alangkah jauh lebih elegan jika disisipkan 1 subbab ringkas (*3.3 Analisis Kebutuhan Sistem*) berisi daftar butir kebutuhan fungsional (FR-01 s.d. FR-10) sebelum masuk ke perancangan data.
+12. **Kesiapan Jawaban Terkait Aging pada Simulasi Antrean (Tabel 3.7 & 3.8):**
+    * Perhitungan matematika pada Tabel 3.7 dan 3.8 sudah 100% akurat dan logis. Namun perhatikan bahwa pada contoh 5 permohonan tersebut, nilai prioritas yang digunakan masih berupa $P(i)$ dasar karena rentang waktu kedatangan hanya 0–12 menit (tambahan aging $\lambda \times t$ masih sangat kecil).
+    * Mahasiswa harus menguasai materi ini saat diuji: *"Mengapa di Tabel 3.8 nilai prioritasnya belum bergeser karena aging?"* Jawabannya: karena Tabel 3.8 adalah ilustrasi skala menit untuk perbandingan non-preemptive dasar; pembuktian mekanisme dynamic aging secara komprehensif akan dilakukan pada pengujian Bab IV menggunakan data uji riil dengan rentang kedatangan multi-jam.
 
 ---
 
@@ -101,4 +135,5 @@ timeline
 
 ### Keputusan Resmi Pembimbing I:
 > **DISETUJUI (ACC) UNTUK MENDAFTAR UJIAN SEMINAR PROPOSAL SKRIPSI.**  
-> Mahasiswa dipersilakan merapikan 5 poin minor administratif di atas, mengisi NIP pembimbing pada lembar pengesahan, dan menyerahkan berkas cetak final kepada Dosen Pembimbing I dan Pembimbing II untuk ditandatangani.
+> Mahasiswa dipersilakan merapikan poin-poin minor administratif dan teknis pada checklist di atas, mengisi NIP pembimbing pada lembar pengesahan, dan menyerahkan berkas cetak final kepada Dosen Pembimbing I dan Pembimbing II untuk ditandatangani.
+
