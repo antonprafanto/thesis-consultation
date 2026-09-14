@@ -38,6 +38,8 @@ Repository ini didedikasikan untuk pengelolaan dokumentasi bimbingan, audit nask
 | 8 | Nelsi | 2309106120 | *Implementasi Algoritma Priority Scheduling pada Sistem Informasi Pelayanan Surat Administrasi Kelurahan Kampung Sambakungan Berbasis Web* | [Laporan Audit Awal (Revisi Mayor)](audit_mahasiswa/laporan_audit_proposal_nelsi.md) |
 | 9 | Vandy Rizky Septiawan | 2309106048 | *Implementasi Google Sheets sebagai Media Penyimpanan Data pada Content Management System (CMS) Berbasis Web* | [Review Ide Awal & Panduan Peningkatan Skripsi S1](audit_mahasiswa/laporan_audit_proposal_vandy_rizky_septiawan.md) |
 | 10 | Muhammad Khairrudin | 2209106128 | *Rancang Bangun Sistem Monitoring Kualitas Air Sungai Mahakam Berbasis Internet of Things Menggunakan ESP32 dengan Metode Fuzzy Mamdani* | [Laporan Audit Proposal](audit_mahasiswa/laporan_audit_proposal_muhammad_khairrudin.md) |
+| 11 | Abdullah Arkananta Rasendrya Hasan | 2209106085 | *Rancang Bangun Sistem Monitoring pH dan Suhu Air Kolam Ikan Nila Berbasis Internet of Things Menggunakan Metode Rule-Based* | [Laporan Audit Proposal (Revisi Mayor)](audit_mahasiswa/laporan_audit_proposal_abdullah_arkananta.md) |
+
 
 
 ---

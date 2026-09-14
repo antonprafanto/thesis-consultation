@@ -1,0 +1,111 @@
+
+--- HALAMAN 1 ---
+RINGKASAN RANCANGAN SISTEM MONITORING KUALITAS AIR 
+ 
+1. Spesifikasi Ikan yang Ditargetkan & Nilai Batas Parameter 
+Sistem pemantauan cerdas ini dirancang secara spesifik untuk budidaya Ikan Nila 
+(Oreochromis niloticus). Berdasarkan literatur ahli (Camelia et al., 2026), ikan nila merupakan 
+hewan poikilotermik yang kelangsungan hidup dan laju metabolismenya sangat bergantung 
+pada kestabilan lingkungan air. Sistem ini berfokus pada dua parameter utama, dengan batas 
+ambang (threshold) sebagai berikut: 
+• Suhu Air (Sensor DS18B20): 
+o Kondisi Dingin: < 25°C 
+o Kondisi Ideal: 25°C – 30°C 
+o Kondisi Panas: > 30°C 
+• Derajat Keasaman / pH (Sensor SEN0161-V2): 
+o Kondisi Asam: < 6.5 
+o Kondisi Ideal: 6.5 – 8.5 
+o Kondisi Basa: > 8.5 
+ 
+2. Matriks Aturan (Rule-Based Forward Chaining) 
+Mesin inferensi pada mikrokontroler ESP32 tidak lagi hanya menghasilkan output  biner 
+(Baik/Buruk). Sistem menggunakan matriks kombinasi 9 aturan (9 -Rule Matrix) untuk 
+mengevaluasi data secara simultan dan menghasilkan tiga tingkat peringatan (Sangat Baik, 
+Waspada, Bahaya) beserta rekomendasi tindakannya. 
+Rule 
+Kondisi Suhu 
+(°C) 
+Kondisi pH 
+Kategori 
+(Status Air) 
+Rekomendasi Aksi 
+(Output) 
+R1 Dingin (< 25) Asam (< 6.5) Bahaya 
+Air mematikan. Segera 
+kuras/ganti air! 
+--- HALAMAN 2 ---
+ 
+ 
+ 
+ 
+Rule 
+Kondisi Suhu 
+(°C) 
+Kondisi pH 
+Kategori 
+(Status Air) 
+Rekomendasi Aksi 
+(Output) 
+R2 Dingin (< 25) Ideal (6.5 - 8.5) Waspada 
+Suhu rendah. Nyalakan 
+heater kolam. 
+R3 Dingin (< 25) Basa (> 8.5) Bahaya 
+Air mematikan. Segera 
+kuras/ganti air! 
+R4 Ideal (25 - 30) Asam (< 6.5) Waspada 
+pH terlalu rendah. 
+Tambah kapur/buffer 
+naik. 
+R5 Ideal (25 - 30) Ideal (6.5 - 8.5) Sangat Baik 
+Kondisi aman. 
+Pertahankan kualitas 
+air. 
+R6 Ideal (25 - 30) Basa (> 8.5) Waspada 
+pH terlalu tinggi. 
+Tambah daun 
+ketapang/buffer turun. 
+R7 Panas (> 30) Asam (< 6.5) Bahaya 
+Air mematikan. Segera 
+kuras/ganti air! 
+R8 Panas (> 30) Ideal (6.5 - 8.5) Waspada 
+Suhu tinggi. Nyalakan 
+sirkulasi/tambah 
+peneduh. 
+R9 Panas (> 30) Basa (> 8.5) Bahaya 
+Air mematikan. Segera 
+kuras/ganti air! 
+--- HALAMAN 3 ---
+3. Perbaikan Flowchart & Rancangan Antarmuka 
+Berdasarkan matriks di atas, flowchart alur kerja sistem direvisi agar dapat mengakomodasi 
+fungsi Early Warning System (sistem peringatan dini). 
+ 
+
+--- HALAMAN 4 ---
+Penjelasan Alur Logika Sistem: 
+1. Mulai & Inisialisasi: Sistem memulai dengan inisialisasi sensor Suhu (DS18B20), 
+sensor pH, modul WiFi, dan koneksi ke server Blynk. 
+2. Pembacaan Data: Sensor secara terus-menerus membaca nilai suhu dan pH air kolam. 
+3. Mesin Inferensi: Data mentah dievaluasi menggunakan metode Rule-Based Forward 
+Chaining berdasarkan matriks 3x3. 
+4. Penetapan Status: Sistem memproses kondisi dan menetapkan Status Kategori (Sangat 
+Baik / Waspada / Bahaya) beserta Teks Rekomendasi secara otomatis. 
+5. Pengiriman Data: Mikrokontroler ESP32 mengirimkan paket data (Suhu, pH, Kategori, 
+Rekomendasi) ke server cloud Blynk. 
+6. Decision (Sistem Peringatan Dini): Sistem mengevaluasi kategori bahaya: 
+• Jika kategori adalah "Waspada" A TAU "Bahaya", maka Blynk memicu sistem 
+event untuk mengirimkan Push Notification ke smartphone pengguna. 
+• Jika tidak, sistem melewati proses notifikasi (aman). 
+7. Pembaruan Antarmuka & Looping: Web Dashboard dan Mobile App  memperbarui 
+tampilan antarmuka secara real-time, kemudian sistem melakukan looping untuk 
+membaca data sensor kembali. 
+ 
+Rancangan Antarmuka / Output Sistem:  Untuk memaksimalkan aksesibilitas bagi 
+pembudidaya, output sistem menggunakan ekosistem ganda tersinkronisasi: 
+• Blynk Web Dashboard (Desktop): Dirancang untuk analisis data mendalam dan 
+pemantauan historis. Menampilkan tabel pencatatan kualitas air (waktu, suhu, pH, 
+status) dan grafik garis (line chart) pergerakan parameter dari waktu ke waktu. 
+• Blynk Mobile App (Smartphone): Dirancang untuk pemantauan real-time yang praktis. 
+Menggunakan widget Gauge interaktif yang berubah warna sesuai parameter, label teks 
+untuk saran tindakan otomatis, dan fitur Blynk Events  yang akan memunculkan 
+peringatan seketika ( Push Notification) ke layar HP pengguna saat air dalam kondisi 
+kritis. 
