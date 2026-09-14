@@ -221,7 +221,121 @@ Audit mendalam terhadap naskah 48 halaman dan ringkasan 4 halaman mengungkap **1
 
 ---
 
-## 🎯 4. Kisi-Kisi Pertanyaan Kritis Seminar Proposal & Panduan Menjawab
+## 🛠️ 4. Rekonstruksi Komponen Siap Pakai untuk Mahasiswa
+
+Agar proses revisi naskah Saudara dapat berjalan cepat dan terarah, gunakan rumusan dan tabel siap pakai berikut untuk disalin ke dalam naskah Word:
+
+### A. Tabel Pemetaan Pinout Hardware ESP32 (Subbab 3.4)
+
+| No | Modul / Komponen | Pin Modul | Pin ESP32 | Mode / Tipe Sinyal | Catatan Teknis Rangkaian |
+| :---: | :--- | :---: | :---: | :---: | :--- |
+| 1 | **Sensor DS18B20** | VCC | 3.3V | Catu Daya | Jalur daya modul sensor waterproof. |
+| 2 | | GND | GND | Ground | Ground bersama (*common ground*). |
+| 3 | | DATA | **GPIO 4** | Digital Input (1-Wire) | **Wajib dipasang resistor pull-up 4.7 kΩ** ke VCC 3.3V. |
+| 4 | **Sensor pH (SEN0161-V2)** | VCC | 3.3V / 5V | Catu Daya | Ditenagai 3.3V untuk keamanan rentang ADC ESP32. |
+| 5 | | GND | GND | Ground | Ground bersama (*common ground*). |
+| 6 | | AOUT | **GPIO 34** | Analog Input (ADC1) | **Wajib pada ADC1**. Jalur ADC2 dinonaktifkan saat Wi-Fi menyala. |
+| 7 | **Catu Daya Sistem** | Micro-USB | VIN / VBUS | 5V DC (2 Ampere) | Adaptor eksternal stabil untuk operasional kontinu di kolam. |
+
+---
+
+### B. Algoritma Firmware ESP32 (Pseudocode Rule-Based & Blynk)
+
+```text
+ALGORITMA Monitoring_Kualitas_Air_ESP32:
+DEKLARASI:
+    pin_suhu   <- GPIO 4
+    pin_ph     <- GPIO 34
+    nilai_suhu <- 0.0 (Float)
+    tegangan   <- 0.0 (Float)
+    nilai_ph   <- 0.0 (Float)
+    kategori   <- "" (String)
+    tindakan   <- "" (String)
+    waktu_terakhir_notifikasi <- 0 (Unsigned Long)
+    INTERVAL_COOLDOWN         <- 900000 // 15 menit dalam milidetik
+
+PROSEDUR Inisialisasi():
+    Serial.begin(115200)
+    Inisialisasi sensor DS18B20 pada pin_suhu
+    Hubungkan Wi-Fi dan Blynk.begin(AUTH_TOKEN, SSID, PASSWORD)
+
+PROSEDUR Baca_Sensor():
+    nilai_suhu <- Request suhu dari DS18B20
+    adc_mentah <- analogRead(pin_ph)
+    tegangan   <- (adc_mentah / 4095.0) * 3.3
+    nilai_ph   <- (slope_m * tegangan) + offset_c    // Hasil kalibrasi 2-titik buffer pH 4.01 & 6.86
+
+PROSEDUR Evaluasi_Rule_Based():
+    // 9-Rule Matrix Inference
+    JIKA (nilai_suhu < 25.0) MAKA:
+        JIKA (nilai_ph < 6.5) MAKA:
+            kategori <- "Bahaya"; tindakan <- "Air mematikan! Segera kuras/ganti air kolam!"
+        LAIN JIKA (nilai_ph <= 8.5) MAKA:
+            kategori <- "Waspada"; tindakan <- "Suhu dingin. Nyalakan heater kolam/kurangi aerasi."
+        LAIN:
+            kategori <- "Bahaya"; tindakan <- "Air mematikan! Segera kuras/ganti air kolam!"
+
+    LAIN JIKA (nilai_suhu <= 30.0) MAKA:
+        JIKA (nilai_ph < 6.5) MAKA:
+            kategori <- "Waspada"; tindakan <- "Air asam. Berikan kapur dolomit/buffer pH naik."
+        LAIN JIKA (nilai_ph <= 8.5) MAKA:
+            kategori <- "Sangat Baik"; tindakan <- "Kondisi optimal. Pertahankan kualitas air kolam."
+        LAIN:
+            kategori <- "Waspada"; tindakan <- "Air basa. Tambahkan daun ketapang/buffer pH turun."
+
+    LAIN: // Suhu > 30.0 (Panas)
+        JIKA (nilai_ph < 6.5) MAKA:
+            kategori <- "Bahaya"; tindakan <- "Air mematikan! Segera kuras/ganti air kolam!"
+        LAIN JIKA (nilai_ph <= 8.5) MAKA:
+            kategori <- "Waspada"; tindakan <- "Suhu panas. Tambahkan sirkulasi air/pasang peneduh."
+        LAIN:
+            kategori <- "Bahaya"; tindakan <- "Air mematikan! Segera kuras/ganti air kolam!"
+
+PROSEDUR Kirim_Ke_Blynk():
+    Blynk.virtualWrite(V0, nilai_suhu)
+    Blynk.virtualWrite(V1, nilai_ph)
+    Blynk.virtualWrite(V2, kategori)
+    Blynk.virtualWrite(V3, tindakan)
+    
+    // Sistem Peringatan Dini dengan Anti-Spam / Cooldown Histeresis
+    JIKA (kategori == "Bahaya" ATAU kategori == "Waspada") MAKA:
+        JIKA (millis() - waktu_terakhir_notifikasi >= INTERVAL_COOLDOWN) MAKA:
+            Blynk.logEvent("peringatan_kritis", "PERINGATAN: Status Kolam " + kategori + "! " + tindakan)
+            waktu_terakhir_notifikasi <- millis()
+
+PROSES UTAMA (Looping Tiap 10 Detik):
+    Blynk.run()
+    Baca_Sensor()
+    Evaluasi_Rule_Based()
+    Kirim_Ke_Blynk()
+```
+
+---
+
+### C. Tabel Jadwal Penelitian Tahun 2026 (Subbab 3.7)
+
+| No | Tahapan & Uraian Kegiatan | Jan | Feb | Mar | Apr | Mei | Jun | Jul | Agu | Sep | Okt | Nov | Des |
+|:---|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| **I** | **Tahap Persiapan** | | | | | | | | | | | | |
+| 1 | Studi Literatur, Observasi Kolam & SNI 7550 | █ | █ | | | | | | | | | | |
+| 2 | Penyusunan Proposal Skripsi | | █ | █ | | | | | | | | |
+| 3 | **Seminar Proposal (Sempro)** | | | | █ | | | | | | | |
+| 4 | Perbaikan Naskah Pasca-Sempro | | | | | █ | | | | | | |
+| **II** | **Tahap Pelaksanaan & Rekayasa** | | | | | | | | | | | | |
+| 5 | Pengadaan Komponen & Sensor | | | | | █ | | | | | | |
+| 6 | Kalibrasi Sensor Suhu & pH (Buffer 4.01 & 6.86) | | | | | █ | █ | | | | |
+| 7 | Pengkodean Firmware ESP32 & Rule-Based Edge | | | | | | █ | █ | | | | |
+| 8 | Konfigurasi Platform Blynk Cloud & Push Notification | | | | | | | █ | █ | | |
+| 9 | Pengujian Lapangan pada Kolam Ikan Nila (MAPE & Latensi) | | | | | | | | █ | █ | |
+| **III**| **Tahap Evaluasi & Penyusunan Laporan** | | | | | | | | | | | | |
+| 10 | Analisis Data Hasil Uji & Validasi Aturan | | | | | | | | | █ | █ | |
+| 11 | Penyusunan Draf Skripsi Lengkap | | | | | | | | | | █ | █ |
+| 12 | **Seminar Hasil & Sidang Pendadaran** | | | | | | | | | | | | █ |
+
+---
+
+## 🎯 5. Kisi-Kisi Pertanyaan Kritis Seminar Proposal & Panduan Menjawab
+
 
 Berikut adalah 3 pertanyaan paling kritis yang pasti akan ditanyakan dosen penguji saat seminar proposal, lengkap dengan strategi argumentasi ilmiah:
 
@@ -242,7 +356,7 @@ Berikut adalah 3 pertanyaan paling kritis yang pasti akan ditanyakan dosen pengu
 
 ---
 
-## ✅ 5. Lembar Cek Mandiri Perbaikan Naskah (*Action Checklist*)
+## ✅ 6. Lembar Cek Mandiri Perbaikan Naskah (*Action Checklist*)
 
 - [ ] Ganti `bu ros tercinta` & `pak anton jago iot` dengan nama dan gelar resmi pembimbing di Lembar Pengesahan.
 - [ ] Bersihkan teks instruksi template Word, isi judul naskah, dan perbarui tahun 2026 di Kata Pengantar.
