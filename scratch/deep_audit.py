@@ -29,3 +29,4 @@ for m in re.finditer(r'Gambar\s+[123]\.\s*\d+.*', text, re.IGNORECASE):
 print("\n--- 6. Cek Caption Tabel di Bab 2 dan Bab 3 ---")
 for m in re.finditer(r'Tabel\s+[123]\.\s*[0-9x]+.*', text, re.IGNORECASE):
     print('->', m.group(0).strip())
+
