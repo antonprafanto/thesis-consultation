@@ -1,0 +1,214 @@
+=== HALAMAN 1 ===
+RANCANG BANGUN SISTEM PELACAKAN BOLA DINAMIS REAL-TIME 
+MENGGUNAKAN KOMBINASI SEGMENTASI CITRA DAN FILTER KALMAN 
+TERHADAP VARIASI OKLUSI 
+ 
+PROPOSAL SKRIPSI 
+Diajukan Sebagai Salah Satu Syarat Untuk Memperoleh Gelar Sarjana Pendidikan 
+Pada Progam Studi Informatika Fakultas Teknik Universitas Mulawarman. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Oleh :  
+Ridho Putra Darma  
+2509106133 
+ 
+ 
+ 
+FAKULTAS TEKNIK 
+UNIVERSITAS MULAWARMAN 
+SAMARINDA 
+
+=== HALAMAN 2 ===
+KATA PENGATAR 
+Puji dan syukur penulis panjatkan ke hadirat Tuhan Yang Maha Esa atas segala 
+rahmat, hidayah, dan karunia -Nya, sehingga penulis dapat menyelesaikan laporan 
+tugas akhir/penelitian yang berjudul "Rancang Bangun Sistem Pelacakan Bola 
+Dinamis Real -Time Menggun akan Kombinasi Segmentasi Citra dan Filter Kalman 
+Terhadap V ariasi Oklusi" ini dengan baik. Penelitian ini disusun untuk menerapkan 
+dan membandingkan efektivitas teknik pemrosesan citra digital (computer vision) 
+dengan algoritma estimasi dinamika objek. F okus utama dari perancangan sistem ini 
+adalah mengatasi tantangan klasik pada pelacakan objek dinamis secara real -time, 
+yaitu penurunan akurasi pelacakan akibat gangguan pencahayaan (lighting variation) 
+serta gangguan ketidaktampakan objek (occlusion).Dalam penyelesaian penelitian ini, 
+penulis mendapatkan banyak bantuan, bimbingan, dan dukungan dari berbagai pihak. 
+Oleh karena itu, pada kesempatan ini penulis ingin menyampaikan terima kasi h yang 
+sebesar-besarnya kepada: 
+1) Dosen Pembimbing yang telah member ikan arahan, petunjuk, masukan, serta 
+bimbingan bernilai selama proses perancangan sistem dan penyusunan 
+laporan ini. 
+2) Seluruh Dosen dan Staf Pengajar Program Studi Informatika/Teknik 
+Komputer yang telah memberikan bekal ilmu pengetahuan selama masa studi. 
+3) Orang tua dan keluarga tercinta atas doa, dukungan moral, maupun material 
+yang tiada terputus. 
+4) Rekan-rekan mahasiswa dan seluruh pihak yang telah membantu, baik secara 
+langsung maupun tidak langsung dalam pengujian sistem ini. 
+Penulis menyadari bahwa d alam penyusunan laporan ini masih terdapat keterbatasan 
+dan kekurangan. Oleh karena itu, penulis mengharapkan kritik dan saran yang 
+membangun demi penyempurnaan karya ini di masa mendatang. Akhir kata, semoga 
+laporan penelitian ini dapat memberikan manfaat  serta menambah wawasan bagi 
+pembaca dan perkembangan ilmu pengetahuan, khususnya di bidang computer vision 
+dan object tracking. 
+ 
+Samarinda, 15 September 2026 
+ 
+ 
+
+=== HALAMAN 3 ===
+ABSTRAK 
+Pelacakan objek bergerak secara langsung (real -time) menggunakan kamera sering 
+kali tergang gu ketika objek tertutup sementara (oklusi) atau terjadi perubahan 
+pencahayaan. Penelitian ini mengembangkan sistem pelacakan bola dinamis yang 
+mampu mengatasi masalah tersebut dengan memadukan teknik segmentasi citra dan 
+Filter Kalman. Proses deteksi diaw ali dengan mengubah format gambar kamera ke 
+ruang warna Hue, Saturation, Value (HSV) untuk memisahkan warna bola dari latar 
+belakang, yang diperkuat dengan pembersihan noise serta pengujian bentuk geometri 
+bola. Koordinat pusat bola $(x, y)$ yang terdeteks i kemudian diteruskan ke Filter 
+Kalman untuk diolah bersama perkiraan kecepatannya. Hasil pengujian menunjukkan 
+bahwa Filter Kalman berhasil memperhalus pergerakan bola dan tetap mampu 
+memprediksi posisi serta arah pergerakan bola secara presisi saat bola terhalang atau 
+hilang dari pandangan kamera. Sistem ini terbukti dapat berjalan lancar secara real -
+time dan memberikan hasil pelacakan yang lebih stabil dibandingkan hanya 
+mengandalkan deteksi kamera semata.Kata Kunci: Pelacakan Bola, Segmentasi HSV, 
+Filter Kalman, Oklusi, Computer Vision, Real-Time. 
+ABSTRACT 
+Real-time object tracking using a camera often fails when the target is temporarily 
+hidden (occluded) or affected by changing light conditions. This study develops a 
+dynamic ball tracking system designed  to overcome these challenges by combining 
+image segmentation techniques with a Kalman Filter. The detection process begins by 
+converting camera frames into the Hue, Saturation, Value (HSV) color space to 
+isolate the ball's color from the background, enhan ced by noise removal and 
+geometric shape verification. The detected center coordinates $(x, y)$ are then passed 
+to the Kalman Filter to process alongside its estimated velocity. Experimental results 
+show that the Kalman Filter effectively smoothes the ball 's movement path and 
+maintains accurate predictions of its position and direction even when the ball is 
+occluded or disappears from the camera view. The system operates smoothly in real -
+time, delivering significantly more stable tracking performance than r elying on 
+camera detection alone.Keywords: Ball Tracking, HSV Segmentation, Kalman Filter, 
+Occlusion, Computer Vision, Real-Time  
+
+=== HALAMAN 4 ===
+BAB I  
+PENDAHULUAN 
+ 
+1.1 Latar Belakang 
+ 
+Pengembangan teknologi computer vision  pada sistem pelacakan objek dinamis 
+(dynamic object tracking) secara real -time saat ini berkembang pesat dan diterapkan 
+di berbagai bidang, seperti navigasi robotik, sistem pengawasan otomatis, hingga 
+analisis olahraga. Namun, salah satu tantangan utama d alam implementasinya adalah 
+keterbatasan deteksi visual yang sangat rentan terhadap gangguan lingkungan, seperti 
+perubahan intensitas cahaya, fluktuasi latar belakang, serta masalah ketidaktampakan 
+objek akibat terhalang (occlusion). Dalam mengatasi keter batasan visual tersebut, 
+penerapan algoritma estimasi optimal seperti Filter Kalman menawarkan solusi yang 
+potensial. Filter Kalman memiliki kemampuan untuk memprediksi posisi objek 
+bergerak berdasarkan model dinamika sistem dan secara berkelanjutan mengor eksi 
+estimasi tersebut menggunakan data hasil pengamatan sensor. Mekanisme ini secara 
+signifikan meningkatkan ketahanan (robustness) sistem deteksi terhadap noise dan  
+gangguan ekster nal (Darmi et al., 2025) .Implementasi Filter Kalman terbukti 
+memberikan kontribusi  penting dalam meningkatkan kualitas pelacakan objek 
+dinamis. Melalui mekanisme prediksi -koreksi, algoritma ini efektif menekan angka 
+False Positive dengan menyaring fluktuasi piksel acak sehingga sistem dapat 
+membedakan antara gerakan nyata objek dan gang guan visual sementara. Selain itu, 
+keunggulan utama dari Filter Kalman terletak pada kemampuannya untuk 
+menggabungkan estimasi model gerak dengan hasil pengukuran citra secara 
+konsisten. Hal ini memungkinkan sistem mempertahankan kontinuitas lintasan 
+pelacakan (tracking continuity) dan memprediksi posisi bola secara presisi, bahkan 
+ketika objek mengalami oklusi parsial maupun hilang sepenuhnya da ri pandan gan 
+kamera (Darmi et al., 2025) .Untuk membangun sistem ini secara efisien, Python 
+dipilih sebagai bahasa pemrograman utama. Python merupakan bahasa pemrograman 
+dinamis yang fleksibel, sederhana, dan dapat digunakan untuk pengembangan 
+aplikasi di berb agai domai. Keunggulan lain dari Python adalah sifatnya yang cross -
+platform, sehingga kode program dapat d ijalankan di berbagai sistem operasi tanpa 
+hambatan porta bilitas (Saputra, 2023) . Dalam proses segmentasi warna bola, 
+penyesuaian parameter dilakukan secara interaktif melalui fungsi pembaruan 
+
+=== HALAMAN 5 ===
+colorfinder yang terhubung dengan slider HSV Tuner. Mekanisme ini memungkinkan 
+kalibrasi threshold warna dilakukan secara real -time hingga diperoleh nilai HSV 
+optimal yang siap digu nakan oleh algoritma pelacakan. Berdasarkan latar belakang 
+tersebut, penelitian ini mengusulkan rancang bangun sistem pelacakan bola dinamis 
+secara real-time dengan mengombinasikan segmentasi ruang warna HSV dan Filter 
+Kalman untuk menghasilkan pelacakan yang stabil dan presisi terhadap variasi 
+oklusi(Nova Handika & Rahmani, 2023). 
+ 
+1.2 Rumusan Masalah  
+Berdasarkan latar belakang yang telah diuraikan, rumusan masalah dalam 
+penelitian ini adalah: 
+1) Bagaimana merancang dan mengimplementasikan segmentasi citra 
+berbasis ruang warna HSV untuk mengisolasi objek bola secara real-time? 
+2) Bagaimana mengintegrasikan Filter Kalman dengan segmentasi citra 
+untuk mempertahankan kontinuitas lin tasan bola saat terjadi variasi 
+oklusi? 
+3) Seberapa besar peningkatan stabilitas dan akurasi pelacakan bola yang 
+dihasilkan dari kombinasi segmentasi citra dan Filter Kalman 
+dibandingkan dengan teknik segmentasi lainnya. 
+1.3 Batasan Masalah 
+penelitian ini le bih terfokus dan tidak meluas dari tujuan utama, maka disusun 
+batasan masalah sebagai berikut: 
+1) Objek yang dideteksi dan dilacak berfokus pada satu objek berbentuk bola 
+dengan karakteristik warna yang kontras terhadap latar belakang. 
+2) Pengujian sistem dila kukan dalam ruang tertutup (indoor) dengan kondisi 
+pencahayaan yang relatif stabil. 
+3) Variasi oklusi yang diuji mencakup oklusi parsial (terhalang sebagian) dan 
+oklusi total (terhalang sejenak) oleh penghalang buatan. 
+4) Bahasa pemrograman yang digunakan adal ah Python dengan pustaka 
+OpenCV untuk pemrosesan citra dan representasi matriks Filter Kalman. 
+1.4 Tujuan Penelitian 
+ 
+Tujuan yang ingin dicapai dari penelitian ini adalah: 
+
+=== HALAMAN 6 ===
+1) Mengembangkan sistem segmentasi citra berbasis HSV yang dilengkapi 
+fitur kalibrasi interaktif untuk deteksi bola secara presisi. 
+2) Mengimplementasikan Filter Kalman untuk memprediksi dan 
+memperhalus estimasi posisi bola serta mempertahankan jejak posisi 
+terakhir saat terjadi oklusi. 
+3) Menganalisis kinerja kombinasi segmentasi citra dan Filter Kalman dalam 
+mereduksi False Positive dan menjaga kontinuitas pelacakan objek 
+dinamis. 
+1.5 Manfaat Penelitian 
+Manfaat dari penelitian ini di antaranya: 
+ Manfaat Teoretis: Menambah referensi akademis m engenai penerapan 
+aljabar linier dan algoritma estimasi (Filter Kalman) yang dikombinasikan 
+dengan teknik pemrosesan citra digital untuk penanganan masalah oklusi. 
+ Manfaat Praktis: Menjadi dasar acuan bagi pengembangan sistem 
+pelacakan objek berkecepatan tinggi pada aplikasi robotik (seperti Robot 
+Sepak Bola / KRSBI) maupun sistem navigasi otonom. 
+1.6 Sistematika Penenulisan 
+Sistematika penulisan laporan penelitian ini dibagi menjadi lima bab sebagai 
+berikut: 
+ BAB I PENDAHULUAN: Berisi latar belakang, rumusan masalah, 
+batasan masalah, tujuan penelitian, manfaat penelitian, dan sistematika 
+penulisan. 
+ BAB II TINJAUAN PUSTAKA: Memuat teori pendukung seperti 
+Computer Vision, ruang warna HSV, operasi morfologi, kons ep 
+matematis Filter Kalman, serta tinjauan penelitian terdahulu yang relevan. 
+ BAB III METODOLOGI PENELITIAN: Menjelaskan alur perancangan 
+sistem, diagram alir (flowchart), teknik pengumpulan data, skenario 
+pengujian oklusi, dan lingkungan pengembangan. 
+ BAB IV HASIL DAN PEMBAHASAN: Menyajikan hasil pengujian 
+kalibrasi HSV, performa deteksi bola, akurasi prediksi Filter Kalman saat 
+oklusi, serta analisis perbandingan data. 
+ BAB V PENUTUP: Berisi kesimpulan dari hasil penelitian dan saran 
+untuk pengembangan sistem selanjutnya. 
+
+=== HALAMAN 7 ===
+DAFTAR PUSTAKA 
+1) Darmi, Y., Apridiansyah, Y., & Agung, M. (2025). Teknologi Image 
+Processing untuk Deteksi Gerakan pada Kamera Pengawasan CCTV 
+Menggunakan Metode Kalman Filter. 8. 
+2) Nova Handika, R., & Rahmani, B. (2023). Deteksi Arah Gerak Bola dengan 
+Metode Optical Flow pada Robot Penjaga Gawang. Progresif: Jurnal Ilmiah 
+Komputer, 19(2), 623. https://doi.org/10.35889/progresif.v19i2.1455 
+3) Saputra, C. (2023). Implementasi Algoritma SI FT (Scale -Invariant Feature 
+Transform) Dan Algoritma Kalman Filter Dalam Mendeteksi Objek Bola. 
+Jurnal PROCESSOR, 18(1). https://doi.org/10.33998/processor.2023.18.1.791 
+ 
+ 
+
