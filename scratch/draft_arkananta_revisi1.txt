@@ -1,0 +1,1713 @@
+--- PAGE 1 ---
+ 
+ 
+ 
+ 
+ 
+PROPOSAL SKRIPSI 
+ 
+ 
+ 
+RANCANG BANGUN SISTEM MONITORING PH DAN 
+SUHU AIR KOLAM IKAN NILA BERBASIS INTERNET 
+OF THINGS MENGGUNAKAN METODE RULE-BASED 
+ 
+ 
+ 
+ 
+ 
+Oleh: 
+ 
+ABDULLAH ARKANANTA RASENDRYA HASAN 
+2209106085 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+FAKULTAS TEKNIK 
+UNIVERSITAS MULAWARMAN 
+ 
+ 
+ 
+SAMARINDA 
+2026 
+
+--- PAGE 2 ---
+ 
+1 
+PROPOSAL SKRIPSI 
+ 
+ 
+RANCANG BANGUN SISTEM MONITORING PH DAN 
+SUHU AIR KOLAM IKAN NILA BERBASIS INTERNET 
+OF THINGS MENGGUNAKAN METODE RULE-BASED 
+HALAMAN JUDUL      
+ 
+ 
+ 
+Diajukan sebagai salah satu syarat untuk menyelesaikan pendidikan  
+pada Program Studi Strata 1 Informatika,  
+Fakultas Teknik, Universitas Mulawarman 
+ 
+ 
+ 
+Oleh: 
+ 
+ABDULLAH ARKANANTA RASENDRYA HASAN 
+2209106085 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+FAKULTAS TEKNIK 
+UNIVERSITAS MULAWARMAN 
+ 
+ 
+ 
+ 
+SAMARINDA 
+2026 
+ 
+ 
+ 
+
+--- PAGE 3 ---
+ 
+2 
+PROPOSAL SKRIPSI 
+ 
+RANCANG BANGUN SISTEM MONITORING PH DAN 
+SUHU AIR KOLAM IKAN NILA BERBASIS INTERNET 
+OF THINGS MENGGUNAKAN METODE RULE-BASED 
+HALAMAN PENGESAHAN 
+ 
+ 
+Oleh: 
+ABDULLAH ARKANANTA RASENDRYA HASAN 
+2209106085 
+ 
+ 
+Telah dibahas dalam Rapat Dosen Pembimbing pada [tgl, bln, tahun] dan 
+dinyatakan memenuhi syarat sebagai Skripsi, dengan Dosen Pembimbing: 
+ 
+I. Rosmasari, S.Kom., M.T. 
+II. Anton Prafanto, S.Kom., M.T. 
+ 
+ 
+ 
+ 
+Koordinator Program Studi S1 Informatika, 
+Fakultas Teknik, Universitas Mulawarman, 
+ 
+ 
+ 
+Awang Harsa Kridalaksana, S.Kom., M.Kom. 
+NIP 19731229 200501 1 002  
+--- PAGE 4 ---
+ 
+3 
+KATA PENGANTAR 
+Puji syukur kepada Allah SWT, Tuhan Yang Maha Esa sehingga dapat menyelesaikan 
+proposal skripsi dengan judul “Rancang Bangun Sistem Monitoring pH dan Suhu Air 
+Kolam Ikan Nila Berbasis Internet of Things Menggunakan Metode Rule -Based”. 
+Proposal ini disusun sebagai salah satu tahapan dalam menyelesaikan skripsi pada 
+Fakultas Teknik, Universitas Mulawarman. 
+Oleh karena itu, pada kesempatan ini kami ingin mengucapkan terima kasih kepada 
+semua pihak yang telah mendukung serta membantu saya selama proses penyusunan 
+proposal skripsi, kepada: 
+1. Orang tua dan Saudara-saudara saya atas do’a, bimbingan serta kasih sayangnya. 
+2.      Nama dan gelar akademik lengkap Dekan selaku Dekan Fakultas Teknik, 
+Universitas Mulawarman. 
+3. Nama dan gelar akademik Koordinator Prodi selaku K Program Studi Informatika 
+4. Rosmasari, S.Kom., M.T. selaku Pembimbing I yang selalu memberikan arahan 
+dan masukkan terhadap penelitian ini. 
+5. Nama Anton Prafanto, S.Kom., M.T.  selaku Pembimbing II atas masukkan 
+terhadap penelitian ini  
+6. Nama dan gelar akademik Dosen Penguji I selaku Penguji I dan Nama dan gelar 
+akademik Dosen Penguji II selaku Penguji II atas saran dan masukkan terhadap 
+penelitian ini. 
+7. Segenap Dosen Program Studi Informatika, yang telah memberikan ilmu 
+pengetahuan selama mengikuti perkuliahan. 
+8. Rekan-rekan seperjuangan yang terus memberikan dukungan semangat demi 
+terselesainya tugas ini. 
+Saya menyadari bahwa proposal skripsi ini tidak luput dari berbagai kekurangan. Oleh 
+karena itu, semua kritik dan saran yang bersifat memperbaiki demi kesempurnaan sangat 
+diharapkan. 
+Samarinda,.............................. 2026 
+ 
+ 
+ 
+Penulis 
+  
+--- PAGE 5 ---
+ 
+4 
+DAFTAR ISI 
+ 
+halaman 
+Halaman Judul i 
+Halaman Pengesahan ii 
+Kata Pengantar iii 
+Daftar Isi ……………………………………………………………………………...iv 
+Daftar Tabel v 
+Daftar Gambar vi 
+Daftar Lampiran vii 
+Daftar Istilah/Lambang viii 
+Daftar Singkatan ix 
+ 
+BAB I PENDAHULUAN 1 
+ 
+1.1 1 
+1.2 3 
+1.3 4 
+1.4 4 
+1.5 5 
+1.6  5 
+ 
+BAB II TINJAUAN PUSTAKA 3 
+ 
+2.1 Error! Bookmark not defined. 
+2.2  Error! Bookmark not defined. 
+2.3 Error! Bookmark not defined. 
+2.3.1 Error! Bookmark not defined. 
+2.3.2      Teori Pendukung Sub BAB 5 
+2.4 Error! Bookmark not defined. 
+ 
+BAB III METODOLOGI PENELITIAN 7 
+ 
+3.1 18 
+3.2  19 
+3.3 21 
+3.4  21 
+3.5  Error! Bookmark not defined. 
+3.6  27 
+3.7  28 
+ 
+Daftar Pustaka 9 
+Lampiran-Lampiran 11 
+ 
+Keterangan: 
+WAJIB menggunakan alat bantu TOC (Table of Contents) pada Microsoft Word. 
+--- PAGE 6 ---
+ 
+5 
+DAFTAR TABEL 
+ 
+ 
+Halaman 
+Tabel 1.1 contents 6 
+Tabel 2.2 contents 7 
+ 
+ 
+  
+--- PAGE 7 ---
+ 
+6 
+DAFTAR GAMBAR 
+ 
+ 
+Halaman 
+Gambar 2.1 contents 8 
+Gambar 2.2 contents 18 
+Gambar 2.3 contents 19 
+ 
+  
+--- PAGE 8 ---
+ 
+7 
+DAFTAR LAMPIRAN 
+ 
+ 
+Halaman 
+Lampiran 1 contents 42 
+ 
+  
+--- PAGE 9 ---
+ 
+8 
+DAFTAR ISTILAH/LAMBANG 
+ 
+ 
+Arti 
+Contents  
+--- PAGE 10 ---
+ 
+9 
+DAFTAR SINGKATAN 
+ 
+ 
+Arti 
+Contents 
+--- PAGE 11 ---
+ 
+1 
+ 
+BAB I PEND AHULU AN 
+PENDAHULUAN 
+ 
+ 
+1.1 Latar Belakang 
+Air merupakan salah satu komponen utama dalam kehidupan makhluk hidup, 
+termasuk dalam sektor perikanan. Dalam kegiatan budidaya ikan air tawar, air berfungsi 
+sebagai media hidup yang sangat menentukan keberhasilan proses budidaya, karena 
+menjadi tempat per tumbuhan ikan serta organisme pendukung seperti plankton yang 
+berperan sebagai sumber makanan alami. Oleh karena itu, kualitas dan ketersediaan air 
+menjadi faktor penting yang perlu diperhatikan karena berpengaruh terhadap 
+pertumbuhan, kesehatan, dan kelangsungan hidup ikan.(Kulla et al., 2020)  
+Kualitas air dalam budidaya ikan dipengaruhi oleh berbagai faktor lingkungan yang 
+menentukan tingkat produktivitas perairan. Parameter fisika dan kimia seperti suhu, 
+derajat keasaman (pH), dan oksigen terlarut (DO) memiliki peranan penting dalam 
+mendukung kehidupan dan perkembangan biota perairan. Parameter -parameter tersebut 
+saling berkaitan dalam menjaga keseimbangan lingkungan, sehingga apabila salah satu 
+parameter berada di luar kisaran optimal, maka dapat berdampak negatif terhadap 
+organisme yang dibudidayakan.(Azhari & Tomasoa, 2018) 
+Salah satu parameter fisika dan kimia yang paling krusial dalam kualitas air adalah 
+suhu dan derajat keasaman (pH). Fluktuasi suhu air yang drastis dapat memengaruhi laju 
+metabolisme, sistem imun, dan nafsu makan ikan, khususnya pada budidaya ikan nila 
+(Oreochromis niloticus ).(Camelia et al., 2026)  Di sisi lain, nilai pH juga memiliki 
+pengaruh yang signifikan terhadap pertumbuhan dan kelangsungan hidup ikan. Kondisi 
+pH yang terlalu rendah (asam) maupun terlalu tinggi (basa) dapat menyebabkan gangguan 
+fisiologis hingga kematian pada ikan.(Jelinda et al., 2024). Berdasarkan acuan baku mutu 
+Standar Nasional Indonesia (SNI 7550:2009) tentang Produksi Benih Ikan Nila Hitam 
+(Oreochromis niloticus), kondisi lingkungan air yang optimal untuk budidaya ikan nila 
+mewajibkan suhu berada pada kisaran 25°C hingga  32°C dan derajat keasaman pada 
+rentang pH 6,5 hingga 8,5. Kestabilan kedua parameter ini dalam ambang batas SNI 
+--- PAGE 12 ---
+ 
+2 
+ 
+mutlak diperlukan agar lingkungan budidaya mendukung kehidupan ikan secara 
+maksimal. 
+Namun, dalam praktiknya, proses pemantauan kualitas air  kolam, khususnya suhu 
+dan pH, masih banyak dilakukan secara manual. Pemantauan kualitas air secara berkala 
+merupakan langkah penting dalam budidaya ikan karena data yang diperoleh dapat 
+digunakan untuk mengidentifikasi kondisi lingkungan dan mengambil tindakan yang 
+diperlukan untuk m enjaga kualitas air tetap optimal. Akan tetapi, metode manual 
+memiliki beberapa keterbatasan, seperti tidak dapat dilakukan secara real -time, 
+membutuhkan waktu dan tenaga, serta berpotensi menimbulkan kesalahan pembacaan 
+data.(Goi & Nasrul, 2025) 
+Keterlambatan dalam mendeteksi perubahan suhu dan pH dapat berdampak negatif 
+terhadap ikan, seperti menurunnya nafsu makan, terganggunya pertumbuhan, hingga 
+meningkatnya tingkat kematian. Dampak tersebut tentunya dapat menyebabkan kerugian 
+bagi pembudidaya, baik dari segi produksi maupun ekonomi.(Goi & Nasrul, 2025) 
+Seiring dengan perkembangan teknologi, Internet of Things (IoT) dapat menjadi 
+solusi dalam mengatasi permasalahan tersebut. Teknologi IoT memungkinkan 
+pemantauan kualitas air dilakukan secara  real-time dengan menggunakan sensor yang 
+terhubung ke jaringan internet. Data yang diperoleh dapat diakses kapan saja dan di mana 
+saja, sehingga memudahkan pengguna dalam memantau kondisi air. Hal ini karena sistem 
+berbasis IoT mampu melakukan pemantauan secara real -time dan menyediakan akses 
+data secara jarak jauh melalui jaringan internet.(Anwar & Latifa, 2022) 
+Beberapa penelitian sebelumnya telah mengembangkan sistem monitoring kualitas 
+air berbasis Internet of Things (IoT ) untuk mempermudah pemantauan kondisi perairan 
+secara real -time. Namun, sebagian besar penelitian tersebut masih berfokus pada 
+penyajian data hasil pengukuran tanpa adanya pengolahan lebih lanjut. Namun, sebagian 
+besar sistem masih bersifat pasif, yakni hanya berfokus pada penyajian data hasil 
+pengukuran mentah tanpa adanya sistem inferensi atau pengolahan lebih lanjut untuk 
+memberikan rekomendasi tindakan bagi pengguna. Hal ini menyebabkan pengguna masih 
+kesulitan dalam mengambil keputusan yang tepat berdasarkan data yang diperoleh. 
+Berdasarkan permasalahan tersebut, diperlukan suatu sistem cerdas yang tidak 
+hanya memantau, tetapi juga mengklasifikasikan data menjadi informasi bermakna. Oleh 
+--- PAGE 13 ---
+ 
+3 
+ 
+karena itu, penelitian ini mengusulkan pengembangan sistem monitoring suhu dan pH air 
+pada kolam ikan nila berbasis Internet of Things (IoT) yang dilengkapi dengan metode 
+rule-based. Metode ini digunakan untuk mengklasifikasikan kondisi kualitas air 
+berdasarkan kombinasi matriks suhu dan pH  yang terukur, sehingga pengguna tidak 
+hanya memperoleh data berupa angka, tetapi juga menerima informasi status air secara 
+otomatis. 
+Untuk menjawab kebutuhan tersebut, penelitian ini bertujuan untuk merancang dan 
+membangun sistem monitoring suhu dan pH air kolam ikan nila berbasis Internet of 
+Things (IoT) yang dilengkapi dengan metode rule -based. Sistem yang dikembangkan 
+diharapkan mampu memantau kondisi kualitas air secara real -time serta mengolah data 
+yang diperoleh menjadi sistem peringatan dini (early warning system). Dengan 
+mengintegrasikan peringatan berbasis push notification langsung ke smartphone 
+pengguna, diharapkan sistem ini dapat membantu pembudidaya dalam memantau kondisi 
+air dan mendukung pengambilan keputusan secara lebih cepat, tepat, dan efisien sebelum 
+kualitas air mencapai titik mematikan bagi ikan. 
+ 
+1.2 Rumusan Masalah 
+ 
+Berdasarkan latar belakang yang telah dijelaskan, maka rumusan masalah dalam 
+penelitian ini adalah: 
+1. Bagaimana merancang sistem derajat keasaman (pH) dan suhu air  pada kolam 
+ikan nila berbasis Internet of Things (IoT)? 
+2. Bagaimana menerapkan metode rule -based (forward chaining) untuk 
+mengklasifikasikan status kondisi air kolam berdasarkan kombinasi parameter 
+derajat keasaman (pH) dan suhu? 
+3. Bagaimana merancang antarmuka pemantauan real-time dan sistem peringatan 
+dini ( push notification ) menggunakan platform IoT agar pengguna dapat 
+mengambil tindakan penanganan secara cepat? 
+  
+ 
+--- PAGE 14 ---
+ 
+4 
+ 
+1.3 Batasan Masalah 
+ 
+Penelitian ini disusun berdasarkan data -data yang diperoleh. Ruang lingkup 
+masalah dibatasi pada: 
+1. Sistem monitoring berfokus pada dua parameter utama kualitas air, yaitu suhu dan 
+derajat keasaman (pH) pada kolam budidaya ikan nila (Oreochromis niloticus). 
+2. Perangkat keras pendeteksi kondisi air yang digunakan adalah sensor suhu (tipe 
+DS18B20) dan sensor pH yang terhubung dengan mikrokontroler utama ESP32. 
+3. Data sensor dikirimkan melalui jaringan nirkabel (internet) dan dikelola secara 
+real-time menggunakan layanan cloud dari platform IoT. 
+4. Visualisasi data dan antarmuka pemantauan jarak jauh dibangun menggunakan 
+platform Blynk IoT, yang mencakup Blynk Web Console (akses peramban 
+komputer untuk analisis data historis dan tabel log) serta Blynk Mobile App 
+(aplikasi ponsel pintar dengan widget interaktif dan sistem notifikasi darurat Push 
+Notification via Blynk Events).Sistem menggunakan metode rule-based (forward 
+chaining) untuk mengklasifikasikan kombinasi kondisi suhu dan pH  air menjadi 
+tiga kategori keluaran, yaitu Sangat Baik, Waspada, dan Bahaya, beserta 
+rekomendasi tindakannya.  
+ 
+1.4 Tujuan Penelitian 
+ 
+Tujuan yang ingin dicapai dari penelitian ini adalah: 
+1. Merancang dan membangun sistem monitoring derajat keasaman (pH) dan suhu 
+air pada kolam budidaya ikan nila berbasis Internet of Things (IoT). 
+2. Menerapkan metode rule-based (forward chaining ) untuk mengklasifikasikan 
+kondisi kualitas air secara otomatis berdasarkan kombinasi parameter suhu dan 
+pH. 
+3. Menyajikan data pemantauan secara real-time melalui web dashboard  serta 
+menyediakan sistem peringatan dini ( early warning system ) berupa push 
+notification melalui aplikasi mobile sehingga pengguna dapat memantau dan 
+menangani kondisi air dengan cepat dan mudah. 
+--- PAGE 15 ---
+ 
+5 
+ 
+1.5 Manfaat Penelitian 
+ 
+Penelitian ini diharapkan dapat memberikan manfaat pada berbagai pihak, 
+khususnya: 
+1. Penulis 
+Manfaat penelitian bagi penulis adalah untuk mengembangkan wawasan dalam 
+mengimplementasikan metode rule -based serta teknologi Internet of Things (IoT) 
+dalam sistem monitoring derajat keasaman (pH) dan suhu air pada kolam ikan nila. 
+2. Mahasiswa 
+Penelitian ini dapat memberikan pengetahuan kepada mahasiswa mengenai penerapan 
+teknologi IoT dengan antarmuka ganda (web dan mobile) serta metode rule-based 
+dalam sistem monitoring kualitas air, dan dapat menjadi referensi khususnya bagi 
+mahasiswa di bidang Informatika yang dapat membantu proses pembelajaran. 
+3. Instansi/Lembaga/Perusahaan 
+Manfaat penelitian ini bagi instansi atau pelaku budidaya adalah dengan adanya sistem 
+monitoring derajat keasaman (pH) dan suhu air berbasis IoT yang dilengkapi dengan 
+metode rule-based, diharapkan dapat membantu dalam memantau kondisi kualitas air 
+secara real-time dari berbagai perangkat serta memberikan peringatan dini (push 
+notification) yang mendukung pengambilan keputusan penanganan yang lebih cepat 
+dan tepat. 
+ 
+1.6  Kontribusi Penelitian 
+ 
+Kontribusi yang dapat diberikan dari penelitian ini adalah pengembangan sistem 
+monitoring derajat keasaman (pH) dan suhu air kolam ikan nila berbasis IoT yang tidak 
+hanya menampilkan data hasil pengukuran, tetapi juga mampu mengolah data kombinasi 
+kedua pa rameter tersebut menggunakan metode rule -based untuk mengklasifikasikan 
+kondisi kualitas air. Sistem ini memberikan kebaruan dengan bertindak sebagai sistem 
+peringatan dini (early warning system) yang terintegrasi pada ekosistem ganda (Blynk 
+Web Console  dan Mobile App). Hal ini diharapkan dapat membantu pembudidaya 
+--- PAGE 16 ---
+ 
+6 
+ 
+mengambil tindakan penanganan secara cepat dan tepat sebelum kondisi air berdampak 
+fatal pada ikan sesuai standar baku mutu perairan.
+--- PAGE 17 ---
+ 
+3 
+ 
+BAB II TINJAUA N PUSTAK A 
+TINJAUAN PUSTAKA 
+ 
+ 
+2.1 Penelitian Terkait 
+Dalam rangka mendukung penelitian ini, maka dilakukan kajian dengan mempelajari 
+penelitian-penelitian terkait yang telah dilakukan sebelumnya. Daftar penelitian terkait 
+antara lain: 
+1. Penelitian yang dilakukan oleh Nurhidayah et al. (2024) mengenai Internet of Things 
+(IoT) untuk monitoring pH dan suhu kolam ikan lele secara real -time menggunakan 
+mikrokontroler NodeMCU ESP8266, sensor pH E-201C, dan sensor suhu DS18B20. 
+Hasil penelitian menunjukkan bahwa sistem mampu menampilkan data pH dan suhu 
+secara langsung dengan tingkat validitas alat sebesar 0,909 berdasarkan analisis 
+regresi linier sederhana. Penelitian ini membantu proses pemantauan kualitas air 
+secara otomatis, namun belum menggunakan dashboard web dan belum menerapkan 
+metode rule-based untuk klasifikasi kondisi air. 
+2. Metode yang digunakan pada penelitian ini adalah Internet of Things (IoT) untuk 
+monitoring pH dan suhu kolam ikan lele secara real -time menggunakan 
+mikrokontroler NodeMCU ESP8266, sensor pH E-201C, dan sensor suhu DS18B20. 
+Hasil penelitian menunjukkan bahwa sistem mampu menampilkan data pH dan suhu 
+secara langsung dengan tingkat validitas alat sebesar 0,909 berdasarkan analisis 
+regresi linier sederhana. Penelitian ini membantu proses pemantauan kualitas air 
+secara otomatis, namun belum menggunakan dashboard web dan belum menerapkan 
+metode rule-based untuk klasifikasi kondisi air.(Nurhidayah et al., 2024) 
+3. Penelitian yang dilakukan oleh Manurung et al. (2022) mengenai sistem monitoring 
+kualitas air kolam lele menggunakan metode Internet of Things (IoT) berbasis ESP32 
+secara real -time. Sistem menggunakan sensor pH, suhu, dan kekeruhan yang 
+terhubung dengan Fi rebase dan aplikasi MIT App Inventor. Hasil penelitian 
+menunjukkan bahwa sistem mampu melakukan monitoring kualitas air dengan waktu 
+respons tercepat sebesar 1,88 detik pada jaringan 4G. Namun, penelitian ini belum 
+--- PAGE 18 ---
+ 
+4 
+ 
+menggunakan dashboard web dan belum menerapkan metode klasifikasi kondisi air 
+berbasis rule-based. 
+4. Penelitian yang dilakukan oleh Manurung et al. (2022) menggunakan metode 
+Internet of Things (IoT) berbasis ESP32 untuk monitoring kualitas air keran siap 
+minum secara real-time. Sistem menggunakan sensor pH, suhu, dan kekeruhan yang 
+terhubung dengan Firebase dan apli kasi MIT App Inventor. Hasil penelitian 
+menunjukkan bahwa sistem mampu melakukan monitoring kualitas air dengan waktu 
+respons tercepat sebesar 1,88 detik pada jaringan 4G. Namun, penelitian ini belum 
+menggunakan dashboard web dan belum menerapkan metode klasifikasi kondisi air 
+berbasis rule-based.(Manurung et al., 2022) 
+5. Penelitian yang dilakukan oleh Jeprianto dan Rohmah (2021) mengembangkan 
+sistem monitoring dan controlling kadar pH pada air kolam ikan berbasis Internet of 
+Things menggunakan ESP NodeMCU dan aplikasi Blynk. Sistem yang 
+dikembangkan mampu melakukan monitoring kondisi Suhu dan pH air secara real-
+time serta membantu pengguna dalam mengontrol kualitas air kolam. Namun, 
+penelitian ini hanya berfokus pada pemantauan satu parameter (pH)  dan belum 
+menerapkan metode rule -based (forward chaining) untuk mengklasifikasikan 
+kombinasi kondisi kualitas air  secara otomatis sebagai sistem peringatan dini . 
+(Rohmah et al., 2021) 
+6. Penelitian yang dilakukan oleh Irwansyah, Said, dan Islah (2024) mengenai rancang 
+bangun sistem monitoring kualitas air pada budidaya ikan air tawar berbasis IoT, 
+dengan fokus pada parameter pH dan kekeruhan menggunakan metode 
+pengembangan waterfall. Sistem memanfaatkan sensor pH dan sensor turbidity yang 
+diolah secara real -time untuk membantu pembudidaya ikan air tawar memantau  
+kondisi kolam. Kekurangan penelitian ini adalah tidak menggunakan ESP32 sebagai 
+mikrokontroler utama, serta tidak menerapkan metode rule -based untuk 
+mengklasifikasikan kondisi air secara otomatis kepada pengguna, sehingga luaran 
+yang dihasilkan masih berupa data numerik mentah. 
+7. Irwansyah, Said, dan Islah (2024) melakukan penelitian yang bertujuan merancang 
+dan membangun sistem monitoring kualitas air pada budidaya ikan air tawar berbasis 
+IoT, dengan fokus pada parameter pH dan kekeruhan menggunakan metode 
+--- PAGE 19 ---
+ 
+5 
+ 
+pengembangan waterfall. Sistem memanfaatkan sensor pH dan sensor turbidity yang 
+diolah secara real -time untuk membantu pembudidaya ikan air tawar memantau 
+kondisi kolam. Hasil pengujian pada dua kolam ikan menunjukkan sensor pH 
+memiliki tingkat error antara 1,44% hingga 3,78%, serta diperoleh korelasi yang 
+sangat lemah (r = 0,203) antara kekeruhan dan pH yang mengindikasikan kedua 
+parameter beroperasi secara independen. Kekurangan penelitian ini adalah tidak 
+menggunakan ESP32 sebagai mikrokontroler utama, serta tidak menerapkan metode 
+rule-based untuk mengklasifikasikan kondisi air secara otomatis kepada pengguna , 
+sehingga luaran yang dihasilkan masih berupa data numerik mentah .(Irwansyah et 
+al., 2024) 
+8. Penelitian yang dilakukan oleh Sitorus Pane dan Andriyani (2024) mengenai sistem 
+pendeteksi kualitas air pada budidaya ikan nila berbasis Internet of Things 
+menggunakan metodologi Research and Development. Keterbatasan penelitian ini 
+adalah belum diterapkannya metode pakar seperti rule -based untuk 
+mengklasifikasikan status kondisi air kolam secara otomatis, sehingga pengguna 
+masih harus menginterpretasikan rentang aman dari data numerik secara mandiri. 
+9. Sitorus Pane dan Andriyani (2024) mengembangkan sistem pendeteksi kualitas air 
+pada budidaya ikan nila berbasis Internet of Things menggunakan metodologi 
+Research and Development. Sistem menggunakan NodeMCU ESP32 sebagai 
+mikrokontroler utama yang terintegrasi dengan sensor pH (untuk mengukur 
+keasaman air kolam), sensor DS18B20 (suhu), dan sensor turbidity ( kekeruhan), 
+serta Arduino Nano sebagai pengolah data sensor tambahan dengan teknik simplex 
+untuk memperlancar transmisi data antar komponen. Hasil penelitian menunjukkan 
+sistem mampu melakukan monitoring kualitas air secara real-time dan memudahkan 
+pemilik kolam memantau kondisi air setiap saat dari jarak jauh. Keterbatasan 
+penelitian ini adalah belum  diterapkannya metode pakar seperti rule-based untuk 
+mengklasifikasikan status kondisi air kolam secara otomatis , sehingga pengguna 
+masih harus menginterpretasikan rentang aman dari data numerik secara 
+mandiri.(Pane & Andriyani, 2024) 
+10. Penelitian yang dilakukan oleh Maulana et al. (2021) mengenai sistem monitoring 
+dan controlling air lele menggunakan logika fuzzy via Telegram. Penelitian ini 
+--- PAGE 20 ---
+ 
+6 
+ 
+mengimplementasikan logika fuzzy sebagai metode pengambilan keputusan 
+otomatis berdasarkan nilai pH dan suhu yang terukur. Kekurangan penelitian ini 
+adalah kompleksitas metode fuzzy yang memerlukan proses defuzzifikasi dan 
+penetapan fungsi keanggotaan yang lebih rumit diband ingkan metode rule -based, 
+serta tidak menggunakan ESP32 sebagai mikrokontroler utama. 
+11. Maulana, Kusnadi, dan Asfi (2021) melakukan penelitian yang bertujuan merancang 
+sistem monitoring dan controlling kualitas air serta pemberian pakan pada budidaya 
+ikan lele menggunakan metode fuzzy, NodeMCU, dan Telegram. Penelitian ini 
+mengimplementasikan logika fuzzy sebagai metode pengambilan keputusan 
+otomatis berdasarkan nilai pH dan suhu yang terukur oleh sensor, dengan output 
+berupa aktuasi otomatis pada pompa air  untuk mengisi atau menguras kolam sesuai 
+kondisi air yang terdeteksi. Data sensor dikirimkan melalui NodeMCU dan notifikasi 
+kondisi air disampaikan kepada pembudidaya melalui aplikasi Telegram secara real-
+time. Penelitian ini memberikan kontribusi penting  dalam penerapan metode 
+komputasi cerdas untuk pengendalian kualitas air pada budidaya ikan lele. 
+Kekurangan penelitian ini adalah kompleksitas metode fuzzy yang memerlukan 
+proses defuzzifikasi dan penetapan fungsi keanggotaan yang lebih rumit 
+dibandingkan metode rule -based, serta tidak menggunakan ESP32 sebagai 
+mikrokontroler utama yang memiliki performa dan konektivitas nirkabel yang lebih 
+tangguh.(Maulana et al., 2021) 
+12. Penelitian yang dilakukan oleh Subianto & Wardhana (2024) mengenai sistem 
+rekomendasi kualitas air nila berbasis Rule-Based offline. Sistem dilengkapi dengan 
+lima sensor yaitu sensor suhu, pH, amonia, TDS, dan kekeruhan, yang secara 
+otomatis menghasilkan rekomendasi tindakan. Meskipun penelitian ini menerapkan 
+metode rule-based yang relevan sebagai landasan inferensi, terdapat keterbatasan 
+berupa tidak diintegrasikannya teknologi IoT untuk pemantauan real-time dari jarak 
+jauh melalui ekosistem web maupun mobile, serta tidak memiliki fitur push 
+notification. 
+13. Subianto dan Wardhana  (2024) merancang prototipe sistem rekomendasi kualitas 
+air untuk budidaya ikan nila menggunakan metode Rule -Based Reasoning. Sistem 
+dilengkapi dengan lima sensor yaitu sensor suhu, pH, amonia, TDS, dan kekeruhan, 
+--- PAGE 21 ---
+ 
+7 
+ 
+yang secara otomatis menghasilkan rekomendasi tindakan apabila nilai parameter 
+berada di luar ambang batas standar ideal budidaya ikan nila. Hasil pengujian 
+menunjukkan standar deviasi yang sangat kecil, yaitu di bawah 0,1 untuk parameter 
+suhu, pH, dan amo nia, membuktikan tingkat akurasi pembacaan  sensor yang baik 
+dan konsisten. Meskipun penelitian ini menerapkan metode rule-based yang relevan 
+sebagai landasan inferensi, terdapat keterbatasan berupa tidak diintegrasikannya 
+teknologi IoT untuk pemantauan real -time dari jarak jauh  melalui ekosistem web 
+maupun mobile, serta tidak memiliki fitur push notification untuk memperingatkan 
+pengguna secara seketika. (Subianto & Wardhana, 2024) 
+14. Penelitian oleh Camelia et al. (2026) mengenai monitoring suhu dan pH kolam nila 
+bioflok berbasis ESP32 dan Blynk. Sistem tersebut dirancang menggunakan 
+mikrokontroler ESP32 yang terintegrasi dengan sensor suhu DS18B20, sensor pH 
+4502C, dan aplikasi Blynk sebagai media pemantauan. Walaupun pemantauan IoT 
+tersebut terbukti efektif, penelitian ini merekomendasikan pengem bangan lanjutan 
+untuk mengintegrasikan mekanisme kendali atau pengambilan keputusan otomatis. 
+Oleh karena itu, batasan pada penelitian tersebut akan disempurnakan pada 
+penelitian ini melalui penerapan matriks keputusan Rule -Based Forward Chaining 
+sebagai sistem peringatan dini (early warning system). 
+15. Penelitian oleh Camelia et al. (2026) mengimplementasikan sistem monitoring suhu 
+dan pH berbasis Internet of Things (IoT) pada budidaya ikan nila gesit 
+(Oreochromis niloticus) dengan sistem bioflok. Sistem tersebut dirancang 
+menggunakan mikrokontroler ESP32  yang terintegrasi dengan sensor suhu 
+DS18B20, sensor pH 4502C, dan aplikasi Blynk sebagai media pemantauan. Hasil 
+penelitian membuktikan bahwa sistem ini mampu menyajikan data suhu dan pH 
+secara berkelanjutan secara real-time. Walaupun pemantauan IoT tersebut terbukti 
+efektif, penelitian ini merekomendasikan pengembangan lanjutan untuk 
+mengintegrasikan mekanisme kendali atau pengambilan keputusan otomatis. Oleh 
+karena itu, batasan pada penelitian tersebut akan disempurnakan pada penelitian ini 
+melalui penerapan matriks keputusan Rule-Based Forward Chaining sebagai sistem 
+peringatan dini (early warning system). (Camelia et al., 2026) 
+ 
+--- PAGE 22 ---
+ 
+8 
+ 
+Sebagai rangkuman dari tinjauan pustaka di atas, Tabel 2.1 menyajikan matriks 
+perbandingan State-of-the-Art (SOTA) untuk memperjelas posisi penelitian ini: 
+--- PAGE 23 ---
+ 
+3 
+ 
+Peneliti & Tahun 
+Objek 
+Kolam 
+Parameter 
+Input 
+Perangkat 
+Keras 
+Logika 
+Pengambil 
+Keputusan 
+Media 
+Antarmuka 
+Celah Riset / 
+Limitasi 
+Posisi Penelitian Ini 
+Manurung et al. 
+(2022) 
+Ikan 
+Lele 
+Suhu & pH 
+NodeMCU 
+ESP8266 
+Threshold 
+Biner 
+Sederhana 
+Blynk 
+Mobile 
+Pasif; tidak ada 
+rekomendasi aksi 
+lapangan. 
+Menerapkan Rule -Based 9 Matriks 
+dengan rekomendasi tindakan 
+spesifik. 
+Subianto & 
+Wardhana (2024) 
+Ikan 
+Nila 
+Suhu, pH, 
+TDS, 
+Turbidity 
+Arduino 
+Uno 
+Rule-Based 
+Reasoning 
+Serial 
+Monitor / 
+Offline 
+Tidak ada 
+konektivitas IoT 
+jarak jauh dan 
+notifikasi. 
+Terintegrasi penuh ke Cloud Blynk 
+& Push Notification ke smartphone. 
+Maulana et al. 
+(2021) 
+Ikan 
+Lele 
+Suhu & pH 
+NodeMCU 
+ESP8266 
+Logika 
+Fuzzy 
+Mamdani 
+Telegram 
+Bot 
+Komputasi fuzzy 
+berat; notifikasi 
+hanya teks chat 
+biasa. 
+Inferensi Rule -Based deterministik 
+cepat langsung di ESP32 dengan 
+widget gauge. 
+--- PAGE 24 ---
+ 
+4 
+ 
+Peneliti & Tahun 
+Objek 
+Kolam 
+Parameter 
+Input 
+Perangkat 
+Keras 
+Logika 
+Pengambil 
+Keputusan 
+Media 
+Antarmuka 
+Celah Riset / 
+Limitasi 
+Posisi Penelitian Ini 
+Camelia et al. 
+(2026) 
+Ikan 
+Nila 
+Bioflok 
+Suhu & pH ESP32 
+Monitoring 
+Pasif 
+(Tanpa 
+Inferensi) 
+Blynk App 
+Merekomendasikan 
+perlunya sistem 
+inferensi otomatis. 
+Menjawab rekomendasi Camelia 
+et al.  dengan menambahkan mesin 
+inferensi 9 aturan & early warning. 
+Penelitian Ini 
+(Hasan, 2026) 
+Ikan 
+Nila 
+Air 
+Tawar 
+Suhu Air 
+(DS18B20) 
+& pH 
+(SEN0161-
+V2) 
+ESP32 (30 
+Pin, Wi -
+Fi) 
+Rule-Based 
+Forward 
+Chaining 
+(9 Aturan) 
+Blynk Web 
+Console & 
+Blynk 
+Mobile App 
+- 
+Sistem pemantauan cerdas dengan 
+komputasi edge di ESP32, 
+visualisasi ganda, early warning 
+notification, dan panduan mitigasi 
+kolam. 
+--- PAGE 25 ---
+ 
+3 
+ 
+2.2 Perbedaan dengan Penelitian Sebelumnya 
+Berdasarkan Berdasarkan penelitian -penelitian terkait yang telah dilakukan 
+sebelumnya, dapat diketahui bahwa sebagian besar penelitian telah menerapkan teknologi 
+Internet of Things (IoT) untuk monitoring kualitas air secara real -time (Camelia et al., 
+2026; Irwansyah et al., 2024; Manurung et al., 2022; Maulana et al., 2021; Pane & 
+Andriyani, 2024; Rohmah et al., 2021). Namun, sebagian besar penelitian tersebut masih 
+berfokus pada penyajian data numerik pemantauan  tanpa adanya proses klasifikasi 
+kondisi air secara otomatis, sehingga pengguna harus menginterpretasikan nilai sensor 
+secara mandiri . Meskipun terdapat penelitian yang telah menggunakan ekosistem IoT 
+yang sejenis  untuk memantau kolam ikan nila (Camelia et al., 2026), sistem tersebut  
+masih bersifat pasif karena sebatas menampilkan data tanpa adanya pengambilan 
+keputusan. Adapun penelitian yang telah menerapkan metode rule -based (Subianto & 
+Wardhana, 2024) belum mengintegrasikannya dengan teknologi IoT untuk pemantauan 
+real-time dari jarak jauh. 
+Oleh karena itu, penelitian ini mengembangkan sistem monitoring suhu dan pH air 
+kolam ikan nila berbasis Internet of Things (IoT) menggunakan mikrokontroler ESP32 
+yang mengintegrasikan ekosistem antarmuka ganda (web dashboard dan aplikasi mobile) 
+serta men erapkan metode Rule -Based Forward Chaining. Metode pakar ini dirancang 
+menggunakan matriks kombinasi dua parameter (suhu dan pH) untuk mengklasifikasikan 
+status kondisi  air secara otomatis. Dengan kombinasi inovasi tersebut, sistem yang 
+dihasilkan tidak hanya menyajikan visualisasi data yang mudah dipahami, tetapi juga 
+bertindak cerdas sebagai sistem peringatan dini (early warning system). Sistem ini 
+mampu memicu pengiri man peringatan otomatis berupa push notification langsung ke 
+smartphone pembudidaya secara seketika apabila kondisi air masuk pada kategori 
+Waspada atau Bahaya, sehingga mendukung pengambilan keputusan penanganan yang 
+jauh lebih cepat, tepat, dan efisien. 
+ 
+2.3 Air dan Budidaya Ikan Air Tawar 
+Air merupakan komponen utama dalam kehidupan makhluk hidup dan memiliki 
+peran yang sangat penting dalam sektor perikanan, khususnya pada kegiatan budidaya 
+ikan air tawar. Dalam proses budidaya, air berfungsi sebagai media hidup bagi ikan 
+--- PAGE 26 ---
+ 
+4 
+ 
+sekaligus sebagai lingkungan tempat berlangsungnya berbagai proses biologis, seperti 
+pertumbuhan, metabolisme, dan reproduksi. Selain itu, air juga menjadi habitat bagi 
+organisme pendukung seperti plankton yang berperan sebagai sumber pakan alami bagi 
+ikan. Oleh karena itu, ketersediaan serta kualitas air menjadi faktor utama yang 
+menentukan keberhasilan dalam budidaya ikan air tawar, karena air tidak hanya berfungsi 
+sebagai media pertumbuhan ikan, tetapi juga sebagai tempat pertumbuhan  organisme 
+pendukung yang berperan dalam rantai makanan.(Kulla et al., 2020) 
+ 
+2.4 Kualitas Air 
+Kualitas air merupakan salah satu faktor penting dalam kegiatan budidaya ikan 
+air tawar karena berpengaruh langsung terhadap pertumbuhan, kesehatan, dan 
+kelangsungan hidup ikan. Kualitas air dapat diartikan sebagai kondisi fisika, kimia, dan 
+biologi air yang menentukan kelayakan suatu perairan untuk mendukung kehidupan 
+organisme di dalamnya. Air dengan kualitas yang baik akan menciptakan lingkungan 
+yang optimal bagi ikan untuk tumbuh dan berkembang secara maksimal.(Harmilia, 2020) 
+Dalam budidaya ikan air tawar, kualitas air dipengaruhi oleh berbagai parameter 
+yang saling berkaitan, baik parameter fisika maupun kimia. Parameter fisika meliputi 
+suhu, kekeruhan, dan kedalaman air, sedangkan parameter kimia meliputi derajat 
+keasaman (pH), oksigen terlarut (DO), serta kandungan zat terlarut lainnya. Perubahan 
+pada salah satu parameter tersebut dapat memengaruhi keseimbangan lingkungan 
+perairan dan berdamp ak terhadap organisme yang dibudidayakan. Oleh karena itu, 
+pengelolaan kualitas air yang baik sangat diperlukan untuk menjaga kondisi perairan tetap 
+berada dalam kisaran optimal.(Harmilia, 2020) 
+ 
+2.5 Parameter Kualitas Air 
+Parameter kualitas air merupakan indikator yang digunakan untuk menentukan 
+kondisi suatu perairan dalam mendukung kehidupan organisme, khususnya dalam 
+kegiatan budidaya ikan. Parameter ini terbagi menjadi beberapa jenis, yaitu parameter 
+fisika, kimia, dan biologi, yang masing-masing memiliki peranan penting dalam menjaga 
+keseimbangan ekosistem perairan. 
+--- PAGE 27 ---
+ 
+5 
+ 
+Parameter fisika meliputi suhu, kekeruhan, dan kedalaman air yang memengaruhi 
+kondisi lingkungan secara langsung. Parameter kimia meliputi derajat keasaman (pH), 
+oksigen terlarut (DO), serta kandungan zat terlarut lainnya yang berperan dalam proses 
+metabolisme organisme perairan. Sementara itu, parameter biologi berkaitan dengan 
+keberadaan organisme seperti plankton dan mikroorganisme yang dapat memengaruhi 
+kualitas air. Ketiga parameter  tersebut saling berkaitan, sehingga perubahan pada salah 
+satu parameter dapat berdampak pada parameter lainnya serta memengaruhi 
+kelangsungan hidup organisme yang dibudidayakan.(Nazara & Nazara, 2024) 
+ 
+2.6 Derajat Keasaman (pH) 
+Derajat keasaman atau pH merupakan salah satu parameter kimia yang digunakan 
+untuk menunjukkan tingkat keasaman atau kebasaan suatu larutan. Nilai pH berada pada 
+skala 0 hingga 14, di mana pH < 7 menunjukkan kondisi asam, pH = 7 menunjukkan 
+kondisi netral, dan pH > 7 menunjukkan k ondisi basa. Dalam konteks perairan, pH 
+menjadi indikator penting dalam menentukan kualitas air serta kelayakannya bagi 
+kehidupan organisme perairan. Secara umum, nilai pH yang baik untuk perairan berada 
+pada kisaran 6,5–8,5 yang masih memenuhi baku mutu kualitas air.(Yolanda, 2023) 
+ 
+Tabel 2.x Klasifikasi Kondisi pH Air untuk Budidaya Ikan Air Tawar 
+Kondisi Rentang pH Kategori Dampak 
+Sangat Asam pH < 5,5 Sangat Buruk Kematian ikan 
+Asam 5,5 ≤ pH < 6,5 Buruk Stres, nafsu makan 
+turun 
+Normal 6,5 ≤ pH ≤ 8,5 Baik Pertumbuhan 
+optimal 
+Basa 8,5 < pH ≤ 9,5 Buruk Gangguan insang 
+Sangat Basa pH > 9,5 Sangat Buruk Kematian ikan 
+ 
+--- PAGE 28 ---
+ 
+6 
+ 
+Dalam budidaya ikan air tawar, pH memiliki pengaruh yang signifikan terhadap 
+kualitas air dan kelangsungan hidup ikan. Nilai pH yang berada di luar kisaran optimal 
+dapat menyebabkan penurunan kualitas air yang berdampak pada kesehatan ikan, seperti 
+menurunnya nafsu makan, terganggunya pertumbuhan, hingga meningkatkan risiko 
+kematian. Oleh karena itu, kestabilan  nilai pH perlu dijaga agar kondisi lingkungan 
+perairan tetap mendukung kehidupan ikan budidaya.(Safitri et al., 2022)  
+Meskipun secara teoritis klasifikasi dampak pH dapat dibagi menjadi 5 kondisi rinci 
+seperti pada Tabel 2.2, untuk keperluan inferensi rule-based pada penelitian ini dan 
+menyesuaikan dengan standar baku mutu SNI 7550:2009 serta kepraktisan tindakan 
+mitigasi di lapangan, klasifikasi tersebut disederhanakan menjadi 3 kategori utama, yaitu: 
+Asam (pH < 6.5), Ideal (pH 6.5 - 8.5), dan Basa (pH > 8.5). Penyederhanaan ini bertujuan 
+agar rekomendasi tindakan yang dihasilkan oleh sistem lebih tegas, cepat diproses oleh 
+mikrokontroler, dan mudah diimplementasikan (misal: pengapuran untuk kondisi asam 
+atau pemberian daun ketapang untuk basa) oleh pembudidaya. 
+ 
+ 
+2.7 Suhu Air 
+Suhu air merupakan parameter fisika yang sangat vital bagi kelangsungan hidup 
+organisme akuatik karena ikan bersifat poikilotermik (suhu tubuh mengikuti suhu 
+lingkungan). Pada budidaya ikan nila (Oreochromis niloticus), suhu air yang ideal berada 
+pada kisaran 25°C hingga 30°C.(Camelia et al., 2026) Fluktuasi suhu di luar batas optimal 
+dapat berdampak serius; suhu yang terlalu dingin (< 25°C) akan menurunkan laju 
+pencernaan dan nafsu makan, sedangkan suhu yang terlalu panas  (> 30°C) akan 
+menurunkan kadar oksigen terlarut (DO) yang menyebabkan ikan stres dan rentan 
+terhadap penyakit. 
+ 
+ 
+2.8 Monitoring 
+Monitoring atau pemantauan merupakan proses pengukuran, pencatatan, 
+pengumpulan, pemrosesan, dan komunikasi informasi untuk membantu pengambilan 
+--- PAGE 29 ---
+ 
+7 
+ 
+keputusan manajemen suatu program atau proyek (Muzawi et al., 2019). Terdapat dua 
+jenis monitoring, yaitu: 
+1. Pengawasan Langsung: Dilakukan dengan mengunjungi dan melakukan 
+pemeriksaan langsung ke tempat pelaksanaan pekerjaan atau objek yang diawasi. 
+2. Pengawasan Tidak Langsung: Dilakukan tanpa mengunjungi tempat pelaksanaan 
+pekerjaan atau objek yang diawasi. Hal ini dapat dilakukan dari jarak jauh, seperti 
+melalui perangkat mobile atau dashboard berbasis web. 
+Sistem monitoring berbasis IoT yang dibangun pada penelitian ini termasuk dalam 
+kategori pengawasan tidak langsung, karena memungkinkan pembudidaya ikan untuk 
+memantau nilai pH air kolam secara real -time melalui website tanpa harus berada di 
+lokasi kolam secara langsung. 
+ 
+2.9 Monitoring Kualitas Air 
+Monitoring kualitas air merupakan kegiatan pengamatan dan pengukuran 
+parameter-parameter kualitas air secara berkala untuk mengetahui kondisi perairan. 
+Parameter yang umum diamati dalam monitoring kualitas air meliputi suhu, derajat 
+keasaman (pH), serta parameter lainnya yang berpengaruh terhadap kehidupan organisme 
+perairan, mengingat kualitas air merupakan parameter yang sangat penting untuk 
+kelangsungan pertumbuhan dan perkembangan ikan. Kegiatan monitoring ini bertujuan 
+untuk memastikan bahwa kualitas air tetap berada dalam kondisi yang sesuai bagi 
+kelangsungan hidup organisme, khususnya dalam budidaya ikan air tawar.(Wardah et al., 
+2024) 
+Kualitas air pada budidaya ikan air tawar sangat mempengaruhi tumbuh kembang 
+ikan tersebut, terutama pada jenis ikan nila. Kematian ikan secara mendadak sering terjadi 
+ selama proses budidaya berlangsung akibat kualitas air yang tidak terjaga karena 
+kurangnya sistem yang dapat memonitoring kualitas air setiap saat. (Pane & Andriyani, 
+2024) 
+Dalam praktiknya, monitoring kualitas air dapat dilakukan secara manual maupun 
+otomatis. Pengecekan air kolam yang dilakukan secara manual menggunakan kertas 
+lakmus pH memiliki keterbatasan karena tidak dapat dilakukan secara real -time, 
+membutuhkan waktu d an tenaga, serta berpotensi menimbulkan kesalahan dalam 
+--- PAGE 30 ---
+ 
+8 
+ 
+pencatatan data. Sementara itu, monitoring secara otomatis dengan memanfaatkan 
+teknologi memungkinkan proses pengambilan data dilakukan secara terus -menerus dan 
+real-time. Sistem monitoring kualitas  air berbasis Internet of Things (IoT) dirancang 
+dengan fokus pada parameter pH dan kekeruhan, sehingga kondisi kualitas air pada kolam 
+budidaya dapat dipantau dengan lebih cepat dan akurat.(Irwansyah et al., 2024)  
+Penerapan sistem monitoring berbasis IoT terbukti mampu menghasilkan akurasi 
+sensor pH antara 91,94% hingga 98,98% serta akurasi sensor suhu sebesar 98,43%, 
+dengan sistem alarm yang merespons secara cepat apabila parameter melampaui batas 
+normal, sementara  antarmuka web menampilkan data numerik dan grafik secara real -
+time. Oleh karena itu, penerapan sistem monitoring berbasis teknologi menjadi solusi 
+yang efektif dalam pengelolaan kualitas air.(Yudha & Gunawan, 2025)  
+ 
+2.10 Internet of Things (IoT) 
+Internet of Things (IoT) merupakan teknologi mutakhir yang mengacu pada 
+berbagai perangkat dan sistem di seluruh dunia yang saling terhubung melalui internet 
+untuk berbagi data. Teknologi ini melibatkan penggunaan sensor dan perangkat lunak 
+komunikasi untu k mengontrol, menghubungkan, dan mentransfer data antarperangkat 
+dengan memanfaatkan jaringan internet, memungkinkan kinerja tanpa pengawasan 
+langsung. IoT memiliki hubungan erat dengan komunikasi machine-to-machine (M2M), 
+yang memungkinkan perangkat pintar untuk saling berinteraksi tanpa  campur tangan 
+manusia, sehingga diharapkan dapat meningkatkan efisiensi dan mempermudah berbagai 
+aktivitas manusia.(Syahfitri, 2025) 
+Perangkat dalam sistem IoT umumnya dilengkapi dengan sensor, mikrokontroler, 
+serta koneksi jaringan yang memungkinkan pengambilan dan pertukaran data secara real-
+time. Terdapat tiga komponen utama yang berperan penting dalam proses kerja IoT, yaitu 
+sensor, gateway, dan cloud. Sensor berfungsi mengumpulkan data dari objek -objek fisik 
+yang terhubung dengan jaringan internet , sedangkan komponen gateway berfungsi 
+mentransmisikan data tersebut ke cloud atau internet yang terhubung. Dengan adanya 
+teknologi ini, berbagai proses monitoring dan kontrol dapat dilakukan secara lebih efisien 
+dan terintegrasi. (artikel https://www.linknet.id/article/internet-of-things ) 
+--- PAGE 31 ---
+ 
+9 
+ 
+Dalam penerapannya, teknologi IoT telah banyak digunakan dalam berbagai 
+bidang, salah satunya adalah monitoring kualitas air. Sistem pemantauan kualitas air 
+berbasis IoT mengintegrasikan berbagai sensor, termasuk pH, TDS, suhu, kekeruhan, 
+dissolved oxygen (DO), dan electrical conductivity (EC), untuk mengumpulkan data 
+secara kontinu. Data tersebut diproses oleh mikrokontroler dan dikirimkan ke server 
+cloud untuk divisualisasikan melalui dashboard daring, sehingga memungkinkan deteksi 
+dini terhadap pencemaran dan mendukung pengambilan keputusan secara tepat 
+waktu.(Sugiharto et al., 2025) 
+Parameter utama kualitas air yang dipantau melalui sistem berbasis IoT meliputi 
+suhu, pH, oksigen terlarut, dan kekeruhan, mengingat penurunan kualitas air dapat 
+menyebabkan stres dan penyakit pada ikan dalam budidaya air tawar. Sistem berbasis IoT 
+yang menggunakan konfigurasi berdaya rendah mampu menghasilkan data yang akurat 
+dan andal dengan margin kesalahan minimal, sekaligus memungkinkan modifikasi 
+pengaturan secara fleksibel dan penambahan parameter monitoring baru dengan mudah. 
+Hal ini memberikan kemudahan dalam pemantauan kondisi lingkungan serta membantu 
+pengambilan keputusan secara cepat dan tepat.(Azizah et al., 2025)  
+ 
+2.11 Sensor pH 
+Sensor pH merupakan perangkat yang digunakan untuk mengukur tingkat 
+keasaman atau kebasaan suatu larutan. Nilai pH menunjukkan konsentrasi ion hidrogen 
+(H⁺) dalam larutan tersebut, dengan skala dari 0 (sangat asam) hingga 14 (sangat  basa), 
+sementara nilai 7 menunjukkan kondisi netral. Sensor pH bekerja dengan mendeteksi 
+perbedaan potensial listrik antara elektroda pengukur dan elektroda referensi, yang 
+kemudian diubah menjadi nilai pH digital atau analog yang dapat dianalisis. ( artikel 
+https://www.ptdsak.com/blog/apa-itu-sensor-ph-fungsi-dan-aplikasinya-di-industri ) 
+Cara kerja dari sensor pH adalah dengan memasukkan elektroda pH ke dalam 
+sampel larutan, kemudian elektroda tersebut mendeteksi sampel larutan dan mengubah 
+sinyal elektroda, di mana output dari sensor akan dikonversi oleh mikrokontroler menjadi 
+data digital. Prinsip kerja sensor pH didasarkan pada reaksi elektrokimia. Ketika 
+elektroda pengukur dimasukkan ke dalam larutan, ion hidrogen berinteraksi dengan 
+elektroda kaca sehingga menciptakan tegangan listrik. Tegangan ini dibandingkan dengan 
+--- PAGE 32 ---
+ 
+10 
+ 
+tegangan elektroda referensi dan menghasilkan sinyal yang dikonversi menjadi nilai pH.  
+SOCA JournalPtdsak 
+Salah satu modul sensor pH yang umum digunakan dalam sistem monitoring 
+berbasis mikrokontroler adalah modul pH -4502C. Modul pH -4502C merupakan papan 
+yang memiliki kemampuan untuk mensuplai output tegangan ke papan analog yang akan 
+mewakili nilai pH, sama seperti sensor lain yang terhubung ke pin analog. Elektroda pH 
+BNC E-201C yang digunakan berfungsi untuk pengukuran pH larutan air umum dalam 
+penelitian ilmiah, pemantauan lingkungan, dan kontrol kualitas. Politama 
+Sistem monitoring kolam ikan menggunakan sensor pH 4502C untuk mengukur 
+tingkat keasaman atau kebasaan  air, di mana data yang dikumpulkan dari sensor 
+dikirimkan melalui modul WiFi ke platform IoT sehingga memungkinkan pengguna 
+memantau kondisi air secara langsung melalui perangkat smartphone. Hasil pengujian 
+sistem monitoring suhu dan pH menggunakan modul pH-4502C pada kolam ikan nila 
+menunjukkan tingkat kesalahan pengukuran pH air kolam berkisar antara 0,79% hingga 
+0,94%, yang mengindikasikan bahwa sensor ini memiliki tingkat akurasi yang cukup 
+tinggi untuk keperluan monitoring kualitas air budidaya.(Chua et al., 2025) 
+ 
+2.12 Rule-Based 
+Rule-Based adalah sistem berbasis aturan berupa perangkat lunak yang 
+menyajikan keahlian pakar dalam bentuk aturan-aturan pada suatu domain tertentu untuk 
+menyelesaikan suatu permasalahan. Algoritma IF –THEN Rules digunakan untuk 
+mengidentifikasi kondisi -kondisi tertentu dari data masukan, kemudian 
+menerjemahkannya menjadi aksi atau keputusan yang sesuai berdasarkan aturan yang 
+telah ditetapkan. Sistem ini umumnya terdiri atas basis pengetahuan yang menyimpan 
+aturan-aturan, serta mesin inferensi yang bertugas mencocokkan kondisi masukan dengan 
+aturan yang ada untuk menghasilkan keluaran berupa keputusan atau 
+rekomendasi.(Juanda & Yadi, 2020) 
+2.12.1 Komponen Rule-Based System 
+Rule-Based System umumnya terdiri dari tiga komponen utama, yaitu: 
+--- PAGE 33 ---
+ 
+11 
+ 
+1. Knowledge Base (Basis Pengetahuan): Berisi sekumpulan aturan IF -THEN yang 
+merepresentasikan pengetahuan domain. Aturan-aturan ini diperoleh dari pakar atau 
+referensi ilmiah yang relevan. 
+2. Working Memory (Memori Kerja): Menyimpan fakta -fakta atau  data input yang 
+sedang diproses oleh sistem pada suatu waktu tertentu. 
+3. Inference Engine (Mesin Inferensi): Merupakan mekanisme yang mencocokkan fakta 
+dalam working memory dengan kondisi pada knowledge base untuk menentukan 
+aturan mana yang akan dieksekusi. 
+ 
+2.12.2 Mekanisme Inferensi 
+Terdapat dua strategi inferensi utama dalam Rule-Based System, yaitu: 
+1. Forward Chaining (Penalaran Maju): Proses inferensi dimulai dari fakta -fakta yang 
+diketahui (data input), kemudian aturan -aturan yang antecedent -nya terpenuhi oleh 
+fakta tersebut dieksekusi secara berurutan hingga menghasilkan kesimpulan. Strategi 
+ini sesuai digunakan ketika data input sudah tersedia dan sistem perlu menentukan 
+kesimpulan. 
+2. Backward Chaining (Penalaran Mundur): Proses inferensi dimulai dari hipotesis atau 
+kesimpulan yang ingin dibuktikan, kemudian sistem mencari fakta -fakta pendukung 
+yang dapat membuktikan hipotesis tersebut. Strategi ini lebih sesuai untuk sistem 
+diagnosis. 
+Pada penelitian ini, mekanisme inferensi yang digunakan adalah Forward 
+Chaining, di mana nilai pH yang terbaca oleh sensor dijadikan sebagai fakta input, 
+kemudian sistem mencocokkan nilai tersebut dengan aturan -aturan yang telah 
+didefinisikan untuk menentukan klasifikasi kualitas air dan menghasilkan notifikasi yang 
+sesuai. 
+ 
+--- PAGE 34 ---
+ 
+12 
+ 
+2.12.3 Penerapan Rule-Based untuk Monitoring pH Air 
+Dalam konteks monitoring kualitas air, pendekatan rule-based diterapkan dengan 
+mendefinisikan aturan berdasarkan batas ambang (threshold) parameter yang telah 
+ditentukan. Sistem pemantauan kualitas air pada budidaya perikanan dirancang untuk 
+memastikan kondisi air secara real-time, memeriksa nilai parameter melalui smartphone, 
+dan menerima pemberitahuan alarm jika terjadi perubahan nilai di luar rentang nilai yang 
+telah ditentukan. Mekanisme ini sejalan dengan prinsip rule-based, di mana setiap kondisi 
+yang melampaui batas normal akan memicu aksi tertentu secara otomatis. (Dwiyaniti et 
+al., 2019)  
+Sistem rekomendasi kualitas air untuk budidaya ikan nila menggunakan metode 
+Rule-Based Reasoning, di mana setiap data hasil pembacaan sensor dianalisis 
+berdasarkan perhitungan aturan yang telah ditetapkan sebelumnya untuk menentukan 
+status kualitas air dan memberikan rekomendasi yang sesuai. Sistem pakar dimulai 
+dengan melakukan pengecekan data masukan berdasarkan aturan yang telah tersimpan 
+dalam basis aturan menggunakan metode certainty factor, sehingga sistem dapat 
+menghasilkan kesimpulan atau keputusan yang konsisten terhadap kondisi yang 
+dihadapi.(Hisma, 2019; Subianto & Wardhana, 2024) 
+Penerapan rule -based pada sistem monitoring berbasis IoT juga memungkinkan 
+respons otomatis secara langsung. Sistem pemantauan dan kendali kualitas air 
+menggunakan metode forward chaining yang berfungsi berdasarkan aturan yang telah 
+diimplementasikan secara penuh, di mana sistem dapat memantau dan mengendalikan 
+kondisi air secara otomatis berdasarkan fakta -fakta yang terkumpul, seperti kesesuaian 
+tingkat suhu, pH, dan kekeruhan. Dengan demikian, pendekatan rule -based menjadikan 
+sistem monitoring lebih cerdas, responsif, dan mampu mendukung pengambilan 
+keputusan secara cepat tanpa memerlukan intervensi manusia secara langsung.(Ikhsan et 
+al., 2024) 
+2.13 Mikrokontroler ESP32 
+Mikrokontroler ESP32 adalah pengontrol sirkuit elektronik yang dilengkapi 
+dengan perangkat Wi -Fi dan Bluetooth terintegrasi (Anugerah K et al., 2022). ESP32 
+merupakan penerus dari ESP8266 yang dikembangkan oleh Espressif Systems. 
+--- PAGE 35 ---
+ 
+13 
+ 
+Mikrokontroler ini memiliki beberapa pin I/O yang mendukung berbagai protokol 
+komunikasi sehingga cocok untuk aplikasi pemantauan dan kontrol berbasis IoT. 
+ 
+Modul ESP32 dapat menghubungkan mikrokontroler ke jaringan Wi-Fi dan dapat 
+menghosting aplikasi atau mendelegasikan semua fungsi jaringan Wi -Fi ke berbagai 
+aplikasi. NodeMCU ESP-32 memungkinkan pemantauan dan kontrol jarak jauh nirkabel 
+melalui jaringan, serta menyediakan mekanisme yang aman bagi pengguna. 
+Tabel 2.x Spesifikasi NodeMCU ESP32 
+No. Spesifikasi Keterangan 
+1 Jumlah Pin 30 pin termasuk GPIO dan pin tegangan 
+2 ADC 15 pin Analog to Digital Converter 
+3 Flash Memory 4 MB 
+4 SRAM 520 KB 
+5 Clock Speed 240 MHz 
+6 Wi-Fi Standard IEEE 802.11 b/g/n/e/i 
+7 Bluetooth Bluetooth 4.2 / BLE 
+8 Mode WiFi AP, STA, AP+STA 
+9 Tegangan Operasi 3,3V (logika), 5V (VIN) 
+10 PWM 16 pin 
+ 
+2.14 Sensor pH DFRobot SEN0161-V2 
+Sensor pH DFRobot SEN0161-V2 (atau yang dikenal sebagai Gravity Analog pH 
+Sensor) adalah sensor pH yang umum digunakan dalam proyek -proyek elektronika 
+--- PAGE 36 ---
+ 
+14 
+ 
+berbasis Arduino maupun ESP32. Sensor ini menggunakan elektroda kaca yang sensitif 
+terhadap konsentrasi ion hidrogen dalam larutan. (Ahmad & Suprianto Bambang, 2019). 
+Prinsip kerja sensor pH didasarkan pada probe sensor berupa elektroda kaca yang 
+mengukur perbedaan potensial elektrokimia antara larutan yang diukur dengan larutan 
+referensi di dalam elektroda. Perbedaan potensial ini menghasilkan tegangan analog yang 
+kemudian dikonversi oleh modul ADC (Analog to Digital Converter) menjadi nilai digital 
+yang dapat diproses oleh mikrokontroler. (Mujadin et al., 2017). 
+Sensor ini dilengkapi dengan modul akuisisi data yang mengubah keluaran sensor 
+menjadi tegangan pada pin analog. Modul ini memiliki karakteristik bahwa semakin 
+tinggi keasaman pH air (semakin asam), semakin tinggi pula tegangan yang diperoleh. 
+Dalam penggunaannya, sensor pH perlu dikalibrasi secara berkala menggunakan larutan 
+buffer standar (pH 4,00 dan pH 7,00) untuk menjaga keakuratannya . (Rozaq & 
+Setyaningsih, 2018). 
+Spesifikasi teknis sensor pH DFRobot SEN0161-V2 antara lain: 
+Tabel 2.x Spesifikasi Sensor pH DFRobot SEN0161-V2 
+No. Parameter Nilai 
+1 Rentang Pengukuran pH 0 - 14 
+2 Akurasi ±0,1 pH 
+3 Waktu Respons ≤ 1 menit 
+4 Tegangan Operasi 3,3V - 5V 
+5 Rentang Suhu Operasi 0°C - 60°C 
+6 Pin Output Analog (tegangan) 
+ 
+ 
+2.15 Sensor Suhu DS18B20 
+Sensor DS18B20 merupakan sensor suhu digital yang secara luas digunakan 
+untuk pemantauan dan pengendalian suhu pada lingkungan cair, seperti kolam budidaya 
+ikan. (Camelia et al., 2026) Sensor ini sangat ideal digunakan karena memiliki pelindung 
+--- PAGE 37 ---
+ 
+15 
+ 
+waterproof (tahan air) dan tingkat akurasi yang tinggi. Operasinya melibatkan output 
+digital dengan resolusi 12 -bit, yang menyajikan rentang pengukuran suhu yang sangat 
+bervariasi, yaitu mulai dari -55°C hingga +125°C. Dalam implementasi Internet of Things 
+(IoT), sensor DS18B20 menggunakan protokol komunikasi 1-Wire, yang memungkinkan 
+mikrokontroler (seperti ESP32) untuk membaca data suhu hanya menggunakan satu pin 
+digital. Hal ini membuat rangkaian perangkat keras menjadi lebih efisien. 
+2.16 Platform Blynk IoT 
+Blynk merupakan salah satu platform Internet of Things (IoT) berbasis cloud yang 
+memfasilitasi komunikasi antara perangkat keras, server, dan aplikasi pengguna secara 
+real-time. Platform ini memungkinkan pengguna untuk mengumpulkan, menyimpan, 
+menganalisis, serta memvisualisasikan data dari berbagai sensor melalui koneksi jaringan 
+internet, baik melalui perangkat smartphone maupun web.   
+Cara kerja Blynk dalam sistem monitoring adalah sebagai berikut: mikrokontroler 
+ESP32 terhubung dan mengirimkan data pembacaan sensor ke Blynk Cloud melalui 
+jaringan internet menggunakan otentikasi berupa Auth Token yang unik untuk setiap 
+perangkat. Data yang diterima oleh server Blynk kemudian diproses dan divisualisasikan 
+secara langsung.  Berbeda dengan platform tunggal, pengguna dapat memantau data 
+tersebut melalui dua antarmuka yang tersinkronisasi, yaitu Blynk Web Console (diakses 
+melalui browser komputer) untuk analisis data historis, dan Blynk Mobile App untuk 
+pemantauan real-time yang lebih praktis dari mana saja. 
+Kelebihan platform Blynk dibandingkan platform cloud lainnya untuk sistem 
+pemantauan ini antara lain:  
+• menyediakan ekosistem antarmuka ganda (web dashboard dan aplikasi mobile) 
+yang sangat interaktif dan mudah dikustomisasi menggunakan sistem drag -and-
+drop antarmuka widget, 
+• memiliki fitur Events terintegrasi yang memungkinkan sistem memicu 
+pengiriman peringatan dini berupa pesan notifikasi (push notification) langsung 
+ke smartphone pengguna secara otomatis saat parameter melampaui batas, 
+• menyediakan library yang lengkap sehingga sangat mudah diintegrasikan dengan 
+mikrokontroler ESP32, dan  
+--- PAGE 38 ---
+ 
+16 
+ 
+• memiliki waktu respons transfer data yang sangat cepat dan ringan. 
+ 
+2.17 Dashboard Berbasis Website 
+Dashboard berbasis website merupakan antarmuka pengguna yang dapat diakses 
+melalui browser web untuk memantau dan menampilkan data dari sistem IoT secara real-
+time. Dashboard ini menampilkan informasi penting seperti nilai pH saat ini, status 
+kualitas air, grafik historis, dan notifikasi peringatan dalam tampilan yang informatif dan 
+mudah dipahami. 
+Dalam pengembangan dashboard berbasis website, terdapat beberapa teknologi 
+yang umum digunakan, antara lain HTML (HyperText Markup Language) sebagai bahasa 
+markup untuk struktur halaman, CSS (Cascading Style Sheets) untuk tampilan visual, dan 
+JavaScript untuk interaktivitas dan pengambilan data dari server secara asinkron (AJAX). 
+Penggunaan framework seperti Bootstrap memungkinkan pengembangan tampilan yang 
+responsif dan kompatibel dengan berbagai perangkat. 
+ 
+2.18 Metode Evaluasi Kinerja Sensor 
+Evaluasi kinerja sensor dilakukan untuk mengetahui tingkat akurasi dan 
+keandalan sensor dalam mengukur nilai pH dibandingkan dengan alat ukur referensi yang 
+sudah terstandarisasi. Metode evaluasi yang digunakan adalah Mean Absolute Percentage 
+Error (MAPE). 
+MAPE (Mean Absolute Percentage Error) adalah metrik evaluasi yang mengukur 
+rata-rata persentase kesalahan absolut antara nilai yang diukur oleh sensor dengan nilai 
+referensi. Rumus MAPE adalah sebagai berikut: 
+𝑀𝐴𝑃𝐸 =  (1 𝑛⁄ )  × ∑|(𝑋𝑡−𝑋𝑟) 𝑋𝑟⁄ | × 100  (2.1) 
+Keterangan: 
+MAPE = nilai rata-rata persentase kesalahan absolut (%) 
+n = jumlah data 
+--- PAGE 39 ---
+ 
+17 
+ 
+Xt = nilai yang terukur oleh sensor 
+Xr = nilai referensi (alat ukur standar) 
+Semakin kecil nilai MAPE, semakin akurat sensor dalam mengukur nilai pH. Nilai MAPE 
+di bawah 5% umumnya dianggap memiliki akurasi yang sangat baik untuk keperluan 
+monitoring budidaya ikan.  
+ 
+Gambar 2. 1  Cara Kerja MAPE 
+  
+
+--- PAGE 40 ---
+ 
+18 
+ 
+BAB III METODOLOGI PENELITIAN 
+METODOLOGI PENELITIAN 
+3.1 Tahapan Pelaksanaan Penelitian 
+Tahapan pelaksanaan penelitian digunakan untuk mengetahui proses terbentuknya  
+sistem yang di bangun. Terdapat beberapa tahapan dalam penelitian ini, yaitu pada  
+Gambar 3.1. 
+ 
+ 
+ 
+Penelitian ini menggunakan pendekatan rancang bangun sistem dengan model 
+pengembangan prototipe. Pendekatan ini digunakan karena penelitian berfokus pada 
+perancangan, implementasi, dan pengujian sistem monitoring derajat keasaman (pH) dan 
+suhu air kolam ikan air tawar berbasis Internet of Things (IoT) yang dilengkapi metode 
+rule-based. Sistem yang dikembangkan diharapkan mampu membaca nilai suhu dan pH 
+air, mengirimkan data ke server Blynk, mengklasifikasikan kondisi air, serta 
+menampilkan hasil monitoring melalui Blynk Web Console dan Blynk Mobile App. 
+Tahapan pelaksanaan penelitian disusun secara sistematis agar proses 
+pengembangan sistem dapat dilakukan secara terarah. Tahapan penelitian meliputi 
+identifikasi masalah, studi literatur, analisis kebutuhan, perancangan sistem, 
+implementasi perangkat keras dan perangkat lunak, penerapan metode rule -based, 
+pengujian sistem, analisis hasil, dan penyusunan laporan akhir. 
+Tabel 3.1 Tahapan Pelaksanaan Penelitian 
+No Tahapan Uraian Kegiatan 
+1 Identifikasi masalah Mengidentifikasi permasalahan monitoring suhu dan pH air 
+kolam ikan air tawar yang masih dilakukan secara manual dan 
+belum memberikan informasi kondisi air secara real-time. 
+
+--- PAGE 41 ---
+ 
+19 
+ 
+No Tahapan Uraian Kegiatan 
+2 Studi literatur Mengkaji teori dan penelitian terkait kualitas air, pH, suhu, 
+sensor pH,  sensor DS18B20,  ESP32, Internet of Things, 
+platform Blynk, dan metode rule-based. 
+3 Analisis kebutuhan sistem Menentukan kebutuhan fungsional, kebutuhan nonfungsional, 
+perangkat keras, perangkat lunak, serta alur kerja sistem. 
+4 Perancangan sistem Membuat rancangan arsitektur sistem, alur data (datastreams), 
+basis data, proses rule -based, serta rancangan antarmuka 
+dashboard web dan mobile. 
+5 Implementasi sistem Merangkai sensor suhu dan pH dengan ESP32, membangun 
+program pembacaan sensor, API pengiriman data, dan 
+dashboard Blynk. 
+6 Kalibrasi dan pengujian Melakukan kalibrasi sensor suhu dan pH, pengujian pengiriman 
+data, pengujian rule -based, dan pengujian tampilan dashboard 
+beserta notifikasinya. 
+7 Analisis hasil Menganalisis hasil pengujian untuk mengetahui kesesuaian 
+fungsi sistem, ketepatan klasifikasi rule-based, dan kemampuan 
+dashboard menampilkan data. 
+8 Penyusunan laporan Menyusun hasil penelitian ke dalam laporan skripsi berdasarkan 
+data implementasi dan pengujian sistem. 
+ 
+3.2  Pengumpulan Data 
+Pengumpulan data dilakukan untuk memperoleh data yang dibutuhkan dalam 
+perancangan dan pengujian sistem monitoring suhu dan pH air kolam ikan air tawar. Data 
+yang digunakan dalam penelitian ini terdiri atas data primer dan data sekunder. Data 
+primer diperoleh melalui pembacaan sensor pada sampel air kolam ikan air tawar, 
+sedangkan data sekunder diperoleh dari buku, artikel ilmiah, jurnal, serta dokumen 
+pendukung yang berkaitan dengan kualitas air, sistem monitoring berbasis IoT, sensor 
+suhu dan pH, dan metode rule-based. 
+Data primer pada penelitian ini berupa nilai suhu dan pH air yang dibaca oleh sensor 
+dan dikirimkan oleh ESP32 ke server Blynk melalui jaringan internet. Data yang 
+dikumpulkan meliputi nilai suhu, nilai pH, waktu pembacaan, status koneksi perangkat, 
+--- PAGE 42 ---
+ 
+20 
+ 
+serta kategori kondisi air berdasarkan aturan rule -based. Pengambilan data dilakukan 
+secara berkala sesuai interval waktu yang ditetapkan pada program mikrokontroler. 
+Sebelum digunakan untuk pengambilan data, sensor pH dikalibrasi menggunakan 
+larutan buffer pH, sementara sensor suhu dikalibrasi dengan termometer standar. 
+Kalibrasi dilakukan untuk mengurangi selisih pembacaan sensor sehingga data yang 
+diperoleh lebih sesuai deng an kondisi sebenarnya. Hasil pembacaan sensor kemudian 
+dibandingkan dengan nilai pembanding untuk mengetahui tingkat kesalahan pembacaan 
+sensor. 
+ 
+Tabel 3.2 Kebutuhan Data Penelitian 
+No Jenis Data Sumber Data Keterangan 
+1 Nilai suhu dan pH air Sensor DS18B20 dan 
+Sensor pH 4502C 
+yang terhubung 
+dengan ESP32 
+Data utama yang 
+digunakan untuk 
+monitoring dan 
+klasifikasi kondisi 
+air. 
+2 Waktu pembacaan Sistem waktu pada 
+server Blynk atau 
+perangkat 
+Digunakan untuk 
+mencatat waktu data 
+masuk ke sistem. 
+3 Kategori kondisi pH Hasil pengolahan 
+matriks rule-based 
+Kategori berupa 
+sangat baik, waspada, 
+dan bahaya.  
+4 Data pembanding Larutan buffer pH 
+atau pH meter dan 
+termometer air 
+standar 
+Digunakan untuk 
+kalibrasi dan 
+pengujian tingkat 
+akurasi kedua sensor. 
+5 Referensi teori Jurnal, buku, dan 
+artikel ilmiah 
+Digunakan sebagai 
+dasar perancangan 
+sistem dan 
+penyusunan matriks 
+aturan klasifikasi. 
+ 
+--- PAGE 43 ---
+ 
+21 
+ 
+3.3 Perancangan Data (Blynk Datastreams) 
+Perancangan data dilakukan untuk menentukan bentuk aliran data yang akan 
+diproses dan divisualisasikan oleh sistem. Karena sistem ini menggunakan arsitektur 
+Platform as a Service (PaaS) dari Blynk IoT, perancangan tabel database SQL kustom 
+(seperti MySQL) tidak lagi digunakan. Data yang diperoleh dari sensor akan dikirimkan 
+oleh mikrokontroler ESP32 langsung ke server Blynk Cloud melalui mekanisme 
+Datastreams (Pin Virtual). Data tersebut selanjutnya diproses menggunakan metode rule-
+based di dalam ESP32 untuk menghasilkan informasi kondisi air yang dikirim ke 
+dashboard web dan mobile. 
+Alur data pada sistem dimulai dari pembacaan nilai pH oleh sensor. Nilai pH yang 
+dibaca akan diproses oleh ESP32, kemudian dikirimkan ke server melalui koneksi 
+internet. Server menerima data melalui API, melakukan validasi data, menerapkan aturan 
+rule-based, menyimpan data ke database, dan menampilkan data pada dashboard web. 
+Dengan alur tersebut, pengguna dapat memantau perubahan nilai pH secara real-time. 
+ 
+ 
+ 
+Tabel 3.3 Rancangan Aliran Data Blynk Datastreams 
+No Nama Datastream / 
+Virtual Pin 
+Tipe Data Keterangan / Fungsi 
+1 V0 (Suhu Air) Float / 
+Double 
+Menyimpan data suhu air dalam satuan 
+°C. 
+2 V1 (Nilai pH Air) Float / 
+Double 
+Menyimpan nilai keasaman air (Skala 
+0.0 – 14.0). 
+3 V2 (Status Mutu Air) String Hasil klasifikasi rule-based (Sangat Baik 
+/ Waspada / Bahaya). 
+4 V3 (Saran Tindakan) String Rekomendasi tindakan mitigasi untuk 
+pengguna. 
+5 Event Blynk: 
+peringatan_kualitas_air 
+Event 
+Trigger 
+Memicu Push Notification otomatis ke 
+smartphone saat status 
+Waspada/Bahaya. 
+ 
+--- PAGE 44 ---
+ 
+22 
+ 
+3.4  Perancangan Proses/Algoritma 
+Perancangan proses dilakukan untuk menggambarkan cara kerja sistem mulai dari 
+pembacaan sensor, evaluasi aturan komputasi edge pada ESP32, hingga penampilan 
+informasi pada dashboard. 
+ 
+3.4.1 Perancangan Perangkat Keras (Pinout ESP32) 
+Untuk memastikan mikrokontroler ESP32 dapat membaca data sensor dengan stabil 
+dan tidak mengalami crash saat transmisi Wi-Fi, perancangan perangkat keras dilakukan 
+dengan mematuhi spesifikasi modul. Sensor pH wajib dihubungkan ke jalur ADC1 karena 
+jalur ADC2 pada ESP32 dinonaktifkan secara otomatis saat radio Wi-Fi menyala. 
+ 
+Tabel 3.4 Pemetaan Pin Perangkat Keras (ESP32) 
+No Modul / Komponen Pin modul Pipn ESP32 Catatan Teknis 
+Rangkaian 
+1 Sensor DS18B20 DATA GPIO 4 Wajib dipasang 
+resistor pull-up 4.7 kΩ 
+ke VCC 3.3V 
+(Komunikasi 1-Wire). 
+2 Sensor pH (SEN0161-V2) AOUT GPIO 34 Analog Input (ADC1). 
+Dilarang dipasang di 
+ADC2. 
+3 Catu Daya Sistem Micro-USB VIN / 5V Menggunakan adaptor 
+daya eksternal 5V 2A 
+untuk stabilitas sistem 
+di kolam. 
+ 
+3.4.2 Persamaan Kalibrasi Sensor pH 
+Data mentah yang terbaca pada pin analog ESP32 (resolusi 12-bit) harus dikonversi 
+terlebih dahulu menjadi tegangan dan nilai pH menggunakan metode kalibrasi 2 -titik 
+(larutan buffer pH 4.01 dan 6.86). Persamaan yang digunakan dalam algoritma adalah: 
+--- PAGE 45 ---
+ 
+23 
+ 
+Tegangan (V) = (ADC_mentah / 4095.0) × 3.3 V (3.1) 
+pH = m × Tegangan + c     (3.2) 
+ 
+di mana nilai gradien (m) dan pergeseran (c) diperoleh dari proses kalibrasi regresi 
+linear. 
+3.4.3 Perancangan Aturan (Rule-Based) 
+Metode rule-based (forward chaining ) digunakan untuk mengklasifikasikan 
+kualitas air berdasarkan aturan matriks dua parameter (suhu dan pH). 
+Tabel 3.5 Rancangan Aturan Rule-Based Klasifikasi Kondisi Air 
+Rule Kondisi 
+Suhu Air 
+(°C) 
+Kondisi 
+Derajat 
+Keasaman 
+(pH) 
+Kategori 
+Status Mutu 
+Rekomendasi Tindakan 
+/ Aksi Sistem 
+R1 Dingin 
+(<25°C) 
+Asam (<6.5) Bahaya Air mematikan. Segera 
+kuras/ganti air! 
+R2 Dingin 
+(<25°C) 
+Ideal (6.5-8.5) Waspada Suhu rendah. Nyalakan 
+heater kolam. 
+R3 Dingin 
+(<25°C) 
+Basa (>8.5) Bahaya 
+ 
+Air mematikan. Segera 
+kuras/ganti air! 
+R4 Ideal (25 °C-
+30°C) 
+Asam (<6.5) Waspada pH terlalu rendah. Tambah 
+kapur/buffer naik. 
+R5 Ideal (25 °C-
+30°C) 
+Ideal (6.5-8.5) Sangat Baik Kondisi aman. 
+Pertahankan kualitas air. 
+--- PAGE 46 ---
+ 
+24 
+ 
+Rule Kondisi 
+Suhu Air 
+(°C) 
+Kondisi 
+Derajat 
+Keasaman 
+(pH) 
+Kategori 
+Status Mutu 
+Rekomendasi Tindakan 
+/ Aksi Sistem 
+R6 Ideal (25 °C-
+30°C) 
+Basa (>8.5) Waspada pH terlalu tinggi. Tambah 
+daun ketapang/buffer 
+turun. 
+R7 Panas 
+(>30°C) 
+Asam (<6.5) Bahaya Air mematikan. Segera 
+kuras/ganti air! 
+R8 Panas 
+(>30°C) 
+Ideal (6.5-8.5) Wapada Suhu tinggi. Nyalakan 
+sirkulasi/tambah peneduh. 
+R9 Panas 
+(>30°C) 
+Basa (>8.5) Bahaya Air mematikan. Segera 
+kuras/ganti air! 
+ 
+3.4.4 Algoritma Sistem (Pseudocode) 
+ Evaluasi aturan dieksekusi secara lokal (Edge Computing) di ESP32. Sistem 
+dilengkapi mekanisme cooldown/histeresis pada push notification (interval 15 menit) 
+agar sistem tidak mengirimkan ratusan notifikasi spam ke ponsel pengguna saat 
+parameter air berfluktuasi tepat di ambang batas. 
+Pseudocode Algoritma Sistem: 
+DEKLARASI: 
+    INTERVAL_COOLDOWN <- 900000 // 15 menit dalam milidetik 
+    waktu_terakhir_notifikasi <- 0 
+ 
+PROSES BACA_SENSOR_DAN_EVALUASI_RULE_BASED: 
+    nilai_suhu <- Baca suhu dari DS18B20 (GPIO 4) 
+    tegangan   <- (analogRead(34) / 4095.0) * 3.3 
+    nilai_ph   <- (slope_m * tegangan) + offset_c   
+ 
+    JIKA (nilai_suhu < 25.0) MAKA: 
+--- PAGE 47 ---
+ 
+25 
+ 
+        JIKA (nilai_ph < 6.5) MAKA kategori <- "Bahaya"; tindakan <- "Air mematikan! Kuras kolam!" 
+        LAIN JIKA (nilai_ph <= 8.5) MAKA kategori <- "Waspada"; tindakan <- "Nyalakan heater!" 
+        LAIN MAKA kategori <- "Bahaya"; tindakan <- "Air mematikan! Kuras kolam!" 
+    LAIN JIKA (nilai_suhu <= 30.0) MAKA: 
+        JIKA (nilai_ph < 6.5) MAKA kategori <- "Waspada"; tindakan <- "Berikan kapur dolomit!" 
+        LAIN JIKA (nilai_ph <= 8.5) MAKA kategori <- "Sangat Baik"; tindakan <- "Kondisi optimal." 
+        LAIN MAKA kategori <- "Waspada"; tindakan <- "Tambahkan daun ketapang!" 
+    LAIN: // Suhu > 30.0 
+        JIKA (nilai_ph < 6.5) MAKA kategori <- "Bahaya"; tindakan <- "Air mematikan! Kuras kolam!" 
+        LAIN JIKA (nilai_ph <= 8.5) MAKA kategori <- "Waspada"; tindakan <- "Tambah peneduh/sirkulasi!" 
+        LAIN MAKA kategori <- "Bahaya"; tindakan <- "Air mematikan! Kuras kolam!" 
+ 
+PROSES KIRIM_KE_BLYNK: 
+    Kirim nilai_suhu (V0), nilai_ph (V1), kategori (V2), tindakan (V3) 
+    JIKA (kategori == "Bahaya" ATAU kategori == "Waspada") MAKA: 
+        JIKA (waktu_sekarang - waktu_terakhir_notifikasi >= INTERVAL_COOLDOWN) MAKA: 
+            Kirim_Blynk_Event_Push_Notification(kategori, tindakan) 
+            waktu_terakhir_notifikasi <- waktu_sekarang 
+ 
+--- PAGE 48 ---
+ 
+26 
+  
+
+--- PAGE 49 ---
+ 
+27 
+ 
+3.5  Perancangan Tampilan  
+Perancangan tampilan dilakukan untuk memudahkan pengguna dalam membaca 
+informasi hasil monitoring. Tampilan sistem menggunakan platform Blynk yang dibagi 
+menjadi dua antarmuka tersinkronisasi, yaitu Blynk Web Console dan Blynk Mobile App. 
+ 
+ 
+Tabel 3.6 Rancangan Komponen Dashboard Web 
+No Komponen Tampilan Fungsi Data yang Ditampilkan 
+1 Widget Gauge Suhu dan pH Menampilkan nilai suhu dan pH 
+terakhir yang diterima sistem. 
+Nilai suhu dan pH. 
+2 Status kategori pH dan suhu 
+(value display) 
+Menampilkan hasil klasifikasi 
+rule-based. 
+Kategori (sangat baik, waspada, 
+atau bahaya). 
+3 Widget Text 
+(Rekomendasi) 
+Menampilkan saran tindakan 
+lapangan untuk pengguna. 
+Teks panduan mitigasi kolam 
+4 SuperChart (Grafik) Menampilkan fluktuasi histori 
+kualitas air. 
+Kurva garis suhu dan pH. 
+5 Blynk Events (Push 
+Notification) 
+Sistem early warning otomatis ke 
+smartphone saat kondisi 
+abnormal. 
+Pesan peringatan dan saran 
+tindakan. 
+ 
+ 
+3.6  Perancangan Pengujian  
+Perancangan pengujian dilakukan untuk mengetahui apakah sistem yang 
+dikembangkan telah berjalan sesuai dengan tujuan penelitian. 
+ 
+Tabel 3.7 Rancangan Pengujian Sistem 
+
+--- PAGE 50 ---
+ 
+28 
+ 
+No Jenis Pengujian Tujuan Pengujian Skenario Pengujian Indikator Keberhasilan 
+1 Kalibrasi 
+sensor pH 
+Mengetahui tingkat 
+MAPE pembacaan 
+sensor pH. 
+Membandingkan hasil 
+sensor dengan larutan 
+buffer 4.01 dan 6.86. 
+MAPE berada dalam batas 
+toleransi (< 5%). 
+2 Kalibrasi 
+sensor suhu 
+Mengetahui tingkat 
+MAPE sensor 
+DS18B20. 
+Membandingkan hasil 
+sensor dengan termometer 
+standar. 
+MAPE berada dalam batas 
+toleransi. 
+3 Pengujian 
+Transmisi Data 
+Memastikan data 
+terkirim dari 
+ESP32 ke Blynk 
+Cloud. 
+Memantau koneksi Wi-Fi 
+dan pembaruan data real-
+time di dashboard. 
+Data di dashboard 
+diperbarui tanpa putus 
+(timeout). 
+4 Klasifikasi 
+rule-based 
+Memastikan aturan 
+menghasilkan 
+kategori yang 
+benar. 
+Memasukkan air sampel 
+buatan untuk 9 kondisi 
+matriks. 
+Kategori dan tindakan 
+yang muncul sesuai 
+rancangan Tabel 3.5. 
+5 Pengujian 
+Notifikasi 
+Memastikan 
+peringatan dini 
+sampai ke 
+pengguna. 
+Mengondisikan air agar 
+berstatus Waspada/Bahaya. 
+Ponsel menerima Push 
+Notification dengan jeda 
+cooldown yang tepat. 
+ 
+3.7  Waktu dan Tempat Penelitian 
+Penelitian ini direncanakan dilaksanakan pada bulan Januari sampai Desember 
+2026. Tempat pelaksanaan pengujian fisik sistem dilakukan pada kolam budidaya ikan 
+air tawar tipe kolam terpal berukuran 3x4 meter yang berlokasi di wilayah Kota 
+Samarinda. Peranca ngan, perakitan hardware, implementasi perangkat lunak, analisis 
+data, dan penyusunan laporan dilakukan di lingkungan Program Studi Informatika, 
+Fakultas Teknik, Universitas Mulawarman 
+ 
+. 
+ 
+ 
+--- PAGE 51 ---
+ 
+29 
+ 
+Tabel 3.x Jadwal Penelitian 
+No Kegiatan 
+Bulan (Tahun 2026 
+Jan Agu sept okt nov des  
+I 
+Tahap Persiapan Penelitian 
+1. Pembuatan Proposal       
+2. Seminar Proposal       
+3. Perbaikan Seminar 
+Proposal 
+      
+ 4. …       
+II 
+Tahap Pelaksanaan 
+1. Pengumpulan Data       
+2. Mengolah Data dan 
+analisis 
+      
+ 3. …       
+III 
+Tahap Penyusunan Laporan 
+1. Seminar Hasil       
+2. Perbaikan Seminar 
+Hasil 
+      
+3. Penulisan Artikel 
+Ilmiah 
+      
+4. Seminar Akhir       
+5. Perbaikan Seminar 
+Akhir 
+      
+ 6. …       
+ 
+ 
+  
+--- PAGE 52 ---
+ 
+30 
+ 
+DAFTAR PUSTAKA 
+ 
+ 
+1.  
+  
+--- PAGE 53 ---
+ 
+31 
+ 
+LAMPIRAN 
+ 
+ 
+ 
