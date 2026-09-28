@@ -40,6 +40,7 @@ Repository ini didedikasikan untuk pengelolaan dokumentasi bimbingan, audit nask
 | 10 | Muhammad Khairrudin | 2209106128 | *Rancang Bangun Sistem Monitoring Kualitas Air Sungai Mahakam Berbasis Internet of Things Menggunakan ESP32 dengan Metode Fuzzy Mamdani* | [Audit Awal](audit_mahasiswa/laporan_audit_proposal_muhammad_khairrudin.md) • [Telaah Revisi 1 (Hampir ACC)](audit_mahasiswa/laporan_audit_revisi_muhammad_khairrudin.md) |
 | 11 | Abdullah Arkananta Rasendrya Hasan | 2209106085 | *Rancang Bangun Sistem Monitoring pH dan Suhu Air Kolam Ikan Nila Berbasis Internet of Things Menggunakan Metode Rule-Based* | [Audit Awal (Revisi Mayor)](audit_mahasiswa/laporan_audit_proposal_abdullah_arkananta.md) • [Telaah Draf Revisi 1 (Belum ACC)](audit_mahasiswa/laporan_audit_revisi_abdullah_arkananta.md) |
 | 12 | Vista Mellyna Atsfi | 2209106096 | *Sistem Pengelolaan Data Praktikan dengan Algoritma Merge Sort dan Sequential Search Berbasis Web* | [Evaluasi Draf Revisi Pendadaran (PDD)](audit_mahasiswa/laporan_audit_skripsi_vista_mellyna_atsfi.md) |
+| 13 | Wildanah Sirad | 2209106062 | *Sistem Monitoring dan Otomasi Penyiraman Tanaman Cabai Berbasis IoT dengan Decision Tree* | [Laporan Audit Proposal](audit_mahasiswa/laporan_audit_proposal_wildanah_sirad.md) |
 
 
 
