@@ -1,0 +1,162 @@
+[Normal] PROPOSAL SKRIPSI
+[Normal] JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI
+[Normal] Oleh:
+[Normal] NAMA MAHASISWA
+[Normal] NIM (Tanpa Tulisan NIM)
+[Normal] FAKULTAS TEKNIK
+[Normal] UNIVERSITAS MULAWARMAN
+[Normal] SAMARINDA
+[Normal] <TAHUN SEKARANG>
+[Normal] PROPOSAL SKRIPSI
+[Normal] JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI
+[Heading 1] HALAMAN JUDUL
+[Normal] Diajukan sebagai salah satu syarat untuk menyelesaikan pendidikan 
+[Normal] pada Program Studi Strata 1 Informatika, 
+[Normal] Fakultas Teknik, Universitas Mulawarman
+[Normal] Oleh:
+[Normal] NAMA MAHASISWA
+[Normal] NIM (Tanpa Tulisan NIM)
+[Normal] FAKULTAS TEKNIK
+[Normal] UNIVERSITAS MULAWARMAN
+[Normal] SAMARINDA
+[Normal] <TAHUN SEKARANG>
+[Normal] PROPOSAL SKRIPSI
+[Normal] JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI
+[Heading 1] HALAMAN PENGESAHAN
+[Normal] Oleh:
+[Normal] NAMA MAHASISWA
+[Normal] NIM (Tanpa Tulisan NIM)
+[Normal] Telah dibahas dalam Rapat Dosen Pembimbing pada [tgl, bln, tahun] dan dinyatakan memenuhi syarat sebagai Skripsi, dengan Dosen Pembimbing:
+[Normal] Nama Dosen Pembimbing I lengkap dengan gelar
+[Normal] Nama Dosen Pembimbing II lengkap dengan gelar
+[Normal] Koordinator Program Studi S1 Informatika,
+[Normal] Fakultas Teknik, Universitas Mulawarman,
+[Normal] Awang Harsa Kridalaksana, S.Kom., M.Kom.
+[Normal] NIP 19731229 200501 1 002
+[Heading 1] KATA PENGANTAR
+[Normal] Kata Pengantar (preface, foreword) sebaiknya disusun secara ringkas dan tidak lebih dari 2 halaman (lihat contoh Lampiran 9). Isi Kata Pengantar mencakup: a. kalimat pembuka; b. tempat dan waktu pengumpulan data; c. ucapan terima kasih dengan hirarki sebagai berikut (i. pimpinan perusahaan/lembaga/instansi dari luar Unmul; ii. pembimbing lapangan; iii. pimpinan fakultas; iv. pimpinan program studi; v. pembimbing I dan II; vi. Penguji; dan d. kalimat penutup)
+[Normal] Puji syukur kepada Allah SWT, Tuhan Yang Maha Esa sehingga dapat menyelesaikan proposal skripsi dengan judul “<Judul Skripsi>”. Proposal ini disusun sebagai salah satu tahapan dalam menyelesaikan skripsi pada Fakultas Teknik, Universitas Mulawarman.
+[Normal] Oleh karena itu, pada kesempatan ini kami ingin mengucapkan terima kasih kepada semua pihak yang telah mendukung serta membantu saya selama proses penyusunan proposal skripsi, kepada:
+[Normal] Orang tua dan Saudara-saudara saya atas do’a, bimbingan serta kasih sayangnya.
+[Normal] Nama dan gelar akademik lengkap Dekan selaku Dekan Fakultas Teknik, Universitas Mulawarman.
+[Normal] Nama dan gelar akademik Koordinator Prodi selaku K Program Studi Informatika
+[Normal] Nama dan gelar akademik Dosen Pembimbing I selaku Pembimbing I yang selalu memberikan arahan dan masukkan terhadap penelitian ini.
+[Normal] Nama dan gelar akademik Dosen Pembimbing II selaku Pembimbing II atas masukkan terhadap penelitian ini 
+[Normal] Nama dan gelar akademik Dosen Penguji I selaku Penguji I atas saran dan masukkan terhadap penelitian ini.
+[Normal] Nama dan gelar akademik Dosen Penguji II selaku Penguji II atas saran dan masukkan terhadap penelitian ini.
+[Normal] Segenap Dosen Program Studi Informatika, yang telah memberikan ilmu pengetahuan selama mengikuti perkuliahan.
+[Normal] Rekan-rekan seperjuangan yang terus memberikan dukungan semangat demi terselesainya tugas ini.
+[Normal] Saya menyadari bahwa proposal skripsi ini tidak luput dari berbagai kekurangan. Oleh karena itu, semua kritik dan saran yang bersifat memperbaiki demi kesempurnaan sangat diharapkan.
+[Normal] Samarinda,.............................. 2024
+[Normal] Penulis
+[Heading 1] DAFTAR ISI
+[Normal] halaman
+[Normal] Keterangan:
+[Normal] WAJIB menggunakan alat bantu TOC (Table of Contents) pada Microsoft Word.
+[Heading 1] DAFTAR TABEL
+[Normal] Halaman
+[Heading 1] DAFTAR GAMBAR
+[Normal] Halaman
+[Heading 1] DAFTAR LAMPIRAN
+[Normal] Halaman
+[Heading 1] DAFTAR ISTILAH/LAMBANG
+[Normal] Arti
+[Normal] Contents
+[Heading 1] DAFTAR SINGKATAN
+[Normal] Arti
+[Normal] Contents
+[Heading 1] BAB I PENDAHULUAN
+[Normal] PENDAHULUAN
+[Heading 2] Latar Belakang
+[Normal] Keterangan: Buat dalam 7-10 paragraf yang memperlihatkan 
+[Normal] Apa permasalahannya sehingga perlu dilakukan penelitian?
+[Normal] Oleh sebab itu, penelitian ini mengangkat judul “……………………………………” menggunakan teknik/metode ………………………….. pada ……………………. Hal ini bertujuan agar dapat ……………………………………
+[Heading 2] Rumusan Masalah
+[Normal] Berdasarkan latar belakang penelitian, maka yang menjadi rumusan masalah dalam penelitian ini adalah “Bagaimana ……………………………………………………?”.
+[Heading 2] Batasan Masalah
+[Normal] Penelitian ini disusun berdasarkan data-data yang diperoleh. Luasnya bidang yang dihadapi membuat penelitian ini harus dibatasi. Ruang lingkup masalah dibatasi pada:
+[Heading 2] Tujuan Penelitian
+[Normal] Tujuan yang ingin dicapai dalam penelitian ini adalah ……………………………..
+[Heading 2] Manfaat Penelitian
+[Normal] Penelitian ini diharapkan dapat memberikan manfaat pada berbagai pihak, khususnya:
+[Normal] 1.	Penulis
+[Normal] Manfaat penelitian bagi penulis adalah untuk mengembangkan wawasan penulis dalam mengimplementasikan/menerapkan metode/teknik/algoritma/cara ……………………………..…………………… dalam ……………………………..
+[Normal] 2.	Mahasiswa
+[Normal] Penelitian ini dapat memberikan pengetahuan kepada mahasiswa bagaimana metode/teknik/algoritma/cara dilakukan dalam …………… dan menjadi referensi khususnya bagi mahasiswa dibidang Informatika yang dapat membantu proses pembelajaran.
+[Normal] 3.	Instansi/Lembaga/Perusahaan
+[Normal] Manfaat penelitian ini bagi instansi/Lembaga/perusahaan adalah dengan adanya hasil analisa …………………….. diharapkan dapat membantu Instansi/Lembaga/Perusahaan untuk …………………..
+[Heading 2] 1.6 	Kontribusi Penelitian
+[Normal] Kontribusi yang dapat diberikan dari penelitian ini adalah ....................................................................
+[Heading 1] BAB II TINJAUAN PUSTAKA
+[Normal] TINJAUAN PUSTAKA
+[Heading 2] Penelitian Terkait
+[Normal] Bagian ini menjelaskan beberapa penelitian terkait yang berhubungan dengan proses Penelitian. 
+[Normal] Menggunakan pustaka yang baru, relevan, dan asli, yang berasal dari jurnal ilmiah, buku. Uraikan dengan jelas kajian pustaka yang menimbulkan gagasan dan yang mendasari penelitian/perancangan yang akan dilakukan. Tinjauan pustaka menguraikan teori, temuan, dan bahan penelitian lain yang diperoleh dari acuan yang akan dijadikan landasan untuk melakukan kegiatan penelitian/perancangan. Uraian dalam tinjauan pustaka diarahkan untuk menyusun kerangka pemikiran atau konsep yang akan digunakan dalam penelitian/perancangan. Kerangka pemikiran harus utuh menuju satu tujuan, yaitu memberikan jawab atas pertanyaan-pertanyaan yang diajukan dalam perumusan masalah. Tinjauan pustaka mengacu pada daftar pustaka.
+[Normal] Dalam rangka mendukung penelitian ini, maka dilakukan kajian dengan mempelajari penelitian-penelitian terkait yang telah dilakukan sebelumnya. Daftar penelitian terkait antara lain:
+[Normal] Metode yang digunakan: Backpropagation Neural Network. Temuan Penelitian: Data yang digunakan pada penelitian ini adalah data produksi kelapa sawit dari tahun 2015 hingga 2017 yang berjumlah 319 data. Dalam penelitian ini dilakukan 5 pengujian untuk mendapatkan nilai terbaik, yaitu (1) Pengujian iterasi maksimal, jumlah iterasi yang diuji adalah 200 hingga 1.000 iterasi dan 2.000 iterasi, dengan nilai learning rate ialah 0.4, batas erorr 0.001, jumlah data latih 260 dan jumlah data uji 59, hasilnya jumlah iterasi maksimal sebesar 900 iterasi dengan MAPE terendah yaitu 14.68%.  (2) Pengujian jumlah data latih, data latih yang diuji terdiri atas 52, 104, 156, 208 dan 260 data dengan menggunakan nilai learning rate 0,4, iterasi maksimal 900, 5 neuron hidden, batas error sebesar 0.0001, serta 59 data uji. Hasil pengujian menghasilkan nilai MAPE terendah sebesar 15.90308% yaitu 260 data latih. (3) Pengujian learning rate. Nilai learning rate yang diuji terdiri atas 0,1 hingga 0.7 dengan 260 data latih, 59 data uji, maksimal iterasi 900, 5 neuron hidden dan batas error 0.001. Dari hasil pengujian diperoleh nilai MAPE terendah 14.74% dari learning rate 0.4. (4) Pengujian jumlah neuron hidden. Neuron hidden yang diuji mulai dari 1-5. Pengujian ini menggunakan 260 data latih, nilai learning rate 0.4, jumlah iterasi maksimal 900, batas error 0.001 dan 59 data uji. Nilai MAPE terbaik yaitu 14.13% dengan jumlah neuron sebesar 5. (5) Pengujian K-Fold Cross Validation. Nilai K-fold yang diuji adalah 5 dan 7, nilai learning rate yang digunakan adalah 0.4, iterasi maksimal 900, 5 neuron hidden dan batas error 0.001. Nilai MAPE terkecil terjadi pada fold ke 6 dengan K-7 sebesar 12.96%. Parameter tersebut digunakan untuk meguji 12 data uji yang menghasilkan MAPE sebesar T0.0047%  (Nama belakang penulis, tahun terbit). 
+[Normal] Penelitian terkait 2
+[Normal] Penelitian terkait 3
+[Normal] Penelitian terkait 4
+[Normal] Penelitian terkait 5
+[Normal] Penelitian terkait 6
+[Normal] Penelitian terkait 7
+[Normal] Penelitian terkait 8
+[Normal] Penelitian terkait 9
+[Normal] Penelitian terkait 10
+[Normal] Dst…
+[Normal] Perbedaan dengan Penelitian Sebelumnya
+[Normal] Berdasarkan referensi yang terkait, maka didapatkan perbedaan penelitian yang terdahulu sebagai dasar penelitian ini ………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………
+[Heading 2] 2.2 	Teori Pendukung
+[Normal] Penjelasan.
+[Normal] Rumus/persamaan/formula harus diberi identitas nomor dan keterangan. Contoh:
+[Normal] A + B = C ......................................................................................................(2.1)
+[Normal] Di mana:
+[Normal] A = .....
+[Normal] B = .....
+[Normal] C = ......
+[Heading 2] Teori Pendukung
+[Normal] Penjelasan 
+[Heading 3] Teori Pendukung Sub BAB
+[Normal] Penjelasan 
+[Heading 3] 2.3.2 Teori Pendukung Sub BAB
+[Normal] Penjelasan
+[Heading 2] Teori Pendukung
+[Normal] Penjelasan.
+[Normal] (Identitas gambar diletakkan di bawah gambar. Sedangkan identitas tabel diletakkan di atas tabel. Rata tengah).
+[Normal] Gambar 2.1. Geometri Patch Antena Mikrostrip Dengan Teknik Pencatuan 
+[Normal] Electro-Magnetically Coupled
+[Normal] Penulisan tabel seperti ini.
+[Normal] Tabel 2.1. Tabel Data Mahasiswa Informatika
+[Heading 1] BAB III METODOLOGI PENELITIAN
+[Normal] METODOLOGI PENELITIAN
+[Heading 2] 3.1	Tahapan Pelaksanaan Penelitian
+[Normal] Penjelasan lihat di ppt
+[Heading 2] 3.2 	Pengumpulan Data
+[Normal] Penjelasan lihat di ppt
+[Heading 2] 3.3	Perancangan Data
+[Normal] Penjelasan lihat di ppt 
+[Heading 2] 3.4 	Perancangan Proses/Algoritma
+[Normal] Penjelasan lihat di ppt. Penulisan rumus matematik ditulis ulang menggunakan tools pada Word seperti Equation atau Math Type, tidak boleh dari hasil capture.
+[Heading 2] 3.5 	Perancangan Tampilan
+[Normal] Penjelasan lihat di ppt
+[Heading 2] 3.6 	Perancangan Pengujian
+[Normal] Penjelasan lihat di ppt
+[Heading 2] 3.7 	Waktu dan Tempat Penelitian
+[Normal] Penelitian ini akan dilaksanakan pada bulan …… sampai bulan ……. tahun ….. Adapun tempat pelaksanaan penelitian dilakukan di Instansi/Lembaga/Perusahaan …………………. , sedangkan analisis data dilakukan pada Laboratorium ……………, Fakultas Teknik, Universitas Mulawarman.
+[Normal] Berbagai aktivitas dan kegiatan dalam penelitian ini dapat terjadwal dan selesai sesuai dengan waktu yang telah ditentukan, maka perlu disusun dalam suatu jadwal penelitian yang dapat dilihat pada Tabel 3.x.
+[Normal] Tabel 3.x Jadwal Penelitian
+[Heading 1] DAFTAR PUSTAKA
+[Normal]  Amir, H., Gatot, S., Wisnu, W. (2002). Klasifikasi Objek Dalam Visi Komputer Dengan Analisis Diskriminan. Vol 6 (1), 24–32.
+[Normal] Andono, N. P., Muljono, T. S. (2017). Pengolahan Citra Digital. Penerbit Andi (Anggota IKAPI) Yogyakarta.
+[Normal] Attaphongse, T., Siwaruk, S., Carlos, P. (2015). A Non-Destructive Oil Palm Ripeness Recognition System Using Relative Entropy. Computers And Electronics In Agriculture, Vol 118, 340–349. Https://Doi.Org/10.1016/J.Compag.2015.09.018.
+[Normal] Burawich, P., Somchai, L., Thanate, K., Mitchai, C., Arno, R. (2017). An Automatic And Rapid System For Grading Palm Bunch Using A Kinect Camera. Computers And Electronics In Agriculture, Vol 143 (November), 227–237. Https://Doi.Org/10.1016/J.Compag.2017.10.020.
+[Normal] Dinah, C., Sam, H., Usman, A., Tineke, M., Muhammad, M. (2015). Optical Characteristics Of Oil Palm Fresh Fruits Bunch (FFB) Under Three Spectrum Regions Influence For Harvest Decision. International Journal On Advanced Science Engineering Information Technologi, Vol 5 (3), 9–16.
+[Normal] Keterangan:
+[Normal] WAJIB menggunakan software management reference (SMR) seperti Mendeley, EndNote, Zotero dll.
+[Normal] Komposisi daftar pustaka:
+[Normal] Artikel Ilmiah (jurnal/prosiding) 5 tahun terakhir yang terkait/relevan penelitiannya, berbahasa Indonesia maupun Inggris 60%
+[Normal] Buku/Chapter Book 5 tahun terakhir yang terkait/relevan penelitiannya, berbahasa Indonesia maupun Inggris 30%
+[Normal] Web yang terkait/relevan penelitiannya, berbahasa Indonesia maupun Inggris 10%
+[Normal] Jumlah daftar pustaka yang digunakan yang terkait/relevan penelitiannya sebanyak 30-50 referensi.
+[Heading 1] LAMPIRAN
+[Normal] Penjelasan lihat di ppt

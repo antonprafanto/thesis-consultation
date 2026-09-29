@@ -1,0 +1,199 @@
+[normal | font=Times New Roman, size=16.0] JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI
+[normal | font=Times New Roman, size=14.0] SKRIPSI
+[normal | font=Times New Roman, size=13.0] Oleh:
+[normal | font=Times New Roman, size=13.0] NAMA MAHASISWA
+[normal | font=Times New Roman, size=13.0] NIM (Tanpa Tulisan NIM)
+[normal | font=Times New Roman, size=13.0] FAKULTAS TEKNIK
+[normal | font=Times New Roman, size=13.0] UNIVERSITAS MULAWARMAN
+[normal | font=Times New Roman, size=13.0] SAMARINDA
+[normal | font=Times New Roman, size=13.0] 2025
+[normal | font=Times New Roman, size=16.0] JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI
+[Heading 1 | font=None, size=None] HALAMAN JUDUL
+[normal | font=Times New Roman, size=14.0] SKRIPSI
+[normal | font=Times New Roman, size=12.0] Diajukan sebagai salah satu syarat untuk menyelesaikan pendidikan 
+[normal | font=Times New Roman, size=12.0] pada Program Studi Strata 1 Informatika, 
+[normal | font=Times New Roman, size=12.0] Fakultas Teknik, Universitas Mulawarman
+[normal | font=Times New Roman, size=14.0] Oleh:
+[normal | font=Times New Roman, size=14.0] NAMA MAHASISWA
+[normal | font=Times New Roman, size=14.0] NIM (Tanpa Tulisan NIM)
+[normal | font=Times New Roman, size=14.0] FAKULTAS TEKNIK
+[normal | font=Times New Roman, size=14.0] UNIVERSITAS MULAWARMAN
+[normal | font=Times New Roman, size=14.0] SAMARINDA
+[normal | font=Times New Roman, size=14.0] 2025
+[Heading 1 | font=None, size=14.0] PERNYATAAN KEASLIAN SKRIPSI
+[normal | font=Times New Roman, size=12.0] Saya menyatakan dengan sesungguhnya bahwa skripsi dengan judul: 
+[normal | font=Times New Roman, size=12.0] JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI
+[normal | font=Times New Roman, size=12.0] yang dibuat sebagai salah satu syarat untuk menyelesaikan pendidikan pada Program Studi S1 Informatika, Fakultas Teknik, Universitas Mulawarman, sejauh yang saya ketahui bukan merupakan tiruan atau duplikasi dari skripsi yang sudah dipublikasikan dan atau pernah dipakai untuk mendapatkan gelar kesarjanaan di lingkungan Universitas Mulawarman maupun di Perguruan Tinggi atau instansi manapun, kecuali bagian yang sumber informasinya dicantumkan sebagaimana mestinya.
+[normal | font=Times New Roman, size=12.0] Samarinda, Tgl bln thn
+[normal | font=Times New Roman, size=12.0] (Nama Mahasiswa)
+[normal | font=Times New Roman, size=12.0] NIM. ...
+[normal | font=Times New Roman, size=16.0] JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI
+[Heading 1 | font=None, size=None] HALAMAN PENGESAHAN
+[normal | font=Times New Roman, size=13.0] Oleh:
+[normal | font=Times New Roman, size=13.0] Nama Mahasiswa
+[normal | font=Times New Roman, size=13.0] NIM (Tanpa Tulisan NIM)
+[normal | font=Times New Roman, size=13.0] Telah diujikan pada Tgl Bln Tahun dan dinyatakan telah 
+[normal | font=Times New Roman, size=13.0] memenuhi syarat
+[normal | font=Times New Roman, size=13.0] Samarinda, Tanggal Bulan Tahun
+[normal | font=Times New Roman, size=13.0] Disahkan oleh:
+[normal | font=Times New Roman, size=13.0] Mengetahui,
+[normal | font=Times New Roman, size=13.0] Dekan Fakultas Teknik
+[normal | font=Times New Roman, size=13.0] Universitas Mulawarman
+[normal | font=Times New Roman, size=13.0] Prof. Dr. Ir. H. Tamrin, ST., MT., IPU., ASEAN Eng., APEC Eng
+[normal | font=Times New Roman, size=13.0] NIP197002272000121001
+[Heading 1 | font=None, size=None] HALAMAN PERSEMBAHAN
+[normal | font=Corsiva, size=12.0] Persembahan untuk ………..
+[normal | font=Times New Roman, size=12.0] JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI
+[Heading 1 | font=None, size=None] ABSTRAK
+[normal | font=Times New Roman, size=12.0] Abstrak ditulis dalam Bahasa Indonesia dan Bahasa Inggris. Abstrak terdiri atas 7 (tujuh) bagian pokok yaitu: latar belakang (1-5 baris); tujuan penelitian (1-2 baris); metode yang digunakan (1-3 baris); data yang digunakan (1-2 baris); hasil percobaan yang menjadi kekhasan penelitian (1-7 baris); hasil analisa (1-7 baris); efek/impak dari hasil analisa (1-3 baris).
+[normal | font=Times New Roman, size=12.0] (Abstrak diketik dalam 1 spasi)
+[normal | font=Times New Roman, size=12.0] Kata kunci : Kata kunci 1, Kata kunci 2, Kata kunci 3, Kata kunci 4, Kata kunci 5
+[normal | font=Times New Roman, size=12.0] Catatan
+[normal | font=Times New Roman, size=12.0] Minimal 200 kata, dan maksimal 300 kata (satu halaman saja)
+[normal | font=Times New Roman, size=12.0] Minimal 3 kata kunci, dan maksimal 5 kata kunci.
+[normal | font=Times New Roman, size=12.0] Isi abstrak adalah:
+[normal | font=Times New Roman, size=12.0] Latar belakang secara singkat
+[normal | font=Times New Roman, size=12.0] Kegiatan dalam penyusunan skripsi, termasuk proses dan analisis.
+[normal | font=Times New Roman, size=12.0] Hasil yang paling utama
+[normal | font=Times New Roman, size=12.0] Perlu disampaikan sumbangan mandiri yang dapat ditonjolkan dalam skripsi.
+[normal | font=Times New Roman, size=12.0] JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI 
+[normal | font=Times New Roman, size=12.0] JUDUL SKRIPSI JUDUL SKRIPSI JUDUL SKRIPSI
+[Heading 1 | font=None, size=None] ABSTRACT
+[normal | font=Times New Roman, size=12.0] Contents
+[normal | font=Times New Roman, size=12.0] Keywords: 
+[Heading 1 | font=None, size=14.0] KATA PENGANTAR
+[normal | font=Times New Roman, size=9.0] Kata Pengantar (preface, foreword) sebaiknya disusun secara ringkas dan tidak lebih dari 2 halaman (lihat contoh Lampiran 9). Isi Kata Pengantar mencakup: a. kalimat pembuka; b. tempat dan waktu pengumpulan data; c. ucapan terima kasih dengan hirarki sebagai berikut (i. pimpinan perusahaan/lembaga/instansi dari luar Unmul; ii. pembimbing lapangan; iii. pimpinan fakultas; iv. pimpinan program studi; v. pembimbing I dan II; vi. Penguji; dan d. kalimat penutup)
+[normal | font=Times New Roman, size=12.0] Puji syukur kepada Allah SWT, Tuhan Yang Maha Esa sehingga dapat menyelesaikan proposal skripsi dengan judul “<JUDUL SKRIPSI>”. Proposal ini disusun sebagai salah satu tahapan dalam menyelesaikan skripsi pada Fakultas Teknik, Universitas Mulawarman.
+[normal | font=Times New Roman, size=12.0] Oleh karena itu, pada kesempatan ini kami ingin mengucapkan terima kasih kepada semua pihak yang telah mendukung serta membantu saya selama proses penyusunan proposal skripsi, kepada:
+[normal | font=Times New Roman, size=12.0] Orang tua dan Saudara-saudara saya atas do’a, bimbingan serta kasih sayangnya.
+[normal | font=Times New Roman, size=12.0] Nama dan gelar akademik lengkap Dekan selaku Dekan Fakultas Teknik, Universitas Mulawarman.
+[normal | font=Times New Roman, size=12.0] Nama dan gelar akademik Koordinator Prodi selaku Koordinator Program Studi Informatika
+[normal | font=Times New Roman, size=12.0] Nama dan gelar akademik Dosen Pembimbing I selaku Pembimbing I yang selalu memberikan arahan dan masukkan terhadap penelitian ini.
+[normal | font=Times New Roman, size=12.0] Nama dan gelar akademik Dosen Pembimbing II selaku Pembimbing II atas masukkan terhadap penelitian ini 
+[normal | font=Times New Roman, size=12.0] Nama dan gelar akademik Dosen Penguji I selaku Penguji I atas saran dan masukkan terhadap penelitian ini.
+[normal | font=Times New Roman, size=12.0] Nama dan gelar akademik Dosen Penguji II selaku Penguji II atas saran dan masukkan terhadap penelitian ini.
+[normal | font=Times New Roman, size=12.0] Segenap Dosen Program Studi Informatika, yang telah memberikan ilmu pengetahuan selama mengikuti perkuliahan.
+[normal | font=Times New Roman, size=12.0] Rekan-rekan seperjuangan yang terus memberikan dukungan semangat demi terselesainya tugas ini.
+[normal | font=Times New Roman, size=12.0] Saya menyadari bahwa proposal skripsi ini tidak luput dari berbagai kekurangan. Oleh karena itu, semua kritik dan saran yang bersifat memperbaiki demi kesempurnaan sangat diharapkan.
+[normal | font=Times New Roman, size=12.0] Samarinda,.............................. 2025
+[normal | font=Times New Roman, size=12.0] Penulis
+[Heading 1 | font=None, size=14.0] DAFTAR ISI
+[normal | font=Times New Roman, size=8.0] halaman
+[normal | font=Times New Roman, size=12.0] Keterangan:
+[normal | font=Times New Roman, size=12.0] WAJIB menggunakan alat bantu TOC (Table of Contents) pada Microsoft Word.
+[Heading 1 | font=None, size=14.0] DAFTAR TABEL
+[normal | font=Times New Roman, size=8.0] halaman
+[Heading 1 | font=None, size=14.0] DAFTAR GAMBAR
+[normal | font=Times New Roman, size=8.0] halaman
+[Heading 1 | font=None, size=14.0] DAFTAR LAMPIRAN
+[normal | font=Times New Roman, size=8.0] halaman
+[Heading 1 | font=None, size=14.0] DAFTAR ISTILAH/LAMBANG
+[normal | font=Times New Roman, size=8.0] Makna/Arti
+[normal | font=Times New Roman, size=12.0] Contents
+[Heading 1 | font=None, size=14.0] DAFTAR SINGKATAN
+[normal | font=Times New Roman, size=8.0] halaman
+[normal | font=Times New Roman, size=12.0] Contents
+[Heading 1 | font=None, size=14.0] BAB I
+[normal | font=Times New Roman, size=14.0] PENDAHULUAN
+[Heading 2 | font=None, size=13.0] Latar Belakang
+[normal | font=Times New Roman, size=12.0] Keterangan: Buat dalam 7-10 paragraf yang memperlihatkan 
+[normal | font=Times New Roman, size=12.0] Apa permasalahannya sehingga perlu dilakukan penelitian?
+[normal | font=Times New Roman, size=12.0] Oleh sebab itu, penelitian ini mengangkat judul “……………………………………” menggunakan teknik/metode ………………………….. pada ……………………. Hal ini bertujuan agar dapat ……………………………………
+[Heading 2 | font=None, size=13.0] Rumusan Masalah
+[normal | font=Times New Roman, size=12.0] Berdasarkan latar belakang penelitian, maka yang menjadi rumusan masalah dalam penelitian ini adalah “Bagaimana ……………………………………………………?”.
+[Heading 2 | font=None, size=13.0] Batasan Masalah
+[normal | font=Times New Roman, size=12.0] Penelitian ini disusun berdasarkan data-data yang diperoleh. Ruang lingkup masalah dibatasi pada:
+[Heading 2 | font=None, size=13.0] Tujuan Penelitian
+[normal | font=Times New Roman, size=12.0] Tujuan yang ingin dicapai dalam penelitian ini adalah ……………………………..
+[Heading 2 | font=None, size=13.0] Manfaat Penelitian
+[normal | font=Times New Roman, size=12.0] Penelitian ini diharapkan dapat memberikan manfaat pada berbagai pihak, khususnya:
+[normal | font=Times New Roman, size=12.0] 1.	Penulis
+[normal | font=Times New Roman, size=12.0] Penelitian ini diharapkan dapat bermanfaat bagi penulis untuk mengembangkan wawasan dalam mengimplementasikan/menerapkan metode/teknik/algoritma/cara ……………………………..…………………… dalam ……………………………..
+[normal | font=Times New Roman, size=12.0] 2.	Mahasiswa
+[normal | font=Times New Roman, size=12.0] Penelitian ini dapat memberikan pengetahuan kepada mahasiswa bagaimana metode/teknik/algoritma/cara dilakukan dalam …………… dan menjadi referensi khususnya bagi mahasiswa di bidang Informatika yang dapat membantu proses pembelajaran.
+[normal | font=Times New Roman, size=12.0] 3.	Instansi/Lembaga/Perusahaan
+[normal | font=Times New Roman, size=12.0] Manfaat yang diharapkan bagi instansi/lembaga/perusahaan adalah dengan adanya hasil analisis …………………….. diharapkan dapat membantu instansi/lembaga/perusahaan untuk …………………..
+[normal | font=Times New Roman, size=13.0] 1.6	Kontribusi Penelitian
+[normal | font=Times New Roman, size=12.0] Kontribusi yang dapat diberikan dari penelitian ini adalah …………………………
+[Heading 1 | font=None, size=14.0] BAB II
+[normal | font=Times New Roman, size=14.0] TINJAUAN PUSTAKA
+[Heading 2 | font=None, size=13.0] 2.1	Penelitian Terkait
+[normal | font=Times New Roman, size=12.0] (Bagian ini menjelaskan beberapa penelitian terkait yang berhubungan dengan proses Penelitian. Menggunakan pustaka yang baru, relevan, dan asli, yang berasal dari jurnal ilmiah, buku. Uraikan dengan jelas kajian pustaka yang menimbulkan gagasan dan yang mendasari penelitian/perancangan yang akan dilakukan. Tinjauan pustaka menguraikan teori, temuan, dan bahan penelitian lain yang diperoleh dari acuan yang akan dijadikan landasan untuk melakukan kegiatan penelitian/perancangan. Uraian dalam tinjauan pustaka diarahkan untuk menyusun kerangka pemikiran atau konsep yang akan digunakan dalam penelitian/perancangan. Kerangka pemikiran harus utuh menuju satu tujuan, yaitu memberikan jawab atas pertanyaan-pertanyaan yang diajukan dalam perumusan masalah. Tinjauan pustaka mengacu pada daftar pustaka).
+[normal | font=Times New Roman, size=12.0] Kajian mengenai penelitian-penelitian terkait yang telah dilakukan sebelumnya diperlukan dalam rangka mendukung penelitian ini. Daftar penelitian terkait antara lain:
+[normal | font=Times New Roman, size=12.0] Metode yang digunakan: Backpropagation Neural Network. Temuan Penelitian: Data yang digunakan pada penelitian ini adalah data produksi kelapa sawit dari tahun 2015 hingga 2017 yang berjumlah 319 data. Dalam penelitian ini dilakukan 5 pengujian untuk mendapatkan nilai terbaik, yaitu (1) Pengujian iterasi maksimal, jumlah iterasi yang diuji adalah 200 hingga 1.000 iterasi dan 2.000 iterasi, dengan nilai learning rate ialah 0.4, batas erorr 0.001, jumlah data latih 260 dan jumlah data uji 59, hasilnya jumlah iterasi maksimal sebesar 900 iterasi dengan MAPE terendah yaitu 14.68%.  (2) Pengujian jumlah data latih, data latih yang diuji terdiri atas 52, 104, 156, 208 dan 260 data dengan menggunakan nilai learning rate 0,4, iterasi maksimal 900, 5 neuron hidden, batas error sebesar 0.0001, serta 59 data uji. Hasil pengujian menghasilkan nilai MAPE terendah sebesar 15.90308% yaitu 260 data latih. (3) Pengujian learning rate. Nilai learning rate yang diuji terdiri atas 0,1 hingga 0.7 dengan 260 data latih, 59 data uji, maksimal iterasi 900, 5 neuron hidden dan batas error 0.001. Dari hasil pengujian diperoleh nilai MAPE terendah 14.74% dari learning rate 0.4. (4) Pengujian jumlah neuron hidden. Neuron hidden yang diuji mulai dari 1-5. Pengujian ini menggunakan 260 data latih, nilai learning rate 0.4, jumlah iterasi maksimal 900, batas error 0.001 dan 59 data uji. Nilai MAPE terbaik yaitu 14.13% dengan jumlah neuron sebesar 5. (5) Pengujian K-Fold Cross Validation. Nilai K-fold yang diuji adalah 5 dan 7, nilai learning rate yang digunakan adalah 0.4, iterasi maksimal 900, 5 neuron hidden dan batas error 0.001. Nilai MAPE terkecil terjadi pada fold ke 6 dengan K-7 sebesar 12.96%. Parameter tersebut digunakan untuk meguji 12 data uji yang menghasilkan MAPE sebesar 10.0047%  (Nama belakang penulis, tahun terbit). tambahkan sitasi dari Penelitian terkait.
+[normal | font=Times New Roman, size=12.0] Penelitian terkait 2
+[normal | font=Times New Roman, size=12.0] Penelitian terkait 3
+[normal | font=Times New Roman, size=12.0] Penelitian terkait 4
+[normal | font=Times New Roman, size=12.0] Penelitian terkait 5
+[normal | font=Times New Roman, size=12.0] Penelitian terkait 6
+[normal | font=Times New Roman, size=12.0] Penelitian terkait 7
+[normal | font=Times New Roman, size=12.0] Penelitian terkait 8
+[normal | font=Times New Roman, size=12.0] Penelitian terkait 9
+[normal | font=Times New Roman, size=12.0] Penelitian terkait 10
+[normal | font=Times New Roman, size=12.0] Dst…
+[normal | font=Times New Roman, size=13.0] Perbedaan dengan Penelitian Sebelumnya
+[normal | font=Times New Roman, size=12.0] Berdasarkan referensi yang terkait, maka didapatkan perbedaan penelitian yang terdahulu sebagai dasar penelitian ini.
+[normal | font=Times New Roman, size=12.0] ………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………
+[Heading 2 | font=None, size=13.0] 2.2	Teori Pendukung
+[normal | font=Times New Roman, size=12.0] Penjelasan 
+[Heading 2 | font=None, size=13.0] 2.3	Teori Pendukung
+[normal | font=Times New Roman, size=12.0] Penjelasan 
+[Heading 2 | font=None, size=None] 2.3.1	Teori Pendukung Sub BAB
+[normal | font=Times New Roman, size=12.0] Penjelasan 
+[Heading 2 | font=None, size=None] 2.3.2	Teori Pendukung Sub BAB
+[normal | font=Times New Roman, size=12.0] Penjelasan 
+[Heading 2 | font=None, size=13.0] 2.4	Teori Pendukung
+[normal | font=Times New Roman, size=12.0] Penjelasan 
+[normal | font=Times New Roman, size=12.0] (Identitas gambar diletakkan di bawah gambar. Sedangkan identitas tabel diletakkan di atas tabel. Rata tengah, cetak tebal).
+[normal | font=Times New Roman, size=12.0] Gambar 2.1. Geometri Patch Antena Mikrostrip Dengan Teknik Pencatuan Electro-Magnetically Coupled
+[normal | font=Times New Roman, size=12.0] Penulisan tabel seperti ini.
+[normal | font=Times New Roman, size=None] Tabel 2.1. Tabel Data Mahasiswa Informatika
+[Heading 1 | font=None, size=14.0] BAB III
+[normal | font=Times New Roman, size=14.0] METODOLOGI PENELITIAN
+[Heading 2 | font=None, size=13.0] 3.1	Tahapan Pelaksanaan Penelitian
+[normal | font=Times New Roman, size=12.0] ……………………………
+[Heading 2 | font=None, size=13.0] 3.2 	Pengumpulan Data
+[normal | font=Times New Roman, size=12.0] ……………………………
+[Heading 2 | font=None, size=13.0] 3.3	Perancangan Data
+[normal | font=Times New Roman, size=12.0] ………………………. 
+[Heading 2 | font=None, size=13.0] 3.4 	Perancangan Proses/Algoritma
+[normal | font=Times New Roman, size=12.0] Penjelasan lihat di ppt. Penulisan rumus matematika harus ditulis ulang menggunakan tools seperti Equation atau Math Type, tidak boleh dari hasil capture.
+[Heading 2 | font=None, size=13.0] 3.5 	Perancangan Tampilan
+[normal | font=Times New Roman, size=12.0] Penjelasan lihat di ppt.
+[Heading 2 | font=None, size=13.0] 3.6 	Perancangan Pengujian
+[normal | font=Times New Roman, size=12.0] Penjelasan lihat di ppt.
+[Heading 1 | font=None, size=14.0] BAB IV
+[normal | font=Times New Roman, size=14.0] HASIL DAN PEMBAHASAN
+[normal | font=Times New Roman, size=12.0] (Bab ini memuat hasil penelitian/perancangan dan pembahasan/analisis dari penelitian/perancangan tersebut yang sifatnya terpadu/sistematis. a) Pembahasan tentang hasil penelitian/perancangan yang diperoleh, berupa penjelasan teoritis, baik secara kualitatif, kuantitatif, atau secara statistis. Sebaiknya hasil penelitian/perancangan juga dibandingkan dengan hasil penelitian/perancangan terdahulu yang sejenis b) Hasil penelitian/perancangan sedapat mungkin disajikan dalam bentuk daftar atau tabel, grafik, foto atau bentuk lain, dan ditempatkan berdekatan dengan pembahasan/analisis, agar pembaca lebih mudah mengikuti uraian. Sedapat mungkin harus dihindari menampilkan hasil penelitian/perancangan sebagai lampiran, kecuali hasil penelitian/perancangan tersebut berupa tabel yang sangat Panjang).
+[normal | font=Times New Roman, size=12.0] ………………………….............................. (tulislah intro bab 4 dalam beberapa kalimat pembuka)
+[Heading 2 | font=None, size=13.0] 4.1	Penerapan/Pengolahan Data
+[normal | font=Times New Roman, size=12.0] Penjelasan lihat di ppt 
+[Heading 2 | font=None, size=13.0] 4.2 	Penerapan Proses
+[normal | font=Times New Roman, size=12.0] Penjelasan lihat di ppt 
+[Heading 2 | font=None, size=13.0] 4.3	Penerapan Tampilan
+[normal | font=Times New Roman, size=12.0] Penjelasan lihat di ppt 
+[Heading 2 | font=None, size=13.0] 4.4	Hasil Pengujian
+[normal | font=Times New Roman, size=12.0] Penjelasan lihat di ppt
+[Heading 2 | font=None, size=13.0] 4.5	Pembahasan
+[normal | font=Times New Roman, size=12.0] Penjelasan lihat di ppt. Menjelaskan dan menjabarkan hasil-hasil percobaan hingga pengujian secara terstruktur, detail dan jelas.
+[normal | font=Times New Roman, size=None] Gambar 4.1 Geometri Patch Antena Mikrostrip Dengan Teknik Pencatuan Electro-Magnetically Coupled
+[Heading 1 | font=None, size=14.0] BAB V
+[normal | font=Times New Roman, size=14.0] KESIMPULAN DAN SARAN
+[Heading 2 | font=None, size=13.0] 5.1 	Kesimpulan
+[normal | font=Times New Roman, size=12.0] (Kesimpulan merupakan pernyataan singkat dan tepat yang berisi rangkuman dari hasil analisis dalam penyusunan skripsi. Kesimpulan menyatakan hasil pencapaian penelitian/perancangan yang dilakukan dengan mengacu pada tujuan yang didefinisikan pada bagian awal. Kesimpulan merupakan jawaban dari tujuan penelitian).
+[Heading 2 | font=None, size=13.0] 5.2 	Saran
+[normal | font=Times New Roman, size=12.0] (Saran yang disampaikan merupakan rencana pengembangan dengan asumsi-asumsi yang belum dilakukan pada penelitian/perancangan ini. Jika mengusulkan metode/kriteria baru, sebutkan nama metode/kriterianya. Jika mengusulkan fitur tambahan, sebutkan fitur yang seperti apa).
+[Heading 1 | font=None, size=14.0] DAFTAR PUSTAKA
+[normal | font=Times New Roman, size=12.0]  Amir, H., Gatot, S., Wisnu, W. (2002). Klasifikasi Objek Dalam Visi Komputer Dengan Analisis Diskriminan. Vol 6 (1), 24–32.
+[normal | font=Times New Roman, size=12.0] Andono, N. P., Muljono, T. S. (2017). Pengolahan Citra Digital. Penerbit Andi (Anggota IKAPI) Yogyakarta.
+[normal | font=Times New Roman, size=12.0] Attaphongse, T., Siwaruk, S., Carlos, P. (2015). A Non-Destructive Oil Palm Ripeness Recognition System Using Relative Entropy. Computers And Electronics In Agriculture, Vol 118, 340–349. Https://Doi.Org/10.1016/J.Compag.2015.09.018.
+[normal | font=Times New Roman, size=12.0] Burawich, P., Somchai, L., Thanate, K., Mitchai, C., Arno, R. (2017). An Automatic And Rapid System For Grading Palm Bunch Using A Kinect Camera. Computers And Electronics In Agriculture, Vol 143 (November), 227–237. Https://Doi.Org/10.1016/J.Compag.2017.10.020.
+[normal | font=Times New Roman, size=12.0] Dinah, C., Sam, H., Usman, A., Tineke, M., Muhammad, M. (2015). Optical Characteristics Of Oil Palm Fresh Fruits Bunch (FFB) Under Three Spectrum Regions Influence For Harvest Decision. International Journal On Advanced Science Engineering Information Technologi, Vol 5 (3), 9–16.
+[normal | font=Times New Roman, size=12.0] Keterangan:
+[normal | font=Times New Roman, size=12.0] WAJIB menggunakan software management reference (SMR) seperti Mendeley, EndNote, Zotero dll.
+[normal | font=Times New Roman, size=12.0] Komposisi daftar pustaka:
+[normal | font=Times New Roman, size=12.0] Artikel Ilmiah (jurnal/prosiding) 5 tahun terakhir yang terkait/relevan penelitiannya, berbahasa Indonesia maupun Inggris 60%
+[normal | font=Times New Roman, size=12.0] Buku/Chapter Book 5 tahun terakhir yang terkait/relevan penelitiannya, berbahasa Indonesia maupun Inggris 30%
+[normal | font=Times New Roman, size=12.0] Website resmi yang terkait/relevan penelitiannya, berbahasa Indonesia maupun Inggris 10%
+[normal | font=Times New Roman, size=12.0] Jumlah daftar pustaka yang digunakan yang terkait/relevan penelitiannya sebanyak minimal 30 dan maksimal 50 sumber.
+[Heading 1 | font=None, size=14.0] LAMPIRAN

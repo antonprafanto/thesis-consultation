@@ -1,0 +1,2959 @@
+
+--- [PAGE 1] ---
+ 
+ 
+ 
+ 
+ 
+PROPOSAL SKRIPSI 
+ 
+ 
+ 
+ANALISIS POLA SEBARAN DAN KEPADATAN 
+FASILITAS KESEHATAN MENGGUNAKAN METODE 
+NEAREST NEIGHBOR ANALYSIS (NNA) DAN KERNEL 
+DENSITY ESTIMATION (KDE)  
+ 
+ 
+ 
+ 
+Oleh: 
+ 
+LUTHFIAH NUR ALIFAH 
+2309106102 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+FAKULTAS TEKNIK 
+UNIVERSITAS MULAWARMAN 
+ 
+ 
+ 
+SAMARINDA 
+2026 
+
+--- [PAGE 2] ---
+ 
+i 
+ 
+PROPOSAL SKRIPSI 
+ 
+ 
+ANALISIS POLA SEBARAN DAN KEPADATAN 
+FASILITAS KESEHATAN MENGGUNAKAN METODE 
+NEAREST NEIGHBOR ANALYSIS (NNA) DAN KERNEL 
+DENSITY ESTIMATION (KDE)  
+ 
+ 
+ 
+Diajukan sebagai salah satu syarat untuk menyelesaikan pendidikan  
+pada Program Studi Strata 1 Informatika,  
+Fakultas Teknik, Universitas Mulawarman 
+ 
+ 
+ 
+Oleh: 
+ 
+LUTHFIAH NUR ALIFAH 
+2309106102 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+FAKULTAS TEKNIK 
+UNIVERSITAS MULAWARMAN 
+ 
+ 
+ 
+ 
+SAMARINDA 
+2026 
+ 
+ 
+
+--- [PAGE 3] ---
+ 
+ii 
+ 
+PROPOSAL SKRIPSI 
+ 
+ANALISIS POLA SEBARAN DAN KEPADATAN 
+FASILITAS KESEHATAN MENGGUNAKAN METODE 
+NEAREST NEIGHBOR ANALYSIS (NNA) DAN KERNEL 
+DENSITY ESTIMATION (KDE) 
+ 
+ 
+Oleh: 
+LUTHFIAH NUR ALIFAH 
+2309106102 
+ 
+ 
+ 
+Telah dibahas dalam Rapat Dosen Pembimbing pada [tgl, bln, tahun] dan 
+dinyatakan memenuhi syarat sebagai Skripsi, dengan Dosen Pembimbing: 
+ 
+I. Prof. Dr. Fahrul Agus, S.Si., M.T 
+II. Medi Taruk, M.Cs 
+ 
+ 
+ 
+ 
+Koordinator Program Studi S1 Informatika, 
+Fakultas Teknik, Universitas Mulawarman, 
+ 
+ 
+ 
+Awang Harsa Kridalaksana, S.Kom., M.Kom. 
+NIP 19731229 200501 1 002 
+ 
+
+--- [PAGE 4] ---
+ 
+iii 
+ 
+KATA PENGANTAR 
+Puji syukur kepada Allah SWT, Tuhan Yang Maha Esa sehingga dapat menyelesaikan 
+proposal skripsi dengan judul “Analisis Pola Sebaran dan Kepadatan Fasilitas 
+Kesehatan Menggunakan Metode Nearest Neighbor Analysis (NNA) dan Kernel 
+Density Estimation (KDE)”. Proposal ini disusun sebagai salah satu tahapan dalam 
+menyelesaikan skripsi pada Fakultas Teknik, Universitas Mulawarman. 
+Oleh karena itu, pada kesempatan ini kami ingin mengucapkan terima kasih kepada 
+semua pihak yang telah mendukung serta membantu saya selama proses penyusunan 
+proposal skripsi, kepada: 
+1. 
+Orang tua dan Saudara-saudara saya atas do’a, bimbingan serta kasih sayangnya. 
+2. 
+Bapak Prof. Dr. Ir. H. Tamrin, S.T., M.T., IPU., ASEAN.Eng., APEC.Eng. selaku 
+Dekan Fakultas Teknik, Universitas Mulawarman. 
+3. 
+Bapak Awang Harsa Kridalaksana, S.Kom., M.Kom selaku K Program Studi 
+Informatika 
+4. 
+Bapak Prof. Dr. Fahrul Agus, S.Si., M.T selaku Pembimbing I yang selalu 
+memberikan arahan dan masukkan terhadap penelitian ini. 
+5. 
+Bapak Medi Taruk, M.Cs selaku Pembimbing II atas masukkan terhadap 
+penelitian ini  
+6. 
+Nama dan gelar akademik Dosen Penguji I selaku Penguji I atas saran dan 
+masukkan terhadap penelitian ini. 
+7. 
+Nama dan gelar akademik Dosen Penguji II selaku Penguji II atas saran dan 
+masukkan terhadap penelitian ini. 
+8. 
+Segenap Dosen Program Studi Informatika, yang telah memberikan ilmu 
+pengetahuan selama mengikuti perkuliahan. 
+9. 
+Rekan-rekan seperjuangan Mahasiswa Informatika Angkatan 2023 atas 
+kebersamaan, dukungan, dan semangat yang senantiasa diberikan selama 
+penyusunan proposal ini. 
+Saya menyadari bahwa proposal skripsi ini tidak luput dari berbagai kekurangan. Oleh 
+karena itu, semua kritik dan saran yang bersifat memperbaiki demi kesempurnaan sangat 
+diharapkan. 
+Samarinda, 21 September 2026 
+ 
+Luthfiah Nur Alifah 
+ 
+ 
+ 
+
+--- [PAGE 5] ---
+ 
+iv 
+ 
+DAFTAR ISI 
+ 
+halaman 
+KATA PENGANTAR .................................................................................................. iii 
+DAFTAR ISI ................................................................................................................ iv 
+DAFTAR TABEL ........................................................................................................ vi 
+DAFTAR GAMBAR ................................................................................................... vii 
+DAFTAR ISTILAH/LAMBANG ............................................................................. viii 
+DAFTAR SINGKATAN .............................................................................................. ix 
+ 
+ 
+BAB I PENDAHULUAN .............................................................................................. 1 
+ 
+ 
+1.1 
+Latar Belakang .................................................................................................. 1 
+1.2 
+Rumusan Masalah ............................................................................................. 4 
+1.3 
+Batasan Masalah ............................................................................................... 5 
+1.4 
+Tujuan Penelitian .............................................................................................. 6 
+1.5 
+Manfaat Penelitian ............................................................................................ 6 
+1.6  
+Kontribusi Penelitian ........................................................................................ 7 
+ 
+BAB II TINJAUAN PUSTAKA .................................................................................. 8 
+ 
+2.1 
+Penelitian Terkait .............................................................................................. 8 
+2.2 
+Sistem Informasi Geografis (SIG) .................................................................. 18 
+2.3 
+Fasilitas Kesehatan ......................................................................................... 20 
+2.3.1 
+Rumah Sakit ................................................................................................... 21 
+2.3.2 
+Puskesmas ....................................................................................................... 22 
+2.3.3 
+Klinik .............................................................................................................. 23 
+2.4 
+Data dalam Sistem Informasi Geografis ......................................................... 24 
+2.5 
+QGIS ............................................................................................................... 26 
+2.6 
+Nearest Neighbor Analysis (NNA) ................................................................. 27 
+2.7 
+Kernel Density Estimation (KDE) .................................................................. 30 
+ 
+BAB III METODOLOGI PENELITIAN ................................................................. 33 
+ 
+3.1 
+Tahapan Pelaksanaan Penelitian ..................................................................... 33 
+3.2  
+Pengumpulan Data .......................................................................................... 36 
+3.3 
+Perancangan Data ........................................................................................... 38 
+3.4  
+Perancangan Proses/Algoritma ....................................................................... 40 
+3.4.1 
+Algoritma Nearest Neighbor Analysis (NNA) ............................................... 40 
+3.4.2 
+Algoritma Kernel Density Estimation (KDE) ................................................ 42 
+3.5  
+Penyajian Hasil Analisis ................................................................................. 44 
+3.6  
+Perancangan Pengujian ................................................................................... 46 
+3.6.1 
+Pengujian Nearest Neighbor Analysis (NNA) ................................................ 47 
+3.6.2 
+Pengujian Kernel Density Estimation (KDE) ................................................. 48 
+3.6.3 
+Integrasi Hasil Pengujian ................................................................................ 49 
+
+--- [PAGE 6] ---
+ 
+v 
+ 
+3.7  
+Waktu dan Tempat Penelitian ......................................................................... 50 
+ 
+ 
+DAFTAR PUSTAKA .................................................................................................. 53 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- [PAGE 7] ---
+ 
+vi 
+ 
+DAFTAR TABEL 
+ 
+Halaman 
+Tabel 2. 1 Perbedaan Penelitian Sebelumnya ................................................................. 16 
+Tabel 2. 2 Interpretasi Nilai Nearest Neighbor Ratio (R) ............................................... 29 
+Tabel 3. 1 Data Penelitian ............................................................................................... 37 
+Tabel 3. 2 Rancangan Hasil Analisis Statistik Nearest Neighbor Analysis (NNA) ....... 45 
+Tabel 3. 3 Rancangan Pengujian Metode NNA dan KDE .............................................. 50 
+Tabel 3. 4 Jadwal Penelitian ........................................................................................... 51 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- [PAGE 8] ---
+ 
+vii 
+ 
+DAFTAR GAMBAR 
+ 
+Halaman 
+Gambar 3. 1 Diagram Tahapan Pelaksanaan Penelitian ................................................. 33 
+Gambar 3. 2 Flowchart Proses Analisis Nearest Neighbor Analysis (NNA) ................. 42 
+Gambar 3. 3 Flowchart Proses Analisis Kernel Density Estimation (KDE) .................. 44 
+Gambar 3. 4 Rancangan layout peta hasil analisis yang digunakan dalam penelitian .... 46 
+ 
+ 
+ 
+
+--- [PAGE 9] ---
+ 
+viii 
+ 
+DAFTAR ISTILAH/LAMBANG 
+ 
+ 
+Arti 
+Contents 
+ 
+𝐴  
+Luas wilayah penelitian 
+ℎ  
+Bandwidth (radius pencarian)  
+𝐾  
+Fungsi kernel  
+𝑛  
+Jumlah titik pengamatan  
+𝑅   
+Nearest Neighbor Ratio  
+𝑟𝑜  
+(Observed Mean Distance)  
+𝑟𝑒  
+(Expected Mean Distance) 
+𝑥   
+Lokasi yang diestimasi 
+𝑥𝑖  
+Lokasi titik ke-𝑖 
+𝑓̂(𝑥)  
+Nilai estimasi kepadatan pada lokasi 𝑥 
+𝑧−𝑠𝑐𝑜𝑟𝑒   
+Nilai statistik pengujian 
+𝑝−𝑣𝑎𝑙𝑢𝑒   
+Nilai probalitas signifikan secara statistik 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- [PAGE 10] ---
+ 
+ix 
+ 
+DAFTAR SINGKATAN 
+ 
+ 
+Arti 
+Contents 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ANN 
+Average Nearest Neighbour 
+BIG  
+Badan Informasi Geospasial 
+BPJS  
+Badan Penyelenggara Jaminan Sosial 
+BPS  
+Badan Pusat Statistik 
+CRS  
+Coordinate Reference System 
+CSV  
+Comma Separated Values 
+DBD  
+Demam Berdarah Dengue 
+GIS 
+Geographic Information System 
+KDE  
+Kernel Density Estimation 
+NNA 
+Nearest Neighbor Analysis 
+OSGeo  
+Open Source Geospatial Foundation 
+POI  
+Point of Interest 
+QGIS  
+Quantum Geographic Information System 
+SHP  
+Shapefile 
+SIG  
+Sistem Informasi Geografis 
+UKM  
+Upaya Kesehatan Masyarakat 
+UKP  
+Upaya Kesehatan Perseorangan  
+XLS  
+Microsoft Excel Spreadsheet 
+XLSX  
+Microsoft Excel Open XML Spreadsheet 
+2SFCA  
+Two-Step Floating Catchment Area 
+
+--- [PAGE 11] ---
+ 
+1 
+ 
+BAB I PENDAHULUAN 
+PENDAHULUAN 
+ 
+ 
+1.1 Latar Belakang 
+ 
+Fasilitas kesehatan merupakan salah satu komponen utama dalam penyelenggaraan 
+pelayanan kesehatan yang berperan penting dalam meningkatkan derajat kesehatan 
+masyarakat. Rumah sakit, puskesmas, dan klinik merupakan fasilitas pelayanan kesehatan 
+yang harus tersedia secara memadai serta memiliki sebaran yang merata agar seluruh 
+masyarakat dapat memperoleh pelayanan kesehatan secara mudah, cepat, dan berkualitas 
+(Rauch & Butsch, 2026). Pemerataan fasilitas kesehatan menjadi salah satu indikator 
+penting dalam mewujudkan pelayanan kesehatan yang berkeadilan. Oleh karena itu, 
+pemerintah perlu memastikan bahwa penyediaan fasilitas kesehatan tidak hanya 
+mencukupi dari sisi jumlah, tetapi juga tersebar secara proporsional sesuai dengan 
+kebutuhan masyarakat pada setiap wilayah  (Y. Li, Zhang, Feng, & Che, 2026; Undang-
+Undang Republik Indonesia, 2023). 
+Kota Samarinda sebagai ibu kota Provinsi Kalimantan Timur merupakan pusat 
+pemerintahan, perdagangan, pendidikan, dan jasa yang mengalami perkembangan 
+wilayah serta pertumbuhan penduduk yang cukup pesat. Berdasarkan data Badan Pusat 
+Statistik (BPS) Kota Samarinda, jumlah penduduk Kota Samarinda pada tahun 2025 
+mencapai sekitar 859.252 jiwa dengan laju pertumbuhan penduduk sekitar 1,44% per 
+tahun. Peningkatan jumlah penduduk tersebut diikuti oleh meningkatnya kebutuhan 
+terhadap pelayanan kesehatan sehingga ketersediaan fasilitas kesehatan menjadi salah 
+satu aspek penting dalam mendukung pelayanan publik. Selain itu, perkembangan 
+kawasan permukiman baru di beberapa kecamatan turut meningkatkan kebutuhan 
+terhadap penyediaan fasilitas kesehatan yang tersebar secara proporsional di seluruh 
+wilayah Kota Samarinda (Badan Pusat Statistik Kota, 2025). 
+Berdasarkan data (Badan Pusat Statistik Kota, 2025), Kota Samarinda memiliki 16 
+rumah sakit, 26 puskesmas, dan 150 klinik yang tersebar pada 10 kecamatan. Namun 
+demikian, keberadaan fasilitas kesehatan tersebut belum tentu mencerminkan kondisi 
+
+--- [PAGE 12] ---
+ 
+2 
+ 
+pemerataan distribusi fasilitas kesehatan. Jumlah fasilitas yang tersedia tidak selalu 
+menunjukkan bahwa sebarannya telah merata karena lokasi fasilitas kesehatan dapat 
+terkonsentrasi pada wilayah tertentu, sementara wilayah lainnya memiliki jumlah fasilitas 
+yang relatif lebih sedikit. Kondisi tersebut menunjukkan pentingnya dilakukan analisis 
+spasial untuk mengidentifikasi pola sebaran dan tingkat kepadatan fasilitas kesehatan di 
+Kota Samarinda (Badan Pusat Statistik Kota, 2025). 
+Selama ini informasi mengenai fasilitas kesehatan di Kota Samarinda umumnya 
+masih disajikan dalam bentuk inventarisasi lokasi atau peta sebaran. Penyajian informasi 
+tersebut berfokus pada penyajian posisi geografis fasilitas kesehatan, namun belum 
+memberikan informasi mengenai pola sebaran maupun tingkat kepadatan fasilitas 
+kesehatan secara kuantitatif. Akibatnya, pemerintah daerah mengalami keterbatasan 
+dalam mengevaluasi apakah sebaran fasilitas kesehatan telah merata atau masih 
+terkonsentrasi pada wilayah tertentu. Padahal, informasi mengenai pola sebaran dan 
+kepadatan fasilitas kesehatan sangat diperlukan sebagai dasar dalam penyusunan 
+kebijakan pemerataan pelayanan kesehatan, penentuan lokasi pembangunan fasilitas 
+kesehatan baru, serta evaluasi penyediaan layanan kesehatan bagi masyarakat. 
+Perkembangan Sistem Informasi Geografis (SIG) memberikan kemampuan yang 
+lebih luas dalam melakukan analisis spasial terhadap berbagai fenomena keruangan. SIG 
+tidak hanya berfungsi sebagai media visualisasi data spasial, tetapi juga mampu 
+mendukung analisis spasial dan statistik spasial untuk mengidentifikasi karakteristik 
+distribusi suatu objek berdasarkan lokasi geografisnya. Dalam bidang kesehatan, SIG 
+telah banyak dimanfaatkan untuk menganalisis distribusi fasilitas kesehatan, pola 
+persebaran penyakit, pemetaan wilayah rawan penyakit, serta mendukung perencanaan 
+pembangunan dan evaluasi pemerataan fasilitas kesehatan. Oleh karena itu, pemanfaatan 
+SIG dalam penelitian ini diharapkan dapat menghasilkan informasi spasial yang lebih 
+komprehensif mengenai pola sebaran dan kepadatan fasilitas kesehatan di Kota 
+Samarinda dibandingkan penyajian peta sebaran secara konvensional   (Chang, 2022; 
+Goodchild & Longley, 2021). Hal ini sejalan dengan temuan bahwa analisis spasial 
+berbasis SIG mampu mengungkap pola sebaran fasilitas kesehatan yang tidak dapat 
+terlihat melalui inventarisasi lokasi konvensional, termasuk mengidentifikasi wilayah 
+
+--- [PAGE 13] ---
+ 
+3 
+ 
+yang mengalami konsentrasi fasilitas tinggi maupun wilayah yang masih kurang terlayani  
+(Obeidat & Alourd, 2024).  
+Berbagai penelitian terdahulu telah memanfaatkan SIG dalam analisis fasilitas 
+kesehatan. Perkembangan tersebut turut didukung oleh upaya pengembangan perangkat 
+analisis aksesibilitas spasial berbasis SIG yang lebih sistematis untuk mendukung 
+evaluasi ketersediaan layanan kesehatan (Hashtarkhani, Schwartz, & Shaban-Nejad, 
+2024a). (Savitri & Sari, 2025) menggunakan metode Kernel Density Estimation (KDE), 
+Average Nearest Neighbour (ANN), dan Two-Step Floating Catchment Area (2SFCA) 
+untuk menganalisis sebaran puskesmas di Kabupaten Kebumen. (Nafisa, Hadibasyir, 
+Sigit, Wibowo, & Sasmi, 2024) menerapkan Average Nearest Neighbour (ANN) dalam 
+menganalisis distribusi fasilitas kesehatan di Kabupaten Badung. Penelitian (Kurniadin, 
+Widyasasi, Fadjuani, & Prasetya, 2021) di Kota Samarinda menghasilkan pemetaan 
+lokasi rumah sakit, puskesmas, dan klinik yang bekerja sama dengan BPJS, namun 
+penelitian tersebut masih terbatas pada penyajian informasi spasial berupa peta tanpa 
+melakukan analisis statistik mengenai pola sebaran maupun tingkat kepadatan fasilitas 
+kesehatan. 
+Berdasarkan penelitian terdahulu tersebut, masih terdapat beberapa kesenjangan 
+penelitian (research gap). Pertama, sebagian besar penelitian berfokus pada satu jenis 
+fasilitas kesehatan, seperti rumah sakit atau puskesmas, sehingga belum memberikan 
+gambaran yang menyeluruh mengenai sebaran berbagai jenis fasilitas kesehatan dalam 
+satu wilayah. Kedua, sebagian penelitian menggunakan satu metode analisis spasial, 
+sehingga hasil analisis belum mengintegrasikan informasi mengenai pola sebaran dan 
+tingkat kepadatan fasilitas kesehatan secara bersamaan. Ketiga, penelitian mengenai 
+fasilitas kesehatan di Kota Samarinda masih didominasi oleh pemetaan inventarisasi 
+lokasi, sementara analisis statistik spasial untuk mengidentifikasi karakteristik pola 
+sebaran dan kepadatan fasilitas kesehatan secara kuantitatif masih terbatas. Kondisi 
+tersebut menunjukkan bahwa penelitian mengenai pola sebaran dan kepadatan fasilitas 
+kesehatan di Kota Samarinda masih memiliki peluang untuk dikembangkan. 
+Untuk menjawab kesenjangan tersebut, penelitian ini menggunakan kombinasi 
+metode Nearest Neighbor Analysis (NNA) dan Kernel Density Estimation (KDE) dalam 
+lingkungan Sistem Informasi Geografis. Nearest Neighbor Analysis digunakan untuk 
+
+--- [PAGE 14] ---
+ 
+4 
+ 
+mengetahui pola persebaran fasilitas kesehatan berdasarkan nilai Nearest Neighbor Ratio 
+(R) sehingga dapat diketahui apakah sebaran fasilitas kesehatan bersifat mengelompok 
+(clustered), acak (random), atau seragam (dispersed). Sementara itu, Kernel Density 
+Estimation digunakan untuk menghasilkan peta kepadatan yang mampu menunjukkan 
+wilayah dengan konsentrasi fasilitas kesehatan tinggi maupun rendah. Kombinasi kedua 
+metode tersebut diharapkan mampu memberikan gambaran yang lebih komprehensif 
+mengenai kondisi persebaran fasilitas kesehatan di Kota Samarinda (Clark & Evans, 
+1954; Nafisa dkk., 2024; Silverman, 1986; Slocum, McMaster, Kessler, & Howard, 
+2022). 
+Penelitian ini memiliki kebaruan dibandingkan penelitian sebelumnya karena 
+mengintegrasikan analisis terhadap rumah sakit, puskesmas, dan klinik dalam satu kajian 
+spasial menggunakan kombinasi metode Nearest Neighbor Analysis dan Kernel Density 
+Estimation. Selain menghasilkan informasi mengenai pola sebaran fasilitas kesehatan 
+secara statistik, penelitian ini juga menghasilkan peta kepadatan fasilitas kesehatan yang 
+dapat digunakan sebagai dasar evaluasi pemerataan pelayanan kesehatan di Kota 
+Samarinda. Hasil penelitian diharapkan dapat menjadi informasi pendukung bagi 
+pemerintah daerah dalam merumuskan kebijakan pemerataan pelayanan kesehatan 
+berdasarkan kondisi spasial yang sebenarnya. 
+Berdasarkan uraian tersebut, penelitian ini mengangkat judul "Analisis Pola 
+Sebaran dan Kepadatan Fasilitas Kesehatan Menggunakan Metode Nearest Neighbor 
+Analysis (NNA) dan Kernel Density Estimation (KDE)". Penelitian ini bertujuan 
+menganalisis pola sebaran dan tingkat kepadatan fasilitas kesehatan berdasarkan data 
+spasial rumah sakit, puskesmas, dan klinik di Kota Samarinda sehingga dapat 
+menghasilkan informasi spasial yang mendukung evaluasi distribusi fasilitas kesehatan. 
+ 
+1.2 Rumusan Masalah 
+ 
+Berdasarkan latar belakang penelitian, maka rumusan masalah dalam penelitian ini 
+adalah sebagai berikut. 
+
+--- [PAGE 15] ---
+ 
+5 
+ 
+1. 
+Bagaimana pola sebaran spasial fasilitas kesehatan yang meliputi rumah sakit, 
+puskesmas, dan klinik di Kota Samarinda berdasarkan metode Nearest Neighbor 
+Analysis (NNA)? 
+2. 
+Bagaimana tingkat kepadatan spasial fasilitas kesehatan yang meliputi rumah sakit, 
+puskesmas, dan klinik di Kota Samarinda berdasarkan metode Kernel Density 
+Estimation (KDE)? 
+ 
+1.3 Batasan Masalah 
+ 
+Penelitian ini disusun berdasarkan data-data yang diperoleh. Luasnya bidang yang 
+dihadapi membuat penelitian ini perlu dibatasi agar pembahasan lebih terarah. Adapun 
+ruang lingkup penelitian ini dibatasi pada: 
+1. 
+Penelitian dilakukan pada wilayah administrasi Kota Samarinda, Provinsi 
+Kalimantan Timur. 
+2. 
+Objek penelitian meliputi fasilitas kesehatan berupa rumah sakit, puskesmas, dan 
+klinik yang tercantum dalam data resmi Geoportal Satu Peta Kota Samarinda. 
+3. 
+Data yang digunakan merupakan data sekunder berupa lokasi fasilitas kesehatan 
+dan batas administrasi Kota Samarinda yang diperoleh dari Geoportal Satu Peta 
+Kota Samarinda dan Badan Informasi Geospasial (BIG). 
+4. 
+Analisis pola sebaran fasilitas kesehatan menggunakan metode Nearest Neighbor 
+Analysis (NNA) dilakukan dengan bahasa pemrograman Python melalui platform 
+Google Colab, sedangkan analisis kepadatan menggunakan metode Kernel Density 
+Estimation (KDE) dilakukan menggunakan perangkat lunak QGIS. Kedua metode 
+digunakan untuk menghasilkan analisis spasial yang saling melengkapi. 
+5. 
+Hasil analisis disajikan dalam bentuk peta tematik dan interpretasi spasial mengenai 
+distribusi fasilitas kesehatan di Kota Samarinda. 
+6. 
+Penelitian tidak membahas aksesibilitas pelayanan kesehatan, kapasitas pelayanan, 
+kualitas pelayanan, jumlah tenaga kesehatan, jumlah pasien, analisis jaringan jalan, 
+maupun aspek pelayanan kesehatan lainnya di luar analisis spasial. 
+ 
+ 
+
+--- [PAGE 16] ---
+ 
+6 
+ 
+1.4 Tujuan Penelitian 
+ 
+Tujuan yang ingin dicapai dalam penelitian ini adalah: 
+1. 
+Menganalisis pola sebaran spasial fasilitas kesehatan yang meliputi rumah sakit, 
+puskesmas, dan klinik di Kota Samarinda menggunakan metode Nearest Neighbor 
+Analysis (NNA) untuk mengetahui apakah pola sebarannya bersifat mengelompok 
+(clustered), acak (random), atau seragam (dispersed). 
+2. 
+Menganalisis tingkat kepadatan spasial fasilitas kesehatan yang meliputi rumah 
+sakit, puskesmas, dan klinik di Kota Samarinda menggunakan metode Kernel 
+Density Estimation (KDE) untuk mengidentifikasi wilayah dengan kepadatan 
+fasilitas kesehatan tinggi maupun rendah sebagai dasar evaluasi pemerataan fasilitas 
+kesehatan. 
+ 
+1.5 Manfaat Penelitian 
+ 
+Penelitian ini diharapkan dapat memberikan manfaat pada berbagai pihak, 
+khususnya: 
+1. 
+Penulis 
+Manfaat penelitian bagi penulis adalah untuk menambah wawasan, pengetahuan, 
+dan pengalaman dalam mengimplementasikan Sistem Informasi Geografis (SIG) 
+menggunakan metode Nearest Neighbor Analysis (NNA) dan Kernel Density Estimation 
+(KDE) untuk menganalisis pola sebaran dan tingkat kepadatan fasilitas kesehatan. Selain 
+itu, penelitian ini diharapkan dapat meningkatkan kemampuan penulis dalam mengolah 
+data spasial, melakukan analisis keruangan, menginterpretasikan hasil analisis, serta 
+menyusun karya ilmiah yang sesuai dengan kaidah penelitian di bidang Informatika. 
+2. 
+Mahasiswa 
+Penelitian ini diharapkan dapat menjadi referensi bagi mahasiswa, khususnya 
+pada bidang Informatika dan Sistem Informasi Geografis (SIG), dalam memahami 
+penerapan metode Nearest Neighbor Analysis (NNA) dan Kernel Density Estimation 
+(KDE) untuk analisis spasial. Selain itu, hasil penelitian ini diharapkan dapat menjadi 
+sumber pembelajaran dan acuan bagi penelitian selanjutnya yang berkaitan dengan 
+
+--- [PAGE 17] ---
+ 
+7 
+ 
+analisis pola sebaran dan tingkat kepadatan fasilitas kesehatan maupun objek spasial 
+lainnya menggunakan perangkat lunak QGIS. 
+3. 
+Instansi/Lembaga/Perusahaan 
+Manfaat penelitian ini bagi Pemerintah Kota Samarinda, Dinas Kesehatan Kota 
+Samarinda, maupun instansi terkait adalah memberikan informasi mengenai pola sebaran 
+dan tingkat kepadatan fasilitas kesehatan di Kota Samarinda berdasarkan hasil analisis 
+spasial. Informasi tersebut diharapkan dapat menjadi bahan pertimbangan dalam proses 
+evaluasi pemerataan fasilitas kesehatan, penyusunan kebijakan, serta perencanaan 
+pengembangan fasilitas kesehatan pada wilayah yang masih membutuhkan peningkatan 
+pelayanan kesehatan. 
+ 
+1.6  
+Kontribusi Penelitian 
+ 
+Kontribusi yang dapat diberikan dari penelitian ini adalah memberikan informasi 
+mengenai pola sebaran dan tingkat kepadatan fasilitas kesehatan di Kota Samarinda 
+berdasarkan analisis spasial menggunakan metode Nearest Neighbor Analysis (NNA) dan 
+Kernel Density Estimation (KDE), serta menjadi bahan pertimbangan bagi pemerintah 
+daerah dan instansi terkait dalam evaluasi pemerataan fasilitas kesehatan, perencanaan 
+pengembangan fasilitas kesehatan, dan pengambilan keputusan berbasis data spasial.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- [PAGE 18] ---
+ 
+8 
+ 
+BAB II TINJAUAN PUSTAKA 
+TINJAUAN PUSTAKA 
+ 
+ 
+2.1 Penelitian Terkait 
+ 
+Dalam rangka mendukung penelitian ini, maka dilakukan kajian dengan 
+mempelajari penelitian-penelitian terkait yang telah dilakukan sebelumnya. Daftar 
+penelitian terkait antara lain: 
+1. 
+Metode yang digunakan: Kernel Density Estimation (KDE), Average Nearest 
+Neighbour (ANN), dan Two-Step Floating Catchment Area (2SFCA). Temuan 
+penelitian: Data yang digunakan pada penelitian ini berupa data lokasi puskesmas, 
+data jumlah penduduk, serta data administrasi wilayah Kabupaten Kebumen Tahun 
+2024. Penelitian ini bertujuan untuk menganalisis sebaran, kepadatan, dan 
+aksesibilitas puskesmas menggunakan Sistem Informasi Geografis. Analisis 
+dilakukan dengan metode Average Nearest Neighbour (ANN) untuk mengetahui 
+pola persebaran puskesmas, Kernel Density Estimation (KDE) untuk menganalisis 
+tingkat kepadatan fasilitas kesehatan, serta Two-Step Floating Catchment Area 
+(2SFCA) untuk menganalisis aksesibilitas pelayanan kesehatan. Hasil penelitian 
+menunjukkan bahwa pola persebaran puskesmas cenderung tersebar, namun 
+kepadatan fasilitas kesehatan belum seimbang dengan distribusi penduduk sehingga 
+masih ditemukan wilayah yang termasuk kategori underserved dan overserved. 
+Selain itu, hasil analisis aksesibilitas menunjukkan masih terdapat beberapa 
+wilayah yang memiliki tingkat pelayanan kesehatan rendah sehingga diperlukan 
+pemerataan pembangunan fasilitas kesehatan agar pelayanan kesehatan dapat 
+menjangkau masyarakat secara lebih optimal (Savitri & Sari, 2025). 
+2. 
+Metode yang digunakan: Average Nearest Neighbour (ANN) dan Buffer Analysis 
+berbasis Sistem Informasi Geografis (SIG). Temuan penelitian: Data yang 
+digunakan pada penelitian ini berupa data lokasi fasilitas kesehatan, batas 
+administrasi wilayah, dan data pendukung lainnya di Kabupaten Badung, 
+
+--- [PAGE 19] ---
+ 
+9 
+ 
+Indonesia. Penelitian ini bertujuan untuk menganalisis pola persebaran dan 
+aksesibilitas fasilitas kesehatan menggunakan Sistem Informasi Geografis. Analisis 
+dilakukan dengan metode Average Nearest Neighbour (ANN) untuk mengetahui 
+pola persebaran fasilitas kesehatan serta Buffer Analysis untuk menganalisis 
+jangkauan pelayanan fasilitas kesehatan terhadap wilayah sekitarnya. Hasil 
+penelitian menunjukkan bahwa sebagian besar fasilitas kesehatan telah memiliki 
+jangkauan pelayanan yang cukup baik terhadap wilayah sekitarnya dan pola 
+persebaran fasilitas kesehatan dapat diidentifikasi menggunakan metode Average 
+Nearest Neighbour (ANN). Namun demikian, penelitian ini masih berfokus pada 
+analisis pola persebaran dan aksesibilitas tanpa melakukan analisis tingkat 
+kepadatan spasial fasilitas kesehatan menggunakan metode Kernel Density 
+Estimation (KDE) (Nafisa dkk., 2024). 
+3. 
+Metode yang digunakan: Average Nearest Neighbour (ANN) dan Buffer Analysis 
+berbasis Sistem Informasi Geografis (SIG). Temuan penelitian: Data yang 
+digunakan pada penelitian ini berupa data lokasi rumah sakit, data lokasi rawan 
+kecelakaan lalu lintas, jaringan jalan, serta batas administrasi Kota Padang. 
+Penelitian ini bertujuan untuk menganalisis keterjangkauan pelayanan rumah sakit 
+terhadap lokasi rawan kecelakaan menggunakan Sistem Informasi Geografis. 
+Analisis dilakukan dengan metode Average Nearest Neighbour (ANN) untuk 
+mengetahui pola persebaran rumah sakit serta Buffer Analysis untuk menganalisis 
+jangkauan pelayanan rumah sakit terhadap lokasi rawan kecelakaan. Hasil 
+penelitian menunjukkan bahwa persebaran rumah sakit di Kota Padang memiliki 
+pola yang relatif baik dalam mendukung pelayanan terhadap wilayah rawan 
+kecelakaan. Selain itu, hasil Buffer Analysis menunjukkan bahwa sebagian besar 
+lokasi rawan kecelakaan telah berada dalam jangkauan pelayanan rumah sakit, 
+meskipun masih terdapat beberapa wilayah yang memerlukan peningkatan akses 
+terhadap fasilitas kesehatan. Penelitian ini masih berfokus pada rumah sakit sebagai 
+objek penelitian sehingga belum mengintegrasikan puskesmas dan klinik dalam 
+satu analisis spasial (Zulprima & Shahar, 2024). 
+4. 
+Metode yang digunakan: Kernel Density Estimation (KDE) dan Buffer Analysis 
+berbasis Sistem Informasi Geografis (SIG). Temuan penelitian: Data yang 
+
+--- [PAGE 20] ---
+ 
+10 
+ 
+digunakan pada penelitian ini berupa data lokasi fasilitas kesehatan, data kasus 
+Demam Berdarah Dengue (DBD), batas administrasi wilayah, serta data pendukung 
+lainnya di Kecamatan Purwosari, Kabupaten Gunungkidul, Daerah Istimewa 
+Yogyakarta. Penelitian ini bertujuan untuk menganalisis aksesibilitas geografis 
+fasilitas kesehatan dalam penanganan kasus Demam Berdarah Dengue 
+menggunakan Sistem Informasi Geografis. Analisis dilakukan dengan metode 
+Kernel Density Estimation (KDE) untuk mengetahui tingkat kepadatan persebaran 
+fasilitas kesehatan serta Buffer Analysis untuk menganalisis jangkauan pelayanan 
+fasilitas kesehatan terhadap wilayah penelitian. Hasil penelitian menunjukkan 
+bahwa sebagian besar wilayah telah berada dalam jangkauan pelayanan fasilitas 
+kesehatan berdasarkan radius pelayanan yang ditentukan. Selain itu, hasil analisis 
+Kernel Density Estimation (KDE) menunjukkan bahwa konsentrasi fasilitas 
+kesehatan lebih tinggi pada wilayah perkotaan dibandingkan wilayah pinggiran 
+sehingga masih terdapat perbedaan tingkat kepadatan fasilitas kesehatan 
+antarwilayah. Penelitian ini belum menggunakan Nearest Neighbor Analysis 
+(NNA) untuk menguji pola persebaran fasilitas kesehatan secara statistik (Susianti, 
+Riyanto, Ismayuni, Rizki, & Cahyadi, 2023). 
+5. 
+Metode yang digunakan: Nearest Neighbor Analysis (NNA) dan Overlay berbasis 
+Sistem Informasi Geografis (SIG). Temuan penelitian: Data yang digunakan pada 
+penelitian ini berupa data kawasan perumahan, data fasilitas pendukung, batas 
+administrasi wilayah, serta data spasial lainnya di Kecamatan Cianjur. Penelitian 
+ini bertujuan untuk menganalisis pola spasial kawasan perumahan serta 
+ketersediaan fasilitas pendukung menggunakan Sistem Informasi Geografis. 
+Analisis dilakukan dengan metode Nearest Neighbor Analysis (NNA) untuk 
+mengetahui pola persebaran fasilitas pendukung, sedangkan metode Overlay 
+digunakan untuk menganalisis hubungan spasial antara kawasan perumahan dengan 
+fasilitas pendukung yang tersedia. Hasil penelitian menunjukkan bahwa persebaran 
+fasilitas 
+pendukung, 
+termasuk 
+fasilitas 
+kesehatan, 
+dapat 
+diidentifikasi 
+menggunakan Nearest Neighbor Analysis (NNA) sehingga diketahui pola 
+persebarannya pada wilayah penelitian. Selain itu, visualisasi hasil analisis spasial 
+menunjukkan bahwa penyebaran fasilitas pendukung belum sepenuhnya merata 
+
+--- [PAGE 21] ---
+ 
+11 
+ 
+pada setiap kawasan perumahan. Penelitian ini masih menggunakan peta tematik 
+sebagai visualisasi hasil analisis dan belum menerapkan Kernel Density Estimation 
+(KDE) untuk menganalisis tingkat kepadatan spasial fasilitas kesehatan (Aeni & 
+Warlina, 2023). 
+6. 
+Metode yang digunakan: Nearest Neighbor Analysis (NNA) dan Buffer Analysis 
+berbasis Sistem Informasi Geografis (SIG). Temuan penelitian: Data yang 
+digunakan pada penelitian ini berupa data lokasi fasilitas kesehatan, data 
+permukiman kumuh, jaringan jalan pendukung, serta batas administrasi wilayah di 
+Kecamatan Bukit Kecil, Kota Palembang dengan studi kasus Rumah Susun 24 Ilir. 
+Penelitian ini bertujuan untuk menganalisis jangkauan pelayanan fasilitas kesehatan 
+terhadap kawasan permukiman kumuh menggunakan Sistem Informasi Geografis. 
+Analisis dilakukan dengan metode Nearest Neighbor Analysis (NNA) untuk 
+mengidentifikasi pola sebaran fasilitas kesehatan, sedangkan Buffer Analysis 
+digunakan untuk mengevaluasi jangkauan pelayanan fasilitas kesehatan terhadap 
+kawasan permukiman. Hasil penelitian menunjukkan bahwa sebagian besar 
+permukiman telah berada dalam jangkauan fasilitas kesehatan, namun masih 
+terdapat beberapa wilayah yang memiliki akses pelayanan kesehatan terbatas. 
+Penelitian ini berfokus pada analisis jangkauan pelayanan fasilitas kesehatan dan 
+belum menerapkan Kernel Density Estimation (KDE) untuk menganalisis tingkat 
+kepadatan spasial fasilitas kesehatan (Ramadhan, Shalihat, & Putri, 2023). 
+7. 
+Metode yang digunakan: Nearest Neighbor Analysis (NNA) dan Buffer Analysis 
+berbasis Sistem Informasi Geografis (SIG). Temuan penelitian: Data yang 
+digunakan pada penelitian ini berupa data lokasi puskesmas dan puskesmas 
+pembantu (pustu), data batas administrasi wilayah, data persebaran penduduk, serta 
+data pendukung lainnya di Kecamatan Nguter. Penelitian ini bertujuan untuk 
+menganalisis pola persebaran fasilitas pelayanan kesehatan dalam mendukung 
+penanganan pandemi Covid-19 menggunakan Sistem Informasi Geografis. Analisis 
+dilakukan dengan metode Nearest Neighbor Analysis (NNA) untuk mengetahui 
+pola persebaran fasilitas kesehatan, sedangkan Buffer Analysis digunakan untuk 
+menganalisis jangkauan pelayanan fasilitas kesehatan terhadap masyarakat. Hasil 
+penelitian menunjukkan bahwa pola persebaran puskesmas dan puskesmas 
+
+--- [PAGE 22] ---
+ 
+12 
+ 
+pembantu dapat diidentifikasi menggunakan metode Nearest Neighbor Analysis 
+(NNA) sehingga memberikan informasi mengenai karakteristik persebaran fasilitas 
+kesehatan pada wilayah penelitian. Selain itu, hasil Buffer Analysis menunjukkan 
+bahwa sebagian besar wilayah telah berada dalam jangkauan pelayanan fasilitas 
+kesehatan, meskipun masih terdapat beberapa wilayah yang memerlukan 
+peningkatan pemerataan pelayanan kesehatan. Penelitian ini belum menerapkan 
+metode Kernel Density Estimation (KDE) untuk menganalisis tingkat kepadatan 
+spasial fasilitas kesehatan. Selain itu, objek penelitian difokuskan pada puskesmas 
+dan puskesmas pembantu sehingga belum mencakup jenis fasilitas kesehatan 
+lainnya, seperti rumah sakit dan klinik (Rohsulina, Hidayat, Khabibur Rahman, 
+Rahmawati, & Kurniaaji, 2022). 
+8. 
+Metode yang digunakan: Pemetaan berbasis Sistem Informasi Geografis (SIG). 
+Temuan penelitian: Data yang digunakan pada penelitian ini berupa data lokasi 
+rumah sakit, puskesmas, dan klinik pratama yang bekerja sama dengan BPJS 
+Kesehatan di Kota Samarinda. Penelitian ini bertujuan untuk memetakan 
+persebaran fasilitas kesehatan BPJS menggunakan Sistem Informasi Geografis 
+sehingga masyarakat dapat mengetahui lokasi fasilitas kesehatan yang bekerja sama 
+dengan BPJS Kesehatan. Analisis dilakukan dengan memanfaatkan Sistem 
+Informasi Geografis untuk mengolah data koordinat fasilitas kesehatan dan 
+menyajikannya dalam bentuk peta digital. Hasil penelitian menunjukkan bahwa 
+rumah sakit, puskesmas, dan klinik pratama yang bekerja sama dengan BPJS telah 
+berhasil dipetakan berdasarkan lokasi geografisnya sehingga memudahkan 
+masyarakat dalam memperoleh informasi mengenai persebaran fasilitas kesehatan 
+di Kota Samarinda. Penelitian ini masih terbatas pada penyajian informasi spasial 
+berupa pemetaan lokasi fasilitas kesehatan dan belum melakukan analisis statistik 
+spasial menggunakan Nearest Neighbor Analysis (NNA) maupun Kernel Density 
+Estimation (KDE) untuk mengetahui pola sebaran dan tingkat kepadatan fasilitas 
+kesehatan (Kurniadin dkk., 2021). 
+9. 
+Metode yang digunakan: Nearest Neighbor Analysis (NNA), Kernel Density 
+Estimation (KDE), dan Spatial Autocorrelation berbasis Sistem Informasi 
+Geografis (SIG). Temuan penelitian: Data yang digunakan pada penelitian ini 
+
+--- [PAGE 23] ---
+ 
+13 
+ 
+berupa data lokasi berbagai institusi kesehatan, termasuk rumah sakit dan klinik 
+komunitas, di wilayah utama Kota Kunming, China. Penelitian ini bertujuan untuk 
+menganalisis pola distribusi spasial serta karakteristik institusi kesehatan 
+menggunakan Sistem Informasi Geografis. Analisis dilakukan dengan metode 
+Nearest Neighbor Analysis (NNA) untuk mengetahui pola persebaran fasilitas 
+kesehatan, Kernel Density Estimation (KDE) untuk menganalisis tingkat kepadatan 
+spasial, serta Spatial Autocorrelation untuk mengidentifikasi hubungan spasial 
+antar lokasi fasilitas kesehatan. Hasil penelitian menunjukkan bahwa klinik 
+komunitas memiliki tingkat pengelompokan spasial (clustered) yang lebih tinggi 
+dibandingkan rumah sakit umum sehingga distribusi fasilitas kesehatan belum 
+merata pada seluruh wilayah penelitian. Selain itu, hasil analisis kepadatan 
+menunjukkan bahwa konsentrasi fasilitas kesehatan lebih tinggi pada kawasan 
+pusat kota dibandingkan wilayah pinggiran. Penelitian ini memberikan gambaran 
+mengenai karakteristik distribusi spasial institusi kesehatan di Kota Kunming 
+sebagai dasar dalam perencanaan pemerataan pelayanan kesehatan (Zheng, Wang, 
+& Zhang, 2024). 
+10. 
+Metode yang digunakan: Nearest Neighbor Analysis (NNA), Kernel Density 
+Estimation (KDE), dan Geo-Detector berbasis Sistem Informasi Geografis (SIG). 
+Temuan penelitian: Data yang digunakan pada penelitian ini berupa data Point of 
+Interest (POI) fasilitas kesehatan, data kepadatan penduduk, data penggunaan 
+lahan, serta data pendukung lainnya pada kawasan aglomerasi perkotaan Delta 
+Sungai Yangtze, China. Penelitian ini bertujuan untuk menganalisis karakteristik 
+pengelompokan spasial fasilitas kesehatan serta faktor-faktor yang memengaruhi 
+distribusinya menggunakan Sistem Informasi Geografis. Analisis dilakukan dengan 
+metode Nearest Neighbor Analysis (NNA) untuk mengetahui pola persebaran 
+fasilitas kesehatan, Kernel Density Estimation (KDE) untuk menganalisis tingkat 
+kepadatan spasial, serta Geo-Detector untuk mengidentifikasi faktor-faktor yang 
+memengaruhi distribusi fasilitas kesehatan. Hasil penelitian menunjukkan bahwa 
+distribusi fasilitas kesehatan memiliki pola pengelompokan pada kawasan dengan 
+kepadatan penduduk tinggi dan dipengaruhi oleh perkembangan wilayah perkotaan, 
+kebijakan tata ruang, serta aktivitas sosial ekonomi masyarakat. Selain itu, hasil 
+
+--- [PAGE 24] ---
+ 
+14 
+ 
+analisis kepadatan menunjukkan bahwa fasilitas kesehatan lebih terkonsentrasi 
+pada kawasan pusat perkotaan dibandingkan wilayah pinggiran. Penelitian ini 
+memberikan informasi mengenai karakteristik spasial fasilitas kesehatan pada 
+kawasan aglomerasi perkotaan sebagai dasar dalam perencanaan pemerataan 
+pelayanan kesehatan (Wang & Tao, 2024). 
+11. 
+Metode yang digunakan: Nearest Neighbor Analysis (NNA), Kernel Density 
+Estimation (KDE), dan Gini Index berbasis Sistem Informasi Geografis (SIG). 
+Temuan penelitian: Data yang digunakan pada penelitian ini berupa data lokasi 
+rumah sakit, fasilitas pelayanan kesehatan untuk lanjut usia, data kepadatan 
+penduduk, serta data administrasi wilayah di Kota Wuhan, China. Penelitian ini 
+bertujuan untuk menganalisis distribusi spasial dan tingkat pemerataan fasilitas 
+kesehatan menggunakan pendekatan Sistem Informasi Geografis. Analisis 
+dilakukan dengan metode Nearest Neighbor Analysis (NNA) untuk mengetahui 
+pola persebaran fasilitas kesehatan, Kernel Density Estimation (KDE) untuk 
+menganalisis tingkat kepadatan spasial fasilitas kesehatan, serta Gini Index untuk 
+mengukur tingkat pemerataan distribusi fasilitas kesehatan. Hasil penelitian 
+menunjukkan bahwa rumah sakit tersier memiliki pola persebaran yang cenderung 
+mengelompok pada kawasan perkotaan sehingga masih terjadi ketimpangan 
+distribusi pelayanan kesehatan antarwilayah. Selain itu, hasil analisis kepadatan 
+menunjukkan bahwa konsentrasi fasilitas kesehatan lebih tinggi pada pusat kota 
+dibandingkan wilayah pinggiran. Penelitian ini memberikan informasi mengenai 
+tingkat pemerataan distribusi fasilitas kesehatan sebagai dasar dalam penyusunan 
+kebijakan pelayanan kesehatan yang lebih merata (B. Li, Long, & Li, 2025). 
+12. 
+Metode yang digunakan: Nearest Neighbor Analysis (NNA) dan Kernel Density 
+Estimation (KDE) berbasis Sistem Informasi Geografis (SIG). Temuan penelitian: 
+Data yang digunakan pada penelitian ini berupa data lokasi fasilitas kesehatan, data 
+batas administrasi wilayah, data kepadatan penduduk, serta data spasial pendukung 
+lainnya di Igabi Local Government Area, Kaduna State, Nigeria. Penelitian ini 
+bertujuan untuk menganalisis distribusi spasial dan aksesibilitas fasilitas kesehatan 
+menggunakan Sistem Informasi Geografis. Analisis dilakukan dengan metode 
+Nearest Neighbor Analysis (NNA) untuk mengetahui pola persebaran fasilitas 
+
+--- [PAGE 25] ---
+ 
+15 
+ 
+kesehatan serta Kernel Density Estimation (KDE) untuk menganalisis tingkat 
+kepadatan spasial fasilitas kesehatan. Hasil penelitian menunjukkan bahwa fasilitas 
+kesehatan memiliki pola persebaran yang cenderung mengelompok (clustered) 
+pada wilayah tertentu sehingga masih terdapat ketimpangan distribusi pelayanan 
+kesehatan antarwilayah. Selain itu, hasil analisis Kernel Density Estimation (KDE) 
+menunjukkan adanya wilayah dengan konsentrasi fasilitas kesehatan yang tinggi 
+dan wilayah dengan kepadatan fasilitas kesehatan yang rendah sehingga diperlukan 
+pemerataan pembangunan fasilitas kesehatan. Penelitian ini memberikan informasi 
+mengenai distribusi spasial fasilitas kesehatan sebagai dasar dalam perencanaan 
+penyediaan pelayanan kesehatan yang lebih merata (Abdulazeez, Tanim, & 
+Samaila, 2025) 
+13. 
+Metode yang digunakan: Nearest Neighbor Analysis (NNA), Kernel Density 
+Estimation (KDE), dan Network Analysis berbasis Sistem Informasi Geografis 
+(SIG). Temuan penelitian: Data yang digunakan pada penelitian ini berupa data 
+lokasi fasilitas kesehatan, data jaringan jalan, data batas administrasi wilayah, serta 
+data spasial pendukung lainnya di Kota Thiruvananthapuram, India. Penelitian ini 
+bertujuan untuk menganalisis pola persebaran fasilitas kesehatan serta hubungan 
+antara distribusi fasilitas kesehatan dengan struktur jaringan jalan menggunakan 
+Sistem Informasi Geografis. Analisis dilakukan dengan metode Nearest Neighbor 
+Analysis (NNA) untuk mengetahui pola persebaran fasilitas kesehatan, Kernel 
+Density Estimation (KDE) untuk menganalisis tingkat kepadatan spasial fasilitas 
+kesehatan, serta Network Analysis untuk mengidentifikasi hubungan antara lokasi 
+fasilitas kesehatan dengan jaringan jalan. Hasil penelitian menunjukkan bahwa 
+struktur jaringan jalan memiliki pengaruh terhadap pola persebaran berbagai 
+kategori fasilitas kesehatan sehingga sebagian besar fasilitas kesehatan 
+terkonsentrasi pada wilayah dengan aksesibilitas jalan yang tinggi. Selain itu, hasil 
+analisis kepadatan menunjukkan bahwa fasilitas kesehatan cenderung terpusat pada 
+kawasan yang memiliki konektivitas jaringan jalan yang baik. Penelitian ini 
+memberikan informasi mengenai hubungan antara distribusi fasilitas kesehatan dan 
+jaringan jalan sebagai dasar dalam perencanaan tata ruang serta pengembangan 
+pelayanan kesehatan yang lebih efektif (Daniel, Mathew, & Saravanan, 2021). 
+
+--- [PAGE 26] ---
+ 
+16 
+ 
+Perbedaan dengan Penelitian Sebelumnya 
+Berdasarkan referensi yang terkait, maka didapatkan beberapa perbedaan 
+penelitian terdahulu sebagai dasar penelitian ini. Adapun perbedaan penelitian dapat 
+dilihat pada Tabel 2.1.  
+Tabel 2. 1 Perbedaan Penelitian Sebelumnya 
+No. 
+Judul 
+Peneliti 
+Perbedaan 
+1 
+Analisis Sebaran dan 
+Aksesibilitas Puskesmas 
+Menggunakan 
+Metode 
+Kernel 
+Density 
+Estimation, 
+Average 
+Nearest 
+Neighbour 
+(ANN), dan Two-Step 
+Floating 
+Catchment 
+Area 
+(2SFCA) 
+di 
+Kabupaten 
+Kebumen 
+Tahun 2024 
+Savitri & Sari 
+(2025)  
+Berfokus pada puskesmas saja dan 
+menambahkan analisis aksesibilitas 
+2SFCA, sedangkan penelitian ini 
+menganalisis 
+tiga 
+jenis 
+faskes 
+(rumah sakit, puskesmas, klinik) 
+secara berimbang tanpa analisis 
+aksesibilitas. 
+2 
+Distribution 
+Patterns 
+and 
+Accessibility 
+of 
+Health 
+Facilities 
+Analysis 
+Using 
+Geographic Information 
+Systems (GIS) in Badung 
+District, Indonesia 
+Nafisa 
+dkk. 
+(2024) 
+Menganalisis pola sebaran dengan 
+ANN dan jangkauan Buffer, namun 
+belum menerapkan Kernel Density 
+Estimation 
+(KDE) 
+untuk 
+memetakan 
+tingkat 
+kepadatan 
+kontinu. 
+3 
+Rute 
+Optimal 
+Keterjangkauan Fasilitas 
+Pelayanan 
+Kesehatan 
+Rumah Sakit terhadap 
+Lokasi 
+Rawan 
+Kecelakaan 
+di 
+Kota 
+Padang 
+Zulprima 
+& 
+Shahar (2024) 
+Terbatas pada objek rumah sakit dan 
+analisis 
+keterjangkauan 
+lokasi 
+kecelakaan, sedangkan penelitian 
+ini mengintegrasikan seluruh jenis 
+faskes dasar dan rujukan. 
+4 
+Geographic 
+Accessibility to Primary 
+Healthcare: Study Case 
+Dengue 
+Fever 
+in 
+Purwosari Sub-District, 
+Gunungkidul 
+Regency, 
+Yogyakarta, Indonesia 
+Susianti 
+dkk. 
+(2023) 
+Menggunakan KDE dan Buffer 
+Analysis untuk kasus DBD, namun 
+tidak menerapkan Nearest Neighbor 
+Analysis (NNA) untuk menguji pola 
+sebaran secara statistik. 
+5 
+Pola Spasial Kawasan 
+Perumahan 
+serta 
+Ketersediaan 
+Fasilitas 
+Aeni & Warlina 
+(2023) 
+Menerapkan NNA dan Overlay 
+pada 
+fasilitas 
+umum 
+kawasan 
+perumahan, 
+tetapi 
+belum 
+
+--- [PAGE 27] ---
+ 
+17 
+ 
+No. 
+Judul 
+Peneliti 
+Perbedaan 
+Pendukung 
+di 
+Kecamatan Cianjur 
+menggunakan 
+KDE 
+untuk 
+visualisasi 
+kepadatan 
+spasial 
+(heatmap). 
+6 
+Analisis 
+Jangkauan 
+Jarak 
+Fasilitas 
+Kesehatan 
+terhadap 
+Pemukiman Kumuh di 
+Kecamatan Bukit Kecil 
+Palembang 
+(Studi 
+Kasus: Rumah Susun 24 
+Ilir) 
+Ramadhan dkk. 
+(2023) 
+Berfokus pada analisis jangkauan 
+pelayanan 
+faskes 
+terhadap 
+permukiman kumuh menggunakan 
+Buffer, tanpa mengkaji tingkat 
+kepadatan spasial dengan KDE. 
+7 
+GIS 
+Application 
+for 
+Spatial 
+Analysis 
+of 
+Public Health Centres in 
+Response to COVID-19 
+Pandemic 
+Rohsulina dkk. 
+(2022) 
+Terbatas 
+pada 
+puskesmas 
+dan 
+puskesmas pembantu (pustu) dalam 
+konteks penanganan pandemi, serta 
+belum mengintegrasikan metode 
+KDE. 
+8 
+Pemetaan 
+Fasilitas 
+Kesehatan BPJS Kota 
+Samarinda Studi Kasus 
+Rumah 
+Sakit, 
+Puskesmas, dan Klinik 
+Pratama 
+Kurniadin dkk. 
+(2021) 
+Terbatas 
+pada 
+pemetaan 
+inventarisasi lokasi faskes BPJS di 
+Samarinda 
+tanpa 
+melakukan 
+pengujian statistik spasial NNA 
+maupun pemetaan kepadatan KDE.  
+ 
+9 
+Spatial 
+Distribution 
+Pattern 
+and 
+Characteristics 
+of 
+Medical Institution in 
+Kunming’s Main Urban 
+District Based on GIS 
+Zheng 
+dkk. 
+(2024) 
+Mengombinasikan NNA, KDE, dan 
+Spatial Autocorrelation pada skala 
+kota megapolitan di Tiongkok, 
+sedangkan penelitian ini berfokus 
+pada 
+dinamika 
+wilayah 
+Kota 
+Samarinda. 
+10 
+Research on the Spatial 
+Aggregation 
+Characteristics 
+of 
+Medical 
+and 
+Health 
+Facilities in the Yangtze 
+River 
+Delta 
+Urban 
+Agglomeration Based on 
+POI 
+Wang & Tao 
+(2024) 
+Menggunakan NNA, KDE, dan 
+Geo-Detector untuk menganalisis 
+faktor aglomerasi perkotaan skala 
+besar, 
+berbeda 
+dengan 
+fokus 
+evaluasi pemerataan faskes lokal 
+dalam penelitian ini. 
+11 
+Geospatial Analysis of 
+Healthcare and Older 
+Adult Care Institutions 
+in 
+Wuhan: 
+A 
+Multimethod Approach 
+to 
+Assessing 
+Spatial 
+Equity 
+B. 
+Li 
+dkk. 
+(2025) 
+Berfokus pada faskes lansia dan 
+rumah sakit tersier menggunakan 
+NNA, KDE, dan Gini Index, 
+sedangkan penelitian ini mencakup 
+faskes 
+pelayanan 
+umum 
+skala 
+perkotaan. 
+
+--- [PAGE 28] ---
+ 
+18 
+ 
+No. 
+Judul 
+Peneliti 
+Perbedaan 
+12 
+Geospatial Analysis of 
+Healthcare 
+Facilities 
+Distribution 
+and 
+Accessibility in Igabi 
+LGA, 
+Kaduna 
+State, 
+Nigeria 
+Abdulazeez dkk. 
+(2025) 
+Menerapkan NNA dan KDE pada 
+wilayah Igabi Nigeria, sedangkan 
+penelitian 
+ini 
+menerapkan 
+kombinasi metode serupa untuk 
+konteks spesifik Kota Samarinda. 
+13 
+Network 
+Constrained 
+and Classified Spatial 
+Pattern 
+Analysis 
+of 
+Healthcare 
+Facilities 
+and Their Relationship 
+with the Road Structure: 
+A 
+Case 
+Study 
+of 
+Thiruvananthapuram 
+City 
+Daniel 
+dkk. 
+(2021) 
+Mengintegrasikan NNA, KDE, dan 
+Network Analysis jaringan jalan, 
+sedangkan penelitian ini berfokus 
+pada pola sebaran dan permukaan 
+kepadatan wilayah.  
+ 
+Berdasarkan tinjauan perbandingan pada Tabel 2.1, kebaruan (novelty) penelitian 
+ini terletak pada integrasi tiga jenis fasilitas kesehatan (Rumah Sakit, Puskesmas, dan 
+Klinik) di Kota Samarinda serta penggabungan metode Nearest Neighbor Analysis 
+(NNA) untuk menguji pola sebaran secara statistik dan Kernel Density Estimation (KDE) 
+untuk memetakan permukaan kepadatan kontinu (heatmap) secara simultan, sehingga 
+menghasilkan informasi geospasial yang lebih komprehensif dibandingkan penelitian 
+terdahulu yang umumnya terbatas pada pemetaan inventarisasi lokasi fisik atau 
+penggunaan metode tunggal. 
+ 
+2.2 
+Sistem Informasi Geografis (SIG) 
+ 
+Sistem Informasi Geografis (SIG) merupakan suatu sistem berbasis komputer yang 
+digunakan untuk memperoleh, menyimpan, mengelola, memanipulasi, menganalisis, dan 
+menyajikan data yang memiliki referensi geografis atau lokasi di permukaan bumi. SIG 
+mengintegrasikan data spasial dengan data atribut sehingga mampu menghasilkan 
+informasi yang mendukung proses analisis dan pengambilan keputusan berdasarkan 
+aspek keruangan. Kemampuan tersebut menjadikan SIG tidak hanya berfungsi sebagai 
+
+--- [PAGE 29] ---
+ 
+19 
+ 
+media visualisasi peta, tetapi juga sebagai alat analisis yang dapat mengidentifikasi 
+hubungan spasial, pola persebaran, tingkat kepadatan, serta karakteristik suatu wilayah 
+secara lebih komprehensif (Chang, 2022; Goodchild & Longley, 2021)  
+Dalam implementasinya, SIG terdiri atas lima komponen utama yang saling 
+berhubungan, yaitu perangkat keras (hardware), perangkat lunak (software), data, sumber 
+daya manusia (brainware), dan metode (methods). Perangkat keras berfungsi sebagai 
+sarana untuk menjalankan aplikasi SIG serta mengolah data geospasial. Perangkat lunak 
+menyediakan berbagai fungsi untuk proses input, penyimpanan, pengelolaan, analisis, 
+dan visualisasi data spasial, seperti QGIS atau ArcGIS. Data merupakan komponen yang 
+paling mendasar karena menjadi sumber informasi yang akan dianalisis, baik berupa data 
+spasial maupun data atribut. Sumber daya manusia berperan dalam merancang analisis, 
+mengelola data, menginterpretasikan hasil, dan mendukung proses pengambilan 
+keputusan. Sementara itu, metode merupakan serangkaian prosedur atau tahapan analisis 
+yang digunakan agar pengolahan data berlangsung secara sistematis, konsisten, dan 
+menghasilkan informasi yang dapat dipertanggungjawabkan. Kelima komponen tersebut 
+harus saling mendukung agar SIG dapat berfungsi secara optimal dalam menyelesaikan 
+berbagai permasalahan yang berkaitan dengan aspek keruangan (Chang, 2022; Goodchild 
+& Longley, 2021). 
+Berdasarkan karakteristik datanya, SIG mengelola dua jenis data utama, yaitu data 
+spasial dan data atribut. Data spasial merupakan data yang menggambarkan posisi, 
+bentuk, ukuran, serta hubungan antarobjek di permukaan bumi melalui sistem koordinat 
+tertentu. Data spasial umumnya direpresentasikan dalam bentuk titik (point), garis (line), 
+dan poligon (polygon). Sementara itu, data atribut merupakan informasi deskriptif yang 
+menjelaskan karakteristik setiap objek spasial, seperti nama, jenis, fungsi, kapasitas, 
+maupun informasi pendukung lainnya. Integrasi antara data spasial dan data atribut 
+memungkinkan SIG menghasilkan informasi geografis yang lebih lengkap sehingga 
+dapat digunakan untuk melakukan analisis keruangan secara lebih akurat dibandingkan 
+penyajian data secara konvensional (Chang, 2022; Goodchild & Longley, 2021). 
+Perkembangan teknologi SIG telah mendorong pemanfaatannya dalam berbagai 
+bidang, seperti perencanaan wilayah, pengelolaan sumber daya alam, transportasi, 
+mitigasi bencana, lingkungan, hingga sektor kesehatan. Dalam bidang kesehatan, SIG 
+
+--- [PAGE 30] ---
+ 
+20 
+ 
+digunakan untuk memetakan lokasi fasilitas kesehatan, menganalisis distribusi pelayanan 
+kesehatan, mengidentifikasi wilayah yang memiliki keterbatasan akses terhadap 
+pelayanan kesehatan, serta mendukung proses perencanaan dan evaluasi pemerataan 
+fasilitas kesehatan. Kemampuan SIG dalam mengintegrasikan data spasial dengan 
+berbagai metode analisis statistik menjadikannya sebagai salah satu teknologi yang 
+efektif dalam menghasilkan informasi geografis yang mendukung penyusunan kebijakan 
+berbasis bukti (evidence-based policy) (Chang, 2022; Goodchild & Longley, 2021; 
+Hashtarkhani, Schwartz, & Shaban-Nejad, 2024). 
+Pada penelitian ini, SIG digunakan sebagai platform utama untuk mengelola, 
+mengolah, menganalisis, dan memvisualisasikan data spasial fasilitas kesehatan di Kota 
+Samarinda. Data lokasi rumah sakit, puskesmas, dan klinik yang diperoleh dari Geoportal 
+Satu Peta Kota Samarinda diintegrasikan dengan data batas administrasi dari Badan 
+Informasi Geospasial (BIG). Selanjutnya, analisis dilakukan menggunakan metode 
+Nearest Neighbor Analysis (NNA) untuk mengidentifikasi pola sebaran fasilitas 
+kesehatan serta metode Kernel Density Estimation (KDE) untuk menganalisis tingkat 
+kepadatan spasial. Hasil analisis kemudian disajikan dalam bentuk peta tematik sebagai 
+dasar interpretasi kondisi distribusi fasilitas kesehatan di Kota Samarinda. 
+ 
+2.3 
+Fasilitas Kesehatan 
+ 
+Fasilitas kesehatan merupakan tempat yang digunakan untuk menyelenggarakan 
+pelayanan kesehatan kepada masyarakat dalam bentuk pelayanan promotif, preventif, 
+kuratif, rehabilitatif, dan paliatif. Ketersediaan fasilitas kesehatan berkaitan erat dengan 
+derajat kesehatan suatu wilayah, karena akses yang mudah, mutu pelayanan yang baik, 
+dan keberlanjutan layanan hanya dapat terwujud apabila fasilitas kesehatan tersedia 
+dalam jumlah yang memadai sekaligus tersebar secara merata. Pemerataan sebaran 
+fasilitas kesehatan menjadi aspek yang sama pentingnya dengan jumlah fasilitas itu 
+sendiri dalam upaya menjamin akses pelayanan kesehatan yang adil bagi seluruh 
+masyarakat (Peraturan Pemerintah Republik Indonesia, 2024; Undang-Undang Republik 
+Indonesia, 2023). 
+
+--- [PAGE 31] ---
+ 
+21 
+ 
+Berdasarkan Undang-Undang Republik Indonesia Nomor 17 Tahun 2023 tentang 
+Kesehatan, fasilitas pelayanan kesehatan didefinisikan sebagai tempat dan/atau alat yang 
+digunakan untuk menyelenggarakan pelayanan kesehatan kepada perseorangan maupun 
+masyarakat melalui upaya promotif, preventif, kuratif, rehabilitatif, dan/atau paliatif. 
+Fasilitas pelayanan kesehatan dapat diselenggarakan oleh pemerintah pusat, pemerintah 
+daerah, maupun masyarakat sesuai dengan ketentuan peraturan perundang-undangan 
+yang berlaku. Ketentuan tersebut selanjutnya dijabarkan dalam Peraturan Pemerintah 
+Republik Indonesia Nomor 28 Tahun 2024 sebagai peraturan pelaksana undang-undang 
+tersebut. 
+Secara umum, fasilitas pelayanan kesehatan di Indonesia terdiri atas beberapa 
+jenis, antara lain rumah sakit, puskesmas, klinik, laboratorium kesehatan, praktik mandiri 
+tenaga medis atau tenaga kesehatan, apotek, dan fasilitas pelayanan kesehatan lainnya. 
+Rumah sakit, puskesmas, dan klinik memiliki fungsi yang berbeda dalam sistem 
+pelayanan kesehatan nasional. Rumah sakit menyelenggarakan pelayanan kesehatan 
+rujukan secara paripurna, puskesmas berfokus pada pelayanan kesehatan tingkat pertama 
+dengan mengutamakan upaya promotif dan preventif, sedangkan klinik memberikan 
+pelayanan medis sesuai dengan jenis dan kemampuan pelayanan yang dimiliki (Peraturan 
+Pemerintah Republik Indonesia, 2024). 
+Penelitian ini membatasi objek analisis pada rumah sakit, puskesmas, dan klinik 
+yang diklasifikasikan sebagai fasilitas pelayanan kesehatan pada data resmi Geoportal 
+Satu Peta Kota Samarinda. Jenis fasilitas pelayanan kesehatan lain di luar ketiga jenis 
+tersebut, seperti puskesmas pembantu, laboratorium kesehatan, praktik mandiri tenaga 
+medis, apotek, dan optik, tidak dimasukkan sebagai objek penelitian. Pembatasan tersebut 
+dilakukan agar analisis pola sebaran menggunakan Nearest Neighbor Analysis (NNA) 
+dan analisis kepadatan menggunakan Kernel Density Estimation (KDE) dapat 
+dilaksanakan secara konsisten sesuai dengan klasifikasi fasilitas kesehatan pada sumber 
+data resmi penelitian. 
+ 
+2.3.1 Rumah Sakit 
+Rumah sakit merupakan fasilitas pelayanan kesehatan yang menyelenggarakan 
+pelayanan kesehatan perseorangan secara paripurna melalui pelayanan rawat jalan, rawat 
+
+--- [PAGE 32] ---
+ 
+22 
+ 
+inap, dan gawat darurat. Sebagai fasilitas pelayanan kesehatan rujukan, rumah sakit 
+berperan dalam memberikan pelayanan medis spesialistik dan subspesialistik yang 
+didukung oleh tenaga kesehatan, peralatan medis, serta sarana dan prasarana yang 
+memadai. Cakupan pelayanan tersebut menjadikan keberadaan rumah sakit sebagai salah 
+satu faktor yang menentukan kualitas pelayanan kesehatan pada suatu wilayah (Peraturan 
+Pemerintah Republik Indonesia, 2024; Undang-Undang Republik Indonesia, 2023). 
+Selain memberikan pelayanan kepada pasien, rumah sakit juga berfungsi sebagai 
+tempat pendidikan dan pelatihan tenaga kesehatan, serta sebagai wadah penelitian dan 
+pengembangan ilmu pengetahuan di bidang kesehatan. Pelayanan yang diberikan 
+meliputi upaya promotif, preventif, kuratif, rehabilitatif, dan paliatif yang dilaksanakan 
+secara terpadu sesuai dengan standar pelayanan kesehatan yang berlaku (Peraturan 
+Pemerintah Republik Indonesia, 2024; Undang-Undang Republik Indonesia, 2023). 
+Dalam penelitian ini, data lokasi rumah sakit yang diklasifikasikan pada 
+Geoportal Satu Peta Kota Samarinda menjadi bagian dari data fasilitas kesehatan 
+gabungan yang dianalisis bersama puskesmas dan klinik menggunakan metode Nearest 
+Neighbor Analysis (NNA) dan Kernel Density Estimation (KDE). Melalui pendekatan 
+tersebut, kontribusi rumah sakit terhadap pola sebaran dan tingkat kepadatan fasilitas 
+kesehatan dapat diamati sebagai bagian dari distribusi fasilitas kesehatan secara 
+keseluruhan di Kota Samarinda. 
+ 
+2.3.2 Puskesmas 
+Pusat Kesehatan Masyarakat (Puskesmas) merupakan fasilitas pelayanan 
+kesehatan tingkat pertama yang menyelenggarakan pelayanan kesehatan masyarakat dan 
+pelayanan kesehatan perseorangan dengan mengutamakan upaya promotif dan preventif 
+di wilayah kerjanya. Puskesmas berperan sebagai ujung tombak penyelenggaraan 
+pelayanan kesehatan dasar yang bertujuan meningkatkan derajat kesehatan masyarakat 
+melalui penyelenggaraan Upaya Kesehatan Masyarakat (UKM) dan Upaya Kesehatan 
+Perseorangan (UKP) secara terpadu (Peraturan Pemerintah Republik Indonesia, 2024; 
+Undang-Undang Republik Indonesia, 2023). 
+Selain memberikan pelayanan pengobatan dasar, puskesmas juga melaksanakan 
+berbagai program kesehatan masyarakat, seperti pelayanan kesehatan ibu dan anak, 
+
+--- [PAGE 33] ---
+ 
+23 
+ 
+imunisasi, pengendalian penyakit, promosi kesehatan, dan kesehatan lingkungan. Setiap 
+puskesmas memiliki wilayah kerja tertentu sehingga keberadaan dan persebarannya 
+menjadi salah satu faktor penting dalam pemerataan pelayanan kesehatan dasar bagi 
+masyarakat (Peraturan Pemerintah Republik Indonesia, 2024; Undang-Undang Republik 
+Indonesia, 2023).  
+Sebagaimana rumah sakit, data lokasi puskesmas pada penelitian ini turut 
+digabungkan ke dalam satu kumpulan data fasilitas kesehatan sebelum dianalisis 
+menggunakan metode NNA dan KDE. Puskesmas pembantu tidak termasuk dalam objek 
+penelitian karena diklasifikasikan sebagai jenis fasilitas pelayanan kesehatan yang 
+berbeda pada sumber data tersebut. Melalui penggabungan data tersebut, hasil penelitian 
+dapat menunjukkan kontribusi puskesmas terhadap pola sebaran dan kepadatan fasilitas 
+kesehatan Kota Samarinda secara keseluruhan. 
+ 
+2.3.3 Klinik 
+Klinik merupakan fasilitas pelayanan kesehatan yang menyelenggarakan 
+pelayanan kesehatan perseorangan melalui pelayanan medis dasar dan/atau pelayanan 
+medis spesialistik sesuai dengan jenis dan kemampuan pelayanan yang dimiliki. Klinik 
+dapat diselenggarakan oleh pemerintah, pemerintah daerah, maupun masyarakat sehingga 
+bersifat lebih fleksibel dalam menjangkau masyarakat secara mudah, cepat, dan 
+berkesinambungan. Selain memberikan pelayanan medis, klinik juga dapat 
+menyelenggarakan pelayanan penunjang medis sesuai dengan ketentuan peraturan 
+perundang-undangan yang berlaku (Undang-Undang Republik Indonesia, 2023). 
+Berdasarkan jenis pelayanannya, klinik dibedakan menjadi klinik pratama yang 
+menyelenggarakan pelayanan medis dasar, dan klinik utama yang menyelenggarakan 
+pelayanan medis spesialistik sesuai dengan sumber daya manusia, sarana prasarana, dan 
+perizinan yang dimiliki. Jumlah klinik di Kota Samarinda tercatat sebanyak 150 unit, jauh 
+lebih banyak dibandingkan rumah sakit maupun puskesmas, sehingga klinik berpotensi 
+memberikan pengaruh yang cukup besar terhadap hasil analisis pola sebaran dan 
+kepadatan fasilitas kesehatan secara keseluruhan (Badan Pusat Statistik Kota, 2025). 
+Dalam penelitian ini, objek klinik mengacu pada fasilitas pelayanan kesehatan 
+yang diklasifikasikan sebagai klinik pada data resmi Geoportal Satu Peta Kota Samarinda. 
+
+--- [PAGE 34] ---
+ 
+24 
+ 
+Fasilitas pelayanan kesehatan lainnya yang tidak termasuk dalam klasifikasi tersebut, 
+seperti apotek, praktik mandiri tenaga medis, laboratorium kesehatan, dan optik, tidak 
+menjadi objek penelitian. Data lokasi klinik selanjutnya digabungkan bersama data rumah 
+sakit dan puskesmas ke dalam satu data fasilitas kesehatan, kemudian dianalisis 
+menggunakan metode NNA dan KDE, sehingga kontribusi klinik terhadap pola sebaran 
+dan kepadatan fasilitas kesehatan Kota Samarinda dapat diketahui sebagai bagian dari 
+gambaran distribusi fasilitas kesehatan secara menyeluruh. 
+ 
+2.4 
+Data dalam Sistem Informasi Geografis 
+ 
+Data merupakan komponen utama dalam Sistem Informasi Geografis (SIG) karena 
+menjadi dasar dalam proses pengelolaan, analisis, dan penyajian informasi geografis. 
+Kualitas hasil analisis spasial sangat dipengaruhi oleh kualitas data yang digunakan, 
+sehingga proses pengumpulan, pengolahan, dan validasi data perlu dilakukan secara 
+cermat. Dalam SIG, data yang digunakan umumnya terdiri atas dua jenis, yaitu data 
+spasial dan data nonspasial (atribut). Kedua jenis data tersebut saling melengkapi 
+sehingga mampu menghasilkan informasi geografis yang lebih akurat dan komprehensif 
+dalam mendukung proses analisis keruangan (Chang, 2022; Goodchild & Longley, 2021). 
+Pada penelitian ini, data dalam SIG digunakan sebagai dasar untuk menganalisis 
+pola sebaran dan kepadatan fasilitas kesehatan di Kota Samarinda. Data spasial berupa 
+lokasi rumah sakit, puskesmas, klinik, dan batas administrasi wilayah diintegrasikan 
+dengan data nonspasial berupa informasi atribut setiap fasilitas kesehatan. Integrasi kedua 
+jenis data tersebut memungkinkan analisis menggunakan metode Nearest Neighbor 
+Analysis (NNA) dan Kernel Density Estimation (KDE) dilakukan secara sistematis 
+sehingga menghasilkan informasi spasial yang dapat digunakan untuk mengevaluasi 
+pemerataan fasilitas kesehatan. 
+  
+2.4.1 Data Spasial 
+Data spasial merupakan data yang menggambarkan posisi, bentuk, ukuran, dan 
+hubungan suatu objek di permukaan bumi berdasarkan sistem koordinat tertentu. Dalam 
+Sistem Informasi Geografis, data spasial umumnya direpresentasikan dalam bentuk titik 
+
+--- [PAGE 35] ---
+ 
+25 
+ 
+(point), garis (line), dan poligon (polygon) sesuai dengan karakteristik objek yang 
+dipetakan. Representasi tersebut memungkinkan analisis hubungan keruangan, 
+pengukuran jarak, identifikasi pola persebaran, serta visualisasi objek secara akurat 
+(Chang, 2022; Goodchild & Longley, 2021).  
+Pada penelitian ini, data spasial yang digunakan meliputi lokasi rumah sakit, 
+puskesmas, dan klinik dalam bentuk data titik (point), sedangkan batas administrasi Kota 
+Samarinda digunakan dalam bentuk data poligon (polygon). Data lokasi fasilitas 
+kesehatan diperoleh dari Geoportal Satu Peta Kota Samarinda, sedangkan data batas 
+administrasi diperoleh dari Badan Informasi Geospasial (BIG). Seluruh data tersebut 
+diolah menggunakan perangkat lunak QGIS sebagai dasar analisis pola sebaran 
+menggunakan Nearest Neighbor Analysis (NNA) dan analisis kepadatan menggunakan 
+Kernel Density Estimation (KDE). 
+ 
+2.4.2 Data Nonspasial (Data Atribut) 
+Data nonspasial atau data atribut merupakan data yang berisi informasi deskriptif 
+mengenai karakteristik suatu objek spasial tanpa menunjukkan posisi geografisnya. Data 
+atribut berfungsi untuk memberikan identitas dan informasi pendukung bagi setiap objek 
+sehingga dapat dianalisis bersama dengan data spasial. Integrasi data atribut dengan data 
+spasial memungkinkan setiap objek tidak hanya diketahui lokasinya, tetapi juga 
+karakteristik yang dimilikinya sehingga menghasilkan informasi yang lebih lengkap  
+(Chang, 2022; Goodchild & Longley, 2021).  
+Dalam penelitian ini, data atribut yang digunakan meliputi nama fasilitas kesehatan, 
+jenis fasilitas kesehatan, kecamatan, kelurahan, serta koordinat longitude dan latitude 
+yang tersimpan dalam tabel atribut. Integrasi antara data spasial dan data atribut tersebut 
+dilakukan dalam lingkungan Sistem Informasi Geografis sehingga setiap objek fasilitas 
+kesehatan memiliki referensi lokasi sekaligus karakteristik deskriptifnya. Hal ini menjadi 
+dasar dalam pelaksanaan analisis Nearest Neighbor Analysis (NNA) dan Kernel Density 
+Estimation (KDE) untuk menghasilkan informasi mengenai pola sebaran dan tingkat 
+kepadatan fasilitas kesehatan di Kota Samarinda. 
+ 
+ 
+
+--- [PAGE 36] ---
+ 
+26 
+ 
+2.5 
+QGIS 
+ 
+QGIS (Quantum Geographic Information System) merupakan perangkat lunak 
+Sistem Informasi Geografis (SIG) yang bersifat open source dan dikembangkan oleh 
+komunitas Open Source Geospatial Foundation (OSGeo). QGIS dirancang untuk 
+mengelola, mengolah, menganalisis, dan memvisualisasikan data geospasial dalam 
+berbagai format sehingga banyak dimanfaatkan dalam bidang perencanaan wilayah, 
+lingkungan, transportasi, pertanian, hingga kesehatan. Sebagai perangkat lunak terbuka, 
+QGIS dapat digunakan tanpa biaya lisensi serta terus dikembangkan melalui pembaruan 
+fitur dan dukungan dari komunitas pengembang di berbagai negara (Chang, 2022; QGIS 
+Development Team, 2024).  
+QGIS mendukung berbagai format data geospasial, seperti Shapefile (SHP), 
+GeoPackage, GeoJSON, KML, serta data raster seperti GeoTIFF. Selain itu, QGIS juga 
+mampu mengintegrasikan data atribut dalam berbagai format, seperti Microsoft Excel 
+(XLS/XLSX) 
+dan 
+Comma 
+Separated 
+Values 
+(CSV). 
+Kemampuan 
+tersebut 
+memungkinkan pengguna mengelola data spasial dan data atribut secara terintegrasi 
+sehingga proses analisis keruangan dapat dilakukan secara lebih efektif dan efisien (QGIS 
+Development Team, 2024). 
+Pada penelitian ini, QGIS digunakan sebagai perangkat lunak utama untuk 
+mengolah data spasial fasilitas kesehatan di Kota Samarinda. Tahapan pengolahan data 
+meliputi pengimporan data spasial rumah sakit, puskesmas, klinik, dan batas administrasi 
+wilayah, dilanjutkan dengan pemeriksaan Coordinate Reference System (CRS), validasi 
+atribut, serta pengecekan posisi objek sebelum dilakukan analisis. Selanjutnya, data 
+spasial dipersiapkan menggunakan QGIS melalui proses pemeriksaan sistem koordinat 
+(Coordinate Reference System/CRS), validasi data atribut, konversi format data, dan 
+ekspor data spasial ke format yang sesuai. Analisis Kernel Density Estimation (KDE) 
+dilakukan menggunakan QGIS untuk menghasilkan peta kepadatan (heatmap), 
+sedangkan analisis Nearest Neighbor Analysis (NNA) dilakukan menggunakan bahasa 
+pemrograman Python pada platform Google Colab dengan memanfaatkan pustaka 
+geospasial dan statistik spasial. Hasil kedua analisis kemudian divisualisasikan dalam 
+bentuk peta tematik dan tabel statistik. Hasil analisis kemudian divisualisasikan dalam 
+
+--- [PAGE 37] ---
+ 
+27 
+ 
+bentuk peta tematik yang dilengkapi elemen kartografi, seperti judul peta, legenda, skala, 
+arah utara, sistem koordinat, dan sumber data sehingga informasi yang dihasilkan lebih 
+mudah dipahami dan diinterpretasikan. 
+Penggunaan QGIS dalam penelitian ini memberikan kemudahan dalam 
+mengintegrasikan data spasial dengan data atribut serta mendukung pelaksanaan analisis 
+spasial secara sistematis. Selain menghasilkan visualisasi peta yang informatif, QGIS 
+juga memfasilitasi proses analisis menggunakan metode NNA dan KDE sehingga hasil 
+penelitian dapat menggambarkan pola sebaran dan tingkat kepadatan fasilitas kesehatan 
+di Kota Samarinda secara lebih akurat. 
+ 
+2.6 
+Nearest Neighbor Analysis (NNA) 
+ 
+Nearest Neighbor Analysis (NNA) merupakan salah satu metode analisis spasial 
+yang digunakan untuk mengidentifikasi pola persebaran suatu objek berdasarkan jarak 
+antar titik yang saling berdekatan (nearest neighbor). Dalam analisis spasial, metode ini 
+digunakan untuk mengevaluasi apakah suatu kumpulan objek memiliki pola persebaran 
+yang mengelompok (clustered), acak (random), atau seragam (dispersed) melalui 
+perbandingan antara rata-rata jarak antar titik yang diamati dengan rata-rata jarak yang 
+diharapkan apabila objek tersebar secara acak. Metode ini banyak diterapkan dalam 
+penelitian geografi, epidemiologi, perencanaan wilayah, dan kesehatan karena mampu 
+memberikan ukuran kuantitatif terhadap karakteristik distribusi spasial suatu fenomena 
+(Chang, 2022; Goodchild & Longley, 2021).   
+Prinsip dasar Nearest Neighbor Analysis adalah menghitung jarak dari setiap titik 
+menuju titik terdekatnya (Observed Mean Distance), kemudian membandingkannya 
+dengan rata-rata jarak yang diharapkan (Expected Mean Distance) apabila seluruh titik 
+tersebar secara acak pada wilayah penelitian. Hasil perbandingan tersebut menghasilkan 
+Nearest Neighbor Ratio (R) yang digunakan sebagai indikator utama dalam menentukan 
+pola persebaran objek. Selain nilai R, analisis ini juga menghasilkan z-score dan p-value 
+yang digunakan untuk menguji signifikansi statistik sehingga dapat diketahui apakah pola 
+persebaran yang terbentuk berbeda secara nyata dari pola acak atau hanya terjadi karena 
+variasi acak  (Chang, 2022; Esri, 2024). 
+
+--- [PAGE 38] ---
+ 
+28 
+ 
+Perhitungan Nearest Neighbor Analysis (NNA) dilakukan dengan terlebih dahulu 
+menghitung rata-rata jarak harapan (𝑟𝑒), yaitu rata-rata jarak antar-titik yang diharapkan 
+apabila seluruh objek tersebar secara acak pada wilayah penelitian. Nilai rata-rata jarak 
+harapan dihitung menggunakan persamaan (2.1) (Clark & Evans, 1954; Nafisa dkk., 
+2024). 
+ 
+𝑟𝑒=
+1
+2√𝑛
+𝐴
+    
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(2.1) 
+Di mana: 
+𝑟𝑒= Rata-rata jarak harapan  
+𝑛 = Jumlah titik (objek)  
+𝐴 = Luas wilayah penelitian 
+ 
+Setelah nilai 𝑟𝑒 diperoleh, selanjutnya dilakukan perhitungan Nearest Neighbor 
+Ratio (𝑅) untuk mengukur rasio perbandingan antara rata-rata jarak aktual yang teramati 
+(Observed Mean Distance) dengan rata-rata jarak harapan (Expected Mean Distance). 
+Nilai Nearest Neighbor Ratio (𝑅) dihitung menggunakan persamaan (2.2) (Clark & 
+Evans, 1954; Nafisa dkk., 2024). 
+ 
+𝑅=
+𝑟𝑜
+𝑟𝑒    
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(2.2) 
+Di mana: 
+𝑅 = Nearest Neighbor Ratio  
+𝑟𝑜= Rata-rata jarak aktual antar titik terdekat (Observed Mean Distance)  
+𝑟𝑒= Rata-rata jarak harapan (Expected Mean Distance) 
+ 
+Interpretasi hasil analisis dilakukan berdasarkan nilai Nearest Neighbor Ratio (R). 
+Apabila nilai R < 1, maka objek menunjukkan pola persebaran mengelompok (clustered) 
+karena rata-rata jarak antarobjek lebih kecil dibandingkan pola acak. Apabila nilai R ≈ 1, 
+maka objek memiliki pola persebaran acak (random). Sebaliknya, apabila nilai R > 1, 
+maka objek menunjukkan pola persebaran seragam (dispersed) karena rata-rata jarak 
+
+--- [PAGE 39] ---
+ 
+29 
+ 
+antarobjek lebih besar dibandingkan pola acak. Interpretasi tersebut perlu didukung oleh 
+nilai z-score dan p-value sebagai ukuran signifikansi statistik. Secara umum, nilai p-value 
+< 0,05 menunjukkan bahwa pola persebaran berbeda secara signifikan dari pola acak, 
+sedangkan semakin besar nilai absolut z-score menunjukkan semakin kuat 
+kecenderungan pola persebaran yang terbentuk (Esri, 2024). 
+Dalam penelitian ini, Nearest Neighbor Analysis (NNA) digunakan untuk 
+menganalisis pola persebaran rumah sakit, puskesmas, dan klinik di Kota Samarinda. 
+Analisis dilakukan menggunakan bahasa pemrograman Python pada platform Google 
+Colab. Data spasial yang telah dipersiapkan melalui QGIS diekspor ke format CSV yang 
+memuat koordinat setiap fasilitas kesehatan. Selanjutnya dilakukan perhitungan 
+Observed Mean Distance, Expected Mean Distance, Nearest Neighbor Ratio (R), 
+Standard Error, z-score, dan p-value menggunakan pustaka Python. Hasil analisis 
+digunakan untuk menentukan apakah pola persebaran fasilitas kesehatan bersifat 
+clustered, random, atau dispersed, kemudian diinterpretasikan sebagai dasar evaluasi 
+pemerataan fasilitas kesehatan di Kota Samarinda. 
+ 
+Tabel 2. 2 Interpretasi Nilai Nearest Neighbor Ratio (R) 
+Nilai R 
+Pola 
+Sebaran 
+Interpretasi 
+R < 1 
+Clustered 
+Objek cenderung mengelompok 
+R ≈ 1 
+Random 
+Objek tersebar secara acak 
+R > 1 
+Dispersed 
+Objek tersebar relatif merata 
+Sumber: (Clark & Evans, 1954; Esri, 2024) 
+ 
+Berdasarkan Tabel 2.2, nilai Nearest Neighbor Ratio (R) digunakan sebagai 
+indikator utama dalam menentukan karakteristik pola persebaran suatu objek. Nilai R < 
+1 menunjukkan pola clustered, yaitu objek cenderung terkonsentrasi pada lokasi tertentu. 
+Nilai R ≈ 1 menunjukkan pola random, yaitu persebaran objek tidak memiliki 
+kecenderungan tertentu dan mendekati distribusi acak. Sementara itu, nilai R > 1 
+menunjukkan pola dispersed, yaitu objek tersebar relatif merata dengan jarak antarobjek 
+yang lebih seragam. Dalam penelitian ini, interpretasi nilai R digunakan untuk 
+
+--- [PAGE 40] ---
+ 
+30 
+ 
+mengidentifikasi pola persebaran rumah sakit, puskesmas, dan klinik di Kota Samarinda, 
+sedangkan nilai z-score dan p-value digunakan untuk menguji signifikansi statistik dari 
+pola persebaran yang diperoleh. 
+ 
+2.7 
+Kernel Density Estimation (KDE) 
+ 
+Kernel Density Estimation (KDE) merupakan salah satu metode analisis spasial 
+yang digunakan untuk mengestimasi tingkat kepadatan suatu fenomena berdasarkan 
+distribusi titik pada suatu wilayah. Metode ini menghasilkan permukaan kepadatan 
+(density surface) yang bersifat kontinu dengan menghitung kontribusi setiap titik terhadap 
+area di sekitarnya menggunakan fungsi kernel. Hasil analisis KDE umumnya 
+divisualisasikan dalam bentuk heatmap, sehingga wilayah dengan konsentrasi objek 
+tinggi maupun rendah dapat diidentifikasi secara lebih mudah dibandingkan hanya 
+melalui penyajian data titik. Dalam Sistem Informasi Geografis (SIG), metode KDE 
+banyak dimanfaatkan untuk menganalisis pola kepadatan berbagai fenomena spasial, 
+seperti persebaran penduduk, kriminalitas, kecelakaan lalu lintas, maupun fasilitas 
+pelayanan publik (Chang, 2022; Gong dkk., 2024; Goodchild & Longley, 2021). 
+Kombinasi Kernel Density Estimation dengan Average Nearest Neighbor Ratio juga telah 
+digunakan untuk mengukur kepadatan sekaligus pola pengelompokan spasial suatu 
+fasilitas secara lebih komprehensif, sehingga dapat diketahui kondisi tersebar (dispersed) 
+maupun mengelompok (clustered) dari suatu jenis fasilitas beserta keterkaitannya dengan 
+pola pemukiman di sekitarnya (Liu, Yan, & Dai, 2023).  
+Prinsip dasar Kernel Density Estimation adalah memberikan bobot (weight) 
+terhadap setiap titik berdasarkan jaraknya terhadap lokasi yang akan dihitung. Pengaruh 
+suatu titik akan semakin besar apabila lokasinya semakin dekat dengan lokasi 
+pengamatan, sedangkan pengaruh tersebut akan semakin kecil seiring bertambahnya jarak 
+hingga mencapai batas tertentu yang disebut bandwidth (search radius). Nilai kepadatan 
+pada setiap lokasi diperoleh dari akumulasi kontribusi seluruh titik yang berada di dalam 
+radius tersebut sehingga menghasilkan permukaan kepadatan yang lebih halus (smooth) 
+dan mampu menggambarkan distribusi spasial secara lebih representatif. Pemilihan nilai 
+
+--- [PAGE 41] ---
+ 
+31 
+ 
+bandwidth sangat memengaruhi hasil analisis karena menentukan tingkat kehalusan 
+permukaan kepadatan yang dihasilkan (Esri, 2024; Silverman, 1986; Slocum dkk., 2022).  
+Bandwidth merupakan parameter yang menentukan besar kecilnya radius pencarian 
+(search radius) pada proses estimasi kepadatan. Nilai bandwidth yang terlalu kecil akan 
+menghasilkan permukaan kepadatan yang sangat rinci sehingga berpotensi menimbulkan 
+banyak puncak kepadatan lokal (overfitting). Sebaliknya, penggunaan bandwidth yang 
+terlalu besar akan menghasilkan permukaan kepadatan yang lebih halus (oversmoothing) 
+sehingga variasi kepadatan lokal dapat berkurang. Oleh karena itu, pemilihan bandwidth 
+perlu disesuaikan dengan karakteristik data dan tujuan analisis agar hasil Kernel Density 
+Estimation mampu merepresentasikan distribusi spasial objek secara proporsional (Esri, 
+2024; Silverman, 1986; Slocum dkk., 2022).  
+Secara matematis, fungsi Kernel Density Estimation dinyatakan pada persamaan 
+(2.3) (Silverman, 1986; Slocum dkk., 2022). 
+ 
+𝑓ˆ(𝑥) =
+1
+𝑛ℎ∑
+𝐾
+𝑛
+𝑖=1
+(
+𝑥−𝑥𝑖
+ℎ)    
+ 
+ 
+ 
+ 
+ 
+            (2.3)
+  
+Di mana: 
+𝑓̂(𝑥)= nilai estimasi kepadatan pada lokasi 𝑥 
+𝑛= jumlah titik pengamatan  
+ℎ= bandwidth (radius pencarian)  
+𝐾= fungsi kernel  
+𝑥𝑖= lokasi titik ke-𝑖 
+ 
+Persamaan tersebut menunjukkan bahwa nilai kepadatan pada suatu lokasi 
+diperoleh dari akumulasi kontribusi seluruh titik yang berada di dalam radius pencarian 
+(bandwidth). Besarnya kontribusi setiap titik dipengaruhi oleh jaraknya terhadap lokasi 
+yang dianalisis, di mana titik yang berada lebih dekat akan memberikan kontribusi yang 
+lebih besar dibandingkan titik yang berada lebih jauh. Kontribusi tersebut kemudian 
+dihitung menggunakan fungsi kernel sehingga menghasilkan permukaan kepadatan yang 
+bersifat kontinu (Esri, 2024; Silverman, 1986; Slocum dkk., 2022).  
+
+--- [PAGE 42] ---
+ 
+32 
+ 
+Hasil analisis Kernel Density Estimation berupa raster kepadatan yang 
+menggambarkan variasi konsentrasi objek pada wilayah penelitian. Nilai kepadatan yang 
+tinggi menunjukkan bahwa suatu wilayah memiliki konsentrasi objek yang lebih besar, 
+sedangkan nilai kepadatan yang rendah menunjukkan jumlah objek yang relatif sedikit. 
+Dalam visualisasi heatmap, wilayah dengan kepadatan tinggi umumnya ditampilkan 
+menggunakan warna yang lebih gelap atau lebih hangat, sedangkan wilayah dengan 
+kepadatan rendah ditampilkan menggunakan warna yang lebih terang atau lebih dingin. 
+Visualisasi tersebut memudahkan proses identifikasi wilayah yang menjadi pusat 
+konsentrasi suatu fenomena spasial (Esri, 2024; Goodchild & Longley, 2021).  
+Perlu diperhatikan bahwa nilai kepadatan yang dihasilkan oleh metode Kernel 
+Density Estimation tidak menunjukkan jumlah objek yang berada pada setiap lokasi, 
+melainkan menggambarkan tingkat konsentrasi relatif objek berdasarkan distribusi 
+spasialnya. Nilai kepadatan diperoleh dari hasil estimasi fungsi kernel yang 
+mempertimbangkan kontribusi setiap titik di dalam radius pencarian (bandwidth), 
+sehingga setiap sel pada raster merepresentasikan intensitas kepadatan relatif, bukan 
+jumlah objek secara langsung. Oleh karena itu, interpretasi hasil heatmap dilakukan 
+dengan membandingkan variasi tingkat kepadatan antarwilayah untuk mengidentifikasi 
+area yang memiliki konsentrasi objek lebih tinggi maupun lebih rendah. Informasi 
+tersebut membantu dalam mengenali pola spasial suatu fenomena dan mendukung proses 
+pengambilan keputusan berdasarkan distribusi relatif objek pada wilayah penelitian (Esri, 
+2024; Goodchild & Longley, 2021; Silverman, 1986; Slocum dkk., 2022).   
+Dalam penelitian ini, Kernel Density Estimation digunakan untuk menganalisis 
+tingkat kepadatan sebaran rumah sakit, puskesmas, dan klinik di Kota Samarinda. 
+Analisis dilakukan menggunakan perangkat lunak QGIS terhadap data lokasi fasilitas 
+kesehatan sehingga dihasilkan peta heatmap yang menunjukkan wilayah dengan tingkat 
+kepadatan fasilitas kesehatan tinggi maupun rendah. Hasil analisis tersebut digunakan 
+sebagai pelengkap dari Nearest Neighbor Analysis (NNA) sehingga diperoleh gambaran 
+yang lebih komprehensif mengenai distribusi fasilitas kesehatan di Kota Samarinda. 
+ 
+ 
+ 
+
+--- [PAGE 43] ---
+ 
+33 
+ 
+BAB III METODOLOGI PENELITIAN 
+METODOLOGI PENELITIAN 
+ 
+ 
+3.1 Tahapan Pelaksanaan Penelitian 
+ 
+Pelaksanaan penelitian dilakukan melalui beberapa tahapan yang disusun secara 
+sistematis untuk menganalisis pola sebaran dan kepadatan fasilitas kesehatan di Kota 
+Samarinda menggunakan Sistem Informasi Geografis (SIG). Penelitian menggunakan 
+data spasial lokasi fasilitas kesehatan yang terdiri atas rumah sakit, puskesmas, dan klinik. 
+Data tersebut dipersiapkan melalui tahapan pengumpulan dan perancangan data sebelum 
+digunakan dalam analisis. Analisis pola sebaran dilakukan menggunakan metode Nearest 
+Neighbor Analysis (NNA) dengan bantuan bahasa pemrograman Python melalui Google 
+Colab, sedangkan analisis kepadatan spasial dilakukan menggunakan metode Kernel 
+Density Estimation (KDE) melalui QGIS. Rangkaian tahapan penelitian meliputi studi 
+literatur dan identifikasi masalah, penentuan ruang lingkup penelitian, pengumpulan data, 
+perancangan data, perancangan proses/algoritma, penyajian hasil analisis, perancangan 
+pengujian, serta analisis dan interpretasi hasil. Penyusunan tahapan tersebut dilakukan 
+untuk memastikan proses penelitian berjalan secara sistematis sesuai dengan tujuan 
+penelitian (Creswell & Creswell, 2023; Goodchild & Longley, 2021).  
+Diagram tahapan pelaksanaan penelitian ditunjukkan pada Gambar 3.1. 
+ 
+Gambar 3. 1 Diagram Tahapan Pelaksanaan Penelitian 
+ 
+
+--- [PAGE 44] ---
+ 
+34 
+ 
+1. Studi Literatur dan Identifikasi Masalah 
+Tahap awal penelitian dilakukan melalui studi literatur dan identifikasi masalah. 
+Studi literatur dilakukan dengan mempelajari berbagai sumber ilmiah yang 
+berkaitan dengan Sistem Informasi Geografis, fasilitas kesehatan, pola sebaran 
+spasial, kepadatan spasial, Nearest Neighbor Analysis (NNA), dan Kernel 
+Density Estimation (KDE). Selain itu, studi literatur digunakan untuk 
+memahami konsep dan penerapan metode yang digunakan dalam penelitian. 
+Hasil kajian digunakan sebagai dasar dalam mengidentifikasi permasalahan, 
+menentukan metode analisis, serta menyusun rumusan masalah dan tujuan 
+penelitian. 
+2. Penentuan Ruang Lingkup Penelitian 
+Setelah permasalahan penelitian ditentukan, dilakukan penetapan ruang lingkup 
+penelitian. Ruang lingkup meliputi wilayah penelitian, objek penelitian, data 
+yang digunakan, perangkat yang digunakan, serta metode analisis. Wilayah 
+penelitian ditetapkan pada Kota Samarinda, sedangkan objek penelitian terdiri 
+atas rumah sakit, puskesmas, dan klinik. Ketiga jenis fasilitas kesehatan tersebut 
+digunakan sebagai satu kumpulan titik fasilitas kesehatan dalam analisis utama. 
+Analisis pola sebaran dilakukan menggunakan Nearest Neighbor Analysis 
+(NNA) dengan Python melalui Google Colab, sedangkan analisis kepadatan 
+dilakukan menggunakan Kernel Density Estimation (KDE) melalui QGIS. 
+3. Pengumpulan Data 
+Tahap pengumpulan data dilakukan untuk memperoleh data yang diperlukan 
+dalam penelitian. Data yang digunakan merupakan data sekunder yang 
+diperoleh dari sumber yang relevan dengan penelitian. Data lokasi fasilitas 
+kesehatan yang terdiri atas rumah sakit, puskesmas, dan klinik digunakan 
+sebagai data utama penelitian, sedangkan data batas administrasi Kota 
+Samarinda dan batas kecamatan digunakan sebagai data pendukung dalam 
+analisis dan penyajian spasial. Data yang diperoleh selanjutnya diperiksa untuk 
+memastikan kesesuaiannya dengan kebutuhan penelitian. Tahap ini dijelaskan 
+lebih lanjut pada Subbab 3.2.  
+ 
+
+--- [PAGE 45] ---
+ 
+35 
+ 
+ 
+4. Perancangan Data 
+Data yang telah dikumpulkan selanjutnya disiapkan melalui tahap perancangan 
+data agar siap digunakan dalam analisis spasial. Tahap ini meliputi pengimporan 
+data spasial ke dalam proyek QGIS, pemeriksaan sistem koordinat (Coordinate 
+Reference System/CRS), validasi data spasial, penyusunan layer fasilitas 
+kesehatan gabungan, serta pemeriksaan akhir data. Data lokasi rumah sakit, 
+puskesmas, dan klinik disiapkan sebagai satu kumpulan data titik fasilitas 
+kesehatan, dengan sistem koordinat yang diproyeksikan ke WGS 84 / UTM 
+Zone 50S (EPSG:32750) sehingga perhitungan spasial yang membutuhkan 
+satuan jarak dapat dilakukan dalam satuan meter. Tahap ini dijelaskan lebih 
+lanjut pada Subbab 3.3. 
+5. Perancangan Proses/Algoritma 
+Data fasilitas kesehatan hasil perancangan data selanjutnya digunakan untuk 
+menyusun alur algoritma pada kedua metode analisis. Algoritma Nearest 
+Neighbor Analysis (NNA) dirancang untuk dijalankan menggunakan bahasa 
+pemrograman Python melalui Google Colab, meliputi langkah perhitungan 
+jarak tetangga terdekat, Observed Mean Distance, Expected Mean Distance, 
+Nearest Neighbor Ratio (R), hingga pengujian signifikansi statistik berupa z-
+score dan p-value. Sementara itu, algoritma Kernel Density Estimation (KDE) 
+dirancang untuk dijalankan menggunakan perangkat lunak QGIS, meliputi 
+penetapan parameter bandwidth dan cell size, perhitungan nilai kepadatan 
+menggunakan fungsi kernel, pembentukan raster kepadatan, hingga 
+pemotongan raster berdasarkan batas administrasi Kota Samarinda. Rancangan 
+algoritma kedua metode tersebut dijelaskan lebih lanjut pada Subbab 3.4. 
+6. Penyajian Hasil Analisis 
+Hasil analisis NNA dan KDE selanjutnya disiapkan untuk disajikan dalam 
+bentuk yang informatif. Hasil NNA disajikan dalam bentuk tabel yang memuat 
+nilai Observed Mean Distance, Expected Mean Distance, Nearest Neighbor 
+Ratio (R), z-score, dan p-value, sedangkan hasil KDE disajikan dalam bentuk 
+
+--- [PAGE 46] ---
+ 
+36 
+ 
+peta kepadatan (heatmap) yang dilengkapi elemen kartografi. Tahap ini 
+dijelaskan lebih lanjut pada Subbab 3.5.  
+7. Perancangan Pengujian 
+Hasil analisis yang telah disajikan kemudian diuji untuk memastikan 
+validitasnya. Pada NNA, pengujian dilakukan melalui perbandingan terhadap 
+perhitungan manual dan pustaka analisis spasial, serta pengujian signifikansi 
+statistik menggunakan z-score dan p-value. Pada KDE, pengujian dilakukan 
+melalui uji sensitivitas bandwidth, uji korelasi terhadap Analisis Kuadrat 
+(Quadrat Count Analysis), serta verifikasi visual melalui overlay. Tahap ini 
+dijelaskan lebih lanjut pada Subbab 3.6. 
+8. Analisis dan Interpretasi Hasil 
+Tahap akhir penelitian dilakukan dengan menganalisis dan menginterpretasikan 
+hasil yang telah diuji pada tahap sebelumnya. Hasil NNA digunakan untuk 
+menjelaskan pola sebaran fasilitas kesehatan secara statistik, sedangkan hasil 
+KDE digunakan untuk menggambarkan variasi konsentrasi fasilitas kesehatan 
+secara spasial. Kedua hasil tersebut kemudian diinterpretasikan secara terpadu 
+untuk memperoleh gambaran mengenai pola sebaran dan kepadatan fasilitas 
+kesehatan di Kota Samarinda. Hasil interpretasi selanjutnya digunakan sebagai 
+dasar dalam menjawab rumusan masalah dan mencapai tujuan penelitian. 
+ 
+3.2  Pengumpulan Data 
+ 
+Pengumpulan data merupakan tahapan yang dilakukan untuk memperoleh seluruh 
+data yang diperlukan dalam analisis pola sebaran dan kepadatan fasilitas kesehatan di 
+Kota Samarinda. Penelitian ini menggunakan data sekunder yang diperoleh dari instansi 
+pemerintah dan sumber resmi sehingga memiliki tingkat validitas dan kredibilitas yang 
+dapat dipertanggungjawabkan. Data yang digunakan terdiri atas data spasial dan data 
+nonspasial (atribut). Data tersebut diolah melalui tahapan preprocessing menggunakan 
+QGIS, kemudian dianalisis menggunakan bahasa pemrograman Python untuk metode 
+Nearest Neighbor Analysis (NNA) serta perangkat lunak QGIS untuk metode Kernel 
+
+--- [PAGE 47] ---
+ 
+37 
+ 
+Density Estimation (KDE). Data yang digunakan dalam penelitian ini disajikan pada 
+Tabel 3.1.  
+ 
+Tabel 3. 1 Data Penelitian 
+No. 
+Data 
+Jenis Data 
+Format 
+Tahun 
+Sumber 
+Kegunaan 
+1 
+Lokasi fasilitas 
+kesehatan 
+(Rumah sakit, 
+Puskesmas, dan 
+Klinik) 
+Spasial & 
+Atribut 
+SHP 
+2025 
+Geoportal 
+Satu Peta 
+Kota 
+Samarinda 
+Objek analisis pola 
+sebaran dan 
+kepadatan fasilitas 
+kesehatan 
+2 
+Batas 
+Administrasi 
+Kota Samarinda 
+Spasial 
+SHP 
+2019 
+Badan 
+Informasi 
+Geospasial 
+(BIG) 
+Menentukan batas 
+wilayah penelitian 
+dan proses clip 
+hasil KDE 
+3 
+Batas 
+Kecamatan 
+Kota Samarinda 
+Spasial 
+SHP 
+2019 
+Badan 
+Informasi 
+Geospasial 
+(BIG) 
+Sebagai referensi 
+visualisasi dan 
+interpretasi hasil 
+analisis 
+ 
+Berdasarkan Tabel 3.1, seluruh data spasial yang digunakan saling melengkapi 
+dalam proses analisis. Data lokasi rumah sakit, puskesmas, dan klinik beserta atributnya 
+digunakan sebagai objek utama untuk menganalisis pola sebaran menggunakan metode 
+Nearest Neighbor Analysis (NNA) serta kepadatan menggunakan Kernel Density 
+Estimation (KDE). Sementara itu, data batas administrasi Kota Samarinda digunakan 
+sebagai batas wilayah penelitian sekaligus sebagai mask layer pada proses clipping hasil 
+KDE, serta batas kecamatan digunakan sebagai referensi dalam penyajian peta. 
+Pengumpulan data dalam penelitian ini dilakukan melalui dua teknik, yaitu studi 
+literatur dan dokumentasi. Studi literatur dilakukan untuk memperoleh landasan teoritis 
+mengenai Sistem Informasi Geografis (SIG), fasilitas kesehatan, Nearest Neighbor 
+Analysis (NNA), dan Kernel Density Estimation (KDE) melalui buku, artikel jurnal, 
+prosiding, serta dokumen resmi yang relevan dengan penelitian. Kajian literatur 
+digunakan sebagai dasar dalam penyusunan kerangka teori, pemilihan metode penelitian, 
+serta interpretasi hasil analisis (Creswell & Creswell, 2023).  
+
+--- [PAGE 48] ---
+ 
+38 
+ 
+Teknik dokumentasi dilakukan dengan mengumpulkan data sekunder yang berasal 
+dari instansi pemerintah dan lembaga resmi penyedia data geospasial. Data lokasi rumah 
+sakit, puskesmas, dan klinik diperoleh melalui Geoportal Satu Peta Kota Samarinda, 
+sedangkan data batas administrasi Kota Samarinda dan batas kecamatan diperoleh dari 
+Badan Informasi Geospasial (BIG). Seluruh data spasial tersebut selanjutnya digunakan 
+sebagai masukan pada tahap preprocessing menggunakan QGIS sebelum dilakukan 
+analisis pola sebaran menggunakan Python dan analisis kepadatan menggunakan QGIS. 
+Data spasial dan atribut fasilitas kesehatan diperoleh berdasarkan data resmi yang 
+dipublikasikan pada Geoportal Satu Peta Kota Samarinda tahun 2025. Sementara itu, data 
+batas administrasi Kota Samarinda dan batas kecamatan menggunakan data yang 
+diterbitkan oleh Badan Informasi Geospasial (BIG) tahun 2019. Perbedaan waktu akuisisi 
+data tersebut tidak memengaruhi proses analisis karena batas administrasi bersifat relatif 
+tetap dan digunakan sebagai referensi spasial dalam proses analisis serta visualisasi hasil 
+penelitian.  
+ 
+3.3 Perancangan Data 
+ 
+Perancangan data merupakan tahapan penyiapan data sebelum digunakan pada 
+proses analisis spasial. Tahap ini bertujuan memastikan bahwa data yang akan diolah 
+memiliki kualitas, konsistensi, dan struktur yang sesuai dengan kebutuhan analisis. 
+Perancangan data menjadi bagian penting dalam penelitian ini karena kualitas data 
+masukan akan menentukan ketepatan hasil analisis pola sebaran dan kepadatan fasilitas 
+kesehatan yang dihasilkan (Goodchild & Longley, 2021; QGIS Development Team, 
+2024).  
+Perancangan data pada penelitian ini dilakukan melalui beberapa tahap sebagai 
+berikut. 
+1. Import Data Spasial 
+Tahap pertama dilakukan dengan mengimpor seluruh data spasial ke dalam 
+proyek QGIS. Data yang diimpor meliputi layer lokasi rumah sakit, puskesmas, 
+klinik, batas administrasi Kota Samarinda, dan batas kecamatan yang diperoleh 
+dari Geoportal Satu Peta Kota Samarinda serta Badan Informasi Geospasial 
+
+--- [PAGE 49] ---
+ 
+39 
+ 
+(BIG). Seluruh layer kemudian disusun ke dalam satu proyek untuk 
+memudahkan proses pengelolaan, pemeriksaan, dan analisis data.  
+2. Pemeriksaan Coordinate Reference System (CRS) 
+Tahap selanjutnya adalah melakukan pemeriksaan Coordinate Reference 
+System (CRS) pada seluruh layer spasial. Pemeriksaan dilakukan untuk 
+memastikan bahwa seluruh data menggunakan sistem koordinat yang seragam 
+sehingga tidak terjadi pergeseran posisi objek pada saat analisis. Apabila 
+terdapat perbedaan sistem koordinat, dilakukan proses reprojection ke sistem 
+koordinat WGS 84 / UTM Zone 50S (EPSG:32750). Penggunaan sistem 
+koordinat tersebut bertujuan agar seluruh proses analisis yang melibatkan 
+perhitungan jarak, seperti Nearest Neighbor Analysis (NNA) dan Kernel 
+Density Estimation (KDE), dilakukan dalam satuan meter sehingga 
+menghasilkan perhitungan yang lebih akurat (QGIS Development Team, 
+2024).  
+3. Validasi Data Spasial 
+Tahap berikutnya adalah melakukan validasi data spasial melalui pemeriksaan 
+posisi koordinat, kelengkapan atribut, serta konsistensi informasi pada setiap 
+objek fasilitas kesehatan. Validasi dilakukan untuk memastikan tidak terdapat 
+data duplikat, atribut yang tidak lengkap, maupun kesalahan lokasi yang dapat 
+memengaruhi hasil analisis. Selain itu, dilakukan pengecekan posisi titik 
+fasilitas kesehatan terhadap batas administrasi Kota Samarinda agar seluruh 
+objek berada pada wilayah penelitian. Tahap ini merupakan bagian dari 
+pengendalian kualitas data sebelum dilakukan analisis lebih lanjut (Goodchild 
+& Longley, 2021).  
+4. Pemisahan Layer Fasilitas Kesehatan 
+Setelah proses validasi selesai, data fasilitas kesehatan dipersiapkan untuk 
+proses analisis. Seluruh objek fasilitas kesehatan dipertahankan dalam satu 
+layer titik karena analisis dilakukan terhadap keseluruhan fasilitas kesehatan 
+yang terdiri atas rumah sakit, puskesmas, dan klinik. Selanjutnya, data atribut 
+yang memuat koordinat setiap fasilitas kesehatan diekspor ke format Comma 
+Separated Values (CSV) sebagai data masukan pada proses Nearest Neighbor 
+
+--- [PAGE 50] ---
+ 
+40 
+ 
+Analysis (NNA) menggunakan bahasa pemrograman Python. Sementara itu, 
+data spasial dalam format Shapefile (SHP) tetap digunakan sebagai masukan 
+pada proses Kernel Density Estimation (KDE) menggunakan perangkat lunak 
+QGIS. 
+5. Persiapan Data untuk Analisis 
+Tahap terakhir merupakan pemeriksaan akhir terhadap seluruh data yang telah 
+diproses. Pemeriksaan dilakukan untuk memastikan bahwa seluruh data spasial 
+telah memiliki sistem koordinat yang seragam, atribut yang lengkap, format 
+data yang sesuai, serta struktur data yang siap digunakan pada proses analisis. 
+Data hasil preprocessing selanjutnya digunakan sebagai masukan dalam 
+analisis Nearest Neighbor Analysis (NNA) menggunakan bahasa pemrograman 
+Python dan Kernel Density Estimation (KDE) menggunakan perangkat lunak 
+QGIS. 
+ 
+3.4  Perancangan Proses/Algoritma 
+ 
+Perancangan proses/algoritma merupakan tahapan penyusunan langkah-langkah 
+komputasi yang akan dijalankan setelah data hasil perancangan pada Subbab 3.3 siap 
+digunakan. Tahap ini menjabarkan alur logika program secara berurutan untuk kedua 
+metode yang digunakan, yaitu Nearest Neighbor Analysis (NNA) yang dijalankan 
+menggunakan bahasa pemrograman Python melalui platform Google Colab, dan Kernel 
+Density Estimation (KDE) yang dijalankan menggunakan perangkat lunak QGIS. Kedua 
+algoritma dirancang untuk memproses data fasilitas kesehatan gabungan yang sama, 
+namun dengan alur komputasi yang berbeda sesuai dengan prinsip kerja masing-masing 
+metode (Clark & Evans, 1954; Nafisa dkk., 2024; Silverman, 1986; Slocum dkk., 2022).  
+ 
+3.4.1 Algoritma Nearest Neighbor Analysis (NNA) 
+Algoritma NNA dirancang untuk menghitung pola sebaran fasilitas kesehatan 
+secara kuantitatif berdasarkan jarak antar-titik terdekat (nearest neighbor) (Clark & 
+Evans, 1954; Nafisa dkk., 2024). Langkah-langkah algoritma tersebut disusun sebagai 
+berikut: 
+
+--- [PAGE 51] ---
+ 
+41 
+ 
+1. Input Data 
+Program membaca data koordinat fasilitas kesehatan gabungan dalam format 
+CSV (hasil ekspor dari Subbab 3.3) serta nilai luas wilayah penelitian (𝐴) yang 
+diperoleh dari batas administrasi Kota Samarinda. Format CSV digunakan 
+agar pengolahan matriks koordinat terproyeksi dapat berjalan efisien dalam 
+lingkungan komputasi Python (Chang, 2022). 
+2. Perhitungan jarak tetangga terdekat. 
+Untuk setiap titik fasilitas kesehatan, program menghitung jarak Euclidean 
+menuju titik fasilitas kesehatan lain yang paling dekat, kemudian menyimpan 
+seluruh nilai jarak minimum tersebut ke dalam sebuah larik (array). 
+Penggunaan jarak Euclidean pada koordinat terproyeksi bersatuan meter 
+(EPSG:32750) menjamin akurasi pengukuran spasial antar-objek (Goodchild 
+& Longley, 2021). 
+3. Perhitungan Observed Mean Distance (r₀) 
+Program menghitung nilai rata-rata dari seluruh jarak tetangga terdekat yang 
+teramati (𝑟0) dengan membagi jumlah total jarak tetangga terdekat terhadap 
+jumlah titik (𝑛) (Clark & Evans, 1954; Nafisa dkk., 2024). 
+4. Perhitungan Expected Mean Distance (rₑ) 
+Program menghitung nilai rata-rata jarak yang diharapkan (𝑟𝑒) apabila objek 
+tersebar secara acak hipotetis menggunakan Persamaan (2.1), berdasarkan 
+jumlah titik (𝑛) dan luas wilayah penelitian (𝐴) (Clark & Evans, 1954; Nafisa 
+dkk., 2024). 
+5. Perhitungan Nearest Neighbor Ratio (R) 
+Program menghitung nilai rasio 𝑅 menggunakan Persamaan (2.2), yaitu hasil 
+bagi antara Observed Mean Distance (𝑟0) dan Expected Mean Distance (𝑟𝑒), 
+untuk membandingkan kecenderungan pola sebaran empiris terhadap pola 
+acak (Clark & Evans, 1954; Nafisa dkk., 2024). 
+6. Perhitungan signifikansi statistik 
+Program menghitung nilai standard error, z-score, dan p-value untuk menguji 
+signifikansi hipotesis apakah pola sebaran yang diperoleh berbeda secara 
+nyata dari distribusi acak Poisson atau hanya variasi kebetulan (Esri, 2024). 
+
+--- [PAGE 52] ---
+ 
+42 
+ 
+7. Output hasil 
+Program mengeluarkan nilai 𝑅 beserta interpretasinya (clustered, random, 
+atau dispersed) sesuai indikator pada Tabel 2.1, yang disajikan bersama nilai 
+z-score dan p-value sebagai acuan pengambilan keputusan statistik (Clark & 
+Evans, 1954; Esri, 2024). 
+Alur algoritma NNA tersebut ditunjukkan pada Gambar 3.2. 
+ 
+Gambar 3. 2 Flowchart Proses Analisis Nearest Neighbor Analysis (NNA) 
+ 
+3.4.2 Algoritma Kernel Density Estimation (KDE) 
+Algoritma KDE dirancang untuk menghasilkan raster kepadatan fasilitas kesehatan 
+berbasis fungsi kernel kontinu (Silverman, 1986). Langkah-langkah algoritma tersebut 
+disusun sebagai berikut: 
+1. Input data 
+QGIS membaca layer titik fasilitas kesehatan gabungan dalam format 
+Shapefile (SHP) yang telah diproyeksikan ke sistem koordinat WGS 84 / 
+UTM Zone 50S (EPSG:32750) sesuai hasil perancangan data pada Subbab 
+3.3. Proyeksi ke satuan meter ini diperlukan agar kalkulasi fungsi spasial 
+berbasis jarak dapat dihitung secara akurat (QGIS Development Team, 2024). 
+2. Penetapan parameter 
+Algoritma menetapkan nilai bandwidth (search radius) sebesar 3.000 meter 
+dan cell size sebesar 100 meter sebagai parameter utama proses estimasi 
+kepadatan. Penetapan bandwidth 3.000 meter didasarkan pada perkiraan 
+radius jangkauan pelayanan (catchment area) fasilitas kesehatan antar-
+wilayah kecamatan serta untuk menghindari overfitting atau oversmoothing 
+pada skala perkotaan (Esri, 2024; Goodchild & Longley, 2021; Silverman, 
+
+--- [PAGE 53] ---
+ 
+43 
+ 
+1986). Penetapan cell size 100 meter dipilih untuk menghasilkan resolusi 
+spasial raster yang cukup halus dan optimal dalam memvisualisasikan gradasi 
+kepadatan tanpa membebani komputasi (Chang, 2022). 
+3. Perhitungan nilai kepadatan 
+Algoritma Heatmap (Kernel Density Estimation) pada QGIS menghitung 
+kontribusi setiap titik fasilitas kesehatan terhadap sel-sel raster di sekitarnya 
+menggunakan fungsi kernel Quartic/Quartic-quartic sebagaimana dirumuskan 
+pada Persamaan (2.3). Pada tahap ini, titik yang berada lebih dekat dengan 
+pusat sel memberikan bobot kontribusi kepadatan yang lebih besar 
+dibandingkan titik yang berada lebih jauh hingga batas jangkauan bandwidth 
+(Silverman, 1986; Slocum dkk., 2022). 
+4. Pembentukan raster kepadatan 
+Hasil akumulasi kontribusi nilai pembobotan seluruh titik pada setiap sel 
+disimpan sebagai raster kepadatan yang bersifat kontinu (𝑓(𝑥)). Permukaan 
+kontinu ini menggambarkan variasi intensitas konsentrasi fasilitas kesehatan 
+secara representatif pada wilayah penelitian (Goodchild & Longley, 2021). 
+5. Pemotongan raster (clip) 
+Raster kepadatan kontinu yang dihasilkan kemudian dipotong (clipping) 
+menggunakan mask layer poligon batas administrasi Kota Samarinda. 
+Pemotongan ini bertujuan membatasi visualisasi dan analisis kepadatan agar 
+secara presisi hanya mencakup wilayah kajian administrasi (QGIS 
+Development Team, 2024). 
+6. Output hasil 
+QGIS menghasilkan peta heatmap dengan gradasi warna kontinu yang 
+memvisualisasikan nilai kepadatan relatif, sehingga daerah pusat konsentrasi 
+(hotspot) dan wilayah dengan konsentrasi rendah dapat teridentifikasi secara 
+jelas (Esri, 2024; Slocum dkk., 2022). 
+ 
+ 
+ 
+ 
+
+--- [PAGE 54] ---
+ 
+44 
+ 
+Alur algoritma KDE tersebut ditunjukkan pada Gambar 3.3. 
+ 
+ 
+Gambar 3. 3 Flowchart Proses Analisis Kernel Density Estimation (KDE)  
+ 
+Kedua algoritma di atas dijalankan secara berurutan terhadap data fasilitas 
+kesehatan gabungan yang sama, sehingga hasil keduanya dapat diinterpretasikan secara 
+saling melengkapi pada tahap penyajian hasil analisis. 
+ 
+3.5  Penyajian Hasil Analisis 
+ 
+Penyajian hasil analisis merupakan tahapan penyusunan hasil analisis spasial ke 
+dalam bentuk visual dan tabular yang informatif untuk memudahkan proses pembacaan, 
+interpretasi, dan penyampaian informasi penelitian (Goodchild & Longley, 2021; Slocum 
+dkk., 2022). Pada penelitian ini, penyajian hasil analisis dibagi menjadi dua bagian utama 
+sesuai dengan karakteristik luaran masing-masing metode, yaitu luaran statistik tabular 
+untuk Nearest Neighbor Analysis (NNA) dan luaran peta spasial kontinu untuk Kernel 
+Density Estimation (KDE) (Chang, 2022). 
+Hasil Nearest Neighbor Analysis (NNA) yang dihitung menggunakan bahasa 
+pemrograman Python disajikan dalam bentuk tabel analisis statistik spasial. Tabel 
+tersebut memuat nilai Observed Mean Distance (𝑟0), Expected Mean Distance (𝑟𝑒), 
+Nearest Neighbor Ratio (𝑅), z-score, dan p-value (Clark & Evans, 1954; Esri, 2024). 
+Hasil statistik ini disajikan bersama peta distribusi titik fasilitas kesehatan (point map) di 
+Kota Samarinda untuk mempermudah interpretasi secara visual apakah pola sebaran 
+faskes bersifat mengelompok (clustered), acak (random), atau seragam (dispersed) secara 
+signifikan. Rancangan tabel penyajian hasil analisis NNA disajikan pada Tabel 3.2. 
+ 
+
+--- [PAGE 55] ---
+ 
+45 
+ 
+Tabel 3. 2 Rancangan Hasil Analisis Statistik Nearest Neighbor Analysis (NNA) 
+Parameter Statistik Spasial 
+Simbol 
+Nilai Hasil Analisis 
+Observed Mean Distance 
+𝑟0 
+[... ] meter 
+Expected Mean Distance 
+𝑟𝑒 
+[... ] meter 
+Nearest Neighbor Ratio 
+𝑅 
+[... ]  
+z-score 
+𝑧 
+[... ] 
+p-value 
+𝑝 
+[... ] 
+Kategori Pola Sebaran 
+- 
+[Clustered / Random / Dispersed] 
+ 
+Sementara itu, hasil Kernel Density Estimation (KDE) yang diolah menggunakan 
+perangkat lunak QGIS disajikan dalam bentuk peta kepadatan (heatmap). Visualisasi 
+kepadatan menggunakan gradasi warna kontinu, di mana intensitas warna yang lebih 
+tinggi menunjukkan konsentrasi fasilitas kesehatan yang lebih tinggi, sedangkan 
+intensitas warna yang lebih rendah menunjukkan konsentrasi yang lebih rendah 
+(Silverman, 1986). Peta kepadatan ini digunakan untuk mengidentifikasi wilayah pusat 
+konsentrasi (hotspot) maupun wilayah yang memiliki tingkat kepadatan faskes relatif 
+rendah. 
+Setiap peta yang dihasilkan disusun menggunakan layout kartografi yang seragam 
+agar penyajian informasi tetap konsisten pada seluruh hasil penelitian. Layout peta 
+dilengkapi dengan elemen kartografi standar meliputi judul peta, legenda, skala, arah 
+utara (north arrow), inset peta, sumber data, sistem koordinat terproyeksi, serta identitas 
+penyusun. Penyusunan layout yang konsisten bertujuan meningkatkan keterbacaan peta 
+dan mempermudah interpretasi hasil analisis (Slocum dkk., 2022). Rancangan layout 
+penyajian peta tematik hasil analisis yang digunakan dalam penelitian ini ditunjukkan 
+pada Gambar 3.4. 
+
+--- [PAGE 56] ---
+ 
+46 
+ 
+ 
+Gambar 3. 4 Rancangan layout peta hasil analisis yang digunakan dalam penelitian 
+ 
+3.6  Perancangan Pengujian 
+ 
+Perancangan pengujian pada penelitian ini bertujuan untuk membuktikan bahwa 
+hasil analisis pola sebaran dan kepadatan fasilitas kesehatan yang diperoleh menggunakan 
+metode Nearest Neighbor Analysis (NNA) dan Kernel Density Estimation (KDE) dapat 
+dipertanggungjawabkan, baik secara komputasional, statistik, maupun representasi 
+spasialnya (Goodchild & Longley, 2021). Sebelum kedua metode diuji, data koordinat 
+fasilitas kesehatan terlebih dahulu dipastikan menggunakan sistem proyeksi bersatuan 
+meter (WGS 84 / UTM Zone 50S, EPSG:32750), bebas dari duplikasi titik, dan telah 
+diverifikasi keakuratan lokasinya terhadap citra satelit, karena akurasi hasil NNA dan 
+KDE sangat bergantung pada kebenaran data koordinat yang digunakan (QGIS 
+Development Team, 2024). Selanjutnya, pengujian dirancang secara terpisah untuk NNA 
+dan KDE karena keduanya memiliki mekanisme validasi yang berbeda. NNA memiliki 
+uji signifikansi statistik yang telah baku, yaitu z-score dan p-value, sedangkan KDE tidak 
+menghasilkan nilai signifikansi statistik sehingga validitasnya perlu dibuktikan melalui 
+pengujian sensitivitas parameter dan perbandingan terhadap metode analisis lain yang 
+bersifat independen (Clark & Evans, 1954; Liu dkk., 2023; Silverman, 1986). 
+ 
+
+--- [PAGE 57] ---
+ 
+47 
+ 
+3.6.1 Pengujian Nearest Neighbor Analysis (NNA) 
+Pengujian terhadap hasil NNA pada penelitian ini meliputi beberapa tahap sebagai 
+berikut. 
+1. Validitas Perhitungan terhadap Perhitungan Manual 
+Nilai Nearest Neighbor Ratio (𝑅) dihitung secara manual menggunakan 
+Persamaan (2.1) dan (2.2) pada sebagian data, yaitu 10 sampai 15 titik fasilitas 
+kesehatan, menggunakan spreadsheet. Hasil perhitungan manual tersebut 
+dibandingkan dengan hasil keluaran program Python pada subsampel yang 
+sama untuk memastikan bahwa program telah menerapkan rumus NNA secara 
+presisi tanpa adanya galat komputasi. Pendekatan verifikasi fungsi komputasi 
+dengan membandingkan nilai keluaran sistem terhadap hasil kalkulasi acuan 
+(expected result) ini menerapkan prinsip pengujian perangkat lunak 
+(Pressman & Maxim, 2020). 
+2. Validitas Perhitungan terhadap Pustaka Analisis Spasial 
+Hasil keluaran program Python dibandingkan dengan hasil dari pustaka 
+analisis spasial yang telah banyak digunakan pada penelitian sejenis, yaitu 
+pustaka PySAL (Rey, Arribas-Bel, & Wolf, 2023) melalui modul pointpats 
+atau esda, pada data yang sama, untuk mengetahui apakah nilai yang 
+dihasilkan program konsisten dengan pustaka yang telah tervalidasi secara 
+luas. 
+3. Kriteria Validitas Perhitungan Komputasi 
+Perhitungan pada tahap 1 dan 2 dinyatakan valid apabila selisih hasil antara 
+perhitungan manual, program Python, dan pustaka pembanding berada dalam 
+batas toleransi kurang dari 1% (< 1%). Ambang ini ditetapkan mengingat 
+ketiga metode perhitungan menggunakan rumus matematis yang identik, 
+sehingga perbedaan hasil seharusnya minimal dan hanya disebabkan oleh 
+pembulatan angka (floating-point precision), bukan kesalahan penerapan 
+rumus (Chang, 2022). 
+4. Pengujian Signifikansi Statistik 
+Nilai Nearest Neighbor Ratio (𝑅) yang diperoleh diuji signifikansinya secara 
+statistik. Pola sebaran dinyatakan signifikan apabila nilai p-value kurang dari 
+
+--- [PAGE 58] ---
+ 
+48 
+ 
+0,05 (𝑝< 0,05) pada tingkat kepercayaan 95% (𝛼= 0,05). Arah 
+kecenderungan pola diperiksa melalui nilai z-score, dengan ketentuan nilai 
+𝑧≤−1,96 menunjukkan kecenderungan mengelompok (clustered) yang 
+signifikan, nilai 𝑧≥+1,96 menunjukkan kecenderungan seragam (dispersed) 
+yang signifikan, sedangkan nilai 𝑧 di antara −1,96 dan +1,96 menunjukkan 
+pola yang tidak berbeda secara signifikan dari pola acak (random). Apabila 
+𝑝≥0,05, pola sebaran yang teramati tidak dapat dinyatakan berbeda secara 
+nyata dari pola acak, sehingga interpretasi nilai 𝑅 disertai catatan bahwa 
+hasilnya tidak signifikan secara statistik (Esri, 2024).  
+ 
+3.6.2 Pengujian Kernel Density Estimation (KDE) 
+Karena metode KDE tidak menghasilkan nilai signifikansi statistik sebagaimana 
+NNA, pengujian terhadap hasil KDE pada penelitian ini dilakukan melalui beberapa tahap 
+sebagai berikut. 
+1. Uji Sensitivitas Bandwidth  
+Proses KDE dijalankan ulang menggunakan beberapa nilai bandwidth di 
+sekitar nilai utama yang digunakan pada penelitian, yaitu ℎ= 3.000 m 
+3.000 meter, pada rentang ±30% dari nilai tersebut (2.100 m, 3.000 m, dan 
+3.900 m), agar variasi yang diuji tetap wajar secara praktis dan mencerminkan 
+sensitivitas parameter, bukan perbandingan antarskenario yang terlalu 
+ekstrem (Liu dkk., 2023). Hasil raster pada masing-masing bandwidth 
+dibandingkan melalui dua cara, yaitu perbandingan kuantitatif berupa 
+koefisien korelasi Pearson antarpasangan raster, dan perbandingan visual 
+berupa konsistensi lokasi pusat kepadatan (hotspot). Hasil KDE dinyatakan 
+cukup stabil apabila nilai korelasi antarraster 𝑟≥0,8 dan lokasi hotspot utama 
+tidak berpindah secara signifikan akibat perubahan bandwidth dalam rentang 
+tersebut (Silverman, 1986; Slocum dkk., 2022).   
+2. Uji Korelasi terhadap Analisis Kuadrat 
+Hasil KDE diuji korelasinya terhadap Analisis Kuadrat (Quadrat Count 
+Analysis) sebagai metode pembanding independen. Wilayah penelitian dibagi 
+menjadi grid dengan ukuran sel yang sama dengan cell size KDE, yaitu 
+
+--- [PAGE 59] ---
+ 
+49 
+ 
+100 meter, kemudian dihitung jumlah titik fasilitas kesehatan pada setiap sel 
+grid. Nilai kepadatan KDE pada sel yang sama diekstraksi, lalu dihitung 
+koefisien korelasi Pearson (𝑟) beserta nilai signifikansinya (p-value) terhadap 
+jumlah titik per sel. Analisis Kuadrat dipilih sebagai pembanding karena 
+metode ini menghitung kepadatan langsung dari jumlah titik aktual tanpa 
+melibatkan fungsi kernel maupun bandwidth, sehingga tidak bergantung pada 
+parameter KDE. Hasil KDE dinyatakan mampu merepresentasikan sebaran 
+titik aktual apabila diperoleh nilai korelasi positif yang kuat dan signifikan, 
+yaitu 𝑟≥0,7 dan 𝑝< 0,05. Perlu dicatat bahwa hasil Analisis Kuadrat dapat 
+dipengaruhi oleh ukuran sel grid yang dipilih (Modifiable Areal Unit Problem 
+/ MAUP), sehingga ukuran grid pada penelitian ini disamakan dengan cell size 
+KDE (100 m) untuk menjaga konsistensi perbandingan (Goodchild & 
+Longley, 2021). 
+3. Verifikasi Visual melalui Overlay 
+Peta heatmap hasil KDE ditumpangsusunkan (overlay) dengan layer titik 
+fasilitas kesehatan, untuk memastikan bahwa wilayah dengan gradasi warna 
+kepadatan tinggi memang berhimpitan dengan klaster titik fasilitas kesehatan 
+pada peta, bukan merupakan artefak dari proses interpolasi (Slocum dkk., 
+2022). 
+ 
+3.6.3 Integrasi Hasil Pengujian 
+Hasil pengujian NNA dan KDE selanjutnya dianalisis secara komplementer. Hasil 
+NNA yang telah teruji validitas perhitungan dan signifikansi statistiknya digunakan untuk 
+menjelaskan karakteristik pola sebaran fasilitas kesehatan, sedangkan hasil KDE yang 
+telah teruji melalui uji sensitivitas bandwidth, uji korelasi terhadap Analisis Kuadrat, dan 
+verifikasi visual digunakan untuk menggambarkan variasi kepadatan fasilitas kesehatan 
+secara spasial (Goodchild & Longley, 2021). Rancangan pengujian yang digunakan 
+dalam penelitian ini disajikan pada Tabel 3.3. 
+ 
+
+--- [PAGE 60] ---
+ 
+50 
+ 
+Tabel 3. 3 Rancangan Pengujian Metode NNA dan KDE 
+No. 
+Metode 
+ 
+Jenis 
+Pengujian 
+Cara Pengujian 
+ 
+Pembanding 
+ 
+ 
+Kriteria Valid 
+1 
+NNA 
+Validitas 
+Perhitungan 
+Perhitungan manual 
+(Persamaan 2.1 dan 2.2) 
+pada 10–15 titik, 
+dibandingkan dengan 
+keluaran Python 
+Perhitungan 
+manual 
+(spreadsheet) dan 
+pustaka PySAL 
+(pointpats/esda) 
+Selisih hasil <
+1% terhadap 
+kedua 
+pembanding  
+2 
+NNA 
+Signifikansi 
+statistik 
+Pengujian z-score dan p-
+value terhadap nilai 𝑅 
+Taraf signifikansi 
+𝛼= 0,05; nilai 𝑧 
+kritis ±1,96 
+p-value < 0,05 
+dan ‖𝑧‖ ≥1,96 
+3 
+KDE 
+Sensitivitas 
+bandwidth 
+KDE dijalankan pada 
+bandwidth utama 3.000 m 
+serta ±30% (2.100 m, 
+3.000 m, 3.900 m) 
+Korelasi 
+antarraster + 
+perbandingan 
+lokasi hotspot 
+𝑟≥0,8 antar 
+raster; hotspot 
+utama relatif 
+konsisten  
+4 
+KDE 
+Korelasi 
+Sebaran 
+Titik 
+Korelasi Pearson antara 
+nilai raster KDE dan 
+jumlah titik per grid 
+(quadrat count) 
+Analisis Kuadrat 
+(Quadrat Count 
+Analysis) 
+𝑟≥0,7 dan p-
+value < 0,05 
+5 
+KDE 
+Verifikasi 
+visual 
+Overlay peta heatmap 
+dengan layer titik fasilitas 
+kesehatan 
+Sebaran titik 
+aktual pada peta 
+Wilayah 
+kepadatan 
+tinggi 
+berhimpitan 
+dengan klaster 
+titik 
+ 
+Berdasarkan Tabel 3.3, rancangan pengujian disusun agar tidak hanya 
+menghasilkan nilai statistik, tetapi juga dapat membuktikan bahwa nilai tersebut benar 
+secara komputasi melalui perbandingan dengan perhitungan manual dan pustaka 
+independen, signifikan secara statistik untuk metode NNA, serta valid dalam 
+merepresentasikan kondisi spasial aktual untuk metode KDE melalui perbandingan 
+dengan Analisis Kuadrat sebagai metode independen. 
+ 
+3.7  Waktu dan Tempat Penelitian 
+ 
+Penelitian ini dilaksanakan mulai bulan Juli 2026 sampai dengan Desember 2026. 
+Kegiatan penelitian meliputi studi literatur, pengumpulan data, preprocessing data, 
+
+--- [PAGE 61] ---
+ 
+51 
+ 
+analisis pola sebaran menggunakan metode Nearest Neighbor Analysis (NNA), analisis 
+kepadatan menggunakan metode Kernel Density Estimation (KDE), penyusunan hasil 
+analisis, serta penyelesaian laporan skripsi. 
+Penelitian menggunakan data sekunder yang diperoleh dari Geoportal Satu Peta 
+Kota Samarinda dan Badan Informasi Geospasial (BIG). Proses pengumpulan data 
+dilakukan melalui pengunduhan data dari sumber resmi tersebut. Selanjutnya, proses 
+preprocessing data, analisis Nearest Neighbor Analysis (NNA) dilakukan menggunakan 
+bahasa pemrograman Python pada platform Google Colab, sedangkan analisis Kernel 
+Density Estimation (KDE), visualisasi hasil analisis, dan penyusunan layout peta 
+dilakukan menggunakan perangkat lunak QGIS. Seluruh proses analisis dan penyusunan 
+laporan penelitian dilaksanakan di lingkungan Program Studi Informatika, Fakultas 
+Teknik, Universitas Mulawarman. 
+Untuk memastikan setiap tahapan penelitian dapat dilaksanakan secara terstruktur 
+dan sesuai dengan target waktu yang telah ditetapkan, disusun jadwal penelitian 
+sebagaimana disajikan pada Tabel 3.3. 
+ 
+Tabel 3. 4 Jadwal Penelitian 
+No 
+Kegiatan 
+Bulan (Tahun 2026) 
+Jul 
+Agu 
+Sep 
+Okt 
+Nov 
+Des  
+I 
+Tahap Persiapan Penelitian 
+1. Pembuatan Proposal 
+ 
+ 
+ 
+ 
+ 
+ 
+2. Seminar Proposal 
+ 
+ 
+ 
+ 
+ 
+ 
+3. Perbaikan Seminar 
+Proposal 
+ 
+ 
+ 
+ 
+ 
+ 
+II 
+Tahap Pelaksanaan 
+1. Pengumpulan Data 
+ 
+ 
+ 
+ 
+ 
+ 
+2. Mengolah Data dan 
+analisis 
+ 
+ 
+ 
+ 
+ 
+ 
+III 
+Tahap Penyusunan Laporan 
+1. Seminar Hasil 
+ 
+ 
+ 
+ 
+ 
+ 
+2. Perbaikan Seminar 
+Hasil 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- [PAGE 62] ---
+ 
+52 
+ 
+No 
+Kegiatan 
+Bulan (Tahun 2026) 
+Jul 
+Agu 
+Sep 
+Okt 
+Nov 
+Des  
+3. Penulisan Artikel 
+Ilmiah 
+ 
+ 
+ 
+ 
+ 
+ 
+4. Seminar Akhir 
+ 
+ 
+ 
+ 
+ 
+ 
+5. Perbaikan Seminar 
+Akhir 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- [PAGE 63] ---
+ 
+53 
+ 
+DAFTAR PUSTAKA 
+ 
+1. Abdulazeez, A., Tanim, R., M., & Samaila, I. (2025). Geospatial Analysis of 
+Healthcare Facilities Distribution and Accessibility in Igabi LGA, Kaduna State, 
+Nigeria. 
+Kaduna 
+Journal 
+of 
+Geography, 
+7(1), 
+371–380. 
+https://doi.org/10.47514/kjg.2025.07.01.040 
+2. Aeni, N., & Warlina, L. (2023). Pola Spasial Kawasan Perumahan serta 
+ketersediaan Fasilitas Pendukung di Kecamatan Cianjur. Tesa Arsitektur, 21(1), 
+1–14. https://doi.org/10.24167/tesa.v21i1.5216 
+3. Badan Pusat Statistik Kota. (2025). Kota Samarinda Dalam Angka 2025. 
+Samarinda: Badan Pusat Statistik Kota Samarinda. Diambil dari Badan Pusat 
+Statistik 
+Kota 
+Samarinda 
+website: 
+https://samarindakota.bps.go.id/id/publication/2025/02/28/ff289f73078237b7c10
+20262/kota-samarinda-dalam-angka-2025.html 
+4. Chang, K. (2022). Introduction to Geographic Information Systems (9th ed.). New 
+York: McGraw-Hill Education. 
+5. Clark, P. J., & Evans, F. C. (1954). Distance to Nearest Neighbor as a Measure of 
+Spatial 
+Relationships 
+in 
+Populations. 
+Ecology, 
+35(4), 
+445–453. 
+https://doi.org/10.2307/1931034 
+6. Creswell, J. W., & Creswell, J. D. (2023). Research design: Qualitative, 
+quantitative, and mixed methods approaches (Sixth edition). Los Angeles London 
+New Delhi Singapore Washington DC Melbourne: SAGE. Diambil dari 
+(https://books.google.com/books/about/Research_Design.html?id=o1eZEAAAQ
+BAJ) 
+7. Daniel, C. B., Mathew, S., & Saravanan, S. (2021). Network constrained and 
+classified spatial pattern analysis of healthcare facilities and their relationship with 
+the road structure: A case study of Thiruvananthapuram city. Spatial Information 
+Research, 29(6), 791–805. https://doi.org/10.1007/s41324-021-00385-7 
+8. Esri. (2024). How Average Nearest Neighbor works. Diambil 6 Agustus 2026, 
+dari ArcGIS Pro Documentation website: https://doc.esri.com/en/arcgis-
+pro/latest/tool-reference/spatial-statistics/h-how-average-nearest-neighbor-
+distance-spatial-st.html 
+9. Gong, H., Zhang, T., Wang, X., Chen, B., Wu, B., & Zhao, S. (2024). Analysis of 
+Regional Differences, Dynamic Evolution, and Influencing Factors of Medical 
+Service Levels in Guangzhou Under the Health China Strategy. Risk Management 
+and Healthcare Policy, 17, 2811–2828. https://doi.org/10.2147/RMHP.S479911 
+10. Goodchild, M. F., & Longley, P. A. (2021). Geographic Information Science. 
+Dalam Handbook of Regional Science (hlm. 1597–1614). Berlin, Heidelberg: 
+Springer. https://doi.org/10.1007/978-3-662-60723-7_61 
+11. Hashtarkhani, S., Schwartz, D. L., & Shaban-Nejad, A. (2024a). Enhancing 
+Health Care Accessibility and Equity Through a Geoprocessing Toolbox for 
+Spatial Accessibility Analysis: Development and Case Study. JMIR Formative 
+Research, 8, e51727. https://doi.org/10.2196/51727 
+12. Hashtarkhani, S., Schwartz, D. L., & Shaban-Nejad, A. (2024b). Enhancing 
+Health Care Accessibility and Equity Through a Geoprocessing Toolbox for 
+
+--- [PAGE 64] ---
+ 
+54 
+ 
+Spatial Accessibility Analysis: Development and Case Study. JMIR Formative 
+Research, 8, e51727. https://doi.org/10.2196/51727 
+13. Kurniadin, N., Widyasasi, D., Fadjuani, A. F., & Prasetya, F. V. A. S. (2021). 
+Pemetaan Fasilitas Kesehatan BPJS Kota Samarinda Studi Kasus Rumah Sakit, 
+Puskesmas, dan Klinik Pratama. Buletin Poltanesa, 22(2), 238–244. 
+https://doi.org/10.51967/tanesa.v22i2.885 
+14. Li, B., Long, J., & Li, Y. (2025). Geospatial analysis of healthcare and older adult 
+care institutions in Wuhan: A multimethod approach to assessing spatial equity. 
+Frontiers 
+in 
+Public 
+Health, 
+13, 
+1580630. 
+https://doi.org/10.3389/fpubh.2025.1580630 
+15. Li, Y., Zhang, R., Feng, Z., & Che, L. (2026). Spatial optimisation strategies for 
+tertiary hospitals to promote health equity in Tianjin, China. Humanities and 
+Social Sciences Communications, 13(1), 519. https://doi.org/10.1057/s41599-
+026-06905-w 
+16. Liu, M., Yan, J., & Dai, T. (2023). A multi-scale approach mapping spatial 
+equality of urban public facilities for urban design. Heliyon, 9(8), e18281. 
+https://doi.org/10.1016/j.heliyon.2023.e18281 
+17. Nafisa, S. Y., Hadibasyir, H. Z., Sigit, A. A., Wibowo, A. A., & Sasmi, A. T. 
+(2024). Distribution Patterns and Accessibility of Health Facilities Analysis Using 
+Geographic Information Systems (GIS) in Badung District, Indonesia. 
+GEOGRAPHIA : Jurnal Pendidikan Dan Penelitian Geografi, 5(1), 68–78. 
+https://doi.org/10.53682/gjppg.v5i1.9394 
+18. Obeidat, B., & Alourd, S. (2024). Healthcare equity in focus: Bridging gaps 
+through a spatial analysis of healthcare facilities in Irbid, Jordan. International 
+Journal for Equity in Health, 23(1), 52. https://doi.org/10.1186/s12939-024-
+02120-8 
+19. Peraturan Pemerintah Republik Indonesia. Peraturan Pemerintah Republik 
+Indonesia Nomor 28 Tahun 2024 tentang Peraturan Pelaksanaan Undang-Undang 
+Nomor 17 Tahun 2023 tentang Kesehatan. , Nomor 28 Tahun 2024 § (2024). 
+20. Pressman, R. S., & Maxim, B. R. (2020). Software engineering: A practitioner’s 
+approach (Nineth edition). New York, NY: McGraw-Hill Education. 
+21. QGIS Development Team. (2024). QGIS Geographic Information System. 
+Diambil 6 Agustus 2026, dari https://www.qgis.org/ 
+22. Ramadhan, M. F., Shalihat, A. K., & Putri, D. N. (2023). Analisis Jangkauan Jarak 
+Fasilitas Kesehatan Terhadap Pemukiman Kumuh di Kecamatan Bukit Kecil 
+Palembang (Studi Kasus: Rumah Susun 24 Ilir). Jurnal Ilmiah Tekno Global, 
+12(02), 77–82. https://doi.org/10.36982/jtg.v12i02.3377 
+23. Rauch, S., & Butsch, C. (2026). Temporal influences on accessibility to 
+healthcare, using the example of pediatricians in Bavaria, Germany. Health & 
+Place, 98, 103642. https://doi.org/10.1016/j.healthplace.2026.103642 
+24. Rey, S., Arribas-Bel, D., & Wolf, L. J. (2023). Geographic Data Science with 
+Python 
+(1 
+ed.). 
+Boca 
+Raton: 
+Chapman 
+and 
+Hall/CRC. 
+https://doi.org/10.1201/9780429292507 
+25. Rohsulina, P., Hidayat, A., Khabibur Rahman, MS., Rahmawati, T., & Kurniaaji, 
+B. (2022). GIS application for spatial analysis of public health centres in response 
+to Covid-19 pandemic. IOP Conference Series: Earth and Environmental 
+
+--- [PAGE 65] ---
+ 
+55 
+ 
+Science, 986(1), 012061. IOP Publishing. https://doi.org/10.1088/1755-
+1315/986/1/012061 
+26. Savitri, R. A. S., & Sari, D. N. (2025). Analisis Sebaran dan Aksesibilitas 
+Puskesmas menggunakan Metode Kernel Density Estimation, Average Nearest 
+Neighbour (ANN), dan Two-Step Floating Catchment Area (2SFCA) di 
+Kabupaten Kebumen tahun 2024 (Skripsi, Universitas Muhammadiyah 
+Surakarta). Universitas Muhammadiyah Surakarta, Surakarta. Diambil dari 
+http://eprints.ums.ac.id/id/eprint/139187 
+27. Silverman, B. W. (1986). Density Estimation for Statistics and Data Analysis. 
+London: 
+Chapman 
+and 
+Hall. 
+Diambil 
+dari 
+https://ned.ipac.caltech.edu/level5/March02/Silverman/Silver_contents.html 
+28. Slocum, T. A., McMaster, R. B., Kessler, F. C., & Howard, Hugh. H. (2022). 
+Thematic Cartography and Geovisualization (4 ed.). Boca Raton: CRC Press. 
+https://doi.org/10.1201/9781003150527 
+29. Susianti, N. A., Riyanto, I. A., Ismayuni, N., Rizki, R. L. P., & Cahyadi, A. (2023). 
+Geographic Accessibility to Primary Healthcare: Study Case Dengue Fever in 
+Purwosari Sub-District, Gunungkidul Regency, Yogyakarta, Indonesia | Susianti 
+| Indonesian Journal of Geography. Indonesian Journal of Geography, 55(2), 309–
+319. https://doi.org/10.22146/ijg.64967 
+30. Undang-Undang Republik Indonesia. Undang-Undang Republik Indonesia 
+Nomor 17 Tahun 2023 tentang Kesehatan. , (2023). 
+31. Wang, Y., & Tao, Q. (2024). Research on the spatial aggregation characteristics 
+of medical and health facilities in the Yangtze River Delta urban agglomeration 
+based on POI. Research Square. https://doi.org/10.21203/rs.3.rs-4879965/v1 
+32. Zheng, H., Wang, Y., & Zhang, Z. (2024). Spatial Distribution Pattern and 
+Characteristics of Medical Institution in Kunming’s Main Urban District Based 
+on GIS. MEDS Public Health and Preventive Medicine, 4(1), 75–81. 
+https://doi.org/10.23977/phpm.2024.040112 
+33. Zulprima, Z., & Shahar, F. (2024). Rute Optimal Keterjangkauan Fasilitas 
+Pelayanan Kesehatan Rumah Sakit terhadap Lokasi Rawan Kecelakaan di Kota 
+Padang. 
+Jurnal 
+Pendidikan 
+dan 
+Sosial 
+Budaya, 
+4(4), 
+573–582. 
+https://doi.org/10.58578/yasin.v4i4.3136 
+ 
