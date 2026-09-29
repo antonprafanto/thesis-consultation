@@ -67,17 +67,17 @@ mindmap
 
 | No | Kategori | Tingkat Urgensi | Lokasi (Hal.) | Deskripsi Temuan Kritis |
 | :---: | :--- | :---: | :---: | :--- |
-| **1** | **Matematika Teoretis** | 🚨 **Sangat Fatal** | Hal. 41 (Persamaan 2.3) | **Rumus KDE yang ditulis adalah rumus 1-Dimensi ($nh$), bukan 2-Dimensi ($nh^2$).** Menghasilkan satuan densitas yang salah (titik/meter, bukan titik/$\text{meter}^2$). |
+| **1** | **Matematika Teoretis** | 🚨 **Sangat Fatal** | Hal. 41 (Persamaan 2.3) | **Rumus KDE yang ditulis adalah rumus 1-Dimensi (*nh*), bukan 2-Dimensi (*nh*²).** Menghasilkan satuan densitas yang salah (titik/meter, bukan titik/m²). |
 | **2** | **Kartografi & SIG** | 🚨 **Sangat Fatal** | Hal. 56 (Gambar 3.4) | **Kontradiksi Ekstrem Koordinat Peta vs CRS:** Frame koordinat berangka `13041000` dan `-46000` (EPSG:3857 Web Mercator), tetapi legenda menyatakan `UTM Zone 50S (EPSG:32750)`. Koordinat UTM tidak pernah bernilai negatif atau belasan juta! |
 | **3** | **Visualisasi Peta** | 🚨 **Sangat Fatal** | Hal. 56 (Gambar 3.4) | **Layer Heatmap Hilang pada Peta Hasil KDE:** Peta berjudul *"Metode Kernel Density Estimation"* dengan legenda gradasi 5 warna kepadatan, namun kanvas peta **hanya menampilkan titik merah (titik fasilitas kesehatan)** tanpa ada permukaan raster heatmap sama sekali. |
 | **4** | **Keilmuan Informatika** | ⚠️ **Mayor (Kritis)** | Hal. 5, 40, 50, 52 | **Minim Kontribusi Komputasi Informatika:** NNA dikoding sederhana di Python Colab, sedangkan KDE **murni klik menu QGIS Desktop**. Tidak ada produk perangkat lunak, algoritma mandiri, pipeline terintegrasi, ataupun dashboard WebGIS interaktif. |
 | **5** | **Metodologi Analisis** | ⚠️ **Mayor** | Hal. 39, 45, 55 | **Pencampuran Buta Seluruh Faskes (*Blind Pooling*):** Menggabungkan 16 RS, 26 Puskesmas, dan 150 Klinik ke dalam satu layer titik merusak interpretasi. Statistik akan didominasi 78% oleh klinik swasta, sehingga karakteristik RS dan Puskesmas tertutupi total. |
-| **6** | **Kelengkapan Rumus** | ⚠️ **Mayor** | Hal. 38–40 | **Rumus Inti NNA Hilang di Bab II:** Persamaan untuk $r_o$ (Observed Mean Distance), Standard Error ($SE_{r_e}$), dan $z$-score tidak pernah dituliskan dalam bentuk rumus matematis bernomor, hanya $r_e$ dan $R$. Rumus Kernel Quartic juga tidak ada. |
-| **7** | **Inkonsistensi Diagram** | ⚠️ **Mayor** | Hal. 43, 52, 54 | **Ketidaksinkronan Flowchart dengan Teks:**<br>• Gambar 3.1: Tahap 4 *"Perancangan Data"* lenyap dari bagan.<br>• Gambar 3.2: Perhitungan $r_e$ hilang (langsung lompat $r_0$ ke $R$), dan ada typo `Hitung signifikansistatistik`.<br>• Gambar 3.3: Hanya alur klik tombol QGIS. |
+| **6** | **Kelengkapan Rumus** | ⚠️ **Mayor** | Hal. 38–40 | **Rumus Inti NNA Hilang di Bab II:** Persamaan untuk *r₀* (*Observed Mean Distance*), *Standard Error* (*SE*), dan *z-score* tidak pernah dituliskan dalam bentuk rumus matematis bernomor, hanya *rₑ* dan *R*. Rumus Kernel Quartic juga tidak ada. |
+| **7** | **Inkonsistensi Diagram** | ⚠️ **Mayor** | Hal. 43, 52, 54 | **Ketidaksinkronan Flowchart dengan Teks:**<br>• Gambar 3.1: Tahap 4 *"Perancangan Data"* lenyap dari bagan.<br>• Gambar 3.2: Perhitungan *rₑ* hilang (langsung lompat *r₀* ke *R*), dan ada typo `Hitung signifikansistatistik`.<br>• Gambar 3.3: Hanya alur klik tombol QGIS. |
 | **8** | **Kontradiksi Subbab** | ⚠️ **Mayor** | Hal. 49 (Subbab 3.3 Poin 4) | **Judul Bertolak Belakang dengan Isi:** Judul poin 4 adalah *"Pemisahan Layer Fasilitas Kesehatan"*, namun kalimat pertama berbunyi: *"Seluruh objek fasilitas kesehatan dipertahankan dalam satu layer titik..."*. |
-| **9** | **Parameter Spasial** | ⚠️ **Sedang** | Hal. 38, 51 | **Nilai Luas Wilayah ($A$) & Efek Batas Tidak Ada:** Angka numerik luas Samarinda ($A$) tidak dicantumkan di mana pun. Potensi distorsi *edge effect* pada batas administrasi Samarinda yang berkelok-kelok diabaikan. |
+| **9** | **Parameter Spasial** | ⚠️ **Sedang** | Hal. 38, 51 | **Nilai Luas Wilayah (*A*) & Efek Batas Tidak Ada:** Angka numerik luas Samarinda (*A*) tidak dicantumkan di mana pun. Potensi distorsi *edge effect* pada batas administrasi Samarinda yang berkelok-kelok diabaikan. |
 | **10** | **Integritas Literatur** | ⚠️ **Sedang** | Hal. 63–65 (Daftar Pustaka) | **Duplikat 100% Identik & Sampah Web Scraper:** Ref 11 dan 12 (*Hashtarkhani 2024a* & *2024b*) adalah artikel yang persis sama diulang dua kali. Ref 29 (*Susianti*) memuat teks judul web kotor (`...| Susianti | Indonesian Journal of Geography`). Ref 25 memuat gelar master `MS.` sebagai nama. |
-| **11** | **Salah Rujuk Tabel** | ⚠️ **Sedang** | Hal. 52 & 61 | **Cross-Reference Error:** Hal. 52 merujuk interpretasi $R$ ke *"Tabel 2.1"* (seharusnya Tabel 2.2). Hal. 61 merujuk jadwal ke *"Tabel 3.3"* (seharusnya Tabel 3.4). |
+| **11** | **Salah Rujuk Tabel** | ⚠️ **Sedang** | Hal. 52 & 61 | **Cross-Reference Error:** Hal. 52 merujuk interpretasi *R* ke *"Tabel 2.1"* (seharusnya Tabel 2.2). Hal. 61 merujuk jadwal ke *"Tabel 3.3"* (seharusnya Tabel 3.4). |
 | **12** | **Formalia & Tata Tulis** | ⚠️ **Sedang** | Hal. 3, 4, 9, 10, 61, 62 | **Sisa Template & Kata Terpotong:** Tanggal pengesahan masih `[tgl, bln, tahun]`; nama penguji masih placeholder template; kata `Contents` muncul di Daftar Istilah/Singkatan; Tabel 3.4 terbelah buruk menyisakan halaman 62 kosong 80%; dan puluhan kata terpotong spasi (`ju ga`, `b aru`, `wilaya h`, `menganali sis`). |
 
 ---
@@ -97,18 +97,18 @@ mindmap
   * Tertulis: *"6. Nama dan gelar akademik Dosen Penguji I selaku Penguji I..."* dan *"7. Nama dan gelar akademik Dosen Penguji II selaku Penguji II..."*.
   * **Arahan:** Ini adalah draf proposal! Pada tahapan ini dosen penguji belum ditetapkan secara definitif oleh Program Studi. Ucapan terima kasih untuk Dosen Penguji dieliminasi terlebih dahulu atau dialihkan kepada tim dosen reviewer dan dosen pengajar Prodi S1 Informatika.
 * **Koreksi Typo & Tata Bahasa:**
-  * Poin 3: `selaku K Program Studi` $\rightarrow$ perbaiki menjadi **selaku Koordinator Program Studi**.
-  * Poin 4 & 5: kata `masukkan` pada frasa *"arahan dan masukkan"* dan *"atas masukkan"* $\rightarrow$ ganti menjadi **masukan** (satu huruf 'k'). Kata *masukan* (nomina) bermakna saran/input; sedangkan *masukkan* (verba) adalah kata perintah imperatif.
-  * Poin 5: hilangkan spasi sebelum tanda koma: `Medi Taruk , M.Cs` $\rightarrow$ **Medi Taruk, M.Cs.**.
+  * Poin 3: `selaku K Program Studi` → perbaiki menjadi **selaku Koordinator Program Studi**.
+  * Poin 4 & 5: kata `masukkan` pada frasa *"arahan dan masukkan"* dan *"atas masukkan"* → ganti menjadi **masukan** (satu huruf 'k'). Kata *masukan* (nomina) bermakna saran/input; sedangkan *masukkan* (verba) adalah kata perintah imperatif.
+  * Poin 5: hilangkan spasi sebelum tanda koma: `Medi Taruk , M.Cs` → **Medi Taruk, M.Cs.**.
 * **Karakter Rusak (Mojibake):** Pada alinea 1 dan poin 1, simbol tanda petik/kutip berubah menjadi tanda tanya rusak (``). Pastikan menyimpan berkas Word dalam encoding UTF-8 standar agar simbol apostrof (`doa`, `“Analisis...”`) tidak korup.
 
 #### 3. Daftar Istilah & Daftar Singkatan (Halaman viii & ix / Halaman PDF 9–10)
 * **Hapus Teks Bawaan Microsoft Word:** Di bawah tajuk `Arti`, terdapat teks **`Contents`**. Ini adalah sisa artefak fitur *Table of Contents* otomatis di MS Word yang tidak dihapus oleh mahasiswa. Hapus teks tersebut.
 * **Koreksi Typo Istilah:**
-  * Pada baris $p$-value tertulis: *"Nilai probalitas signifikan..."* $\rightarrow$ ganti menjadi **probabilitas**.
-  * Lambang $r_o$ dan $r_e$: jangan hanya menuliskan istilah bahasa Inggris dalam kurung `(Observed Mean Distance)` dan `(Expected Mean Distance)`. Tuliskan penjelasan bahasa Indonesianya:
-    * $r_o$: Jarak rata-rata teramati antar-titik terdekat (*Observed Mean Distance*).
-    * $r_e$: Jarak rata-rata yang diharapkan secara acak teoritis (*Expected Mean Distance*).
+  * Pada baris *p-value* tertulis: *"Nilai probalitas signifikan..."* → ganti menjadi **probabilitas**.
+  * Lambang *r₀* dan *rₑ*: jangan hanya menuliskan istilah bahasa Inggris dalam kurung `(Observed Mean Distance)` dan `(Expected Mean Distance)`. Tuliskan penjelasan bahasa Indonesianya:
+    * *r₀*: Jarak rata-rata teramati antar-titik terdekat (*Observed Mean Distance*).
+    * *rₑ*: Jarak rata-rata yang diharapkan secara acak teoritis (*Expected Mean Distance*).
 
 ---
 
@@ -129,18 +129,18 @@ mindmap
   * **Koreksi:** Ini adalah kesalahan sitasi ganda. Nama lembaganya terpotong dan tanda kurungnya ganjil. Ubah menjadi:
     > *"Berdasarkan data Badan Pusat Statistik Kota Samarinda (2025), Kota Samarinda memiliki 16 rumah sakit, 26 puskesmas, dan 150 klinik..."*
 * **Pembersihan Kata Terpotong (*Soft Hyphen Glitch*):** Pada Bab I ditemukan banyak kata yang terbelah spasi secara tidak wajar:
-  * Hal. 11: `ju ga` $\rightarrow$ **juga**, `b aru` $\rightarrow$ **baru**.
-  * Hal. 12: `wilaya h` $\rightarrow$ **wilayah**, `menganali sis` $\rightarrow$ **menganalisis**, `mengh asilkan` $\rightarrow$ **menghasilkan**.
-  * Hal. 14: `pen dukung` $\rightarrow$ **pendukung**.
+  * Hal. 11: `ju ga` → **juga**, `b aru` → **baru**.
+  * Hal. 12: `wilaya h` → **wilayah**, `menganali sis` → **menganalisis**, `mengh asilkan` → **menghasilkan**.
+  * Hal. 14: `pen dukung` → **pendukung**.
 
 #### 3. Penajaman Batasan Masalah & Tujuan Penelitian (Subbab 1.3 & 1.4)
 * **Kelemahan Ruang Lingkup:** Pada Subbab 1.3 butir 4 dan Subbab 1.4 butir 1–2, mahasiswa menyatakan ketiga jenis faskes (RS, Puskesmas, Klinik) dianalisis sebagai **satu kesatuan agregat titik**.
 * **Kritik Dewan Penguji:** Rumah sakit adalah faskes rujukan sekunder/tersier dengan radius jangkauan lintas kota, Puskesmas adalah faskes rujukan primer milik pemerintah yang diatur oleh zonasi kecamatan (Permenkes No. 43 Tahun 2019), sedangkan Klinik adalah faskes primer privat yang berorientasi pasar komersial. Jika ketiganya dicampur aduk dalam satu kali perhitungan NNA, maka nilai jarak tetangga terdekat dari sebuah Rumah Sakit kemungkinan besar adalah sebuah Klinik Pratama di sebelahnya, sehingga **tidak menggambarkan pola sebaran fasilitas rujukan sama sekali**.
 * **Solusi Wajib:** Ubah Rumusan Masalah, Batasan Masalah, dan Tujuan Penelitian agar mencakup **4 skenario analisis**:
-  1. Analisis Spasial Khusus **Rumah Sakit** ($n = 16$).
-  2. Analisis Spasial Khusus **Puskesmas** ($n = 26$).
-  3. Analisis Spasial Khusus **Klinik** ($n = 150$).
-  4. Analisis Spasial **Komposit/Gabungan Seluruh Fasilitas Kesehatan** ($N = 192$).
+  1. Analisis Spasial Khusus **Rumah Sakit** (*n* = 16).
+  2. Analisis Spasial Khusus **Puskesmas** (*n* = 26).
+  3. Analisis Spasial Khusus **Klinik** (*n* = 150).
+  4. Analisis Spasial **Komposit/Gabungan Seluruh Fasilitas Kesehatan** (*N* = 192).
 
 ---
 
@@ -148,39 +148,69 @@ mindmap
 
 #### 1. Perbaikan Fatal Rumus Kernel Density Estimation (Persamaan 2.3, Halaman 31)
 Di naskah tertulis:
-$$\hat{f}(x) = \frac{1}{nh} \sum_{i=1}^n K\left(\frac{x - x_i}{h}\right) \quad \text{--- (SALAH: RUMUS 1-DIMENSI)}$$
 
-* **Kritik Matematis:** Rumus di atas adalah fungsi estimasi densitas 1-dimensi (Silverman, 1986, bab 2). Untuk data geospasial pada koordinat 2-dimensi $(x, y)$ atau vektor lokasi $s \in \mathbb{R}^2$, integral volume kepadatan harus bernilai 1 di atas bidang luas. Oleh karena itu, penyebutnya **wajib memuat $h^2$**!
+$$
+\hat{f}(x) = \frac{1}{nh} \sum_{i=1}^n K\left(\frac{x - x_i}{h}\right) \quad \text{--- (SALAH: RUMUS 1-DIMENSI)}
+$$
+
+* **Kritik Matematis:** Rumus di atas adalah fungsi estimasi densitas 1-dimensi (Silverman, 1986, bab 2). Untuk data geospasial pada koordinat 2-dimensi (*x, y*) atau vektor lokasi *s* ∈ ℝ², integral volume kepadatan harus bernilai 1 di atas bidang luas. Oleh karena itu, penyebutnya **wajib memuat *h*²**!
 * **Rumus 2D Spasial yang Benar (Wajib Digunakan):**
-  $$\hat{f}(s) = \frac{1}{n h^2} \sum_{i=1}^n K\left(\frac{d(s, s_i)}{h}\right)$$
-  atau secara eksplisit pada koordinat bidang kartesius $(x, y)$:
-  $$\hat{f}(x, y) = \frac{1}{n h^2} \sum_{i=1}^n K\left(\frac{\sqrt{(x - x_i)^2 + (y - y_i)^2}}{h}\right)$$
+
+$$
+\hat{f}(s) = \frac{1}{n h^2} \sum_{i=1}^n K\left(\frac{d(s, s_i)}{h}\right)
+$$
+
+  atau secara eksplisit pada koordinat bidang kartesius (*x, y*):
+
+$$
+\hat{f}(x, y) = \frac{1}{n h^2} \sum_{i=1}^n K\left(\frac{\sqrt{(x - x_i)^2 + (y - y_i)^2}}{h}\right)
+$$
+
   di mana:
-  * $\hat{f}(s)$ atau $\hat{f}(x, y)$ = Estimasi densitas pada lokasi sel $(x, y)$ (satuan: $\text{titik}/\text{meter}^2$).
-  * $n$ = Jumlah total titik fasilitas kesehatan.
-  * $h$ = Bandwidth / radius pencarian (dalam meter, misalnya $h = 3.000\text{ m}$).
-  * $d(s, s_i)$ = Jarak Euclidean antara titik evaluasi $s$ ke titik fasilitas kesehatan $s_i$.
-  * $K(\cdot)$ = Fungsi kernel bivariate.
+  * *f̂(s)* atau *f̂(x, y)* = Estimasi densitas pada lokasi sel (*x, y*) (satuan: titik/m²).
+  * *n* = Jumlah total titik fasilitas kesehatan.
+  * *h* = Bandwidth / radius pencarian (dalam meter, misalnya *h* = 3.000 meter).
+  * *d(s, sᵢ)* = Jarak Euclidean antara titik evaluasi *s* ke titik fasilitas kesehatan *sᵢ*.
+  * *K(·)* = Fungsi kernel bivariate.
 
 * **Definisikan Fungsi Kernel Quartic:** Pada Subbab 3.4.2 mahasiswa menyebut menggunakan fungsi *Quartic Kernel*, namun di Bab II rumusnya tidak ada. Tambahkan rumus baku fungsi Quartic (Biweight) 2D:
-  $$K(u) = \begin{cases} \frac{3}{\pi} (1 - u^2)^2, & \text{untuk } 0 \le u \le 1 \\ 0, & \text{untuk } u > 1 \end{cases}$$
-  dengan $u = \frac{d(s, s_i)}{h}$. Sehingga rumus kepadatan eksplisitnya menjadi:
-  $$\hat{f}(s) = \sum_{d(s, s_i) \le h} \frac{3}{\pi n h^2} \left(1 - \frac{d(s, s_i)^2}{h^2}\right)^2$$
+
+$$
+K(u) = \begin{cases} \frac{3}{\pi} (1 - u^2)^2, & \text{untuk } 0 \le u \le 1 \\ 0, & \text{untuk } u > 1 \end{cases}
+$$
+
+  dengan *u = d(s, sᵢ) / h*. Sehingga rumus kepadatan eksplisitnya menjadi:
+
+$$
+\hat{f}(s) = \sum_{d(s, s_i) \le h} \frac{3}{\pi n h^2} \left(1 - \frac{d(s, s_i)^2}{h^2}\right)^2
+$$
 
 #### 2. Penambahan Rumus Inti NNA yang Hilang (Subbab 2.6, Halaman 28–29)
-Di naskah saat ini, mahasiswa hanya menulis rumus $r_e$ (Persamaan 2.1) dan $R = r_o / r_e$ (Persamaan 2.2). Rumus untuk menghitung $r_o$, $SE$, dan $z$-score **hilang total**. Mahasiswa wajib menambahkan 3 persamaan berikut:
+Di naskah saat ini, mahasiswa hanya menulis rumus *rₑ* (Persamaan 2.1) dan *R = r₀ / rₑ* (Persamaan 2.2). Rumus untuk menghitung *r₀*, *SE*, dan *z*-score **hilang total**. Mahasiswa wajib menambahkan 3 persamaan berikut:
 
-1. **Jarak Rata-rata Teramati (*Observed Mean Distance* - $r_o$):**
-   $$r_o = \frac{\sum_{i=1}^n d_i}{n}$$
-   *(di mana $d_i$ adalah jarak Euclidean dari titik fasilitas kesehatan ke-$i$ menuju tetangga terdekatnya yang pertama).*
+1. **Jarak Rata-rata Teramati (*Observed Mean Distance* - *r₀*):**
 
-2. **Standar Galat Jarak Harapan (*Standard Error* - $SE_{r_e}$):**
-   $$SE_{r_e} = \frac{0{,}26136}{\sqrt{n^2 / A}} = \frac{0{,}26136}{\sqrt{n \cdot \rho}}$$
-   *(di mana $A$ adalah luas wilayah Kota Samarinda dalam $\text{m}^2$, dan $\rho = n/A$ adalah densitas titik).*
+$$
+r_o = \frac{\sum_{i=1}^n d_i}{n}
+$$
+
+   *(di mana *dᵢ* adalah jarak Euclidean dari titik fasilitas kesehatan ke-*i* menuju tetangga terdekatnya yang pertama).*
+
+2. **Standar Galat Jarak Harapan (*Standard Error* - *SE(rₑ)*):**
+
+$$
+SE_{r_e} = \frac{0{,}26136}{\sqrt{n^2 / A}} = \frac{0{,}26136}{\sqrt{n \cdot \rho}}
+$$
+
+   *(di mana *A* adalah luas wilayah Kota Samarinda dalam m², dan ρ = *n* / *A* adalah densitas titik).*
 
 3. **Uji Signifikansi Statistik Skor Baku (*z-score*):**
-   $$z = \frac{r_o - r_e}{SE_{r_e}}$$
-   *(dengan ketentuan jika $|z| \ge 1{,}96$ pada tingkat signifikansi $\alpha = 0{,}05$, maka pola sebaran berbeda secara signifikan dari pola acak Poisson).*
+
+$$
+z = \frac{r_o - r_e}{SE_{r_e}}
+$$
+
+   *(dengan ketentuan jika |*z*| ≥ 1,96 pada tingkat signifikansi α = 0,05, maka pola sebaran berbeda secara signifikan dari pola acak Poisson).*
 
 ---
 
@@ -200,16 +230,16 @@ Di naskah saat ini, mahasiswa hanya menulis rumus $r_e$ (Persamaan 2.1) dan $R =
 * **Arahan Revisi:** Perbarui bagan Gambar 3.1 dengan menyisipkan kotak *"Perancangan Data (Reproyeksi UTM, Validasi, Ekspor CSV & SHP)"* di antara Pengumpulan Data dan Perancangan Algoritma.
 
 #### 2. Perbaikan Diagram Alir Algoritma NNA (Gambar 3.2, Halaman 42 / PDF Hal. 52)
-* **Kelemahan Logika:** Bagan alir melompat langsung dari kotak *`Observed Mean Distance (r0)`* ke *`Nearest Neighbor Ratio (R)`*. Proses kalkulasi *`Expected Mean Distance (re)`* tidak digambarkan sama sekali, padahal $R$ mustahil diperoleh tanpa membagi $r_o$ dengan $r_e$.
+* **Kelemahan Logika:** Bagan alir melompat langsung dari kotak *`Observed Mean Distance (r0)`* ke *`Nearest Neighbor Ratio (R)`*. Proses kalkulasi *`Expected Mean Distance (re)`* tidak digambarkan sama sekali, padahal *R* mustahil diperoleh tanpa membagi *r₀* dengan *rₑ*.
 * **Typo Parah pada Bagan:** Di kotak proses sebelum output tertulis: `Hitung signifikansistatistik` (kata *"signifikansi"* dan *"statistik"* menempel tanpa spasi).
-* **Arahan Revisi:** Perbaiki tata letak flowchart: masukkan simbol proses paralel/sekuensial perhitungan $r_0$ dan $r_e$, satukan ke proses perhitungan $R$, lanjutkan ke proses perhitungan $SE_{r_e}$ dan $z$-score, serta pisahkan spasi pada teks proses.
+* **Arahan Revisi:** Perbaiki tata letak flowchart: masukkan simbol proses paralel/sekuensial perhitungan *r₀* dan *rₑ*, satukan ke proses perhitungan *R*, lanjutkan ke proses perhitungan *SE(rₑ)* dan *z*-score, serta pisahkan spasi pada teks proses.
 
 #### 3. Peningkatan Bobot Keilmuan Informatika pada Algoritma KDE (Subbab 3.4.2 & Gambar 3.3)
 * **Masalah Utama:** Flowchart Gambar 3.3 dan narasi Subbab 3.4.2 hanya menuliskan urutan menekan tombol pada software QGIS:
-  `Mulai` $\rightarrow$ `Layer SHP faskes` $\rightarrow$ `Penerapan parameter` $\rightarrow$ `Hitung nilai kepadatan` $\rightarrow$ `Bentuk raster` $\rightarrow$ `Potong raster (clip)` $\rightarrow$ `Peta heatmap` $\rightarrow$ `Selesai`.
+  `Mulai` → `Layer SHP faskes` → `Penerapan parameter` → `Hitung nilai kepadatan` → `Bentuk raster` → `Potong raster (clip)` → `Peta heatmap` → `Selesai`.
 * **Kritik Penguji Informatika:** *"Jika hanya mengklik toolbox Heatmap di QGIS, di mana kompetensi komputasi dari Sarjana Komputer?"*
 * **Solusi Kongkret:**
-  1. Tampilkan logika komputasi raster internal: bagaimana algoritma membagi *bounding box* Samarinda menjadi matriks grid berukuran $100\text{ m} \times 100\text{ m}$, melakukan pencarian titik dalam *sliding window* radius $h = 3.000\text{ m}$, mengaplikasikan bobot kuadratik Quartic, dan mengekspor *density matrix* ke format GeoTIFF.
+  1. Tampilkan logika komputasi raster internal: bagaimana algoritma membagi *bounding box* Samarinda menjadi matriks grid berukuran 100 m × 100 m, melakukan pencarian titik dalam *sliding window* radius *h* = 3.000 meter, mengaplikasikan bobot kuadratik Quartic, dan mengekspor *density matrix* ke format GeoTIFF.
   2. **Nilai Tambah Sangat Direkomendasikan:** Implementasikan fungsi KDE tersebut dalam script Python mandiri (menggunakan pustaka `numpy`, `scipy.stats`, dan `rasterio`) atau bangun antarmuka WebGIS interaktif sederhana (berbasis **Streamlit + Leaflet/Folium**). Hal ini akan mengubah proposal ini dari sekadar laporan praktikum SIG geografi menjadi **karya ilmiah Teknik Informatika / Data Science Spasial yang bernilai tinggi**.
 
 #### 4. Koreksi Anomali Fatal Kartografi pada Rancangan Layout Peta (Gambar 3.4, Halaman 46 / PDF Hal. 56)
@@ -225,7 +255,7 @@ Audit forensik terhadap citra Gambar 3.4 menemukan dua kesalahan fatal:
      ```
    * **Fakta Teknis:** Pada sistem koordinat **UTM Zone 50S**, koordinat Kota Samarinda berada pada rentang:
      * **Easting (X):** sekitar `510.000 m` s.d. `535.000 m` (bukan 13 juta!).
-     * **Northing (Y):** sekitar `9.935.000 m` s.d. `9.965.000 m` (bukan minus 46 ribu!). Sistem UTM di belahan bumi selatan menggunakan *False Northing* $10.000.000\text{ m}$, sehingga **koordinat UTM tidak pernah bernilai negatif**.
+     * **Northing (Y):** sekitar `9.935.000 m` s.d. `9.965.000 m` (bukan minus 46 ribu!). Sistem UTM di belahan bumi selatan menggunakan *False Northing* 10.000.000 m, sehingga **koordinat UTM tidak pernah bernilai negatif**.
    * Jika draf ini diuji oleh dosen yang memahami SIG/Pemetaan, proposal ini bisa langsung dinyatakan tidak lulus karena data spasialnya terbukti mengalami kekeliruan sistem proyeksi (*misprojection*).
 2. **Peta KDE Tanpa Permukaan Heatmap:**
    * Judul peta pada layout adalah: *"PETA FASILITAS KESEHATAN DI KOTA SAMARINDA METODE KERNEL DENSITY ESTIMATION"*.
@@ -241,14 +271,14 @@ Audit forensik terhadap citra Gambar 3.4 menemukan dua kesalahan fatal:
   > *"4. Penyiapan dan Stratifikasi Layer Fasilitas Kesehatan*  
   > *Data fasilitas kesehatan dipilah menjadi empat kumpulan data (dataset), yaitu: (1) layer Rumah Sakit, (2) layer Puskesmas, (3) layer Klinik, dan (4) layer gabungan seluruh fasilitas kesehatan. Selanjutnya atribut spasial diekspor ke format CSV dan Shapefile untuk analisis terpisah dan komparatif."*
 
-#### 6. Pencantuman Nilai Luas Wilayah Samarinda ($A$) & Mitigasi Efek Batas (Edge Effect)
-* Pada Subbab 3.3 atau 3.4, sebutkan secara eksplisit luas wilayah administrasi Kota Samarinda yang digunakan sebagai parameter $A$. Berdasarkan data resmi BPS/BIG Kota Samarinda, luas daratan adalah **718,00 $\text{km}^2$ ($718.000.000\text{ m}^2$)** atau sebutkan angka eksak hasil kalkulasi geometri poligon `$area` pada layer SHP batas kota di QGIS.
+#### 6. Pencantuman Nilai Luas Wilayah Samarinda (*A*) & Mitigasi Efek Batas (Edge Effect)
+* Pada Subbab 3.3 atau 3.4, sebutkan secara eksplisit luas wilayah administrasi Kota Samarinda yang digunakan sebagai parameter *A*. Berdasarkan data resmi BPS/BIG Kota Samarinda, luas daratan adalah **718,00 km² (718.000.000 m²)** atau sebutkan angka eksak hasil kalkulasi geometri poligon `$area` pada layer SHP batas kota di QGIS.
 * Tambahkan penjelasan singkat mengenai mitigasi **Edge Effect**: karena bentuk Kota Samarinda tidak beraturan (*irregular polygon*) dan dibelah oleh Sungai Mahakam, pencarian tetangga terdekat pada titik di dekat garis perbatasan Kabupaten Kutai Kartanegara berpotensi mengalami bias batas. Sebutkan bahwa titik fasilitas kesehatan dianalisis dengan batas administrasi resmi Kota Samarinda sesuai ruang lingkup penelitian.
 
 #### 7. Perbaikan Salah Rujuk Tabel (Cross-Reference)
 * **Halaman 42 / PDF Hal. 52 (Subbab 3.4.1 Poin 7):**
   * Tertulis: *"...sesuai indikator pada Tabel 2.1..."*.
-  * **Koreksi:** Tabel 2.1 adalah tabel *"Perbedaan Penelitian Sebelumnya"*. Tabel interpretasi nilai $R$ adalah **Tabel 2.2**.
+  * **Koreksi:** Tabel 2.1 adalah tabel *"Perbedaan Penelitian Sebelumnya"*. Tabel interpretasi nilai *R* adalah **Tabel 2.2**.
 * **Halaman 51 / PDF Hal. 61 (Subbab 3.7):**
   * Tertulis: *"...disusun jadwal penelitian sebagaimana disajikan pada Tabel 3.3."*.
   * **Koreksi:** Tabel yang disajikan di bawahnya adalah **Tabel 3.4 Jadwal Penelitian** (Tabel 3.3 sudah digunakan untuk *Rancangan Pengujian*).
@@ -292,10 +322,10 @@ Sesuai **Pedoman Skripsi FT Unmul**, Daftar Pustaka wajib dikelola menggunakan S
 * **Koreksi:** Lengkapi menjadi **Badan Pusat Statistik Kota Samarinda. (2025)**.
 
 #### 6. Typo pada Edisi Buku & Tanda Baca (Ref 1, 6, 20, 28)
-* Ref 1 (`Abdulazeez`): tertulis `Tanim, R., M.` $\rightarrow$ hapus koma berlebih: **Tanim, R. M.**.
-* Ref 6 (`Creswell`): URL di dalam kurung `(https://books...)` $\rightarrow$ hapus tanda kurung pada URL.
-* Ref 20 (`Pressman`): tertulis `(Nineth edition)` $\rightarrow$ perbaiki typo menjadi **(9th ed.)** atau **(Ninth edition)**.
-* Ref 28 (`Slocum`): tertulis `Howard, Hugh. H.` $\rightarrow$ perbaiki inisial menjadi **Howard, H. H.**.
+* Ref 1 (`Abdulazeez`): tertulis `Tanim, R., M.` → hapus koma berlebih: **Tanim, R. M.**.
+* Ref 6 (`Creswell`): URL di dalam kurung `(https://books...)` → hapus tanda kurung pada URL.
+* Ref 20 (`Pressman`): tertulis `(Nineth edition)` → perbaiki typo menjadi **(9th ed.)** atau **(Ninth edition)**.
+* Ref 28 (`Slocum`): tertulis `Howard, Hugh. H.` → perbaiki inisial menjadi **Howard, H. H.**.
 
 ---
 
@@ -460,16 +490,16 @@ Gunakan tabel kendali ini untuk memeriksa perbaikan naskah sebelum menyerahkan b
 | :---: | :--- | :---: | :--- | :---: |
 | **1** | **Lembar Pengesahan** | ii (PDF 3) | Isi tanggal rapat rapat draf; sediakan kolom tanda tangan resmi Pembimbing I & II serta Koorprodi. | [ ] |
 | **2** | **Kata Pengantar** | iii (PDF 4) | Hapus teks template nama Dosen Penguji I & II; ubah kata `masukkan` menjadi `masukan`; perbaiki typo `selaku K Program Studi`; bersihkan karakter tanda tanya rusak. | [ ] |
-| **3** | **Daftar Istilah/Singk.** | viii–ix (PDF 9–10) | Hapus kata `Contents`; ubah `probalitas` menjadi `probabilitas`; lengkapi definisi Indonesia untuk $r_o$ dan $r_e$. | [ ] |
+| **3** | **Daftar Istilah/Singk.** | viii–ix (PDF 9–10) | Hapus kata `Contents`; ubah `probalitas` menjadi `probabilitas`; lengkapi definisi Indonesia untuk *r₀* dan *rₑ*. | [ ] |
 | **4** | **Bab I (Format & Sitasi)** | 1–4 (PDF 11–14) | Hapus judul ganda `BAB I PEND AHULU AN`; perbaiki sitasi BPS `(Badan Pusat Statistik Kota, 2025)`; bersihkan kata terbelah spasi (`ju ga`, `b aru`, `wilaya h`). | [ ] |
 | **5** | **Bab I (Ruang Lingkup)** | 4–6 (PDF 14–16) | Tambahkan rencana stratifikasi analisis: Pisahkan pengujian menjadi 4 subset (Rumah Sakit, Puskesmas, Klinik, Komposit). | [ ] |
-| **6** | **Bab II (Rumus KDE 2D)** | 31 (PDF 41) | Ubah rumus KDE dari 1D ($nh$) menjadi rumus 2D spasial ($nh^2$); cantumkan rumus eksplisit fungsi *Quartic Kernel*. | [ ] |
-| **7** | **Bab II (Rumus NNA)** | 28–29 (PDF 38–39) | Tambahkan 3 persamaan bernomor: Rumus $r_o$, Rumus Standard Error ($SE_{r_e}$), dan Rumus $z$-score. | [ ] |
+| **6** | **Bab II (Rumus KDE 2D)** | 31 (PDF 41) | Ubah rumus KDE dari 1D (*nh*) menjadi rumus 2D spasial (*nh*²); cantumkan rumus eksplisit fungsi *Quartic Kernel*. | [ ] |
+| **7** | **Bab II (Rumus NNA)** | 28–29 (PDF 38–39) | Tambahkan 3 persamaan bernomor: Rumus *r₀*, Rumus Standard Error (*SE*), dan Rumus *z-score*. | [ ] |
 | **8** | **Bab III (Gambar 3.1)** | 33 (PDF 43) | Perbarui bagan alur penelitian dengan menyisipkan kotak Tahap 4 *"Perancangan Data"*. | [ ] |
-| **9** | **Bab III (Gambar 3.2)** | 42 (PDF 52) | Masukkan proses perhitungan $r_e$ pada bagan alur NNA; perbaiki typo spasi `Hitung signifikansistatistik`. | [ ] |
+| **9** | **Bab III (Gambar 3.2)** | 42 (PDF 52) | Masukkan proses perhitungan *rₑ* pada bagan alur NNA; perbaiki typo spasi `Hitung signifikansistatistik`. | [ ] |
 | **10** | **Bab III (Gambar 3.4)** | 46 (PDF 56) | Perbaiki layout peta: ubah koordinat grid frame menjadi angka UTM EPSG:32750 yang benar (bukan 13 juta); render permukaan raster heatmap KDE di muka peta. | [ ] |
 | **11** | **Bab III (Subbab 3.3.4)** | 39 (PDF 49) | Ubah judul dan narasi poin 4 agar sejalan dengan rencana stratifikasi layer faskes (bukan mencampur aduk). | [ ] |
-| **12** | **Bab III (Jadwal & Cross-ref)** | 50–52 (PDF 60–62) | Perbaiki rujukan Tabel 2.1 $\rightarrow$ Tabel 2.2; Tabel 3.3 $\rightarrow$ Tabel 3.4; tata rapi Tabel 3.4 agar tidak menggantung menyisakan hal. 52 kosong 80%. | [ ] |
+| **12** | **Bab III (Jadwal & Cross-ref)** | 50–52 (PDF 60–62) | Perbaiki rujukan Tabel 2.1 → Tabel 2.2; Tabel 3.3 → Tabel 3.4; tata rapi Tabel 3.4 agar tidak menggantung menyisakan hal. 52 kosong 80%. | [ ] |
 | **13** | **Daftar Pustaka** | 53–55 (PDF 63–65) | Hapus duplikat Ref 12 (*Hashtarkhani 2024b*); bersihkan judul Ref 29 (*Susianti*); hilangkan gelar `MS.` di Ref 25; rapikan dokumen hukum Ref 19 & 30; lengkapi nama BPS Kota Samarinda di Ref 3. | [ ] |
 
 ---
