@@ -43,6 +43,7 @@ Repository ini didedikasikan untuk pengelolaan dokumentasi bimbingan, audit nask
 | 13 | Wildanah Sirad | 2209106062 | *Sistem Monitoring dan Otomasi Penyiraman Tanaman Cabai Berbasis IoT dengan Decision Tree* | [Audit Awal](audit_mahasiswa/laporan_audit_proposal_wildanah_sirad.md) • [Audit Revisi 2 (Menuju Sempro)](audit_mahasiswa/laporan_audit_proposal_wildanah_sirad_revisi2.md) |
 | 14 | Luthfiah Nur Alifah | 2309106102 | *Analisis Pola Sebaran dan Kepadatan Fasilitas Kesehatan Menggunakan Metode Nearest Neighbor Analysis (NNA) dan Kernel Density Estimation (KDE)* | [Laporan Audit Proposal](audit_mahasiswa/laporan_audit_proposal_luthfiah_nur_alifah.md) |
 | 15 | Muchlas Andrey Pahlevi | 2209106082 | *Klasifikasi Motif Tenun Samarinda Menggunakan CNN-SVM dan Content-Based Image Retrieval untuk Menampilkan Citra Serupa* | [Audit Seminar Hasil Skripsi](audit_mahasiswa/laporan_audit_skripsi_muchlas_andrey_pahlevi.md) |
+| 16 | Rangga Kristiawan | 2209106116 | *Analisis Sentimen Ulasan Warung Gresik Suroboyo Bakso dan Soto Ayam Pak Mulkan Samarinda pada Google Maps Menggunakan Metode Naive Bayes* | [Audit Pengajuan Judul](audit_mahasiswa/laporan_audit_pengajuan_judul_rangga_kristiawan.md) |
 
 ---
 
