@@ -1,5 +1,6 @@
 # 📋 LAPORAN AUDIT AKADEMIK FORENSIK EVALUASI REVISI FINAL PROPOSAL SKRIPSI
 ## VERIFIKASI AKHIR NASKAH MENUJU SEMINAR PROPOSAL S1 INFORMATIKA FT UNMUL
+### (TINJAUAN FORENSIK LEVEL 2: ALGORITMA, BASIS DATA, DAN ARSITEKTUR PERANGKAT LUNAK)
 
 **Mahasiswa Bimbingan:** Nelsi  
 **NIM:** 2309106120  
@@ -12,127 +13,155 @@
 
 **Dokumen yang Diaudit:** `draft_proposal_nelsi_revisi2_final_acc.pdf` (66 Halaman / 78 Halaman Total PDF, berkas asal: `Proposal Skripsi Nelsii Hasil Revisi.pdf`)  
 **Tanggal Evaluasi:** 26 Oktober 2026  
-**Status Evaluasi:** 🟢 **ACC FINAL 100% UNTUK DAFTAR SEMINAR PROPOSAL (SIAP CETAK & REGISTRASI UJIAN SETELAH MERAPIKAN 3 HALAMAN PRELIMINER)**
+**Status Evaluasi:** 🟢 **ACC FINAL 100% UNTUK DAFTAR SEMINAR PROPOSAL (DENGAN 7 CATATAN PENGUATAN TEKNIS INFORMATIKA & PERAPIAN PRELIMINER)**
 
 ---
 
 > [!IMPORTANT]
-> ### 🎓 Keputusan Dosen Pembimbing I (Anton Prafanto, S.Kom., M.T.):
-> *"Selamat untuk Nelsi! Naskah proposal skripsi hasil revisi terbaru ini telah menunjukkan kematangan substansi akademik, kelengkapan pemodelan perangkat lunak, serta ketepatan metodologi ilmiah yang sangat memuaskan.*  
+> ### 🎓 Catatan Konsultasi & Penguatan Ilmiah dari Dosen Pembimbing I:
+> *"Nelsi, secara substansi umum dan kelengkapan dokumen, proposalmu sudah sangat layak maju ke Seminar Proposal. Seluruh mockup Figma, flowchart kapsul, penambahan atribut ERD, serta **bukti scan wawancara tertulis bertanda tangan narasumber asli (Lampiran 5, 13 Oktober 2026)** telah kamu lengkapi dengan sangat baik.*  
 >  
-> *Seluruh catatan revisi diagram UML (Use Case, Activity, Sequence, Class), pembenahan atribut ERD, penyelarasan identitas mockup antarmuka Figma (SIPAS Kampung Sambakungan), hingga **penyertaan bukti empiris hasil wawancara riil lapangan (Lampiran 5 - lembar wawancara tertulis bertanda tangan narasumber)** telah kamu selesaikan secara tuntas dan bertanggung jawab.*  
->  
-> *Dengan ini, naskah dinyatakan **RESMI DI-ACC UNTUK MAJU KE UJIAN SEMINAR PROPOSAL SKRIPSI**. Sebelum naskah digandakan untuk diserahkan ke Program Studi dan Tim Dosen Penguji, rapikan 3 sentuhan akhir tipografi/penomoran halaman preliminer yang tercantum pada Bagian 2 dokumen ini (dapat diselesaikan dalam waktu kurang dari 15 menit)."*
+> *Namun, sebagai calon **Sarjana Informatika**, naskahmu harus tahan uji di hadapan Dewan Penguji yang teliti membedah logika kode, matematika algoritma, dan arsitektur database. Audit mendalam lapis kedua (*Level 2 Forensics*) menemukan **7 detail teknis tingkat lanjut** (mulai dari *bug* alur logika pseudocode, *edge-case* ekstraksi tahun lahir NIK, ketiadaan relasi ganda petugas di ERD/Class Diagram, hingga anakronisme jadwal penelitian). Pelajari 7 catatan ini agar kamu tidak terjebak saat dicecar pertanyaan teknis oleh dosen penguji!"*
 
 ---
 
-## 📊 1. Matriks Verifikasi Tindak Lanjut Catatan Revisi
+## 🔬 1. Temuan Forensik Informatika Tingkat Lanjut (*Advanced Computer Science Findings*)
 
 ```mermaid
-pie title Status Penyelesaian Catatan Revisi Final Nelsi
-    "Tuntas Sempurna (100%)" : 9
-    "Sentuhan Akhir Format Word" : 1
-```
+graph TD
+    A[Audit Forensik Informatika Draf Nelsi] --> B[Logika Algoritma & Matematika]
+    A --> C[Pemodelan Basis Data & OOP MVC]
+    A --> D[Konsistensi Riset & Timeline]
 
-| No | Komponen Naskah | Catatan Audit Sebelumnya | Realisasi pada Draf Revisi Terbaru | Status Hasil Audit |
-|:---:|:---|:---|:---|:---:|
-| **1** | **Lembar Pengesahan (Hal. ii)** | Lengkapi NIP resmi Pembimbing I, Pembimbing II, dan Koorprodi. | • NIP Pembimbing I: `19931022 201903 1 016` (Lengkap)<br>• NIP Pembimbing II: `19900404 202506 1 005` (Lengkap)<br>• NIP Koorprodi: `19731229 200501 1 002` (Lengkap). | 🟢 **TUNTAS SEMPURNA** |
-| **2** | **Kata Pengantar (Hal. iii)** | Hapus placeholder ucapan terima kasih untuk Penguji I & II yang belum definitif. | Ucapan terima kasih telah dibersihkan secara tertib (Poin 1 Keluarga, 2 Mitra Kampung, 3 Dekan FT, 4 Koorprodi, 5 Pembimbing I, 6 Pembimbing II, 7 Dosen, 8 Rekan Mahasiswa). | 🟢 **TUNTAS SEMPURNA** |
-| **3** | **Atribut ERD (Gambar 3.2 Hal. 33)** | Atribut `Status_Permohonan` duplikat dan `Status_Pemohon` hilang pada entitas `permohonan_surat`. | Entitas `permohonan_surat` telah diperbaiki: atribut `Status_Pemohon` telah hadir dan duplikasi `Status_Permohonan` telah dihilangkan. | 🟢 **TUNTAS SEMPURNA** |
-| **4** | **Use Case Diagram (Gambar 3.3 Hal. 35)** | Koreksi nama aktor *"Petugas Kelurahan"*, pasang *System Boundary Box*, dan rapikan stereotipe `<<include>>`. | • Boundary box berjudul *"Sistem Informasi Pelayanan Surat Kampung Sambakungan"* terpasang rapi.<br>• Label aktor kanan telah diganti menjadi **"Petugas Kampung"**.<br>• Stereotipe `<<include>>` telah benar 100%. | 🟢 **TUNTAS SEMPURNA** |
-| **5** | **Activity Diagram (Gambar 3.4 Hal. 36)** | Typo *"From"* dan istilah *"Status Permohonan"* pada aktivitas pengisian formulir. | Teks telah dikoreksi menjadi: *"Mengisi form (jenis surat, urgensi, disabilitas bila ada) & mengunggah berkas bukti"*. | 🟢 **TUNTAS SEMPURNA** |
-| **6** | **Mockup Antarmuka Figma (Gambar 3.8 & 3.10)** | Teks branding masih tertulis *"SIPAS Kelurahan"* dan profil *"Admin Kelurahan"*. | • Gambar 3.8: Branding sidebar kiri telah berubah menjadi **"SIPAS Kampung Sambakungan"**.<br>• Gambar 3.10: Header profil kanan atas telah berubah menjadi **"Petugas: Admin Kampung"**. | 🟢 **TUNTAS SEMPURNA** |
-| **7** | **Terminator Flowchart (Gambar 3.1 Hal. 26)** | Simbol awal dan akhir kerangka penelitian belum berbentuk kapsul terminator (*Start/End*). | Kotak *Mulai* dan *Selesai* pada diagram kerangka penelitian kini telah berbentuk oval/kapsul sesuai standar Tabel 2.6. | 🟢 **TUNTAS SEMPURNA** |
-| **8** | **Bukti Empiris Wawancara (Lampiran 5 Hal. 60–66)** | Lampiran wawancara belum menyertakan lembar instrumen hasil wawancara riil di lapangan. | **Sangat Baik!** Nelsi telah melampirkan 7 halaman scan instrumen wawancara bertuliskan tangan narasumber (Bapak Ilmansyah, Kasi Pemerintahan) bertanggal **13 Oktober 2026**. | 🟢 **TUNTAS SEMPURNA** |
-| **9** | **Pengujian Black Box & Alur Usia NIK** | Pastikan skenario pengujian mencakup verifikasi batas usia NIK dan mitigasi starvation. | Tabel 3.4 memuat 16 skenario komprehensif, mencakup pengujian NIK perempuan, kasus batas usia (44, 45, 59, 60 tahun), serta verifikasi kenaikan skor *aging* $\lambda = 0.12$. | 🟢 **TUNTAS SEMPURNA** |
-| **10** | **Sinkronisasi Penomoran Preliminer** | Penomoran halaman pada Daftar Isi, Daftar Lampiran, dan Daftar Istilah masih bergeser. | Masih ditemukan pergeseran penomoran akibat pemisahan halaman Kata Pengantar. | 🟡 **SENTUHAN AKHIR (15 Menit)** |
+    B --> B1["Bug Logika Pseudocode: StatusUsia Tak Ter-assign ke Status Pemohon (Hal. 17)"]
+    B --> B2["Edge Case Abad Y2K: NIK Lansia Usia >100 Tahun Terbaca Balita (Hal. 20)"]
+    B --> B3["Kalkulasi Jam Kerja Aging: Filter Weekend & Jam Pelayanan di Backend (Hal. 22)"]
+
+    C --> C1["Dual Foreign Key Unmapped: user_id & id_petugas_pemroses di ERD (Hal. 33)"]
+    C --> C2["Class Diagram MVC Terlalu Sempit: Hanya 1 Controller 5 Method (Hal. 38)"]
+
+    D --> D1["Anakronisme Jadwal: Sempro Tertulis Bulan September (Hal. 48)"]
+    D --> D2["Mismatch Narasi vs Matriks: Paper Rumahorbo Gaib di Narasi 2.1 (Hal. 9 & 21)"]
+```
 
 ---
 
-## 🔍 2. Tiga Sentuhan Akhir Format Dokumen Sebelum Digandakan (*Final Touch-ups*)
-
-Mahasiswa wajib membuka dokumen Microsoft Word (`.docx`) dan merapikan 3 hal berikut sebelum berkas diubah kembali ke PDF final untuk pendaftaran ujian:
-
+### 1. Bug Logika Alur Penentuan Status Pemohon pada Pseudocode (Halaman 17)
+Perhatikan baris ke-2 sampai ke-9 pada blok pseudocode di Subbab 2.3.2 (PDF Hal. 29):
 ```text
-┌────────────────────────────────────────────────────────────────────────┐
-│               CHECKLIST SENTUHAN AKHIR DOKUMEN (15 MENIT)               │
-├────────────────────────────────────────────────────────────────────────┤
-│ 1. Satukan Tanggal & Penulis Kata Pengantar ke Halaman iii             │
-│    (Perbarui tanggal menjadi Oktober 2026 agar sinkron wawancara)     │
-│ 2. Update Seluruh Bidang (Field Code) Daftar Isi (Tekan F9 di Word)    │
-│ 3. Perbarui Nomor Halaman Fisik di Daftar Lampiran & Daftar Istilah    │
-└────────────────────────────────────────────────────────────────────────┘
+usia(i) ← hitungUsiaDariNIK(NIK(i), tanggal_pengajuan(i))
+JIKA usia(i) ≥ 60 MAKA StatusUsia(i) ← Lansia
+SELAIN ITU JIKA usia(i) ≥ 45 MAKA StatusUsia(i) ← Pra Lansia
+SELAIN ITU StatusUsia(i) ← Umum
+
+JIKA Status(i) = Disabilitas ATAU Ibu Hamil MAKA
+   JIKA berkas bukti belum terverifikasi MAKA Status(i) ← StatusUsia(i)
+   Status(i) ← kategori berskor tertinggi antara Status(i) dan StatusUsia(i)
 ```
-
-### 1. Rapatkan Tanda Tangan Kata Pengantar (Eliminasi Halaman Kosong `iv`)
-* **Kondisi Saat Ini:**  
-  * Halaman `iii` memuat isi Kata Pengantar (poin 1–8).  
-  * Teks penutup:  
-    ```text
-    Samarinda, 20 Juni 2026
-    Penulis
-    ```  
-    terdorong ke halaman baru (Halaman `iv`), sehingga Halaman `iv` menjadi **halaman kosong melompong (hanya berisi 2 baris)**.
-* **Perbaikan Wajib:**  
-  1. Kurangi spasi baris/paragraf pada Halaman `iii` (misalnya rapatkan jarak judul Kata Pengantar atau jeda antarpoin ucapan terima kasih) sehingga blok `Samarinda, ... Penulis` **naik dan muat rapi di bagian bawah Halaman iii**.
-  2. **Koreksi Tanggal:** Ubah tanggal `Samarinda, 20 Juni 2026` menjadi **`Samarinda, Oktober 2026`**. Sangat tidak logis jika Kata Pengantar bertanggal Juni 2026 sementara data wawancara di Bab I, Bab III, dan Lampiran 5 baru diambil pada **13 Oktober 2026**.
-
-### 2. Update Otomatis Daftar Isi di Word
-* **Dampak Positif Penggabungan Halaman di Atas:**  
-  Begitu Halaman `iv` yang kosong dieliminasi, maka:
-  * Halaman `Daftar Isi` akan tepat dimulai pada halaman Romawi **`iv`** (saat ini tertulis halaman `v`).
-  * Seluruh nomor halaman preliminer di Daftar Isi akan kembali sinkron dan presisi 100%.
-* **Cara Pengerjaan:** Klik kanan pada area Daftar Isi di Microsoft Word $\rightarrow$ pilih **Update Field** $\rightarrow$ pilih **Update entire table** (atau tekan `Ctrl + A` lalu tekan `F9`).
-
-### 3. Sinkronkan Angka Halaman di Daftar Lampiran (Hal. ix) & Daftar Istilah (Hal. x)
-Perbarui angka halaman pada tabel statis secara manual di Word agar sesuai dengan posisi cetak fisik aktual:
-
-* **Tabel Daftar Lampiran (Halaman ix):**
-  * Lampiran 1: ubah Hal. 49 $\rightarrow$ **Hal. 52**
-  * Lampiran 2: ubah Hal. 50 $\rightarrow$ **Hal. 53**
-  * Lampiran 3: ubah Hal. 52 $\rightarrow$ **Hal. 55**
-  * Lampiran 4: ubah Hal. 53 $\rightarrow$ **Hal. 57**
-  * Lampiran 5: ubah Hal. 56 $\rightarrow$ **Hal. 60**
-* **Tabel Daftar Istilah/Lambang (Halaman x):**
-  * Lambang bobot $w_1, w_2, w_3$: ubah Hal. 8 $\rightarrow$ **Hal. 11**
-  * Nilai prioritas $P(i)$: ubah Hal. 10 $\rightarrow$ **Hal. 11**
-  * Metode *Rank Sum*: ubah Hal. 10 $\rightarrow$ **Hal. 12**
-  * Aturan *Tie-breaker*: ubah Hal. 14 $\rightarrow$ **Hal. 17**
-  * Koefisien aging $\lambda$: ubah Hal. 15 $\rightarrow$ **Hal. 21**
+* **Celah Logika (*Logical Bug*):**  
+  Jika pemohon adalah warga lansia (usia 68 tahun) yang **bukan** disabilitas dan **bukan** ibu hamil, maka kondisi `JIKA Status(i) = Disabilitas ATAU Ibu Hamil` bernilai **FALSE**.  
+  Akibatnya, variabel `Status(i)` **tidak pernah diberi nilai dari `StatusUsia(i)`**! Di baris berikutnya saat menghitung $P(i)$:  
+  `P(i) ← 0,5×SkorJenisSurat(i) + 0,3×SkorUrgensi(i) + 0,2×SkorStatusPemohon(i)`  
+  nilai status pemohon lansia tersebut menjadi *undefined/null*.
+* **Solusi Perbaikan Pseudocode:**  
+  Tambahkan inisialisasi default sebelum percabangan disabilitas:
+  ```text
+  StatusPemohon(i) ← StatusUsia(i)
+  JIKA PilihanWarga(i) = Disabilitas ATAU Ibu Hamil MAKA
+     JIKA berkas bukti terverifikasi MAKA
+        StatusPemohon(i) ← kategori berskor tertinggi antara PilihanWarga(i) dan StatusUsia(i)
+  ```
 
 ---
 
-## 🎯 3. Kisi-Kisi & Strategi Menjawab Pertanyaan Penguji Seminar Proposal
-
-Sebagai bekal menghadapi Dewan Penguji saat presentasi Seminar Proposal, berikut 4 pertanyaan kunci yang paling sering diajukan beserta panduan jawaban argumentatif yang telah terbangun kokoh di naskahmu:
-
-### ❓ Pertanyaan 1: *"Mengapa memilih algoritma Priority Scheduling mode Non-Preemptive, bukan Preemptive?"*
-* **Strategi Jawaban:**  
-  *"Izin menjawab Bapak/Ibu Penguji. Pada pelayanan administrasi persuratan, verifikasi dokumen dan pencetakan surat bersifat transaksi atomik (*satu kesatuan proses yang utuh*). Jika diterapkan mode preemptive, proses verifikasi surat yang sedang berjalan di meja petugas akan diinterupsi dan ditunda di tengah jalan ketika ada permohonan baru yang lebih mendesak masuk. Hal ini berisiko menyebabkan inkonsistensi berkas dan inefisiensi waktu kerja petugas. Selain itu, berdasarkan hasil wawancara dengan pihak Kampung Sambakungan (Lampiran 5 poin F.4), petugas menegaskan bahwa surat yang sudah mulai dikerjakan harus diselesaikan terlebih dahulu hingga tuntas."*
-
-### ❓ Pertanyaan 2: *"Bagaimana Anda memastikan pembobotan kriteria w₁=0.5, w₂=0.3, dan w₃=0.2 bersifat objektif dan tidak asumtif?"*
-* **Strategi Jawaban:**  
-  *"Izin menjawab Bapak/Ibu. Pembobotan pada penelitian ini tidak ditentukan secara asumsi pribadi peneliti, melainkan diturunkan secara matematis menggunakan metode **Rank Sum (Persamaan 2.2)** berdasarkan urutan preferensi prioritas yang ditetapkan langsung oleh Kepala Seksi Pemerintahan Kampung Sambakungan saat wawancara (Lampiran 5 poin E.1). Pihak kampung menetapkan bahwa Jenis Surat adalah prioritas peringkat 1 (karena berdampak langsung pada kebutuhan vital seperti SKTM untuk berobat/beasiswa), Tingkat Urgensi peringkat 2, dan Status Pemohon peringkat 3. Berdasarkan formula Rank Sum untuk 3 kriteria ($n=3$), diperoleh bobot terhitung sebesar 0.5; 0.3; dan 0.2 dengan total penjumlahan tepat 1.0."*
-
-### ❓ Pertanyaan 3: *"Apa yang terjadi jika permohonan berprioritas tinggi terus berdatangan? Bagaimana sistem menjamin permohonan umum tidak mengalami kelaparan antrean (starvation)?"*
-* **Strategi Jawaban:**  
-  *"Penelitian ini telah mengintegrasikan mekanisme **Linear Aging (Persamaan 2.4)**. Nilai prioritas aktual suatu permohonan akan bertambah secara dinamis sebesar koefisien aging $\lambda = 0.12$ per jam kerja pelayanan (Senin–Jumat pukul 08.00–14.00). Nilai $\lambda$ ini dikalkulasikan secara rasional dari selisih skor tertinggi dan terendah ($5.0 - 1.5 = 3.5$) dibagi batas toleransi waktu tunggu maksimal yang disepakati pihak kampung, yaitu 5 hari kerja (30 jam kerja). Dengan formula ini, permohonan berprioritas paling rendah sekalipun pasti akan menyamai skor permohonan darurat dalam kurun waktu 29 jam kerja, sehingga dijamin tetap terlayani secara adil."*
-
-### ❓ Pertanyaan 4: *"Bagaimana sistem memverifikasi bahwa pemohon benar-benar seorang lansia atau disabilitas agar skor prioritas tidak dimanipulasi?"*
-* **Strategi Jawaban:**  
-  *"Sistem menerapkan validasi berlapis. Untuk status Lansia ($\ge 60$ tahun) dan Pra Lansia (45–59 tahun), penentuannya diotomasi 100% oleh sistem di sisi server (*backend*) dengan mengekstraksi digit ke-7 sampai ke-12 NIK (format DDMMYY, dengan koreksi otomatis pengurangan 40 untuk wanita) dan membandingkannya dengan tanggal pengajuan, sehingga pemohon tidak dapat memanipulasi status usia. Sedangkan untuk status disabilitas, ibu hamil, dan urgensi tinggi, sistem mewajibkan pengunggahan berkas bukti (surat rujukan RS / buku KIA / kartu disabilitas) dan menahan skor tambahan tersebut sampai diverifikasi oleh petugas kampung (FR-05)."*
+### 2. *Edge Case* Abad (Masalah Y2K) pada Formula Ekstraksi NIK (Halaman 20)
+Pada Subbab 2.3.3 Poin 3 (PDF Hal. 32), formula penentuan tahun lahir tertulis:
+$$\text{Tahun lahir} = 2000 + YY \quad \text{jika } YY \le 26, \quad \text{dan } 1900 + YY \quad \text{jika } YY > 26$$
+* **Celah Algoritmik:**  
+  Tahun pengajuan adalah **2026** (dua digit terakhir = `26`).  
+  Jika ada warga sepuh berusia 101 tahun (lahir tahun 1925, $YY = 25$), sistem akan mengevaluasi $25 \le 26 \rightarrow$ **Tahun lahir dihitung $2000 + 25 = 2025$**!  
+  Warga berusia 101 tahun tersebut akan dihitung berusia **1 tahun (anak balita)** dan statusnya terdegradasi menjadi **Umum (skor 1)**, bukan **Lansia (skor 5)**!
+* **Solusi Pembelaan / Perbaikan:**  
+  Tambahkan klausul batasan (*boundary assumption*) bahwa batas wajar pemohon mandiri adalah rentang usia $0 \text{ s.d. } 100 \text{ tahun}$, atau ubah ambang pemotong (*threshold cutoff*) menjadi batas usia minimal pemegang KTP mandiri (17 tahun $\rightarrow YY > 09$).
 
 ---
 
-## 📋 4. Prosedur Pendaftaran Seminar Proposal di Fakultas Teknik Unmul
+### 3. Implementasi Jam Kerja Pelayanan (*Business Hours*) pada Formula Aging (Halaman 22)
+Formula Persamaan 2.4:
+$$P_{\text{aktual}}(i, t) = P(i) + \lambda \times (t - t_{\text{pengajuan}}(i))$$
+Di teks disebutkan: *$\lambda = 0.12$ per jam kerja waktu tunggu (Senin–Jumat pukul 08.00–14.00, atau 6 jam per hari).*
+* **Tantangan Pengujian (*Examiner Trap*):**  
+  Penguji sistem operasi/basis data akan bertanya:  
+  *"Bagaimana implementasi fungsi $t - t_{\text{pengajuan}}$ di Laravel? Jika pemohon mengajukan surat hari Jumat pukul 13.00, dan sistem mengevaluasi antrean hari Senin pukul 09.00, apakah waktu tunggu dihitung 68 jam riil atau 2 jam kerja?"*  
+  Jika dihitung 68 jam riil menggunakan fungsi standar `now()->diffInHours($waktu_pengajuan)`, penambahan skor aging adalah $68 \times 0.12 = 8.16$, yang akan merusak skala prioritas (skor melejit di atas 13.0!).
+* **Kesiapan Jawaban Mahasiswa:**  
+  Mahasiswa harus menjelaskan bahwa service `PriorityQueueService` menggunakan helper khusus kalkulasi jam kerja (*Business Hours Calculation*) yang mengecualikan hari Sabtu, Minggu, serta jam di luar 08.00–14.00.
 
-Setelah merapikan 3 sentuhan akhir di atas dan mengonversi berkas ke format PDF final:
-1. **Mintalah Lembar Persetujuan Seminar Proposal:** Hubungi Dosen Pembimbing I dan Pembimbing II untuk pengesahan formulir izin seminar.
-2. **Pengajuan Transkrip e-Surat:** Buka portal `https://e-surat.ft.unmul.ac.id`, ajukan transkrip nilai resmi dengan keterangan: *"Untuk keperluan Seminar Proposal Skripsi"* (pastikan nilai KKN dan PKL sudah tercantum).
-3. **Pendaftaran ke Bagian Akademik Prodi:**
-   * Kirim berkas via email ke: `informatika@ft.unmul.ac.id` dengan subjek:  
-     `Seminar Proposal NELSI 2309106120`
-   * Konfirmasi pendaftaran ke nomor WhatsApp Hotline Prodi S1 Informatika: **`0823 6070 8096`**.
+---
+
+### 4. Relasi Ganda ke Tabel `users` Belum Terpetakan di ERD (Gambar 3.2 Hal. 33) & Class Diagram (Hal. 38)
+* Pada Tabel 3.1, tabel `permohonan_surat` memiliki dua Foreign Key ke tabel `users`:  
+  1. `user_id` (warga yang mengajukan surat)  
+  2. `id_petugas_pemroses` (petugas yang memverifikasi/memproses surat).
+* **Kelemahan Diagram:**  
+  * **Di ERD (Gambar 3.2):** Hanya ada **satu garis relasi** antara `Users` dan `Permohonan_Surat`, yaitu relasi `Mengajukan (1 : N)`. Relasi petugas yang memproses surat tidak memiliki garis relasi fisik ke tabel `Users`.
+  * **Di Class Diagram (Gambar 3.6):** Pada model `PermohonanSurat` hanya ada method `+ user(): BelongsTo`. Method untuk mengambil data petugas, yaitu `+ petugas(): BelongsTo`, tidak dicantumkan.
+* **Solusi:** Tambahkan relasi kedua `Petugas (1) --- [Memproses] ---> (N) Permohonan_Surat` pada ERD dan tambahkan relasi `petugas()` di Class Diagram.
+
+---
+
+### 5. Arsitektur MVC pada Class Diagram Terlalu Sederhana (Gambar 3.6 Hal. 38)
+* Pada Class Diagram hanya ada 1 buah Controller: `PermohonanController` dengan 5 method.
+* **Fakta Kebutuhan Sistem:**  
+  Sistem memiliki 10 halaman antarmuka (Tabel 3.3), termasuk halaman login/registrasi (Gambar 3.7), kelola data 16 jenis surat (Gambar 3.12), dan rekapitulasi bulanan grafik surat masuk/keluar (Gambar 3.16).
+* Di mana method untuk login/registrasi, kelola master jenis surat, dan ekspor rekap bulanan? Jika seluruh fungsi tersebut ditumpuk di dalam `PermohonanController`, itu melanggar prinsip *Single Responsibility Principle* (SRP) dalam rekayasa perangkat lunak.
+* **Solusi:** Jelaskan saat seminar bahwa pada fase implementasi, sistem akan dilengkapi dengan `AuthController`, `JenisSuratController`, dan `RekapController` untuk menjaga kerapian kode Laravel.
+
+---
+
+### 6. Anakronisme Jadwal Penelitian (Tabel 3.5 Halaman 48)
+Perhatikan baris ke-2 pada Tabel 3.5 (*Jadwal Penelitian*):
+* Kegiatan **"Seminar Proposal"** diarsir pada kolom **September (Sep)**!
+* **Fakta Kronologis:**  
+  Saat ini adalah akhir **Oktober 2026**, dan wawancara lapangan di Kampung Sambakungan baru terlaksana pada **13 Oktober 2026** (Lampiran 5). Sangat tidak logis jika Seminar Proposal dijadwalkan pada bulan September (sebulan sebelum wawancara dilakukan!).
+* **Solusi Wajib:** Geser arsiran hitam Seminar Proposal pada Tabel 3.5 ke bulan **Oktober atau November 2026**.
+
+---
+
+### 7. Ketidaksinkronan Tinjauan Pustaka: Narasi 2.1 vs Matriks Tabel 2.1 (Hal. 9 & 21)
+* Di Subbab 2.1 Narasi (Hal. 6–9), Nelsi mengulas **13 penelitian terdahulu** secara berurutan (nomor 1 s.d. 13).
+* Namun pada **Tabel 2.1 Matriks Perbandingan (Hal. 9–10)**, hanya ada 3 penelitian pembanding yang dimasukkan:  
+  1. Rohmah & Gunawan (2023)  
+  2. Rumahorbo et al. (2025)  
+  3. Mahendra & Gunawan (2025)
+* **Temuan Janggal:** Penelitian No. 2 pada Tabel 2.1, yaitu **Rumahorbo et al. (2025)**, sama sekali **tidak ada dalam daftar ulasan nomor 1 s.d. 13 narasi di atasnya**! Paper tersebut tiba-tiba muncul di dalam tabel.
+* **Solusi:** Masukkan satu paragraf ulasan singkat untuk paper Rumahorbo et al. (2025) pada narasi Subbab 2.1 sebelum tabel perbandingan, atau ganti baris ke-2 Tabel 2.1 dengan salah satu dari 13 paper yang sudah diulas di narasi (misal Fathoni & Maryam 2021).
+
+---
+
+## 🛠️ 2. Checklist Sentuhan Akhir Dokumen Sebelum Digandakan
+
+Mahasiswa dapat menyelesaikan 4 perapian ini dalam waktu 15 menit di Microsoft Word:
+
+1. [ ] **Eliminasi Halaman "Hantu" iv:** Rapatkan spasi di halaman `iii` agar blok `Samarinda, Oktober 2026 \n Penulis` naik ke bawah Halaman iii, dan ubah tanggal dari `20 Juni 2026` menjadi **`Oktober 2026`**.
+2. [ ] **Update Field Daftar Isi:** Tekan `Ctrl + A` lalu `F9` (*Update entire table*) agar nomor Romawi Daftar Isi dimulai tepat pada halaman `iv`.
+3. [ ] **Perbarui Halaman Fisik Daftar Lampiran & Istilah:**
+   * Lampiran 1 s.d. 5 diubah menjadi: **Hal. 52, 53, 55, 57, 60**.
+   * Simbol $w_1, w_2, w_3$ Hal. 11, $P(i)$ Hal. 11, Rank Sum Hal. 12, Tie-breaker Hal. 17, $\lambda$ Hal. 21.
+4. [ ] **Geser Jadwal Sempro (Tabel 3.5):** Pindahkan kotak hitam Seminar Proposal ke bulan **November 2026**.
+
+---
+
+## 🎯 3. Kisi-Kisi Jawaban Pertanyaan Kritis Dewan Penguji Sempro
+
+Bekali mahasiswa dengan 4 argumen kunci berikut:
+
+| Fokus Pertanyaan Penguji | Jawaban Kunci Mahasiswa |
+|:---|:---|
+| **Mode Non-Preemptive vs Preemptive** | Verifikasi surat adalah proses atomik. Jika disela di tengah jalan (preemptive), berkas fisik di meja petugas berantakan dan rawan tertukar. Petugas kampung menegaskan surat yang mulai diketik harus diselesaikan dulu. |
+| **Objektivitas Bobot (0.5; 0.3; 0.2)** | Diturunkan secara saintifik menggunakan metode **Rank Sum (Persamaan 2.2)** dari preferensi urutan kepentingan yang ditetapkan langsung oleh Kepala Seksi Pemerintahan saat wawancara (Lampiran 5). |
+| **Mitigasi Kelaparan Antrean (Starvation)** | Diterapkan mekanisme **Linear Aging (Persamaan 2.4)** dengan koefisien $\lambda = 0.12/\text{jam kerja}$ (dihitung dari toleransi maksimal 5 hari kerja / 30 jam pelayanan). Pemohon berprioritas rendah pasti menyamai skor permohonan darurat dalam 29 jam kerja. |
+| **Integritas Penentuan Usia Lansia** | Diotomasi 100% oleh sistem di backend dari ekstraksi NIK (digit 7–12 format DDMMYY dengan reduksi 40 untuk wanita), sehingga status lansia/pra-lansia tidak dapat dimanipulasi oleh pemohon. |
 
 ---
 
