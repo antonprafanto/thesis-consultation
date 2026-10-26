@@ -83,7 +83,7 @@ JIKA Status(i) = Disabilitas ATAU Ibu Hamil MAKA
 
 #### 2. *The Uncapped Aging Dilemma* (Skor Prioritas Menembus Batas > 5.0) (Halaman 21–22)
 Formula Persamaan 2.4:
-$$P_{\text{aktual}}(i, t) = P(i) + 0.12 \times \Delta t_{\text{jam\_kerja}}$$
+$$P_{\text{aktual}}(i, t) = P(i) + 0.12 \times \Delta t_{\text{jam kerja}}$$
 * **Dilema Teoretis:**  
   Skor awal tertinggi pada sistem adalah **5.00** (SKTM + Urgensi Tinggi + Lansia).  
   Namun, pada formula dan pseudocode, **tidak ada pembatas atas (*ceiling / upper bound clamping*)**.
