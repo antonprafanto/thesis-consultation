@@ -1,5 +1,5 @@
-# 🏛️ LAPORAN AUDIT & CATATAN KRITIS DOSEN PENGUJI II (BIDANG INFORMATIKA)
-## Seminar Proposal / Skripsi Program Studi S1 Arsitektur – Fakultas Teknik Universitas Mulawarman
+# 🏛️ LAPORAN AUDIT PARIPURNA & CATATAN KRITIS DOSEN PENGUJI II (BIDANG INFORMATIKA)
+## Seminar Proposal Tugas Akhir Program Studi S1 Arsitektur – Fakultas Teknik Universitas Mulawarman
 
 ---
 
@@ -14,268 +14,315 @@
 | **Dosen Penguji I** | Ratri Bodromulatsih, S.Ds., M.Ars. |
 | **Dosen Penguji II** | **Anton Prafanto, S.Kom., M.T.** (Bidang Keahlian: *Internet of Things, Embedded Systems & Software Architecture*) |
 | **Dokumen Draf** | [`SEMINAR ARSITEKTUR ARYA 3.pdf`](file:///C:/Users/anton/vibecoding/Bimbingan/audit_mahasiswa/draft_seminar_arsitektur_arya_rizqi.pdf) (59 Halaman) |
-| **Status Review** | **Revisi Mayor Substantif TIK & Perapian Integritas Naskah** |
+| **Status Audit** | **Audit Forensik Menyeluruh (Level 2: Tuntas Tanpa Celah)** |
+| **Rekomendasi Ujian** | **Revisi Mayor Substantif TIK, Penyelarasan Bibliografi, & Pembersihan Integritas Naskah** |
 
 ---
 
-## 📌 PENGANTAR PENGUJI: PERSPEKTIF INFORMATIKA PADA DESAIN ARSITEKTUR
+## 📌 PENGANTAR PENGUJI: MENGAPA AUDIT INFORMATIKA SANGAT KRUSIAL?
 
-Ketika judul skripsi arsitektur memuat frasa **"Pendekatan Arsitektur Smart Building"**, objek rancangan tidak lagi sekadar entitas fisik statis (balok, kolom, dan dinding), melainkan telah bertransformasi menjadi **Sistem Siber-Fisik (*Cyber-Physical System*)**. 
+Ketika tugas akhir arsitektur mengadopsi tema **"Smart Building"**, bangunan tersebut secara ontologis bertransformasi dari sekadar konstruksi fisik statis (balok, kolom, dan dinding) menjadi **Sistem Siber-Fisik (*Cyber-Physical Systems*)**. 
 
-Dalam perspektif keilmuan Informatika:
-1. **Gedung Pintar Memerlukan Ruang Fisik**: Sensor, kabel data, kontroler, panel otomasi, dan server membutuhkan ruang arsitektural (*spatial requirement*) yang spesifik (seperti ruang server berpendingin presisi, *shaft* vertikal kabel data, dan *cable tray*).
-2. **Ketepatan Istilah & Logika**: Istilah teknologi seperti *Interoperabilitas*, *Building Management System (BMS)*, dan *Internet of Things (IoT)* memiliki definisi baku dalam rekayasa komputer. Tidak boleh terjadi pergeseran arti yang fatal.
-3. **Kesesuaian Tipologi Objek**: Gedung Dinas Kesehatan Provinsi bukan sekadar gedung perkantoran umum, melainkan simpul logistik rantai dingin (*cold chain*) vaksin, data rekam kesehatan publik, dan pusat koordinasi tanggap darurat kesehatan daerah.
-
-Catatan audit ini disusun secara menyeluruh dan terperinci agar mahasiswa dapat memahami **di mana letak kelemahan naskah saat ini** dan **bagaimana langkah konkret memperbaikinya**.
+Peran dosen informatika sebagai Penguji II bertugas mengawal 4 pilar fundamental:
+1. **Ketepatan Taksonomi & Logika Komputasi**: Memastikan mahasiswa tidak sekadar menempelkan istilah teknologi (*buzzword*) tanpa memahami prinsip kerja data, sensor, aktuator, dan jaringannya.
+2. **Kebutuhan Ruang Fisik Arsitektural untuk TIK (*Spatial Requirements*)**: Setiap perangkat cerdas membutuhkan ruang fisik di denah bangunan (ruang server berpendingin presisi, *shaft* arus lemah terpisah, lemari kontroler lantai, dan ruang kendali terpusat).
+3. **Kontekstualisasi Fungsi Bangunan Publik**: Memastikan teknologi cerdas yang dirancang relevan secara fungsional dengan tugas pokok dan fungsi (tusi) Dinas Kesehatan Provinsi (seperti pemantauan rantai dingin vaksin dan sistem komando tanggap darurat kesehatan).
+4. **Integritas Akademik & Ketelitian Naskah**: Mengeliminasi residu naskah lain (*copy-paste*), format terputus, dan anomali sitasi ilmiah.
 
 ---
 
-## 🚨 BAGIAN 1: TEMUAN FORENSIK KRITIS (*RED FLAGS* & KELALAIAN NASKAH)
-*(Poin-poin berikut wajib dibersihkan terlebih dahulu karena berkaitan langsung dengan integritas akademik naskah).*
+## 🚨 BAGIAN 1: AUDIT FORENSIK INTEGRITAS TEKS & ANOMALI REDAKSIONAL
+*(Ditemukan bukti-bukti konkret ketidaktelitian naskah yang wajib segera diperbaiki sebelum seminar berlangsung).*
 
-### 1.1. Kontaminasi Paragraf *Copy-Paste* Pasar & UMKM (Bab 1, Hal. 3)
+### 1.1. Kontaminasi Paragraf *Copy-Paste* Pasar Tradisional & UMKM (Bab 1, Hal. 3)
 * **Kutipan Naskah (Bab 1 Hal. 3, Paragraf Terakhir):**
   > *"Redesain menjadi salah satu upaya yang dapat dilakukan untuk meningkatkan kualitas ruang dan mengoptimalkan fungsi kawasan perdagangan. Dahlima (2018), melalui penelitian mengenai redesain **Pasar Genteng Surabaya**, menunjukkan bahwa redesain dapat mempertahankan fungsi yang telah ada... Dalam konteks **Sentra UMKM Paras Perbatasan**, redesain diperlukan untuk mengoptimalkan fungsi kawasan, memperbaiki kualitas fasilitas, serta meningkatkan daya tarik ruang bagi **pedagang** dan pengunjung."*
-* **Masalah**: Naskah ini membahas **Gedung Dinas Kesehatan Provinsi Kalimantan Timur**, namun terdapat paragraf utuh yang membahas pasar rakyat, perdagangan, pedagang, dan UMKM di Surabaya/Perbatasan.
-* **Instruksi Tindakan**: **Hapus seluruh paragraf tersebut**. Ganti dengan urgensi redesain fasilitas pemerintahan bidang kesehatan di Samarinda dalam menyongsong peran strategis sebagai daerah mitra Ibu Kota Nusantara (IKN).
+* **Kritik Penguji**: Naskah ini merancang **Gedung Kantor Dinas Kesehatan Prov. Kaltim**, tetapi memuat paragraf utuh mengenai pasar rakyat di Surabaya dan sentra UMKM perbatasan. Ini membuktikan adanya teks dari tugas akhir lain yang disalin tanpa dibaca ulang.
+* **Instruksi Tindakan**: **Hapus total paragraf ini**. Ganti dengan narasi urgensi redesain kantor dinas kesehatan tingkat provinsi dalam merespons transformasi digital daerah mitra IKN.
 
-### 1.2. Jejak Prompt Percakapan AI Chatbot yang Tertinggal (Bab 2, Hal. 25)
+### 1.2. Residu Percakapan Chatbot AI yang Belum Dibersihkan (Bab 2, Hal. 25)
 * **Kutipan Naskah (Subbab 2.6.4 Kallang Pulse, Paragraf 1):**
   > *"Kallang Pulse merupakan contoh yang sangat relevan dengan **penelitianmu** karena bangunan ini bukan dibangun dari awal sebagai smart building..."*
-* **Masalah**: Penggunaan kata ganti orang kedua *"penelitianmu"* adalah indikasi kuat hasil *copy-paste* langsung dari *prompt output* asisten AI tanpa disunting (*proofread*).
-* **Instruksi Tindakan**: Ubah redaksi menjadi bahasa ilmiah formal orang ketiga, misalnya: *"Preseden Kallang Pulse relevan dengan penelitian ini karena..."*
+* **Kritik Penguji**: Kata ganti orang kedua *"penelitianmu"* merupakan pola keluaran (*output prompt*) dari asisten percakapan AI. Penulisan karya ilmiah wajib menggunakan sudut pandang orang ketiga yang objektif.
+* **Instruksi Tindakan**: Ubah redaksi menjadi: *"Preseden Kallang Pulse relevan dengan penelitian ini karena..."*
 
-### 1.3. Duplikasi Paragraf Utuh (*Word-for-Word Duplication*)
-Terdapat dua bagian naskah di mana mahasiswa menempelkan paragraf yang persis sama dua kali berturut-turut:
+### 1.3. Duplikasi Paragraf Utuh (*Word-for-Word Text Duplication*)
+Ditemukan dua bagian naskah di mana teks tertempel dua kali berturut-turut persis:
 1. **Bab 2 Hal. 14–15 (Subbab 2.4 - Dinkes Kaltim):**  
-   Paragraf *"Aktivitas yang berlangsung di dalam Gedung Dinas Kesehatan Provinsi Kalimantan Timur melibatkan berbagai pengguna, seperti pegawai, pimpinan, tenaga teknis, tamu..."* tertulis **dua kali berturut-turut**.
+   Paragraf *"Aktivitas yang berlangsung di dalam Gedung Dinas Kesehatan Provinsi Kalimantan Timur melibatkan berbagai pengguna, seperti pegawai, pimpinan, tenaga teknis, tamu..."* tercetak **dua kali berturut-turut**.
 2. **Bab 2 Hal. 25 (Subbab 2.6.4 - Kallang Pulse):**  
-   Paragraf *"Kallang Pulse merupakan contoh yang sangat relevan..."* tertulis **dua kali berturut-turut**.
-* **Instruksi Tindakan**: Hapus salah satu paragraf kembar tersebut.
+   Paragraf pembuka *"Kallang Pulse merupakan contoh yang sangat relevan..."* tercetak **dua kali berturut-turut**.
+* **Instruksi Tindakan**: Hapus salah satu paragraf pada masing-masing subbab tersebut.
 
-### 1.4. Kalimat Menggantung (*Unfinished Sentence*) pada Batasan Masalah (Bab 1, Hal. 3)
+### 1.4. Kalimat Menggantung (*Hanging Sentence*) pada Batasan Masalah (Bab 1, Hal. 3)
 * **Kutipan Naskah (Subbab 1.3 Butir 1):**
   > *"1. Perancangan difokuskan pada Gedung Dinas Kesehatan Provinsi Kalimantan Timur yang berada di Kota Samarinda, **dengan luasan**"*
-* **Masalah**: Kalimat terputus tanpa nominal angka dan satuan luas, kemudian langsung melompat ke nomor 2.
-* **Instruksi Tindakan**: Lengkapi kalimat tersebut (misal: *"...dengan luas lahan 7.273 m² dan perkiraan luas lantai bangunan terbangun 3.950 m²"* sesuai data di Halaman 5).
+* **Kritik Penguji**: Kalimat terputus tanpa nominal angka dan satuan, lalu langsung melompat ke nomor 2.
+* **Instruksi Tindakan**: Lengkapi kalimat dengan menyertakan luas tapak dan luas lantai rancangan (misal: *"...dengan luas tapak 7.273 m² dan perkiraan luas lantai bangunan 3.950 m²"*).
 
-### 1.5. Kerancuan Deskripsi Sistematika Bab 3 vs Bab 4 (Bab 1, Hal. 5)
+### 1.5. Kerancuan Sistematika Penulisan Bab 3 vs Bab 4 (Bab 1, Hal. 5)
 * **Kutipan Naskah (Subbab 1.7):**
   > *"BAB III METODELOGI PENELITIAN: Bab ini berisi hasil pengumpulan dan analisis data serta pembahasan konsep dan hasil perancangan... Bab ini diakhiri dengan **penyajian hasil redesain dalam bentuk gambar teknis, visualisasi tiga dimensi...**"*
-* **Masalah**: Bab 3 adalah **Metodologi Perancangan** (alur kerja/metode riset). Gambar kerja, denah, potongan, dan render 3D adalah isi dari **Bab 4 (Hasil dan Pembahasan)**. Deskripsi di Sistematika Penulisan Bab 3 tertukar dengan Bab 4.
-* **Instruksi Tindakan**: Perbaiki deskripsi Sistematika Bab 3 agar berfokus pada metode perolehan data, kerangka berpikir, dan tahapan transformasi desain.
+* **Kritik Penguji**: Bab 3 adalah **Metodologi Perancangan** (prosedur dan alur berpikir). Gambar kerja teknis dan render visualisasi 3D adalah materi pokok **Bab 4 (Hasil dan Pembahasan)**. Deskripsi pada sistematika penulisan tertukar.
+* **Instruksi Tindakan**: Perbaiki deskripsi isi Bab 3 dan Bab 4 agar sesuai kaidah penulisan proposal perancangan.
+
+### 1.6. Inkonsistensi Identitas Pejabat, Gelar, dan Tanggal Lembar Pengesahan
+* **Nama & Gelar Koordinator Prodi S1 Arsitektur:**
+  * Di Lembar Pengesahan (Hal. III): Tertulis `Ir. Pandu K. Utomo, S.T., M.Sc., IPM`
+  * Di Kata Pengantar (Hal. V No. 3): Tertulis `Ar. Pandu Kusumoputro Utomo, ST., M.Sc., IPM.`
+  * *Temuan*: Terjadi inkonsistensi gelar profesi (`Ir.` vs `Ar.`), singkatan nama (`Pandu K.` vs `Pandu Kusumoputro`), dan format tanda titik gelar (`S.T.` vs `ST.`).
+* **Koma Ganda pada Dosen Pembimbing I:**
+  * Di Lembar Pengesahan (Hal. III) & Kata Pengantar (Hal. V No. 4): Tertulis `Kartika Tristanto, , S.Ars., M.Arch.` (terdapat spasi dan koma ganda).
+* **Gelar Insinyur Dosen Pembimbing II Hilang:**
+  * Di Lembar Pengesahan tertulis `Ir. Putri Nopianti, S.T., M.T.`, namun di Kata Pengantar tertulis `Ibu Putri Nopianti, S.T., M.T.` (gelar profesi insinyur tidak dicantumkan).
+* **Tanggal Naskah Belum Lengkap:**
+  * Di Kata Pengantar tertulis: *"Samarinda, November"* tanpa tanggal dan tahun. Padahal di Lembar Pernyataan tertulis *13 November 2026* dan Lembar Pengesahan *9 Desember 2026*.
+* **Typo Judul Subbab:**
+  * Subbab 3.4.1 (Daftar Isi Hal. VII dan Teks Hal. 31) tertulis: `3.4.1 Tahap Pra Perancagan` (kurang huruf 'n' pada kata *Perancangan*).
+  * Judul Bab 3 tertulis `METODELOGI` (seharusnya bentuk baku adalah `METODOLOGI`).
 
 ---
 
-## 📚 BAGIAN 2: AUDIT SILANG SITASI & BIBLIOGRAFI (*CITATION & REFERENCE AUDIT*)
+## 📚 BAGIAN 2: AUDIT SILANG SITASI & BIBLIOGRAFI (*CROSS-REFERENCE FORENSICS*)
 
-Pemeriksaan silang (*cross-examination*) antara teks di Bab 1–3 dengan Daftar Pustaka (Hal. 47–48) menemukan anomali berat:
+Pemeriksaan silang otomatis antara badan teks (Bab 1–3) dengan Daftar Pustaka (Hal. 47–48) mengungkap diskrepansi yang sangat masif:
 
 ```mermaid
-graph LR
-    subgraph TEKS_BAB_1_3["Sitasi di Dalam Teks (Bab 1 - 3)"]
-        T1["Majdi et al. (2022)"]
-        T2["Poyyamozhi et al. (2024)"]
-        T3["Ramdhani et al. (2024)"]
-        T4["Laksito (2014) & Ratodi (2015)"]
-        T5["The Edge (PLP) & Pixel (studio505)"]
-        T6["Permen PUPR 22/2018, 14/2017, PP 16/2021"]
-    end
-    
-    subgraph DAFTAR_PUSTAKA["Daftar Pustaka (Hal 47-48)"]
-        DP1["❌ TIDAK ADA DI DAFTAR PUSTAKA"]
-        DP2["❌ TIDAK ADA DI DAFTAR PUSTAKA"]
-        DP3["❌ TIDAK ADA DI DAFTAR PUSTAKA"]
-        DP4["❌ TIDAK ADA DI DAFTAR PUSTAKA"]
-        DP5["❌ TIDAK ADA DI DAFTAR PUSTAKA"]
-        DP6["❌ TIDAK ADA DI DAFTAR PUSTAKA"]
-        GHOST["👻 Foster + Partners (2017) Bloomberg HQ<br/>(Ada di DP tapi TIDAK PERNAH dikutip di teks)"]
+flowchart LR
+    subgraph KUTIPAN_TEKS["Dikutip di Bab 1 - 3"]
+        A1["Majdi et al. (2022)"]
+        A2["Poyyamozhi et al. (2024)"]
+        A3["Ramdhani et al. (2024)"]
+        A4["Laksito (2014) & Ratodi (2015)"]
+        A5["Regulasi PUPR (Permen 22/2018, 14/2017, PP 16/2021)"]
+        A6["Preseden The Edge, Pixel, Kallang Pulse"]
     end
 
-    T1 --> DP1
-    T2 --> DP2
-    T3 --> DP3
-    T4 --> DP4
-    T5 --> DP5
-    T6 --> DP6
+    subgraph DAFTAR_PUSTAKA["Status di Daftar Pustaka"]
+        B1["❌ TIDAK DITEMUKAN"]
+        B2["❌ TIDAK DITEMUKAN"]
+        B3["❌ TIDAK DITEMUKAN"]
+        B4["❌ TIDAK DITEMUKAN"]
+        B5["❌ TIDAK DITEMUKAN"]
+        B6["❌ TIDAK DITEMUKAN"]
+        GHOST["👻 No. 18: Foster + Partners (Bloomberg HQ)<br/>(Tercantum di DP tapi TIDAK PERNAH dikutip di teks)"]
+    end
+
+    A1 -.-> B1
+    A2 -.-> B2
+    A3 -.-> B3
+    A4 -.-> B4
+    A5 -.-> B5
+    A6 -.-> B6
 ```
 
-### 2.1. Sumber Dikutip di Teks tetapi TIDAK ADA di Daftar Pustaka
+### 2.1. Sumber Dikutip di Naskah tetapi HILANG dari Daftar Pustaka
 1. **Majdi et al. (2022)** – Dikutip pada Tabel 2.1 (No. 4, Hal. 8).
 2. **Poyyamozhi et al. (2024)** – Dikutip pada Tabel 2.1 (No. 7, Hal. 9).
 3. **Lalu Gabrielle Ayub Ramdhani et al. (2024)** – Dikutip pada Tabel 2.1 (No. 10, Hal. 10).
-4. **Laksito (2014)** – Dikutip sebagai landasan metodologi perancangan arsitektur di Bab 3 (Hal. 27 & 31).
-5. **Ratodi (2015)** – Dikutip pada pengumpulan data di Bab 3 (Hal. 27).
-6. **Dahlima (2018)** – Dikutip pada Bab 1 Hal. 3.
-7. **Preseden 2.6.2 The Edge Amsterdam (PLP Architecture)** – Dokumen proyek/arsitek tidak dicantumkan di Daftar Pustaka.
-8. **Preseden 2.6.3 Pixel Building Melbourne (studio505)** – Dokumen proyek/arsitek tidak dicantumkan di Daftar Pustaka.
-9. **Preseden 2.6.4 Kallang Pulse (Schneider Electric)** – Dokumen resmi tidak dicantumkan di Daftar Pustaka.
-10. **Seluruh Regulasi PUPR** (Permen PUPR 22/2018, Permen PUPR 14/2017, Permen PUPR 21/2021, PP 16/2021) yang dikutip di Subbab 2.3.1 (Hal. 13) **hilang dari Daftar Pustaka**.
+4. **Laksito (2014)** – Dikutip sebagai dasar metodologi perancangan arsitektur di Bab 3 (Hal. 27 & 31).
+5. **Ratodi (2015)** – Dikutip pada metode pengumpulan data di Bab 3 (Hal. 27).
+6. **Dahlima (2018)** – Dikutip di Bab 1 Hal. 3.
+7. **Peraturan Perundang-undangan PUPR**:
+   * *Permen PUPR No. 22/PRT/M/2018* (Pedoman Gedung Negara)
+   * *Permen PUPR No. 14/PRT/M/2017* (Persyaratan Kemudahan Gedung)
+   * *Permen PUPR No. 21 Tahun 2021* (Bangunan Gedung Hijau)
+   * *PP No. 16 Tahun 2021* (Peraturan Pelaksanaan UU Bangunan Gedung)  
+   *(Semua regulasi ini dikutip di Subbab 2.3.1 Hal. 13, tetapi **tidak satu pun** masuk ke Daftar Pustaka).*
+8. **Dokumentasi Resmi Preseden Arsitektur**:
+   * *The Edge Amsterdam* (PLP Architecture / OVG Real Estate)
+   * *Pixel Building Melbourne* (studio505)
+   * *Kallang Pulse Singapura* (Schneider Electric)
 
-### 2.2. Sitasi Hantu (*Ghost Citation*) di Daftar Pustaka
-* **Nomor 18 di Daftar Pustaka (Hal. 48):**
+### 2.2. Sitasi Hantu (*Ghost Citation*)
+* **Nomor 18 di Daftar Pustaka (Hal. 48):**  
   > *Foster + Partners. (2017, 2 Oktober). Bloomberg’s new European headquarters rated world’s most sustainable office building.*
-* **Masalah**: Dokumen ini tercantum di daftar pustaka, tetapi **sama sekali tidak pernah disinggung atau dikutip di dalam teks naskah**.
-* **Instruksi**: Hapus jika tidak dipakai, atau masukkan sebagai preseden pembanding di Bab 2.
+* **Kritik Penguji**: Sumber ini tertulis di daftar pustaka, namun **sama sekali tidak pernah disinggung dalam badan teks Bab 1, 2, maupun 3**. Jika gedung ini pernah dijadikan alternatif preseden lalu diganti, mahasiswa lalai menghapusnya dari daftar pustaka.
 
-### 2.3. Anakronisme Standar Nasional Indonesia (SNI)
-* Di **Teks Subbab 2.3.2 (Hal. 13–14)** mahasiswa menulis acuan standar lama:
-  * SNI 03-6572-2001 (Tata Cara Ventilasi dan Pengkondisian Udara)
-  * SNI 03-6197-2011 (Konservasi Energi Sistem Pencahayaan)
-  * SNI 03-6389-2011 (Konservasi Energi Selubung Bangunan)
-* Namun di **Daftar Pustaka (Hal. 47)** mahasiswa mencantumkan versi pembaruan:
+### 2.3. Anakronisme Rujukan Standar Nasional Indonesia (SNI)
+* Di **Teks Bab 2 Subbab 2.3.2 (Hal. 13–14)**, mahasiswa mengutip standar versi usang:
+  * SNI 03-6572-2001 (Ventilasi dan Tata Udara)
+  * SNI 03-6197-2011 (Pencahayaan)
+  * SNI 03-6389-2011 (Selubung Bangunan)
+* Di **Daftar Pustaka (Hal. 47 No. 4, 5, 7)**, mahasiswa mencantumkan standar versi mutakhir:
   * SNI 6572-1:2024
   * SNI 6197:2020
   * SNI 6389:2020
-* **Instruksi Tindakan**: Selaraskan teks di Bab 2 agar merujuk pada standar SNI edisi mutakhir (2020 dan 2024), karena standar 2001 dan 2011 telah dinyatakan dicabut/direvisi oleh BSN.
+* **Instruksi Tindakan**: Selaraskan teks di Bab 2 agar merujuk pada standar SNI edisi terbaru (2020 dan 2024), karena versi 2001 dan 2011 telah dinyatakan tidak berlaku lagi oleh BSN.
+
+### 2.4. Kesalahan Penulisan Sitasi Mentah (Sitasi URL Domain)
+* Pada **Bab 1 Halaman 2**, mahasiswa menulis sitasi: `...(dinkes.kaltimprov, n.d.)`.
+* Mahasiswa mengutip nama domain situs web (*URL string*). Penulisan yang benar menurut kaidah ilmiah APA 7th adalah menyebutkan nama institusi pengarang dan tahun terbit: `(Dinas Kesehatan Provinsi Kalimantan Timur, 2025)`.
 
 ---
 
-## 💻 BAGIAN 3: AUDIT SUBSTANTIF INFORMATIKA PADA PARAMETER SMART BUILDING
+## 💻 BAGIAN 3: AUDIT SUBSTANTIF INFORMATIKA & SMART BUILDING
 
 ### 3.1. Disorientasi Definisi Konsep pada Tabel 3.1 (Hal. 35–37)
-Tabel Parameter Konsep adalah "kompas" perancangan. Terjadi kerancuan fatal antara peristilahan komputasi/IT dengan arsitektur tapak:
+Tabel Parameter Konsep adalah inti metodologis perancangan. Terjadi kesalahan fatal penempatan istilah teknologi informasi yang didefinisikan secara keliru sebagai elemen tapak:
 
-| Parameter Naskah | Definisi Mahasiswa Saat Ini (Keliru) | Koreksi Definisi Menurut Keilmuan Informatika & Smart Building |
+| Parameter Naskah | Definisi Mahasiswa Saat Ini (Keliru) | Koreksi Definisi Bidang Informatika & Smart Building |
 | :--- | :--- | :--- |
-| **Interoperabilitas Sistem** | *"Kemudahan pengguna mencapai dan memasuki kawasan serta mengakses fasilitas di dalamnya (menata akses masuk, jalur pejalan kaki, sirkulasi kendaraan, parkir)."* | **Interoperabilitas BUKAN sirkulasi pejalan kaki!** Interoperabilitas adalah kemampuan berbagai perangkat dan sub-sistem gedung (chiller, lampu, sensor, CCTV) dari vendor berbeda untuk berkomunikasi tanpa hambatan menggunakan protokol komunikasi terbuka (seperti BACnet/IP, Modbus TCP, MQTT, atau Web API). |
-| **Smart Lighting** | *"Karakter visual yang membantu membentuk citra dan membedakan kawasan dari tempat lain (mengolah fasad, material, warna, penanda kawasan)."* | **Smart Lighting BUKAN branding fasad!** Smart Lighting adalah otomasi pencahayaan berbasis sensor keberadaan (*PIR sensor*) dan penginderaan intensitas cahaya alami (*daylight harvesting / lux sensor*), serta integrasi penjadwalan via controller DALI/KNX. |
-| **Monitoring Energi** | *"Kondisi ruang yang mendukung kenyamanan pengguna ketika beraktivitas (memperhatikan pencahayaan, keteduhan, tempat duduk, kebersihan)."* | **Monitoring Energi BUKAN tempat duduk dan kebersihan!** Monitoring energi adalah pemantauan konsumsi daya listrik (*power meter* cerdas) secara *real-time* per blok/lantai untuk menganalisis beban puncak (*peak load*) dan kebocoran energi. |
+| **Interoperabilitas Sistem** | *"Kemudahan pengguna mencapai dan memasuki kawasan serta mengakses fasilitas di dalamnya (menata akses masuk, jalur pejalan kaki, sirkulasi kendaraan, parkir)."* | **Interoperabilitas BUKAN jalur pedestrian / sirkulasi kendaraan!** Interoperabilitas adalah kemampuan perangkat dan sub-sistem gedung (chiller, lampu, sensor, CCTV) dari vendor berbeda untuk saling berkomunikasi dan bertukar data menggunakan protokol standar terbuka (*open protocols*) seperti BACnet/IP, Modbus TCP, MQTT, atau REST API. |
+| **Smart Lighting** | *"Karakter visual yang membantu membentuk citra dan membedakan kawasan dari tempat lain (mengolah fasad, material, warna, penanda kawasan)."* | **Smart Lighting BUKAN branding fasad kawasan!** Smart Lighting adalah sistem penerangan adaptif berbasis sensor okupansi (*PIR*) dan fotosel (*daylight harvesting*), yang diatur secara terjadwal dan terintegrasi dengan pengontrol DALI/KNX menuju platform BMS. |
+| **Monitoring Energi** | *"Kondisi ruang yang mendukung kenyamanan pengguna ketika beraktivitas (memperhatikan pencahayaan, keteduhan, tempat duduk, kebersihan)."* | **Monitoring Energi BUKAN tempat duduk santai dan kebersihan!** Monitoring energi adalah pemantauan konsumsi daya listrik (*power meter* digital) secara *real-time* per blok lantai/sistem untuk mendeteksi profil beban puncak (*peak load*) dan pemborosan energi. |
 
-### 3.2. Kesalahan Variabel Survei pada Tabel 3.2 (Hal. 42)
+### 3.2. Celah Data Survei "Kendala Usaha" pada Tabel 3.2 (Hal. 42)
 * Pada **Tabel 3.2 (Desain Survey, Hal. 42)**:
   * Variabel: *Potensi Penerapan Smart Building*
   * Subvariabel: *Sensor dan pemantauan kondisi ruang*
   * Data yang Dikumpulkan: **"Kendala usaha dan kebutuhan fasilitas"** ❌
-* **Masalah**: Mengapa mahasiswa mengumpulkan data "kendala usaha" untuk sensor ruangan di kantor pemerintahan? Ini adalah bukti nyata residu survei pasar tradisional / UMKM yang terbawa ke draf.
-* **Koreksi Data yang Harus Dikumpulkan**: Tingkat pencahayaan alami eksisting (Lux meter), fluktuasi suhu ruang kerja, pola hunian ruang rapat, dan keberadaan jalur instalasi kabel eksisting.
+* **Kritik Penguji**: Pertanyaan mengenai "kendala usaha" adalah instrumen survei untuk pedagang pasar / UMKM, bukan instrumen survei teknis gedung dinas kesehatan.
+* **Koreksi Data**: Data yang wajib disurvei adalah tingkat iluminasi ruang kerja eksisting (Lux meter), fluktuasi temperatur dan kelembapan ruangan eksisting, kapasitas daya listrik terpasang PLN, dan ketersediaan jalur kabel data eksisting.
+
+### 3.3. Janji "Smart Water" yang Menguap (*Missing Feature*)
+* Pada **Bab 1 Subbab 1.3 Butir 4e (Hal. 4)**, mahasiswa menetapkan batasan masalah:  
+  *Sistem Smart Building yang dibahas meliputi: a. Smart Lighting, b. Smart HVAC, c. Smart Energy, d. Smart Security, **e. Smart Water**, f. BMS.*
+* **Fakta Lapangan**: Pada **Bab 2 Subbab 2.5.2** (Elemen Smart Building) dan **Bab 3 Tabel 3.1** (Parameter Konsep), **pembahasan mengenai Smart Water hilang sepenuhnya** tanpa jejak.
+* **Instruksi Tindakan**: Mahasiswa harus konsisten: jika *Smart Water* (seperti sensor *water flow meter*, pemantauan tandon air bersih, dan otomatisasi air siram taman) dibahas, masukkan ke dalam kajian teori dan matriks konsep; jika ditiadakan, hapus dari Batasan Masalah.
+
+### 3.4. ISO 52120-1:2021 Hanya Menjadi "Pemanis Sitasi" (*Citation Ornament*)
+* Pada **Bab 3 Halaman 35**, mahasiswa mengutip standar internasional efisiensi energi otomasi gedung: *ISO 52120-1:2021*.
+* Standar ISO 52120-1 mengklasifikasikan sistem otomasi gedung ke dalam 4 kelas efisiensi energi (*BACS Energy Performance Classes*):
+  * **Class A**: Sistem BACS berkinerja tinggi (*networked room automation with demand-driven control*).
+  * **Class B**: Sistem BACS lanjutan (*advanced BACS with some individual room control*).
+  * **Class C**: Sistem standar (*standard reference BACS*).
+  * **Class D**: Sistem tidak efisien energi (*non-energy-efficient BACS*).
+* **Kritik Penguji**: Mahasiswa hanya menyebut nama standar ISO tanpa pernah menjelaskan kelas efisiensi mana yang ditargetkan untuk Gedung Dinas Kesehatan Kaltim. Standar ini harus dioperasionalkan ke dalam matriks perancangan utilitas cerdas.
 
 ---
 
-## 🏢 BAGIAN 4: KEBUTUHAN RUANG FISIK TIK (*SPATIAL REQUIREMENTS FOR IT INFRASTRUCTURE*)
+## 🏢 BAGIAN 4: KEBUTUHAN RUANG FISIK ARSITEKTURAL UNTUK TIK (*SPATIAL REQUIREMENTS*)
 
-Gedung berkonsep *Smart Building* **tidak bisa berdiri tanpa ruang penunjang teknologi**. Mahasiswa arsitektur sering lupa bahwa perangkat IT membutuhkan wadah fisik. 
-
-Dalam Bab 3 (Program Ruang) dan Bab 4 (Perancangan), mahasiswa **wajib mengalokasikan ruang arsitektural berikut**:
+Perangkat cerdas tidak beroperasi di ruang hampa. Seluruh sensor, jaringan kabel, dan kontroler membutuhkan wadah spasial arsitektural. Mahasiswa **wajib memasukkan kebutuhan ruang fisik berikut ke dalam Program Ruang (Bab 3) dan Denah Perancangan (Bab 4)**:
 
 ```mermaid
 flowchart TD
-    subgraph LANTAI_DASAR["Lantai Dasar / Podium"]
-        MDF["Ruang Server Utama (MDF Room)<br/>• Raised Floor 30-40 cm<br/>• Precision AC (18-22°C)<br/>• Fire Suppression (Clean Gas)"]
+    subgraph LANTAI_PODIUM["Lantai Podium / Semi-Basement"]
+        MDF["Ruang Server Utama (MDF Room)<br/>• Raised Floor 30-40 cm<br/>• Precision AC (18-22°C)<br/>• Proteksi Gas Bersih (FM-200/Novec)"]
         UPS["Ruang Baterai UPS & Catu Daya Darurat"]
-        EOC["Pusat Komando & Monitoring (Command Center / EOC)<br/>• Video Wall 24/7<br/>• Workstation Operator BMS & SPBE"]
+        EOC["Pusat Komando & Monitoring (Command Center / EOC)<br/>• Video Wall 24/7 Terintegrasi<br/>• Ruang Kerja Operator BMS & SPBE"]
     end
     
-    subgraph TIAP_LANTAI_GEDUNG["Tipikal Setiap Lantai (Lantai 2, 3, dst.)"]
-        IDF["Ruang Panel Data / IDF Closet (2x3 m)<br/>• Wall-mount Rack Switch & DDC Controller<br/>• Terpisah dari Panel Tegangan Tinggi"]
+    subgraph SETIAP_LANTAI_GEDUNG["Tipikal Setiap Lantai (Lantai 2, 3, dst.)"]
+        IDF["Ruang Panel Data Lantai / IDF Closet (Min. 2x3 m)<br/>• Wall-mount Rack Switch & DDC Controller<br/>• Terpisah dari Panel Arus Kuat"]
         SHAFT["Shaft Vertikal Arus Lemah (Weak Current Shaft)<br/>• Cable Tray UTP Cat6A / Fiber Optic"]
-        PLENUM["Ceiling Plenum (Ruang Plafon 40-60 cm)<br/>• Sensor PIR, Lux, CO2 & Fire Detector"]
+        PLENUM["Ceiling Plenum (Ketinggian Bersih 40-60 cm)<br/>• Sensor PIR, Lux, CO2, Smoke Detector"]
     end
 
-    MDF -->|Backbone Fiber Optic| IDF
-    UPS -->|Daya Bersih Stabil| MDF
-    IDF -->|Horizontal Cabling| PLENUM
-    EOC -->|Monitoring Terpusat| MDF
+    MDF -->|Backbone Kabel Fiber Optic Vertikal| IDF
+    UPS -->|Pasokan Daya Bersih Stabil| MDF
+    IDF -->|Kabel Horisontal UTP Cat6A| PLENUM
+    EOC -->|Monitoring Terpadu Real-Time| MDF
 ```
 
 1. **Ruang Server Utama / MDF (*Main Distribution Frame*)**:
-   * Menampung server BMS, database rekam kesehatan dinas, dan server komunikasi antarbagian.
-   * *Persyaratan Arsitektural*: Bebas banjir, bukan di bawah toilet/ruang basah, menggunakan lantai berpanggung (*raised floor*), pendingin presisi (PAC), proteksi kebakaran gas ramah lingkungan (*FM-200 / Novec 1230*), dan akses biometrik.
-2. **Ruang Distribusi Lantai / IDF (*Intermediate Distribution Frame*)**:
-   * Setiap lantai wajib memiliki ruang utilitas arus lemah (minimal $2 \times 3\text{ meter}$) untuk *rack switch*, kontroler DDC (*Direct Digital Controller*), dan terminasi kabel sensor lantai tersebut.
-3. **Shaft Arus Lemah (*Low Voltage / Weak Current Shaft*)**:
-   * Harus terpisah secara fisik minimal $30\text{ cm}$ atau diberi sekat logam dari *shaft* listrik tegangan menengah/tinggi untuk menghindari interferensi elektromagnetik (*EMI*).
-4. **Ruang Pusat Kendali (*Command Center / Emergency Operations Center*)**:
-   * Menjadi ruang monitoring operasional Dinas Kesehatan Prov. Kaltim (dashboard pemantauan status gizi/stunting, wabah penyakit, logistik vaksin se-Kaltim, serta dashboard konsumsi energi gedung).
-5. **Jalur Distribusi Horisontal (*Ceiling Plenum / Raised Floor*)**:
-   * Ketinggian bersih plafon (*clear height*) harus memperhitungkan ruang gantung pipa HVAC dan *cable tray* sensor cerdas.
+   * Menampung server database BMS, server aplikasi SPBE Dinas Kesehatan, dan *storage* CCTV.
+   * *Persyaratan Arsitektural*: Terlindung dari banjir, tidak berada tepat di bawah kamar mandi/plumbing basah, memakai lantai berpanggung (*raised floor* 30–40 cm), berpendingin presisi (PAC) 18–22°C, sistem pemadam gas bersih (*FM-200 / Novec 1230*), dan pintu akses biometrik.
+2. **Ruang Distribusi Lantai / IDF (*Intermediate Distribution Frame Closet*)**:
+   * Setiap lantai gedung harus memiliki ruang utilitas arus lemah (minimal $2 \times 3\text{ meter}$) untuk kabinet saklar jaringan (*rack switch*) dan kontroler otomasi (*DDC Controller*).
+3. **Shaft Arus Lemah Terpisah (*Weak Current Shaft*)**:
+   * Jalur kabel data, kontrol BMS, dan telekomunikasi vertikal harus berada di *shaft* terpisah berjarak minimal $30\text{ cm}$ atau disekat logam dari kabel tegangan tinggi PLN untuk mencegah induksi dan gangguan interferensi elektromagnetik (*EMI*).
+4. **Pusat Komando (*Command Center / Emergency Operations Center - EOC*)**:
+   * Dinas Kesehatan Provinsi memerlukan ruang monitoring terpadu yang dilengkapi *video wall* untuk memantau data kesehatan masyarakat kabupaten/kota (seperti pemantauan stunting, wabah DBD/KLB, dan logistik obat) berdampingan dengan stasiun kerja (*workstation*) operator teknis BMS gedung.
+5. **Ruang UPS & Catu Daya Cadangan (*Power Redundancy*)**:
+   * Sistem *smart building* dan kontrol akses pintu gerbang tidak boleh padam seketika saat suplai PLN terputus. Harus tersedia ruang baterai UPS sebelum genset otomatis bekerja (*auto-transfer switch*).
 
 ---
 
-## 💉 BAGIAN 5: KONTEKSTUALISASI DINKES PROVINSI KALIMANTAN TIMUR
+## 💉 BAGIAN 5: KONTEKSTUALISASI KHUSUS DINAS KESEHATAN PROVINSI KALIMANTAN TIMUR
 
-Sebagai kantor dinas kesehatan tingkat provinsi, sistem *smart building* yang dirancang harus memiliki sentuhan kontekstual fungsional:
+Gedung Dinas Kesehatan memiliki spesifikasi fungsi yang berbeda signifikan dengan gedung komersial sewa (seperti preseden *The Edge* atau *Wisma BCA*):
 
-1. **Smart Cold-Chain Monitoring System**:
-   * Dinas Kesehatan Provinsi bertanggung jawab menyimpan dan mendistribusikan vaksin ke seluruh kabupaten/kota di Kalimantan Timur.
-   * *Fitur Smart*: Gudang Farmasi dan Ruang Cold Chain harus dilengkapi sensor suhu presisi tinggi (-80°C s/d +8°C) dengan sistem alarm otomatis (*early warning alert via SMS/IoT notification*) dan generator cadangan otomatis (*auto-transfer switch*) jika terjadi kegagalan pendingin.
-2. **Sistem Keamanan Akses Berjenjang (*Multi-Tier Access Control*)**:
-   * Pembagian zonasi fisik gedung:
-     * **Zona Publik**: Lobi pelayanan informasi dan pengaduan (akses bebas).
-     * **Zona Semi-Publik**: Ruang rapat koordinasi lintas sektoral, aula seminar (akses terdaftar).
-     * **Zona Privat**: Ruang kerja pegawai, ruang pimpinan (akses RFID / Face Recognition).
-     * **Zona Restriksi Tinggi**: Ruang Server Data Kesehatan, Gudang Vaksin, dan Ruang Arsip (akses Biometrik + CCTV analitik).
+1. **Smart Cold-Chain Monitoring System (Gudang Vaksin & Logistik Farmasi)**:
+   * Dinas Kesehatan Provinsi mengelola distribusi vaksin ke 10 kabupaten/kota di Kaltim.
+   * *Fitur Smart*: Ruang penyimpanan vaksin wajib dirancang dengan sensor pemantau suhu presisi ultra-dingin (-80°C s/d +8°C) yang terhubung ke sistem alarm terpusat (*early warning notification via SMS/IoT alert*) dengan sistem pendingin cadangan ganda (*redundant cooling system*).
+2. **Zonasi Keamanan Akses Fisik Bertingkat (*Tiered Access Control*)**:
+   * Penataan denah harus membedakan hak akses secara arsitektural:
+     * **Zona Publik**: Lobi, PTSP (Pelayanan Terpadu Satu Pintu), dan klinik pengaduan (akses bebas terkontrol).
+     * **Zona Semi-Publik**: Ruang rapat koordinasi lintas sektoral kab/kota, aula rapat besar (akses registrasi resepsionis).
+     * **Zona Privat**: Ruang kerja pegawai struktural, ruang kepala dinas (akses kartu RFID).
+     * **Zona Restriksi Tinggi (*High Security*)**: Ruang Server Data Kesehatan, Gudang Cold Chain Vaksin, dan Ruang Arsip Medis (akses ganda biometrik sidik jari/wajah + pencatatan log kunjungan otomatis).
 
 ---
 
-## 🛠️ BAGIAN 6: TEMPLATE PERBAIKAN MATRIKS PARAMETER KONSEP (TABEL 3.1)
-*(Mahasiswa dipersilakan mengadopsi struktur tabel ini untuk merevisi naskah Bab 3).*
+## 🛠️ BAGIAN 6: TEMPLATE REVISI MATRIKS PARAMETER KONSEP (TABEL 3.1)
+*(Mahasiswa disarankan mengadopsi struktur tabel ini untuk menyempurnakan Bab 3).*
 
 | Prinsip | Parameter Konsep | Definisi Operasional | Strategi Capaian Arsitektural & TIK |
 | :--- | :--- | :--- | :--- |
-| **Integrasi Sistem Bangunan** | **Interoperabilitas Protokol** | Kemampuan sub-sistem utilitas (HVAC, pencahayaan, proteksi) untuk bertukar data secara seragam. | Menggunakan arsitektur jaringan berbasis IP dengan protokol terbuka (BACnet/IP & MQTT) yang bermuara pada satu platform BMS terpadu. |
-| | **Building Management System (BMS)** | Pusat kendali berbasis perangkat lunak untuk pemantauan dan kontrol terpusat seluruh operasional gedung. | Merancang ruang *Command Center / Ruang Kontrol BMS* di lantai podium dan ruang server (MDF) yang memenuhi standar keandalan. |
-| **Efisiensi Energi** | **Pencahayaan Adaptif (*Smart Lighting*)** | Pengendalian intensitas lampu buatan yang menyesuaikan dengan kehadiran orang dan cahaya matahari. | Mengintegrasikan bukaan jendela alami (*daylight harvesting*) dengan sensor fotosel (Lux) dan sensor PIR pada plafon ruang kerja. |
-| | **Tata Udara Pintar (*Smart HVAC*)** | Sistem pendingin dan sirkulasi udara yang modulasi kapasitasnya mengikuti beban termal dan okupansi. | Membagi zonasi VRF/Chiller per sayap gedung, dikendalikan oleh sensor suhu, kelembapan, dan sensor $\text{CO}_2$ ruang rapat. |
-| | **Monitoring Sub-Meter Listrik** | Pengukuran konsumsi daya listrik secara terperinci per blok lantai dan kategori peralatan. | Menempatkan panel *Digital Power Meter* pada setiap panel distribusi lantai (IDF) yang mengirimkan data kWh ke server BMS. |
-| **Keamanan & Perlindungan** | **Kontrol Akses Bertingkat (*Smart Security*)** | Pengendalian dan pembatasan hak masuk pengguna ke dalam zona ruang berdasarkan kewenangan. | Menempatkan *turnstile gate* kartu pintar di lobi utama, pintu magnetik RFID pada area kantor, dan pemindai biometrik pada Ruang Server & Cold Chain. |
-| **Kesehatan Lingkungan** | **Kualitas Udara Dalam Ruangan (*IAQ Monitoring*)** | Pemantauan parameter kesehatan udara (partikulat, $\text{CO}_2$, kelembapan) di ruang kerja tertutup. | Menempatkan sensor kualitas udara terintegrasi dengan katup ventilasi udara segar otomatis (*fresh air damper*). |
+| **Integrasi Sistem Bangunan** | **Interoperabilitas Protokol** | Kemampuan sub-sistem gedung (HVAC, lampu, proteksi api) untuk bertukar data secara seragam. | Menggunakan jaringan berbasis IP dengan protokol terbuka (BACnet/IP & MQTT) yang terpusat pada platform BMS terintegrasi. |
+| | **Building Management System (BMS)** | Perangkat lunak dan keras terpusat untuk memantau dan mengontrol operasional seluruh gedung. | Merancang ruang *Command Center / BMS Workstation* di podium dan ruang server (MDF) sesuai standar keandalan. |
+| **Efisiensi Energi** | **Pencahayaan Adaptif (*Smart Lighting*)** | Pengendalian intensitas lampu buatan berdasarkan okupansi dan penetrasi cahaya alami. | Mengombinasikan bukaan kaca jendela (*daylight harvesting*) dengan sensor fotosel (Lux) dan sensor PIR di plafon ruangan. |
+| | **Tata Udara Pintar (*Smart HVAC*)** | Pendinginan udara yang modulasi kapasitasnya merespons beban termal ruangan dan jumlah orang. | Membagi zonasi VRF/Chiller per sayap lantai, dikendalikan sensor temperatur, kelembapan, dan sensor $\text{CO}_2$ ruang rapat. |
+| | **Monitoring Sub-Meter Listrik** | Pengukuran konsumsi daya listrik secara terperinci per blok lantai dan kategori peralatan. | Memasang panel *Digital Power Meter* pada setiap panel distribusi lantai (IDF) yang mentransmisikan data konsumsi kWh ke server BMS. |
+| **Keamanan & Perlindungan** | **Kontrol Akses Bertingkat (*Smart Security*)** | Pengendalian dan pembatasan hak masuk pengguna ke dalam zona ruang berdasarkan hierarki otoritas. | Memasang *tripod turnstile gate* di lobi, pintu magnetik RFID di ruang kantor, dan biometrik pada Ruang Server & Gudang Vaksin. |
+| **Kesehatan Lingkungan** | **Kualitas Udara Dalam Ruangan (*IAQ Monitoring*)** | Pemantauan parameter kesehatan udara (partikulat $\text{PM}_{2.5}$, $\text{CO}_2$, kelembapan) di ruang kerja. | Menempatkan sensor kualitas udara yang terhubung ke katup udara segar otomatis (*fresh air damper*) untuk menjaga kesegaran ruang kerja. |
 
 ---
 
-## 📋 BAGIAN 7: ROADMAP AKSI & DAFTAR PERIKSA REVISI UNTUK MAHASISWA
-
-Gunakan *checklist* ini sebagai panduan revisi sebelum maju ke seminar:
-
-- [ ] **1. Pembersihan Naskah Bab 1:**
-  - Hapus tuntas teks *Pasar Genteng*, *Sentra UMKM*, dan *pedagang* di Hal. 3.
-  - Lengkapi kalimat yang menggantung pada Batasan Masalah butir 1 di Hal. 3.
-  - Tambahkan luasan lahan ($7.273\text{ m}^2$) dan bangunan ($3.950\text{ m}^2$) pada batasan masalah.
-  - Luruskan deskripsi Sistematika Penulisan Bab 3 dan Bab 4 di Hal. 5.
-
-- [ ] **2. Pembersihan & Pemutakhiran Bab 2:**
-  - Hapus kata *"penelitianmu"* di Subbab 2.6.4 (Hal. 25).
-  - Hapus paragraf duplikat di Subbab 2.4 (Hal. 14–15) dan Subbab 2.6.4 (Hal. 25).
-  - Mutakhirkan nomor standar SNI ventilasi dan pencahayaan ke tahun 2020/2024.
-  - Lengkapi studi preseden (The Edge Amsterdam dan Pixel Melbourne) dengan literatur/dokumen arsiteknya.
-
-- [ ] **3. Rekonstruksi Bab 3 (Metodologi):**
-  - Ganti ejaan judul "METODELOGI" menjadi **METODOLOGI**.
-  - Rombak **Tabel 3.1 (Parameter Konsep)** mengikuti template Bagian 6 di atas.
-  - Pada **Tabel 3.2 (Desain Survey)**, buang data "kendala usaha", ganti dengan data fisik pencahayaan, suhu, okupansi, dan ketersediaan infrastruktur jaringan kabel/listrik eksisting.
-  - Masukkan kebutuhan Ruang Server (MDF), Ruang Shaft Data (IDF), dan Ruang Kontrol BMS ke dalam program ruang.
-
-- [ ] **4. Penyelarasan Daftar Pustaka:**
-  - Masukkan seluruh pustaka yang dikutip di teks (Majdi, Poyyamozhi, Ramdhani, Laksito, Ratodi, peraturan PUPR).
-  - Hapus referensi Foster + Partners (Bloomberg HQ) jika tidak dibahas di teks.
-  - Satukan referensi situs Bullitt Center menjadi 1 entri yang rapi.
-  - Format daftar pustaka menggunakan kaidah APA Style 7th Edition secara alfabetis.
-
-- [ ] **5. Persiapan Gambar Kerja Studio (Menuju Bab 4):**
-  - Pastikan pada gambar Denah terdapat simbol peletakan sensor utama, titik akses kontrol pintu, dan titik kamera CCTV.
-  - Sertakan 1 lembar gambar **Diagram Skematik Sistem Utilitas Cerdas (BMS System Architecture)** yang memperlihatkan integrasi antar-perangkat.
+## 📑 BAGIAN 7: CACAT TATA LETAK TABEL 3.3 (JADWAL PENELITIAN)
+* **Kondisi Naskah Saat Ini (Hal. 45–46 / PDF p.56–57):**
+  * Di Halaman 45, terdapat judul `Tabel 3. 3 Jadwal Penelitian (penulis, 2026)` dan baris kepala tabel (`No | Kegiatan | Bulan...`).
+  * Di bawah kepala tabel tersebut langsung disisipkan gambar peta `Gambar 3. 2 Lokasi Penelitian Gedung Dinas Kesehatan`.
+  * Seluruh isi/badan Tabel 3.3 terlempar ke Halaman 46 **tanpa kepala tabel sama sekali**, sehingga halaman 46 menjadi tabel buta.
+* **Instruksi Tindakan**: Tata ulang *layout* dokumen. Pindahkan gambar peta ke Subbab 3.8 (Gambaran Umum Lokasi), lalu satukan judul, kepala, dan badan Tabel 3.3 pada satu halaman utuh.
 
 ---
 
-## 🎯 BAGIAN 8: BANK PERTANYAAN DOSEN PENGUJI II (SIMULASI TANYA-JAWAB SIDANG)
+## 📋 BAGIAN 8: CHECKLIST ROADMAP PERBAIKAN MAHASISWA (STEP-BY-STEP)
 
-Pertanyaan-pertanyaan ini dirancang untuk menguji kedalaman penguasaan mahasiswa terhadap konsep yang ditulisnya:
+```markdown
+- [ ] 1. PEMBERSIHAN REDAKSIONAL & INTEGRITAS (BAB 1 & BAB 2)
+      [ ] Hapus teks "Pasar Genteng", "Sentra UMKM", dan "pedagang" di Bab 1 Hal. 3.
+      [ ] Lengkapi kalimat menggantung pada Batasan Masalah butir 1 di Hal. 3.
+      [ ] Selaraskan isi deskripsi Sistematika Bab 3 dan Bab 4 di Bab 1 Hal. 5.
+      [ ] Hapus kata "penelitianmu" di Subbab 2.6.4 (Hal. 25).
+      [ ] Hapus paragraf kembar di Subbab 2.4 (Hal. 14–15) dan Subbab 2.6.4 (Hal. 25).
+      [ ] Perbaiki tanda koma ganda pada nama Pembimbing I di Lembar Pengesahan & Kata Pengantar.
+      [ ] Selaraskan penulisan nama dan gelar Koordinator Prodi S1 Arsitektur di Hal. III dan V.
+      [ ] Perbaiki typo judul: "METODELOGI" -> "METODOLOGI" dan "Pra Perancagan" -> "Pra Perancangan".
 
-1. **Tentang Konsep & Definisi:**
-   > *"Saudara Arya, di Bab 3 Tabel 3.1 Anda menuliskan parameter 'Interoperabilitas Sistem', namun definisinya mengenai kemudahan orang berjalan kaki dari tempat parkir ke gedung. Bisakah Anda jelaskan apa sebenarnya arti interoperabilitas dalam konteks smart building, dan protokol apa yang akan Anda gunakan untuk menghubungkan pendingin ruangan dengan sistem alarm kebakaran?"*
+- [ ] 2. REKONSTRUKSI METODOLOGI PERANCANGAN (BAB 3)
+      [ ] Rombak Tabel 3.1 (Parameter Konsep) menggunakan template Bagian 6 di atas.
+      [ ] Pada Tabel 3.2 (Desain Survey), ganti data "kendala usaha" dengan survei lux, suhu, beban okupansi, dan jalur kabel eksisting.
+      [ ] Putuskan nasib "Smart Water": jika dipakai, masukkan ke bab 2 dan bab 3; jika tidak, hapus dari Batasan Masalah.
+      [ ] Operasionalkan standar ISO 52120-1 ke dalam target kelas efisiensi BACS gedung rancangan.
+      [ ] Rapikan layout Tabel 3.3 (Jadwal Penelitian) agar tidak terpotong buta antara halaman 45 dan 46.
 
-2. **Tentang Konsekuensi Spasial Teknologi:**
-   > *"Jika gedung ini dirancang cerdas dengan ribuan sensor dan jaringan terintegrasi, di mana letak ruang server utama (MDF), shaft kabel data, dan ruang operator BMS pada konsep denah Anda? Apa pertimbangan teknis Anda dalam memilih posisi ruangan tersebut?"*
+- [ ] 3. PENYELARASAN SITASI & DAFTAR PUSTAKA
+      [ ] Masukkan rujukan yang hilang: Majdi (2022), Poyyamozhi (2024), Ramdhani (2024), Laksito (2014), Ratodi (2015), serta seluruh Permen PUPR.
+      [ ] Masukkan rujukan arsitek resmi untuk The Edge Amsterdam dan Pixel Melbourne.
+      [ ] Hapus rujukan hantu: Foster + Partners (Bloomberg HQ) di No. 18.
+      [ ] Mutakhirkan nomor standar SNI ventilasi dan pencahayaan ke versi 2020 dan 2024.
+      [ ] Perbaiki sitasi domain mentah "(dinkes.kaltimprov, n.d.)" menjadi "(Dinas Kesehatan Provinsi Kalimantan Timur, 2025)".
 
-3. **Tentang Keandalan Sistem (*Fail-Safe* & Redundansi):**
-   > *"Gedung pintar sangat rentan terhadap gangguan pasokan listrik. Bagaimana skema perancangan arsitektur dan utilitas Anda dalam memastikan sistem kontrol akses pintu darurat dan pendingin gudang vaksin tetap bekerja secara aman (*fail-safe*) saat terjadi pemadaman listrik total di Samarinda?"*
-
-4. **Tentang Kebutuhan Spesifik Objek:**
-   > *"Apa perbedaan mendasar antara penerapan Smart Building pada gedung perkantoran komersial sewa (seperti The Edge Amsterdam) dengan gedung kantor dinas kesehatan tingkat provinsi seperti objek rancangan Anda ini?"*
+- [ ] 4. INTEGRASI SPASIAL TIK MENUJU BAB 4 (STUDIO PERANCANGAN)
+      [ ] Masukkan Ruang Server (MDF), Ruang Shaft Data (IDF) tiap lantai, dan Ruang Command Center ke program ruang.
+      [ ] Pastikan gambar denah arsitektur memuat simbol/legenda titik sensor, kontrol akses, dan CCTV.
+      [ ] Buat 1 lembar gambar arsitektur utilitas: "Diagram Skematik Arsitektur Sistem BMS & IoT Gedung".
+```
 
 ---
 
-> [!NOTE]
-> **Catatan Pembina:**  
-> Catatan dan telaah ini ditujukan untuk membangun (*constructive feedback*) agar kualitas karya ilmiah mahasiswa Fakultas Teknik Universitas Mulawarman memiliki ketajaman argumentasi teknis, kematangan logika perancangan, dan nilai guna nyata bagi pembangunan daerah. Mahasiswa diharapkan berkonsultasi dengan Dosen Pembimbing untuk menindaklanjuti perbaikan ini.
+## 🎯 BAGIAN 9: BANK PERTANYAAN KRITIS PENGUJI II (SIMULASI UJIAN SIDANG)
+
+Pertanyaan-pertanyaan tajam yang dapat diajukan Dosen Penguji II pada saat sesi tanya-jawab:
+
+1. **Uji Penguasaan Terminologi Teknologi:**
+   > *"Saudara Arya, di Bab 3 Tabel 3.1 Anda mendefinisikan 'Interoperabilitas Sistem' sebagai kemudahan akses pejalan kaki dan tempat parkir. Bisakah Anda jelaskan apa makna interoperabilitas yang sebenarnya dalam arsitektur komputer dan otomasi gedung cerdas, serta protokol komunikasi apa yang Anda rencanakan untuk menghubungkan sensor AC dengan alarm kebakaran?"*
+
+2. **Uji Konsekuensi Spasial Perancangan Arsitektur:**
+   > *"Konsep smart building yang Anda ajukan mengandalkan ribuan sensor dan jaringan terintegrasi BMS. Di mana Anda menempatkan Ruang Server Utama (MDF), ruang shaft kabel data, dan ruang operator BMS pada gambar denah Anda? Apa alasan teknis Anda memilih lokasi tersebut terkait keamanan dari air dan interferensi elektromagnetik?"*
+
+3. **Uji Relevansi Domain Objek (Dinas Kesehatan):**
+   > *"Gedung Dinas Kesehatan Provinsi memiliki peran vital dalam distribusi vaksin ke seluruh kabupaten/kota di Kalimantan Timur. Bagaimana rancangan Smart Building Anda mampu menjamin keselamatan logistik vaksin melalui pemantauan rantai dingin (cold-chain), dan apa yang terjadi pada sistem kontrol akses pintu darurat Anda jika terjadi pemadaman listrik total di Samarinda?"*
+
+4. **Uji Integritas & Keabsahan Pustaka:**
+   > *"Di Bab 3 Anda mencantumkan standar ISO 52120-1:2021 mengenai efisiensi energi otomatisasi gedung. Dari 4 kelas efisiensi energi BACS (Class A sampai D) yang ada pada standar tersebut, kelas berapa yang menjadi target rancangan redesain Anda, dan bagaimana implementasi arsitekturalnya pada fasad serta tata ruang dalam?"*
+
+---
+
+> [!TIP]
+> **Catatan Penutup untuk Mahasiswa:**  
+> Audit mendalam ini bukan untuk menjatuhkan, melainkan untuk memperkuat bobot ilmiah dan kelayakan keteknikan skripsi Anda. Gagasan redesain gedung pemerintahan dengan pendekatan *Smart Building* adalah topik yang sangat prestisius dan relevan bagi kemajuan Kalimantan Timur. Selesaikan perbaikan ini dengan bimbingan dosen pembimbing Anda agar rancangan yang Anda hasilkan tidak hanya menarik secara visual, tetapi juga kokoh secara metodologi dan dapat dipertanggungjawabkan secara teknologi.
