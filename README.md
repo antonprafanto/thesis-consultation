@@ -44,6 +44,7 @@ Repository ini didedikasikan untuk pengelolaan dokumentasi bimbingan, audit nask
 | 14 | Luthfiah Nur Alifah | 2309106102 | *Analisis Pola Sebaran dan Kepadatan Fasilitas Kesehatan Menggunakan Metode Nearest Neighbor Analysis (NNA) dan Kernel Density Estimation (KDE)* | [Laporan Audit Proposal](audit_mahasiswa/laporan_audit_proposal_luthfiah_nur_alifah.md) |
 | 15 | Muchlas Andrey Pahlevi | 2209106082 | *Klasifikasi Motif Tenun Samarinda Menggunakan CNN-SVM dan Content-Based Image Retrieval untuk Menampilkan Citra Serupa* | [Audit Seminar Hasil Skripsi](audit_mahasiswa/laporan_audit_skripsi_muchlas_andrey_pahlevi.md) |
 | 16 | Rangga Kristiawan | 2209106116 | *Analisis Sentimen Ulasan Warung Gresik Suroboyo Bakso dan Soto Ayam Pak Mulkan Samarinda pada Google Maps Menggunakan Metode Naive Bayes* | [Audit Pengajuan Judul](audit_mahasiswa/laporan_audit_pengajuan_judul_rangga_kristiawan.md) |
+| 17 | Arya Rizqi Putra Mahardika | 2309096042 | *Redesain Gedung Dinas Kesehatan Provinsi Kalimantan Timur dengan Pendekatan Arsitektur Smart Building* (S1 Arsitektur – Tugas Penguji II) | [Laporan Audit & Telaah Kritis Informatika](audit_mahasiswa/laporan_audit_seminar_arsitektur_arya_rizqi_putra_mahardika.md) |
 
 ---
 

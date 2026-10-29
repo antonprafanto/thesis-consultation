@@ -5,6 +5,5 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.temp
-scratch/*_images/
-scratch/pedoman_docs/
-scratch/*.pdf
+scratch/*
+!scratch/.gitkeep
