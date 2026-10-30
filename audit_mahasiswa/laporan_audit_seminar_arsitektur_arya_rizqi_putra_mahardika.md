@@ -82,6 +82,26 @@ Terdapat dua bagian di Bab II di mana mahasiswa menempelkan paragraf yang persis
 * **Halaman X (`DAFTAR LAMPIRAN`):** Hanya memuat judul `DAFTAR LAMPIRAN` di bagian atas dengan **halaman kosong melompong** tanpa satu pun daftar item lampiran, dan di bagian akhir naskah juga tidak terdapat lampiran apa pun.
 * **Halaman IV (Halaman Persembahan):** Tidak memiliki judul halaman di bagian atas, terdapat tanda petik penutup (`titiknya”`) tanpa adanya tanda petik pembuka (`“`) di awal kalimat, menggunakan kata tidak baku `siapatau` (seharusnya `siapa tahu`), dan kalimat terakhir tidak diakhiri tanda titik.
 
+### 1.8. Kontradiksi Kronologi Tanggal Pengesahan (Hal. II, III, V) & Distorsi Proporsi Waktu `Tabel 3.3` (Hal. 44–45)
+* **Anomali Tanggal Maju-Mundur antar-Halaman Awal:**
+  * **Halaman Pernyataan Keaslian (Hal. II):** Tertulis tanggal **`Samarinda, 13 November 2026`** dan mengklaim dokumen ini sebagai **`skripsi`** (padahal masih tahap proposal seminar, dan sebuah skripsi belum selesai pada saat seminar proposal).
+  * **Halaman Pengesahan (Hal. III):** Baris konsultasi tertulis **`Telah dikonsultasikan pada 13 November`** (tanpa mencantumkan tahun), sedangkan baris pengesahan tertulis **`Samarinda, 9 Desember 2026`**.
+  * **Kata Pengantar (Hal. V):** Hanya tertulis **`Samarinda, November`** (tanpa tanggal dan tanpa tahun).
+* **Alokasi Waktu Tidak Logis pada *Gantt Chart* `Tabel 3.3` (Hal. 44–45):**
+  * Seluruh pekerjaan inti penelitian dan perancangan arsitektur (`II.1 Pengumpulan Data`, `II.2 Mengolah Data dan Analisis`, serta `II.3 Konsep dan Rancangan`) hanya diberi porsi waktu **1,5 bulan (November–Desember 2026)**.
+  * Sebaliknya, kegiatan **`III.2 Perbaikan Seminar Hasil`** justru diberi balok warna oranye terpanjang selama **3 BULAN PENUH (Januari, Februari, Maret 2027)**!
+  * Selain itu, baris terakhir (`III.5`) tertulis **`5. Perbaikan Seminar Akhir`** (nomenklatur yang benar adalah *Perbaikan Skripsi / Ujian Akhir*).
+
+### 1.9. Cacat Metodologi Pengumpulan Data Primer: Absennya Metode Wawancara (*Interview*) (Subbab 3.2.1 Hal. 27 vs Tabel 3.2 Hal. 38–42)
+* Pada **Subbab 3.2.1 Data Primer (Hal. 27)**, mahasiswa menulis bahwa pengumpulan data primer **hanya dilakukan melalui 2 metode**, yaitu **`1. Observasi`** dan **`2. Dokumentasi`** (memotret). **Sama sekali tidak ada metode Wawancara (*Interview*)!**
+* Padahal pada **Tabel 3.2 Desain Survey (Hal. 38–42)**, mahasiswa menargetkan pengumpulan data berupa: *jumlah aktual pegawai per bidang, pola koordinasi kerja antarbagian, keluhan/kendala kenyamanan dan privasi pengguna, serta kebutuhan operator dan biaya pemeliharaan BMS*.
+* **Kritik Metodologi:** Data mengenai struktur kepegawaian, kendala operasional ruang rapat koordinasi, kapasitas daya PLN/genset eksisting, serta kesiapan operator IT **tidak mungkin diperoleh hanya dengan memotret (*dokumentasi*) dan mengamati secara visual (*observasi*)**, melainkan **wajib melalui Wawancara Terstruktur (*Structured Interview*)** dengan pihak Sekretariat, Kasubbag Umum/Rumah Tangga, dan teknisi gedung Dinas Kesehatan Provinsi Kalimantan Timur!
+
+### 1.10. Kontradiksi Pembatasan Luas Bangunan $3.950\text{ m}^2$ (Hal. 3 & 4) vs Tahap Penyusunan Program Ruang (Hal. 29 & 31)
+* Pada **Subbab 1.3 Batasan Masalah Butir 1 (Hal. 3)** dan **Subbab 1.6 (Hal. 4)**, mahasiswa telah membatasi secara kaku bahwa luas bangunan gedung yang dirancang adalah **$3.950\text{ m}^2$** di atas lahan seluas **$7.273\text{ m}^2$** (tanpa mencantumkan sumber resmi dokumen aset/KIB Dinkes Kaltim).
+* Padahal pada **Subbab 3.3 Butir 4 (Hal. 29)** dan **Subbab 3.4.1 Butir 4 (Hal. 31)**, mahasiswa menyatakan akan melakukan *Analisis Kebutuhan Ruang* dan *Penyusunan Program Ruang* untuk mengakomodasi peningkatan aktivitas koordinasi provinsi serta ruang utilitas *Smart Building* baru (*Command Center, Ruang Server/MDF, IDF tiap lantai, dll.*).
+* **Kritik Logika Perancangan:** Dalam redesain arsitektur, total luas lantai bangunan baru merupakan **output (hasil perhitungan)** dari *Program Ruang* yang dikontrol oleh batasan KDB dan KLB lahan ($7.273\text{ m}^2$), bukan dikunci mati pada angka luas bangunan lama ($3.950\text{ m}^2$) sebelum analisis ruang dilakukan! Sebaiknya di Batasan Masalah ditulis: *"berada pada tapak eksisting seluas $7.273\text{ m}^2$ (dengan luas bangunan eksisting saat ini $3.950\text{ m}^2$ yang akan dikembangkan sesuai hasil perhitungan program ruang dan regulasi KDB/KLB Kota Samarinda)."*
+
 ---
 
 ## 📋 BAGIAN 2: AUDIT KEPATUHAN PEDOMAN SKRIPSI FT UNMUL (`pedoman_skripsi_unmul.md`)
@@ -166,6 +186,31 @@ flowchart LR
 * **Bab I Hal. 2:** Sitasi ditulis menggunakan domain web `(dinkes.kaltimprov, n.d.)`, padahal di Daftar Pustaka No. 16 tertulis resmi `Dinas Kesehatan Provinsi Kalimantan Timur (2025)`.
 * **Bab II Hal. 8 & Bab III Hal. 28:** Tertulis `(Garzia et al., 2023a)` dan `(Garzia et al., 2023b)`, padahal di Daftar Pustaka hanya ada **satu** artikel Garzia et al. (2023) (No. 19).
 * **Anakronisme Tahun SNI (Hal. 12–13 vs Hal. 46):** Di Subbab 2.3.2 (Hal. 12–13) mahasiswa menulis standar lama yang sudah dicabut (`SNI 03-6572-2001`, `SNI 03-6197-2011`, `SNI 03-6389-2011`), padahal di Daftar Pustaka (Hal. 46 No. 4, 5, 7) tertulis versi pembaruan (`SNI 6197:2020`, `SNI 6389:2020`, `SNI 6572-1:2024`).
+
+### 3.5. Kotak Siap Salin: Entri Daftar Pustaka yang Hilang & Perbaikan Entri Rusak (Format APA 7th Edition)
+*(Mahasiswa dapat langsung menyalin daftar referensi yang telah diverifikasi metadata jurnal/bukunya di bawah ini ke dalam Daftar Pustaka tanpa nomor urut):*
+
+```text
+Azouz, M., & Elariane, S. (2023). Towards energy efficiency: Retrofitting existing office buildings using smart technologies. Journal of Engineering and Applied Science, 70(1), Article 147. https://doi.org/10.1186/s44147-023-00327-2
+
+Kementerian Pekerjaan Umum dan Perumahan Rakyat Republik Indonesia. (2017). Peraturan Menteri Pekerjaan Umum dan Perumahan Rakyat Nomor 14/PRT/M/2017 tentang Persyaratan Kemudahan Bangunan Gedung.
+
+Kementerian Pekerjaan Umum dan Perumahan Rakyat Republik Indonesia. (2018). Peraturan Menteri Pekerjaan Umum dan Perumahan Rakyat Nomor 22/PRT/M/2018 tentang Pembangunan Bangunan Gedung Negara.
+
+Kementerian Pekerjaan Umum dan Perumahan Rakyat Republik Indonesia. (2021). Peraturan Menteri Pekerjaan Umum dan Perumahan Rakyat Nomor 21 Tahun 2021 tentang Penilaian Kinerja Bangunan Gedung Hijau.
+
+Laksito, B. (2014). Metode perencanaan dan perancangan arsitektur. Griya Kreasi.
+
+Majdi, A., Dwijendra, N. K. A., Muda, I., Chetthamrongchai, P., Sivaraman, R., & Hammid, A. T. (2022). A smart building with integrated energy management: Steps toward the creation of a smart city. Sustainable Energy Technologies and Assessments, 53, Article 102663. https://doi.org/10.1016/j.seta.2022.102663
+
+Pemerintah Republik Indonesia. (2021). Peraturan Pemerintah Republik Indonesia Nomor 16 Tahun 2021 tentang Peraturan Pelaksanaan Undang-Undang Nomor 28 Tahun 2002 tentang Bangunan Gedung.
+
+Poyyamozhi, M., Murugesan, B., Rajamanickam, N., Shorfuzzaman, M., & Aboelmagd, Y. (2024). IoT—A promising solution to energy management in smart buildings: A systematic review, applications, barriers, and future scope. Buildings, 14(11), Article 3446. https://doi.org/10.3390/buildings14113446
+
+Ramdhani, L. G. A., dkk. (2024). Implementation of 4.0 technology in faculty offices at Telkom University Landmark Tower using PIR sensors and smart switches. Telkom University.
+
+Ratodi, M. (2015). Metode perancangan arsitektur dasar (Modul Ajar Program Studi Arsitektur). UIN Sunan Ampel Surabaya.
+```
 
 ---
 
