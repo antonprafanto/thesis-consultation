@@ -94,12 +94,16 @@ Pada draf saat ini, pembaca dan penguji belum bisa melihat hasil akhir dari Rumu
 Di dalam naskah terdapat "dua sistem perhitungan yang berbeda":
 1. **Menurut Bab II (Subbab 2.6.3, Hal. 19) & Bab III (Hal. 38):**  
    Karena wadah minyak goreng bersifat menumpuk (kumulatif), jumlah hama terkumpul sampai akhir jam ke-$h$ dihitung dengan nilai maksimum:
+
    $$T_{h,c} = \max_{k \le 4h} C_{k,c}$$
+
    dan jumlah hama baru pada jam ke-$h$ dihitung dari selisihnya:
+
    $$B_{h,c} = T_{h,c} - T_{h-1,c}$$
+
    Lalu status `DANGER` ditentukan jika $B_{h,c} > \text{Ambang}_c$.
 2. **Menurut Kode Program `src/counter.py` (Lampiran 4, Hal. 93–94) & Bot Telegram (Gambar 4.8–4.10):**  
-   Program yang berjalan di Raspberry Pi **belum di-update** ke rumus $T_{h,c}$ dan $B_{h,c}$. Program masih menggunakan rumus lama yaitu `N_jam` (rata-rata jumlah deteksi dari 4 foto dalam satu jam: $\text{N\_jam} = \frac{1}{K}\sum D_{k,c}$).
+   Program yang berjalan di Raspberry Pi **belum di-update** ke rumus $T_{h,c}$ dan $B_{h,c}$. Program masih menggunakan rumus lama yaitu `N_jam` (rata-rata jumlah deteksi dari 4 foto dalam satu jam: $N_{\text{jam}} = \frac{1}{K}\sum D_{k,c}$).
 3. **Masalah Pencampuran Satuan pada Uji Fungsi 7 November 2026 (Hal. 65):**  
    Pada Tabel 4.5 (Hal. 55), kamu menghitung ambang menggunakan data **Hama Baru ($B_{h,c}$)** dan memperoleh ambang: Lalat buah = `2 ekor/jam`, Trips = `33 ekor/jam`, Kutu kebul = `1 ekor/jam`.  
    Namun pada 7 November 2026 (Hal. 65), kamu memasukkan angka `2.0`, `33.0`, dan `1.0` tersebut ke berkas `ambang.json` di Raspberry Pi yang masih membandingkannya dengan **`N_jam` (rata-rata kumulatif)**. Padahal nilai `N_jam` dan nilai $B_{h,c}$ berbeda arti:
