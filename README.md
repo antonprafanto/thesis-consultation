@@ -46,6 +46,7 @@ Repository ini didedikasikan untuk pengelolaan dokumentasi bimbingan, audit nask
 | 16 | Rangga Kristiawan | 2209106116 | *Analisis Sentimen Ulasan Warung Gresik Suroboyo Bakso dan Soto Ayam Pak Mulkan Samarinda pada Google Maps Menggunakan Metode Naive Bayes* | [Audit Pengajuan Judul](audit_mahasiswa/laporan_audit_pengajuan_judul_rangga_kristiawan.md) |
 | 17 | Arya Rizqi Putra Mahardika | 2309096042 | *Redesain Gedung Dinas Kesehatan Provinsi Kalimantan Timur dengan Pendekatan Arsitektur Smart Building* (S1 Arsitektur – Tugas Penguji II) | [Laporan Audit Forensik Paripurna](audit_mahasiswa/laporan_audit_seminar_arsitektur_arya_rizqi_putra_mahardika.md) • [Draf FIX (`102-ARS`)](audit_mahasiswa/draft_seminar_arsitektur_arya_rizqi_fix.pdf) • [Draf Awal (`037-ARS`)](audit_mahasiswa/draft_seminar_arsitektur_arya_rizqi.pdf) |
 | 18 | Muhammad Alpi Ashari | 2209106017 | *Optimasi Model K-Nearest Neighbor (KNN) dalam Memprediksi Tingkat Keparahan Kecelakaan Lalu Lintas* | [Laporan Audit Forensik Skripsi](audit_mahasiswa/laporan_audit_skripsi_muhammad_alpi_ashari.md) • [Draf Skripsi](audit_mahasiswa/draft_skripsi_muhammad_alpi_ashari.pdf) |
+| 19 | Taufiqurrahman Al Baihaqi | 2309106114 | *Pengembangan Sistem Informasi Lost & Found Berbasis Web di Lingkungan Fakultas Teknik Universitas Mulawarman Menggunakan Metode Weighted Similarity* | [Audit Pengajuan Topik](audit_mahasiswa/laporan_audit_pengajuan_topik_taufiqurrahman_al_baihaqi.md) • [Ringkasan Konsep (`docx`)](audit_mahasiswa/ringkasan_konsep_skripsi_taufiqurrahman_al_baihaqi.docx) |
 
 ---
 
